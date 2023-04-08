@@ -28,4 +28,4 @@ body { background-color:#500505; font-size: 1.2em; }
 
 .form-group input:focus + label { left:3px; top:-11px;}
 
-.form-group input:not(:focus):valid + label { left:3px; top:-11px;}
+.form-group input:not(:focus):valid + label { left:10px; top:8px;}
