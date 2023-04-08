@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            ADISIVAN JS 
+        </title>
+        <link href="../../Style/style.css" type="text/css" rel="stylesheet" />
+    </head>
+    <body>
+        <div id="container">
+            <h4>Check Console Log</h4>
+        </div>
+        <script type="text/javascript">
+            async function asynAw(para){
+                return new Promise((resolve,rejected) => setTimeout(() => {
+                    let red = para+" WB";
+                    resolve(red);
+                    //console.log(para);
+                },1000));
+            }
+
+            async function anoFunct(argumen){
+                asynAw(argumen).then(res => console.log(res));
+            }
+            
+            anoFunct("Siva");
+        </script>
+    </body>
+</html>

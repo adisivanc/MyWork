@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body { background-color:#222;}
+    </style>
+</head>
+
+<body class="">
+
+    <input type="text" id="one">
+    
+    <p id="demo"></p>
+
+    <script type="text/javascript">
+
+        let arrEle =[" avengers", "   captain_america", "ironman   ", " black panther   "];
+
+        // Sample
+        arrEle.reduce((prev,next) => {
+            console.log(prev,next);
+            prev = next;
+            return prev;
+        })
+
+        //Largest
+        console.log("Largest");
+        let largest = arrEle.reduce((prev,next) => {
+            //console.log(prev,next);
+            return (prev>=next)?prev:next;
+        })
+        console.log(largest);
+
+        //Largest
+        console.log("Smallest");
+        let smallest = arrEle.reduce((prev,next) => {
+            //console.log(prev,next);
+            return (prev<=next)?prev:next;
+        })
+        console.log(smallest);
+
+        //Reduce - Find highest score - Another way
+        console.log("Different")
+        let high = arrEle.reduce((prev,next) => Math.max(prev,next) );
+        console.log(high);
+    </script>
+
+</body>
+
+</html>

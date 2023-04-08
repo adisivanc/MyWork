@@ -1,0 +1,43 @@
+<html>
+
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+</head>
+
+<body class="">
+
+    <p id="demo"></p>
+
+    <input type="text" name="sfsa" id="fasas" />
+
+    <script type="text/javascript">
+        //alert("1");
+        function memeber(name, age, wrk, sex) {
+            this.name = name;
+            this.age = age;
+            this.sex = sex;
+            this.workdetail = wrk;
+        }
+
+        function work(tech, exp, cmynm, sal) {
+            this.tech = tech;
+            this.salary = sal;
+            this.exp = exp;
+            this.cmynm = cmynm;
+        }
+
+        //alert("2");
+        var workobj = new work('ui', '3', 'abc', '20k')
+        var personDt = new memeber('siva', '24', workobj.wrk, 'male');
+        var wyz = new memeber('unknown', '177', '', 'male');
+        alert(personDt.age);
+        document.getElementById("demo").innerHTML = personDt.age;
+        document.getElementById("fasas").value = personDt.wrk;
+     </script>
+
+</body>
+
+</html>

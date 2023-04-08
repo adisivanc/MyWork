@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            ADISIVAN JS 
+        </title>
+        <link href="../../../../Style/style.css" type="text/css" rel="stylesheet" />
+    </head>
+    <body id="bdy">
+      <br/><br/>
+      <h1>JavaScript Function bind()</h1>
+      <br/>
+      <p>This example will display a person name after 3 seconds:</p>
+      <br/>
+      <p id="demo"></p>
+          
+          <script type="text/javascript">
+            const person = {
+              firstName:"John",
+              lastName: "Doe"
+            }
+            const anoPerson = {
+              display: function() {
+              let x = document.getElementById("demo");
+              x.innerHTML = this.firstName + " " + this.lastName;
+              }
+            }
+
+            let display = anoPerson.display.bind(person);
+            setTimeout(display, 3000);
+          </script>
+    </body>
+</html>

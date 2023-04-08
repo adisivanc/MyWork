@@ -1,0 +1,40 @@
+<html>
+<head>
+<title></title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body class="" >
+    
+<script type="text/javascript">
+    function Counter() {
+        var counter = 0;
+        alert("A");
+
+        function IncreaseCounter() {
+            alert("C");
+            return counter += 1;
+        };
+
+        alert("B");
+        return IncreaseCounter;
+    }
+
+    var counterr = Counter();
+    alert(counterr()); // 1
+    alert(counterr()); // 2
+    alert(counterr()); // 3
+</script>
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

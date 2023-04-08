@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body { background-color:#222;}
+    </style>
+</head>
+
+<body class="">
+    
+    <p id="demo"></p>
+
+    <script type="text/javascript">
+
+        let check_subset = (first_array, second_array) => {
+            return second_array.every((element) => {
+                console.log(element);
+                return first_array.includes(element);
+            });
+        };
+
+        console.log("Subset Condition Satisfies? : " + check_subset([1, 2, 3, 4], [1, 2]));
+        console.log("Subset Condition Satisfies? : " + check_subset([1, 2, 3, 4], [5, 6, 7]));
+
+    </script>
+
+</body>
+
+</html>

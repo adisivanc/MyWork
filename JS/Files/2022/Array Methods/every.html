@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body { background-color:#222;}
+    </style>
+</head>
+
+<body class="">
+    
+    <p id="demo"></p>
+
+    <script type="text/javascript">
+
+        // Mixed 
+
+        let arrEle =[12,3,8,34,9,0,-3,23,-99,128];
+
+        let newEvery = arrEle.every((element,array,index)=> { return (element%2==0)});
+        console.log(newEvery);
+
+        // Even 
+
+        let arrEle02 =[2,4,6,22,44,66,34,12,32];
+
+        let newEvery02 = arrEle02.every((element,array,index)=> { return (element%2==0)});
+        console.log(newEvery02);
+
+
+        // Normal Way
+
+        let arrEle03 =[2,4,6,22,44,66,34,12,32];
+
+        let newEvery03 = arrEle03.every(callingFunc);
+
+        function callingFunc(element,array,index){
+            return (element%2==0);
+        }
+        console.log(newEvery03);
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<html>
+<head>
+<title></title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    body { background-color:#eee;font-family: Arial, Helvetica, sans-serif; }
+    input[type=text] { font-size:15px;padding:5px 12px; }
+    button { font-size:15px; padding:8px 15px; background-color:#c00; color:#FFF; border:2px solid #890000; }
+</style>
+</head>
+<body class="" >
+
+    
+<form name="objForm" method="GET">
+    <input type="text" name="ObjTxt" value=""/>
+    <p class="para" id="level01"></p>
+    <p class="para" id="level02"></p>
+    <p class="para" id="level03"></p>
+    <p class="para" id="level04"></p>
+    <p class="para" id="level05"></p>
+</form>
+
+<button id="butEle" class="butEle" onclick="getEmpDt()">Button</button>
+    
+<script type="text/javascript">
+        
+document.objForm.ObjTxt.value="Sample Input"; // It will work
+document.objForm.level01.innerHTML="RRR"; // It will not work
+
+
+function getEmpDt(){
+
+    let empDetails = {
+        firstName:"Adisivan",
+        lastName:"Chinnasamy",
+        age:31,
+        fullname:function(){ 
+            return this.firstName+" "+this.lastName;
+        }
+    }
+
+    document.getElementById("level01").innerHTML=empDetails.firstName;
+    document.getElementById("level02").innerHTML=empDetails.age;
+    document.getElementById("level03").innerHTML=empDetails.fullname();
+}
+
+</script>
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

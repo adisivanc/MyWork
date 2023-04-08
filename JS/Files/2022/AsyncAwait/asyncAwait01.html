@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            ADISIVAN JS 
+        </title>
+        <link href="../../Style/style.css" type="text/css" rel="stylesheet" />
+    </head>
+    <body>
+        <div id="container">
+            <h4>Check Console Log</h4>
+        </div>
+        <script type="text/javascript">
+            function normalFunc(){
+                return 1;
+            }
+            console.log(normalFunc());
+
+            async function asyncFunc(){
+                return 1;
+            }
+            console.log(asyncFunc());
+
+            async function asyncFunc01(){
+                return Promise.resolve(1);
+            }
+            console.log(asyncFunc01());
+
+            async function asyncFunc02(){
+                return await Promise.resolve(1);
+            }
+            console.log(asyncFunc02());
+        </script>
+    </body>
+</html>

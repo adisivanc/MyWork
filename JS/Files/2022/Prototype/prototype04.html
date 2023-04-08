@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            ADISIVAN JS 
+        </title>
+        <link href="../../../Style/style.css" type="text/css" rel="stylesheet" />
+    </head>
+    <body id="bdy">
+        <div id="container">
+            
+            
+            <button id="btn">Click Me!</button>
+            
+        </div>
+        <script type="text/javascript">
+			function Person () {
+                this.name = 'John'
+            }
+
+            // adding a prototype
+            Person.prototype.age = 24;
+
+            // creating object
+            const person = new Person();
+
+            // accessing prototype property
+            console.log(person.__proto__);   // { age: 24 } using object
+            
+		</script>
+    </body>
+</html>

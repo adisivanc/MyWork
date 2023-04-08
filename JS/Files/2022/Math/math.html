@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            ADISIVAN JS 
+        </title>
+        <link href="../../../Style/style.css" type="text/css" rel="stylesheet" />
+    </head>
+    <body>
+        <div id="container">
+            <h4>Check Console Log</h4>
+        </div>
+        <script type="text/javascript">
+
+            let random = Math.random();
+            console.log(random); 
+
+            let round = Math.round("420.96");
+            console.log(round); 
+
+            let ceil = Math.ceil("420.56");
+            console.log("CEIL =>",ceil); 
+
+            let floor = Math.floor("420.56");
+            console.log(floor);
+
+            let abs = Math.abs("-46");
+            console.log(abs); 
+
+            let pow = Math.pow(5,2);
+            console.log("POWER =>",pow);
+
+            let min = Math.min(8,67,9,4,-8,3,56,18);
+            console.log(min); 
+
+            let max = Math.max(8,67,9,4,-8,3,56,18);
+            console.log(`MAXIMUM => ${max}`);
+
+            let sqrt = Math.sqrt(6561);
+            console.log(sqrt);
+
+            let listArr = [8,67,9,4,-8,3,56,18]
+            console.log(Math.min(...listArr));
+            //Another way
+            console.log(Math.min.apply(Math,listArr));
+            //Another way
+            console.log("For loop");
+
+
+</script>
+    </body>
+</html>

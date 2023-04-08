@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            ADISIVAN JS 
+        </title>
+        <link href="../../../../Style/style.css" type="text/css" rel="stylesheet" />
+    </head>
+    <body>
+        <div id="container">
+            <h4>Check Console Log</h4>
+        </div>
+        <script type="text/javascript">
+            const apiURL = "https://jsonplaceholder.typicode.com/users";
+
+            let xhr = new XMLHttpRequest();
+            xhr.open("GET",apiURL);
+            xhr.send();
+        </script>
+    </body>
+</html>

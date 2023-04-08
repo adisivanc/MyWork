@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            ADISIVAN JS 
+        </title>
+        <link href="../../Style/style.css" type="text/css" rel="stylesheet" />
+    </head>
+    <body>
+        <div id="container">
+            <h4>Check Console Log</h4>
+        </div>
+        <script type="text/javascript">
+            const obj = {
+                color:"yellow",
+                size:"20px",
+                screenSize(){
+                    let sw = "320px";
+                    return sw;
+                }
+            }
+
+            const cloneObj = Object.create(obj);
+            console.log("Normal Object",obj);
+            console.log("Clone Object",cloneObj);
+            console.log("Clone Object",cloneObj.screenSize());
+        </script>
+    </body>
+</html>

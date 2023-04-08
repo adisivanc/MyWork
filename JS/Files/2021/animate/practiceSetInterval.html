@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            ADISIVAN JS 
+        </title>
+        <link href="../../../Style/style.css" type="text/css" rel="stylesheet" />
+    </head>
+    <body>
+        <div id="container">
+            <h4>Check Console Log</h4>
+            <br/>
+            <img src="../../../images/logBan.png" alt="Banner" id="image" height="120"/>
+            <br/><br/>
+            <input type="button" value="Move" onclick="moveImage()" />
+            <input type="button" value="Stop" onclick="stopImage()" />
+        </div>
+
+        <script type="text/javascript">
+            const imgID = document.getElementById("image");
+            imgID.style.position = "relative";
+            imgID.style.top = "0px";
+            imgID.style.left = "0px";
+            let cleIn;
+
+            moveImage = () => {
+                cleIn = setInterval(triggerCall,1000);
+            }
+            triggerCall = () => {
+                console.log("Success");
+            }
+
+            stopImage = () => {
+                console.log("stop")
+                clearInterval(cleIn);
+            }
+        </script>
+    </body>
+</html>

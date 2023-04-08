@@ -1,0 +1,78 @@
+<html>
+<head>
+<title></title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    
+</style>
+</head>
+<body class="" >  
+    
+    <p id="accName"></p>
+    <p id="gtName"></p>
+    <p id="cdfer"></p>
+    <p id="cdfer01"></p>
+    <p id="cdfer02"></p>
+    <br/>
+    <br/>
+    <br/>
+    <p id="oooooo"></p>
+    <p id="tttttt"></p>
+    
+    
+<script type="text/javascript">
+    function accObj(type,amt,name){
+        this.type=type;
+        this.amt=amt;
+        this.name=name;
+    }
+    var accName = new accObj("Savings",1050,"Siva");
+    var gtName = new accObj("Draft",990,"ASN");
+
+    document.getElementById("accName").innerHTML=accName.amt;
+    document.getElementById("gtName").innerHTML=gtName.name;
+
+    var cdfer = gtName;
+
+    document.getElementById("cdfer").innerHTML=cdfer.name;
+    cdfer.name = "Eswaran";
+    document.getElementById("cdfer01").innerHTML=cdfer.name;
+    document.write("<br/><br/>");
+    document.getElementById("cdfer02").innerHTML=gtName.name;
+    //console.log(gtName);
+    document.write("<br/><br/>");
+    document.write("<br/><br/>");
+    var oooooo = Object.assign({},accName);
+    document.getElementById("oooooo").innerHTML=oooooo.name;
+    oooooo.name = "Sanjeev";
+    document.getElementById("tttttt").innerHTML=oooooo.name;
+    console.log(oooooo);
+    nameFun();
+    
+    function nameFun(){
+        setTimeout(
+            "alert(accName.name)"
+        ,1500);
+    }
+
+    
+
+</script>
+
+
+
+
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            ADISIVAN JS 
+        </title>
+        <link href="../Style/style.css" type="text/css" rel="stylesheet" />
+    </head>
+    <body>
+        <div id="container">
+            <h4>Check Console Log</h4>
+        </div>
+        <script type="text/javascript">
+            const asObj = {
+                empID:345,
+                empName:"Fool",
+                empAge:24
+            }
+            let iOgh;
+            /*
+            Not itertable OFFFF
+            for(iOgh of asObj){
+                console.log(iOgh);
+            }
+            */
+            for(iOgh in asObj){
+                console.log(iOgh);
+            }
+        </script>
+    </body>
+</html>

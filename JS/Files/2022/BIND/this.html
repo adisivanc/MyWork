@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            ADISIVAN JS 
+        </title>
+        <link href="../../../Style/style.css" type="text/css" rel="stylesheet" />
+    </head>
+    <body id="bdy">
+        <div id="container">
+            <h4>Click on button first and next div</h4>
+
+            <pre>
+            In JavaScript, the this keyword refers to an object.
+
+            Which object depends on how this is being invoked (used or called).
+
+            The this keyword refers to different objects depending on how it is used:
+
+            In an object method, this refers to the object.
+            Alone, this refers to the global object.
+            In a function, this refers to the global object.
+            In a function, in strict mode, this is undefined.
+            In an event, this refers to the element that received the event.
+            </pre>
+
+            <button id="btn" onclick="this.style.cssText='background-color:blue;font-style:italic;'">Click Me!</button>
+            
+        </div>
+        <script type="text/javascript">
+            
+            debugger;
+            document.body.onload = function(){
+                document.body.style.cssText="background-color:#ddd; color:blue"
+            }
+            
+			
+            // Normal Function
+            const employee01 = {
+                firstName:"Adisivan",
+                lastName:"Chinnasamy",
+                fullName:function() {
+                    return this.firstName+" "+this.lastName;
+                }
+            }
+            console.log(employee01.fullName());
+
+            // Same as Arrow Function
+            const employee02 = {
+                firstName:"Adisivan",
+                lastName:"Chinnasamy",
+                fullName:() => {
+                    return this.firstName+" "+this.lastName;
+                }
+            }
+            console.log(employee02.fullName());
+
+            
+            
+            function dogFunc01(a,b,c){
+                this.a=a;
+                this.b=b;
+                this.c=c;
+                console.log(this);
+                return this.a+" "+this.b+" "+this.c;
+            }
+            console.log(dogFunc01("bomRaniyan","Chippipari","Labour"));
+
+            function dogFunc02(a,b,c){
+                "use strict";
+                this.a=a;
+                this.b=b;
+                this.c=c;
+                console.log(this);
+                return this.a+" "+this.b+" "+this.c;
+            }
+            console.log(dogFunc02("bomRaniyan","Chippipari","Labour"));
+
+
+
+
+		</script>
+    </body>
+</html>

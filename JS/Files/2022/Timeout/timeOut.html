@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            ADISIVAN JS 
+        </title>
+        <link href="../Style/style.css" type="text/css" rel="stylesheet" />
+    </head>
+    <body>
+        <div id="container">
+            <h4>Check Console Log</h4>
+            <p class="incre"></p>
+        </div>
+        <script type="text/javascript">
+            let incre = document.getElementsByClassName("incre")[0];
+            
+            // Two Parameter functionName and time
+            setTimeout(function(){
+                incre.innerHTML=1;
+
+            },2000)
+        </script>
+    </body>
+</html>

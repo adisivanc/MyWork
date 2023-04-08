@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body { font-family: Arial, Helvetica, sans-serif; }
+        .tContainer { display: table; width: 100%; }
+        .tContainer > * { display: table-cell; }
+        input { padding:5px; }
+        input[type=button] { background-color:#900; color:#FFF; padding:6px 15px; border:1px solid #600; border-radius:4px; }
+    </style>
+</head>
+
+<body class="">
+    <div class="tContainer">
+        <div>
+            <div>
+                First Name : <br/>
+                <input type="text" id="firstName" value=""/>
+            </div>
+            <br/>
+            <div>
+                Last Name: <br/>
+                <input type="text" id="lastName" value=""/>
+            </div>
+            <br/>
+            <input type="button" onclick="fullName()" value="Update" />
+        </div>
+        <div>
+            <input type="text" id="search" placeholder="search" value="" />
+            <input type="button" value="Search" onclick="searchFun()" />
+        </div>
+    </div>
+    
+    <p id="demo"></p>
+
+    <script type="text/javascript">
+        let first = []; let last = []; let full = [];
+        let fName, lName;
+
+        fullName = () => {
+            //debugger;
+            fName = document.getElementById('firstName').value;
+            lName = document.getElementById('lastName').value;
+
+            if(fName!="" && lName!=""){
+                first.push(fName);
+                last.push(lName);
+                full = first.concat(last);
+                console.log(full);
+            }else{
+                alert("Please fill the data...");
+                document.getElementById('firstName').focus();
+            }
+        }
+
+
+        searchFun = () => {
+            let emptyObj = {} // created for count purpose
+
+            var search = document.getElementById('search').value;
+
+            let findEle = (value,index,arr) => {
+                console.log(full.indexOf(search))
+                if(full.indexOf(search)){
+                    console.log(search+" found in the index of"+index);
+                }
+            }
+
+            const result = full.filter(findEle);
+
+
+            /*
+            for(x in full){
+                if(search==full[x]){
+                    var str = "Match Results Found";
+                    document.getElementById('demo').innerHTML= str+" in the index of "+x+" based on last index"; // Last Index
+                }else{
+                    continue;
+                }
+            }
+            */
+
+            //OLD Method
+            /*
+            for (i = 0; i <= all.length; i++) {
+                if(search==all[i]){
+                    var str = "Match Results Found";
+                    document.getElementById('demo').innerHTML= str+" in the index of "+i+" based on last index"; // Last Index
+                }else{
+                    continue;
+                }
+            }
+            */
+        }
+
+    </script>
+
+</body>
+
+</html>

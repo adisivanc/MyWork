@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            ADISIVAN JS 
+        </title>
+        <link href="../../../Style/style.css" type="text/css" rel="stylesheet" />
+        <style>
+            img { width:100px; height:100px; }
+        </style>
+    </head>
+    <body>
+        <h4>Check Console Log</h4>
+        <div id="container"> </div>
+        <input type="button" value="Fetch" id="fetchData" />
+
+        <script type="text/javascript">
+
+        const apiUrl = "https://jsonplaceholder.typicode.com/photos";
+        const appEle = document.getElementById("container");
+        const fetchBtn = document.getElementById("fetchData");
+        let x;
+        let aResp = [];
+        let pResp = [];
+                
+        const fetchData = function() {
+            fetch(apiUrl)
+                .then(res => res.json())
+                .then(aResp => {
+                    console.log(aResp);
+                    
+                    for(x of aResp){
+                        //console.log(x.id,x.url,x.title);
+                        createImgTag(x.id,x.url,x.title);
+                    }
+
+                    function createImgTag(para01,para02,para03){
+                        const creElem = document.createElement("img");
+                        creElem.setAttribute("id",para01);
+                        creElem.setAttribute("src",para02);
+                        creElem.setAttribute("title",para03);
+                        appEle.append(creElem);
+                    }
+                    
+                })
+        }
+
+        fetchBtn.addEventListener("click",fetchData);
+        
+        </script>
+    </body>
+</html>

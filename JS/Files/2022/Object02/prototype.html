@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            ADISIVAN JS 
+        </title>
+        <link href="../Style/style.css" type="text/css" rel="stylesheet" />
+    </head>
+    <body>
+        <div id="container">
+            <h4>Check Console Log</h4>
+            <p>Every object in JavaScript has a built-in property, which is called its prototype. 
+                The prototype is itself an object, so the prototype will have its own prototype, making what's called a prototype chain. 
+                The chain ends when we reach a prototype that has null for its own prototype.</p>
+        </div>
+        <script type="text/javascript">
+
+            //Constructor Function/Method
+
+            function consObjFunc(fName,lName,doy){
+                this.fName=fName;
+                this.lName=lName;
+                this.doy=doy;
+            }
+
+            let objEc = new consObjFunc("Sanjeev","Adisivan","2020");
+
+            // Prototype Variable
+            consObjFunc.prototype.place = "Vellakoil";
+
+            //Prototype Method/Function
+            consObjFunc.prototype.age = function(){
+                let d = new Date();
+                let f = d.getFullYear()-this.doy;
+                return f;
+            }
+
+            const t = objEc.age();
+            console.log("Age =>",t);
+
+            for(obj in objEc){
+                console.log(objEc[obj]);
+            }
+        </script>
+    </body>
+</html>

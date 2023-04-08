@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            ADISIVAN JS 
+        </title>
+        <link href="../Style/style.css" type="text/css" rel="stylesheet" />
+    </head>
+    <body>
+        <div id="container">
+            <h4>Check Console Log</h4>
+            <br/>
+            <img src="../../../images/logBan.png" alt="Banner" id="image" height="120"/>
+            <br/><br/>
+            <input type="button" value="Move" onclick="moveImage()" />
+            <input type="button" value="Stop" onclick="stopImage()" />
+        </div>
+
+        <script type="text/javascript">
+            const imgrc = document.getElementById("image");
+            imgrc.style.position = "relative";
+            imgrc.style.top = "0px";
+            imgrc.style.left = "0px";
+            let animater;
+
+            moveImage = () => {
+                imgrc.style.left = parseInt(imgrc.style.left) + 1 + 'px';
+                animater = setTimeout(moveImage,100);
+            } 
+            stopImage = () => {
+                clearTimeout(animater);
+            }     
+        </script>
+    </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body { background-color:#222;}
+    </style>
+</head>
+
+<body class="">
+    
+    <p id="demo"></p>
+
+    <script type="text/javascript">
+
+        //One way
+        (function func() {
+            var alpha = ["Adisivan", "b", "c"];
+            let sd = alpha[0];
+            console.log(typeof(sd));
+            let someVar = sd.split("");
+            console.log(someVar);
+        })();
+
+        //Another way
+        (function func02() {
+            var alpha = ["Adisivan", "b", "c"];
+            let sd = alpha[0];
+            console.log(typeof(sd));
+            let someVar = Array.prototype.map.call(sd, x => x);
+            console.log(someVar);
+        })();
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            ADISIVAN JS 
+        </title>
+        <link href="../../../Style/style.css" type="text/css" rel="stylesheet" />
+    </head>
+    <body id="bdy">
+        <p id="dragtarget" draggable="true" clickable="true">
+            Click Me or Drag Me!
+        </p>
+          
+        <p id="demo" style="color:red;"></p>
+          
+        <script type="text/javascript">
+            document.ondrag = function (event) {
+                document.getElementById("demo").innerHTML
+                            = "Element is being dragged";
+            };
+      
+            document.onclick = function (event) {
+                document.getElementById("demo").innerHTML
+                        = "Element is being clicked!";
+            };
+        </script>
+    </body>
+</html>

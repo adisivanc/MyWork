@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            ADISIVAN JS 
+        </title>
+        <link href="../../../Style/style.css" type="text/css" rel="stylesheet" />
+    </head>
+    <body id="bdy">
+        <div id="container">
+            
+            <h3>
+                Changing Prototype
+If a prototype value is changed, then all the new objects will have the changed property value. 
+All the previously created objects will have the previous value
+            </h3>
+            <button id="btn">Click Me!</button>
+            
+        </div>
+        <script type="text/javascript">
+			function Person() {
+                name:"Siva"
+            }
+
+            Person.prototype.age = 12;
+
+            const person01 = new Person();
+
+            console.log(Person.prototype);
+            console.log("Person 01",person01.age);
+
+            Person.prototype = {age:21}
+            console.log(Person.prototype);
+
+            const person02 = new Person(); // After change the value, i have created an object
+            
+            console.log("Person 01",person01.age);
+            console.log("Person 02",person02.age);
+
+		</script>
+    </body>
+</html>

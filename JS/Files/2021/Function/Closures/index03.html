@@ -1,0 +1,39 @@
+<html>
+<head>
+<title></title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body class="" >
+    
+<script type="text/javascript">
+    function makeAdder(x) {
+        alert(x);
+        return function(y) {
+            return x + y;
+        };
+    }
+
+    alert("A");
+    var add5 = makeAdder(5);
+    alert("B");
+    var add10 = makeAdder(10);
+
+    alert("C");
+
+    console.log(add5(2));  // 7
+    console.log(add10(2)); // 12
+</script>
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

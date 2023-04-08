@@ -1,0 +1,42 @@
+<html>
+<head>
+<title></title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    body { font-family: Arial, Helvetica, sans-serif; font-size: 18px; }
+</style>
+</head>
+<body class="" >
+
+<script type="text/javascript">
+
+    var emp01 = { AccNum:832567,Type:"Savings",HolderName:"Siva" }
+    var emp02 = { AccNum:123456,Type:"Current",HolderName:"Aadhi" }
+    var emp03 = { AccNum:999999,Type:"Deposit",HolderName:"Sanjeev" }
+    document.write(emp01.HolderName);
+    document.write("<br/><br/><br/>");
+    var collEmp = { u1:emp01,u2:emp02,u3:emp03 }
+    document.write(collEmp.u2.Type+"  "+collEmp.u2.AccNum);
+    document.write("<br/><hr/>")
+    collEmp.u2.Type="Fixed"
+    document.write(collEmp.u2.Type+"  "+collEmp.u2.AccNum);
+    document.write("<br/><hr/>")
+
+    var arr01 = [emp01,emp02,emp03]
+    document.write(arr01[0].AccNum);
+        
+</script>
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

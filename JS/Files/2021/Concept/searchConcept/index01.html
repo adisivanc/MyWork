@@ -1,0 +1,143 @@
+<html>
+<head>
+<title></title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    .spacer30 {
+  margin:20px 0;
+}
+#go {
+  float: right;
+  width: 50px;
+}
+#searchItem {
+  float: left;
+  width: 200px;
+  
+}
+.input-group {
+  width: 260px;
+}
+
+</style>
+</head>
+<body class="" >
+
+    
+    <form id="searchForm" action="javascript:search();">
+        <div class="input-group">
+           <button id="go" class="btn btn-default" type="button" 
+                   onclick="document.getElementById('searchForm').submit(); return false;">Go
+           </button>
+           <input type="text" id="searchItem" class="form-control" placeholder="Suchbegriff">
+        </div>
+     </form>
+     
+     <div class="spacer30"></div>
+     <div class="row" id="Grafikkarte">
+        <div class="col-md-2">
+           <p><b>Grafikkarte</b></p>
+        </div>
+        <div class="col-md-3">
+           <p><i>Grafikkarte</i></p>
+        </div>
+        <div class="col-md-7">
+           <p>Some short description here ...</p>
+        </div>
+     </div>
+     <div class="spacer30"></div>
+     <div class="row" id="sound">
+        <div class="col-md-2">
+           <p><b>sound</b></p>
+        </div>
+        <div class="col-md-3">
+           <p><i>sound</i></p>
+        </div>
+        <div class="col-md-7">
+           <p>Some short description here ...</p>
+        </div>
+     </div>
+     <div class="spacer30"></div>
+     <div class="row" id="audio">
+        <div class="col-md-2">
+           <p><b>audio</b></p>
+        </div>
+        <div class="col-md-3">
+           <p><i>audio</i></p>
+        </div>
+        <div class="col-md-7">
+           <p>Some short description here ...</p>
+        </div>
+     </div>
+     <div class="spacer30"></div>
+     <div class="row" id="trip">
+        <div class="col-md-2">
+           <p><b>machete</b></p>
+        </div>
+        <div class="col-md-3">
+           <p><i>machete</i></p>
+        </div>
+        <div class="col-md-7">
+           <p>Some short description here ...</p>
+        </div>
+     </div>
+     <div class="spacer30"></div>
+     <div class="row" id="idiologie">
+        <div class="col-md-2">
+           <p><b>idiologie</b></p>
+        </div>
+        <div class="col-md-3">
+           <p><i>idiologie</i></p>
+        </div>
+        <div class="col-md-7">
+           <p>Some short description here ...</p>
+        </div>
+     </div>
+     <div class="spacer30"></div>
+     <div class="row" id="frau">
+        <div class="col-md-2">
+           <p><b>frau</b></p>
+        </div>
+        <div class="col-md-3">
+           <p><i>frau</i></p>
+        </div>
+        <div class="col-md-7">
+           <p>Some short description here ...</p>
+        </div>
+     </div>
+    
+<script type="text/javascript">
+
+function search() {
+ 
+ var name = document.getElementById("searchForm").elements["searchItem"].value;
+ var pattern = name.toLowerCase();
+ var targetId = "";
+
+ var divs = document.getElementsByClassName("col-md-2");
+ for (var i = 0; i < divs.length; i++) {
+    var para = divs[i].getElementsByTagName("p");
+    var index = para[0].innerText.toLowerCase().indexOf(pattern);
+    if (index != -1) {
+       targetId = divs[i].parentNode.id;
+       document.getElementById(targetId).scrollIntoView();
+       break;
+    }
+ }  
+}
+
+</script>
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

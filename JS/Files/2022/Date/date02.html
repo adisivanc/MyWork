@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            ADISIVAN JS 
+        </title>
+        <link href="../../Style/style.css" type="text/css" rel="stylesheet" />
+    </head>
+    <body>
+        <div id="container">
+            <h4>Check Console Log</h4>
+            <input type="date" id="dob" value="" />
+            <input type="button" value="Submit" onclick="dateFunc()" />
+        </div>
+        <script type="text/javascript">
+            let arrDay = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+            let arrMon = ["January","February","March","April","May","June","July","August","September","October","Novemeber","Decemeber"];
+            
+            dateFunc = () => {
+                let dob01 = document.getElementById("dob").value;
+                let dob = new Date(dob01);
+                calculAge(dob);
+            }
+
+            calculAge = para => { 
+                console.log("DOB => "+para);
+
+                let tDate = new Date();
+                
+                let dateDiff = tDate - para;
+                console.log("Date Differnce from current => "+dateDiff);
+
+                let diffDateFormat = new Date(dateDiff);
+                console.log("Differnce Date Format => "+diffDateFormat);
+
+                let year = diffDateFormat.getUTCFullYear();
+                let month = diffDateFormat.getUTCMonth();
+                let date = diffDateFormat.getUTCDate();
+                console.log("AGE => ",Math.abs(1970 - year)+" year and "+(month%12)+" month "+date+" days old");
+            }
+        </script>
+    </body>
+</html>

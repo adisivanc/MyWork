@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            ADISIVAN JS 
+        </title>
+        <link href="../../../Style/style.css" type="text/css" rel="stylesheet" />
+    </head>
+    <body id="bdy">
+        <div id="container">
+            
+            <h3>
+                Compare Person and Animal
+            </h3>
+            <button id="btn">Click Me!</button>
+            
+        </div>
+        <script type="text/javascript">
+			function Person() {
+                name:"Sanjeev"
+            }
+
+            Person.prototype.name = "Aadhi";
+            Person.prototype.age = 12;
+
+            const person01 = new Person();
+
+            console.log(person01.name);
+            console.log(person01.age);
+
+
+
+            function Animal() {
+                this.name="Monkey"   // this - current object
+            }
+
+            Animal.prototype.name = "Elephant";
+            Animal.prototype.age = 33;
+
+            const animal = new Animal();
+
+            console.log(animal.name);
+            console.log(animal.age);
+		</script>
+    </body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body { background-color:#222;}
+    </style>
+</head>
+
+<body class="">
+
+    <input type="text" id="one">
+    
+    <p id="demo"></p>
+
+    <script type="text/javascript">
+
+        let arrEle =[{
+            name:"Sachin",
+            id:10,
+            matches:448,
+            runs:20128,
+            highest:200
+        },{
+            name:"rohit",
+            id:45,
+            matches:222,
+            runs:9828,
+            highest:264
+        },{
+            name:"kohli",
+            id:18,
+            matches:248,
+            runs:12128,
+            highest:183
+        }];
+
+        //Reduce - Find highest matches
+        let maxReduce = arrEle.reduce((prev,next) => {
+            console.log(prev.matches,next.matches);
+            //debugger;
+            return ((prev.matches>=next.matches)?prev:next);
+        });
+
+        let ele = maxReduce.name;
+        console.log(ele);
+
+        //indexOf
+        let tryEr = arrEle.indexOf(maxReduce);
+        console.log(tryEr);
+
+        
+    </script>
+
+</body>
+
+</html>
