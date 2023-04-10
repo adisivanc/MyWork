@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+
+    <title>react without JSX</title>
+
+    <script src="./reactjs/react.production.min.js"></script>
+    <script src="./reactjs/react-dom.production.min.js"></script>
+    <script src="./reactjs/babel.js"></script>
+
+    <!--
+    <script src="https://unpkg.com/react@^16/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@16.13.0/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+    -->
+
+    <link href="./css/style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div id="root"></div>
+    
+
+    <script type="text/babel">
+      const divid = React.createElement("div",{className:"heading01"},
+      React.createElement("h2",null,"Welcome to Ooty"),
+      React.createElement("h4",null,"Sky Trip")
+      );
+      ReactDOM.render(divid,document.getElementById('root'));
+    </script>
+  </body>
+</html>

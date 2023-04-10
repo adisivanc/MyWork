@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+
+    <title>react function comp</title>
+
+    <script src="./reactjs/react.production.min.js"></script>
+    <script src="./reactjs/react-dom.production.min.js"></script>
+    <script src="./reactjs/babel.js"></script>
+
+    <!--
+    <script src="https://unpkg.com/react@^16/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@16.13.0/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+    -->
+
+    <link href="./css/style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div id="root"></div>
+    
+
+    <script type="text/babel">
+      const EmployeeDetails = (emp) => {
+        return <div>
+            <p>
+                <label>Employee ID</label>
+                <span><b>{emp.Id}</b></span>
+            </p>
+            <p>
+                <label>Employee Name</label>
+                <span><b>{emp.Name}</b></span>
+            </p>
+            <p>
+                <label>Employee Location</label>
+                <span><b>{emp.Location}</b></span>
+            </p> 
+            <p>
+                <label>Employee Age</label>
+                <span><b>{emp.Age}</b></span>
+            </p>
+            <p>
+                <label>Employee Mob Number</label>
+                <span><b>{emp.MobNumber}</b></span>
+            </p>
+            <DeptComp deptName={emp.deptName} deptOrg={emp.deptOrg}></DeptComp>
+        </div>;
+      }
+
+      const emp = <EmployeeDetails Id="3348" Name="Kamal Singh" Location="Gujarat" Age="99" MobNumber="7888888883" deptName="Design" deptOrg="BOSCH"></EmployeeDetails>
+
+    const DeptComp = (dep) => {
+        return <div>
+            <h2>Department Details</h2>
+            <p>
+                <label>Department Name</label>
+                <span><b>{dep.deptName}</b></span>
+            </p>
+            <p>
+                <label>Department Organsation</label>
+                <span><b>{dep.deptOrg}</b></span>
+            </p>            
+            </div>;
+    }
+    
+    ReactDOM.render(emp,document.getElementById('root'));
+    </script>
+  </body>
+</html>

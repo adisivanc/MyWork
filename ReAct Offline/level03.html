@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
 
-    <title>Hello React!</title>
+    <title>react without JSX</title>
 
     <script src="./reactjs/react.production.min.js"></script>
     <script src="./reactjs/react-dom.production.min.js"></script>
@@ -14,19 +14,17 @@
     <script src="https://unpkg.com/react-dom@16.13.0/umd/react-dom.production.min.js"></script>
     <script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
     -->
+
+    <link href="./css/style.css" rel="stylesheet" />
   </head>
 
   <body>
     <div id="root"></div>
+    
 
     <script type="text/babel">
-      class App extends React.Component {
-        render() {
-          return <h1>Hello world!</h1>
-        }
-      }
-
-      ReactDOM.render(<App />, document.getElementById('root'))
+      const creEle = React.createElement("h1",null,"Welcome to Ooty");
+      ReactDOM.render(creEle,document.getElementById("root"));
     </script>
   </body>
 </html>
