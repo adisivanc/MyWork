@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>react closure</title>
+
+    <!--
+    <script src="./../reactjs/react.production.min.js"></script>
+    <script src="./../reactjs/react-dom.production.min.js"></script>
+    <script src="./../reactjs/babel.js"></script>
+    -->
+    
+    <script src="https://unpkg.com/react@^16/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@16.13.0/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+    
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <!--
+    <link href="./../css/style.css" rel="stylesheet" />
+    -->
+  </head>
+  <body>
+    
+    <div class="container">
+        <div id="root"></div>
+    </div>
+    
+    <script type="text/babel"> 
+
+    class SalaryDetails extends React.Component {
+        constructor(){
+            super();
+            this.state = {
+                totalsal:0
+            }
+        }
+        getTotalSalary = (eve) => {
+            let s1 = parseInt(document.getElementById("basic").value);
+            let s2 = parseInt(document.getElementById("HRA").value);
+            let s3 = parseInt(document.getElementById("bonus").value); 
+
+            this.setState({
+                totalsal:parseInt(s1+s2+s3)
+            })
+
+            eve.preventDefault();
+        }
+        render(){
+            return <form name="salForm">
+                    <div className="form-group">
+                        <label for="basic">Basic</label>
+                        <input type="text" id="basic" className="form-control" />
+                    </div>
+                    <div className="form-group">
+                        <label for="HRA">HRA</label>
+                        <input type="text" id="HRA" className="form-control" />
+                    </div>
+                    <div className="form-group">
+                        <label for="bonus">Bonus</label>
+                        <input type="text" id="bonus" className="form-control" />
+                    </div>
+                    <button type="submit" className="btn btn-danger" onClick={e=>this.getTotalSalary(e)}>Get Total</button>
+                    <div className="appendTotal alert alert-success my-3">
+                        Total Salary is {this.state.totalsal}
+                    </div>
+                </form>
+        }
+    }
+
+    const salObj = <SalaryDetails></SalaryDetails>
+    ReactDOM.render(salObj,document.getElementById('root'))
+    </script>
+
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
