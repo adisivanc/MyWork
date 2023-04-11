@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+
+    <title>react function comp</title>
+
+    <script src="./../reactjs/react.production.min.js"></script>
+    <script src="./../reactjs/react-dom.production.min.js"></script>
+    <script src="./../reactjs/babel.js"></script>
+
+    <link href="./../css/style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div id="root"></div>
+    
+
+    <script type="text/babel">
+        class Footwear extends React.Component {
+            state={count:0}
+            addFoot = () => {
+                this.setState({count:this.state.count+1});
+            }
+            render(){
+                return <div>
+                        <h4>Footwear Details</h4>
+                        <h6>Click the below button to add new footwear details</h6>
+                        <button onClick={this.addFoot}>Add Product</button>
+                        <p>Number of products added {this.state.count}</p>
+                    </div>;
+            }
+        }
+
+        const footObj = <Footwear></Footwear>
+        ReactDOM.render(footObj,document.getElementById('root'));
+    </script>
+  </body>
+</html>
