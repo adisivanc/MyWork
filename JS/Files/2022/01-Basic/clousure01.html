@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+</head>
+<body>
+
+    <div>
+        <h4>Closure conept with increment and decrement</h4>
+        <p>Accessing outer function value from inner function by using closure</p>
+    </div>
+    <script type="text/javascript">
+        const outerFunc = (() => {
+            let globalVar=0;
+
+            changeVal = (val) =>{
+                globalVar+=val;
+            }
+
+            return {
+                increment(){
+                    changeVal(1); 
+                },
+                decrement(){
+                    changeVal(-1);
+                },
+                value(){
+                    return globalVar;
+                }
+            }
+        })();
+
+        console.log(outerFunc.value());
+        outerFunc.increment();
+        outerFunc.increment();
+        outerFunc.increment();
+        console.log(outerFunc.value());
+        outerFunc.decrement();
+        outerFunc.decrement();
+        console.log(outerFunc.value());
+    </script>
+</body>
+</html>

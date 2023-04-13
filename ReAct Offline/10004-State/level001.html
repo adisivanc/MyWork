@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>react state</title>
+
+    <script src="./../reactjs/react.production.min.js"></script>
+    <script src="./../reactjs/react-dom.production.min.js"></script>
+    <script src="./../reactjs/babel.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+  </head>
+  <body>
+    
+    <div class="container">
+        <div id="root"></div>
+    </div>
+    
+    <script type="text/babel">
+
+    class EmployeeComp extends React.Component {
+        render(){
+            return <div>
+                    <h4>Emp Details</h4>
+                    <div class="form-group">
+                        <label>ID</label>
+                        <p>{this.props.id}</p>
+                    </div>
+                    <div class="form-group">
+                        <label>Name</label>
+                        <p>{this.props.name}</p>
+                    </div>
+                    <div class="form-group">
+                        <label>Total Salary</label>
+                        <p>{this.props.totalSal}</p>
+                    </div>
+                    <SalaryCom hra={this.props.hra} basic={this.props.basic} bonus={this.props.bonus}></SalaryCom>
+                </div>
+        }
+    }
+
+    class SalaryCom extends React.Component {
+        render(){
+            return <div>
+                    <h4>Salary Details</h4>
+                    <div class="form-group">
+                        <label>HRA</label>
+                        <p>{this.props.hra}</p>
+                    </div>
+                    <div class="form-group">
+                        <label>Basic</label>
+                        <p>{this.props.basic}</p>
+                    </div>
+                    <div class="form-group">
+                        <label>Bonus</label>
+                        <p>{this.props.bonus}</p>
+                    </div>
+                </div>
+        }
+    }
+
+
+    const empObj = <EmployeeComp id="99229" name="Hitler" totalSal="56000" hra="12000" basic="40000" bonus="4000"></EmployeeComp>
+    ReactDOM.render(empObj,document.getElementById('root'));
+    </script>
+  </body>
+</html>

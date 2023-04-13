@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+</head>
+<body>
+
+    <div>
+        <h4>Currying conept</h4>
+    
+        <ul>
+            <li>transforms a function with multiple arguments into a nested series of functions, each taking a single argument.</li>
+            <li>To avoid missing variable</li>
+        </ul>
+    </div>
+    <script type="text/javascript">
+        function currying(a){
+            return (b) => {
+                return (c) => {
+                    return a+b+c;
+                }
+            }
+        }
+
+        const total = currying(2)(5)(10);
+        console.log(total);
+    </script>
+</body>
+</html>
