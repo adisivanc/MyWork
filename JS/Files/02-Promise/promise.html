@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <script type="text/javascript">
+        function loginUser(email,pass){
+            const promise=new Promise(function(resolve,reject){
+                setTimeout(function(){
+                    resolve({username:"abc"});
+                },3000)
+            })
+
+            return promise;
+        }
+        
+        loginUser("abcd@gmail.com","323223")
+        .then(resp=>{
+            console.log(resp);
+            getUserDetails(resp)
+        })
+    </script>
+</body>
+</html>
