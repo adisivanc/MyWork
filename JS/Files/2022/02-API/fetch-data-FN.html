@@ -13,11 +13,14 @@
         <script type="text/javascript">
             const apiURL = 'https://jsonplaceholder.typicode.com/users';
 
-            const prom = fetch(apiURL,{method:"GET"})
-            .then(resp=>resp.json())
-            .then(data=>console.log(data))
+            const promise = fetch(apiURL,{method:"GET"})
+            .then(function(res){
+                if(res.status==200) return res.json();
+                else console.log("Error")
+            }).then(function(data){
+                console.log(data);
+            })
 
-            console.log(prom);
         </script>
     </body>
 </html>

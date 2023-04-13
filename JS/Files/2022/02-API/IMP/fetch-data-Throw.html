@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            ADISIVAN JS 
+        </title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    </head>
+    <body>
+        <div id="container">
+            <h4>Check Console Log</h4>
+        </div>
+        <script type="text/javascript">
+            const apiURL = 'https://jsonplaceholder.typicode.com/usersRT';
+
+            const promise = fetch(apiURL,{method:"GET"})
+            .then(function(res){
+                if(res.status==200) return res.json();
+                else throw new Error("Something Wrong")
+            }).then(function(data){
+                console.log(data); // This block will not execute here
+            }).catch(function(err){
+                console.log(err.message);
+            })
+
+        </script>
+    </body>
+</html>
