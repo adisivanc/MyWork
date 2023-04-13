@@ -4,16 +4,20 @@
         <title>
             ADISIVAN JS 
         </title>
-        <link href="../Style/style.css" type="text/css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     </head>
     <body>
         <div id="container">
             <h4>Check Console Log</h4>
         </div>
         <script type="text/javascript">
-            fetch('http://localhost/Sanjeev/2022/JS/sample.json')
-            .then(res => res.json())
-            .then(data => console.log(data))
+            const apiURL = 'https://jsonplaceholder.typicode.com/users';
+
+            const prom = fetch(apiURL,{method:"GET"})
+            .then(resp=>resp.json())
+            .then(data=>console.log(data))
+
+            console.log(prom);
         </script>
     </body>
 </html>
