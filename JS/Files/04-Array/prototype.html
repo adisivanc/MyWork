@@ -3,19 +3,36 @@
 <title></title>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Method Prototype</title>
 </head>
 <body class="" >  
     
     <script type="text/javascript">
-        // true or false
-
-        const fruits = ["Banana", "Orange", "Apple", "Mango"];
-        const vegtable = ["beetroot", "carrot", "lemon"];
-
-        let fruVeg = fruits.concat(vegtable);
-
-        console.log(fruVeg.join(" and "));
+    
+    
+    let avgMark=[];
+    
+    Array.prototype.average = function() {
+        for(let i=0;i<this.length;i++){
+            let sum=0;
+            for(let j=0;j<this[i].marks.length;j++){
+                sum=sum+this[i].marks[j];
+            }
+            avgMark[i]=sum/(this[i].marks.length);
+        }
         
+    }
+
+    let studentsMark =[
+        {"firstName":"Anbarsu","rollNo":"832566","marks":[39,67,89,56,78]},
+        {"firstName":"Adisivan","rollNo":"832567","marks":[59,72,99,45,63]},
+        {"firstName":"Bala Ramki","rollNo":"832568","marks":[100,100,100,100,100]},
+        {"firstName":"Dinesh","rollNo":"832569","marks":[69,71,81,59,91]}
+    ]
+    
+    studentsMark.average();
+    console.log(avgMark);
+
     </script>
     
 </body>

@@ -1,0 +1,37 @@
+<html>
+<head>
+<title></title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Property Prototype</title>
+</head>
+<body class="" >  
+    
+    <script type="text/javascript">
+    
+        function Person(first, last, age, eye) {
+            this.firstName = first;
+            this.lastName = last;
+            this.eyeColor = eye;
+        }
+        const myFather = new Person("John", "Doe", "blue");
+        const myMother = new Person("Sally", "Rally", "green");
+
+        Person.prototype.nationality = "English";
+
+        console.log(myFather.nationality, myMother.nationality);
+
+    </script>
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

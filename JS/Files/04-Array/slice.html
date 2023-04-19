@@ -1,0 +1,46 @@
+<html>
+<head>
+<title></title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Property Prototype</title>
+</head>
+<body class="" >  
+    
+    <script type="text/javascript">
+
+        //array.slice(start_index,end_index)
+
+        //Does not Change the Original Array
+
+        let arrEle=[39,67,2,5,89,56,78]
+        let newArr = arrEle.slice(2,0); // (2-0=2) It will not remove 
+        console.log(arrEle);
+        console.log(newArr);
+
+
+        let arrEle02 = [39,67,2,5,89,56,78]
+        let newArr02 = arrEle02.slice(2,3); // (2-3=-1) It will remove 1 element
+        console.log(arrEle02);
+        console.log(newArr02); // Removed list
+
+
+        let arrEle03 = [39,67,2,5,89,56,78]
+        let newArr03 = arrEle03.slice(2,5); // (2-5=-3) It will remove 3 element
+        console.log(arrEle03);
+        console.log(newArr03); // Removed list
+
+    </script>
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
