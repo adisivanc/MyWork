@@ -18,41 +18,13 @@
 
     <script type="text/javascript">
 
-        let arrEle =[{
-            name:"Sachin",
-            id:10,
-            matches:448,
-            runs:20128,
-            highest:200
-        },{
-            name:"rohit",
-            id:45,
-            matches:222,
-            runs:9828,
-            highest:264
-        },{
-            name:"kohli",
-            id:18,
-            matches:248,
-            runs:12128,
-            highest:183
-        }];
+        const str = 'JavaScript is a powerful language';
+        const index = str.indexOf('powerful');
+        console.log(index); // Output: 16
 
-        //Reduce - Find highest matches
-        let maxReduce = arrEle.reduce((prev,next) => {
-            console.log(prev.matches,next.matches);
-            //debugger;
-            return ((prev.matches>=next.matches)?prev:next);
-        });
+        const contains = str.includes('language');
+        console.log(contains); // Output: true
 
-        let ele = maxReduce.name;
-        console.log(ele);
-
-        //indexOf
-        let tryEr = arrEle.indexOf(maxReduce);
-        console.log(tryEr);
-
-        
     </script>
 
 </body>

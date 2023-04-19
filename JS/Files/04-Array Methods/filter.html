@@ -23,36 +23,15 @@
 
 
         console.log("Object");
-        var jsonarr = [
-                {
-                    id: 1,
-                    name: "joe"
-                },
-                {
-                    id: -19,
-                    name: "john Abragam"
-                },
-                {
-                    id: 20,
-                    name: "james binny"
-                },
-                {
-                    id: 25,
-                    name: "jack"
-                },
-                {
-                    id: -10,
-                    name: "joseph khan"
-                },
-                {
-                    id: "not a number",
-                    name: "jimmy dog"
-                },
-                {
-                    id: null,
-                    name: "jeff buffalo"
-                }
-        ]
+        var jsonarr=[
+            {id:1,name:"joe"},
+            {id:-19,name:"john Abragam"},
+            {id:20,name:"james binny"},
+            {id:25,name:"jack"},
+            {id:-10,name:"joseph khan"},
+            {id:"not a number",name:"jimmy dog"},
+            {id:null,name:"jeff buffalo"}
+        ];
 
         let resultArray = jsonarr.filter(user => user.name.length>4);
         console.log(resultArray);

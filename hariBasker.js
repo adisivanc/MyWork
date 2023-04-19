@@ -1,7 +1,6 @@
 //duplicate value and remove dupliacte
 
 const myArr = [11,22,33,22,33,77,33,44,55,66]
-
 let duplicate =[];
 
 let withoutDup = myArr.reduce((acc,val,index)=>{
@@ -90,9 +89,9 @@ let properNameFmt = names.map(val=>{
 })
 
 //sort by length
-let names = ["Leonardo", "Michelangelo", "Raphael", "Donatello", "HAri", "sandip"];
+let namesy = ["Leonardo", "Michelangelo", "Raphael", "Donatello", "HAri", "sandip"];
 
-names.sort((a,b)=>{
+namesy.sort((a,b)=>{
 	debugger;
 	return a.length-b.length;
 })
@@ -174,4 +173,52 @@ let booleanOccur = myArr.reduce((acc,val,index)=>{
     	}
     }
     return result;
+
+//Copying Array
+// Older way
+var clonedArray= oldArray.slice(0)    
+
+// ES6 way: spread operator
+var clonedArrayES6= [...oldArray] 
+
+
+function myFunction(employee){
+    if(employee.city==="Pune"){
+        return employee;
+    }
+}
+
+const employees99 = [{
+	"name": "Pooja",
+	"yrsOfExperience": "2",
+	"city": "Mumbai"
+}, {
+	"name": "Anuj",
+	"yrsOfExperience": "10",
+	"city": "Pune"
+}, {
+	"name": "Sam",
+	"yrsOfExperience": "6",
+	"city": "Bangalore"
+},{
+	"name": "Pooja",
+	"yrsOfExperience": "2",
+	"city": "Mumbai"
+}, {
+	"name": "Anuj",
+	"yrsOfExperience": "10",
+	"city": "Pune"
+}, {
+	"name": "Sam",
+	"yrsOfExperience": "6",
+	"city": "Bangalore"
+}];
+
+var newArr99 = employees99.filter(myFunction) 
+console.log(newArr99);
+
+
+
+
+
 

@@ -16,10 +16,41 @@
     <script type="text/javascript">
 
         let arrElement = [1,2,3,4,5,6,7,8,9];
-        
         let firstFound = arrElement.find(element => element>5);
-
         console.log(firstFound);
+
+
+
+        
+        // Array of objects
+        const users = [
+        { id: 1, name: 'Alice' },
+        { id: 2, name: 'Bob' },
+        { id: 3, name: 'Charlie' },
+        { id: 4, name: 'David' }
+        ];
+
+        // Function to search for a user by name
+        const findUserByName = (name) => {
+        return users.find(user => user.name === name);
+        };
+
+        // Usage: find user by name
+        const user = findUserByName('Bob');
+        console.log(user); // Output: { id: 2, name: 'Bob' }
+
+
+
+
+
+
+        const numbers = [1, 2, 3, 4, 5];
+        const even = numbers.find(num => num % 2 === 0);
+        console.log(even); // Output: 2
+
+        const index = numbers.findIndex(num => num > 3);
+        console.log(index); // Output: 3
+
     </script>
 
 </body>

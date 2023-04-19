@@ -1,51 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <style>
-        
-    </style>
+<style>
+/* Define the CSS for the box */
+#box {
+  width: 50px;
+  height: 50px;
+  background-color: red;
+  position: relative;
+}
+</style>
 </head>
 <body>
-    <div class="container">
-    <form name="checkVal" action="">
-        <label for="checkBox">Please select the fruits</label>
-        <div class="form-group">
-            <div class="checkbox">
-                <input type="checkbox" id="fruits01" name="fruits01" class="fruits" value="banana">
-                <label for="fruits01">Banana</label>
-            </div>
-            <div class="checkbox">
-                <input type="checkbox" id="fruits02" name="fruits02" class="fruits" value="apple">
-                <label for="fruits02">Apple</label>
-            </div>
-            <div class="checkbox">
-                <input type="checkbox" id="fruits03" name="fruits03" class="fruits" value="lychee">
-                <label for="fruits03">Lychee</label>
-            </div>
-        </div>
-        <div class="btn btn-warning" onclick="getCheckBoxVal()">Get Value</div>
-    </form>
-    </div>
-    <script type="text/javascript">
-        const getCheckBoxVal = () => {
-            let inputElements = document.getElementsByClassName("fruits")
-            let checkedValue=[];
 
-            for(var i=0; inputElements[i]; ++i){
-                if(inputElements[i].checked){
-                    console.log(inputElements[i].value);
-                    checkedValue.push(inputElements[i].value);
-                    continue;
-                }
-            }
+<div id="box"></div>
 
-            console.log(checkedValue);
-        }
-    </script>
+<script>
+var box = document.getElementById('box');
+
+function moveRight() {
+  var left = parseInt(box.style.left) || 0;
+  if (left < 200) {
+    box.style.left = (left + 5) + 'px';
+    setTimeout(moveRight, 10);
+  }
+}
+
+moveRight();
+
+</script>
+
 </body>
 </html>
