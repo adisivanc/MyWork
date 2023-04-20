@@ -2,33 +2,11 @@
 <html>
 <head>
 <style>
-/* Define the CSS for the box */
-#box {
-  width: 50px;
-  height: 50px;
-  background-color: red;
-  position: relative;
-}
+  
 </style>
 </head>
 <body>
 
-<div id="box"></div>
-
-<script>
-var box = document.getElementById('box');
-
-function moveRight() {
-  var left = parseInt(box.style.left) || 0;
-  if (left < 200) {
-    box.style.left = (left + 5) + 'px';
-    setTimeout(moveRight, 10);
-  }
-}
-
-moveRight();
-
-</script>
-
+  
 </body>
 </html>

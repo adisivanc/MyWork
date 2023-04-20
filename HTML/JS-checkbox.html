@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  input[type="checkbox"] { width:24px; height:24px; }
+  input[type="checkbox"] + label { }
+</style>
+</head>
+<body>
+
+  <div>
+    <div>
+      <input type="checkbox" id="selectAll" name="selectAll" value="selectAll">
+      <label for="selectAll">Select All</label>
+    </div>
+    <input type="checkbox" id="drumstick" name="vegtab" value="drumstick">
+    <label for="drumstick">Drumstick</label>
+    <input type="checkbox" id="perandai" name="vegtab" value="perandai">
+    <label for="perandai">Perandai</label>
+    <input type="checkbox" id="carrot" name="vegtab" value="carrot">
+    <label for="carrot">Carrot</label>
+    <input type="checkbox" id="tomato" name="vegtab" value="tomato">
+    <label for="tomato">Tomato</label>
+    <button onclick="someFunc()">Get Value</button>
+  </div>
+
+  <script type="text/javascript">
+      let vegArr = document.getElementsByName("vegtab");
+      //console.log(vegArr[0]);
+      let checkArr =[];
+
+      function someFunc(){
+        for(let veg of vegArr){
+          if(veg.checked==true){
+            checkArr.push(veg.value);
+          }else{
+            checkArr.length=0;
+          }
+        }
+        console.log(checkArr);
+
+      }
+      
+      let selectAll=document.querySelector("#selectAll");
+
+      selectAll.addEventListener('click',function(){
+        if(selectAll.checked==true){
+          for(veg of vegArr){
+            veg.checked=true;
+          }
+        }else{
+          for(veg of vegArr){
+            veg.checked=false;
+          }
+        }
+        
+      })
+  </script>
+</body>
+</html>
