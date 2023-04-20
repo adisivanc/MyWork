@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    container-fluid
+    container
+
+    //Take equal width for all size {0-Infinity}
+    <div class="row">
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+    </div>
+
+    // col 8 and 4 until sm { For extra small full width}
+    // Automatic responsive
+    <div class="row">
+        <div class="col-sm-8"></div>
+        <div class="col-sm-4"></div>
+    </div>
+
+    container-sm {100% for and smaller width} md/lg/xl/xxl
+
+    display-1/6  {Make heading come out size}
+
+    {Text Special}
+    <small></small>
+    <mark></mark>
+    <abbr></abbr>
+    <strong></strong>
+    <em></em>
+    <blockquote></blockquote>
+    <blockquote-footer></blockquote-footer>
+    <dl>
+        <dt></dt>
+        <dd></dd>
+    </dl>
+    <code></code>
+    <kbd></kbd>
+    <pre></pre>
+
+    {Text} {P tag by default margin bottom 1rem}
+    <p class="lead"></p>
+    <p class="text-start"></p>
+    <p class="text-center"></p>
+    <p class="text-end"></p>
+    <p class="text-break"></p>
+    <p class="text-nowrap"></p>
+
+    {List}
+    .list-unstyled
+    .list-inline
+    
+    {Table}
+    .table-primary/.table-secondary
+    .table-success/.table-danger/.table-info/.table-warning
+    .table-active
+    .table-light/.table-dark
+    .table-sm
+    .table-responsive
+    .table-responsive-sm/md/lg/xl/xxl
+    .table-bordered/borderless
+    .table-striped/.table-hover
+
+    {Image Look}
+    .rounded {Corner}
+    .rounded-circle {Full}
+    .img-thumbnail
+    .mx-auto and .d-block to center the image
+    .img-fluid {Full Width}
+
+    .float-start/.float-end {float left right}
+    .float-sm/lg/md/xl/xxl-end/start {float option}
+    .clearfix {clear both}
+
+    {Alert fade and show for Animation / dismissible for close icon}
+    alert alert-danger alert-dismissible fade show
+
+    {Button}
+    .btn
+    .btn-primary/dark/light/warning/danger/info/success/secondary
+    .btn-sm/lg
+    .btn-outline-primary/etc
+    .btn-block
+    .disabled/.active
+    .spinner-border /.spinner-border-sm / spinner-grow Inside button
+    .btn-group
+    .btn-group-sm/lg
+    .btn-group-vertical
+    .btn-close
+    [
+    .dropdown-toggle {data-bs-toggle="dropdown"}
+    .dropdown-menu {div}
+    .dropdown-item {a} [active, disabled]
+    .dropdown-divider {hr tag}
+    .dropdown-header {heading tag}
+    .dropdown-item-text {p tag}
+    ]
+
+    {Use Separately or inside button}
+    .badge
+    .rounded-pill
+
+    .progress
+    .progress-bar
+    .progress-bar-striped
+    .progress-bar-animated
+
+
+    {Pagination ul li a}
+    .justify-content-center/justify-content-end
+    .pagination/pagination-sm/lg
+    .page-item {.disabled}
+    .page-link {.active}
+
+    {Breadcrumb ul li a}
+    .breadcrumb
+    .breadcrumb-item {active}
+    here a tag empty no class needed
+
+
+    {List Group ul li}
+    .list-group
+    .list-group-item {active, disabled} 
+    .list-group-item-action {Give hover effect use in li}
+    .list-group-flush {Remove outer border use in ul}
+    .list-group-numbered {Numbered list}
+    .list-group-horizontal {ul}
+    .list-group-item-primary/success/etc {li}
+
+    {CARD}
+    .card-header
+    .card-title
+    .card-body
+    .card-footer
+    .card-img-top/bottom {img tag}
+    .card-img-overlay {image will overlay}
+
+
+    .collapse
+    .show
+
+    {Nav ul li a}
+    .nav
+    .nav-item
+    .nav-link
+    .justify-content-center/end
+    .flex-column {Vertical}
+
+
+    {Nav Tabs ul li a}
+    .nav .nav-tabs
+    .nav-item
+    .nav-link
+    .nav-justified {Full Width}
+
+
+    {Nav Pills ul li a}
+    .nav .nav-pills
+    .nav-item
+    .nav-link
+    .nav-justified {Full Width}
+
+
+    {Navbar}
+    .navbar-dark {Logo purpose}
+    .navbar .navbar-expand-sm .bg-light justify-content-center {nav}
+    .container-fluid {div}
+    .navbar-nav {ul}
+    .nav-item {li}
+    .nav-link {a}
+
+    popover {+script}
+
+    toast {+script}
+
+    tooltip {+script}
+
+    ScrollSpy {position Sticky concept}
+
+    {Sidebar}
+    offcanvas
+    offcanvas-header {In page}
+    button on click body will show and we can dismiss it
+    offcanvas-body {In sidebar}
+
+    .border-0 {}
+    .border-top/start/end/bottom { }
+    .border-top/start/end/bottom-0/5 { }
+    .w-25/50/75/100 { width size }
+
+    shadow
+
+    {Vertical Align}
+    align-baseline
+    align-top
+    align-middle
+    align-bottom
+    align-text-top
+    align-text-bottom
+
+    visible/invisible
+
+
+    //Flex Concept
+    d-inline
+    d-inline-flex {For the parent conatiner}
+
+    flex-row
+    flex-row-reverse
+    flex-column
+    flex-column-reverse
+
+    justify-content-start
+    justify-content-end
+    justify-content-between
+    justify-content-around
+    justify-content-center
+
+    flex-fill
+    flex-grow-0/1
+    flex-shrink-0/1
+    order-1/5
+
+    ms-auto (left)
+    me-auto (right)
+
+    flex-nowrap (default)
+    flex-wrap
+    flex-wrap-reverse
+
+    align-content-*
+    align-content-start (default)
+    align-content-end
+    align-content-center 
+    align-content-between
+    align-content-around
+    align-content-stretch
+
+    align-items-*
+    align-items-start
+    align-items-end
+    align-items-center 
+    align-items-baseline
+    align-items-stretch (default)
+
+
+    align-self-*
+    align-self-start
+    align-self-end
+    align-self-center
+    align-self-baseline
+    align-self-stretch (default)
+
+    //Form
+    .form-label (label)
+    .form-control (input)
+    .form-control-sm/lg
+    .form-control-color {input type color}
+
+    .form-select {select}
+    form-select-sm/lg
+
+    .form-check -> .form-check-label {label} -> .form-check-input {input}
+    .form-switch {form-check and form-switch div}
+    .form-range {input}
+
+    .input-group / input-group-sm/lg {outer div}
+    .input-group-text
+
+    .form-floating {FLoating label outer div}
+
+
+
+    // Grid
+
+    
+
+
+
+
+    {Not Supported}
+    Jumbotron 
+
+
+
+</body>
+</html>

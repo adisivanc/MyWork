@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body class="">
+    
+    <p id="demo"></p>
+
+    <script type="text/javascript">
+        //The WeakMap is similar to a Map. However, WeakMap can only contain objects as keys. 
+
+        const weakMap = new WeakMap();
+        console.log(weakMap); // WeakMap {} 
+
+        let obj = {};
+
+        // adding object (element) to WeakMap
+        weakMap.set(obj, 'hello');
+
+        console.log(weakMap); // WeakMap {{} => "hello"}
+
+    </script>
+
+</body>
+</html>

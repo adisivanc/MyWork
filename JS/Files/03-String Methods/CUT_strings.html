@@ -16,15 +16,23 @@
 
     <script type="text/javascript">
         
-        // Type 01
+        // Type 01 slice(start,end)
         let alpha01 = "Welcome to the Fake World";
-        let someVar01 = alpha01.split("");
+        let someVar01 = alpha01.slice(2,6);
         console.log(someVar01);
 
-        // Type 02 by using map and call
         let alpha02 = "Welcome to the Fake World";
-        let someVar02 = Array.prototype.map.call(alpha02, x => x);
+        let someVar02 = alpha02.slice(-12,-6);
         console.log(someVar02);
+
+        let alpha03 = "Welcome to the Fake World";
+        let someVar03 = alpha03.slice(-12,-6);
+        console.log(someVar03);
+
+        // Type 02 subString(start,end)
+        let alpha04 = "Welcome to the Fake World";
+        let someVar04 = alpha04.subString(2,6); // 
+        console.log(someVar04);
 
     </script>
 

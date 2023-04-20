@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body class="">
+    
+    <p id="demo"></p>
+
+    <script type="text/javascript">
+        // IN WeakSet we can store only object
+        // Set allow unique value (Duplicates not allowed)
+
+
+        const weakSet = new WeakSet();
+        console.log(weakSet); // WeakSet {}
+
+        let obj = {
+            message: 'Hi',
+            sendMessage: true
+        }
+
+        // adding object (element) to WeakSet
+        weakSet.add(obj);
+
+        console.log(weakSet); // WeakSet {{message: "Hi", sendMessage: true}}
+
+    </script>
+
+</body>
+</html>

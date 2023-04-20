@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body class="">
+    
+    <p id="demo"></p>
+
+    <script type="text/javascript">
+        // Map is similar to objects in JavaScript that allows us to store elements in a key/value pair.
+        // The elements in a Map are inserted in an insertion order. However, unlike an object, a map can contain objects, functions and other data types as key.
+
+        // create a Map
+        const map1 = new Map(); // an empty map
+        console.log(map1); // Map {}
+
+        // create a set
+        let map2 = new Map();
+
+        // insert key-value pair
+        map2.set('info', {name: 'Jack', age: 26});
+        console.log(map2); // Map {"info" => {name: "Jack", age: 26}}
+        //info is key and {name...} is value
+
+        // access the elements of a Map {by using key}
+        console.log(map2.get('info')); // {name: "Jack", age: "26"}
+
+        // Similar to set others option are set, delete, clear, has and size
+
+        // using forEach method()
+        let map4 = new Map();
+        map4.set('name', 'Jack');
+        map4.set('age', '27');
+
+        // looping through Map
+        map4.forEach(function(value, key) {
+        console.log(key + '- ' + value)
+        })
+
+    </script>
+
+</body>
+</html>
