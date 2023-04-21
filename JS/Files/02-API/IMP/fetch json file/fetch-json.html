@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        let apiURL="./json/test.json";
+
+        fetch(apiURL,{method:"GET"})
+        .then(resp => resp.json())
+        .then(sResp => console.log(sResp))
+
+        let getJson = async() => {
+            let fRes = await fetch(apiURL,{method:"GET"})
+            let sRes = await fRes.json();
+            console.log(sRes);
+        } 
+        let abc = getJson();
+        console.log(abc);
+    </script>
+</body>
+</html>

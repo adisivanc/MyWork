@@ -7,45 +7,70 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <style>
-        
+        input[type=checkbox] { padding:5px; }
+        body { font-size:1.2em; line-height:1em;}
     </style>
 </head>
 <body>
-    <div class="container">
-    <form name="checkVal" action="">
-        <label for="checkBox">Please select the fruits</label>
-        <div class="form-group">
-            <div class="checkbox">
-                <input type="checkbox" id="fruits01" name="fruits01" class="fruits" value="banana">
-                <label for="fruits01">Banana</label>
-            </div>
-            <div class="checkbox">
-                <input type="checkbox" id="fruits02" name="fruits02" class="fruits" value="apple">
-                <label for="fruits02">Apple</label>
-            </div>
-            <div class="checkbox">
-                <input type="checkbox" id="fruits03" name="fruits03" class="fruits" value="lychee">
-                <label for="fruits03">Lychee</label>
-            </div>
+    <div>
+        <label>
+            <input type="checkbox" name="interest" id="interest" value="interest"/>
+            Select All
+        </label>
+        <div>
+            <label>
+                <input type="checkbox" name="techInterest" id="html" value="html"/>
+                HTML / HTML5
+            </label>
+            <label>
+                <input type="checkbox" name="techInterest" id="css" value="css"/>
+                CSS / CSS3
+            </label>
+            <label>
+                <input type="checkbox" name="techInterest" id="scss" value="scss"/>
+                SASS/SCSS/LESS
+            </label>
+            <label>
+                <input type="checkbox" name="techInterest" id="javascript" value="javascript"/>
+                Javascript
+            </label>
         </div>
-        <div class="btn btn-warning" onclick="getCheckBoxVal()">Get Value</div>
-    </form>
+        <button onclick="getValue()">Get Value</button>
     </div>
-    <script type="text/javascript">
-        const getCheckBoxVal = () => {
-            let inputElements = document.getElementsByClassName("fruits")
-            let checkedValue=[];
 
-            for(var i=0; inputElements[i]; ++i){
-                if(inputElements[i].checked){
-                    console.log(inputElements[i].value);
-                    checkedValue.push(inputElements[i].value);
+    <script>
+        let interests = document.getElementsByName("techInterest");
+        let checkedArr=[];
+
+        function getValue(){
+            checkedArr.length=0;
+            for(let interest of interests){
+                if(interest.checked===true){
+                    checkedArr.push(interest.value);
+                    continue;
+                }else{
                     continue;
                 }
             }
-
-            console.log(checkedValue);
+            console.log(checkedArr);
         }
+
+        let selAll = document.querySelector("#interest");
+
+        selAll.addEventListener('click',function(){
+            checkedArr.length=0;
+            if(selAll.checked===true){
+                for(let interest of interests){
+                   interest.checked=true;
+                }
+            }else{
+                for(let interest of interests){
+                   interest.checked=false;
+                }
+            }
+        })
+
+
     </script>
 </body>
 </html>

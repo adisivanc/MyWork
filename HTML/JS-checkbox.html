@@ -1,60 +1,82 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<style>
-  input[type="checkbox"] { width:24px; height:24px; }
-  input[type="checkbox"] + label { }
-</style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <style>
+        input[type=checkbox] { padding:5px; }
+        body { font-size:1.2em; line-height:1em;}
+    </style>
 </head>
 <body>
-
-  <div>
     <div>
-      <input type="checkbox" id="selectAll" name="selectAll" value="selectAll">
-      <label for="selectAll">Select All</label>
+        <label>
+            <input type="checkbox" name="interest" id="interest" value="interest"/>
+            Select All
+        </label>
+        <div>
+            <label>
+                <input type="checkbox" name="techInterest" id="html" value="html"/>
+                HTML / HTML5
+            </label>
+            <label>
+                <input type="checkbox" name="techInterest" id="css" value="css"/>
+                CSS / CSS3
+            </label>
+            <label>
+                <input type="checkbox" name="techInterest" id="scss" value="scss"/>
+                SASS/SCSS/LESS
+            </label>
+            <label>
+                <input type="checkbox" name="techInterest" id="javascript" value="javascript"/>
+                Javascript
+            </label>
+        </div>
+        <button onclick="getValue('techInterest')">Get Value</button>
     </div>
-    <input type="checkbox" id="drumstick" name="vegtab" value="drumstick">
-    <label for="drumstick">Drumstick</label>
-    <input type="checkbox" id="perandai" name="vegtab" value="perandai">
-    <label for="perandai">Perandai</label>
-    <input type="checkbox" id="carrot" name="vegtab" value="carrot">
-    <label for="carrot">Carrot</label>
-    <input type="checkbox" id="tomato" name="vegtab" value="tomato">
-    <label for="tomato">Tomato</label>
-    <button onclick="someFunc()">Get Value</button>
-  </div>
 
-  <script type="text/javascript">
-      let vegArr = document.getElementsByName("vegtab");
-      //console.log(vegArr[0]);
-      let checkArr =[];
+    <div>
+      <div>
+        <input type="checkbox" id="selectAll" name="selectAll" value="selectAll">
+        <label for="selectAll">Select All</label>
+      </div>
+      <input type="checkbox" id="drumstick" name="vegtab" value="drumstick">
+      <label for="drumstick">Drumstick</label>
+      <input type="checkbox" id="perandai" name="vegtab" value="perandai">
+      <label for="perandai">Perandai</label>
+      <input type="checkbox" id="carrot" name="vegtab" value="carrot">
+      <label for="carrot">Carrot</label>
+      <input type="checkbox" id="tomato" name="vegtab" value="tomato">
+      <label for="tomato">Tomato</label>
+      <button onclick="getValue('vegtab')">Get Value</button>
+    </div>
 
-      function someFunc(){
-        for(let veg of vegArr){
-          if(veg.checked==true){
-            checkArr.push(veg.value);
-          }else{
-            checkArr.length=0;
-          }
+
+    <script type="text/javascript">
+
+        let checkedArr=[];
+
+        function getValue(para){
+            let interests = document.getElementsByName(para);
+
+            checkedArr.length=0;
+            for(let interest of interests){
+                if(interest.checked===true){
+                    checkedArr.push(interest.value);
+                    continue;
+                }else{
+                    continue;
+                }
+            }
+            console.log(checkedArr);
         }
-        console.log(checkArr);
 
-      }
-      
-      let selectAll=document.querySelector("#selectAll");
-
-      selectAll.addEventListener('click',function(){
-        if(selectAll.checked==true){
-          for(veg of vegArr){
-            veg.checked=true;
-          }
-        }else{
-          for(veg of vegArr){
-            veg.checked=false;
-          }
-        }
         
-      })
-  </script>
+
+
+    </script>
 </body>
 </html>
