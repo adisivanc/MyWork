@@ -8,8 +8,12 @@
     <script src="https://kit.fontawesome.com/808acbfcb9.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <h4><i class="fa-solid fa-house fa-lg"></i>Some Text</h4> 
-    <h4><i class="fas fa-wrench fa-lg"></i>
-    <i class="fa-brands fa-twitter fa-lg"></i></h4>
+    <iframe src="http://example.com" name="example">
+
+    <script>
+    let win = window.frames.example;
+
+    win.postMessage("message", "*");
+    </script>
 </body>
 </html>
