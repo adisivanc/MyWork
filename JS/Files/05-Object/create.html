@@ -11,19 +11,17 @@
             <h4>Check Console Log</h4>
         </div>
         <script type="text/javascript">
-            const obj = {
-                color:"yellow",
-                size:"20px",
-                screenSize(){
-                    let sw = "320px";
+            const objFunc = {
+                colorPx(){
+                    let sw = "Colour is "+this.color+" and Font Size is "+this.size;
                     return sw;
                 }
             }
 
-            const cloneObj = Object.create(obj);
-            console.log("Normal Object",obj);
-            console.log("Clone Object",cloneObj);
-            console.log("Clone Object",cloneObj.screenSize());
+            const cloneObj = Object.create(objFunc);
+            cloneObj.color="yellow";
+            cloneObj.size="20px";
+            console.log(cloneObj.colorPx());
         </script>
     </body>
 </html>
