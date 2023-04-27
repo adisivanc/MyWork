@@ -21,19 +21,30 @@
     
 <script type="text/javascript">
 
-class emp {
+class Person {
     constructor(){
-        this.name="Siva";
-        console.log("1"); // By default it invokes
+        this.firstName="Katrina";
+        this.lastName="Kaif";
     }
-    printEmp(){
-        console.log(this.name);
+    fullName(){
+        return this.firstName+" "+this.lastName;
+    }
+}
+
+class Professinal extends Person {
+    constructor(){
+        super();
+        this.professinal = "Actress";
+        this.location = "Mumbai";
+    }
+    fullDetails(){
+        return this.fullName()+" was the "+this.professinal+" from "+this.location
     }
 }
 
 
-const empObj = new emp();
-empObj.printEmp();
+const empObj = new Professinal();
+console.log(empObj.fullDetails());
 
 </script>
     
