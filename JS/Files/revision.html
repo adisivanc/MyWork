@@ -13,9 +13,23 @@
 </head>
 <body>
 
+    <button onclick="funcReturn01()">Fetch</button>
+
     <script type="text/javascript">
 
-        
+        let apiURL="https://jsonplaceholder.typicode.com/posts";
+
+        function getData(){
+            let promise = new Promise(function(resolve,reject){
+                setTimeout(function(){
+                    resolve({username:"abc",id:2345,location:"mannargudi"})
+                },500)
+            })
+            return promise;
+        }
+
+        let data01 = getData();
+        console.log(data01);
         
     </script>
 </body>
