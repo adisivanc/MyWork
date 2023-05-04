@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Test</title>
+        <style>
+            img { height:72px; }
+        </style>
+    </head>
+    <body>
+      
+        
+        <script type="text/javascript">    
+
+
+        var bmiObj = bmiFunc(weight,height){
+            this.weight=weight;
+            this.height=height;
+            full:function() {
+            return weight / (height * height);
+            }
+        }
+
+        
+
+/*
+        let markbmi = bmiFunc(78,1.69);
+        let johnbmi = bmiFunc(92,1.95);
+*/
+        let markbmi = bmiFunc(95,1.88);
+        console.log(markbmi.full());
+        let johnbmi = bmiFunc(85,1.76);
+        console.log(johnbmi.full());
+
+        if(markbmi>johnbmi){
+            markHigherBMI = markbmi
+            console.log("Mark's BMI is higher "+markHigherBMI);
+        }else{
+            markHigherBMI = johnbmi
+            console.log("John's BMI is higher "+markHigherBMI);
+        }
+
+        </script>
+    </body>
+</html>

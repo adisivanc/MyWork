@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8" />
+		<title>Sort Code</title>
+		<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+		<script>
+			function swapStyleSheet(sheet) {
+				document.getElementById('pagestyle').setAttribute('href', sheet);
+			}
+		</script>
+		<link href="styles/themes/appzillon/css/local-base.css" rel="stylesheet" media="screen" />
+		<link id="pagestyle" href="styles/themes/appzillon/css/local-apz.css" rel="stylesheet" media="screen" />
+
+	</head>
+	<body  class="fulsv" >
+        <span id="SpriteSVG"></span>
+        <br> 
+        <select class="ett-slcn etb-slcn pri" style="width:20%;">
+            <option id="myButton" onclick="swapStyleSheet('styles/themes/appzillon/css/local-apz.css')">Appzillon</option>
+            <option id="myButtonBCL" onclick="swapStyleSheet('styles/themes/appzillon/css/local-bcl.css')">Barclays </option>
+            <option id="myButtonRolb" onclick="swapStyleSheet('styles/themes/appzillon/css/local-rolb.css')">Rolb</option>
+            <option id="myButtonMobile" onclick="swapStyleSheet('styles/themes/appzillon/css/local-mobile.css')">Mobile</option>
+            <option id="myButtonCiti" onclick="swapStyleSheet('styles/themes/appzillon/css/local-citi.css')">Citi</option>
+        </select> 
+        <br>
+        <br> 
+        <h4>Sort-code Primary </h4>
+        <br>
+        <span class="ett-srtc pri">
+            <ul>
+                <li>
+                    <input type="text" id="input3" class="ett-inpt pri" placeholder="Value3"/>
+
+                </li>
+                <li> - </li>
+                <li>
+                    <input type="text" id="input3" class="ett-inpt pri" placeholder="Value3"/>
+                </li>
+                <li> - </li>
+                <li>
+                    <input type="text" id="input3" class="ett-inpt pri" placeholder="Value3"/>
+                </li> 
+                
+            </ul>
+            <span class="htx">Hint for Sort code</span>
+        </span>
+        <br>
+        <br>
+        <h4>Sort-code secondary </h4>
+        <br>
+        <span class="ett-srtc sec">
+            <ul>
+                <li>
+                    <input type="text" id="input3" class="ett-inpt sec" placeholder="Value3"/>
+                </li>
+                <li> - </li>
+                <li>
+                    <input type="text" id="input3" class="ett-inpt sec" placeholder="Value3"/>
+                </li>
+                <li> - </li>
+                <li>
+                    <input type="text" id="input3" class="ett-inpt sec" placeholder="Value3"/>
+                </li>  
+            </ul>
+            <span class="htx">Hint for Sort code</span>
+        </span>
+        <br>
+        <br>
+        <h4>Sort-code teritiary </h4>
+        <br>
+        <span class="ett-srtc ter">
+            <ul>
+                <li>
+                    <input type="text" id="input3" class="ett-inpt ter" placeholder="Value3"/>
+                </li>
+                <li > - </li>
+                <li >
+                    <input type="text" id="input3" class="ett-inpt ter" placeholder="Value3"/>
+                </li>
+                <li> - </li>
+                <li>
+                    <input type="text" id="input3" class="ett-inpt ter" placeholder="Value3"/>
+                </li> 
+            </ul>
+            <span class="htx">Hint for Sort code</span>
+        </span>
+         <br>
+        <br> 
+        <h4>Sort-code Account Primary </h4>
+        <br>
+        <span class="ett-srta pri">
+            <ul> 
+                <li>
+                    <input type="text" id="input3" class="scb-col100 ett-inpt pri" placeholder="Value3"/>
+                </li>
+                
+            </ul>
+            <span class="htx">Hint for Sort code</span>
+        </span>
+        <br>
+        <br>
+        <h4>Sort-code Account secondary </h4>
+        <br>
+        <span class="ett-srta sec">
+            <ul> 
+                <li>
+                    <input type="text" id="input3" class="scb-col100 ett-inpt sec" placeholder="Value3"/>
+                </li> 
+            </ul>
+            <span class="htx">Hint for Sort code</span>
+        </span>
+        <br>
+        <br>
+        <h4>Sort-code Account teritiary </h4>
+        <br>
+        <span class="ett-srta ter">
+            <ul> 
+                <li>
+                    <input type="text" id="input3" class="scb-col100 ett-inpt ter" placeholder="Value3"/>
+                </li> 
+            </ul>
+            <span class="htx">Hint for Sort code</span>
+        </span>
+                    
+                             
+		<script type="text/javascript" charset="utf-8" src="scripts/jquery-3.1.1.min.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/jquery-ui.min.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/select2.min.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/appzillon.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/uiutils.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/swiper.min.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/tableHeadFixer.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/karthik-plugins.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/karthik-scripts.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/ripple.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/svgxuse.js"></script>
+<script type="text/javascript">
+        $(document).ready(function () {
+            apz = new Apz();
+            apz.appId = "testing";
+            apz.deviceOs = "APPZILLONSIMULATOR";
+            //apz.loadProject();
+        });
+    </script>
+        
+        
+		<script>
+            
+		
+			$(document).ready(function() {
+				$('#SpriteSVG').load('svg-apz.svg');
+				$('#myButton').click(function(event) {
+		
+					// prevent page submit
+					event.preventDefault();
+					$("#SpriteSVG").text(" ");
+					// load the page into #SpriteSVG
+					$('#SpriteSVG').load('svg-apz.svg');
+		
+				});
+				$('#myButtonBCL').click(function(event) {
+		
+					// prevent page submit
+					event.preventDefault();
+					$("#SpriteSVG").text(" ");
+					// load the page into #SpriteSVG
+					$('#SpriteSVG').load('svg-bcl.svg');
+		
+				});
+				// load ripple effect for elements with class .rpl
+				//$('.rpl, .ripples').on('click', ripplesEffect);
+		
+			});
+		</script>  
+	</body>
+
+</html>

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8" />
+		<title>Radio</title>
+		<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+		<script>
+			function swapStyleSheet(sheet) {
+				document.getElementById('pagestyle').setAttribute('href', sheet);
+			}
+		</script>
+		<link href="styles/themes/appzillon/css/local-base.css" rel="stylesheet" media="screen" />
+		<link id="pagestyle" href="styles/themes/appzillon/css/local-apz.css" rel="stylesheet" media="screen" />
+
+	</head>
+
+	<body  class="fulsv" style="padding:25px; background-color: #FFF">
+		<span id="SpriteSVG"></span>
+        <br> 
+        <select class="ett-slcn etb-slcn pri" style="width:20%;">
+            <option id="myButton" onclick="swapStyleSheet('styles/themes/appzillon/css/local-apz.css')">Appzillon</option>
+            <option id="myButtonBCL" onclick="swapStyleSheet('styles/themes/appzillon/css/local-bcl.css')">Barclays </option>
+            <option id="myButtonRolb" onclick="swapStyleSheet('styles/themes/appzillon/css/local-rolb.css')">Rolb</option>
+            <option id="myButtonMobile" onclick="swapStyleSheet('styles/themes/appzillon/css/local-mobile.css')">Mobile</option>
+            <option id="myButtonCiti" onclick="swapStyleSheet('styles/themes/appzillon/css/local-citi.css')">Citi</option>
+        </select> 
+        <br><br>  
+        <p> Radio Native horizontal </p>
+        <br>
+        <span class="etb-rdio ett-rdio hor">
+            <span >
+                <input type="radio" name="rgroup1" id="radio1" aria-labelledby="radio-label-1" checked/>
+                <label id="radio-label-1" class="flb" for="radio1" title="Option1"> Option1</label>
+            </span>
+            <span >
+                <input type="radio" name="rgroup1" id="radio2" aria-labelledby="radio-label-2"/>
+                <label id="radio-label-2" class="flb" for="radio2" title="Option2">Option2</label>
+            </span>	
+            <span >
+                <input type="radio" name="rgroup1" disabled="disabled" id="radio3" aria-labelledby="radio-label-3"/>
+                <label id="radio-label-3" class="flb" for="radio3" title="Option3">Disabled</label>
+            </span>	
+        </span> 
+        <br>
+        <p> Radio Native  vertical</p>
+        <br>
+        <span class="etb-rdio ett-rdio ver ">
+            <span>
+                <input type="radio" name="rgroup2" id="radio4"  aria-labelledby="radio-label-4"/>
+                <label id="radio-label-4" class="flb" for="radio4" title="Option1"> Option1</label>
+            </span>
+            <span>
+                <input type="radio" name="rgroup2" id="radio5" aria-labelledby="radio-label-5" checked/>
+                <label id="radio-label-5" class="flb" for="radio5" title="Option2">Option2</label>
+            </span>	
+            <span>
+                <input type="radio" name="rgroup2" disabled="disabled" id="radio6" aria-labelledby="radio-label-6" />
+                <label id="radio-label-6" class="flb" for="radio6" title="Option3">Disabled</label>
+            </span>	
+        </span>
+        <br>
+        <p> Radio primary horizontal </p>
+        <br>
+        <span id="rdio-group" class="etb-rdio ett-rdio hor pri " aria-describedby="htx-08">
+                    <span >
+                        <input type="radio" name="rgroup3k" id="radio7"  aria-labelledby="radio-label-7" checked/>
+                        <label id="radio-label-7" class="flb" for="radio7" title="Option1">Option1</label>
+                       
+                    </span>
+                    <span >
+                        <input type="radio" name="rgroup3k" id="radio8" aria-labelledby="radio-label-8" />
+                        <label id="radio-label-8" class="flb err" for="radio8" title="Option2">Error</label>
+                       
+                    </span>	
+                    <span >
+                        <input type="radio" name="rgroup3k" disabled="disabled" id="radio9" aria-labelledby="radio-label-9" />
+                        <label id="radio-label-9" class="flb" for="radio9" title="Option3">Disabled</label>
+                        
+                    </span>	
+                     <span id="htx-08" class="htx">Optional description text</span>										
+               </span>
+        <br>
+        <p>  Radio primary vertical</p>
+        <br>
+        <span class="etb-rdio ett-rdio ver pri">
+                    <span >
+                        <input type="radio" name="rgroup3bu" id="radio7b"  aria-labelledby="radio-label-10" aria-describedby="htx-04"/>
+                        <label id="radio-label-10" class="flb" for="radio7b" title="Option1">Option1</label>
+                       <span id="htx-04" class="htx">Optional description text</span>
+                    </span>
+                    <span >
+                        <input type="radio" name="rgroup3bu" id="radio8b" aria-labelledby="radio-label-11" aria-describedby="htx-05"/>
+                        <label id="radio-label-11" class="flb err" for="radio8b" title="Option2">Error</label>
+                        <span id="htx-05" class="htx">Optional description text</span>
+                    </span>	
+                    <span >
+                        <input type="radio" name="rgroup3bu" disabled="disabled" id="radio9b" aria-labelledby="radio-label-12" aria-describedby="htx-06"/>
+                        <label id="radio-label-12" class="flb" for="radio9b" title="Option3">Disabled</label>
+                        <span id="htx-06" class="htx">Optional description text</span>
+                    </span>											
+                 </span>
+        <br>
+        <p>  Radio secondary horizontal</p>
+        <br> 
+        <span class="etb-rdio ett-rdio hor sec">  
+                    <span >
+                        <input type="radio" name="rgroup3i" id="radio73"  aria-labelledby="radio-label-13"/>
+                        <label id="radio-label-13" class="flb" for="radio73" title="Option1"> Option1</label>
+                    </span>
+                    <span >
+                        <input type="radio" name="rgroup3i" id="radio83" aria-labelledby="radio-label-14"/>
+                        <label id="radio-label-14" class="flb" for="radio83" title="Option2">Option2</label>
+                    </span>	
+                    <span >
+                        <input type="radio" name="rgroup3i" disabled="disabled" id="radio93" aria-labelledby="radio-label-15"/>
+                        <label id="radio-label-15" class="flb" for="radio93" title="Option3">Disabled</label>
+                    </span>											
+                </span> 
+        <br>
+        <p>  Radio secondary vertical</p>
+        <br>
+        <span class="etb-rdio ett-rdio ver sec"> 
+                    <span >
+                        <input type="radio" name="rgroup3bp" id="radio7b4"  aria-labelledby="radio-label-16"/>
+                        <label id="radio-label-16" class="flb" for="radio7b4" title="Option1"> Option1</label>
+                    </span>
+                    <span >
+                        <input type="radio" name="rgroup3bp" id="radio8b4" aria-labelledby="radio-label-17"/>
+                        <label id="radio-label-17" class="flb" for="radio8b4" title="Option2">Option2</label>
+                    </span>	
+                    <span >
+                        <input type="radio" name="rgroup3bp" disabled="disabled" id="radio9b4" aria-labelledby="radio-label-18"/>
+                        <label id="radio-label-18" class="flb" for="radio9b4" title="Option3">Disabled</label>
+                    </span>	
+                </span>
+        <br>
+        <p>  Radio teritiary horizontal</p>
+        <br>
+        <span class="etb-rdio ett-rdio hor ter"> 
+                    <span >
+                        <input type="radio" name="rgroup3r" id="radio78"  aria-labelledby="radio-label-19"/>
+                        <label id="radio-label-19" class="flb" for="radio78" title="Option1"> Option1</label>
+                    </span>
+                    <span >
+                        <input type="radio" name="rgroup3r" id="radio88" aria-labelledby="radio-label-20"/>
+                        <label id="radio-label-20" class="flb" for="radio88" title="Option2">Option2</label>
+                    </span>	
+                    <span >
+                        <input type="radio" name="rgroup3r" disabled="disabled" id="radio98" aria-labelledby="radio-label-21"/>
+                        <label id="radio-label-21" class="flb" for="radio98" title="Option3">Disabled</label>
+                    </span>	
+                </span>    		 
+        <br>
+        <p>  Radio teritiary vertical</p>
+        <br>
+        <span class="etb-rdio ett-rdio ver ter">
+                    <span >
+                        <input type="radio" name="rgroup3bw" id="radio7b9"  aria-labelledby="radio-label-22"/>
+                        <label id="radio-label-22" class="flb" for="radio7b9" title="Option1"> Option1</label>
+                    </span>
+                    <span >
+                        <input type="radio" name="rgroup3bw" id="radio8b9" aria-labelledby="radio-label-23"/>
+                        <label id="radio-label-23" class="flb" for="radio8b9" title="Option2">Option2</label>
+                    </span>	
+                    <span >
+                        <input type="radio" name="rgroup3bw" disabled="disabled" id="radio9b9" aria-labelledby="radio-label-24"/>
+                        <label id="radio-label-24" class="flb" for="radio9b9" title="Option3">Disabled</label>
+                    </span>											
+                    </span>
+        <br>  
+        <p>Radio Group Buttons primary</p>
+        <br>
+        <span class="ett-rdgp  etb-rdgp pri">
+            <div class="button-group-buttons" data-toggle="buttons">
+                <div class="rdio-btn-grp">
+                    <input type="radio" name="rdio-btn-grp" id="button-group11" autocomplete="off" checked title="Radio 1" aria-labelledby="radio-label-25">
+                    <label id="radio-label-25" for="button-group11" class="rdio-btn" title="Radio 1 (preselected)">Radio 1 (preselected)</label>
+                </div>
+                <div class="rdio-btn-grp">
+                    <input type="radio" name="rdio-btn-grp" id="button-group21" autocomplete="off" title="Radio 2" aria-labelledby="radio-label-26">
+                    <label id="radio-label-26" for="button-group21" class="rdio-btn" title="Radio 2">Radio 2</label>
+                </div>
+                <div class="rdio-btn-grp">
+                    <input type="radio" name="rdio-btn-grp" id="button-group31" autocomplete="off" title="Radio 3" aria-labelledby="radio-label-27">
+                    <label id="radio-label-27" for="button-group31" class="rdio-btn" title="Radio 3">Radio 3</label>
+                </div>
+            </div>										
+            <span class="htx">Hint for Radio Group Buttons </span>
+            </span>
+        <br> 
+        <p>Radio Group Buttons secondary</p> 
+        <br>
+        <span class="ett-rdgp  etb-rdgp sec">
+            <div class="button-group-buttons" data-toggle="buttons">
+                <div class="rdio-btn-grp">
+                    <input type="radio" name="rdio-btn-grp2" id="button-group12" autocomplete="off" checked title="Radio 1" aria-labelledby="radio-label-28">
+                    <label id="radio-label-28" for="button-group12" class="rdio-btn" title="Radio 1 (preselected)">Radio 1 (preselected)</label>
+                </div>
+                <div class="rdio-btn-grp">
+                    <input type="radio" name="rdio-btn-grp2" id="button-group22" autocomplete="off" title="Radio 2" aria-labelledby="radio-label-29">
+                    <label id="radio-label-29" for="button-group22" class="rdio-btn" title="Radio 2">Radio 2</label>
+                </div>
+                <div class="rdio-btn-grp">
+                    <input type="radio" name="rdio-btn-grp2" id="button-group32" autocomplete="off" title="Radio 3" aria-labelledby="radio-label-30">
+                    <label id="radio-label-30" for="button-group32" class="rdio-btn" title="Radio 3">Radio 3</label>
+                </div>
+            </div>										
+            <span class="htx">Hint for Radio Group Buttons</span>
+                </span>
+        <br>
+        <p>Radio Group Buttons teritiary</p>
+        <span class="ett-rdgp  etb-rdgp ter">
+            <div class="button-group-buttons" data-toggle="buttons">
+                <div class="rdio-btn-grp">
+                    <input type="radio" name="rdio-btn-grp3" id="button-group13" autocomplete="off" checked title="Radio 1" aria-labelledby="radio-label-31">
+                    <label id="radio-label-31" for="button-group13" class="rdio-btn" title="Radio 1 (preselected)">Radio 1 (preselected)</label>
+                </div>
+                <div class="rdio-btn-grp">
+                    <input type="radio" name="rdio-btn-grp3" id="button-group23" autocomplete="off" title="Radio 2" aria-labelledby="radio-label-32">
+                    <label id="radio-label-32" for="button-group23" class="rdio-btn" title="Radio 2">Radio 2</label>
+                </div>
+                <div class="rdio-btn-grp">
+                    <input type="radio" name="rdio-btn-grp3" id="button-group33" autocomplete="off" title="Radio 3" aria-labelledby="radio-label-33">
+                    <label id="radio-label-33" for="button-group33" class="rdio-btn" title="Radio 3">Radio 3</label>
+                </div>
+            </div>										
+            <span class="htx">Hint for Radio Group Buttons</span>
+        </span>	
+        
+        <br>
+		<script type="text/javascript" charset="utf-8" src="scripts/jquery-3.1.1.min.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/jquery-ui.min.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/select2.min.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/appzillon.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/uiutils.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/swiper.min.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/tableHeadFixer.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/karthik-plugins.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/karthik-scripts.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/ripple.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/svgxuse.js"></script>
+
+		<script>
+		
+			$(document).ready(function() {
+				$('#SpriteSVG').load('svg-apz.svg');
+				$('#myButton').click(function(event) {
+		
+					// prevent page submit
+					event.preventDefault();
+					$("#SpriteSVG").text(" ")
+					// load the page into #SpriteSVG
+					$('#SpriteSVG').load('svg-apz.svg');
+		
+				});
+				$('#myButtonBCL').click(function(event) {
+		
+					// prevent page submit
+					event.preventDefault();
+					$("#SpriteSVG").text(" ")
+					// load the page into #SpriteSVG
+					$('#SpriteSVG').load('svg-bcl.svg');
+		
+				});
+				// load ripple effect for elements with class .rpl
+				$('.rpl, .ripples').on('click', ripplesEffect);
+		
+			});
+		</script>
+	</body>
+
+</html>

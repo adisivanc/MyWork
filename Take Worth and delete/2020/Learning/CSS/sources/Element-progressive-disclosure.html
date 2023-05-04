@@ -1,0 +1,2246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8" />
+		<title>Progressive Disclosure</title>
+		<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+		<script>
+			function swapStyleSheet(sheet) {
+				document.getElementById('pagestyle').setAttribute('href', sheet);
+			}
+		</script>
+		<link href="styles/themes/appzillon/css/local-base.css" rel="stylesheet" media="screen" />
+		<link id="pagestyle" href="styles/themes/appzillon/css/local-apz.css" rel="stylesheet" media="screen" />
+
+	</head>
+	<body  class="fulsv" >
+        <span id="SpriteSVG"></span>
+       <br> 
+        <select class="ett-slcn etb-slcn pri" style="width:20%;">
+            <option id="myButton" onclick="swapStyleSheet('styles/themes/appzillon/css/local-apz.css')">Appzillon</option>
+            <option id="myButtonBCL" onclick="swapStyleSheet('styles/themes/appzillon/css/local-bcl.css')">Barclays </option>
+            <option id="myButtonRolb" onclick="swapStyleSheet('styles/themes/appzillon/css/local-rolb.css')">Rolb</option>
+            <option id="myButtonMobile" onclick="swapStyleSheet('styles/themes/appzillon/css/local-mobile.css')">Mobile</option>
+            <option id="myButtonCiti" onclick="swapStyleSheet('styles/themes/appzillon/css/local-citi.css')">Citi</option>
+        </select> 
+        <br>
+        <br>
+        <br>
+        <p> Radio primary horizontal </p>
+        <br>
+        <span id="rdio-group" class="etb-rdio ett-rdio hor pri " aria-describedby="htx-08">
+            <span >
+                <input type="radio" name="rgroup3k" id="radio7"  aria-labelledby="radio-label-7" checked/>
+                <label id="radio-label-7" class="flb" for="radio7" title="Option1">Option1</label> 
+            </span>
+            
+            <span >
+                <input type="radio" name="rgroup3k" id="radio8" aria-labelledby="radio-label-8" />
+                <label id="radio-label-8" class="flb err" for="radio8" title="Option2">Error</label> 
+            </span> 
+            <span>
+                <input type="radio" name="rgroup3k" disabled="disabled" id="radio9" aria-labelledby="radio-label-9" />
+                <label id="radio-label-9" class="flb" for="radio9" title="Option3">Disabled</label> 
+            </span>	
+            <div class="hrad-grp">
+                <div id=" " class="rdi-cnt pri">
+                    
+                    <div> <ul class="eoc srb wrapped">
+        <li class="etw-40">
+          <label id="input_label_01" for="inp_01" class="flb" style="" title="">Card Number</label>
+        </li>
+        <li class="eic etw-100">
+          <span class="ecn etw-95" style="">
+            <span class="etw-100 icr  pri">
+              <input id="inp_01" class="etw-100 ett-inpt card-number card-js pri lft"  aria-labelledby="input_label_01" aria-describedby="htx_01" enabled="enabled" value="" type="tel">
+              <svg class="ett-icon icon-card-type px24"><use xlink:href="#icon-card-type"></use></svg> 
+              <span id="htx-01" class="htx">Optional description text </span>
+            </span>
+          </span>
+        </li>
+      </ul>
+</div>
+                </div>
+                <div id=" " class="rdi-cnt pri">
+                    <div> <ul class="eoc srb wrapped">
+        <li class="etw-40">
+          <label id="input_label_01" for="inp_01" class="flb" style="" title="">Card Number</label>
+        </li>
+        <li class="eic etw-100">
+          <span class="ecn etw-95" style="">
+            <span class="etw-100 icr  pri">
+              <input id="inp_01" class="etw-100 ett-inpt card-number card-js pri lft"  aria-labelledby="input_label_01" aria-describedby="htx_01" enabled="enabled" value="" type="tel">
+              <svg class="ett-icon icon-card-type px24"><use xlink:href="#icon-card-type"></use></svg> 
+              <span id="htx-01" class="htx">Optional description text </span>
+            </span>
+          </span>
+        </li>
+      </ul>
+</div>
+                </div>
+                <div id=" " class="rdi-cnt pri">
+                    <div><ul class="eoc srb wrapped">
+        <li class="etw-40">
+          <label id="input_label_01" for="inp_01" class="flb" style="" title="">Card Number</label>
+        </li>
+        <li class="eic etw-100">
+          <span class="ecn etw-95" style="">
+            <span class="etw-100 icr  pri">
+              <input id="inp_01" class="etw-100 ett-inpt card-number card-js pri lft"  aria-labelledby="input_label_01" aria-describedby="htx_01" enabled="enabled" value="" type="tel">
+              <svg class="ett-icon icon-card-type px24"><use xlink:href="#icon-card-type"></use></svg> 
+              <span id="htx-01" class="htx">Optional description text </span>
+            </span>
+          </span>
+        </li>
+      </ul>
+ </div>
+                </div>
+            </div>
+            
+             <span id="htx-08" class="htx">Optional description text</span>										
+       </span>
+        <br>
+        <p>  Radio primary vertical</p>
+        <br>
+        <span class="etb-rdio ett-rdio ver pri">
+            <span>
+                <input type="radio" name="rgroup3bu" id="radio7b"  aria-labelledby="radio-label-10" aria-describedby="vrad_01"/>
+                <label id="radio-label-10" class="flb" for="radio7b" title="Option1">Progressive Disclosure Primary</label> 
+                <div id="vrad_01" class="vrad-cnt pri"> 
+                  <div class="grb">
+                    <div class="gcb-col12">
+                      <div class="plt-simp">
+                        <div class="pst-simp pri u-relative">
+                            <div class="crt-form ver pri">
+                                <ul class="ttl">
+                                    <li class="ttl-ctr">
+                                        <ul class="ttv">
+                                            <li class="icn">
+                                                <svg class="ett-icon icon-list-alt px34">
+                                                    <use xlink:href="#icon-list-alt"></use>
+                                                </svg>
+                                            </li>
+                                            <li class="lbl">
+                                                <h4>Form - Vertical Primary</h4>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="pgn-ctr">
+                                       <ul class="pgn">
+                                            <li class="pnx"> 
+                                                <button class="ett-bttn tsp med"  aria-label="Previous page"><svg class="icon icon-chevron-left px16"><use xlink:href="#icon-chevron-left"></use></svg></button> 
+                                            </li>
+                                            <li class="pcl">
+                                              <input type="text" class="pageno" value="1">
+                                            </li>	
+                                            <li class="ptx" > 
+                                                <span>/&nbsp;</span><span>3</span> 
+                                            </li>	 
+                                            <li class="pnx"> 
+                                                <button class="ett-bttn tsp med"  aria-label="Next page"><svg class="icon icon-chevron-right px16"><use xlink:href="#icon-chevron-right"></use></svg></button>
+                                            </li> 
+                                        </ul>                 	
+                                    </li>
+                                </ul>
+                                <span class="srb wrapped pri"><!-- wrapped class is required for responsive columns -->
+                                <span class="scb-sml100 scb-lar50 pri">
+                                    <ul class="eoc wrapped srb pri"><!-- wrapped class is required for vertical orientation --> 
+                                        <li class="scb-col40">
+                                            <label class="flb req icl">
+                                                <svg class="ett-icon icon-list-alt px20"> <!-- icon selection, size, appearance, position(left and right) & semantics selection are required-->
+                                                <use xlink:href="#icon-list-alt"/>
+                                                </svg>
+                                            Icon left of Label</label>
+                                        </li>
+                                        <li class="eic scb-col60">
+                                            <span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50">
+                                                <input id="input4gx" name="test1" class="ett-inpt pri med etw-100" title="Editable input" value="Primary Input" placeholder=" Value" type="text">
+                                                <span class="htx">Hint for the input</span>
+                                                <span class="vtx">Validation text</span>
+                                            </span>
+                                        </li>
+                                    </ul> 					
+                                </span>
+                                <span class="scb-sml100 scb-lar50">
+                                    <ul class="eoc wrapped srb pri"><!-- wrapped class is required for vertical orientation -->
+                                        <li class="scb-col40">
+                                            <label class="flb">Element3 Label</label>
+                                        </li>
+                                        <li class="eic scb-col60">
+                                            <span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50">
+                                            <input id="input4x" name="test1" class="ett-inpt ter etw-100" title="Editable input" value="Tertiary Input" placeholder=" Value" type="text">
+                                            </span> 
+                                        </li>
+                                    </ul>
+                                </span>
+                            </span> 
+                           </div> 
+                        </div>
+                    </div>
+                  </div>
+                </div> 
+              </div>
+            </span> 
+            <span>
+                <input type="radio" name="rgroup3bu" id="radio8b" aria-labelledby="radio-label-11" aria-describedby="hrdi_02"/>
+                <label id="radio-label-11" class="flb" for="radio8b" title="Option2">Progressive Disclosure</label> 
+                <div id="hrdi_02" class="vrad-cnt pri"> 
+                    <div class="grb">
+                        <div class="gcb-col12">
+                            <div class="grb">
+                                <div class="gcb-col12">
+                                  <div class="plt-simp">
+                                    <div class="pst-simp pri u-relative">
+                                         <div class="crt-list pri"> 
+                                            <ul class="ttl">
+                                                <li class="ttl-ctr">
+                                                    <ul class="ttv">
+                                                        <li class="icn">
+                                                            <svg class="icon icon-list-alt px24">
+                                                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-list-alt"></use>
+                                                            </svg>
+                                                        </li>
+                                                        <li class="lbl">
+                                                            <h4>LIST IN LIST</h4>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+
+                                            </ul>
+                                            <ul class="pri">
+                                                <li class="srb wrapped chl">
+
+                                                            <span class="scb-col50">Parent</span>
+                                                            <span class="scb-col50">Parent</span>
+                                    <div id="childList_list_div" class="crt-list sec chl-ctr ">
+                                                            <ul class="ttl">
+                                                                <li class="ttl-ctr">
+                                                                    <ul class="ttv">
+                                                                        <li class="icn">
+                                                                            <svg class="icon icon-list-alt px24">
+                                                                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-list-alt"></use>
+                                                                            </svg>
+                                                                        </li>
+                                                                        <li class="lbl">
+                                                                            <h4>Child</h4>
+                                                                        </li>
+                                                                    </ul>
+                                                                </li>
+                                                            </ul>
+                                                            <ul class="sec">
+                                                                <li class="srb wrapped chl">
+
+                                                                                <span class="scb-sml100 scb-med50">Child</span>
+                                                                                <span class="scb-sml100 scb-med50">Child</span>
+
+                                    <div id="childList_list_div2" class="crt-list ter chl-ctr ">
+                                                                                <ul class="ttl">
+                                                                                    <li class="ttl-ctr">
+                                                                                        <ul class="ttv">
+                                                                                            <li class="icn">
+                                                                                                <svg class="icon icon-list-alt px24">
+                                                                                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-list-alt"></use>
+                                                                                                </svg>
+                                                                                            </li>
+                                                                                            <li class="lbl">
+                                                                                                <h4>Grand Child</h4>
+                                                                                            </li>
+                                                                                        </ul>
+                                                                                    </li>
+
+                                                                                </ul>
+
+                                                                                <ul class="ter">
+                                                                                    <li class="srb wrapped">
+                                                                                        <span class="scb-sml100 scb-med50">Child</span>
+                                                                                        <span class="scb-sml100 scb-med50">Child</span>
+                                                                                    </li>
+                                                                                    <li class="srb wrapped">
+                                                                                        <span class="scb-sml100 scb-med50">Child</span>
+                                                                                        <span class="scb-sml100 scb-med50">Child</span>
+                                                                                    </li>
+                                                                                </ul>
+
+                                                                            </div>
+
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+
+                                                    </li>
+                                                <!--<li class="srb">
+                                                    <span class="scb-col100"> Spacer </span>
+                                                </li>-->
+                                            </ul>
+                                        </div> 
+                                    </div>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+            </span>	 
+            <span >
+                <input type="radio" name="rgroup3bu" disabled="disabled" id="radio9b" aria-labelledby="radio-label-12" aria-describedby="hrdi_03"/>
+                <label id="radio-label-12" class="flb" for="radio9b" title="Option3">Progressive Disclosure</label> 
+                <div id="hrdi_03" class="vrad-cnt pri"> 
+                    <div class="grb">
+                        <div class="gcb-col12">
+                            <div class="grb">
+                                <div class="gcb-col12">
+                                  <div class="plt-simp">
+                                    <div class="pst-simp pri u-relative">
+                                       <div id="table-demo2" class="crb-tabl crt-tabl pri"> 
+                                            <ul class="ttl">
+                                            <li class="ttl-ctr">
+                                                <ul class="ttv">
+                                                    <li class="icn">
+                                                        <svg class="icon icon-list-alt px24">
+                                                            <use xlink:href="#icon-list-alt"></use>
+                                                        </svg>
+                                                    </li>
+                                                    <li class="lbl">
+                                                        <h4>Primary Table with title, icon, search, add remove and pagination </h4>
+                                                    </li>
+                                                    <li class="btn-ctr">
+                                                        <button class="ett-bttn sec med inf">Action</button>
+                                                    </li>
+                                                </ul>
+                                            </li>   
+                                            <li class="srh-ctr">
+                                                <span class="ddn-ctr"> 
+                                                    <select id="select2" class="ett-slcn pri scb-col100" placeholder="select" title="Select Box" aria-label="Filter by Office">
+                                                        <option value="">All Offices</option>
+                                                        <option value="Edinburgh">Edinburgh</option>
+                                                        <option value="London">London</option>
+                                                        <option value="New York">New York</option>
+                                                        <option value="San Francisco">San Francisco</option>
+                                                        <option value="Sidney">Sidney</option>
+                                                        <option value="Singapore">Singapore</option>
+                                                        <option value="Tokyo">Tokyo</option>
+                                                    </select>   
+                                                </span>
+                                                <span class="srh"> 
+                                                        <span><input placeholder="Search" name="search" class="srh-inp" tabindex="0" required="" type="search" aria-label="Search Table" aria-controls="table-demo2"> </span>
+                                                        <span class="srh-icn">
+                                                            <svg class="icon icon-search px16"><use xlink:href="#icon-search"></use></svg>
+                                                        </span> 
+                                                </span>
+                                            </li>
+                                            <li class="pgn-ctr">
+                                               <ul class="pgn">
+                                                    <li class="pnx"> 
+                                                        <button class="ett-bttn tsp med" aria-label="Previous page"><svg class="icon icon-chevron-left px16"><use xlink:href="#icon-chevron-left"></use></svg></button> 
+                                                    </li>
+                                                    <li class="pcl">
+                                                      <input class="pageno" value="1" type="text">
+                                                    </li>	
+                                                    <li class="ptx"> 
+                                                        <span>/&nbsp;</span><span>3</span> 
+                                                    </li>	 
+                                                    <li class="pnx"> 
+                                                        <button class="ett-bttn tsp med" aria-label="Next page"><svg class="icon icon-chevron-right px16"><use xlink:href="#icon-chevron-right"></use></svg></button>
+                                                    </li>
+                                                </ul>
+                                                <ul class="adr-ctr">
+                                                   <li class="add">
+                                                        <span>
+                                                        <button class="ett-bttn tsp med" aria-label="Add Record">
+                                                            <svg class="icon icon-plus px16"><use xlink:href="#icon-plus"></use></svg>
+                                                            </button>
+                                                        </span> 
+                                                   </li> 
+                                                   <li class="rmv">
+                                                       <span>
+                                                            <button class="ett-bttn tsp med" aria-label="Remove Record"><svg class="icon icon-minus px16"><use xlink:href="#icon-minus"></use></svg></button>
+                                                        </span>
+
+                                                   </li>
+                                                </ul> 
+                                            </li>
+                                            </ul> 
+                                            <div class="tabl-ctr hvr " >
+                                                 <table role=" grid" aria-describedby="tb1_info" class="tabl" id="tb1" role="grid" >
+                                                 <thead>
+                                                     <tr role="row">
+                                                       <th class="cen" aria-controls="tb1 " aria-label=" " style="max-width:45px">
+                                                         <span class="etb-rdio ett-rdio  pri"> 
+                                                          <span>
+                                                                <input type="radio" name="rgroup2" id="radio4" aria-labelledby="radio-label-4"/>
+                                                                <label id="radio-label-4" class="flb" for="radio4" title="Option1"></label> 
+                                                              </span>
+                                                         </span>
+                                                       </th>  
+                                                      <th class="cen sorting" aria-controls="tb1" aria-label="Header1 " tabindex="0"><span>Header1</span></th>
+                                                      <th class="cen sorting" aria-controls="tb1" aria-label="Header2" tabindex="0"><span>Header2</span></th>
+                                                         <th class="cen sorting" aria-controls="tb1" aria-label="Header3" tabindex="0"><span>Header3</span></th>
+                                                         <th class="cen sorting" aria-controls="tb1" aria-label="Header4" tabindex="0"><span>Header4</span></th>
+                                                         <th class="cen sorting" aria-controls="tb1" aria-label="Header5" tabindex="0"><span>Header5</span></th>
+                                                    </tr>
+                                                 </thead>
+                                                 <tbody>
+                                                    <tr role="row">
+                                                      <td class="cen" style="max-width:45px" tabindex="0">
+                                                         <span class="etb-rdio ett-rdio pri"> 
+                                                          <span>
+                                                                    <input name="rgroup3" id="radio7" aria-labelledby="radio-label-7" type="radio">
+                                                                    <label id="radio-label-7" class="flb" for="radio7" title="Option1"></label>
+                                                               </span>  									
+                                                         </span> 
+                                                       </td>
+                                                      <td tabindex="0">
+                                                            <span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50">
+                                                            <input class="ett-inpt scb-col100 pri" data-title="Title" data-content="Contents..." data-placement="left" placeholder="Input Primary">
+                                                            </span>
+                                                      </td>
+                                                      <td tabindex="0"><p>Column2</p></td>
+                                                      <td tabindex="0"><p>Column3</p></td>
+                                                      <td tabindex="0"><p>Column4</p></td>
+                                                      <td tabindex="0"><p>Column5</p></td>
+                                                    </tr>
+                                                    <tr role="row">
+                                                      <td class="cen" style="max-width:45px" tabindex="0">
+                                                         <span class="etb-rdio ett-rdio pri">
+                                                              <span>
+                                                                <input type="radio" name="rgroup3" id="radio45" aria-labelledby="radio-label-4"/>
+                                                                <label id="radio-label-4" class="flb" for="radio45" title="Option1"></label>
+                                                               </span>
+                                                         </span>
+                                                       </td>
+                                                      <td tabindex="0"><p>Column1</p></td>
+                                                      <td tabindex="0"><p>Column2</p></td>
+                                                      <td tabindex="0"><p>Column3</p></td>
+                                                      <td tabindex="0"><p>Column4</p></td>
+                                                      <td tabindex="0"><p>Column5</p></td>
+                                                    </tr> 
+                                                     <tr role="row">
+                                                         <td class="cen" style="max-width:45px" tabindex="0">
+                                                         <span class="etb-rdio ett-rdio pri">
+
+                                                                <input type="radio" name="rgroup3" id="radio413" aria-labelledby="radio-label-4"/>
+                                                                <label id="radio-label-4" class="flb" for="radio413" title="Option1"></label>
+
+                                                         </span>
+                                                       </td>
+                                                      <td tabindex="0">
+                                                            <span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50" >
+                                                            <input class="ett-inpt scb-col100 pri" data-title="Title" data-content="Contents..." data-placement="left" placeholder="Input Primary">
+                                                            </span>
+                                                      </td>
+                                                      <td tabindex="0"><p>Column2</p></td>
+                                                      <td tabindex="0"><p>Column3</p></td>
+                                                      <td tabindex="0"><p>Column4</p></td>
+                                                      <td tabindex="0"><p>Column5</p></td>
+                                                    </tr>
+
+                                                 </tbody> 	
+                                                 </table>			
+                                            </div> 
+                                        </div> 
+                                    </div>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+            </span>
+        </span>
+        <br>
+        <br>  
+ <br>
+        <p>  Radio Secondary vertical</p>
+        <br>
+        <span class="etb-rdio ett-rdio ver sec">
+            <span>
+                <input type="radio" name="rgroup3bu" id="radio7b1"  aria-labelledby="radio-label-13" aria-describedby="vrad_01"/>
+                <label id="radio-label-13" class="flb" for="radio7b1" title="Option1">Progressive Disclosure Primary</label> 
+                <div id="vrad_01" class="vrad-cnt sec"> 
+                  <div class="grb">
+                    <div class="gcb-col12">
+                      <div class="plt-simp">
+                        <div class="pst-simp pri u-relative">
+                            <div class="crt-form ver pri">
+                                <ul class="ttl">
+                                    <li class="ttl-ctr">
+                                        <ul class="ttv">
+                                            <li class="icn">
+                                                <svg class="ett-icon icon-list-alt px34">
+                                                    <use xlink:href="#icon-list-alt"></use>
+                                                </svg>
+                                            </li>
+                                            <li class="lbl">
+                                                <h4>Form - Vertical Primary</h4>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="pgn-ctr">
+                                       <ul class="pgn">
+                                            <li class="pnx"> 
+                                                <button class="ett-bttn tsp med"  aria-label="Previous page"><svg class="icon icon-chevron-left px16"><use xlink:href="#icon-chevron-left"></use></svg></button> 
+                                            </li>
+                                            <li class="pcl">
+                                              <input type="text" class="pageno" value="1">
+                                            </li>   
+                                            <li class="ptx" > 
+                                                <span>/&nbsp;</span><span>3</span> 
+                                            </li>    
+                                            <li class="pnx"> 
+                                                <button class="ett-bttn tsp med"  aria-label="Next page"><svg class="icon icon-chevron-right px16"><use xlink:href="#icon-chevron-right"></use></svg></button>
+                                            </li> 
+                                        </ul>                   
+                                    </li>
+                                </ul>
+                                <span class="srb wrapped pri"><!-- wrapped class is required for responsive columns -->
+                                <span class="scb-sml100 scb-lar50 pri">
+                                    <ul class="eoc wrapped srb pri"><!-- wrapped class is required for vertical orientation --> 
+                                        <li class="scb-col40">
+                                            <label class="flb req icl">
+                                                <svg class="ett-icon icon-list-alt px20"> <!-- icon selection, size, appearance, position(left and right) & semantics selection are required-->
+                                                <use xlink:href="#icon-list-alt"/>
+                                                </svg>
+                                            Icon left of Label</label>
+                                        </li>
+                                        <li class="eic scb-col60">
+                                            <span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50">
+                                                <input id="input4gx" name="test1" class="ett-inpt pri med etw-100" title="Editable input" value="Primary Input" placeholder=" Value" type="text">
+                                                <span class="htx">Hint for the input</span>
+                                                <span class="vtx">Validation text</span>
+                                            </span>
+                                        </li>
+                                    </ul>                   
+                                </span>
+                                <span class="scb-sml100 scb-lar50">
+                                    <ul class="eoc wrapped srb pri"><!-- wrapped class is required for vertical orientation -->
+                                        <li class="scb-col40">
+                                            <label class="flb">Element3 Label</label>
+                                        </li>
+                                        <li class="eic scb-col60">
+                                            <span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50">
+                                            <input id="input4x" name="test1" class="ett-inpt ter etw-100" title="Editable input" value="Tertiary Input" placeholder=" Value" type="text">
+                                            </span> 
+                                        </li>
+                                    </ul>
+                                </span>
+                            </span> 
+                           </div> 
+                        </div>
+                    </div>
+                  </div>
+                </div> 
+              </div>
+            </span> 
+            <span>
+                <input type="radio" name="rgroup3bu" id="radio8b1" aria-labelledby="radio-label-14" aria-describedby="hrdi_02"/>
+                <label id="radio-label-14" class="flb" for="radio8b1" title="Option2">Progressive Disclosure</label> 
+                <div id="hrdi_02" class="vrad-cnt sec"> 
+                    <div class="grb">
+                        <div class="gcb-col12">
+                            <div class="grb">
+                                <div class="gcb-col12">
+                                  <div class="plt-simp">
+                                    <div class="pst-simp pri u-relative">
+                                         <div class="crt-list pri"> 
+                                            <ul class="ttl">
+                                                <li class="ttl-ctr">
+                                                    <ul class="ttv">
+                                                        <li class="icn">
+                                                            <svg class="icon icon-list-alt px24">
+                                                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-list-alt"></use>
+                                                            </svg>
+                                                        </li>
+                                                        <li class="lbl">
+                                                            <h4>LIST IN LIST</h4>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+
+                                            </ul>
+                                            <ul class="pri">
+                                                <li class="srb wrapped chl">
+
+                                                            <span class="scb-col50">Parent</span>
+                                                            <span class="scb-col50">Parent</span>
+                                    <div id="childList_list_div" class="crt-list sec chl-ctr ">
+                                                            <ul class="ttl">
+                                                                <li class="ttl-ctr">
+                                                                    <ul class="ttv">
+                                                                        <li class="icn">
+                                                                            <svg class="icon icon-list-alt px24">
+                                                                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-list-alt"></use>
+                                                                            </svg>
+                                                                        </li>
+                                                                        <li class="lbl">
+                                                                            <h4>Child</h4>
+                                                                        </li>
+                                                                    </ul>
+                                                                </li>
+                                                            </ul>
+                                                            <ul class="sec">
+                                                                <li class="srb wrapped chl">
+
+                                                                                <span class="scb-sml100 scb-med50">Child</span>
+                                                                                <span class="scb-sml100 scb-med50">Child</span>
+
+                                    <div id="childList_list_div2" class="crt-list ter chl-ctr ">
+                                                                                <ul class="ttl">
+                                                                                    <li class="ttl-ctr">
+                                                                                        <ul class="ttv">
+                                                                                            <li class="icn">
+                                                                                                <svg class="icon icon-list-alt px24">
+                                                                                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-list-alt"></use>
+                                                                                                </svg>
+                                                                                            </li>
+                                                                                            <li class="lbl">
+                                                                                                <h4>Grand Child</h4>
+                                                                                            </li>
+                                                                                        </ul>
+                                                                                    </li>
+
+                                                                                </ul>
+
+                                                                                <ul class="ter">
+                                                                                    <li class="srb wrapped">
+                                                                                        <span class="scb-sml100 scb-med50">Child</span>
+                                                                                        <span class="scb-sml100 scb-med50">Child</span>
+                                                                                    </li>
+                                                                                    <li class="srb wrapped">
+                                                                                        <span class="scb-sml100 scb-med50">Child</span>
+                                                                                        <span class="scb-sml100 scb-med50">Child</span>
+                                                                                    </li>
+                                                                                </ul>
+
+                                                                            </div>
+
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+
+                                                    </li>
+                                                <!--<li class="srb">
+                                                    <span class="scb-col100"> Spacer </span>
+                                                </li>-->
+                                            </ul>
+                                        </div> 
+                                    </div>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+            </span>  
+            <span >
+                <input type="radio" name="rgroup3bu" disabled="disabled" id="radio9b1" aria-labelledby="radio-label-15" aria-describedby="hrdi_03"/>
+                <label id="radio-label-15" class="flb" for="radio9b1" title="Option3">Progressive Disclosure</label> 
+                <div id="hrdi_03" class="vrad-cnt sec"> 
+                    <div class="grb">
+                        <div class="gcb-col12">
+                            <div class="grb">
+                                <div class="gcb-col12">
+                                  <div class="plt-simp">
+                                    <div class="pst-simp pri u-relative">
+                                       <div id="table-demo2" class="crb-tabl crt-tabl pri"> 
+                                            <ul class="ttl">
+                                            <li class="ttl-ctr">
+                                                <ul class="ttv">
+                                                    <li class="icn">
+                                                        <svg class="icon icon-list-alt px24">
+                                                            <use xlink:href="#icon-list-alt"></use>
+                                                        </svg>
+                                                    </li>
+                                                    <li class="lbl">
+                                                        <h4>Primary Table with title, icon, search, add remove and pagination </h4>
+                                                    </li>
+                                                    <li class="btn-ctr">
+                                                        <button class="ett-bttn sec med inf">Action</button>
+                                                    </li>
+                                                </ul>
+                                            </li>   
+                                            <li class="srh-ctr">
+                                                <span class="ddn-ctr"> 
+                                                    <select id="select2" class="ett-slcn pri scb-col100" placeholder="select" title="Select Box" aria-label="Filter by Office">
+                                                        <option value="">All Offices</option>
+                                                        <option value="Edinburgh">Edinburgh</option>
+                                                        <option value="London">London</option>
+                                                        <option value="New York">New York</option>
+                                                        <option value="San Francisco">San Francisco</option>
+                                                        <option value="Sidney">Sidney</option>
+                                                        <option value="Singapore">Singapore</option>
+                                                        <option value="Tokyo">Tokyo</option>
+                                                    </select>   
+                                                </span>
+                                                <span class="srh"> 
+                                                        <span><input placeholder="Search" name="search" class="srh-inp" tabindex="0" required="" type="search" aria-label="Search Table" aria-controls="table-demo2"> </span>
+                                                        <span class="srh-icn">
+                                                            <svg class="icon icon-search px16"><use xlink:href="#icon-search"></use></svg>
+                                                        </span> 
+                                                </span>
+                                            </li>
+                                            <li class="pgn-ctr">
+                                               <ul class="pgn">
+                                                    <li class="pnx"> 
+                                                        <button class="ett-bttn tsp med" aria-label="Previous page"><svg class="icon icon-chevron-left px16"><use xlink:href="#icon-chevron-left"></use></svg></button> 
+                                                    </li>
+                                                    <li class="pcl">
+                                                      <input class="pageno" value="1" type="text">
+                                                    </li>   
+                                                    <li class="ptx"> 
+                                                        <span>/&nbsp;</span><span>3</span> 
+                                                    </li>    
+                                                    <li class="pnx"> 
+                                                        <button class="ett-bttn tsp med" aria-label="Next page"><svg class="icon icon-chevron-right px16"><use xlink:href="#icon-chevron-right"></use></svg></button>
+                                                    </li>
+                                                </ul>
+                                                <ul class="adr-ctr">
+                                                   <li class="add">
+                                                        <span>
+                                                        <button class="ett-bttn tsp med" aria-label="Add Record">
+                                                            <svg class="icon icon-plus px16"><use xlink:href="#icon-plus"></use></svg>
+                                                            </button>
+                                                        </span> 
+                                                   </li> 
+                                                   <li class="rmv">
+                                                       <span>
+                                                            <button class="ett-bttn tsp med" aria-label="Remove Record"><svg class="icon icon-minus px16"><use xlink:href="#icon-minus"></use></svg></button>
+                                                        </span>
+
+                                                   </li>
+                                                </ul> 
+                                            </li>
+                                            </ul> 
+                                            <div class="tabl-ctr hvr " >
+                                                 <table role=" grid" aria-describedby="tb1_info" class="tabl" id="tb1" role="grid" >
+                                                 <thead>
+                                                     <tr role="row">
+                                                       <th class="cen" aria-controls="tb1 " aria-label=" " style="max-width:45px">
+                                                         <span class="etb-rdio ett-rdio  pri"> 
+                                                          <span>
+                                                                <input type="radio" name="rgroup2" id="radio4" aria-labelledby="radio-label-4"/>
+                                                                <label id="radio-label-4" class="flb" for="radio4" title="Option1"></label> 
+                                                              </span>
+                                                         </span>
+                                                       </th>  
+                                                      <th class="cen sorting" aria-controls="tb1" aria-label="Header1 " tabindex="0"><span>Header1</span></th>
+                                                      <th class="cen sorting" aria-controls="tb1" aria-label="Header2" tabindex="0"><span>Header2</span></th>
+                                                         <th class="cen sorting" aria-controls="tb1" aria-label="Header3" tabindex="0"><span>Header3</span></th>
+                                                         <th class="cen sorting" aria-controls="tb1" aria-label="Header4" tabindex="0"><span>Header4</span></th>
+                                                         <th class="cen sorting" aria-controls="tb1" aria-label="Header5" tabindex="0"><span>Header5</span></th>
+                                                    </tr>
+                                                 </thead>
+                                                 <tbody>
+                                                    <tr role="row">
+                                                      <td class="cen" style="max-width:45px" tabindex="0">
+                                                         <span class="etb-rdio ett-rdio pri"> 
+                                                          <span>
+                                                                    <input name="rgroup3" id="radio7" aria-labelledby="radio-label-7" type="radio">
+                                                                    <label id="radio-label-7" class="flb" for="radio7" title="Option1"></label>
+                                                               </span>                                      
+                                                         </span> 
+                                                       </td>
+                                                      <td tabindex="0">
+                                                            <span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50">
+                                                            <input class="ett-inpt scb-col100 pri" data-title="Title" data-content="Contents..." data-placement="left" placeholder="Input Primary">
+                                                            </span>
+                                                      </td>
+                                                      <td tabindex="0"><p>Column2</p></td>
+                                                      <td tabindex="0"><p>Column3</p></td>
+                                                      <td tabindex="0"><p>Column4</p></td>
+                                                      <td tabindex="0"><p>Column5</p></td>
+                                                    </tr>
+                                                    <tr role="row">
+                                                      <td class="cen" style="max-width:45px" tabindex="0">
+                                                         <span class="etb-rdio ett-rdio pri">
+                                                              <span>
+                                                                <input type="radio" name="rgroup3" id="radio45" aria-labelledby="radio-label-4"/>
+                                                                <label id="radio-label-4" class="flb" for="radio45" title="Option1"></label>
+                                                               </span>
+                                                         </span>
+                                                       </td>
+                                                      <td tabindex="0"><p>Column1</p></td>
+                                                      <td tabindex="0"><p>Column2</p></td>
+                                                      <td tabindex="0"><p>Column3</p></td>
+                                                      <td tabindex="0"><p>Column4</p></td>
+                                                      <td tabindex="0"><p>Column5</p></td>
+                                                    </tr> 
+                                                     <tr role="row">
+                                                         <td class="cen" style="max-width:45px" tabindex="0">
+                                                         <span class="etb-rdio ett-rdio pri">
+
+                                                                <input type="radio" name="rgroup3" id="radio413" aria-labelledby="radio-label-4"/>
+                                                                <label id="radio-label-4" class="flb" for="radio413" title="Option1"></label>
+
+                                                         </span>
+                                                       </td>
+                                                      <td tabindex="0">
+                                                            <span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50" >
+                                                            <input class="ett-inpt scb-col100 pri" data-title="Title" data-content="Contents..." data-placement="left" placeholder="Input Primary">
+                                                            </span>
+                                                      </td>
+                                                      <td tabindex="0"><p>Column2</p></td>
+                                                      <td tabindex="0"><p>Column3</p></td>
+                                                      <td tabindex="0"><p>Column4</p></td>
+                                                      <td tabindex="0"><p>Column5</p></td>
+                                                    </tr>
+
+                                                 </tbody>   
+                                                 </table>           
+                                            </div> 
+                                        </div> 
+                                    </div>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+            </span>
+        </span>
+        <br>
+        <br> 
+ <br>
+        <p>  Radio Teritiary vertical</p>
+        <br>
+        <span class="etb-rdio ett-rdio ver ter">
+            <span>
+                <input type="radio" name="rgroup3bu" id="radio7b2"  aria-labelledby="radio-label-16" aria-describedby="vrad_01"/>
+                <label id="radio-label-16" class="flb" for="radio7b2" title="Option1">Progressive Disclosure</label> 
+                <div id="vrad_01" class="vrad-cnt ter"> 
+                  <div class="grb">
+                    <div class="gcb-col12">
+                      <div class="plt-simp">
+                        <div class="pst-simp pri u-relative">
+                            <div class="crt-form ver pri">
+                                <ul class="ttl">
+                                    <li class="ttl-ctr">
+                                        <ul class="ttv">
+                                            <li class="icn">
+                                                <svg class="ett-icon icon-list-alt px34">
+                                                    <use xlink:href="#icon-list-alt"></use>
+                                                </svg>
+                                            </li>
+                                            <li class="lbl">
+                                                <h4>Form - Vertical Primary</h4>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="pgn-ctr">
+                                       <ul class="pgn">
+                                            <li class="pnx"> 
+                                                <button class="ett-bttn tsp med"  aria-label="Previous page"><svg class="icon icon-chevron-left px16"><use xlink:href="#icon-chevron-left"></use></svg></button> 
+                                            </li>
+                                            <li class="pcl">
+                                              <input type="text" class="pageno" value="1">
+                                            </li>   
+                                            <li class="ptx" > 
+                                                <span>/&nbsp;</span><span>3</span> 
+                                            </li>    
+                                            <li class="pnx"> 
+                                                <button class="ett-bttn tsp med"  aria-label="Next page"><svg class="icon icon-chevron-right px16"><use xlink:href="#icon-chevron-right"></use></svg></button>
+                                            </li> 
+                                        </ul>                   
+                                    </li>
+                                </ul>
+                                <span class="srb wrapped pri"><!-- wrapped class is required for responsive columns -->
+                                <span class="scb-sml100 scb-lar50 pri">
+                                    <ul class="eoc wrapped srb pri"><!-- wrapped class is required for vertical orientation --> 
+                                        <li class="scb-col40">
+                                            <label class="flb req icl">
+                                                <svg class="ett-icon icon-list-alt px20"> <!-- icon selection, size, appearance, position(left and right) & semantics selection are required-->
+                                                <use xlink:href="#icon-list-alt"/>
+                                                </svg>
+                                            Icon left of Label</label>
+                                        </li>
+                                        <li class="eic scb-col60">
+                                            <span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50">
+                                                <input id="input4gx" name="test1" class="ett-inpt pri med etw-100" title="Editable input" value="Primary Input" placeholder=" Value" type="text">
+                                                <span class="htx">Hint for the input</span>
+                                                <span class="vtx">Validation text</span>
+                                            </span>
+                                        </li>
+                                    </ul>                   
+                                </span>
+                                <span class="scb-sml100 scb-lar50">
+                                    <ul class="eoc wrapped srb pri"><!-- wrapped class is required for vertical orientation -->
+                                        <li class="scb-col40">
+                                            <label class="flb">Element3 Label</label>
+                                        </li>
+                                        <li class="eic scb-col60">
+                                            <span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50">
+                                            <input id="input4x" name="test1" class="ett-inpt ter etw-100" title="Editable input" value="Tertiary Input" placeholder=" Value" type="text">
+                                            </span> 
+                                        </li>
+                                    </ul>
+                                </span>
+                            </span> 
+                           </div> 
+                        </div>
+                    </div>
+                  </div>
+                </div> 
+              </div>
+            </span> 
+            <span>
+                <input type="radio" name="rgroup3bu" id="radio8b2" aria-labelledby="radio-label-17" aria-describedby="hrdi_02"/>
+                <label id="radio-label-17" class="flb" for="radio8b2" title="Option2">Progressive Disclosure </label> 
+                <div id="hrdi_02" class="vrad-cnt ter"> 
+                    <div class="grb">
+                        <div class="gcb-col12">
+                            <div class="grb">
+                                <div class="gcb-col12">
+                                  <div class="plt-simp">
+                                    <div class="pst-simp pri u-relative">
+                                         <div class="crt-list pri"> 
+                                            <ul class="ttl">
+                                                <li class="ttl-ctr">
+                                                    <ul class="ttv">
+                                                        <li class="icn">
+                                                            <svg class="icon icon-list-alt px24">
+                                                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-list-alt"></use>
+                                                            </svg>
+                                                        </li>
+                                                        <li class="lbl">
+                                                            <h4>LIST IN LIST</h4>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+
+                                            </ul>
+                                            <ul class="pri">
+                                                <li class="srb wrapped chl">
+
+                                                            <span class="scb-col50">Parent</span>
+                                                            <span class="scb-col50">Parent</span>
+                                    <div id="childList_list_div" class="crt-list sec chl-ctr ">
+                                                            <ul class="ttl">
+                                                                <li class="ttl-ctr">
+                                                                    <ul class="ttv">
+                                                                        <li class="icn">
+                                                                            <svg class="icon icon-list-alt px24">
+                                                                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-list-alt"></use>
+                                                                            </svg>
+                                                                        </li>
+                                                                        <li class="lbl">
+                                                                            <h4>Child</h4>
+                                                                        </li>
+                                                                    </ul>
+                                                                </li>
+                                                            </ul>
+                                                            <ul class="sec">
+                                                                <li class="srb wrapped chl">
+
+                                                                                <span class="scb-sml100 scb-med50">Child</span>
+                                                                                <span class="scb-sml100 scb-med50">Child</span>
+
+                                    <div id="childList_list_div2" class="crt-list ter chl-ctr ">
+                                                                                <ul class="ttl">
+                                                                                    <li class="ttl-ctr">
+                                                                                        <ul class="ttv">
+                                                                                            <li class="icn">
+                                                                                                <svg class="icon icon-list-alt px24">
+                                                                                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-list-alt"></use>
+                                                                                                </svg>
+                                                                                            </li>
+                                                                                            <li class="lbl">
+                                                                                                <h4>Grand Child</h4>
+                                                                                            </li>
+                                                                                        </ul>
+                                                                                    </li>
+
+                                                                                </ul>
+
+                                                                                <ul class="ter">
+                                                                                    <li class="srb wrapped">
+                                                                                        <span class="scb-sml100 scb-med50">Child</span>
+                                                                                        <span class="scb-sml100 scb-med50">Child</span>
+                                                                                    </li>
+                                                                                    <li class="srb wrapped">
+                                                                                        <span class="scb-sml100 scb-med50">Child</span>
+                                                                                        <span class="scb-sml100 scb-med50">Child</span>
+                                                                                    </li>
+                                                                                </ul>
+
+                                                                            </div>
+
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+
+                                                    </li>
+                                                <!--<li class="srb">
+                                                    <span class="scb-col100"> Spacer </span>
+                                                </li>-->
+                                            </ul>
+                                        </div> 
+                                    </div>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+            </span>  
+            <span >
+                <input type="radio" name="rgroup3bu" disabled="disabled" id="radio9b2" aria-labelledby="radio-label-18" aria-describedby="hrdi_03"/>
+                <label id="radio-label-18" class="flb" for="radio9b2" title="Option3">Progressive Disclosure</label> 
+                <div id="hrdi_03" class="vrad-cnt ter"> 
+                    <div class="grb">
+                        <div class="gcb-col12">
+                            <div class="grb">
+                                <div class="gcb-col12">
+                                  <div class="plt-simp">
+                                    <div class="pst-simp pri u-relative">
+                                       <div id="table-demo2" class="crb-tabl crt-tabl pri"> 
+                                            <ul class="ttl">
+                                            <li class="ttl-ctr">
+                                                <ul class="ttv">
+                                                    <li class="icn">
+                                                        <svg class="icon icon-list-alt px24">
+                                                            <use xlink:href="#icon-list-alt"></use>
+                                                        </svg>
+                                                    </li>
+                                                    <li class="lbl">
+                                                        <h4>Primary Table with title, icon, search, add remove and pagination </h4>
+                                                    </li>
+                                                    <li class="btn-ctr">
+                                                        <button class="ett-bttn sec med inf">Action</button>
+                                                    </li>
+                                                </ul>
+                                            </li>   
+                                            <li class="srh-ctr">
+                                                <span class="ddn-ctr"> 
+                                                    <select id="select2" class="ett-slcn pri scb-col100" placeholder="select" title="Select Box" aria-label="Filter by Office">
+                                                        <option value="">All Offices</option>
+                                                        <option value="Edinburgh">Edinburgh</option>
+                                                        <option value="London">London</option>
+                                                        <option value="New York">New York</option>
+                                                        <option value="San Francisco">San Francisco</option>
+                                                        <option value="Sidney">Sidney</option>
+                                                        <option value="Singapore">Singapore</option>
+                                                        <option value="Tokyo">Tokyo</option>
+                                                    </select>   
+                                                </span>
+                                                <span class="srh"> 
+                                                        <span><input placeholder="Search" name="search" class="srh-inp" tabindex="0" required="" type="search" aria-label="Search Table" aria-controls="table-demo2"> </span>
+                                                        <span class="srh-icn">
+                                                            <svg class="icon icon-search px16"><use xlink:href="#icon-search"></use></svg>
+                                                        </span> 
+                                                </span>
+                                            </li>
+                                            <li class="pgn-ctr">
+                                               <ul class="pgn">
+                                                    <li class="pnx"> 
+                                                        <button class="ett-bttn tsp med" aria-label="Previous page"><svg class="icon icon-chevron-left px16"><use xlink:href="#icon-chevron-left"></use></svg></button> 
+                                                    </li>
+                                                    <li class="pcl">
+                                                      <input class="pageno" value="1" type="text">
+                                                    </li>   
+                                                    <li class="ptx"> 
+                                                        <span>/&nbsp;</span><span>3</span> 
+                                                    </li>    
+                                                    <li class="pnx"> 
+                                                        <button class="ett-bttn tsp med" aria-label="Next page"><svg class="icon icon-chevron-right px16"><use xlink:href="#icon-chevron-right"></use></svg></button>
+                                                    </li>
+                                                </ul>
+                                                <ul class="adr-ctr">
+                                                   <li class="add">
+                                                        <span>
+                                                        <button class="ett-bttn tsp med" aria-label="Add Record">
+                                                            <svg class="icon icon-plus px16"><use xlink:href="#icon-plus"></use></svg>
+                                                            </button>
+                                                        </span> 
+                                                   </li> 
+                                                   <li class="rmv">
+                                                       <span>
+                                                            <button class="ett-bttn tsp med" aria-label="Remove Record"><svg class="icon icon-minus px16"><use xlink:href="#icon-minus"></use></svg></button>
+                                                        </span>
+
+                                                   </li>
+                                                </ul> 
+                                            </li>
+                                            </ul> 
+                                            <div class="tabl-ctr hvr " >
+                                                 <table role=" grid" aria-describedby="tb1_info" class="tabl" id="tb1" role="grid" >
+                                                 <thead>
+                                                     <tr role="row">
+                                                       <th class="cen" aria-controls="tb1 " aria-label=" " style="max-width:45px">
+                                                         <span class="etb-rdio ett-rdio  pri"> 
+                                                          <span>
+                                                                <input type="radio" name="rgroup2" id="radio4" aria-labelledby="radio-label-4"/>
+                                                                <label id="radio-label-4" class="flb" for="radio4" title="Option1"></label> 
+                                                              </span>
+                                                         </span>
+                                                       </th>  
+                                                      <th class="cen sorting" aria-controls="tb1" aria-label="Header1 " tabindex="0"><span>Header1</span></th>
+                                                      <th class="cen sorting" aria-controls="tb1" aria-label="Header2" tabindex="0"><span>Header2</span></th>
+                                                         <th class="cen sorting" aria-controls="tb1" aria-label="Header3" tabindex="0"><span>Header3</span></th>
+                                                         <th class="cen sorting" aria-controls="tb1" aria-label="Header4" tabindex="0"><span>Header4</span></th>
+                                                         <th class="cen sorting" aria-controls="tb1" aria-label="Header5" tabindex="0"><span>Header5</span></th>
+                                                    </tr>
+                                                 </thead>
+                                                 <tbody>
+                                                    <tr role="row">
+                                                      <td class="cen" style="max-width:45px" tabindex="0">
+                                                         <span class="etb-rdio ett-rdio pri"> 
+                                                          <span>
+                                                                    <input name="rgroup3" id="radio7" aria-labelledby="radio-label-7" type="radio">
+                                                                    <label id="radio-label-7" class="flb" for="radio7" title="Option1"></label>
+                                                               </span>                                      
+                                                         </span> 
+                                                       </td>
+                                                      <td tabindex="0">
+                                                            <span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50">
+                                                            <input class="ett-inpt scb-col100 pri" data-title="Title" data-content="Contents..." data-placement="left" placeholder="Input Primary">
+                                                            </span>
+                                                      </td>
+                                                      <td tabindex="0"><p>Column2</p></td>
+                                                      <td tabindex="0"><p>Column3</p></td>
+                                                      <td tabindex="0"><p>Column4</p></td>
+                                                      <td tabindex="0"><p>Column5</p></td>
+                                                    </tr>
+                                                    <tr role="row">
+                                                      <td class="cen" style="max-width:45px" tabindex="0">
+                                                         <span class="etb-rdio ett-rdio pri">
+                                                              <span>
+                                                                <input type="radio" name="rgroup3" id="radio45" aria-labelledby="radio-label-4"/>
+                                                                <label id="radio-label-4" class="flb" for="radio45" title="Option1"></label>
+                                                               </span>
+                                                         </span>
+                                                       </td>
+                                                      <td tabindex="0"><p>Column1</p></td>
+                                                      <td tabindex="0"><p>Column2</p></td>
+                                                      <td tabindex="0"><p>Column3</p></td>
+                                                      <td tabindex="0"><p>Column4</p></td>
+                                                      <td tabindex="0"><p>Column5</p></td>
+                                                    </tr> 
+                                                     <tr role="row">
+                                                         <td class="cen" style="max-width:45px" tabindex="0">
+                                                         <span class="etb-rdio ett-rdio pri">
+
+                                                                <input type="radio" name="rgroup3" id="radio413" aria-labelledby="radio-label-4"/>
+                                                                <label id="radio-label-4" class="flb" for="radio413" title="Option1"></label>
+
+                                                         </span>
+                                                       </td>
+                                                      <td tabindex="0">
+                                                            <span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50" >
+                                                            <input class="ett-inpt scb-col100 pri" data-title="Title" data-content="Contents..." data-placement="left" placeholder="Input Primary">
+                                                            </span>
+                                                      </td>
+                                                      <td tabindex="0"><p>Column2</p></td>
+                                                      <td tabindex="0"><p>Column3</p></td>
+                                                      <td tabindex="0"><p>Column4</p></td>
+                                                      <td tabindex="0"><p>Column5</p></td>
+                                                    </tr>
+
+                                                 </tbody>   
+                                                 </table>           
+                                            </div> 
+                                        </div> 
+                                    </div>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+            </span>
+        </span>
+        <br>
+        <br>  
+
+
+
+        <h2>Primary</h2>
+        <span class="etb-chek ett-chek pri ver">
+            <span>
+                
+                 <input name="cgroup3bu" id="check04" aria-labelledby="check-lbl-13" aria-describedby="vchek_01" type="checkbox">
+                 <label id="check-lbl-13" class="flb" for="check04">Option1 </label>
+                 <div id="vchek_01" class="vchek-cnt pri"> 
+                  <div class="grb">
+                    <div class="gcb-col12">
+                      <div class="plt-simp">
+                        <div class="pst-simp pri u-relative">
+                            <div class="crt-form ver pri">
+                                <ul class="ttl">
+                                    <li class="ttl-ctr">
+                                        <ul class="ttv">
+                                            <li class="icn">
+                                                <svg class="ett-icon icon-list-alt px34">
+                                                    <use xlink:href="#icon-list-alt"></use>
+                                                </svg>
+                                            </li>
+                                            <li class="lbl">
+                                                <h4>Form - Vertical Primary</h4>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="pgn-ctr">
+                                       <ul class="pgn">
+                                            <li class="pnx"> 
+                                                <button class="ett-bttn tsp med" aria-label="Previous page"><svg class="icon icon-chevron-left px16"><use xlink:href="#icon-chevron-left"></use></svg></button> 
+                                            </li>
+                                            <li class="pcl">
+                                              <input class="pageno" value="1" type="text">
+                                            </li>   
+                                            <li class="ptx"> 
+                                                <span>/&nbsp;</span><span>3</span> 
+                                            </li>    
+                                            <li class="pnx"> 
+                                                <button class="ett-bttn tsp med" aria-label="Next page"><svg class="icon icon-chevron-right px16"><use xlink:href="#icon-chevron-right"></use></svg></button>
+                                            </li> 
+                                        </ul>                   
+                                    </li>
+                                </ul>
+                                <span class="srb wrapped pri"><!-- wrapped class is required for responsive columns -->
+                                <span class="scb-sml100 scb-lar50 pri">
+                                    <ul class="eoc wrapped srb pri"><!-- wrapped class is required for vertical orientation --> 
+                                        <li class="scb-col40">
+                                            <label class="flb req icl">
+                                                <svg class="ett-icon icon-list-alt px20"> <!-- icon selection, size, appearance, position(left and right) & semantics selection are required-->
+                                                <use xlink:href="#icon-list-alt"></use>
+                                                </svg>
+                                            Icon left of Label</label>
+                                        </li>
+                                        <li class="eic scb-col60">
+                                            <span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50">
+                                                <input id="input4gx" name="test1" class="ett-inpt pri med etw-100" title="Editable input" value="Primary Input" placeholder=" Value" type="text">
+                                                <span class="htx">Hint for the input</span>
+                                                <span class="vtx">Validation text</span>
+                                            </span>
+                                        </li>
+                                    </ul>                   
+                                </span>
+                                <span class="scb-sml100 scb-lar50">
+                                    <ul class="eoc wrapped srb pri"><!-- wrapped class is required for vertical orientation -->
+                                        <li class="scb-col40">
+                                            <label class="flb">Element3 Label</label>
+                                        </li>
+                                        <li class="eic scb-col60">
+                                            <span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50">
+                                            <input id="input4x" name="test1" class="ett-inpt ter etw-100" title="Editable input" value="Tertiary Input" placeholder=" Value" type="text">
+                                            </span> 
+                                        </li>
+                                    </ul>
+                                </span>
+                            </span> 
+                           </div> 
+                        </div>
+                    </div>
+                  </div>
+                </div> 
+              </div>
+            </span> 
+            <span>
+                 <input name="cgroup3bu" id="check05" aria-labelledby="check-lbl-14" aria-describedby="vchek_02" type="checkbox">
+                 <label id="check-lbl-14" class="flb" for="check05">Option2 </label>
+                 <div id="vchek_02" class="vchek-cnt pri"> 
+                    <div class="grb">
+                        <div class="gcb-col12">
+                            <div class="grb">
+                                <div class="gcb-col12">
+                                  <div class="plt-simp">
+                                    <div class="pst-simp pri u-relative">
+                                         <div class="crt-list pri"> 
+                                            <ul class="ttl">
+                                                <li class="ttl-ctr">
+                                                    <ul class="ttv">
+                                                        <li class="icn">
+                                                            <svg class="icon icon-list-alt px24">
+                                                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-list-alt"></use>
+                                                            </svg>
+                                                        </li>
+                                                        <li class="lbl">
+                                                            <h4>LIST IN LIST</h4>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+
+                                            </ul>
+                                            <ul class="pri">
+                                                <li class="srb wrapped chl">
+
+                                                            <span class="scb-col50">Parent</span>
+                                                            <span class="scb-col50">Parent</span>
+                                    <div id="childList_list_div" class="crt-list sec chl-ctr ">
+                                                            <ul class="ttl">
+                                                                <li class="ttl-ctr">
+                                                                    <ul class="ttv">
+                                                                        <li class="icn">
+                                                                            <svg class="icon icon-list-alt px24">
+                                                                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-list-alt"></use>
+                                                                            </svg>
+                                                                        </li>
+                                                                        <li class="lbl">
+                                                                            <h4>Child</h4>
+                                                                        </li>
+                                                                    </ul>
+                                                                </li>
+                                                            </ul>
+                                                            <ul class="sec">
+                                                                <li class="srb wrapped chl">
+
+                                                                                <span class="scb-sml100 scb-med50">Child</span>
+                                                                                <span class="scb-sml100 scb-med50">Child</span>
+
+                                    <div id="childList_list_div2" class="crt-list ter chl-ctr ">
+                                                                                <ul class="ttl">
+                                                                                    <li class="ttl-ctr">
+                                                                                        <ul class="ttv">
+                                                                                            <li class="icn">
+                                                                                                <svg class="icon icon-list-alt px24">
+                                                                                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-list-alt"></use>
+                                                                                                </svg>
+                                                                                            </li>
+                                                                                            <li class="lbl">
+                                                                                                <h4>Grand Child</h4>
+                                                                                            </li>
+                                                                                        </ul>
+                                                                                    </li>
+
+                                                                                </ul>
+
+                                                                                <ul class="ter">
+                                                                                    <li class="srb wrapped">
+                                                                                        <span class="scb-sml100 scb-med50">Child</span>
+                                                                                        <span class="scb-sml100 scb-med50">Child</span>
+                                                                                    </li>
+                                                                                    <li class="srb wrapped">
+                                                                                        <span class="scb-sml100 scb-med50">Child</span>
+                                                                                        <span class="scb-sml100 scb-med50">Child</span>
+                                                                                    </li>
+                                                                                </ul>
+
+                                                                            </div>
+
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+
+                                                    </li>
+                                                <!--<li class="srb">
+                                                    <span class="scb-col100"> Spacer </span>
+                                                </li>-->
+                                            </ul>
+                                        </div> 
+                                    </div>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+            </span>  
+            <span>
+               <input name="cgroup3bu" id="check06" aria-labelledby="check-lbl-15" aria-describedby="vchek_03" disabled="disabled" type="checkbox">
+                 <label id="check-lbl-15" class="flb" for="check06">Option3</label>
+                 <div id="vchek_03" class="vchek-cnt pri"> 
+                    <div class="grb">
+                        <div class="gcb-col12">
+                            <div class="grb">
+                                <div class="gcb-col12">
+                                  <div class="plt-simp">
+                                    <div class="pst-simp pri u-relative">
+                                       <div id="table-demo2" class="crb-tabl crt-tabl pri"> 
+                                            <ul class="ttl">
+                                            <li class="ttl-ctr">
+                                                <ul class="ttv">
+                                                    <li class="icn">
+                                                        <svg class="icon icon-list-alt px24">
+                                                            <use xlink:href="#icon-list-alt"></use>
+                                                        </svg>
+                                                    </li>
+                                                    <li class="lbl">
+                                                        <h4>Primary Table with title, icon, search, add remove and pagination </h4>
+                                                    </li>
+                                                    <li class="btn-ctr">
+                                                        <button class="ett-bttn sec med inf">Action</button>
+                                                    </li>
+                                                </ul>
+                                            </li>   
+                                            <li class="srh-ctr">
+                                                <span class="ddn-ctr"> 
+                                                    <select id="select2" class="ett-slcn pri scb-col100" placeholder="select" title="Select Box" aria-label="Filter by Office">
+                                                        <option value="">All Offices</option>
+                                                        <option value="Edinburgh">Edinburgh</option>
+                                                        <option value="London">London</option>
+                                                        <option value="New York">New York</option>
+                                                        <option value="San Francisco">San Francisco</option>
+                                                        <option value="Sidney">Sidney</option>
+                                                        <option value="Singapore">Singapore</option>
+                                                        <option value="Tokyo">Tokyo</option>
+                                                    </select>   
+                                                </span>
+                                                <span class="srh"> 
+                                                        <span><input placeholder="Search" name="search" class="srh-inp" tabindex="0" required="" aria-label="Search Table" aria-controls="table-demo2" type="search"> </span>
+                                                        <span class="srh-icn">
+                                                            <svg class="icon icon-search px16"><use xlink:href="#icon-search"></use></svg>
+                                                        </span> 
+                                                </span>
+                                            </li>
+                                            <li class="pgn-ctr">
+                                               <ul class="pgn">
+                                                    <li class="pnx"> 
+                                                        <button class="ett-bttn tsp med" aria-label="Previous page"><svg class="icon icon-chevron-left px16"><use xlink:href="#icon-chevron-left"></use></svg></button> 
+                                                    </li>
+                                                    <li class="pcl">
+                                                      <input class="pageno" value="1" type="text">
+                                                    </li>   
+                                                    <li class="ptx"> 
+                                                        <span>/&nbsp;</span><span>3</span> 
+                                                    </li>    
+                                                    <li class="pnx"> 
+                                                        <button class="ett-bttn tsp med" aria-label="Next page"><svg class="icon icon-chevron-right px16"><use xlink:href="#icon-chevron-right"></use></svg></button>
+                                                    </li>
+                                                </ul>
+                                                <ul class="adr-ctr">
+                                                   <li class="add">
+                                                        <span>
+                                                        <button class="ett-bttn tsp med" aria-label="Add Record">
+                                                            <svg class="icon icon-plus px16"><use xlink:href="#icon-plus"></use></svg>
+                                                            </button>
+                                                        </span> 
+                                                   </li> 
+                                                   <li class="rmv">
+                                                       <span>
+                                                            <button class="ett-bttn tsp med" aria-label="Remove Record"><svg class="icon icon-minus px16"><use xlink:href="#icon-minus"></use></svg></button>
+                                                        </span>
+
+                                                   </li>
+                                                </ul> 
+                                            </li>
+                                            </ul> 
+                                            <div class="tabl-ctr hvr ">
+                                                 <table role=" grid" aria-describedby="tb1_info" class="tabl" id="tb1">
+                                                 <thead>
+                                                     <tr role="row">
+                                                       <th class="cen" aria-controls="tb1 " aria-label=" " style="max-width:45px">
+                                                         <span class="etb-rdio ett-rdio  pri"> 
+                                                          <span>
+                                                                <input name="rgroup2" id="radio4" aria-labelledby="radio-label-4" type="radio">
+                                                                <label id="radio-label-4" class="flb" for="radio4" title="Option1"></label> 
+                                                              </span>
+                                                         </span>
+                                                       </th>  
+                                                      <th class="cen sorting" aria-controls="tb1" aria-label="Header1 " tabindex="0"><span>Header1</span></th>
+                                                      <th class="cen sorting" aria-controls="tb1" aria-label="Header2" tabindex="0"><span>Header2</span></th>
+                                                         <th class="cen sorting" aria-controls="tb1" aria-label="Header3" tabindex="0"><span>Header3</span></th>
+                                                         <th class="cen sorting" aria-controls="tb1" aria-label="Header4" tabindex="0"><span>Header4</span></th>
+                                                         <th class="cen sorting" aria-controls="tb1" aria-label="Header5" tabindex="0"><span>Header5</span></th>
+                                                    </tr>
+                                                 </thead>
+                                                 <tbody>
+                                                    <tr role="row">
+                                                      <td class="cen" style="max-width:45px" tabindex="0">
+                                                         <span class="etb-rdio ett-rdio pri"> 
+                                                          <span>
+                                                                    <input name="rgroup3" id="radio7" aria-labelledby="radio-label-7" type="radio">
+                                                                    <label id="radio-label-7" class="flb" for="radio7" title="Option1"></label>
+                                                               </span>                                      
+                                                         </span> 
+                                                       </td>
+                                                      <td tabindex="0">
+                                                            <span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50">
+                                                            <input class="ett-inpt scb-col100 pri" data-title="Title" data-content="Contents..." data-placement="left" placeholder="Input Primary">
+                                                            </span>
+                                                      </td>
+                                                      <td tabindex="0"><p>Column2</p></td>
+                                                      <td tabindex="0"><p>Column3</p></td>
+                                                      <td tabindex="0"><p>Column4</p></td>
+                                                      <td tabindex="0"><p>Column5</p></td>
+                                                    </tr>
+                                                    <tr role="row">
+                                                      <td class="cen" style="max-width:45px" tabindex="0">
+                                                         <span class="etb-rdio ett-rdio pri">
+                                                              <span>
+                                                                <input name="rgroup3" id="radio45" aria-labelledby="radio-label-4" type="radio">
+                                                                <label id="radio-label-4" class="flb" for="radio45" title="Option1"></label>
+                                                               </span>
+                                                         </span>
+                                                       </td>
+                                                      <td tabindex="0"><p>Column1</p></td>
+                                                      <td tabindex="0"><p>Column2</p></td>
+                                                      <td tabindex="0"><p>Column3</p></td>
+                                                      <td tabindex="0"><p>Column4</p></td>
+                                                      <td tabindex="0"><p>Column5</p></td>
+                                                    </tr> 
+                                                     <tr role="row">
+                                                         <td class="cen" style="max-width:45px" tabindex="0">
+                                                         <span class="etb-rdio ett-rdio pri">
+
+                                                                <input name="rgroup3" id="radio413" aria-labelledby="radio-label-4" type="radio">
+                                                                <label id="radio-label-4" class="flb" for="radio413" title="Option1"></label>
+
+                                                         </span>
+                                                       </td>
+                                                      <td tabindex="0">
+                                                            <span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50">
+                                                            <input class="ett-inpt scb-col100 pri" data-title="Title" data-content="Contents..." data-placement="left" placeholder="Input Primary">
+                                                            </span>
+                                                      </td>
+                                                      <td tabindex="0"><p>Column2</p></td>
+                                                      <td tabindex="0"><p>Column3</p></td>
+                                                      <td tabindex="0"><p>Column4</p></td>
+                                                      <td tabindex="0"><p>Column5</p></td>
+                                                    </tr>
+
+                                                 </tbody>   
+                                                 </table>           
+                                            </div> 
+                                        </div> 
+                                    </div>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+            </span>
+        </span>
+
+
+          <h2>Secondary</h2>
+        <span class="etb-chek ett-chek sec ver">
+            <span>
+                
+                 <input name="cgroup3bu" id="check07" aria-labelledby="check-lbl-13" aria-describedby="vchek_01" type="checkbox">
+                 <label id="check-lbl-13" class="flb" for="check07">Option1 </label>
+                 <div id="vchek_01" class="vchek-cnt sec"> 
+                  <div class="grb">
+                    <div class="gcb-col12">
+                      <div class="plt-simp">
+                        <div class="pst-simp pri u-relative">
+                            <div class="crt-form ver pri">
+                                <ul class="ttl">
+                                    <li class="ttl-ctr">
+                                        <ul class="ttv">
+                                            <li class="icn">
+                                                <svg class="ett-icon icon-list-alt px34">
+                                                    <use xlink:href="#icon-list-alt"></use>
+                                                </svg>
+                                            </li>
+                                            <li class="lbl">
+                                                <h4>Form - Vertical Primary</h4>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="pgn-ctr">
+                                       <ul class="pgn">
+                                            <li class="pnx"> 
+                                                <button class="ett-bttn tsp med" aria-label="Previous page"><svg class="icon icon-chevron-left px16"><use xlink:href="#icon-chevron-left"></use></svg></button> 
+                                            </li>
+                                            <li class="pcl">
+                                              <input class="pageno" value="1" type="text">
+                                            </li>   
+                                            <li class="ptx"> 
+                                                <span>/&nbsp;</span><span>3</span> 
+                                            </li>    
+                                            <li class="pnx"> 
+                                                <button class="ett-bttn tsp med" aria-label="Next page"><svg class="icon icon-chevron-right px16"><use xlink:href="#icon-chevron-right"></use></svg></button>
+                                            </li> 
+                                        </ul>                   
+                                    </li>
+                                </ul>
+                                <span class="srb wrapped pri"><!-- wrapped class is required for responsive columns -->
+                                <span class="scb-sml100 scb-lar50 pri">
+                                    <ul class="eoc wrapped srb pri"><!-- wrapped class is required for vertical orientation --> 
+                                        <li class="scb-col40">
+                                            <label class="flb req icl">
+                                                <svg class="ett-icon icon-list-alt px20"> <!-- icon selection, size, appearance, position(left and right) & semantics selection are required-->
+                                                <use xlink:href="#icon-list-alt"></use>
+                                                </svg>
+                                            Icon left of Label</label>
+                                        </li>
+                                        <li class="eic scb-col60">
+                                            <span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50">
+                                                <input id="input4gx" name="test1" class="ett-inpt pri med etw-100" title="Editable input" value="Primary Input" placeholder=" Value" type="text">
+                                                <span class="htx">Hint for the input</span>
+                                                <span class="vtx">Validation text</span>
+                                            </span>
+                                        </li>
+                                    </ul>                   
+                                </span>
+                                <span class="scb-sml100 scb-lar50">
+                                    <ul class="eoc wrapped srb pri"><!-- wrapped class is required for vertical orientation -->
+                                        <li class="scb-col40">
+                                            <label class="flb">Element3 Label</label>
+                                        </li>
+                                        <li class="eic scb-col60">
+                                            <span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50">
+                                            <input id="input4x" name="test1" class="ett-inpt ter etw-100" title="Editable input" value="Tertiary Input" placeholder=" Value" type="text">
+                                            </span> 
+                                        </li>
+                                    </ul>
+                                </span>
+                            </span> 
+                           </div> 
+                        </div>
+                    </div>
+                  </div>
+                </div> 
+              </div>
+            </span> 
+            <span>
+                 <input name="cgroup3bu" id="check08" aria-labelledby="check-lbl-14" aria-describedby="vchek_02" type="checkbox">
+                 <label id="check-lbl-14" class="flb" for="check08">Option2 </label>
+                 <div id="vchek_02" class="vchek-cnt sec"> 
+                    <div class="grb">
+                        <div class="gcb-col12">
+                            <div class="grb">
+                                <div class="gcb-col12">
+                                  <div class="plt-simp">
+                                    <div class="pst-simp pri u-relative">
+                                         <div class="crt-list pri"> 
+                                            <ul class="ttl">
+                                                <li class="ttl-ctr">
+                                                    <ul class="ttv">
+                                                        <li class="icn">
+                                                            <svg class="icon icon-list-alt px24">
+                                                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-list-alt"></use>
+                                                            </svg>
+                                                        </li>
+                                                        <li class="lbl">
+                                                            <h4>LIST IN LIST</h4>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+
+                                            </ul>
+                                            <ul class="pri">
+                                                <li class="srb wrapped chl">
+
+                                                            <span class="scb-col50">Parent</span>
+                                                            <span class="scb-col50">Parent</span>
+                                    <div id="childList_list_div" class="crt-list sec chl-ctr ">
+                                                            <ul class="ttl">
+                                                                <li class="ttl-ctr">
+                                                                    <ul class="ttv">
+                                                                        <li class="icn">
+                                                                            <svg class="icon icon-list-alt px24">
+                                                                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-list-alt"></use>
+                                                                            </svg>
+                                                                        </li>
+                                                                        <li class="lbl">
+                                                                            <h4>Child</h4>
+                                                                        </li>
+                                                                    </ul>
+                                                                </li>
+                                                            </ul>
+                                                            <ul class="sec">
+                                                                <li class="srb wrapped chl">
+
+                                                                                <span class="scb-sml100 scb-med50">Child</span>
+                                                                                <span class="scb-sml100 scb-med50">Child</span>
+
+                                    <div id="childList_list_div2" class="crt-list ter chl-ctr ">
+                                                                                <ul class="ttl">
+                                                                                    <li class="ttl-ctr">
+                                                                                        <ul class="ttv">
+                                                                                            <li class="icn">
+                                                                                                <svg class="icon icon-list-alt px24">
+                                                                                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-list-alt"></use>
+                                                                                                </svg>
+                                                                                            </li>
+                                                                                            <li class="lbl">
+                                                                                                <h4>Grand Child</h4>
+                                                                                            </li>
+                                                                                        </ul>
+                                                                                    </li>
+
+                                                                                </ul>
+
+                                                                                <ul class="ter">
+                                                                                    <li class="srb wrapped">
+                                                                                        <span class="scb-sml100 scb-med50">Child</span>
+                                                                                        <span class="scb-sml100 scb-med50">Child</span>
+                                                                                    </li>
+                                                                                    <li class="srb wrapped">
+                                                                                        <span class="scb-sml100 scb-med50">Child</span>
+                                                                                        <span class="scb-sml100 scb-med50">Child</span>
+                                                                                    </li>
+                                                                                </ul>
+
+                                                                            </div>
+
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+
+                                                    </li>
+                                                <!--<li class="srb">
+                                                    <span class="scb-col100"> Spacer </span>
+                                                </li>-->
+                                            </ul>
+                                        </div> 
+                                    </div>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+            </span>  
+            <span>
+               <input name="cgroup3bu" id="check09" aria-labelledby="check-lbl-15" aria-describedby="vchek_03" disabled="disabled" type="checkbox">
+                 <label id="check-lbl-15" class="flb" for="check09">Option3 </label>
+                 <div id="vchek_03" class="vchek-cnt sec"> 
+                    <div class="grb">
+                        <div class="gcb-col12">
+                            <div class="grb">
+                                <div class="gcb-col12">
+                                  <div class="plt-simp">
+                                    <div class="pst-simp pri u-relative">
+                                       <div id="table-demo2" class="crb-tabl crt-tabl pri"> 
+                                            <ul class="ttl">
+                                            <li class="ttl-ctr">
+                                                <ul class="ttv">
+                                                    <li class="icn">
+                                                        <svg class="icon icon-list-alt px24">
+                                                            <use xlink:href="#icon-list-alt"></use>
+                                                        </svg>
+                                                    </li>
+                                                    <li class="lbl">
+                                                        <h4>Primary Table with title, icon, search, add remove and pagination </h4>
+                                                    </li>
+                                                    <li class="btn-ctr">
+                                                        <button class="ett-bttn sec med inf">Action</button>
+                                                    </li>
+                                                </ul>
+                                            </li>   
+                                            <li class="srh-ctr">
+                                                <span class="ddn-ctr"> 
+                                                    <select id="select2" class="ett-slcn pri scb-col100" placeholder="select" title="Select Box" aria-label="Filter by Office">
+                                                        <option value="">All Offices</option>
+                                                        <option value="Edinburgh">Edinburgh</option>
+                                                        <option value="London">London</option>
+                                                        <option value="New York">New York</option>
+                                                        <option value="San Francisco">San Francisco</option>
+                                                        <option value="Sidney">Sidney</option>
+                                                        <option value="Singapore">Singapore</option>
+                                                        <option value="Tokyo">Tokyo</option>
+                                                    </select>   
+                                                </span>
+                                                <span class="srh"> 
+                                                        <span><input placeholder="Search" name="search" class="srh-inp" tabindex="0" required="" aria-label="Search Table" aria-controls="table-demo2" type="search"> </span>
+                                                        <span class="srh-icn">
+                                                            <svg class="icon icon-search px16"><use xlink:href="#icon-search"></use></svg>
+                                                        </span> 
+                                                </span>
+                                            </li>
+                                            <li class="pgn-ctr">
+                                               <ul class="pgn">
+                                                    <li class="pnx"> 
+                                                        <button class="ett-bttn tsp med" aria-label="Previous page"><svg class="icon icon-chevron-left px16"><use xlink:href="#icon-chevron-left"></use></svg></button> 
+                                                    </li>
+                                                    <li class="pcl">
+                                                      <input class="pageno" value="1" type="text">
+                                                    </li>   
+                                                    <li class="ptx"> 
+                                                        <span>/&nbsp;</span><span>3</span> 
+                                                    </li>    
+                                                    <li class="pnx"> 
+                                                        <button class="ett-bttn tsp med" aria-label="Next page"><svg class="icon icon-chevron-right px16"><use xlink:href="#icon-chevron-right"></use></svg></button>
+                                                    </li>
+                                                </ul>
+                                                <ul class="adr-ctr">
+                                                   <li class="add">
+                                                        <span>
+                                                        <button class="ett-bttn tsp med" aria-label="Add Record">
+                                                            <svg class="icon icon-plus px16"><use xlink:href="#icon-plus"></use></svg>
+                                                            </button>
+                                                        </span> 
+                                                   </li> 
+                                                   <li class="rmv">
+                                                       <span>
+                                                            <button class="ett-bttn tsp med" aria-label="Remove Record"><svg class="icon icon-minus px16"><use xlink:href="#icon-minus"></use></svg></button>
+                                                        </span>
+
+                                                   </li>
+                                                </ul> 
+                                            </li>
+                                            </ul> 
+                                            <div class="tabl-ctr hvr ">
+                                                 <table role=" grid" aria-describedby="tb1_info" class="tabl" id="tb1">
+                                                 <thead>
+                                                     <tr role="row">
+                                                       <th class="cen" aria-controls="tb1 " aria-label=" " style="max-width:45px">
+                                                         <span class="etb-rdio ett-rdio  pri"> 
+                                                          <span>
+                                                                <input name="rgroup2" id="radio4" aria-labelledby="radio-label-4" type="radio">
+                                                                <label id="radio-label-4" class="flb" for="radio4" title="Option1"></label> 
+                                                              </span>
+                                                         </span>
+                                                       </th>  
+                                                      <th class="cen sorting" aria-controls="tb1" aria-label="Header1 " tabindex="0"><span>Header1</span></th>
+                                                      <th class="cen sorting" aria-controls="tb1" aria-label="Header2" tabindex="0"><span>Header2</span></th>
+                                                         <th class="cen sorting" aria-controls="tb1" aria-label="Header3" tabindex="0"><span>Header3</span></th>
+                                                         <th class="cen sorting" aria-controls="tb1" aria-label="Header4" tabindex="0"><span>Header4</span></th>
+                                                         <th class="cen sorting" aria-controls="tb1" aria-label="Header5" tabindex="0"><span>Header5</span></th>
+                                                    </tr>
+                                                 </thead>
+                                                 <tbody>
+                                                    <tr role="row">
+                                                      <td class="cen" style="max-width:45px" tabindex="0">
+                                                         <span class="etb-rdio ett-rdio pri"> 
+                                                          <span>
+                                                                    <input name="rgroup3" id="radio7" aria-labelledby="radio-label-7" type="radio">
+                                                                    <label id="radio-label-7" class="flb" for="radio7" title="Option1"></label>
+                                                               </span>                                      
+                                                         </span> 
+                                                       </td>
+                                                      <td tabindex="0">
+                                                            <span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50">
+                                                            <input class="ett-inpt scb-col100 pri" data-title="Title" data-content="Contents..." data-placement="left" placeholder="Input Primary">
+                                                            </span>
+                                                      </td>
+                                                      <td tabindex="0"><p>Column2</p></td>
+                                                      <td tabindex="0"><p>Column3</p></td>
+                                                      <td tabindex="0"><p>Column4</p></td>
+                                                      <td tabindex="0"><p>Column5</p></td>
+                                                    </tr>
+                                                    <tr role="row">
+                                                      <td class="cen" style="max-width:45px" tabindex="0">
+                                                         <span class="etb-rdio ett-rdio pri">
+                                                              <span>
+                                                                <input name="rgroup3" id="radio45" aria-labelledby="radio-label-4" type="radio">
+                                                                <label id="radio-label-4" class="flb" for="radio45" title="Option1"></label>
+                                                               </span>
+                                                         </span>
+                                                       </td>
+                                                      <td tabindex="0"><p>Column1</p></td>
+                                                      <td tabindex="0"><p>Column2</p></td>
+                                                      <td tabindex="0"><p>Column3</p></td>
+                                                      <td tabindex="0"><p>Column4</p></td>
+                                                      <td tabindex="0"><p>Column5</p></td>
+                                                    </tr> 
+                                                     <tr role="row">
+                                                         <td class="cen" style="max-width:45px" tabindex="0">
+                                                         <span class="etb-rdio ett-rdio pri">
+
+                                                                <input name="rgroup3" id="radio413" aria-labelledby="radio-label-4" type="radio">
+                                                                <label id="radio-label-4" class="flb" for="radio413" title="Option1"></label>
+
+                                                         </span>
+                                                       </td>
+                                                      <td tabindex="0">
+                                                            <span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50">
+                                                            <input class="ett-inpt scb-col100 pri" data-title="Title" data-content="Contents..." data-placement="left" placeholder="Input Primary">
+                                                            </span>
+                                                      </td>
+                                                      <td tabindex="0"><p>Column2</p></td>
+                                                      <td tabindex="0"><p>Column3</p></td>
+                                                      <td tabindex="0"><p>Column4</p></td>
+                                                      <td tabindex="0"><p>Column5</p></td>
+                                                    </tr>
+
+                                                 </tbody>   
+                                                 </table>           
+                                            </div> 
+                                        </div> 
+                                    </div>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+            </span>
+        </span>
+          <h2>Teritiary</h2>
+        <span class="etb-chek ett-chek pri ver">
+            <span>
+                
+                 <input name="cgroup3bu" id="check10" aria-labelledby="check-lbl-13" aria-describedby="vchek_01" type="checkbox">
+                 <label id="check-lbl-13" class="flb" for="check10">Option1 </label>
+                 <div id="vchek_01" class="vchek-cnt ter"> 
+                  <div class="grb">
+                    <div class="gcb-col12">
+                      <div class="plt-simp">
+                        <div class="pst-simp pri u-relative">
+                            <div class="crt-form ver pri">
+                                <ul class="ttl">
+                                    <li class="ttl-ctr">
+                                        <ul class="ttv">
+                                            <li class="icn">
+                                                <svg class="ett-icon icon-list-alt px34">
+                                                    <use xlink:href="#icon-list-alt"></use>
+                                                </svg>
+                                            </li>
+                                            <li class="lbl">
+                                                <h4>Form - Vertical Primary</h4>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="pgn-ctr">
+                                       <ul class="pgn">
+                                            <li class="pnx"> 
+                                                <button class="ett-bttn tsp med" aria-label="Previous page"><svg class="icon icon-chevron-left px16"><use xlink:href="#icon-chevron-left"></use></svg></button> 
+                                            </li>
+                                            <li class="pcl">
+                                              <input class="pageno" value="1" type="text">
+                                            </li>   
+                                            <li class="ptx"> 
+                                                <span>/&nbsp;</span><span>3</span> 
+                                            </li>    
+                                            <li class="pnx"> 
+                                                <button class="ett-bttn tsp med" aria-label="Next page"><svg class="icon icon-chevron-right px16"><use xlink:href="#icon-chevron-right"></use></svg></button>
+                                            </li> 
+                                        </ul>                   
+                                    </li>
+                                </ul>
+                                <span class="srb wrapped pri"><!-- wrapped class is required for responsive columns -->
+                                <span class="scb-sml100 scb-lar50 pri">
+                                    <ul class="eoc wrapped srb pri"><!-- wrapped class is required for vertical orientation --> 
+                                        <li class="scb-col40">
+                                            <label class="flb req icl">
+                                                <svg class="ett-icon icon-list-alt px20"> <!-- icon selection, size, appearance, position(left and right) & semantics selection are required-->
+                                                <use xlink:href="#icon-list-alt"></use>
+                                                </svg>
+                                            Icon left of Label</label>
+                                        </li>
+                                        <li class="eic scb-col60">
+                                            <span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50">
+                                                <input id="input4gx" name="test1" class="ett-inpt pri med etw-100" title="Editable input" value="Primary Input" placeholder=" Value" type="text">
+                                                <span class="htx">Hint for the input</span>
+                                                <span class="vtx">Validation text</span>
+                                            </span>
+                                        </li>
+                                    </ul>                   
+                                </span>
+                                <span class="scb-sml100 scb-lar50">
+                                    <ul class="eoc wrapped srb pri"><!-- wrapped class is required for vertical orientation -->
+                                        <li class="scb-col40">
+                                            <label class="flb">Element3 Label</label>
+                                        </li>
+                                        <li class="eic scb-col60">
+                                            <span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50">
+                                            <input id="input4x" name="test1" class="ett-inpt ter etw-100" title="Editable input" value="Tertiary Input" placeholder=" Value" type="text">
+                                            </span> 
+                                        </li>
+                                    </ul>
+                                </span>
+                            </span> 
+                           </div> 
+                        </div>
+                    </div>
+                  </div>
+                </div> 
+              </div>
+            </span> 
+            <span>
+                 <input name="cgroup3bu" id="check11" aria-labelledby="check-lbl-14" aria-describedby="vchek_02" type="checkbox">
+                 <label id="check-lbl-14" class="flb" for="check11">Option2 </label>
+                 <div id="vchek_02" class="vchek-cnt ter"> 
+                    <div class="grb">
+                        <div class="gcb-col12">
+                            <div class="grb">
+                                <div class="gcb-col12">
+                                  <div class="plt-simp">
+                                    <div class="pst-simp pri u-relative">
+                                         <div class="crt-list pri"> 
+                                            <ul class="ttl">
+                                                <li class="ttl-ctr">
+                                                    <ul class="ttv">
+                                                        <li class="icn">
+                                                            <svg class="icon icon-list-alt px24">
+                                                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-list-alt"></use>
+                                                            </svg>
+                                                        </li>
+                                                        <li class="lbl">
+                                                            <h4>LIST IN LIST</h4>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+
+                                            </ul>
+                                            <ul class="pri">
+                                                <li class="srb wrapped chl">
+
+                                                            <span class="scb-col50">Parent</span>
+                                                            <span class="scb-col50">Parent</span>
+                                    <div id="childList_list_div" class="crt-list sec chl-ctr ">
+                                                            <ul class="ttl">
+                                                                <li class="ttl-ctr">
+                                                                    <ul class="ttv">
+                                                                        <li class="icn">
+                                                                            <svg class="icon icon-list-alt px24">
+                                                                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-list-alt"></use>
+                                                                            </svg>
+                                                                        </li>
+                                                                        <li class="lbl">
+                                                                            <h4>Child</h4>
+                                                                        </li>
+                                                                    </ul>
+                                                                </li>
+                                                            </ul>
+                                                            <ul class="sec">
+                                                                <li class="srb wrapped chl">
+
+                                                                                <span class="scb-sml100 scb-med50">Child</span>
+                                                                                <span class="scb-sml100 scb-med50">Child</span>
+
+                                    <div id="childList_list_div2" class="crt-list ter chl-ctr ">
+                                                                                <ul class="ttl">
+                                                                                    <li class="ttl-ctr">
+                                                                                        <ul class="ttv">
+                                                                                            <li class="icn">
+                                                                                                <svg class="icon icon-list-alt px24">
+                                                                                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-list-alt"></use>
+                                                                                                </svg>
+                                                                                            </li>
+                                                                                            <li class="lbl">
+                                                                                                <h4>Grand Child</h4>
+                                                                                            </li>
+                                                                                        </ul>
+                                                                                    </li>
+
+                                                                                </ul>
+
+                                                                                <ul class="ter">
+                                                                                    <li class="srb wrapped">
+                                                                                        <span class="scb-sml100 scb-med50">Child</span>
+                                                                                        <span class="scb-sml100 scb-med50">Child</span>
+                                                                                    </li>
+                                                                                    <li class="srb wrapped">
+                                                                                        <span class="scb-sml100 scb-med50">Child</span>
+                                                                                        <span class="scb-sml100 scb-med50">Child</span>
+                                                                                    </li>
+                                                                                </ul>
+
+                                                                            </div>
+
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+
+                                                    </li>
+                                                <!--<li class="srb">
+                                                    <span class="scb-col100"> Spacer </span>
+                                                </li>-->
+                                            </ul>
+                                        </div> 
+                                    </div>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+            </span>  
+            <span>
+               <input name="cgroup3bu" id="check12" aria-labelledby="check-lbl-15" aria-describedby="vchek_03" disabled="disabled" type="checkbox">
+                 <label id="check-lbl-15" class="flb" for="check12"> Option3</label>
+                 <div id="vchek_03" class="vchek-cnt ter"> 
+                    <div class="grb">
+                        <div class="gcb-col12">
+                            <div class="grb">
+                                <div class="gcb-col12">
+                                  <div class="plt-simp">
+                                    <div class="pst-simp pri u-relative">
+                                       <div id="table-demo2" class="crb-tabl crt-tabl pri"> 
+                                            <ul class="ttl">
+                                            <li class="ttl-ctr">
+                                                <ul class="ttv">
+                                                    <li class="icn">
+                                                        <svg class="icon icon-list-alt px24">
+                                                            <use xlink:href="#icon-list-alt"></use>
+                                                        </svg>
+                                                    </li>
+                                                    <li class="lbl">
+                                                        <h4>Primary Table with title, icon, search, add remove and pagination </h4>
+                                                    </li>
+                                                    <li class="btn-ctr">
+                                                        <button class="ett-bttn sec med inf">Action</button>
+                                                    </li>
+                                                </ul>
+                                            </li>   
+                                            <li class="srh-ctr">
+                                                <span class="ddn-ctr"> 
+                                                    <select id="select2" class="ett-slcn pri scb-col100" placeholder="select" title="Select Box" aria-label="Filter by Office">
+                                                        <option value="">All Offices</option>
+                                                        <option value="Edinburgh">Edinburgh</option>
+                                                        <option value="London">London</option>
+                                                        <option value="New York">New York</option>
+                                                        <option value="San Francisco">San Francisco</option>
+                                                        <option value="Sidney">Sidney</option>
+                                                        <option value="Singapore">Singapore</option>
+                                                        <option value="Tokyo">Tokyo</option>
+                                                    </select>   
+                                                </span>
+                                                <span class="srh"> 
+                                                        <span><input placeholder="Search" name="search" class="srh-inp" tabindex="0" required="" aria-label="Search Table" aria-controls="table-demo2" type="search"> </span>
+                                                        <span class="srh-icn">
+                                                            <svg class="icon icon-search px16"><use xlink:href="#icon-search"></use></svg>
+                                                        </span> 
+                                                </span>
+                                            </li>
+                                            <li class="pgn-ctr">
+                                               <ul class="pgn">
+                                                    <li class="pnx"> 
+                                                        <button class="ett-bttn tsp med" aria-label="Previous page"><svg class="icon icon-chevron-left px16"><use xlink:href="#icon-chevron-left"></use></svg></button> 
+                                                    </li>
+                                                    <li class="pcl">
+                                                      <input class="pageno" value="1" type="text">
+                                                    </li>   
+                                                    <li class="ptx"> 
+                                                        <span>/&nbsp;</span><span>3</span> 
+                                                    </li>    
+                                                    <li class="pnx"> 
+                                                        <button class="ett-bttn tsp med" aria-label="Next page"><svg class="icon icon-chevron-right px16"><use xlink:href="#icon-chevron-right"></use></svg></button>
+                                                    </li>
+                                                </ul>
+                                                <ul class="adr-ctr">
+                                                   <li class="add">
+                                                        <span>
+                                                        <button class="ett-bttn tsp med" aria-label="Add Record">
+                                                            <svg class="icon icon-plus px16"><use xlink:href="#icon-plus"></use></svg>
+                                                            </button>
+                                                        </span> 
+                                                   </li> 
+                                                   <li class="rmv">
+                                                       <span>
+                                                            <button class="ett-bttn tsp med" aria-label="Remove Record"><svg class="icon icon-minus px16"><use xlink:href="#icon-minus"></use></svg></button>
+                                                        </span>
+
+                                                   </li>
+                                                </ul> 
+                                            </li>
+                                            </ul> 
+                                            <div class="tabl-ctr hvr ">
+                                                 <table role=" grid" aria-describedby="tb1_info" class="tabl" id="tb1">
+                                                 <thead>
+                                                     <tr role="row">
+                                                       <th class="cen" aria-controls="tb1 " aria-label=" " style="max-width:45px">
+                                                         <span class="etb-rdio ett-rdio  pri"> 
+                                                          <span>
+                                                                <input name="rgroup2" id="radio4" aria-labelledby="radio-label-4" type="radio">
+                                                                <label id="radio-label-4" class="flb" for="radio4" title="Option1"></label> 
+                                                              </span>
+                                                         </span>
+                                                       </th>  
+                                                      <th class="cen sorting" aria-controls="tb1" aria-label="Header1 " tabindex="0"><span>Header1</span></th>
+                                                      <th class="cen sorting" aria-controls="tb1" aria-label="Header2" tabindex="0"><span>Header2</span></th>
+                                                         <th class="cen sorting" aria-controls="tb1" aria-label="Header3" tabindex="0"><span>Header3</span></th>
+                                                         <th class="cen sorting" aria-controls="tb1" aria-label="Header4" tabindex="0"><span>Header4</span></th>
+                                                         <th class="cen sorting" aria-controls="tb1" aria-label="Header5" tabindex="0"><span>Header5</span></th>
+                                                    </tr>
+                                                 </thead>
+                                                 <tbody>
+                                                    <tr role="row">
+                                                      <td class="cen" style="max-width:45px" tabindex="0">
+                                                         <span class="etb-rdio ett-rdio pri"> 
+                                                          <span>
+                                                                    <input name="rgroup3" id="radio7" aria-labelledby="radio-label-7" type="radio">
+                                                                    <label id="radio-label-7" class="flb" for="radio7" title="Option1"></label>
+                                                               </span>                                      
+                                                         </span> 
+                                                       </td>
+                                                      <td tabindex="0">
+                                                            <span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50">
+                                                            <input class="ett-inpt scb-col100 pri" data-title="Title" data-content="Contents..." data-placement="left" placeholder="Input Primary">
+                                                            </span>
+                                                      </td>
+                                                      <td tabindex="0"><p>Column2</p></td>
+                                                      <td tabindex="0"><p>Column3</p></td>
+                                                      <td tabindex="0"><p>Column4</p></td>
+                                                      <td tabindex="0"><p>Column5</p></td>
+                                                    </tr>
+                                                    <tr role="row">
+                                                      <td class="cen" style="max-width:45px" tabindex="0">
+                                                         <span class="etb-rdio ett-rdio pri">
+                                                              <span>
+                                                                <input name="rgroup3" id="radio45" aria-labelledby="radio-label-4" type="radio">
+                                                                <label id="radio-label-4" class="flb" for="radio45" title="Option1"></label>
+                                                               </span>
+                                                         </span>
+                                                       </td>
+                                                      <td tabindex="0"><p>Column1</p></td>
+                                                      <td tabindex="0"><p>Column2</p></td>
+                                                      <td tabindex="0"><p>Column3</p></td>
+                                                      <td tabindex="0"><p>Column4</p></td>
+                                                      <td tabindex="0"><p>Column5</p></td>
+                                                    </tr> 
+                                                     <tr role="row">
+                                                         <td class="cen" style="max-width:45px" tabindex="0">
+                                                         <span class="etb-rdio ett-rdio pri">
+
+                                                                <input name="rgroup3" id="radio413" aria-labelledby="radio-label-4" type="radio">
+                                                                <label id="radio-label-4" class="flb" for="radio413" title="Option1"></label>
+
+                                                         </span>
+                                                       </td>
+                                                      <td tabindex="0">
+                                                            <span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50">
+                                                            <input class="ett-inpt scb-col100 pri" data-title="Title" data-content="Contents..." data-placement="left" placeholder="Input Primary">
+                                                            </span>
+                                                      </td>
+                                                      <td tabindex="0"><p>Column2</p></td>
+                                                      <td tabindex="0"><p>Column3</p></td>
+                                                      <td tabindex="0"><p>Column4</p></td>
+                                                      <td tabindex="0"><p>Column5</p></td>
+                                                    </tr>
+
+                                                 </tbody>   
+                                                 </table>           
+                                            </div> 
+                                        </div> 
+                                    </div>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+            </span>
+        </span>
+		<script type="text/javascript" charset="utf-8" src="scripts/jquery-3.1.1.min.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/jquery-ui.min.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/select2.min.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/appzillon.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/uiutils.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/swiper.min.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/tableHeadFixer.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/karthik-plugins.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/karthik-scripts.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/ripple.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/svgxuse.js"></script>
+<script type="text/javascript">
+        $(document).ready(function () {
+            apz = new Apz();
+            apz.appId = "testing";
+            apz.deviceOs = "APPZILLONSIMULATOR";
+            //apz.loadProject();
+        });
+    </script>
+        
+        
+		<script>
+            
+		
+			$(document).ready(function() {
+				$('#SpriteSVG').load('svg-apz.svg');
+				$('#myButton').click(function(event) { 
+					// prevent page submit
+					event.preventDefault();
+					$("#SpriteSVG").text(" ");
+					// load the page into #SpriteSVG
+					$('#SpriteSVG').load('svg-apz.svg'); 
+				});
+				$('#myButtonBCL').click(function(event) { 
+					// prevent page submit
+					event.preventDefault();
+					$("#SpriteSVG").text(" ");
+					// load the page into #SpriteSVG
+					$('#SpriteSVG').load('svg-bcl.svg'); 
+				});
+				// load ripple effect for elements with class .rpl
+				//$('.rpl, .ripples').on('click', ripplesEffect);
+		
+			});
+		</script>  
+	</body>
+
+</html>

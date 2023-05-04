@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Portions-alert</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <script>
+        function swapStyleSheet(sheet) {
+            document.getElementById('pagestyle').setAttribute('href', sheet);
+        }
+    </script>
+    <link href="styles/themes/appzillon/css/local-base.css" rel="stylesheet" media="screen" />
+    <link id="pagestyle" href="styles/themes/appzillon/css/local-apz.css" rel="stylesheet" media="screen" />
+
+</head>
+
+<body class="fulsv ">
+    
+    <span id="SpriteSVG"></span>
+        <button class="ett-bttn pri med" id="myButton" onclick="swapStyleSheet('styles/themes/appzillon/css/local-apz.css')">Appzillon</button>
+    	<button class="ett-bttn pri med" id="myButtonBCL" onclick="swapStyleSheet('styles/themes/appzillon/css/local-bcl.css')">Barclays</button>
+     	<button class="ett-bttn pri med" id="myButtonRolb" onclick="swapStyleSheet('styles/themes/appzillon/css/local-rolb.css')">Rolb</button>
+      	<button class="ett-bttn pri med" id="myButtonMobile" onclick="swapStyleSheet('styles/themes/appzillon/css/local-mobile.css')">Mobile</button>
+    
+    <br>
+    <br>
+    <br>
+    <span class="srb">
+        <span>
+            <button class="ett-bttn pri med" onclick="alertify.alert('This is an Alert');$('.alertify').addClass('pnt-alts inf')" ;> Alert</button>
+            <button class="ett-bttn pri med" onclick="alertify.defaultValue('Default Value').prompt('This is a prompt dialog',function (val, ev) {ev.preventDefault();alertify.success('You have clicked OK and typed: ' + val); }, function(ev) { ev.preventDefault();alertify.error('You have clicked Cancel'); });$('.alertify').addClass('pnt-alts pro');">Prompt</button>
+            <button class="ett-bttn pri med" onclick="alertify.confirm('Confirm', function () {}, function() {});$('.alertify').addClass('pnt-alts con');">Confirm</button>
+
+            <button class="ett-bttn sec med" onclick="alertify.error('This is Error',click);$('.alertify').addClass('pnt-alts err');">Notification-Error</button>
+            <button class="ett-bttn sec med" onclick="alertify.success('This is alert',click);$('.alertify').addClass('pnt-alts suc');">Notification-Success</button>
+        </span>
+    </span>
+
+    <script type="text/javascript" charset="utf-8" src="scripts/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="scripts/jquery-ui.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="scripts/select2.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="scripts/appzillon.js"></script>
+    <script type="text/javascript" charset="utf-8" src="scripts/uiutils.js"></script>
+    <script type="text/javascript" charset="utf-8" src="scripts/swiper.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="scripts/tableHeadFixer.js"></script>
+    <script type="text/javascript" charset="utf-8" src="scripts/karthik-plugins.js"></script>
+    <script type="text/javascript" charset="utf-8" src="scripts/karthik-scripts.js"></script>
+    <script type="text/javascript" charset="utf-8" src="scripts/jquery.slide-transition.js"></script>
+    <script type="text/javascript" charset="utf-8" src="scripts/ripple.js"></script>
+
+    <script type="text/javascript" charset="utf-8" src="scripts/alertify.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            apz = new Apz();
+            apz.appId = "testing";
+            apz.deviceOs = "APPZILLONSIMULATOR";
+            //apz.loadProject();
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('.client-select li').on('click', function () {
+                if ($(this).val() != "default") {
+                    $('#input312').val($(this).text());
+                } else {
+                    $('#input312').text('');
+                }
+            });
+        });
+    </script>
+    <script>
+        $('.alertifytest').click(function () {
+            var val = this.innerHTML;
+            var msg = {};
+            if (val == "Alert") {
+                msg.code = "APZ_INF_TESTALRT";
+                msg.callBack = apz.app.alertCallBack;
+                msg.labels = ['LIT_PROCEED'];
+                apz.dispMsg(msg);
+            } else if (val == "Confirm") {
+                msg.code = "APZ_INF_TESTCONFIRM";
+                msg.callBack = apz.app.alertCallBack;
+                msg.labels = ['LIT_PROCEED', 'LIT_CANCEL'];
+                apz.dispMsg(msg);
+            } else if (val == "Prompt") {
+                msg.code = "APZ_INF_TESTPRMPT";
+                msg.callBack = alertCallBack();
+                apz.dispMsg(msg);
+            }
+        });
+    </script>
+    <script>
+        var alertCallBack = function (params) {
+            // if(params.code === "APZ_INF_TESTPRMPT"){
+            //  apz.setElmValue('element_inputbox_1', params.val);  
+            // }
+        };
+    </script>
+    <script>
+        $('#txte').webuiPopover();
+        $('#txte1').webuiPopover();
+        $('#txte2').webuiPopover();
+        $('#txte3').webuiPopover();
+        $('#txte5').webuiPopover();
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            initTags('element_tags_1', 'element_tags_1', {});
+        });
+    </script>
+
+
+    <script>
+        $(document).ready(function () {
+            $('#SpriteSVG').load('svg-apz.svg');
+            $('#myButton').click(function (event) {
+
+                // prevent page submit
+                event.preventDefault();
+                $("#SpriteSVG").text(" ")
+                    // load the page into #SpriteSVG
+                $('#SpriteSVG').load('svg-apz.svg');
+
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('#myButtonBCL').click(function (event) {
+                // prevent page submit
+                event.preventDefault();
+                $("#SpriteSVG").text(" ")
+                    // load the page into #SpriteSVG
+                $('#SpriteSVG').load('svg-bcl.svg');
+
+            });
+        });
+    </script>
+</body>
+
+</html>

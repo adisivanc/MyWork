@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8" />
+		<title>Checkbox</title>
+		<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+		<script>
+			function swapStyleSheet(sheet) {
+				document.getElementById('pagestyle').setAttribute('href', sheet);
+			}
+		</script>
+		<link href="styles/themes/appzillon/css/local-base.css" rel="stylesheet" media="screen" />
+		<link id="pagestyle" href="styles/themes/appzillon/css/local-apz.css" rel="stylesheet" media="screen" />
+
+	</head>
+
+	<body  class="fulsv" style="padding:25px; background-color: #fff" >
+		<span id="SpriteSVG"></span>
+        <br> 
+        <select class="ett-slcn etb-slcn pri" style="width:20%;">
+            <option id="myButton" onclick="swapStyleSheet('styles/themes/appzillon/css/local-apz.css')">Appzillon</option>
+            <option id="myButtonBCL" onclick="swapStyleSheet('styles/themes/appzillon/css/local-bcl.css')">Barclays </option>
+            <option id="myButtonRolb" onclick="swapStyleSheet('styles/themes/appzillon/css/local-rolb.css')">Rolb</option>
+            <option id="myButtonMobile" onclick="swapStyleSheet('styles/themes/appzillon/css/local-mobile.css')">Mobile</option>
+            <option id="myButtonCiti" onclick="swapStyleSheet('styles/themes/appzillon/css/local-citi.css')">Citi</option>
+        </select> 
+        <br>
+        	<p>Checkbox Group Native Style Horizontal</p>
+        <br>
+            <span class="etb-chek ett-chek hor"> 
+            <span>
+                <input type="checkbox" id="check1" aria-labelledby='check-lbl-1' />
+                <label id="check-lbl-1" class="flb" for="check1">Option1</label>
+            </span>
+            <span>
+                <input type="checkbox" id="check2" aria-labelledby='check-lbl-2' />
+                <label id="check-lbl-2" class="flb" for="check2" >Option2</label>
+            </span>	
+            <span>
+                <input type="checkbox" disabled="disabled" id="check3" aria-labelledby='check-lbl-3'/>
+                <label id="check-lbl-3" class="flb" for="check3" title="Option3">Disabled</label>
+            </span>	
+                <span>
+                <input type="checkbox" id="check3789" aria-labelledby='check-lbl-4'/>
+                <label id="check-lbl-4" class="flb" for="check3789" title="Option3">Disabled</label>
+            </span>
+        </span>
+           <br>
+        <br>
+            <p>Checkbox Group Native Style vertical</p> 
+        <span class="etb-chek ett-chek ver">
+                    <span>
+                        <input type="checkbox" id="check4" aria-labelledby='check-lbl-5' />
+                        <label id="check-lbl-5" class="flb" for="check4">Option1</label>
+                    </span>
+                    <span>
+                        <input type="checkbox" id="check5" aria-labelledby='check-lbl-6'/>
+                        <label id="check-lbl-6" class="flb" for="check5" >Option2</label>
+                    </span>	
+                    <span>
+                        <input type="checkbox" disabled="disabled" id="check6" aria-labelledby='check-lbl-7'/>
+                        <label id="check-lbl-7" class="flb" for="check6" title="Option3">Disabled</label>
+                    </span>	
+            <span>
+                        <input type="checkbox"id="check37891" aria-labelledby='check-lbl-8'/>
+                        <label id="check-lbl-8" class="flb" for="check37891" title="Option3">Disabled</label>
+                    </span>
+                </span>
+        <br> 
+        
+        <p>checkbox group Label with button  </p>
+        <ul >
+            <li>
+                <label class="flb"> checkbox Button Label </label>
+                <button aria-label="help" class="ett-bttn tsp sml lbtn px20"><svg class="ett-icon icon-bell px20" aria-hidden="true"><use xlink:href="#icon-bell"></use></svg><div></div></button> 
+            </li>
+            <li> 
+                <span id="check-group1" class="etb-chek ett-chek pri hor" aria-describedby="htx-04">
+                    <span>
+                        <input type="checkbox" id="check01"  aria-labelledby='check-lbl-9'/>
+                        <label id="check-lbl-9" class="flb" for="check01" aria-label="Option1">Option1 </label>
+                    </span>
+                    <span>
+                        <input type="checkbox" id="check02" aria-labelledby='check-lbl-10'/>
+                        <label id="check-lbl-10" class="flb err" for="check02" aria-label="Option2">Option2</label>
+                    </span>	
+                    <span>
+                        <input type="checkbox" disabled="disabled" id="check03" aria-labelledby='check-lbl-11'/>
+                        <label id="check-lbl-11" class="flb" for="check03" title="Option3" aria-label="Disabled">Disabled</label>
+                    </span> 
+                    <span>
+                        <input type="checkbox" id="check0839" aria-labelledby='check-lbl-12'/>
+                        <label id="check-lbl-12" class="flb" for="check0839" title="Option3" aria-label="indeterminate">indeterminate</label>
+                    </span>
+                </span> 
+                <span id="htx-04" class="htx" >Optional description text </span>
+            </li> 
+        </ul>
+       <!-- <span class="etb-chek ett-chek pri hor">
+            <span>
+                <input type="checkbox" id="check01"  aria-labelledby='check-lbl-9'/>
+                <label id="check-lbl-9" class="flb" for="check01"> Option1 </label>
+            </span>
+            <span>
+                <input type="checkbox" id="check02" aria-labelledby='check-lbl-10'/>
+                <label id="check-lbl-10" class="flb err" for="check02" >Option2</label>
+            </span>	
+            <span>
+                <input type="checkbox" disabled="disabled" id="check03" aria-labelledby='check-lbl-11'/>
+                <label id="check-lbl-11" class="flb" for="check03" title="Option3">Disabled</label>
+            </span> 
+            <span>
+                <input type="checkbox" id="check0839" aria-labelledby='check-lbl-12'/>
+                <label id="check-lbl-12" class="flb" for="check0839" title="Option3">indeterminate</label>
+            </span>
+        </span>-->
+        
+        
+        
+        
+        
+        <p>Checkbox Horizontal primary variation</p>
+        <br>  
+            <span class="etb-chek ett-chek pri hor">
+            <span>
+                <input type="checkbox" id="check01"  aria-labelledby='check-lbl-9'/>
+                <label id="check-lbl-9" class="flb" for="check01">Option1 </label>
+            </span>
+            <span>
+                <input type="checkbox" id="check02" aria-labelledby='check-lbl-10'/>
+                <label id="check-lbl-10" class="flb err" for="check02" >Option2</label>
+            </span>	
+            <span>
+                <input type="checkbox" disabled="disabled" id="check03" aria-labelledby='check-lbl-11'/>
+                <label id="check-lbl-11" class="flb" for="check03" title="Option3">Disabled</label>
+            </span> 
+            <span>
+                <input type="checkbox" id="check0839" aria-labelledby='check-lbl-12'/>
+                <label id="check-lbl-12" class="flb" for="check0839" title="Option3">indeterminate</label>
+            </span>
+        </span>
+        <br>
+        <br>
+            <p>Checkbox vertical primary variation</p> 
+            <span class="etb-chek ett-chek pri ver">
+	                    <span>
+	                        <input type="checkbox" id="check04"  aria-labelledby='check-lbl-13' aria-describedby="htx-04"/>
+	                        <label id="check-lbl-13" class="flb" for="check04">Option1 </label>
+	                       <span id="htx-04" class="htx" >Optional description text </span>
+	                    </span>
+	                    <span>
+	                        <input type="checkbox" id="check05" aria-labelledby='check-lbl-14' aria-describedby="htx-05"/>
+	                        <label id="check-lbl-14" class="flb err" for="check05" >Error</label>
+	                        <span id="htx-05" class="htx">Optional description text</span>
+	                    </span>	
+	                    <span>
+	                        <input type="checkbox" disabled="disabled" id="check06" aria-labelledby='check-lbl-15' aria-describedby="htx-06"/>
+	                        <label id="check-lbl-15" class="flb" for="check06" title="Option3">Disabled</label>
+	                        <span id="htx-06" class="htx">Optional description text</span>
+	                    </span>
+                        <span>
+	                        <input type="checkbox" id="check08391" aria-labelledby='check-lbl-16' aria-describedby="htx-07"/>
+	                        <label id="check-lbl-16" class="flb" for="check08391" title="Option3">indeterminate</label>
+	                        <span id="htx-07" class="htx">Optional description text</span>
+	                    </span>
+                    </span> 
+        <br>
+           <p>Checkbox Horizontal secondary variation</p>
+        <br>
+                <span class="etb-chek ett-chek hor sec">
+                    <span>
+                        <input type="checkbox" id="check19"  aria-labelledby='check-lbl-17'/>
+                        <label id="check-lbl-17" class="flb" for="check19">Option1</label>
+                    </span>
+                    <span>
+                        <input type="checkbox" id="check29" aria-labelledby='check-lbl-18'/>
+                        <label id="check-lbl-18" class="flb" for="check29" >Option2</label>
+                    </span>	
+                    <span>
+                        <input type="checkbox" disabled="disabled" id="check39" aria-labelledby='check-lbl-19'/>
+                        <label id="check-lbl-19" class="flb" for="check39" title="Option3">Disabled</label>
+                    </span>
+                </span>
+                <br>
+        <p>Checkbox vertical secondary variation</p>
+        <br>
+                    <span class="etb-chek ett-chek ver sec ">
+                    <span>
+                        <input type="checkbox" id="check48"  aria-labelledby='check-lbl-20'/>
+                        <label id="check-lbl-20" class="flb" for="check48">Option1</label>
+                    </span>
+                    <span>
+                        <input type="checkbox" id="check58" aria-labelledby='check-lbl-21'/>
+                        <label id="check-lbl-21" class="flb" for="check58" >Option2</label>
+                    </span>	
+                    <span>
+                        <input type="checkbox" disabled="disabled" id="check68" aria-labelledby='check-lbl-22'/>
+                        <label id="check-lbl-22" class="flb" for="check68" title="Option3">Disabled</label>
+                    </span>	
+                        </span>
+                  
+			 <br>
+        <p>Checkbox Horizontal teritiary variation</p>
+        <br>
+                    <span class="etb-chek ett-chek hor ter">
+                    <span>
+                        <input type="checkbox" id="check73"  aria-labelledby='check-lbl-23'/>
+                        <label id="check-lbl-23" class="flb" for="check73">Option1</label>
+                    </span>
+                    <span>
+                        <input type="checkbox" id="check83" aria-labelledby='check-lbl-24'/>
+                        <label id="check-lbl-24" class="flb" for="check83" >Option2</label>
+                    </span>	
+                    <span>
+                        <input type="checkbox" disabled="disabled" id="check93" aria-labelledby='check-lbl-25'/>
+                        <label id="check-lbl-25" class="flb" for="check93" title="Option3">Disabled</label>
+                    </span>	
+                </span>
+                <br>      
+        <p>Checkbox vertical teritiary variation</p>
+        <br>
+			      <span class="etb-chek ett-chek ver ter">
+                    <span>
+                        <input type="checkbox" id="check7b1"  aria-labelledby='check-lbl-26'/>
+                        <label id="check-lbl-26" class="flb" for="check7b1">Option1</label>
+                    </span>
+                    <span>
+                        <input type="checkbox" id="check8b1" aria-labelledby='check-lbl-27'/>
+                        <label id="check-lbl-27" class="flb" for="check8b1" >Option2</label>
+                    </span>	
+                    <span>
+                        <input type="checkbox" disabled="disabled" id="check9b1" aria-labelledby='check-lbl-28'/>
+                        <label id="check-lbl-28" class="flb" for="check9b1" title="Option3">Disabled</label>
+                    </span>											
+                </span> 
+		<script type="text/javascript" charset="utf-8" src="scripts/jquery-3.1.1.min.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/jquery-ui.min.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/select2.min.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/appzillon.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/uiutils.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/swiper.min.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/tableHeadFixer.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/karthik-plugins.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/karthik-scripts.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/ripple.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/svgxuse.js"></script>
+
+		<script>
+		
+			$(document).ready(function() {
+				$('#SpriteSVG').load('svg-apz.svg');
+				$('#myButton').click(function(event) {
+		
+					// prevent page submit
+					event.preventDefault();
+					$("#SpriteSVG").text(" ")
+					// load the page into #SpriteSVG
+					$('#SpriteSVG').load('svg-apz.svg');
+		
+				});
+				$('#myButtonBCL').click(function(event) {
+		
+					// prevent page submit
+					event.preventDefault();
+					$("#SpriteSVG").text(" ")
+					// load the page into #SpriteSVG
+					$('#SpriteSVG').load('svg-bcl.svg');
+		
+				});
+				// load ripple effect for elements with class .rpl
+				$('.rpl, .ripples').on('click', ripplesEffect);
+		
+			});
+		</script>
+        <script>
+        $(document).ready(function() {            
+        /*$("#check0839").prop("indeterminate", true);*/
+          $("#check0839").prop("indeterminate", true);  
+          $("#check08391").prop("indeterminate", true);   
+           $("#check3789").prop("indeterminate", true); 
+            $("#check37891").prop("indeterminate", true); 
+            
+        });
+        </script>
+	</body>
+
+</html>

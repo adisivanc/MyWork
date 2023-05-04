@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Table</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <script>
+        function swapStyleSheet(sheet) {
+            document.getElementById('pagestyle').setAttribute('href', sheet);
+        }
+    </script>
+    <link href="styles/themes/appzillon/css/local-base.css" rel="stylesheet" media="screen" />
+    <link id="pagestyle" href="styles/themes/appzillon/css/local-apz.css" rel="stylesheet" media="screen" />
+</head>
+
+<body class="pri">
+    
+    <span id="SpriteSVG"></span>
+    
+        <button class="ett-bttn pri med" id="myButton" onclick="swapStyleSheet('styles/themes/appzillon/css/local-apz.css')">Appzillon</button>
+      <button class="ett-bttn pri med" id="myButtonBCL" onclick="swapStyleSheet('styles/themes/appzillon/css/local-bcl.css')">Barclays</button>
+      <button class="ett-bttn pri med" id="myButtonRolb" onclick="swapStyleSheet('styles/themes/appzillon/css/local-rolb.css')">Rolb</button>
+        <button class="ett-bttn pri med" id="myButtonMobile" onclick="swapStyleSheet('styles/themes/appzillon/css/local-mobile.css')">Mobile</button>
+
+    <br>
+    <br>
+    <br> 
+    
+		<section class="pagebody"> 
+			<div class="grb">
+				<div class="gcb-col12">
+		    		<div class="plt-simp">
+		        		<div class="pst-simp pri">   
+                             
+                             <div class="crb-tabl crt-tabl pri"> 
+                                <ul class="ttl">
+                                    <li class="ttl-ctr">
+                                        <ul class="ttv">
+                                            <li class="icn">
+                                                <svg class="icon icon-list-alt px24">
+                                                    <use xlink:href="#icon-list-alt"></use>
+                                                </svg>
+                                            </li>
+                                            <li class="lbl">
+                                                <h4>Primary Table with Editable  feilds </h4>
+                                            </li>
+                                        </ul>
+                                    </li> 
+                                    <li class="srh-ctr pos">
+                                        <span class="srh "> 
+                                                <span><input type="search" placeholder="Search" name="search" class="srh-inp"  tabindex="0" required> </span>
+                                                <span class="srh-icn">
+                                                    <svg class="icon icon-search px16"><use xlink:href="#icon-search"></use></svg>
+                                                </span> 
+                                        </span>
+                                    </li>
+                                    <li class="pgn-ctr">
+                                       <ul class="pgn">
+                                            <li class="pnx"> 
+                                                <button class="ett-bttn tsp med"  aria-label="Previous page"><svg class="icon icon-chevron-left px16"><use xlink:href="#icon-chevron-left"></use></svg></button> 
+                                            </li>
+                                            <li class="pcl">
+                                              <input type="text" class="pageno" value="1">
+                                            </li>	
+                                            <li class="ptx"> 
+                                                <span>/&nbsp;</span><span>3</span> 
+                                            </li>	 
+                                            <li class="pnx"> 
+                                                <button class="ett-bttn tsp med"  aria-label="Next page"><svg class="icon icon-chevron-right px16"><use xlink:href="#icon-chevron-right"></use></svg></button>
+                                            </li>
+                                        </ul>
+                                       <ul class="adr-ctr sno">
+                                           <li class="add">
+                                                <span>
+                                                <button class="ett-bttn tsp med"  aria-label="Add Record">
+                                                    <svg class="icon icon-plus px16"><use xlink:href="#icon-plus"></use></svg>
+                                                    </button>
+                                                </span> 
+                                           </li> 
+                                           <li class="rmv">
+                                               <span>
+                                                    <button class="ett-bttn tsp med"  aria-label="Remove Record"><svg class="icon icon-minus px16"><use xlink:href="#icon-minus"></use></svg></button>
+                                                </span>
+
+                                           </li>
+                                        </ul> 
+                                    </li>
+                                    </ul>  
+                                <div class="tabl-ctr hvr height250">
+                                    <table role=" grid" aria-describedby="" class="tabl" id="tb5">
+                                     <thead>
+                                         <tr role="row">
+                                          <th aria-controls="" aria-label="" class="cen" style="max-width:45px">
+                                             <span class="etb-chek ett-chek pri ">  
+                                                    <input type="checkbox" id="check015678"/>
+                                                    <label class="flb" for="check015678"></label> 
+                                               </span> 
+                                           </th>
+                                          <th aria-controls="" aria-label="" tabindex="0"><span>Header1</span><button aria-label="Sort Ascending" class="ett-bttn tsp med "><svg class="icon icon-sort px18"><use xlink:href="#icon-sort"></use></svg></button><!-- use class sort-desc for other action  --></th>
+                                          <th aria-controls="" aria-label="" tabindex="0"><span>Header2</span><button aria-label="Sort Ascending" class="ett-bttn tsp med "><svg class="icon icon-sort px18"><use xlink:href="#icon-sort"></use></svg></button><!-- use class sort-desc for other action  --></th>
+                                             <th aria-controls="" aria-label="" tabindex="0"><span>Header3</span><button aria-label="Sort Ascending" class="ett-bttn tsp med "><svg class="icon icon-sort px18"><use xlink:href="#icon-sort"></use></svg></button><!-- use class sort-desc for other action  --></th>
+                                             <th aria-controls="" aria-label="" tabindex="0"><span>Header4</span><button aria-label="Sort Ascending" class="ett-bttn tsp med "><svg class="icon icon-sort px18"><use xlink:href="#icon-sort"></use></svg></button><!-- use class sort-desc for other action  --></th>
+                                             <th aria-controls="" aria-label="" tabindex="0"><span>Header5</span><button aria-label="Sort Ascending" class="ett-bttn tsp med "><svg class="icon icon-sort px18"><use xlink:href="#icon-sort"></use></svg></button><!-- use class sort-desc for other action  --></th>
+                                             <th aria-controls="" aria-label="" tabindex="0"><span>Header6</span><button aria-label="Sort Ascending" class="ett-bttn tsp med "><svg class="icon icon-sort px18"><use xlink:href="#icon-sort"></use></svg></button><!-- use class sort-desc for other action  --></th>
+                                             <th aria-controls="" aria-label="" tabindex="0"><span>Header7</span><button aria-label="Sort Ascending" class="ett-bttn tsp med "><svg class="icon icon-sort px18"><use xlink:href="#icon-sort"></use></svg></button><!-- use class sort-desc for other action  --></th>
+                                        </tr>
+                                     </thead>
+                                     <tbody>
+                                        <tr role="row">
+                                            <td class="cen" style="max-width:45px" tabindex="0">
+                                             <span class="etb-chek ett-chek pri ">  
+                                                    <input type="checkbox" id="check025678"/>
+                                                    <label class="flb" for="check025678"></label> 
+                                               </span> 
+                                           </td>
+                                          <td tabindex="0"><p>Column1</p></td>
+                                           
+                                          <td tabindex="0">
+                                             <span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50"  >
+                                                <span class="etw-100 syr pri">
+                                                <input class="ett-inpt etw-100 pri" type="text" id="input1" value="input With right symbol" placeholder="input With right symbol" />
+                                                <span >$</span> 
+                                                </span>  
+                                             </span> 
+                                          </td>
+                                          <td tabindex="0"><span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50" >
+                                            <input class="ett-inpt etw-100 pri " data-title="Title" data-content="Contents..." data-placement="left" value=" Normal input" placeholder="Normal" >
+                                            </span>
+                                        </td>
+                                          <td tabindex="0"><span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50" >
+                                            <input class="ett-inpt etw-100 pri " data-title="Title" data-content="Contents..." data-placement="left" value=" Normal input" placeholder="Normal" >
+                                            </span>
+                                        </td>
+                                            <td tabindex="0">
+                                                 <div class="etb-slct ett-slct pri scb-col100 err" tabindex="0">
+                                                    <input type="text" class="sub-elt " value="Simple - Primary error " readonly title="Select Box">
+                                                    <span class="sub-elt1"> <svg class="ett-icon icon-down px34"><use xlink:href="#icon-down"></use></svg></span>
+                                                    <div class="sub-ctr">
+                                                        <ul role="menu">
+                                                            <li class="is-disabled">Option1</li>
+                                                            <li>Option 2</li>
+                                                            <li>Option 3</li>
+                                                            <li>Option 4</li>
+                                                            <li>Option 5 Option 5Option 5Option 5Option 5Option 5Option 5Option 5Option 5</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>   
+                                          </td>
+                                            <td tabindex="0">
+                                                <select  id="select2" class="ett-slcn pri scb-col100 " placeholder="select" title="Select Box"  >
+                                                    <option>select Option 1</option>
+                                                    <option>Option 2</option>
+                                                     <option>Option 3</option>
+                                                    <option>Option 4</option>
+                                                     <option>Option 5</option>
+                                                    <option>Option 6</option>
+                                                     <option>Option 7</option>
+                                                    <option>Option 8</option>
+                                                  </select></td>
+                                            <td tabindex="0">
+                                                 <select  id="select2" class="ett-slcn pri scb-col100 " placeholder="select" title="Select Box"  >
+                                                    <option>select Option 1</option>
+                                                    <option>Option 2</option>
+                                                     <option>Option 3</option>
+                                                    <option>Option 4</option>
+                                                     <option>Option 5</option>
+                                                    <option>Option 6</option>
+                                                     <option>Option 7</option>
+                                                    <option>Option 8</option>
+                                                  </select>   
+                                          </td>
+                                        </tr>
+                                        <tr role="row">
+                                            <td class="cen" style="max-width:45px" tabindex="0">
+                                             <span class="etb-chek ett-chek pri ">  
+                                                    <input type="checkbox" id="check0256781"/>
+                                                    <label class="flb" for="check02561"></label> 
+                                               </span> 
+                                           </td>
+                                          <td tabindex="0"><p>Column1</p></td>
+                                           
+                                          <td tabindex="0">
+                                             <span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50"  >
+                                                <span class="etw-100 syr pri">
+                                                <input class="ett-inpt etw-100 pri" type="text" id="input1" value="input With right symbol" placeholder="input With right symbol" />
+                                                <span >$</span> 
+                                                </span>  
+                                             </span> 
+                                          </td>
+                                          <td tabindex="0"><span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50" >
+                                            <input class="ett-inpt etw-100 pri " data-title="Title" data-content="Contents..." data-placement="left" value=" Normal input" placeholder="Normal" >
+                                            </span>
+                                        </td>
+                                          <td tabindex="0"><span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50" >
+                                            <input class="ett-inpt etw-100 pri " data-title="Title" data-content="Contents..." data-placement="left" value=" Normal input" placeholder="Normal" >
+                                            </span>
+                                        </td>
+                                            <td tabindex="0">
+                                                 <select  id="select2" class="ett-slcn pri scb-col100 " placeholder="select" title="Select Box"  >
+                                                    <option>select Option 1</option>
+                                                    <option>Option 2</option>
+                                                     <option>Option 3</option>
+                                                    <option>Option 4</option>
+                                                     <option>Option 5</option>
+                                                    <option>Option 6</option>
+                                                     <option>Option 7</option>
+                                                    <option>Option 8</option>
+                                                  </select>   
+                                          </td>
+                                            <td tabindex="0">
+                                                <select  id="select2" class="ett-slcn pri scb-col100 " placeholder="select" title="Select Box"  >
+                                                    <option>select Option 1</option>
+                                                    <option>Option 2</option>
+                                                     <option>Option 3</option>
+                                                    <option>Option 4</option>
+                                                     <option>Option 5</option>
+                                                    <option>Option 6</option>
+                                                     <option>Option 7</option>
+                                                    <option>Option 8</option>
+                                                  </select></td>
+                                            <td tabindex="0">
+                                                 <select  id="select2" class="ett-slcn pri scb-col100 " placeholder="select" title="Select Box"  >
+                                                    <option>select Option 1</option>
+                                                    <option>Option 2</option>
+                                                     <option>Option 3</option>
+                                                    <option>Option 4</option>
+                                                     <option>Option 5</option>
+                                                    <option>Option 6</option>
+                                                     <option>Option 7</option>
+                                                    <option>Option 8</option>
+                                                  </select>   
+                                          </td>
+                                        </tr>
+                                        <tr role="row">
+                                            <td class="cen" style="max-width:45px" tabindex="0">
+                                             <span class="etb-chek ett-chek pri ">  
+                                                    <input type="checkbox" id="check0256782"/>
+                                                    <label class="flb" for="check0256782"></label> 
+                                               </span> 
+                                           </td>
+                                          <td tabindex="0"><p>Column1</p></td>
+                                           
+                                          <td tabindex="0">
+                                             <span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50"  >
+                                                <span class="etw-100 syr pri">
+                                                <input class="ett-inpt etw-100 pri" type="text" id="input1" value="input With right symbol" placeholder="input With right symbol" />
+                                                <span >$</span> 
+                                                </span>  
+                                             </span> 
+                                          </td>
+                                          <td tabindex="0"><span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50" >
+                                            <input class="ett-inpt etw-100 pri " data-title="Title" data-content="Contents..." data-placement="left" value=" Normal input" placeholder="Normal" >
+                                            </span>
+                                        </td>
+                                          <td tabindex="0"><span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50" >
+                                            <input class="ett-inpt etw-100 pri " data-title="Title" data-content="Contents..." data-placement="left" value=" Normal input" placeholder="Normal" >
+                                            </span>
+                                        </td>
+                                            <td tabindex="0">
+                                                 <select  id="select2" class="ett-slcn pri scb-col100 " placeholder="select" title="Select Box"  >
+                                                    <option>select Option 1</option>
+                                                    <option>Option 2</option>
+                                                     <option>Option 3</option>
+                                                    <option>Option 4</option>
+                                                     <option>Option 5</option>
+                                                    <option>Option 6</option>
+                                                     <option>Option 7</option>
+                                                    <option>Option 8</option>
+                                                  </select>   
+                                          </td>
+                                            <td tabindex="0">
+                                                <select  id="select2" class="ett-slcn pri scb-col100 " placeholder="select" title="Select Box"  >
+                                                    <option>select Option 1</option>
+                                                    <option>Option 2</option>
+                                                     <option>Option 3</option>
+                                                    <option>Option 4</option>
+                                                     <option>Option 5</option>
+                                                    <option>Option 6</option>
+                                                     <option>Option 7</option>
+                                                    <option>Option 8</option>
+                                                  </select></td>
+                                            <td tabindex="0">
+                                                 <select  id="select2" class="ett-slcn pri scb-col100 " placeholder="select" title="Select Box"  >
+                                                    <option>select Option 1</option>
+                                                    <option>Option 2</option>
+                                                     <option>Option 3</option>
+                                                    <option>Option 4</option>
+                                                     <option>Option 5</option>
+                                                    <option>Option 6</option>
+                                                     <option>Option 7</option>
+                                                    <option>Option 8</option>
+                                                  </select>   
+                                          </td>
+                                        </tr>
+                                        <tr role="row">
+                                            <td class="cen" style="max-width:45px" tabindex="0">
+                                             <span class="etb-chek ett-chek pri ">  
+                                                    <input type="checkbox" id="check03783"/>
+                                                    <label class="flb" for="check03783"></label> 
+                                               </span> 
+                                           </td>
+                                          <td tabindex="0"><p>Column1</p></td>
+                                          <td tabindex="0"><span class="etb-chek ett-chek hor sec"> 
+                                                <span>
+                                                    <input type="checkbox" id="check178956"  />
+                                                    <label class="flb" for="check178956">check1</label>
+                                                </span>
+                                                <span>
+                                                    <input type="checkbox" id="check278956" checked/>
+                                                    <label class="flb" for="check278956" >check2</label>
+                                                </span>	 
+                                            </span>
+                                          </td>
+                                          <td tabindex="0"><p>Column3</p></td>
+                                          <td tabindex="0"><span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50 ">
+                                            <span class="ett-lofv etw-100 btl sec" >
+                                                <span class="etw-5">
+                                                    <button class="ett-bttn sec med inf"><svg class="ett-icon icon-grid px24"><use xlink:href="#icon-grid"></use></svg> </button> 
+                                                </span>
+                                                <span>
+                                                <input class="ett-inpt etw-100 sec"  type="text" id="input1" value="With left button" placeholder="With left button" />
+                                                </span>
+                                            </span> 
+                                            </span></td>
+                                          <td tabindex="0"><p>Column5</p></td>
+                                           <td tabindex="0"><p><p>Column6</p></p></td>
+                                            <td tabindex="0">
+                                                 <select  id="select2" class="ett-slcn pri scb-col100 " placeholder="select" title="Select Box">
+                                                    <option>select Option 1</option>
+                                                    <option>Option 2</option>
+                                                     <option>Option 3</option>
+                                                    <option>Option 4</option>
+                                                     <option>Option 5</option>
+                                                    <option>Option 6</option>
+                                                     <option>Option 7</option>
+                                                    <option>Option 8</option>
+                                                  </select>   
+                                          </td> 
+                                        </tr>
+                                        <tr role="row">
+                                            <td class="cen" style="max-width:45px" tabindex="0">
+                                             <span class="etb-chek ett-chek pri ">  
+                                                    <input type="checkbox" id="check040784"/>
+                                                    <label class="flb" for="check040784"></label> 
+                                               </span> 
+                                           </td>
+                                          <td tabindex="0"><p>Column1</p></td>
+                                          <td tabindex="0"><p>Column2</p></td>
+                                          <td tabindex="0"><p>Column3</p></td>
+                                          <td tabindex="0"><p>Column4</p></td>
+                                          <td tabindex="0">
+                                              <span class="etb-rdio ett-rdio pri ">
+                                                <span >
+                                                    <input type="radio" name="rgroup34k" id="radio756"  checked/>
+                                                    <label class="flb" for="radio756" title="Option1"> Option1</label>
+                                                </span>
+                                                <span >
+                                                    <input type="radio" name="rgroup34k" id="radio856" />
+                                                    <label class="flb" for="radio856" title="Option2">Option2</label>
+                                                </span> 										
+                                           </span>
+                                         </td>
+                                            <td tabindex="0"><p><p>Column6</p></p></td>
+                                          <td tabindex="0">Column7</td>
+                                        </tr> 
+                                         
+                                        <tr role="row">
+                                            <td class="cen" style="max-width:45px" tabindex="0">
+                                             <span class="etb-chek ett-chek pri ">  
+                                                    <input type="checkbox" id="check04785"/>
+                                                    <label class="flb" for="check04785"></label> 
+                                               </span> 
+                                           </td>
+                                          <td tabindex="0"><p>Column1</p></td>
+                                          <td tabindex="0"> 
+                                            <a href="#appzillon" class="ett-hypl pri icl">
+                                                <svg class="icon icon-print px18">
+                                                    <use xlink:href="#icon-print"></use>
+                                                </svg>Primary Link with left icon</a>
+                                            </td>
+                                          <td tabindex="0"><p>Column3</p></td>
+                                          <td tabindex="0">
+                                              <textarea class="ett-texa pri scb-col50" >Textarea readonly Textarea readonly Textarea readonly Textarea readonly Textarea readonly Textarea readonly Textarea readonly Textarea readonly Textarea readonly Textarea readonly Textarea readonly Textarea readonly Textarea readonly </textarea>
+                                            </td>
+                                          <td tabindex="0"><p>Column5</p></td>
+                                          <td tabindex="0">
+                                              <ul class="ett-stpr etb-stpr pri">
+                                                <li >
+                                                    <button  class="ett-bttn med pri" onclick="apz.handleStepperclick(this);" ><svg class="ett-icon icon-minus px24"><use xlink:href="#icon-minus"></use></svg></button>
+                                                </li>
+                                                <li>
+                                                    <input type="text" id="input3" class="scb-col100 ett-inpt pri" value="stepper readonly" placeholder="Value3"  />
+                                                </li>
+                                                <li>
+                                                    <button class="ett-bttn med pri stpr-add " onclick="apz.handleStepperclick(this);"><svg class="ett-icon icon-plus px24"><use xlink:href="#icon-plus"></use></svg></button>
+                                                </li> 
+                                            </ul>
+                                            </td>
+                                            <td tabindex="0">
+                                                 <select  id="select2" class="ett-slcn pri scb-col100 " placeholder="select" title="Select Box">
+                                                    <option>select Option 1</option>
+                                                    <option>Option 2</option>
+                                                     <option>Option 3</option>
+                                                    <option>Option 4</option>
+                                                     <option>Option 5</option>
+                                                    <option>Option 6</option>
+                                                     <option>Option 7</option>
+                                                    <option>Option 8</option>
+                                                  </select>   
+                                          </td>
+                                        </tr>
+                                         <tr role="row">
+                                             <td class="cen" style="max-width:45px" tabindex="0">
+                                             <span class="etb-chek ett-chek pri ">  
+                                                    <input type="checkbox" id="check0534788"/>
+                                                    <label class="flb" for="check0534788"></label> 
+                                               </span> 
+                                           </td>
+                                          <td tabindex="0"> 
+                                            <input class="ett-rnge sec" type="range">   
+                                          </td>
+                                           
+                                          <td tabindex="0">
+                                             <button class="ett-bttn pri sml">Primary Small</button> 
+                                          </td>
+                                          <td tabindex="0"><p>Column4</p></td>
+                                          <td tabindex="0"><p>Column5</p></td>
+                                            <td tabindex="0">
+                                                 <label class="ett-togl pri">
+                                                    <input title="checkbox" type="checkbox">
+                                                    <div class="slider"></div>
+                                                </label>   
+                                          </td>
+                                            <td tabindex="0"><p>Column5</p></td>
+                                            <td tabindex="0">
+                                                     <p><p>Column6</p></p>
+                                          </td>
+                                        </tr>
+                                         <tr role="row">
+                                             <td class="cen" style="max-width:45px" tabindex="0">
+                                             <span class="etb-chek ett-chek pri ">  
+                                                    <input type="checkbox" id="check067899"/>
+                                                    <label class="flb" for="check067899"></label> 
+                                               </span> 
+                                           </td>
+                                          <td tabindex="0"><span class=" ett-badg sqr inf">info square</span></td>
+                                           
+                                          <td tabindex="0">
+                                             <img src="user.jpg" class="ett-imge cir tb36"> 
+                                          </td>
+                                          <td tabindex="0"><ul class="nrb ett-file ter">
+                                            <li>
+                                            <ul class="nrb ett-file ter">
+                                                <li>
+                                                    <a class="filebox ett-bttn med ter">
+                                                    <input class="" id="file" name="file" multiple="multiple" onchange="apz.setSelectedFileName(this);" title="Browse" type="file"> Browse... 
+                                                    </a> 
+                                                    <a class="ett-bttn med ter inf" href="#nope">Upload</a> 
+                                                </li>
+                                                <li><span class="filevalue" id="selectedfiles"><!-- Selected file name come here --></span></li>
+                                            </ul>
+                                             </td>
+                                          <td tabindex="0"><p>Column5</p></td>
+                                            <td tabindex="0">
+                                                  <svg class="ett-icon icon-home ter war px24"><use xlink:href="#icon-home"></use></svg>   
+                                          </td>
+                                            <td tabindex="0"><p>Column5</p></td>
+                                            <td tabindex="0">
+                                                 <select  id="select2" class="ett-slcn pri scb-col100 " placeholder="select" title="Select Box">
+                                                    <option>select Option 1</option>
+                                                    <option>Option 2</option>
+                                                     <option>Option 3</option>
+                                                    <option>Option 4</option>
+                                                     <option>Option 5</option>
+                                                    <option>Option 6</option>
+                                                     <option>Option 7</option>
+                                                    <option>Option 8</option>
+                                                  </select>   
+                                          </td>
+                                        </tr> 
+                                     </tbody>
+                                     <tfoot>
+                                        <tr role="row">
+                                            <td class="cen" style="max-width:45px" tabindex="0">
+                                             <span class="etb-chek ett-chek pri ">  
+                                                    <input type="checkbox" id="check077801"/>
+                                                    <label class="flb" for="check077801"></label> 
+                                               </span> 
+                                           </td>
+                                          <td tabindex="0">Footer1</td>
+                                          <td tabindex="0">Footer2</td>
+                                          <td tabindex="0">Footer3</td>
+                                          <td tabindex="0">Footer4</td>
+                                          <td tabindex="0">Footer5</td>
+                                          <td tabindex="0">Footer6</td>
+                                          <td tabindex="0">Footer7</td>
+                                        </tr>                	
+                                      </tfoot>	
+                                     </table>		
+                                </div> 
+                            </div>
+                            <br>
+                             
+                    </div>
+                </div>
+            </div>
+    </section>
+    
+    <script type="text/javascript" charset="utf-8" src="scripts/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="scripts/jquery-ui.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="scripts/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="scripts/dataTables.responsive.js"></script>
+    <script type="text/javascript" charset="utf-8" src="scripts/select2.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="scripts/appzillon.js"></script>
+    <script type="text/javascript" charset="utf-8" src="scripts/uiutils.js"></script>
+    <script type="text/javascript" charset="utf-8" src="scripts/swiper.min.js"></script> 
+    <script type="text/javascript" charset="utf-8" src="scripts/karthik-plugins.js"></script>
+    <script type="text/javascript" charset="utf-8" src="scripts/karthik-scripts.js"></script>
+    <script type="text/javascript" charset="utf-8" src="scripts/jquery.slide-transition.js"></script>
+    <script type="text/javascript" charset="utf-8" src="scripts/ripple.js"></script>
+    <script type="text/javascript" charset="utf-8" src="scripts/jquery.fixedheadertable.js"></script>
+    <!--<script type="text/javascript" charset="utf-8" src="scripts/simplebar.min.js"></script>-->
+
+    <script>
+        $(document).ready(function () {
+            apz = new Apz();
+            apz.appId = "testing";
+            apz.deviceOs = "APPZILLONSIMULATOR";
+            //apz.loadProject();
+        });
+    </script>  
+    <script> 
+        $(document).ready(function () {
+            $(".select-disabled").attr("disabled", "disabled");
+        }); 
+    </script>
+    <script>
+    $(document).ready(function(){
+        //$('#tb1').fixedHeaderTable({}); 
+        $('#tb2').fixedHeaderTable({}); 
+        $('#tb3').fixedHeaderTable({}); 
+        $('#tb4').fixedHeaderTable({}); 
+        $('#tb5').fixedHeaderTable({}); 
+        //$('#tb7').fixedHeaderTable({});
+    }); 
+    </script>
+    <script>
+        $(document).ready(function(){
+            var submitIcon = $('.srh-icn');
+            var inputBox = $('.srh-inp');
+            var srh = $('.srh');
+            var isOpen = false;
+            submitIcon.click(function(){
+                if(isOpen == false){
+                    srh.addClass('srh-open');
+                    inputBox.focus();
+                    isOpen = true;
+                } else {
+                    srh.removeClass('srh-open');
+                    inputBox.focusout();
+                    isOpen = false;
+                }
+            });
+            inputBox.keydown(function(e){
+                e.stopPropagation();
+                if (e.keyCode=="13" ||  e.keyCode=="9" ) {
+                    srh.removeClass('srh-open');
+                    inputBox.focusout();
+                    isOpen = false;
+                } 
+            });
+             submitIcon.mouseup(function(){
+                    return false;
+                });
+            srh.mouseup(function(){
+                    return false;
+                });
+            $(document).mouseup(function(){
+                    if(isOpen == true){
+                        $('.srh-icn').css('display','block');
+                        submitIcon.click();
+                    }
+                });
+        });
+            
+        </script>
+    
+    
+    
+ <script>
+		$('.tabl .rowhandle').on( 'click', function(e) {
+		  e.preventDefault();
+		  $(this).toggleClass('showinfo hideinfo').closest('tr').toggleClass('prow').next('.inforow').toggleClass('hiderow');
+		});
+    </script>
+    <script>
+        $(document).ready(function () {
+           $('#SpriteSVG').load('svg-apz.svg'); 
+            $('#myButton').click(function (event) {
+
+                // prevent page submit
+                event.preventDefault();
+                $("#SpriteSVG").text(" ")
+                    // load the page into #SpriteSVG
+                $('#SpriteSVG').load('svg-apz.svg'); 
+            });
+        });
+    </script>
+ <script> 
+    $(document).ready(function() {
+	var table = $('.example1').DataTable( {
+		/*scrollY:         false ,
+		scrollX:        false, 
+        sScrollBody:false
+        fixedColumns:   false,
+		scrollCollapse: false, */
+		paging :   false,
+        ordering : true,
+        info :   false,
+        searching: false,
+        searchable : false
+        
+	} );
+} );
+    
+    </script>
+    <script> 
+    $(document).ready(function() {
+	var table = $('.example2').DataTable( {
+		/*scrollY:         false ,
+		scrollX:        false, 
+        sScrollBody:false
+        fixedColumns:   false,
+		scrollCollapse: false, */
+		paging :   false,
+        ordering : true,
+        info :   false,
+        searching: false,
+        searchable : false
+        
+	} );
+} );
+    
+    </script>
+    <script> 
+    $(document).ready(function() {
+	var table = $('.example').DataTable( {
+		/*scrollY:         false ,
+		scrollX:        false, 
+        sScrollBody:false
+        fixedColumns:   false,
+		scrollCollapse: false, */
+		paging :   false,
+        ordering : true,
+        info :   false,
+        searching: false,
+        searchable : false
+        
+	} );
+} );
+    
+    </script>
+            <script> 
+    $(document).ready(function() {
+	var table = $('.example6').DataTable( {
+		/*scrollY:         false ,
+		scrollX:        false, 
+        sScrollBody:false
+        fixedColumns:   false,
+		scrollCollapse: false, */
+		paging :   false,
+        ordering : true,
+        info :   false,
+        searching: false,
+        searchable : false
+        
+	} );
+} );
+    
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('#myButtonBCL').click(function (event) { 
+                // prevent page submit
+                event.preventDefault();
+                $("#SpriteSVG").text(" ")
+                    // load the page into #SpriteSVG
+                $('#SpriteSVG').load('svg-bcl.svg');
+
+            });
+        });
+    </script> 
+<script type="text/javascript">
+        $(document).ready(function () { 
+            initTags('element_tags_1', 'element_tags_1', {});
+            initTags('element_tags_2', 'element_tags_2', {});
+            initTags('element_tags_3', 'element_tags_3', {});
+            initTags('element_tags_4', 'element_tags_4', {});
+        });
+    </script> 
+</body> 
+</html>

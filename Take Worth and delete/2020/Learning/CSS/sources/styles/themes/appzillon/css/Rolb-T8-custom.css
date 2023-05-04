@@ -1,0 +1,97 @@
+	/* custom widget dropdown overlay*/
+
+.pst-simp.drov > div{padding: 0;margin-top: 1px;border-radius: 5px;position: absolute;z-index: 9;}
+.pst-simp.drov > .crt-tabl{background: #fff}
+.pst-simp.drov > .crt-list ul.pri {border: 1px solid #b2b2b2;border-radius: 7px}
+.pst-simp.drov > .crt-list > ul > li{border: transparent;border-radius: 7px;padding: 0}
+.pst-simp.drov > .crt-list > ul > li.ett-slct{padding: 0;border: none}
+.pst-simp.drov > .crt-list > ul > li.ett-slct {border-radius: 7px;background: #f7f7f7;}
+.pst-simp.drov > .crt-list > ul > li.ett-slct .sub-elt{border: transparent;border-radius:none}
+.pst-simp.drov > .crt-list > ul > li.ett-slct .sub-elt1{border-left: 1px solid #ccc;background-color:#f5f5f5;
+    border-radius: 0 7px 7px 0}
+.pst-simp.drov > .crt-list > ul > li.ett-slct .sub-elt1 > svg{ pointer-events: none;fill:#0074ad;padding: 10px;stroke: #0074ad;
+ stroke-width: 1px;}
+.pst-simp.drov > .crt-list > ul{border-radius: 7px;margin:0 0 5px;}
+.pst-simp.drov > .crt-list > ul > li:last-child{ display: table;}  
+.pst-simp.drov > .crt-list > ul > li > span > span {display: table-cell; background: #f7f7f7; border-radius: 7px;} 
+.pst-simp.drov > .crt-list > ul > li > span > span > span:first-child{border-right: 1px solid #b2b2b2;padding: 0}  
+.pst-simp.drov > .crt-list > ul > li > span > span > span:first-child > span p{ display: block;}
+.pst-simp.drov > .crt-list > ul > li > span > span > span > span:last-child > span p{display: inline}
+.pst-simp.drov > .crt-list > ul > li > span > span > span:first-child > span >span{border-right:1px solid #ccc;padding: 5px; }
+.pst-simp.drov > .crt-list > ul > li > span > span > span:first-child > span >span h6{color:#0794b8;font-size: 1.125em;font-weight: 100;margin: 0;
+line-height: 1.5em; }
+.pst-simp.drov > .crt-list > ul > li > span > span > span:first-child > span >span p{ font-size:0.75em}
+.pst-simp.drov > .crt-list > ul > li > span > span > span:first-child > span >span h6{color:#0794b8;font-size: 1.125em;font-weight:100;
+    margin: 0;line-height: 1.5em; }
+.pst-simp.drov > .crt-list > ul > li > span > span > span:first-child > span > span p { font-size:14px;font-weight: 100;line-height: normal}
+.pst-simp.drov > .crt-list > ul > li > span > span > span:first-child > span span span ul{ font-size: 1.2em;line-height: normal;}
+.pst-simp.drov > .crt-list > ul > li > span > span > span:first-child > span span span ul li{ padding:0}
+.pst-simp.drov > .crt-list > ul > li > span > span > span:first-child > span span span p span{font-size: 1em}
+
+.pst-simp.drov > .crt-list > ul > li > span > span > span:first-child > span > span:last-child p:last-child {font-size:1em;line-height:normal;font-weight: 100}
+.pst-simp.drov > .crt-list > ul > li > span > span > span:first-child > span >span:last-child{border-right: none } 
+.pst-simp.drov > .crt-list > ul > li > span > span > span:first-child > span:first-child{border-bottom:2px solid #00aeff;} 
+.pst-simp.drov > .crt-list > ul > li > span > span > span:last-child{padding: 3px}
+.pst-simp.drov > .crt-list > ul > li > span > span > span:last-child svg{padding: 0 7px;fill:#0074ad;stroke:#0074AD;/*stroke-width:0.15em;*/}
+.pst-simp.drov > .crt-list > ul > li > span .srb.wrapped > span {display: table-cell;float: unset;} 
+.pst-simp.drov > .crt-tabl .tabl-ctr table tr{background:#fff; color:#0076b6;text-align:center;}
+.pst-simp.drov > .crt-tabl .tabl-ctr table tr:hover{background:#f2fbfe;}
+.pst-simp.drov > .crt-tabl .tabl-ctr table tr:nth-child(2n){background-color: #fff;}
+.pst-simp.drov > .crt-tabl .tabl-ctr table th{/*border-bottom: 2px solid #00395D*/text-align: center;} 
+.pst-simp.drov > .crt-tabl .tabl-ctr > .tabl > tbody > tr:last-child > td{/*border-bottom: 2px solid #00395d*/}
+.pst-simp.drov > .crt-tabl .tabl-ctr > table > tbody > tr > td{border-top: 1px solid #d9d9d9;text-align: left;line-height: 1.75em}
+.pst-simp.drov .crt-list.pri .ttl {border-bottom: medium none;}
+.pst-simp.tsp.drov .crt-list.pri .ttl .ttl-ctr h4 {color: #00395d;font-size: 1.0625rem;} 
+.tabl-ctr {overflow: auto;}
+.pst-simp.drov .pri > .ttl .ttl-ctr{display: none;}
+.pst-simp.drov > .crt-tabl.liscont{border: 1px solid #bfbfbf }
+.pst-simp.drov > .crt-tabl .tabl-ctr table th{ border-top:unset;border-left: 0;border-right:0;padding:.5em 0.857em;font-size: 0.8571em;
+font-weight: 400;color: #333;}
+.pst-simp.drov .crt-tabl.pri .tabl-ctr table th > span{float:unset;font-weight:100;}
+.pst-simp.drov > .crt-tabl .tabl-ctr table td{ border-left: 0;border-right:0;}
+.pst-simp.drov div.crt-tabl ul li.srh-ctr span input{ padding:0.375em 2.1875em 0.3125em 0.75em;line-height: normal;font-size: 0.9em;}
+.pst-simp.drov div.crt-tabl ul li.srh-ctr span span.srh-icn svg{right:1em; left:initial;height: 22px;width: 19px;left:inherit}
+.pst-simp.drov > div.liscont{padding: 0;}										 
+.pst-simp.drov div.crt-tabl ul li.srh-ctr {text-align: center; margin: 0; padding: 0.4375em 0.75em;}																																					
+.drov .rht .ett-para.syl {color: #0074ad;font-size: 16px;padding-left:5px;}/*BCL Added*/
+.drov .is-opened > .icon-down {transform: rotate(180deg);}
+.drov .crt-tabl.u-relative {position: absolute !important;z-index: 10;}/*Custom Dropdown Widget*/
+.responsive{width:100%!important;}
+.drov table {width: 100% !important;}
+.drov .ett-srtc.pri ul {margin: auto;}
+.drov .pri.is-opened .icon-chevron-down {transform: rotate(180deg);}
+.drov .crb-tabl.crt-tabl.readonly table td p {font-size: 14px;font-weight: 100;}
+
+
+
+.grb.var1 {border: 1px solid #ccc; background:#fff;}
+.grb.var2 {border-bottom: 1px solid #ccc;}
+
+.ett-date .ett-icon { height: 18px;  width: 18px;}
+
+														  
+
+.srb.var1 {border: 1px solid #d8d8d8; margin: 10px 0; padding: 10px;}
+.srb.var2 {border-bottom: 1px solid #ccc;}
+
+
+
+
+
+/*Table Responsive*/
+
+
+
+
+
+.ecn > .cil.ett-date .ett-bttn {left: 5px;}
+.ecn > .cir.ett-date .ett-bttn {right: 5px;}
+
+
+
+.grb > div {float: unset;  margin: 0 auto;}
+
+.pnt-head .ett-hed4.pri{margin: 5px 0;}
+
+ @media (max-width: 640px) {.ett-bttn{width:100%;}.pnt-head.pri{padding: 0 1.5em;}}
+ .message.ett-hed1,.message.ett-hed2,.message.ett-hed3,.message.ett-hed4,.message.ett-hed5,.message.ett-hed6{margin:0;}

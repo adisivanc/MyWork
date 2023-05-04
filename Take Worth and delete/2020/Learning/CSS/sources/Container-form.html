@@ -1,0 +1,1215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8" />
+		<title>Form</title>
+		<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+		<script>
+			function swapStyleSheet(sheet) {
+				document.getElementById('pagestyle').setAttribute('href', sheet);
+			}
+		</script>
+		<link href="styles/themes/appzillon/css/local-base.css" rel="stylesheet" media="screen" />
+		<link id="pagestyle" href="styles/themes/appzillon/css/local-apz.css" rel="stylesheet" media="screen"/>
+
+	</head>
+
+	<body class="fulsv pri">
+		<span id="SpriteSVG"></span>
+        <br> 
+        <select class="ett-slcn etb-slcn pri" style="width:20%;">
+            <option id="myButton" onclick="swapStyleSheet('styles/themes/appzillon/css/local-apz.css')">Appzillon</option>
+            <option id="myButtonBCL" onclick="swapStyleSheet('styles/themes/appzillon/css/local-bcl.css')">Barclays </option>
+            <option id="myButtonRolb" onclick="swapStyleSheet('styles/themes/appzillon/css/local-rolb.css')">Rolb</option>
+            <option id="myButtonMobile" onclick="swapStyleSheet('styles/themes/appzillon/css/local-mobile.css')">Mobile</option>
+            <option id="myButtonCiti" onclick="swapStyleSheet('styles/themes/appzillon/css/local-citi.css')">Citi</option>
+        </select> 
+        <!--
+		<button class="ett-bttn pri med" id="myButton" onclick="swapStyleSheet('styles/themes/appzillon/css/local-apz.css')">Appzillon</button>
+    	<button class="ett-bttn pri med" id="myButtonBCL" onclick="swapStyleSheet('styles/themes/appzillon/css/local-bcl.css')">Barclays</button>
+     	<button class="ett-bttn pri med" id="myButtonRolb" onclick="swapStyleSheet('styles/themes/appzillon/css/local-rolb.css')">Rolb</button>
+      	<button class="ett-bttn pri med" id="myButtonMobile" onclick="swapStyleSheet('styles/themes/appzillon/css/local-mobile.css')">Mobile</button>
+        <button class="ett-bttn pri med" id="myButtonCiti" onclick="swapStyleSheet('styles/themes/appzillon/css/local-citi.css')">Citi</button>
+-->
+		<br>
+		<br>
+		<h1>Vertical Layouts</h1>
+   <section class="pagebody"> 
+    <div class="plt-simp">
+        <div class="pst-simp pri"> 
+		<div class="crt-form ver pri">
+            <ul class="ttl">
+            	<li class="ttl-ctr">
+            		<ul class="ttv">
+		                <li class="icn">
+		                    <svg class="ett-icon icon-list-alt px34">
+		                        <use xlink:href="#icon-list-alt"></use>
+		                    </svg>
+		                </li>
+		                <li class="lbl">
+		                    <h4>Form - Vertical Primary</h4>
+		                </li>
+                	</ul>
+                </li>
+                <li class="pgn-ctr">
+	               <ul class="pgn">
+	                    <li class="pnx"> 
+	                        <button class="ett-bttn tsp med"  aria-label="Previous page"><svg class="icon icon-chevron-left px16"><use xlink:href="#icon-chevron-left"></use></svg></button> 
+	                    </li>
+	                    <li class="pcl">
+	                      <input type="text" class="pageno" value="1">
+	                    </li>	
+	                    <li class="ptx" > 
+	                        <span>/&nbsp;</span><span>3</span> 
+	                    </li>	 
+	                    <li class="pnx"> 
+	                        <button class="ett-bttn tsp med"  aria-label="Next page"><svg class="icon icon-chevron-right px16"><use xlink:href="#icon-chevron-right"></use></svg></button>
+	                    </li> 
+	                </ul>                 	
+                </li>
+            </ul>
+			<span class="srb wrapped pri"><!-- wrapped class is required for responsive columns -->
+				<span class="scb-sml100 scb-lar50 pri">
+					<ul class="eoc wrapped srb pri"><!-- wrapped class is required for vertical orientation --> 
+						<li class="scb-col40">
+							<label class="flb req icl">
+								<svg class="ett-icon icon-list-alt px20"> <!-- icon selection, size, appearance, position(left and right) & semantics selection are required-->
+		                        <use xlink:href="#icon-list-alt"/>
+		                    	</svg>
+		                    Icon left of Label</label>
+						</li>
+						<li class="eic scb-col60">
+							<span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50">
+								<input id="input4gx" name="test1" class="ett-inpt pri med etw-100" title="Editable input" value="Primary Input" placeholder=" Value" type="text">
+								<span class="htx">Hint for the input</span>
+								<span class="vtx">Validation text</span>
+							</span>
+						</li>
+					</ul>
+					<ul class="eoc wrapped srb pri"><!-- wrapped class is required for vertical orientation -->
+						<li class="scb-col40">
+							<label class="flb icr">Icon right of Label
+								<svg class="ett-icon icon-list-alt px20"> <!-- icon selection, size, appearance, position(left and right) & semantics selection are required-->
+		                        <use xlink:href="#icon-list-alt"/>
+		                    	</svg>								
+								</label>
+						</li>
+						<li class="eic scb-col60">
+							<span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50">
+							<input id="input4fx" name="test1" class="ett-inpt sec etw-100" title="Editable input" value="Secondary Input" placeholder=" Value" type="text">
+							</span>
+						</li>
+					</ul>					
+				</span>
+				<span class="scb-sml100 scb-lar50">
+					<ul class="eoc wrapped srb pri"><!-- wrapped class is required for vertical orientation -->
+						<li class="scb-col40">
+							<label class="flb">Element3 Label</label>
+						</li>
+						<li class="eic scb-col60">
+							<span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50">
+							<input id="input4x" name="test1" class="ett-inpt ter etw-100" title="Editable input" value="Tertiary Input" placeholder=" Value" type="text">
+							</span>
+							<br>
+                            <p class="ett-labl fs16 pri">Label primary</p>
+                            <p class="ett-labl fs16 sec">Label secondary</p>
+                            <p class="ett-labl fs16 ter">Label tertiary</p>
+                            <p class="ett-labl fs16 pri inf">Label primary - info</p>
+                            <p class="ett-labl fs16 pri suc">Label primary - success</p>
+                            <p class="ett-labl fs16 pri war">Label primary - warning</p>
+                            <p class="ett-labl fs16 pri err">Label primary - error</p>
+                            <p class="ett-labl fs16 sec inf">Label secondary info</p>
+                            <p class="ett-labl fs16 sec suc">Label secondary success</p>
+                            <p class="ett-labl fs16 sec war">Label secondary warning</p>
+                            <p class="ett-labl fs16 sec err">Label secondary error</p>
+                            <p class="ett-labl fs16 ter inf">Label tertiary info</p>
+                            <p class="ett-labl fs16 ter suc">Label tertiary success</p>
+                            <p class="ett-labl fs16 ter war">Label tertiary warning</p>
+                            <p class="ett-labl fs16 ter err">Label tertiary error</p>
+						</li>
+					</ul>
+				</span>
+			</span>
+		</div> 
+		<br><br> 
+		<div class="crt-form ver pri">
+            <ul class="ttl">
+                <li class="ttl-ctr">
+            		<ul class="ttv">
+		                <li class="icn">
+		                    <svg class="ett-icon icon-list-alt px34">
+                                <use xlink:href="#icon-list-alt"></use>
+                            </svg>  
+		                </li>
+		                <li class="lbl">
+		                    <h4>Form Readonly- Vertical Primary</h4>
+		                </li>
+                	</ul>
+                </li>
+                <li class="pgn-ctr">
+	               <ul class="pgn">
+	                    <li class="pnx"> 
+	                        <button class="ett-bttn tsp med"  aria-label="Previous page"><svg class="icon icon-chevron-left px16"><use xlink:href="#icon-chevron-left"></use></svg></button> 
+	                    </li>
+	                    <li class="pcl">
+	                      <input type="text" class="pageno" value="1">
+	                    </li>	
+	                    <li class="ptx" > 
+	                        <span>/&nbsp;</span><span>3</span> 
+	                    </li>	 
+	                    <li class="pnx"> 
+	                        <button class="ett-bttn tsp med"  aria-label="Next page"><svg class="icon icon-chevron-right px16"><use xlink:href="#icon-chevron-right"></use></svg></button>
+	                    </li> 
+	                </ul>                 	
+                </li>
+            </ul>
+			<span class="srb wrapped"><!-- wrapped class is required for responsive columns -->
+				<span class="scb-sml100 scb-lar50">
+				<dl class="eoc wrapped srb pri">
+					<dt class="scb-col40 icl req">
+								<svg class="ett-icon icon-list-alt px20"> <!-- icon selection, size, appearance, position(left and right) & semantics selection are required-->
+		                        <use xlink:href="#icon-list-alt"/>
+		                    	</svg>
+						Icon Left Readonly</dt>
+					<dd class="eic scb-col60">Value for readonly <span class="htx">Hint for the input</span></dd>
+				</dl>		
+				<dl class="eoc wrapped srb pri">
+					<dt class="scb-col40 icr">Icon Right
+								<svg class="ett-icon icon-list-alt px20"> <!-- icon selection, size, appearance, position(left and right) & semantics selection are required-->
+		                        <use xlink:href="#icon-list-alt"/>
+		                    	</svg>						
+						
+						</dt>
+					<dd class="eic scb-col60">Value for readonly <span class="htx">Hint for the input</span></dd>
+				</dl>						
+				</span>
+				<span class="scb-sml100 scb-lar50">
+				<dl class="eoc wrapped srb pri">
+					<dt class="scb-col40">Label for readonly primary</dt>
+					<dd class="eic scb-col60">Value for readonly <span class="htx">Hint for the input</span></dd>
+				</dl>		
+				<dl class="eoc wrapped srb pri">
+					<dt class="scb-col40">Label for readonly primary</dt>
+					<dd class="eic scb-col60">Value for readonly <span class="htx">Hint for the input</span></dd>
+				</dl>						
+				</span>				
+
+			</span>			
+			
+		</div>		
+		<br><br>
+		<div class="crt-form ver sec">
+            <ul class="ttl">
+                <li class="ttl-ctr">
+            		<ul class="ttv">
+		                <li class="icn">
+		                    <svg class="ett-icon icon-list-alt px34">
+                                <use xlink:href="#icon-list-alt"></use>
+                            </svg> 
+		                </li>
+		                <li class="lbl">
+		                    <h4>Form - Vertical Secondary</h4>
+		                </li>
+                	</ul>
+                </li>
+                <li class="pgn-ctr">
+	               <ul class="pgn">
+	                    <li class="pnx"> 
+	                        <button class="ett-bttn tsp med"  aria-label="Previous page"><svg class="icon icon-chevron-left px16"><use xlink:href="#icon-chevron-left"></use></svg></button> 
+	                    </li>
+	                    <li class="pcl">
+	                      <input type="text" class="pageno" value="1">
+	                    </li>	
+	                    <li class="ptx" > 
+	                        <span>/&nbsp;</span><span>3</span> 
+	                    </li>	 
+	                    <li class="pnx"> 
+	                        <button class="ett-bttn tsp med"  aria-label="Next page"><svg class="icon icon-chevron-right px16"><use xlink:href="#icon-chevron-right"></use></svg></button>
+	                    </li> 
+	                </ul>                 	
+                </li>
+            </ul>
+			<span class="srb wrapped"><!-- wrapped class is required for responsive columns -->
+				<span class="scb-sml100 scb-lar50">
+					<ul class="eoc wrapped srb pri"><!-- wrapped class is required for vertical orientation -->
+						<li class="scb-col40">
+							<label class="flb req">Element1 Label(mandatory)</label>
+						</li>
+						<li class="eic scb-col60">
+							<span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50">
+								<input id="input4gx" name="test1" class="ett-inpt pri etw-100" title="Editable input" value="Primary Input" placeholder=" Value" type="text">
+								<span class="htx">Hint for the input</span>
+								<span class="vtx">Validation text</span>
+							</span>
+						</li>
+					</ul>
+					<ul class="eoc wrapped srb pri"><!-- wrapped class is required for vertical orientation -->
+						<li class="scb-col40">
+							<label class="flb">Element2 Label</label>
+						</li>
+						<li class="eic scb-col60">
+							<span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50">
+							<input id="input4fx" name="test1" class="ett-inpt sec etw-100" title="Editable input" value="Secondary Input" placeholder=" Value" type="text">
+							</span>
+						</li>
+					</ul>					
+				</span>
+				<span class="scb-sml100 scb-lar50">
+					<ul class="eoc wrapped srb pri"><!-- wrapped class is required for vertical orientation -->
+						<li class="scb-col40">
+							<label class="flb">Element3 Label</label>
+						</li>
+						<li class="eic scb-col60">
+							<span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50">
+							<input id="input4x" name="test1" class="ett-inpt ter etw-100" title="Editable input" value="Tertiary Input" placeholder=" Value" type="text">
+							</span>
+						</li>
+					</ul>
+				</span>
+			</span>	
+		</div>
+		<br><br>	
+		<div class="crt-form ver sec">
+            <ul class="ttl">
+                <li class="ttl-ctr">
+            		<ul class="ttv">
+		                <li class="icn">
+		                    <svg class="ett-icon icon-list-alt px34">
+                                <use xlink:href="#icon-list-alt"></use>
+                            </svg> 
+		                </li>
+		                <li class="lbl">
+		                    <h4>Form Readonly - Vertical Secondary</h4>
+		                </li>
+                	</ul>
+                </li>
+                
+                <li class="pgn-ctr">
+	               <ul class="pgn">
+	                    <li class="pnx"> 
+	                        <button class="ett-bttn tsp med"  aria-label="Previous page"><svg class="icon icon-chevron-left px16"><use xlink:href="#icon-chevron-left"></use></svg></button> 
+	                    </li>
+	                    <li class="pcl">
+	                      <input type="text" class="pageno" value="1">
+	                    </li>	
+	                    <li class="ptx" > 
+	                        <span>/&nbsp;</span><span>3</span> 
+	                    </li>	 
+	                    <li class="pnx"> 
+	                        <button class="ett-bttn tsp med"  aria-label="Next page"><svg class="icon icon-chevron-right px16"><use xlink:href="#icon-chevron-right"></use></svg></button>
+	                    </li> 
+	                </ul>                 	
+                </li>
+            </ul>
+			<span class="srb wrapped"><!-- wrapped class is required for responsive columns -->
+				<span class="scb-sml100 scb-lar50">
+				<dl class="eoc wrapped srb sec">
+					<dt class="scb-col40 req">Label for readonly primary</dt>
+					<dd class="eic scb-col60">Value for readonly <span class="htx">Hint for the input</span></dd>
+				</dl>		
+				<dl class="eoc wrapped srb sec">
+					<dt class="scb-col40">Label for readonly primary</dt>
+					<dd class="eic scb-col60">Value for readonly <span class="htx">Hint for the input</span></dd>
+				</dl>						
+				</span>
+				<span class="scb-sml100 scb-lar50">
+				<dl class="eoc wrapped srb sec">
+					<dt class="scb-col40">Label for readonly primary</dt>
+					<dd class="eic scb-col60">Value for readonly <span class="htx">Hint for the input</span></dd>
+				</dl>		
+				<dl class="eoc wrapped srb sec">
+					<dt class="scb-col40">Label for readonly primary</dt>
+					<dd class="eic scb-col60">Value for readonly <span class="htx">Hint for the input</span></dd>
+				</dl>						
+				</span>				
+
+			</span>			
+			
+		</div>	
+		
+		<br><br>		
+		
+		
+		<div class="crt-form ver ter">
+            <ul class="ttl">
+                <li class="ttl-ctr">
+            		<ul class="ttv">
+		                <li class="icn">
+		                    <svg class="ett-icon icon-list-alt px34">
+                                <use xlink:href="#icon-list-alt"></use>
+                            </svg> 
+		                </li>
+		                <li class="lbl">
+		                    <h4>Form - Vertical Tertiary</h4>
+		                </li>
+                	</ul>
+                </li>
+           
+                <li class="pgn-ctr">
+	               <ul class="pgn">
+	                    <li class="pnx"> 
+	                        <button class="ett-bttn tsp med"  aria-label="Previous page"><svg class="icon icon-chevron-left px16"><use xlink:href="#icon-chevron-left"></use></svg></button> 
+	                    </li>
+	                    <li class="pcl">
+	                      <input type="text" class="pageno" value="1">
+	                    </li>	
+	                    <li class="ptx" > 
+	                        <span>/&nbsp;</span><span>3</span> 
+	                    </li>	 
+	                    <li class="pnx"> 
+	                        <button class="ett-bttn tsp med"  aria-label="Next page"><svg class="icon icon-chevron-right px16"><use xlink:href="#icon-chevron-right"></use></svg></button>
+	                    </li> 
+	                </ul>                 	
+                </li>
+            </ul>
+			<span class="srb wrapped"><!-- wrapped class is required for responsive columns -->
+				<span class="scb-sml100 scb-lar50">
+					<ul class="eoc wrapped srb pri"><!-- wrapped class is required for vertical orientation -->
+						<li class="scb-col40">
+							<label class="flb req">Element1 Label(mandatory)</label>
+						</li>
+						<li class="eic scb-col60">
+							<span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50">
+								<input id="input4gx" name="test1" class="ett-inpt pri etw-100" title="Editable input" value="Primary Input" placeholder=" Value" type="text">
+								<span class="htx">Hint for the input</span>
+								<span class="vtx">Validation text</span>
+							</span>
+						</li>
+					</ul>
+					<ul class="eoc wrapped srb pri"><!-- wrapped class is required for vertical orientation -->
+						<li class="scb-col40">
+							<label class="flb">Element2 Label</label>
+						</li>
+						<li class="eic scb-col60">
+							<span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50">
+							<input id="input4fx" name="test1" class="ett-inpt sec etw-100" title="Editable input" value="Secondary Input" placeholder=" Value" type="text">
+							</span>
+						</li>
+					</ul>					
+				</span>
+				<span class="scb-sml100 scb-lar50">
+					<ul class="eoc wrapped srb pri"><!-- wrapped class is required for vertical orientation -->
+						<li class="scb-col40">
+							<label class="flb">Element3 Label</label>
+						</li>
+						<li class="eic scb-col60">
+							<span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50">
+							<input id="input4x" name="test1" class="ett-inpt ter etw-100" title="Editable input" value="Tertiary Input" placeholder=" Value" type="text">
+							</span>
+						</li>
+					</ul>
+				</span>
+			</span>	
+		</div>
+		
+		<br><br>
+		
+				
+		<div class="crt-form ver ter">
+            <ul class="ttl">
+                <li class="ttl-ctr">
+            		<ul class="ttv">
+		                <li class="icn">
+		                    <svg class="ett-icon icon-list-alt px34">
+                                <use xlink:href="#icon-list-alt"></use>
+                            </svg> 
+		                </li>
+		                <li class="lbl">
+		                    <h4>Form Readonly - Vertical Tertiary</h4>
+		                </li>
+                	</ul>
+                </li>
+                
+                <li class="pgn-ctr">
+	               <ul class="pgn">
+	                    <li class="pnx"> 
+	                        <button class="ett-bttn tsp med"  aria-label="Previous page"><svg class="icon icon-chevron-left px16"><use xlink:href="#icon-chevron-left"></use></svg></button> 
+	                    </li>
+	                    <li class="pcl">
+	                      <input type="text" class="pageno" value="1">
+	                    </li>	
+	                    <li class="ptx" > 
+	                        <span>/&nbsp;</span><span>3</span> 
+	                    </li>	 
+	                    <li class="pnx"> 
+	                        <button class="ett-bttn tsp med"  aria-label="Next page"><svg class="icon icon-chevron-right px16"><use xlink:href="#icon-chevron-right"></use></svg></button>
+	                    </li> 
+	                </ul>                 	
+                </li>
+            </ul>
+			<span class="srb wrapped"><!-- wrapped class is required for responsive columns -->
+				<span class="scb-sml100 scb-lar50">
+				<dl class="eoc wrapped srb ter">
+					<dt class="scb-col40 req">Label for readonly primary</dt>
+					<dd class="eic scb-col60">Value for readonly <span class="htx">Hint for the input</span></dd>
+				</dl>		
+				<dl class="eoc wrapped srb ter">
+					<dt class="scb-col40">Label for readonly primary</dt>
+					<dd class="eic scb-col60">Value for readonly <span class="htx">Hint for the input</span></dd>
+				</dl>						
+				</span>
+				<span class="scb-sml100 scb-lar50">
+				<dl class="eoc wrapped srb ter">
+					<dt class="scb-col40">Label for readonly primary</dt>
+					<dd class="eic scb-col60">Value for readonly <span class="htx">Hint for the input</span></dd>
+				</dl>		
+				<dl class="eoc wrapped srb ter">
+					<dt class="scb-col40">Label for readonly primary</dt>
+					<dd class="eic scb-col60">Value for readonly <span class="htx">Hint for the input</span></dd>
+				</dl>						
+				</span>				
+
+			</span>			
+			
+		</div>	
+		
+		<br><br>	
+		
+		
+		</div>
+		</div>		
+		
+		
+		
+		
+		<h1>Horizontal Layouts</h1>
+
+		<div class="crt-form hor pri">
+            <ul class="ttl">
+                <li class="ttl-ctr">
+            		<ul class="ttv">
+		                <li class="icn">
+		                    <svg class="ett-icon icon-list-alt px34">
+                                <use xlink:href="#icon-list-alt"></use>
+                            </svg> 
+		                </li>
+		                <li class="lbl">
+		                    <h4>Form - Horizontal Primary</h4>
+		                </li>
+                	</ul>
+                </li>
+                
+                <li class="pgn-ctr">
+	               <ul class="pgn">
+	                    <li class="pnx"> 
+	                        <button class="ett-bttn tsp med"  aria-label="Previous page"><svg class="icon icon-chevron-left px16"><use xlink:href="#icon-chevron-left"></use></svg></button> 
+	                    </li>
+	                    <li class="pcl">
+	                      <input type="text" class="pageno" value="1">
+	                    </li>	
+	                    <li class="ptx" > 
+	                        <span>/&nbsp;</span><span>3</span> 
+	                    </li>	 
+	                    <li class="pnx"> 
+	                        <button class="ett-bttn tsp med"  aria-label="Next page"><svg class="icon icon-chevron-right px16"><use xlink:href="#icon-chevron-right"></use></svg></button>
+	                    </li> 
+	                </ul>                 	
+                </li>
+            </ul>
+			<span class="srb wrapped"><!-- wrapped class is required for responsive columns -->
+				<span class="scb-sml100 scb-lar50">
+					<ul class="eoc wrapped srb pri"><!-- wrapped class is required for vertical orientation -->
+						<li class="scb-col40">
+							<label class="flb req">Element1 Label(mandatory)</label>
+						</li>
+						<li class="eic scb-col60">
+							<span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50">
+								<input id="input4gx" name="test1" class="ett-inpt pri med etw-100" title="Editable input" value="Primary Input" placeholder=" Value" type="text">
+								<span class="htx">Hint for the input</span>
+								<span class="vtx">Validation text</span>
+							</span>
+						</li>
+					</ul>
+					<ul class="eoc wrapped srb pri"><!-- wrapped class is required for vertical orientation -->
+						<li class="scb-sml100 scb-med40">
+							<label class="flb">Element2 Label</label>
+						</li>
+						<li class="eic scb-sml100 scb-med60">
+							<span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50">
+							<input id="input4fx" name="test1" class="ett-inpt sec etw-100" title="Editable input" value="Secondary Input" placeholder=" Value" type="text">
+							</span>
+						</li>
+					</ul>					
+				</span>
+				<span class="scb-sml100 scb-lar50">
+					<ul class="eoc wrapped srb pri"><!-- wrapped class is required for vertical orientation -->
+						<li class="sscb-sml100 scb-med40">
+							<label class="flb">Element3 Label</label>
+						</li>
+						<li class="eic scb-sml100 scb-med60">
+							<span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50">
+							<input id="input4x" name="test1" class="ett-inpt ter etw-100" title="Editable input" value="Tertiary Input" placeholder=" Value" type="text">
+							</span>
+						</li>
+					</ul>
+				</span>
+			</span>			
+			
+		</div>
+		
+		<br><br>
+		
+		
+		<div class="crt-form hor pri">
+            <ul class="ttl">
+                <li class="ttl-ctr">
+            		<ul class="ttv">
+		                <li class="icn">
+		                    <svg class="ett-icon icon-list-alt px34">
+                                <use xlink:href="#icon-list-alt"></use>
+                            </svg> 
+		                </li>
+		                <li class="lbl">
+		                    <h4>Form Readonly - Horizontal Primary</h4>
+		                </li>
+                	</ul>
+                </li>
+                
+                <li class="pgn-ctr">
+	               <ul class="pgn">
+	                    <li class="pnx"> 
+	                        <button class="ett-bttn tsp med"  aria-label="Previous page"><svg class="icon icon-chevron-left px16"><use xlink:href="#icon-chevron-left"></use></svg></button> 
+	                    </li>
+	                    <li class="pcl">
+	                      <input type="text" class="pageno" value="1">
+	                    </li>	
+	                    <li class="ptx" > 
+	                        <span>/&nbsp;</span><span>3</span> 
+	                    </li>	 
+	                    <li class="pnx"> 
+	                        <button class="ett-bttn tsp med"  aria-label="Next page"><svg class="icon icon-chevron-right px16"><use xlink:href="#icon-chevron-right"></use></svg></button>
+	                    </li> 
+	                </ul>                 	
+                </li>
+            </ul>
+			<span class="srb wrapped"><!-- wrapped class is required for responsive columns -->
+				<span class="scb-sml100 scb-lar50">
+				<dl class="eoc wrapped srb pri">
+					<dt class="scb-col40 req">Label for readonly primary</dt>
+					<dd class="eic scb-col60">Value for readonly <span class="htx">Hint for the input</span></dd>
+				</dl>		
+				<dl class="eoc wrapped srb pri">
+					<dt class="scb-col40">Label for readonly primary</dt>
+					<dd class="eic scb-col60">Value for readonly <span class="htx">Hint for the input</span></dd>
+				</dl>						
+				</span>
+				<span class="scb-sml100 scb-lar50">
+				<dl class="eoc wrapped srb pri">
+					<dt class="scb-col40">Label for readonly primary</dt>
+					<dd class="eic scb-col60">Value for readonly <span class="htx">Hint for the input</span></dd>
+				</dl>		
+				<dl class="eoc wrapped srb pri">
+					<dt class="scb-col40">Label for readonly primary</dt>
+					<dd class="eic scb-col60">Value for readonly <span class="htx">Hint for the input</span></dd>
+				</dl>						
+				</span>				
+
+			</span>			
+			
+		</div>			
+		
+		<br><br>
+		
+		<div class="crt-form hor sec">
+            <ul class="ttl">
+                <li class="ttl-ctr">
+            		<ul class="ttv">
+		                <li class="icn">
+		                    <svg class="ett-icon icon-list-alt px34">
+                                <use xlink:href="#icon-list-alt"></use>
+                            </svg> 
+		                </li>
+		                <li class="lbl">
+		                    <h4>Form - Horizontal Secondary</h4>
+		                </li>
+                	</ul>
+                </li>
+
+                <li class="pgn-ctr">
+	               <ul class="pgn">
+	                    <li class="pnx"> 
+	                        <button class="ett-bttn tsp med"  aria-label="Previous page"><svg class="icon icon-chevron-left px16"><use xlink:href="#icon-chevron-left"></use></svg></button> 
+	                    </li>
+	                    <li class="pcl">
+	                      <input type="text" class="pageno" value="1">
+	                    </li>	
+	                    <li class="ptx" > 
+	                        <span>/&nbsp;</span><span>3</span> 
+	                    </li>	 
+	                    <li class="pnx"> 
+	                        <button class="ett-bttn tsp med"  aria-label="Next page"><svg class="icon icon-chevron-right px16"><use xlink:href="#icon-chevron-right"></use></svg></button>
+	                    </li> 
+	                </ul>                 	
+                </li>
+            </ul>
+			<span class="srb wrapped"><!-- wrapped class is required for responsive columns -->
+				<span class="scb-sml100 scb-lar50">
+					<ul class="eoc wrapped srb pri"><!-- wrapped class is required for vertical orientation -->
+						<li class="scb-sml100 scb-med40">
+							<label class="flb req">Element1 Label(mandatory)</label>
+						</li>
+						<li class="eic scb-sml100 scb-med60">
+							<span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50">
+								<input id="input4gx" name="test1" class="ett-inpt pri med etw-100" title="Editable input" value="Primary Input" placeholder=" Value" type="text">
+								<span class="htx">Hint for the input</span>
+								<span class="vtx">Validation text</span>
+							</span>
+						</li>
+					</ul>
+					<ul class="eoc wrapped srb pri"><!-- wrapped class is required for vertical orientation -->
+						<li class="scb-sml100 scb-med40">
+							<label class="flb">Element2 Label</label>
+						</li>
+						<li class="eic scb-sml100 scb-med60">
+							<span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50">
+							<input id="input4fx" name="test1" class="ett-inpt sec etw-100" title="Editable input" value="Secondary Input" placeholder=" Value" type="text">
+							</span>
+						</li>
+					</ul>					
+				</span>
+				<span class="scb-sml100 scb-lar50">
+					<ul class="eoc wrapped srb pri"><!-- wrapped class is required for vertical orientation -->
+						<li class="scb-sml100 scb-med40">
+							<label class="flb">Element3 Label</label>
+						</li>
+						<li class="eic scb-sml100 scb-med40">
+							<span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50">
+							<input id="input4x" name="test1" class="ett-inpt ter etw-100" title="Editable input" value="Tertiary Input" placeholder=" Value" type="text">
+							</span>
+						</li>
+					</ul>
+				</span>
+			</span>			
+			
+		</div>
+		
+		<br><br>
+		
+		<div class="crt-form hor sec">
+            <ul class="ttl">
+                <li class="ttl-ctr">
+            		<ul class="ttv">
+		                <li class="icn">
+		                    <svg class="ett-icon icon-list-alt px34">
+                                <use xlink:href="#icon-list-alt"></use>
+                            </svg> 
+		                </li>
+		                <li class="lbl">
+		                    <h4>Form Readonly - Horizontal Secondary</h4>
+		                </li>
+                	</ul>
+                </li>
+                <li class="pgn-ctr">
+	               <ul class="pgn">
+	                    <li class="pnx"> 
+	                        <button class="ett-bttn tsp med"  aria-label="Previous page"><svg class="icon icon-chevron-left px16"><use xlink:href="#icon-chevron-left"></use></svg></button> 
+	                    </li>
+	                    <li class="pcl">
+	                      <input type="text" class="pageno" value="1">
+	                    </li>	
+	                    <li class="ptx" > 
+	                        <span>/&nbsp;</span><span>3</span> 
+	                    </li>	 
+	                    <li class="pnx"> 
+	                        <button class="ett-bttn tsp med"  aria-label="Next page"><svg class="icon icon-chevron-right px16"><use xlink:href="#icon-chevron-right"></use></svg></button>
+	                    </li> 
+	                </ul>                 	
+                </li>
+            </ul>
+			<span class="srb wrapped"><!-- wrapped class is required for responsive columns -->
+				<span class="scb-sml100 scb-lar50">
+				<dl class="eoc wrapped srb sec">
+					<dt class="scb-col40 req">Label for readonly primary</dt>
+					<dd class="eic scb-col60">Value for readonly <span class="htx">Hint for the input</span></dd>
+				</dl>		
+				<dl class="eoc wrapped srb sec">
+					<dt class="scb-col40">Label for readonly primary</dt>
+					<dd class="eic scb-col60">Value for readonly <span class="htx">Hint for the input</span></dd>
+				</dl>						
+				</span>
+				<span class="scb-sml100 scb-lar50">
+				<dl class="eoc wrapped srb sec">
+					<dt class="scb-col40">Label for readonly primary</dt>
+					<dd class="eic scb-col60">Value for readonly <span class="htx">Hint for the input</span></dd>
+				</dl>		
+				<dl class="eoc wrapped srb sec">
+					<dt class="scb-col40">Label for readonly primary</dt>
+					<dd class="eic scb-col60">Value for readonly <span class="htx">Hint for the input</span></dd>
+				</dl>						
+				</span>				
+
+			</span>			
+			
+		</div>			
+		
+		<br><br>	
+		
+		<div class="crt-form hor ter">
+            <ul class="ttl">
+                <li class="ttl-ctr">
+            		<ul class="ttv">
+		                <li class="icn">
+		                    <svg class="ett-icon icon-list-alt px34">
+                                <use xlink:href="#icon-list-alt"></use>
+                            </svg> 
+		                </li>
+		                <li class="lbl">
+		                    <h4>Form - Horizontal Tertiary</h4>
+		                </li>
+                	</ul>
+                </li>
+                <li class="pgn-ctr">
+	               <ul class="pgn">
+	                    <li class="pnx"> 
+	                        <button class="ett-bttn tsp med"  aria-label="Previous page"><svg class="icon icon-chevron-left px16"><use xlink:href="#icon-chevron-left"></use></svg></button> 
+	                    </li>
+	                    <li class="pcl">
+	                      <input type="text" class="pageno" value="1">
+	                    </li>	
+	                    <li class="ptx" > 
+	                        <span>/&nbsp;</span><span>3</span> 
+	                    </li>	 
+	                    <li class="pnx"> 
+	                        <button class="ett-bttn tsp med"  aria-label="Next page"><svg class="icon icon-chevron-right px16"><use xlink:href="#icon-chevron-right"></use></svg></button>
+	                    </li> 
+	                </ul>                 	
+                </li>
+            </ul>
+			<span class="srb wrapped"><!-- wrapped class is required for responsive columns -->
+				<span class="scb-sml100 scb-lar50">
+					<ul class="eoc wrapped srb pri"><!-- wrapped class is required for vertical orientation -->
+						<li class="scb-col40">
+							<label class="flb req">Element1 Label(mandatory)</label>
+						</li>
+						<li class="eic scb-col60">
+							<span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50">
+								<input id="input4gx" name="test1" class="ett-inpt pri med etw-100" title="Editable input" value="Primary Input" placeholder=" Value" type="text">
+								<span class="htx">Hint for the input</span>
+								<span class="vtx">Validation text</span>
+							</span>
+						</li>
+					</ul>
+					<ul class="eoc wrapped srb pri"><!-- wrapped class is required for vertical orientation -->
+						<li class="scb-col40">
+							<label class="flb">Element2 Label</label>
+						</li>
+						<li class="eic scb-col60">
+							<span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50">
+							<input id="input4fx" name="test1" class="ett-inpt sec etw-100" title="Editable input" value="Secondary Input" placeholder=" Value" type="text">
+							</span>
+						</li>
+					</ul>					
+				</span>
+				<span class="scb-sml100 scb-lar50">
+					<ul class="eoc wrapped srb pri"><!-- wrapped class is required for vertical orientation -->
+						<li class="scb-col40">
+							<label class="flb">Element3 Label</label>
+						</li>
+						<li class="eic scb-col60">
+							<span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50">
+							<input id="input4x" name="test1" class="ett-inpt ter etw-100" title="Editable input" value="Tertiary Input" placeholder=" Value" type="text">
+							</span>
+						</li>
+					</ul>
+				</span>
+			</span>			
+			
+		</div>
+		
+		<br><br>	
+		
+		
+		<div class="crt-form hor ter">
+            <ul class="ttl">
+                <li class="ttl-ctr">
+            		<ul class="ttv">
+		                <li class="icn">
+		                    <svg class="ett-icon icon-list-alt px34">
+                                <use xlink:href="#icon-list-alt"></use>
+                            </svg> 
+		                </li>
+		                <li class="lbl">
+		                    <h4>Form Readonly - Horizontal Tertiary</h4>
+		                </li>
+                	</ul>
+                </li>
+                <li class="pgn-ctr">
+	               <ul class="pgn">
+	                    <li class="pnx"> 
+	                        <button class="ett-bttn tsp med"  aria-label="Previous page"><svg class="icon icon-chevron-left px16"><use xlink:href="#icon-chevron-left"></use></svg></button> 
+	                    </li>
+	                    <li class="pcl">
+	                      <input type="text" class="pageno" value="1">
+	                    </li>	
+	                    <li class="ptx" > 
+	                        <span>/&nbsp;</span><span>3</span> 
+	                    </li>	 
+	                    <li class="pnx"> 
+	                        <button class="ett-bttn tsp med"  aria-label="Next page"><svg class="icon icon-chevron-right px16"><use xlink:href="#icon-chevron-right"></use></svg></button>
+	                    </li> 
+	                </ul>                 	
+                </li>
+            </ul>
+			<span class="srb wrapped"><!-- wrapped class is required for responsive columns -->
+				<span class="scb-sml100 scb-lar50">
+				<dl class="eoc wrapped srb ter">
+					<dt class="scb-col40 req">Label for readonly primary</dt>
+					<dd class="eic scb-col60">Value for readonly <span class="htx">Hint for the input</span></dd>
+				</dl>		
+				<dl class="eoc wrapped srb ter">
+					<dt class="scb-col40">Label for readonly primary</dt>
+					<dd class="eic scb-col60">Value for readonly <span class="htx">Hint for the input</span></dd>
+				</dl>						
+				</span>
+				<span class="scb-sml100 scb-lar50">
+				<dl class="eoc wrapped srb ter">
+					<dt class="scb-col40">Label for readonly primary</dt>
+					<dd class="eic scb-col60">Value for readonly <span class="htx">Hint for the input</span></dd>
+				</dl>		
+				<dl class="eoc wrapped srb ter">
+					<dt class="scb-col40">Label for readonly primary</dt>
+					<dd class="eic scb-col60">Value for readonly <span class="htx">Hint for the input</span></dd>
+				</dl>						
+				</span>				
+
+			</span>			
+			
+		</div>							
+			
+			
+			
+			
+			
+			
+			
+			
+			
+            <!--br/>
+			<dl class="eoc wrapped srb pri">
+				<dt class="scb-col40">
+					Label for readonly Primary
+				</dt>
+				<dd class="eic scb-col60">
+					Value for readonly
+					<span class="htx">Hint for the input</span>
+				</dd>
+			</dl>
+            <dl class="eoc wrapped srb pri">
+				<dt class="scb-col40">
+					Label for readonly Primary
+				</dt>
+				<dd class="eic scb-col60">
+					Value for readonly
+					<span class="htx">Hint for the input</span>
+				</dd>
+			</dl>
+            <br/>
+			<dl class="eoc wrapped srb sec">
+				<dt class="scb-col40">
+					Label for readonly Secondary
+				</dt>
+				<dd class="eic scb-col60">
+					Value for readonly
+					<span class="htx">Hint for the input</span>
+				</dd>
+			</dl>
+            <dl class="eoc wrapped srb sec">
+				<dt class="scb-col40">
+					Label for readonly Secondary
+				</dt>
+				<dd class="eic scb-col60">
+					Value for readonly
+					<span class="htx">Hint for the input</span>
+				</dd>
+			</dl>
+            <br/>
+			<dl class="eoc wrapped srb ter">
+				<dt class="scb-col40">
+					Label for readonly Tertiary
+				</dt>
+				<dd class="eic scb-col60">
+					Value for readonly
+					<span class="htx">Hint for the input</span>
+				</dd>
+			</dl>					
+			<dl class="eoc wrapped srb ter">
+				<dt class="scb-col40">
+					Label for readonly Tertiary
+				</dt>
+				<dd class="eic scb-col60">
+					Value for readonly
+					<span class="htx">Hint for the input</span>
+				</dd>
+			</dl>			
+			
+		</div-->
+		
+		
+		<br/><br/><br/>
+		
+		<!--div class="crt-form hor">
+            <ul class="ttl">
+                <li class="icn">
+                    <svg class="ett-icon icon-list-alt px34">
+                        <use xlink:href="#icon-list-alt"></use>
+                    </svg>
+                </li>
+                <li class="lbl">
+                    <h4>Form - Horizontal</h4>
+                </li>
+                <li class="tls">
+					<!-- placeholder for pagination --><!--
+                </li>
+            </ul>
+			<span class="srb">
+				<span class="scb-col100">
+					<ul class="eoc srb pri">
+						<li class="scb-col40">
+							<label class="flb">Element1 Label</label>
+						</li>
+						<li class="eic scb-col60">
+							<input id="input4x" name="test1" class="ett-inpt sec med etw-sml100 etw-med50 etw-lar50 etw-xxl25" title="Editable input" value="Primary" placeholder="Primary Value" type="text">
+							<span class="htx">Hint for the input</span>
+							<span class="vtx">Validation text</span>
+						</li>
+					</ul>
+				</span>
+			</span>
+			<span class="srb">
+				<span class="scb-col100">
+					<ul class="eoc srb pri">
+						<li class="scb-col40">
+							<label class="flb">Element2 Label</label>
+						</li>
+						<li class="eic scb-col60">
+							<input id="input4xx" name="test21" class="ett-inpt sec med etw-sml100 etw-med50 etw-lar50 etw-xxl25" title="Editable input" value="Primary" placeholder="Primary Value" type="text">
+						</li>
+					</ul>
+				</span>
+			</span>	
+			</div-->
+			
+			<!--div class="crt-form hor">		
+			<dl class="eoc wrapped srb pri">
+				<dt class="scb-col40">
+					Label for readonly primary
+				</dt>
+				<dd class="eic scb-col60">
+					Value for readonly
+					<span class="htx">Hint for the input</span>
+				</dd>
+			</dl>
+            <dl class="eoc wrapped srb pri">
+				<dt class="scb-col40">
+					Label for readonly primary
+				</dt>
+				<dd class="eic scb-col60">
+					Value for readonly
+					<span class="htx">Hint for the input</span>
+				</dd>
+			</dl>
+            <br/>
+			<dl class="eoc wrapped srb sec">
+				<dt class="scb-col40">
+					Label for readonly secondary
+				</dt>
+				<dd class="eic scb-col60">
+					Value for readonly
+					<span class="htx">Hint for the input</span>
+				</dd>
+			</dl>
+            <dl class="eoc wrapped srb sec">
+				<dt class="scb-col40">
+					Label for readonly secondary
+				</dt>
+				<dd class="eic scb-col60">
+					Value for readonly
+					<span class="htx">Hint for the input</span>
+				</dd>
+			</dl>
+            <br/>
+			<dl class="eoc wrapped srb ter">
+				<dt class="scb-col40">
+					Label for readonly tertiary
+				</dt>
+				<dd class="eic scb-col60">
+					Value for readonly
+					<span class="htx">Hint for the input</span>
+				</dd>
+			</dl>
+            <dl class="eoc wrapped srb ter">
+				<dt class="scb-col40">
+					Label for readonly tertiary
+				</dt>
+				<dd class="eic scb-col60">
+					Value for readonly
+					<span class="htx">Hint for the input</span>
+				</dd>
+			</dl>
+		</div-->
+		
+		<br/><br/><br/>
+        
+        <h2>Vertical Form - Floating Labels</h2> <br/>
+		<div class="crt-form pri ver">
+            <ul class="ttl">
+                <li class="lbl">
+                    <h4>Floating Labels</h4>
+                </li>
+            </ul>
+
+            <ul class="eoc flbl pri">
+                <li>
+                    <label class="flb req" for="test " title="Horizontal Group">Primary</label>
+                </li>
+                <li class="eic">
+                    <input type="text" id="input4x" name="test1" class="ett-inpt pri med" title="Editable input" value="Primary" placeholder="Primary Value"/>
+                </li>
+            </ul>
+
+            <ul class="eoc flbl sec">
+                <li>
+                    <label class="flb icl" for="test1" title="Horizontal Group">
+								<svg class="ett-icon icon-list-alt px20"> <!-- icon selection, size, appearance, position(left and right) & semantics selection are required-->
+		                        <use xlink:href="#icon-list-alt"/>
+		                    	</svg>                    	
+                    	
+                    	Secondary with icon left</label>
+                </li>
+                <li class="eic">
+                    <input type="text" id="input4x" name="test1" class="ett-inpt sec med" title="Secondary" placeholder="Secondary" />
+                </li>
+            </ul>
+
+            <ul class="eoc flbl ter">
+                <li>
+                    <label class="flb icr" for="test1" title="Horizontal Group">Tertiary with icon right
+								<svg class="ett-icon icon-list-alt px20"> <!-- icon selection, size, appearance, position(left and right) & semantics selection are required-->
+		                        <use xlink:href="#icon-list-alt"/>
+		                    	</svg>                    	
+                    	
+                    	</label>
+                </li>
+                <li class="eic">
+                    <input type="text" id="input4x" name="test1" class="ett-inpt ter med" title="Editable input" placeholder="Tertiary" />
+                </li>
+            </ul>
+
+            <br>
+            <ul class="eoc flbl pri">
+                <li>
+                    <label class="flb" for="test1" title="Horizontal Group">Primary</label>
+                </li>
+                <li class="eic">
+                    <textarea  id="input4x" name="test1" class="ett-texa pri" title="Textarea" value="" placeholder="Primary" ></textarea>
+                </li>
+            </ul> 
+            <br>
+            <ul class="eoc flbl sec">
+                <li>
+                    <label class="flb" for="test1" title="Horizontal Group">secondary</label>
+                </li>
+                <li class="eic">
+                    <textarea  id="input4x" name="test1" class="ett-texa sec" title="Textarea" value="" placeholder="secondary" ></textarea>
+                </li>
+            </ul>  
+            <br>
+            <ul class="eoc flbl ter">
+                <li>
+                    <label class="flb req" for="test1" title="Horizontal Group">teritiary</label>
+                </li>
+                <li class="eic">
+                    <textarea  id="input4x" name="test1" class="ett-texa ter" title="Textarea" value="" placeholder="teritiary" ></textarea>
+                </li>
+            </ul> 
+
+		</div>
+
+		
+		</section>
+
+
+		<script type="text/javascript" charset="utf-8" src="scripts/jquery-3.1.1.min.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/jquery-ui.min.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/select2.min.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/appzillon.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/uiutils.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/swiper.min.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/tableHeadFixer.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/karthik-plugins.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/karthik-scripts.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/jquery.slide-transition.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/ripple.js"></script>
+
+		<script type="text/javascript">
+			$(document).ready(function() {
+				apz = new Apz();
+				apz.appId = "testing";
+				apz.deviceOs = "APPZILLONSIMULATOR";
+				//apz.loadProject();
+			});
+		</script>
+         <script>
+        $(document).ready(function () {
+            function updateText(event) {
+                var input = $(this);
+                setTimeout(function () {
+                    var val = input.val();
+                    if (val != "")
+                        input.parent().parent().addClass("flbl-float");
+                    else
+                        input.parent().parent().removeClass("flbl-float");
+                }, 1)
+            }
+            $(".flbl input").keydown(updateText);
+            $(".flbl input").change(updateText);
+            
+            function updateTextArea(event) {
+                var textarea = $(this);
+                setTimeout(function () {
+                    var val = textarea.val();
+                    if (val != "")
+                        textarea.parent().parent().addClass("flbl-float");
+                    else
+                        textarea.parent().parent().removeClass("flbl-float");
+                }, 1)
+            }
+            $(".flbl textarea").keydown(updateTextArea);
+            $(".flbl textarea").change(updateTextArea);
+            var input = $(".flbl input, .flbl textarea");
+                            input.each(function( index ) {
+                                $(this).trigger("change");
+                            });
+        }); 
+    </script>
+		<script>
+			$(document).ready(function() {
+				$('#SpriteSVG').load('svg-apz.svg');
+				$('#myButton').click(function(event) {
+
+					// prevent page submit
+					event.preventDefault();
+					$("#SpriteSVG").text(" ");
+					// load the page into #SpriteSVG
+					$('#SpriteSVG').load('svg-apz.svg');
+
+				});
+				$('#myButtonBCL').click(function(event) {
+
+					// prevent page submit
+					event.preventDefault();
+					$("#SpriteSVG").text(" ");
+					// load the page into #SpriteSVG
+					$('#SpriteSVG').load('svg-bcl.svg');
+
+				});
+				// load ripple effect for elements with class .rpl
+				//$('.rpl, .ripples').on('click', ripplesEffect);
+
+			});
+		</script>
+
+	</body>
+
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8" />
+		<title>Range Slider</title>
+		<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+		<script>
+			function swapStyleSheet(sheet) {
+				document.getElementById('pagestyle').setAttribute('href', sheet);
+			}
+		</script>
+		<link href="styles/themes/appzillon/css/local-base.css" rel="stylesheet" media="screen" />
+		<link id="pagestyle" href="styles/themes/appzillon/css/local-apz.css" rel="stylesheet" media="screen" />
+
+	</head>
+
+	<body  class="fulsv" style="padding:20px">
+		<span id="SpriteSVG"></span>
+        <button class="ett-bttn pri med" id="myButton" onclick="swapStyleSheet('styles/themes/appzillon/css/local-apz.css')">Appzillon</button>
+    	<button class="ett-bttn pri med" id="myButtonBCL" onclick="swapStyleSheet('styles/themes/appzillon/css/local-bcl.css')">Barclays</button>
+     	<button class="ett-bttn pri med" id="myButtonRolb" onclick="swapStyleSheet('styles/themes/appzillon/css/local-rolb.css')">Rolb</button>
+      	<button class="ett-bttn pri med" id="myButtonMobile" onclick="swapStyleSheet('styles/themes/appzillon/css/local-mobile.css')">Mobile</button>
+        <br><br>
+        
+		<input type="range" class="ett-rnge pri">
+		<input type="range" class="ett-rnge pri" disabled="disabled">		
+		<br>
+		<input type="range" class="ett-rnge sec">
+		<input type="range" class="ett-rnge sec" disabled="disabled">			
+		<br>
+		<input type="range" class="ett-rnge ter">
+		<input type="range" class="ett-rnge ter" disabled="disabled">			
+		<br>
+        <input type="range" class="ett-rngn">
+		<input type="range" class="ett-rngn" disabled="disabled">
+        
+
+		<script type="text/javascript" charset="utf-8" src="scripts/jquery-3.1.1.min.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/jquery-ui.min.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/select2.min.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/appzillon.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/uiutils.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/swiper.min.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/tableHeadFixer.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/karthik-plugins.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/karthik-scripts.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/ripple.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/svgxuse.js"></script>
+
+		<script>
+		
+			$(document).ready(function() {
+				$('#SpriteSVG').load('svg-apz.svg');
+				$('#myButton').click(function(event) {
+		
+					// prevent page submit
+					event.preventDefault();
+					$("#SpriteSVG").text(" ")
+					// load the page into #SpriteSVG
+					$('#SpriteSVG').load('svg-apz.svg');
+		
+				});
+				$('#myButtonBCL').click(function(event) {
+		
+					// prevent page submit
+					event.preventDefault();
+					$("#SpriteSVG").text(" ")
+					// load the page into #SpriteSVG
+					$('#SpriteSVG').load('svg-bcl.svg');
+		
+				});
+				// load ripple effect for elements with class .rpl
+				$('.rpl, .ripples').on('click', ripplesEffect);
+		
+			});
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>8.1- PANE - Collapsible</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <script>
+        function swapStyleSheet(sheet) {
+            document.getElementById('pagestyle').setAttribute('href', sheet);
+        }
+    </script>
+    <link href="styles/themes/appzillon/css/local-base.css" rel="stylesheet" media="screen" />
+    <link id="pagestyle" href="styles/themes/appzillon/css/local-apz.css" rel="stylesheet" media="screen" />
+
+</head>
+
+<body class="fulsv ter">
+    <span id="SpriteSVG"></span>
+    <br> 
+        <select class="ett-slcn etb-slcn pri" style="width:20%;">
+            <option id="myButton" onclick="swapStyleSheet('styles/themes/appzillon/css/local-apz.css')">Appzillon</option>
+            <option id="myButtonBCL" onclick="swapStyleSheet('styles/themes/appzillon/css/local-bcl.css')">Barclays </option>
+            <option id="myButtonRolb" onclick="swapStyleSheet('styles/themes/appzillon/css/local-rolb.css')">Rolb</option>
+            <option id="myButtonMobile" onclick="swapStyleSheet('styles/themes/appzillon/css/local-mobile.css')">Mobile</option>
+            <option id="myButtonCiti" onclick="swapStyleSheet('styles/themes/appzillon/css/local-citi.css')">Citi</option>
+        </select> 
+    <br>
+    <br>
+    <section class="pagebody">  
+        <div class="plt-coll box">
+            <div class=" pst-coll  box pri pst">
+                <ul id="collapsible-test-1" class=" ttl Trigger" aria-selected="false" aria-expanded="false" aria-controls="collapsible-content-1" role="tab" >
+                    <li class="icn">
+                        <svg class="ett-icon icon-search px24"><use xlink:href="#icon-home"></use></svg>
+                    </li>
+                    <li class="lbl">
+                        <h4 class="expand">Primary - Boxed</h4>
+                    </li>
+                    <li class="tls">
+                        <a class="expand" href="#appzillon">
+                            <svg class="ett-icon icon-chevron-down px24">
+                                <use xlink:href="#icon-chevron-down"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+                <div class="ctr234 ctr u-relative height-transition height-transition-hidden" aria-hidden="true" role="tabpanel">
+            	<div class="srb">
+            		<div class="scb-col12"> 
+						<div class="crt-form ver pri">
+				            <ul class="ttl">
+				            	<li class="ttl-ctr">
+				            		<ul class="ttv">
+						                <li class="icn">
+						                    <svg class="ett-icon icon-list-alt px34">
+						                        <use xlink:href="#icon-list-alt"></use>
+						                    </svg>
+						                </li>
+						                <li class="lbl">
+						                    <h4>Form - Vertical Primary</h4>
+						                </li>
+				                	</ul>
+				                </li>
+				                <li class="pgn-ctr">
+					               <ul class="pgn">
+					                    <li class="pnx"> 
+					                        <button class="ett-bttn tsp med"  aria-label="Previous page"><svg class="icon icon-chevron-left px16"><use xlink:href="#icon-chevron-left"></use></svg></button> 
+					                    </li>
+					                    <li class="pcl">
+					                      <input type="text" class="pageno" value="1">
+					                    </li>	
+					                    <li class="ptx" > 
+					                        <span>/&nbsp;</span><span>3</span> 
+					                    </li>	 
+					                    <li class="pnx"> 
+					                        <button class="ett-bttn tsp med"  aria-label="Next page"><svg class="icon icon-chevron-right px16"><use xlink:href="#icon-chevron-right"></use></svg></button>
+					                    </li> 
+					                </ul>                 	
+				                </li>
+				            </ul>
+							<span class="srb wrapped pri"><!-- wrapped class is required for responsive columns -->
+								<span class="scb-sml100 scb-lar50 pri">
+									<ul class="eoc wrapped srb pri"><!-- wrapped class is required for vertical orientation --> 
+										<li class="scb-col40">
+											<label class="flb req icl">
+												<svg class="ett-icon icon-list-alt px20"> <!-- icon selection, size, appearance, position(left and right) & semantics selection are required-->
+						                        <use xlink:href="#icon-list-alt"/>
+						                    	</svg>
+						                    Icon left of Label</label>
+										</li>
+										<li class="eic scb-col60">
+											<span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50">
+												<input id="input4gx" name="test1" class="ett-inpt pri med etw-100" title="Editable input" value="Primary Input" placeholder=" Value" type="text">
+												<span class="htx">Hint for the input</span>
+												<span class="vtx">Validation text</span>
+											</span>
+										</li>
+									</ul>
+									<ul class="eoc wrapped srb pri"><!-- wrapped class is required for vertical orientation -->
+										<li class="scb-col40">
+											<label class="flb icr">Icon right of Label
+												<svg class="ett-icon icon-list-alt px20"> <!-- icon selection, size, appearance, position(left and right) & semantics selection are required-->
+						                        <use xlink:href="#icon-list-alt"/>
+						                    	</svg>								
+												</label>
+										</li>
+										<li class="eic scb-col60">
+											<span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50">
+											<input id="input4fx" name="test1" class="ett-inpt sec etw-100" title="Editable input" value="Secondary Input" placeholder=" Value" type="text">
+											</span>
+										</li>
+									</ul>					
+								</span>
+								<span class="scb-sml100 scb-lar50">
+									<ul class="eoc wrapped srb pri"><!-- wrapped class is required for vertical orientation -->
+										<li class="scb-col40">
+											<label class="flb">Element3 Label</label>
+										</li>
+										<li class="eic scb-col60">
+											<span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50">
+											<input id="input4x" name="test1" class="ett-inpt ter etw-100" title="Editable input" value="Tertiary Input" placeholder=" Value" type="text">
+											</span>
+										</li>
+									</ul>
+								</span>
+							</span>			
+							
+						</div>  
+					</div>
+				</div>    
+                </div>
+            </div>
+        </div>
+        <div class="plt-coll box">
+            <div class=" pst-coll  box sec pst">
+                <ul id="collapsible-test-2" class=" ttl Trigger1" aria-selected="false" aria-expanded="false" aria-controls="collapsible-content-2" role="tab" >
+                    <li class="icn">
+                        <svg class="ett-icon icon-search px24"><use xlink:href="#icon-home"></use></svg>
+                    </li>
+                    <li class="lbl"> 
+                        <h4 class="expand">Secondary - Boxed</h4>
+                    </li>
+                    <li class="tls"> 
+                        <a class="expand" href="#appzillon">
+                            <svg class="ett-icon icon-chevron-down px24">
+                                <use xlink:href="#icon-chevron-down"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+                <div class="ctr1234 ctr u-relative height-transition height-transition-hidden" aria-hidden="true" role="tabpanel">
+                    <!-- Content Here -->
+                    <br>&nbsp;
+                    <br>&nbsp;
+                    <br>&nbsp;												
+                    <div class="loading1 with-backtrans loading1--lg"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="plt-coll box">
+            <div class=" pst-coll  box ter pst">
+                <ul id="collapsible-test-3"  class=" ttl Trigger2" aria-selected="false" aria-expanded="false" aria-controls="collapsible-content-3" role="tab" >
+                    <li class="icn">
+                        <svg class="ett-icon icon-search px24"><use xlink:href="#icon-home"></use></svg>
+                    </li>
+                    <li class="lbl"> 
+                        <h4 class="expand">Tertiary - Boxed</h4>
+                    </li>
+                    <li class="tls"> 
+                        <a class="expand" href="#appzillon">
+                            <svg class="ett-icon icon-chevron-down px24">
+                                <use xlink:href="#icon-chevron-down"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+                <div class="ctr2234 ctr u-relative height-transition height-transition-hidden" aria-hidden="true" role="tabpanel">
+                    <!-- Content Here -->
+                    <br>&nbsp;
+                    <br>&nbsp;
+                    <br>&nbsp;	
+                    <div class="loading1 with-backtrans loading1--lg"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="plt-coll box">
+            <div class=" pst-coll box tsp pst">
+                <ul id="collapsible-test-4"  class=" ttl Trigger3" aria-selected="false" aria-expanded="false" aria-controls="collapsible-content-4" role="tab" >
+                    <li class="icn">
+                        <svg class="ett-icon icon-search px24"><use xlink:href="#icon-home"></use></svg>
+                    </li>
+                    <li class="lbl">
+                        <h4 class="expand">Transparent - boxed</h4>
+                    </li>
+                    <li class="tls"> 
+                        <a class="expand" href="#appzillon">
+                            <svg class="ett-icon icon-chevron-down px24">
+                                <use xlink:href="#icon-chevron-down"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+                <div class="ctr3234 ctr u-relative height-transition height-transition-hidden" aria-hidden="true" role="tabpanel">
+                    <!-- Content Here -->
+                    <br>&nbsp;
+                    <br>&nbsp;
+                    <br>&nbsp;	
+                    <div class="loading1 with-backtrans"></div>
+                </div>
+            </div>
+        </div>
+        <br>        
+        <br>
+        <div class="plt-coll sld">
+            <div class="pst-coll  sld pri pst">
+                <ul id="collapsible-test-5"  class=" ttl Trigger09" aria-selected="false" aria-expanded="false" aria-controls="collapsible-content-5" role="tab" >
+                    <li class="icn">
+                        <svg class="ett-icon icon-search px24"><use xlink:href="#icon-home"></use></svg>
+                    </li>
+                    <li class="lbl"> 
+                        <h4 class="expand">Primary - Solid </h4>
+                    </li>
+                    <li class="tls"> 
+                        <a class="expand" href="#appzillon">
+                            <svg class="ett-icon icon-chevron-down px24">
+                                <use xlink:href="#icon-chevron-down"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+                <div class="ctr0901 ctr u-relative height-transition height-transition-hidden" aria-hidden="true" role="tabpanel">
+                    <!-- Content Here -->
+                    <br>&nbsp;
+                    <br>&nbsp;
+                    <br>&nbsp;	
+                    <div class="loading1-inv with-backtrans"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="plt-coll sld">
+            <div class=" pst-coll  sld sec pst">
+                <ul id="collapsible-test-6"  class=" ttl Trigger4" aria-selected="false" aria-expanded="false" aria-controls="collapsible-content-6" role="tab" >
+                    <li class="icn">
+                        <svg class="ett-icon icon-search px24"><use xlink:href="#icon-home"></use></svg>
+                    </li>
+                    <li class="lbl"> 
+                        <h4 class="expand">Secondary - Solid</h4>
+                    </li>
+                    <li class="tls">
+                        <a class="expand" href="#appzillon">
+                            <svg class="ett-icon icon-chevron-down px24">
+                                <use xlink:href="#icon-chevron-down"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+                <div class="ctr4234 ctr u-relative height-transition height-transition-hidden" aria-hidden="true" role="tabpanel">
+
+                    <!-- Content Here -->
+                    <br>&nbsp;
+                    <br>&nbsp;
+                    <br>&nbsp; 
+                    <div class="loading1 with-backtrans loading1--sm"></div>
+                </div>
+            </div>
+        </div> 
+
+        <div class="plt-coll sld">
+            <div class=" pst-coll  sld ter pst">
+                <ul id="collapsible-test-7"  class=" ttl Trigger5" aria-selected="false" aria-expanded="false" aria-controls="collapsible-content-7" role="tab" >
+                    <li class="icn">
+                        <svg class="ett-icon icon-search px24"><use xlink:href="#icon-home"></use></svg>
+                    </li>
+                    <li class="lbl"> 
+                        <h4 class="expand">Tertiary - Solid </h4>
+                    </li>
+                    <li class="tls"> 
+                        <a class="expand" href="#appzillon">
+                            <svg class="ett-icon icon-chevron-down px24">
+                                <use xlink:href="#icon-chevron-down"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+                <div class="ctr5234 ctr u-relative height-transition height-transition-hidden" aria-hidden="true" role="tabpanel"> 
+                    <!-- Content Here -->
+                    <br>&nbsp;
+                    <br>&nbsp;
+                    <br>&nbsp;	 
+                    <div class="loading1 with-backtrans"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="plt-coll sld">
+            <div class=" pst-coll  sld tsp pst">
+                <ul id="collapsible-test-8"  class=" ttl Trigger6" aria-selected="false" aria-expanded="false" aria-controls="collapsible-content-8" role="tab" >
+                    <li class="icn">
+                        <svg class="ett-icon icon-search px24"><use xlink:href="#icon-home"></use></svg>
+                    </li>
+                    <li class="lbl"> 
+                        <h4 class="expand">Transparent - Solid  </h4>
+                    </li>
+                    <li class="tls"> 
+                        <a class="expand" href="#appzillon">
+                            <svg class="ett-icon icon-chevron-down px24">
+                                <use xlink:href="#icon-chevron-down"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+                <div class="ctr6234 ctr u-relative height-transition height-transition-hidden" aria-hidden="true" role="tabpanel">
+
+                    <!-- Content Here -->
+                    <br>&nbsp;
+                    <br>&nbsp;
+                    <br>&nbsp;	
+
+                    <div class="loading1 with-backtrans"></div>
+                </div>
+            </div>
+        </div> 
+
+        <br>
+        <br>
+        <div class="plt-coll sld">
+            <div class=" pst-coll  sld pri pst coll-dis">
+                <ul id="collapsible-test-9"  class=" ttl Trigger030" aria-selected="false" aria-expanded="false" aria-controls="collapsible-content-9" role="tab" >
+                    <li class="icn">
+                        <svg class="ett-icon icon-search px24"><use xlink:href="#icon-home"></use></svg>
+                    </li>
+                    <li class="lbl"> 
+                        <h4 class="expand">Solid - Disabled</h4>
+                    </li>
+                    <li class="tls"> 
+                        <a class="expand" href="#appzillon">
+                            <svg class="ett-icon icon-chevron-down px24">
+                                <use xlink:href="#icon-chevron-down"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+                <div class="ctr030234 ctr u-relative height-transition height-transition-hidden" aria-hidden="true" role="tabpanel"> 
+                    <!-- Content Here -->
+                    <br>&nbsp;
+                    <br>&nbsp;
+                    <br>&nbsp;	
+
+                    <div class="loading1-inv with-backtrans"></div>
+                </div>
+            </div>
+        </div>  
+        <div class="plt-coll box">
+            <div class=" pst-coll  box sec pst coll-dis">
+                <ul id="collapsible-test-10"  class=" ttl Trigger040" aria-selected="false" aria-expanded="false" aria-controls="collapsible-content-10" role="tab" >
+                    <li class="icn">
+                        <svg class="ett-icon icon-search px24"><use xlink:href="#icon-home"></use></svg>
+                    </li>
+                    <li class="lbl">
+
+                        <h4 class="expand">Boxed - disabled</h4>
+                    </li>
+                    <li class="tls"> 
+                        <a class="expand" href="#appzillon">
+                            <svg class="ett-icon icon-chevron-down px24">
+                                <use xlink:href="#icon-chevron-down"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+                <div class="ctr040234 ctr u-relative height-transition height-transition-hidden" aria-hidden="true" role="tabpanel"> 
+                    <!-- Content Here -->
+                    <br>&nbsp;
+                    <br>&nbsp;
+                    <br>&nbsp;	 
+                    <div class="loading1 with-backtrans"></div>
+                </div>
+            </div>
+        </div>   
+    </section>
+    <script type="text/javascript" charset="utf-8" src="scripts/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="scripts/jquery-ui.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="scripts/select2.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="scripts/appzillon.js"></script>
+    <script type="text/javascript" charset="utf-8" src="scripts/uiutils.js"></script>
+    <script type="text/javascript" charset="utf-8" src="scripts/swiper.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="scripts/tableHeadFixer.js"></script>
+    <script type="text/javascript" charset="utf-8" src="scripts/karthik-plugins.js"></script>
+    <script type="text/javascript" charset="utf-8" src="scripts/karthik-scripts.js"></script>
+    <script type="text/javascript" charset="utf-8" src="scripts/jquery.slide-transition.js"></script>
+    <script type="text/javascript" charset="utf-8" src="scripts/ripple.js"></script>
+
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            apz = new Apz();
+            apz.appId = "testing";
+            apz.deviceOs = "APPZILLONSIMULATOR";
+            //apz.loadProject();
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $(".select-disabled").attr("disabled", "disabled");
+        });
+    </script>
+		<script>
+		
+			$(document).ready(function() {
+				$('#SpriteSVG').load('svg-apz.svg');
+				$('#myButton').click(function(event) { 
+					// prevent page submit
+					event.preventDefault();
+					$("#SpriteSVG").text(" ");
+					// load the page into #SpriteSVG
+					$('#SpriteSVG').load('svg-apz.svg'); 
+				});
+				$('#myButtonBCL').click(function(event) { 
+					// prevent page submit
+					event.preventDefault();
+					$("#SpriteSVG").text(" ");
+					// load the page into #SpriteSVG
+					$('#SpriteSVG').load('svg-bcl.svg');
+		
+				});
+				// load ripple effect for elements with class .rpl
+				//$('.rpl, .ripples').on('click', ripplesEffect);
+		
+			});
+		</script>  
+    <script>
+        $('.Trigger').click(function (event) {
+            if ($(".ctr234").hasClass("height-transition-hidden"))
+                $(".ctr234").slideDownTransition(event);
+            else
+                $(".ctr234").slideUpTransition(event);
+        });
+    </script>
+    <script>
+        $('.Trigger1').click(function (event) {
+            if ($(".ctr1234").hasClass("height-transition-hidden"))
+                $(".ctr1234").slideDownTransition(event);
+            else
+                $(".ctr1234").slideUpTransition(event);
+        });
+    </script>
+    <script>
+        $('.Trigger09').click(function (event) {
+            if ($(".ctr0901").hasClass("height-transition-hidden"))
+                $(".ctr0901").slideDownTransition(event);
+            else
+                $(".ctr0901").slideUpTransition(event);
+        });
+    </script>
+    <script>
+        $('.Trigger2').click(function (event) {
+            if ($(".ctr2234").hasClass("height-transition-hidden"))
+                $(".ctr2234").slideDownTransition(event);
+            else
+                $(".ctr2234").slideUpTransition(event);
+        });
+    </script>
+        <script>
+        $('.Trigger3').click(function (event) {
+            if ($(".ctr3234").hasClass("height-transition-hidden"))
+                $(".ctr3234").slideDownTransition(event);
+            else
+                $(".ctr3234").slideUpTransition(event);
+        });
+    </script>
+        <script>
+        $('.Trigger4').click(function (event) {
+            if ($(".ctr4234").hasClass("height-transition-hidden"))
+                $(".ctr4234").slideDownTransition(event);
+            else
+                $(".ctr4234").slideUpTransition(event);
+        });
+    </script><script>
+        $('.Trigger5').click(function (event) {
+            if ($(".ctr5234").hasClass("height-transition-hidden"))
+                $(".ctr5234").slideDownTransition(event);
+            else
+                $(".ctr5234").slideUpTransition(event);
+        });
+    </script>
+        <script>
+        $('.Trigger6').click(function (event) {
+            if ($(".ctr6234").hasClass("height-transition-hidden"))
+                $(".ctr6234").slideDownTransition(event);
+            else
+                $(".ctr6234").slideUpTransition(event);
+        });
+    </script>
+        <script>
+        $('.Trigger7').click(function (event) {
+            if ($(".ctr701").hasClass("height-transition-hidden"))
+                $(".ctr701").slideDownTransition(event);
+            else
+                $(".ctr701").slideUpTransition(event);
+        });
+    </script>
+    <script>
+        $('.Trigger8').click(function (event) {
+            if ($(".ctr8234").hasClass("height-transition-hidden"))
+                $(".ctr8234").slideDownTransition(event);
+            else
+                $(".ctr8234").slideUpTransition(event);
+        });
+    </script>
+    <script>
+        $('.Trigger9').click(function (event) {
+            if ($(".ctr9234").hasClass("height-transition-hidden"))
+                $(".ctr9234").slideDownTransition(event);
+            else
+                $(".ctr9234").slideUpTransition(event);
+        });
+    </script>
+    <script>
+        $('.Trigger02').click(function (event) {
+            if ($(".ctr02234").hasClass("height-transition-hidden"))
+                $(".ctr02234").slideDownTransition(event);
+            else
+                $(".ctr02234").slideUpTransition(event);
+        });
+    </script>
+    <script>
+        $('.Trigger03').click(function (event) {
+            if ($(".ctr03234").hasClass("height-transition-hidden"))
+                $(".ctr03234").slideDownTransition(event);
+            else
+                $(".ctr03234").slideUpTransition(event);
+        });
+    </script>
+    <script>
+        $('.Trigger04').click(function (event) {
+            if ($(".ctr04234").hasClass("height-transition-hidden"))
+                $(".ctr04234").slideDownTransition(event);
+            else
+                $(".ctr04234").slideUpTransition(event);
+        });
+    </script>
+    <script>
+        $('.Trigger05').click(function (event) {
+            if ($(".ctr05234").hasClass("height-transition-hidden"))
+                $(".ctr05234").slideDownTransition(event);
+            else
+                $(".ctr05234").slideUpTransition(event);
+        });
+    </script>
+    <script>
+        $('.Trigger031').click(function (event) {
+            if ($(".ctr031234").hasClass("height-transition-hidden"))
+                $(".ctr031234").slideDownTransition(event);
+            else
+                $(".ctr031234").slideUpTransition(event);
+        });
+    </script>
+    <script>
+        $('.Trigger040').click(function (event) {
+            if ($(".ctr040234").hasClass("height-transition-hidden"))
+                $(".ctr040234").slideDownTransition(event);
+            else
+                $(".ctr040234").slideUpTransition(event);
+        });
+    </script>
+    
+    
+</body>
+
+</html>

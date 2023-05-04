@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>List</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <script>
+        function swapStyleSheet(sheet) {
+            document.getElementById('pagestyle').setAttribute('href', sheet);
+        }
+    </script>
+    <link href="styles/themes/appzillon/css/local-base.css" rel="stylesheet" media="screen" />
+    <link id="pagestyle" href="styles/themes/appzillon/css/local-apz.css" rel="stylesheet" media="screen" />
+     <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css" />
+    
+</head>
+
+<body class="pri">
+    <span id="SpriteSVG"></span>
+    <button class="ett-bttn pri med" id="myButton" onclick="swapStyleSheet('styles/themes/appzillon/css/local-apz.css')">Appzillon</button>
+    <button class="ett-bttn pri med" id="myButtonBCL" onclick="swapStyleSheet('styles/themes/appzillon/css/local-bcl.css')">Barclays</button>
+    <button class="ett-bttn pri med" id="myButtonRolb" onclick="swapStyleSheet('styles/themes/appzillon/css/local-rolb.css')">Rolb</button>
+    <button class="ett-bttn pri med" id="myButtonMobile" onclick="swapStyleSheet('styles/themes/appzillon/css/local-mobile.css')">Mobile</button>
+
+    <br>
+    <br>
+
+
+
+    <section class="pagebody">
+
+        <div class="grb">
+            <div class="gcb-col12">
+                <div class="plt-simp">
+                    <div class="pst-simp pri">
+                        <div class="crt-list pri"> 
+                            <ul class="ttl">
+                                <li class="ttl-ctr">
+                                    <ul class="ttv">
+                                        <li class="icn">
+                                            <svg class="icon icon-list-alt px24">
+                                                <use xlink:href="#icon-list-alt"></use>
+                                            </svg>
+                                        </li>
+                                        <li class="lbl">
+                                            <h4>Primary</h4>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="srh-ctr">
+                                    <span class="srh">  
+                                        <span><input type="search" placeholder="Search" name="search" class="srh-inp" tabindex="0" required> 
+                            </span>
+                                        <span class="srh-icn">
+                                            <svg class="icon icon-search px16"><use xlink:href="#icon-search"></use></svg>
+                                        </span>
+                                    </span>
+                                </li>
+                                <li class="pgn-ctr">
+                                    <ul class="pgn">
+                                        <li class="pnx">
+                                            <button class="ett-bttn tsp med" aria-label="Previous page">
+								<svg class="icon icon-chevron-left px16">
+									<use xlink:href="#icon-chevron-left"></use>
+								</svg>
+							</button>
+                                        </li>
+                                        <li class="pcl">
+                                            <input type="text" class="pageno" value="1">
+                                        </li>
+                                        <li class="ptx">
+                                            <span>/&nbsp;</span><span>3</span>
+                                        </li>
+                                        <li class="pnx">
+                                            <button class="ett-bttn tsp med" aria-label="Next page">
+								<svg class="icon icon-chevron-right px16">
+									<use xlink:href="#icon-chevron-right"></use>
+								</svg>
+							</button>
+                                        </li>
+                                    </ul>
+                                    <ul class="adr-ctr">
+                                        <li class="add">
+                                            <span>
+                        <button class="ett-bttn tsp med"  aria-label="Add Record">
+                            <svg class="icon icon-plus px16"><use xlink:href="#icon-plus"></use></svg>
+                            </button>
+                        </span>
+                                        </li>
+                                        <li class="rmv">
+                                            <span>
+                            <button class="ett-bttn tsp med"  aria-label="Remove Record"><svg class="icon icon-minus px16"><use xlink:href="#icon-minus"></use></svg></button>
+                        </span>
+
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                            <ul class="pri" data-role="listview">
+                                <li class="srb">
+                                    <span class="scb-col100">
+                                                    <p class="ett-para fs16 pri">
+                                                        Primary Row1
+                                                    </p> 
+                                                    <span class="ecn vcn scb-sml100 scb-med50 scb-lar40 scb-xxl30">
+                                                    <div class="etb-slct ett-slct pri scb-col100" tabindex="0">
+                                                        <input type="text" class="sub-elt " value="Simple - Primary" readonly title="Select Box">
+                                                        <span class="sub-elt1">
+                                                                                                                    <svg class="icon icon-down px34">
+                                                                                                                        <use xlink:href="#icon-down"></use>
+                                                                                                                    </svg></span>
+                                                        <div class="sub-ctr">
+                                                            <ul role="menu">
+                                                                <li class="is-disabled">Option1</li>
+                                                                <li>Option 2</li>
+                                                                <li>Option 3</li>
+                                                                <li>Option 4</li>
+                                                                <li>Option 5</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div> <span class="htx">Hint Text</span> <span class="vtx">Validation Text</span> </span>
+                                    </span>
+                                </li>
+                                <li class="srb">
+                                    <span class="scb-col100">
+                                        <p class="ett-para fs16 pri">
+                                            Primary Row2
+                                        </p>
+                                    </span>
+                                </li>
+                                <li class="srb">
+                                    <span class="scb-col100">
+                                        <p class="ett-para fs16 pri">
+                                            Primary Row3 with text 
+                                        </p>
+                                    </span>
+                                </li>
+                                <li class="srb">
+                                    <span class="scb-col100">
+                                        <p class="ett-para fs16 pri">
+                                            Primary Row4 with numerical
+                                        </p>
+                                    </span>
+                                </li>
+                                <li class="srb">
+                                    <span class="scb-col100">
+                                        <p class="ett-para fs16 pri">
+                                            Primary Row5 with characters
+                                        </p>
+                                    </span>
+                                </li>
+                            </ul> 
+                    </div> 
+                </div>
+            </div>
+
+        </div>
+        </div>
+    </section>
+
+
+    <br>
+   
+    
+    <!--<script type="text/javascript" charset="utf-8" src="scripts/jquery-3.1.1.min.js"></script>-->
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="scripts/jQuery-mobile.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="scripts/index.js"></script>
+    <!--<script type="text/javascript" charset="utf-8" src="scripts/jquery-ui.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="scripts/select2.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="scripts/appzillon.js"></script>
+    <script type="text/javascript" charset="utf-8" src="scripts/uiutils.js"></script>
+    <script type="text/javascript" charset="utf-8" src="scripts/swiper.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="scripts/tableHeadFixer.js"></script>
+    <script type="text/javascript" charset="utf-8" src="scripts/karthik-plugins.js"></script>
+    <script type="text/javascript" charset="utf-8" src="scripts/karthik-scripts.js"></script>
+    <script type="text/javascript" charset="utf-8" src="scripts/jquery.slide-transition.js"></script>
+    <script type="text/javascript" charset="utf-8" src="scripts/ripple.js"></script> -->
+    
+    <script type="text/javascript">
+        $(document).ready(function() {
+            apz.appId = "testing";
+            apz.deviceOs = "APPZILLONSIMULATOR";
+            //apz.loadProject();
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
+            var submitIcon = $('.srh-icn');
+            var inputBox = $('.srh-inp');
+            var srh = $('.srh');
+            var isOpen = false;
+            submitIcon.click(function() {
+                if (isOpen == false) {
+                    srh.addClass('srh-open');
+                    inputBox.focus();
+                    isOpen = true;
+                } else {
+                    srh.removeClass('srh-open');
+                    inputBox.focusout();
+                    isOpen = false;
+                }
+            });
+            inputBox.keydown(function(e) {
+                if (e.keyCode == "13" || e.keyCode == "9") {
+                    srh.removeClass('srh-open');
+                    inputBox.focusout();
+                    isOpen = false;
+                }
+            });
+            submitIcon.mouseup(function() {
+                return false;
+            });
+            srh.mouseup(function() {
+                return false;
+            });
+            $(document).mouseup(function() {
+                if (isOpen == true) {
+                    $('.srh-icn').css('display', 'block');
+                    submitIcon.click();
+                }
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
+            $('#SpriteSVG').load('svg-apz.svg');
+            $('#myButton').click(function(event) {
+
+                // prevent page submit
+                event.preventDefault();
+                $("#SpriteSVG").text(" ");
+                // load the page into #SpriteSVG
+                $('#SpriteSVG').load('svg-apz.svg');
+
+            });
+            $('#myButtonBCL').click(function(event) {
+
+                // prevent page submit
+                event.preventDefault();
+                $("#SpriteSVG").text(" ");
+                // load the page into #SpriteSVG
+                $('#SpriteSVG').load('svg-bcl.svg');
+
+            });
+            // load ripple effect for elements with class .rpl
+            //$('.rpl, .ripples').on('click', ripplesEffect);
+
+        });
+    </script>
+
+</body>
+
+</html>

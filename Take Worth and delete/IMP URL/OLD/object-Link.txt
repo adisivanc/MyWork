@@ -1,0 +1,9 @@
+https://stackoverflow.com/questions/33503505/how-to-print-all-properties-values-in-an-object-at-once-js
+
+https://www.geeksforgeeks.org/how-to-use-loop-through-an-array-in-javascript/
+
+https://www.w3schools.com/js/js_object_properties.asp
+
+https://www.w3schools.com/js/tryit.asp?filename=tryjs_object_properties_for_in
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create

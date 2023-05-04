@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8" />
+		<title>Horizontal Grouping</title>
+		<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+		<script>
+			function swapStyleSheet(sheet) {
+				document.getElementById('pagestyle').setAttribute('href', sheet);
+			}
+		</script>
+		<link href="styles/themes/appzillon/css/local-base.css" rel="stylesheet" media="screen" />
+		<link id="pagestyle" href="styles/themes/appzillon/css/local-apz.css" rel="stylesheet" media="screen" />
+		<style>
+			.grb > div {outline:1px solid #ccc; background-color: #eee; text-align:center; }
+		</style>
+
+	</head>
+
+	<body  class="fulsv" >
+	
+	<div class="pagebody">
+		<span id="SpriteSVG"></span>
+		<br> 
+        <select class="ett-slcn etb-slcn pri" style="width:20%;">
+            <option id="myButton" onclick="swapStyleSheet('styles/themes/appzillon/css/local-apz.css')">Appzillon</option>
+            <option id="myButtonBCL" onclick="swapStyleSheet('styles/themes/appzillon/css/local-bcl.css')">Barclays </option>
+            <option id="myButtonRolb" onclick="swapStyleSheet('styles/themes/appzillon/css/local-rolb.css')">Rolb</option>
+            <option id="myButtonMobile" onclick="swapStyleSheet('styles/themes/appzillon/css/local-mobile.css')">Mobile</option>
+            <option id="myButtonCiti" onclick="swapStyleSheet('styles/themes/appzillon/css/local-citi.css')">Citi</option>
+        </select> 
+		<ul class="eoc srb wrapped pri ">
+			<li class="etw-0">
+				<label ></label>
+			</li>
+			<li class="eic etw-100">
+				<ul class="hrow">	
+				<li class=""><span id="check-group1" class="etb-chek ett-chek pri hor" aria-describedby="htx-04">
+                    <span>
+                        <input type="checkbox" id="check01"  aria-labelledby='check-lbl-9'/>
+                        <label id="check-lbl-9" class="flb" for="check01" aria-label="Option1">Option1 </label>
+                    </span>
+                    <span>
+                        <input type="checkbox" id="check02" aria-labelledby='check-lbl-10'/>
+                        <label id="check-lbl-10" class="flb err" for="check02" aria-label="Option2">Option2</label>
+                    </span>	
+                    <span>
+                        <input type="checkbox" disabled="disabled" id="check03" aria-labelledby='check-lbl-11'/>
+                        <label id="check-lbl-11" class="flb" for="check03" title="Option3" aria-label="Disabled">Disabled</label>
+                    </span> 
+                    <span>
+                        <input type="checkbox" id="check0839" aria-labelledby='check-lbl-12'/>
+                        <label id="check-lbl-12" class="flb" for="check0839" title="Option3" aria-label="indeterminate">indeterminate</label>
+                    </span>
+                </span> 
+                <span id="htx-04" class="htx" >Optional description text </span></li>
+				<li class="">   <span class="etb-chek ett-chek pri ver">
+	                    <span>
+	                        <input type="checkbox" id="check04"  aria-labelledby='check-lbl-13' aria-describedby="htx-04"/>
+	                        <label id="check-lbl-13" class="flb" for="check04">Option1 </label>
+	                       <span id="htx-04" class="htx" >Optional description text </span>
+	                    </span>
+	                    <span>
+	                        <input type="checkbox" id="check05" aria-labelledby='check-lbl-14' aria-describedby="htx-05"/>
+	                        <label id="check-lbl-14" class="flb err" for="check05" >Error</label>
+	                        <span id="htx-05" class="htx">Optional description text</span>
+	                    </span>	
+	                    <span>
+	                        <input type="checkbox" disabled="disabled" id="check06" aria-labelledby='check-lbl-15' aria-describedby="htx-06"/>
+	                        <label id="check-lbl-15" class="flb" for="check06" title="Option3">Disabled</label>
+	                        <span id="htx-06" class="htx">Optional description text</span>
+	                    </span>
+                        <span>
+	                        <input type="checkbox" id="check08391" aria-labelledby='check-lbl-16' aria-describedby="htx-07"/>
+	                        <label id="check-lbl-16" class="flb" for="check08391" title="Option3">indeterminate</label>
+	                        <span id="htx-07" class="htx">Optional description text</span>
+	                    </span>
+                    </span> </li>
+				</ul>
+			</li>
+		</ul>
+	<ul class="eoc srb wrapped pri ">
+			<li class="etw-40">
+				<label ></label>
+			</li>
+			<li class="eic etw-60">
+				<ul class="hrow">	
+				<li class=""> <div class="ett-drdn etb-drdn pri etw-50 ">
+                        <button class="drdn ">
+                            Dropdown - Primary  
+                        </button>
+                        <span class="">
+                            <svg class="ett-icon icon-down px34"><use xlink:href="#icon-down"></use></svg>
+                        </span>
+                        <div class="drdn-list">
+                            <ul>
+                                <li><a href="">Option 1</a></li>
+                                <li><a href="">Option 2</a></li>
+                                <li><a href="">Option 3</a></li>
+                                <li><a href="">Option 4</a></li>
+                                <li><a href="">Option 5</a></li>
+                            </ul>
+                        </div>
+                    </div> 
+ 			<span id="htx-07" class="htx">Optional description text</span>
+                </li>
+				<li class="">
+					
+					<ul class="nrb ett-file pri">
+		    <li>
+		        <a class="filebox ett-bttn med pri">
+		        <input class="" id="file" name="file" multiple="multiple" onchange="apz.setSelectedFileName(this);" title="Browse" type="file"> Browse... 
+		        </a> 
+		        <a class="ett-bttn med pri inf" href="#nope">Upload</a> 
+		    </li>
+		    <li><span class="filevalue" id="selectedfiles"><!-- Selected file name come here --></span></li>
+		</ul>	
+
+		<span id="htx-07" class="htx">Optional description text</span>
+				</li>
+				</ul>
+			</li>
+		</ul>
+
+		<ul class="eoc srb wrapped pri ">
+			<li class="etw-0">
+				<label ></label>
+			</li>
+			<li class="eic etw-100">
+				<ul class="hrow">	
+				<li class="">
+					<input class="ett-inpt etw-100 pri " placeholder="Normal" type="tel" name="card-security" aria-describedby="htx-04">
+                <span id="htx-04" class="htx" >Optional description text </span></li>
+				<li class=""><input type="range" class="ett-rnge pri"><span id="htx-04" class="htx" >Optional description text </span></li>
+				</ul>
+			</li>
+		</ul>
+
+			<ul class="eoc srb wrapped pri ">
+			<li class="etw-0">
+				<label ></label>
+			</li>
+			<li class="eic etw-100">
+				<ul class="hrow">	
+				<li class=""><span id="rdio-group" class="etb-rdio ett-rdio hor pri " aria-describedby="htx-08">
+                    <span >
+                        <input type="radio" name="rgroup3k" id="radio7"  aria-labelledby="radio-label-7" checked/>
+                        <label id="radio-label-7" class="flb" for="radio7" title="Option1">Option1</label>
+                       
+                    </span>
+                    <span >
+                        <input type="radio" name="rgroup3k" id="radio8" aria-labelledby="radio-label-8" />
+                        <label id="radio-label-8" class="flb err" for="radio8" title="Option2">Error</label>
+                       
+                    </span>	
+                    <span >
+                        <input type="radio" name="rgroup3k" disabled="disabled" id="radio9" aria-labelledby="radio-label-9" />
+                        <label id="radio-label-9" class="flb" for="radio9" title="Option3">Disabled</label>
+                        
+                    </span>	
+                     <span id="htx-08" class="htx">Optional description text</span>										
+               </span></li>
+				<li class=""> <span class="etb-rdio ett-rdio ver pri">
+                    <span >
+                        <input type="radio" name="rgroup3bu" id="radio7b"  aria-labelledby="radio-label-10" aria-describedby="htx-04"/>
+                        <label id="radio-label-10" class="flb" for="radio7b" title="Option1">Option1</label>
+                       <span id="htx-04" class="htx">Optional description text</span>
+                    </span>
+                    <span >
+                        <input type="radio" name="rgroup3bu" id="radio8b" aria-labelledby="radio-label-11" aria-describedby="htx-05"/>
+                        <label id="radio-label-11" class="flb err" for="radio8b" title="Option2">Error</label>
+                        <span id="htx-05" class="htx">Optional description text</span>
+                    </span>	
+                    <span >
+                        <input type="radio" name="rgroup3bu" disabled="disabled" id="radio9b" aria-labelledby="radio-label-12" aria-describedby="htx-06"/>
+                        <label id="radio-label-12" class="flb" for="radio9b" title="Option3">Disabled</label>
+                        <span id="htx-06" class="htx">Optional description text</span>
+                    </span>											
+                 </span></li>
+				</ul>
+			</li>
+		</ul>
+
+			<ul class="eoc srb wrapped pri ">
+			<li class="etw-40">
+				<label ></label>
+			</li>
+			<li class="eic etw-100">
+				<ul class="hrow">
+					<li class="">
+						<span id="sortcode_2" class="ett-srtc pri " rowno="-1">
+							<ul>
+								<li>
+									<input id="sortcode_2_00" class="ett-inpt pri lft" onkeydown="apz.SortCode.validateInput(this,event);" type="text">
+								</li>
+								<li style="width:10px" class="cen"> – </li>
+								<li>
+									<input id="sortcode_2_11" class="ett-inpt pri lft" onkeydown="apz.SortCode.validateInput(this,event);" type="text">
+								</li>
+								<li style="width:10px" class="cen"> – </li>
+								<li>
+									<input id="sortcode_2_22" class="ett-inpt pri lft accountreq" onkeydown="apz.SortCode.validateInput(this,event);" type="text">
+								</li>
+							</ul>
+						</span>
+						<span class="htx">Sort Code Hint Text</span>
+					</li>
+					<li class="">
+						<span id="sortcodeaccount_2" class="ett-srta pri " rowno="-1">
+							<ul>
+								<li>
+									<input id="sortcodeaccount_2_00" class="ett-inpt pri lft etw-100" style="" onkeydown="apz.SortCodeAccount.validateInput(this,event);" type="text">
+								</li>
+							</ul>
+						</span>
+						
+					</li>
+					
+				</ul>
+			</li>
+		</ul>
+
+		<ul class="eoc srb wrapped pri ">
+			<li class="etw-40">
+				<label ></label>
+			</li>
+			<li class="eic etw-100">
+				<ul class="hrow">	
+				<li class=""><ul class="ett-stpr etb-stpr pri">
+            <li >
+                <button  class="ett-bttn med pri" onclick="apz.handleStepperclick(this);" aria-label="Minus"><svg class="ett-icon icon-minus px24"><use xlink:href="#icon-minus"></use></svg></button>
+            </li>
+            <li>
+                <input type="text" id="input3" class="scb-col100 ett-inpt pri" placeholder="Value3" />
+            </li>
+            <li>
+                <button class="ett-bttn med pri stpr-add " onclick="apz.handleStepperclick(this);" aria-label="Plus"><svg class="ett-icon icon-plus px24"><use xlink:href="#icon-plus"></use></svg></button>
+            </li> 
+        </ul>  
+        <span class="htx">Hint for Stepper</span></li>
+				
+				</ul>
+			</li>
+		</ul>
+		<ul class="eoc srb wrapped pri ">
+			<li class="etw-40">
+				<label ></label>
+			</li>
+			<li class="eic etw-100">
+				<ul class="hrow">	
+				<li class=""><div class="etb-slct ett-slct pri scb-col100 err" tabindex="0">
+        <input type="text" class="sub-elt " value="Simple - Primary error " readonly title="Select Box">
+        <span class="sub-elt1"> <svg class="ett-icon icon-down px34"><use xlink:href="#icon-down"></use></svg></span>
+        <div class="sub-ctr">
+            <ul role="menu">
+                <li class="is-disabled">Option1</li>
+                <li>Option 2</li>
+                <li>Option 3</li>
+                <li>Option 4</li>
+                <li>Option 5</li>
+            </ul>
+        </div>
+    </div>  
+<span class="htx">Hint for dropdown</span></li>
+</li>
+				<li class=""><div class="etb-slct ett-slct sec scb-col100 " tabindex="0">
+        <input type="text" class="sub-elt " value="Simple - Primary error " readonly title="Select Box">
+        <span class="sub-elt1"> <svg class="ett-icon icon-down px34"><use xlink:href="#icon-down"></use></svg></span>
+        <div class="sub-ctr">
+            <ul role="menu">
+                <li class="is-disabled">Option1</li>
+                <li>Option 2</li>
+                <li>Option 3</li>
+                <li>Option 4</li>
+                <li>Option 5</li>
+            </ul>
+        </div>
+
+
+    </div>  
+
+<span class="htx">Hint for dropdown</span></li></li>
+				</ul>
+			
+
+			</li>
+		</ul>
+		<script type="text/javascript" charset="utf-8" src="scripts/jquery-3.1.1.min.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/jquery-ui.min.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/select2.min.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/appzillon.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/uiutils.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/swiper.min.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/tableHeadFixer.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/karthik-plugins.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/karthik-scripts.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/ripple.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/svgxuse.js"></script>
+
+		<script>
+		
+			$(document).ready(function() {
+				$('#SpriteSVG').load('svg-apz.svg');
+				$('#myButton').click(function(event) {
+		
+					// prevent page submit
+					event.preventDefault();
+					$("#SpriteSVG").text(" ");
+					// load the page into #SpriteSVG
+					$('#SpriteSVG').load('svg-apz.svg');
+		
+				});
+				$('#myButtonBCL').click(function(event) {
+		
+					// prevent page submit
+					event.preventDefault();
+					$("#SpriteSVG").text(" ");
+					// load the page into #SpriteSVG
+					$('#SpriteSVG').load('svg-bcl.svg');
+		
+				});
+				// load ripple effect for elements with class .rpl
+				//$('.rpl, .ripples').on('click', ripplesEffect);
+		
+			});
+		</script>  
+	</body>
+
+</html>

@@ -1,0 +1,697 @@
+/* B5 elements base start */
+.vcn {background-color:cornsilk}/* Validation container */
+.vtx {display:block; clear:both}/* Validation Text */
+.htx {display:block; clear:both}/* Hint text */
+
+/* Font sizes start */
+.fs10 {font-size:0.714em}/* 10px */
+.fs11 {font-size:0.786em}/* 11px */
+.fs12 {font-size:0.857em}/* 12px */
+.fs13 {font-size:0.929em}/* 13px */
+.fs14 {font-size:1.000em}/* 14px */
+.fs15 {font-size:1.071em}/* 15px */
+.fs16 {font-size:1.143em}/* 16px */
+.fs18 {font-size:1.286em}/* 18px */
+.fs20 {font-size:1.429em}/* 20px */
+.fs22 {font-size:1.571em}/* 22px */
+.fs24 {font-size:1.714em}/* 24px */
+.fs26 {font-size:1.857em}/* 26px */
+.fs28 {font-size:2.000em}/* 28px */
+.fs30 {font-size:2.143em}/* 30px */
+.fs32 {font-size:2.286em}/* 32px */
+.fs36 {font-size:2.571em}/* 36px */
+.fs42 {font-size:3.000em}/* 42px */
+.fs48 {font-size:3.429em}/* 48px */
+.fs52 {font-size:3.714em}/* 52px */
+.fs64 {font-size:4.571em}/* 64px */
+.fs72 {font-size:5.143em}/* 72px */
+.fs84 {font-size:6.000em}/* 84px */
+.fs96 {font-size:6.857em}/* 96px */
+/* Font sizes end */
+
+
+/* icon sizes */
+.px12 {
+	width:12px;/* 0.750em;/*12px*/
+	height:12px;/* 0.750em;/*12px*/
+}
+
+.px14 {
+	width:14px; /* 0.875em;/*14px*/
+	height:14px; /* 0.875em;/*14px*/
+
+}
+
+.px16 {
+	width:16px; /* 1em;/*16px*/
+	height:16px; /* 1em;/*16px*/
+}
+
+.px18 {
+	width:18px; /* 1.125em;/*18px*/
+	height:18px; /* 1.125em;/*18px*/
+}
+
+.px20 {
+	width:20px; /*  1.250em;/*20px*/
+	height:20px; /* 1.250em;/*20px*/
+}
+
+.px22 {
+	width:22px; /* 1.375em;/*22px*/
+	height:22px; /* 1.375em;/*22px*/
+}
+
+.px24 {
+	width: 24px; /*1.500em;/*24*/
+	height:24px; /* 1.500em;/*24*/
+}
+
+.px28 {
+	width:28px; /* 1.750em;/*28px*/
+	height:28px; /* 1.750em;/*28px*/
+}
+
+.px32 {
+	width:32px; /* 2.0;/*32px*/
+	height:32px; /* 2.0;/*32px*/
+}
+
+.px34 {
+	width:34px; /* 2.125em;/*34px*/
+	height:34px; /* 2.125em;/*34px*/
+}
+
+.px40 {
+	width:40px; /* 2.250em;/*40px*/
+	height:40px; /* 2.250em;/*40px*/
+}
+
+.px48 {
+	width:48px; /* 3em;/*48px*/
+	height:48px; /* 3em;/*48px*/
+}
+
+.px52 {
+	width:52px; /* 3.250em;/*52px*/
+	height:52px; /* 3.250em;/*52px*/
+}
+
+.px64 {
+	width:64px; /* 4em;/*64px*/
+	height:64px; /* 4em;/*64px*/
+}
+
+.px72 {
+	width:72px; /* 4.5em;/*72px*/
+	height:72px; /* 4.5em;/*72px*/
+}
+
+.px84 {
+	width:84px; 
+	height:84px;
+}
+
+.px92 {
+	width:92px; 
+	height:92px;
+}
+
+.px128 {
+	width:128px;
+	height:128px;
+}
+
+.px256 {
+	width:256px;
+	height:256px;
+}
+
+.px512 {
+	width:512px;
+	height:512px;
+}
+
+/* icon sizes end */
+/* button effects start */
+/* ripple */
+		/* ******************************
+			 RIPPLES EFFECT
+			 ****************************** */
+			.rpl {
+				overflow: hidden;
+				cursor: pointer;
+				position: relative;
+				z-index: 10;
+				display: inline-block;
+				-webkit-transition: all 0.2s ease;
+				-moz-transition: all 0.2s ease;
+				-o-transition: all 0.2s ease;
+				transition: all 0.2s ease;
+				-ms-touch-action: manipulation;
+				touch-action: manipulation;
+				-webkit-user-select: none;
+				-moz-user-select: none;
+				-ms-user-select: none;
+				user-select: none;
+				-webkit-backface-visibility: hidden;
+				backface-visibility: hidden;
+			}				
+			
+			.ripples {
+				overflow: hidden;
+				position: relative;
+			}
+
+			.waves {
+				position: absolute;
+				display: block;
+				border-radius: 100%;
+				background-color: rgba(255, 255, 255, 0.5);
+				-webkit-transform: scale(0);
+				-moz-transform: scale(0);
+				-o-transform: scale(0);
+				transform: scale(0);
+			}
+
+			.ripple {
+				-webkit-animation: ripple 0.45s linear;
+				-moz-animation: ripple 0.45s linear;
+				-ms-animation: ripple 0.45s linear;
+				-o-animation: ripple 0.45s linear;
+				animation: ripple 0.45s linear;
+			}
+
+			@-webkit-keyframes ripple {
+			100% {
+			opacity: 0;
+			-webkit-transform: scale(2.5);
+			}
+			}
+
+			@-moz-keyframes ripple {
+			100% {
+			opacity: 0;
+			-moz-transform: scale(2.5);
+			}
+			}
+
+			@-o-keyframes ripple {
+			100% {
+			opacity: 0;
+			-o-transform: scale(2.5);
+			}
+			}
+
+			@keyframes ripple {
+			100% {
+			opacity: 0;
+			transform: scale(2.5);
+			}
+			}	
+
+/* button effects end */
+/* select start */
+
+ /* select box  variations */ 
+.sub-elt {white-space: nowrap; overflow: hidden;text-overflow: ellipsis;display: inline-block;cursor: default;} 
+.sub-elt1 {/*position: absolute;right: 0;top: 0;*/}    
+.sub-ctr {left: 0;top: 100%;position: absolute;z-index: 8;overflow: hidden;overflow-y: auto;visibility: hidden;opacity: 0;
+    -webkit-transition: -webkit-transform .25s ease-out, opacity 1s ease-out, visibility 1s ease-out;
+          transition:         transform .25s ease-out, opacity 1s ease-out, visibility 1s ease-out;
+  -webkit-transform-origin: top center;
+      -ms-transform-origin: top center;
+          transform-origin: top center;
+  -webkit-transform: scaleY(0);
+		 -moz-transform: scaleY(0);
+			-ms-transform: scaleY(0);
+					transform: scaleY(0);
+} 
+.sub-ctr ul {list-style: none;}
+.sub-ctr ul li {list-style: none;cursor: pointer;display: inline-block;white-space: nowrap;}
+.sub-ctr ul li.is-disabled,.sub-ctr ul li.disabled {cursor: not-allowed;opacity:0.3;}
+.is-tiered .sub-ctr ul li .menu-expand {display: inline-block;position: absolute;}
+.sub-ctr ul ul {display: none;}  
+.is-multi-tiered .sub-ctr ul li {display: block;} 
+/*************************select element barclays cssby karthik*****************************************/ 
+
+ 
+ /* required for select container dropdown */
+
+/* acpt SELECT SELECTED PAINTED */
+.select2-hidden-accessible { clip: rect(0 0 0 0) !important;overflow: hidden !important;position: absolute !important;}
+.select2-container .select2-selection--single .select2-selection__rendered {display: block;overflow: hidden;text-overflow: ellipsis;
+  white-space: nowrap;}
+.select2-container .select2-selection--single {cursor: pointer;display: block;user-select: none;-webkit-user-select: none;}
+.select2-container .select2-selection--single .select2-selection__clear {position: relative;}
+.select2-container--default .select2-selection--single .select2-selection__arrow,
+.select2-container--default .select2-selection--multiple:after {position: absolute;right: 1px;top: 1px;} 
+.select2-container--default .select2-selection--single .select2-selection__arrow b { display: none;}
+.select2-container--default[dir="rtl"] .select2-selection--single .select2-selection__arrow {left: 1px;right: auto;}
+.select2-container--default.select2-container--disabled .select2-selection--single {cursor: default;}
+.select2-container--default.select2-container--disabled .select2-selection--single .select2-selection__clear {display: none;}
+
+/* CONTAINER DROPDOWN ACPT*/
+.select2-container--open .select2-dropdown--above {margin-top: -3px;} 
+.select2-container--open .select2-dropdown--below {margin-top: 3px;}
+.select2-container {display: inline-block;position: relative;vertical-align: middle;} 
+.select2-container--open .select2-dropdown {left: 0;overflow: hidden;}
+.select2-search--dropdown {display: block;}
+.select2-search--dropdown .select2-search__field { box-sizing: border-box;}
+.select2-results {display: block;}
+.select2-results__option {user-select: none;-webkit-user-select: none;} 
+.select2-container--default .select2-results > .select2-results__options {overflow-y: auto;}
+.select2-results__options {list-style: none;}
+.select2-results__option[aria-selected] {cursor: pointer;} 
+
+/****mltt SELECT SELECTED PAINTED****/
+
+.select2-container--default .select2-selection--multiple:after { content: '';}
+.select2-container--default .select2-selection--multiple:after {position: absolute;right: 1px;top: 1px;} 
+.select2-container--default .select2-selection--multiple {cursor: text;}
+.select2-container .select2-selection--multiple .select2-selection__rendered{display: inline-block;overflow: hidden;text-overflow: ellipsis;
+  white-space: nowrap;}
+.select2-container--default .select2-selection--multiple .select2-selection__rendered {box-sizing: border-box;list-style: none;}
+.select2-container--default .select2-selection--multiple .select2-selection__rendered li {list-style: none;}
+.select2-container .select2-search--inline {float: left;}
+.select2-container .select2-search--inline .select2-search__field {box-sizing: border-box;border: none;}
+.select2-container .select2-search--inline .select2-search__field::-webkit-search-cancel-button {-webkit-appearance: none;}
+.select2-container--default .select2-selection--multiple .select2-selection__placeholder {float: left;}
+.select2-container--default .select2-selection--multiple .select2-selection__clear {cursor: pointer;float: right;}
+.select2-container--default .select2-selection--multiple .select2-selection__choice {cursor: default;float: left;}
+.select2-container--default .select2-selection--multiple .select2-selection__choice__remove {cursor:pointer;display:inline-block; float:right;}
+.select2-container--default[dir="rtl"] .select2-selection--multiple .select2-selection__choice,
+.select2-container--default[dir="rtl"] .select2-selection--multiple .select2-selection__placeholder,
+.select2-container--default[dir="rtl"] .select2-selection--multiple .select2-search--inline {float: right;}
+ .select2-container--default.select2-container--disabled .select2-selection--multiple {cursor: default;}
+.select2-container--default.select2-container--disabled .select2-selection__choice__remove {display: none;}
+ .select2-container--default .select2-search--inline .select2-search__field {-webkit-appearance: textfield;}
+
+/* CONTAINER DROPDOWN MLTT*/
+.select2-dropdown {display: block;position: absolute;left: -100000px;z-index: 1051;}
+.select2-search--dropdown.select2-search--hide { display: none;}
+.select2-container .select2-selection--multiple {box-sizing: border-box;cursor: pointer;display: block;user-select: none;
+     -webkit-user-select: none;}
+.select2-close-mask { display: block; position: fixed;left: 0;top: 0;opacity: 0;z-index: 99;filter: alpha(opacity=0);}
+.select2-container--default[dir="rtl"] .select2-selection--single .select2-selection__clear {float: left;} 
+ .select2-container--default .select2-results__group { cursor: default;display: block;}   
+
+/******************** checkbox in Select box  child  start by karthik********/
+
+.form-group--radio input[type=radio],.form-group--checkbox input[type=checkbox] {position: absolute;z-index: -1000;overflow: hidden;
+  clip: rect(0 0 0 0);}
+.form-group--radio input[type=radio]+label,.form-group--checkbox input[type=checkbox]+label {display: inline-block;vertical-align: middle;
+  cursor: pointer;}
+
+.form-group--radio input[type=radio]+label:before,.form-group--checkbox input[type=checkbox]+label:before {content: "";
+    display: inline-block;vertical-align: middle;}
+
+.form-group--radio input[type=radio]+label:before {transition: .2s ease-out box-shadow;}
+  
+.form-group--radio input[type=radio][disabled]+label:hover,.form-group--checkbox input[type=checkbox][disabled]+label:hover {
+  cursor: not-allowed;}
+
+.form-group--radio input[type=radio][disabled]+label:before,
+.form-group--radio input[type=radio][disabled]+label:hover:before,
+.form-group--radio input[type=radio][disabled]:focus+label:before,
+.form-group--checkbox input[type=checkbox][disabled]+label:before,
+.form-group--checkbox input[type=checkbox][disabled]+label:hover:before,
+.form-group--checkbox input[type=checkbox][disabled]:focus+label:before {
+  cursor: not-allowed;
+} 
+.form-group--radio input[type=radio][disabled]:checked+label:before {box-shadow: inset 0 0 0 .35em #f7f7f7;} 
+
+
+/*Added for dropdown toggle on svg icon click */
+.sub-elt1 > svg {pointer-events: none;}
+
+/*************select new class****************/
+
+.etb-slct {position: relative;    display: table;    cursor: pointer;}
+.etb-slcn{ }
+.etb-slct.is-open .sub-ctr,.button-group.is-open .sub-ctr {
+	visibility: visible;
+	opacity: 1;
+  -webkit-transform: scaleY(1);
+		 -moz-transform: scaleY(1);
+			-ms-transform: scaleY(1);
+					transform: scaleY(1);
+          transition: -webkit-transform .25s ease-out, opacity 0s ease-out, visibility 0s ease-out;
+          transition:         transform .25s ease-out, opacity 0s ease-out, visibility 0s ease-out;
+}
+
+.etb-slct.is-above .sub-ctr,
+.button-group.is-above .sub-ctr {
+  top: auto;
+  bottom: 100%;
+  -webkit-transform-origin: bottom center;
+      -ms-transform-origin: bottom center;
+          transform-origin: bottom center;
+  -webkit-transform: scaleY(1);
+		 -moz-transform: scaleY(1);
+			-ms-transform: scaleY(1);
+					transform: scaleY(1);
+          transition: -webkit-transform .25s ease-out, opacity 0s ease-out, visibility 0s ease-out;
+          transition:         transform .25s ease-out, opacity 0s ease-out, visibility 0s ease-out;
+} 
+
+/* select end */
+/* Tags Start */ 
+.tagsinput {overflow-y: auto;}
+.tagsinput {overflow-y: auto;}
+.tagsinput span.tag {display: block; float: left}
+.tagsinput span.tag a {} 
+.tagsinput input {}
+.tagsinput div {display:block; float: left; } 
+.tags_clear { clear: both; } 
+/* Tags End */ 
+/* Select with input start */
+.slin-dropdown {position: relative;display: table;cursor: pointer;} 
+/*.dropdown-button {position: absolute;right: 0;top: 0;} */  
+.dropdown-list {left: 0;top: 100%;position: absolute;z-index: 10;overflow: hidden;overflow-y: auto;visibility: hidden;opacity: 0;
+  -webkit-transition: -webkit-transform .25s ease-out, opacity 1s ease-out, visibility 1s ease-out;
+          transition:         transform .25s ease-out, opacity 1s ease-out, visibility 1s ease-out;
+  -webkit-transform-origin: top center;
+      -ms-transform-origin: top center;
+          transform-origin: top center;
+  -webkit-transform: scaleY(0);
+		 -moz-transform: scaleY(0);
+			-ms-transform: scaleY(0);
+					transform: scaleY(0);
+}
+.slin-dropdown.is-open .dropdown-list {visibility: visible;opacity: 1;
+  -webkit-transform: scaleY(1);
+		 -moz-transform: scaleY(1);
+			-ms-transform: scaleY(1);
+					transform: scaleY(1);
+          transition: -webkit-transform .25s ease-out, opacity 0s ease-out, visibility 0s ease-out;
+          transition:         transform .25s ease-out, opacity 0s ease-out, visibility 0s ease-out;
+}
+.slin-dropdown.is-above .dropdown-list{top: auto;bottom: 100%;-webkit-transform-origin: bottom center;
+      -ms-transform-origin: bottom center;
+          transform-origin: bottom center;
+  -webkit-transform: scaleY(1);
+		 -moz-transform: scaleY(1);
+			-ms-transform: scaleY(1);
+					transform: scaleY(1);
+          transition: -webkit-transform .25s ease-out, opacity 0s ease-out, visibility 0s ease-out;
+          transition:         transform .25s ease-out, opacity 0s ease-out, visibility 0s ease-out;
+}
+.dropdown-list ul {list-style: none;}
+.dropdown-list li {list-style: none;cursor: pointer;display: inline-block;white-space: nowrap;}
+.dropdown-list li.is-disabled,.dropdown-list li.disabled {cursor: not-allowed;}
+/* Select with input end */
+
+
+/* Radio css start */
+
+/* radio css primary variation start vertical*/
+.etb-rdio.ver.pri input[type=radio]{opacity:0}  
+.etb-rdio.ver.pri input[type=radio] + label{display:inline-block; }  
+.etb-rdio.ver.pri {position:relative;}
+.etb-rdio.ver.pri input[type=radio] {position: absolute;z-index: -1000;overflow: hidden;clip: rect(0 0 0 0);}
+.etb-rdio.ver.pri input[type=radio]+label{display: inline-block;vertical-align: middle;cursor: pointer;}
+.etb-rdio.ver.pri input[type=radio]+label:before{content: "";display: inline-block;vertical-align: middle;}
+.etb-rdio.ver.pri input[type=radio]+label:before {transition: .2s ease-out box-shadow;}
+.etb-rdio.ver.pri input[type=radio][disabled]+label:hover{cursor: not-allowed;}
+.etb-rdio.ver.pri input[type=radio][disabled]+label:before,
+.etb-rdio.ver.pri input[type=radio][disabled]+label:hover:before,
+.etb-rdio.ver.pri input[type=radio][disabled]:focus+label:before{cursor: not-allowed;}
+/* radio css primary variation start horizontal*/
+.etb-rdio.hor.pri input[type=radio]{opacity:0}  
+.etb-rdio.hor.pri input[type=radio] + label{display:inline-block; }  
+.etb-rdio.hor.pri {position:relative;}
+.etb-rdio.hor.pri input[type=radio] {position: absolute;z-index: -1000;overflow: hidden;clip: rect(0 0 0 0);}
+.etb-rdio.hor.pri input[type=radio]+label{display: inline-block;vertical-align: middle;cursor: pointer;}
+.etb-rdio.hor.pri input[type=radio]+label:before{content: "";display: inline-block;vertical-align: middle;}
+.etb-rdio.hor.pri input[type=radio]+label:before {transition: .2s ease-out box-shadow;}
+.etb-rdio.hor.pri input[type=radio][disabled]+label:hover{cursor: not-allowed;}
+.etb-rdio.hor.pri input[type=radio][disabled]+label:before,
+.etb-rdio.hor.pri input[type=radio][disabled]+label:hover:before,
+.etb-rdio.hor.pri input[type=radio][disabled]:focus+label:before{cursor: not-allowed;}
+
+/* radio css secondary variation start vertical*/
+.etb-rdio.ver.sec input[type=radio]{opacity:0}  
+.etb-rdio.ver.sec input[type=radio] + label{display:inline-block; }  
+.etb-rdio.ver.sec {position:relative;}
+.etb-rdio.ver.sec input[type=radio] {position: absolute;z-index: -1000;overflow: hidden;clip: rect(0 0 0 0);}
+.etb-rdio.ver.sec input[type=radio]+label{display: inline-block;vertical-align: middle;cursor: pointer;}
+.etb-rdio.ver.sec input[type=radio]+label:before{content: "";display: inline-block;vertical-align: middle;}
+.etb-rdio.ver.sec input[type=radio]+label:before {transition: .2s ease-out box-shadow;}
+.etb-rdio.ver.sec input[type=radio][disabled]+label:hover{cursor: not-allowed;}
+.etb-rdio.ver.sec input[type=radio][disabled]+label:before,
+.etb-rdio.ver.sec input[type=radio][disabled]+label:hover:before,
+.etb-rdio.ver.sec input[type=radio][disabled]:focus+label:before{cursor: not-allowed;}
+/* radio css secondary variation start horizontal*/
+.etb-rdio.hor.sec input[type=radio]{opacity:0}  
+.etb-rdio.hor.sec input[type=radio] + label{display:inline-block; }  
+.etb-rdio.hor.sec {position:relative;}
+.etb-rdio.hor.sec input[type=radio] {position: absolute;z-index: -1000;overflow: hidden;clip: rect(0 0 0 0);}
+.etb-rdio.hor.sec input[type=radio]+label{display: inline-block;vertical-align: middle;cursor: pointer;}
+.etb-rdio.hor.sec input[type=radio]+label:before{content: "";display: inline-block;vertical-align: middle;}
+.etb-rdio.hor.sec input[type=radio]+label:before {transition: .2s ease-out box-shadow;}
+.etb-rdio.hor.sec input[type=radio][disabled]+label:hover{cursor: not-allowed;}
+.etb-rdio.hor.sec input[type=radio][disabled]+label:before,
+.etb-rdio.hor.sec input[type=radio][disabled]+label:hover:before,
+.etb-rdio.hor.sec input[type=radio][disabled]:focus+label:before{cursor: not-allowed;}
+
+/* radio css teritiary variation start vertical*/
+.etb-rdio.ver.ter input[type=radio]{opacity:0}  
+.etb-rdio.ver.ter input[type=radio] + label{display:inline-block; }  
+.etb-rdio.ver.ter {position:relative;}
+.etb-rdio.ver.ter input[type=radio] {position: absolute;z-index: -1000;overflow: hidden;clip: rect(0 0 0 0);}
+.etb-rdio.ver.ter input[type=radio]+label{display: inline-block;vertical-align: middle;cursor: pointer;}
+.etb-rdio.ver.ter input[type=radio]+label:before{content: "";display: inline-block;vertical-align: middle;}
+.etb-rdio.ver.ter input[type=radio]+label:before {transition: .2s ease-out box-shadow;}
+.etb-rdio.ver.ter input[type=radio][disabled]+label:hover{cursor: not-allowed;}
+.etb-rdio.ver.ter input[type=radio][disabled]+label:before,
+.etb-rdio.ver.ter input[type=radio][disabled]+label:hover:before,
+.etb-rdio.ver.ter input[type=radio][disabled]:focus+label:before{cursor: not-allowed;}
+/* radio css teritiary variation start horizontal*/
+.etb-rdio.hor.ter input[type=radio]{opacity:0}  
+.etb-rdio.hor.ter input[type=radio] + label{display:inline-block; }  
+.etb-rdio.hor.ter {position:relative;}
+.etb-rdio.hor.ter input[type=radio] {position: absolute;z-index: -1000;overflow: hidden;clip: rect(0 0 0 0);}
+.etb-rdio.hor.ter input[type=radio]+label{display: inline-block;vertical-align: middle;cursor: pointer;}
+.etb-rdio.hor.ter input[type=radio]+label:before{content: "";display: inline-block;vertical-align: middle;}
+.etb-rdio.hor.ter input[type=radio]+label:before {transition: .2s ease-out box-shadow;}
+.etb-rdio.hor.ter input[type=radio][disabled]+label:hover{cursor: not-allowed;}
+.etb-rdio.hor.ter input[type=radio][disabled]+label:before,
+.etb-rdio.hor.ter input[type=radio][disabled]+label:hover:before,
+.etb-rdio.hor.ter input[type=radio][disabled]:focus+label:before{cursor: not-allowed;}
+
+/* Radio button-group start*/
+/* primary variation css */
+.etb-rdgp.pri .rdio-btn-grp { /*display: inline-block;*/ float: left; position: relative;}
+.etb-rdgp.pri [data-toggle="buttons"] input[type="radio"]{clip: rect(0px, 0px, 0px, 0px);pointer-events: none;position: absolute;}
+.etb-rdgp.pri .rdio-btn {display: inline-block;white-space: nowrap;vertical-align: middle;-ms-touch-action: manipulation;
+    touch-action: manipulation;cursor: pointer;-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;}
+
+/* secondary variation css */
+.etb-rdgp.sec .rdio-btn-grp { /*display: inline-block;*/ float: left; position: relative;}
+.etb-rdgp.sec [data-toggle="buttons"] input[type="radio"]{clip: rect(0px, 0px, 0px, 0px);pointer-events: none;position: absolute;}
+.etb-rdgp.sec .rdio-btn {display: inline-block;white-space: nowrap;vertical-align: middle;-ms-touch-action: manipulation;
+    touch-action: manipulation;cursor: pointer;-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;}
+
+/* teritiary variation css */
+.etb-rdgp.ter .rdio-btn-grp {/*display: inline-block;*/ float: left;position: relative;}
+.etb-rdgp.ter [data-toggle="buttons"] input[type="radio"]{clip: rect(0px, 0px, 0px, 0px);pointer-events: none;position: absolute;}
+.etb-rdgp.ter .rdio-btn {display: inline-block;white-space: nowrap;vertical-align: middle;-ms-touch-action: manipulation;
+    touch-action: manipulation;cursor: pointer;-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;}
+/* RAdio button-group end */
+
+/* Radio css end */
+
+/* checkbox css start */ 
+
+/* primary variation checkboc horizontal */
+
+.etb-chek.hor.pri input[type=checkbox]{opacity:0}
+.etb-chek.hor.pri input[type=checkbox] + label {display:inline-block; }
+.etb-chek.hor.pri [data-toggle="buttons"] input[type="checkbox"] {clip: rect(0px, 0px, 0px, 0px);pointer-events: none;position: absolute;}
+.etb-chek.hor.pri input[type=checkbox] {position: absolute;z-index: -1000;overflow: hidden;clip: rect(0 0 0 0);}
+.etb-chek.hor.pri input[type=checkbox]+label {display: inline-block;vertical-align: middle;cursor: pointer;}
+.etb-chek.hor.pri input[type=checkbox]+label:before {content: "";display: inline-block;vertical-align: middle;}
+/* primary variation checkbox vertical */
+
+.etb-chek.ver.pri input[type=checkbox]{opacity:0}
+.etb-chek.ver.pri input[type=checkbox] + label {display:inline-block; }
+.etb-chek.ver.pri [data-toggle="buttons"] input[type="checkbox"] {clip: rect(0px, 0px, 0px, 0px);pointer-events: none;position: absolute;}
+.etb-chek.ver.pri input[type=checkbox] {position: absolute;z-index: -1000;overflow: hidden;clip: rect(0 0 0 0);}
+.etb-chek.ver.pri input[type=checkbox]+label {display: inline-block;vertical-align: middle;cursor: pointer;}
+.etb-chek.ver.pri input[type=checkbox]+label:before {content: "";display: inline-block;vertical-align: middle;}
+
+/* secondary variation checkboc horizontal */
+
+.etb-chek.hor.sec input[type=checkbox]{opacity:0}
+.etb-chek.hor.sec input[type=checkbox] + label {display:inline-block; }
+.etb-chek.hor.sec [data-toggle="buttons"] input[type="checkbox"] {clip: rect(0px, 0px, 0px, 0px);pointer-events: none;position: absolute;}
+.etb-chek.hor.sec input[type=checkbox] {position: absolute;z-index: -1000;overflow: hidden;clip: rect(0 0 0 0);}
+.etb-chek.hor.sec input[type=checkbox]+label {display: inline-block;vertical-align: middle;cursor: pointer;}
+.etb-chek.hor.sec input[type=checkbox]+label:before {content: "";display: inline-block;vertical-align: middle;}
+/* secondary variation checkbox vertical */
+
+.etb-chek.ver.sec input[type=checkbox]{opacity:0}
+.etb-chek.ver.sec input[type=checkbox] + label {display:inline-block; }
+.etb-chek.ver.sec [data-toggle="buttons"] input[type="checkbox"] {clip: rect(0px, 0px, 0px, 0px);pointer-events: none;position: absolute;}
+.etb-chek.ver.sec input[type=checkbox] {position: absolute;z-index: -1000;overflow: hidden;clip: rect(0 0 0 0);}
+.etb-chek.ver.sec input[type=checkbox]+label {display: inline-block;vertical-align: middle;cursor: pointer;}
+.etb-chek.ver.sec input[type=checkbox]+label:before {content: "";display: inline-block;vertical-align: middle;}
+
+/* teritiary variation checkboc horizontal */
+
+.etb-chek.hor.ter input[type=checkbox]{opacity:0}
+.etb-chek.hor.ter input[type=checkbox] + label {display:inline-block; }
+.etb-chek.hor.ter [data-toggle="buttons"] input[type="checkbox"] {clip: rect(0px, 0px, 0px, 0px);pointer-events: none;position: absolute;}
+.etb-chek.hor.ter input[type=checkbox] {position: absolute;z-index: -1000;overflow: hidden;clip: rect(0 0 0 0);}
+.etb-chek.hor.ter input[type=checkbox]+label {display: inline-block;vertical-align: middle;cursor: pointer;}
+.etb-chek.hor.ter input[type=checkbox]+label:before {content: "";display: inline-block;vertical-align: middle;}
+/* teritiary variation checkbox vertical */
+
+.etb-chek.ver.ter input[type=checkbox]{opacity:0}
+.etb-chek.ver.ter input[type=checkbox] + label {display:inline-block; }
+.etb-chek.ver.ter [data-toggle="buttons"] input[type="checkbox"] {clip: rect(0px, 0px, 0px, 0px);pointer-events: none;position: absolute;}
+.etb-chek.ver.ter input[type=checkbox] {position: absolute;z-index: -1000;overflow: hidden;clip: rect(0 0 0 0);}
+.etb-chek.ver.ter input[type=checkbox]+label {display: inline-block;vertical-align: middle;cursor: pointer;}
+.etb-chek.ver.ter input[type=checkbox]+label:before {content: "";display: inline-block;vertical-align: middle;}
+
+/* checkbox css end */
+
+
+/* Dropdown start*/
+ /* Dropdown primary css */
+.etb-drdn.pri {display: inline-block;position: relative;}
+.etb-drdn.pri .drdn {-moz-user-select: none;cursor: pointer;display: inline-block;touch-action: manipulation;vertical-align: middle;white-space: nowrap;}
+.etb-drdn.pri .icon {background-color: transparent;background-position: 50% 50%;background-repeat: no-repeat;background-size: 85% auto;
+    border: medium none;display: inline-block;min-height: 1em;min-width: 1em;position: relative;top: -1px;vertical-align: middle;}
+.etb-drdn.pri.is-open .drdn-list {opacity: 1;transform: scaleY(1);transition: transform 0.25s ease-out 0s, opacity 0s ease-out 0s, visibility 0s ease-out 0s;visibility: visible;}
+.etb-drdn.pri .drdn-list {left: 0;opacity: 0;overflow-x: hidden;overflow-y: auto;position: absolute;top: 100%;transform: scaleY(0);
+    transform-origin: center top 0;transition: transform 0.25s ease-out 0s, opacity 1s ease-out 0s, visibility 1s ease-out 0s;
+    visibility: hidden;z-index: 10;}
+.etb-drdn.pri .drdn-list ul {list-style: outside none none;}
+.etb-drdn.pri.is-open .drdn-list {visibility: visible;}
+.etb-drdn.pri .drdn-list li {cursor: pointer;display: inline-block;list-style: outside none none;white-space: nowrap;}
+.etb-drdn.pri .drdn.disabled{cursor:not-allowed;} 
+
+/* Dropdown secondary css */
+.etb-drdn.sec {display: inline-block;position: relative;}
+.etb-drdn.sec .drdn {-moz-user-select: none;cursor: pointer;display: inline-block;touch-action: manipulation;vertical-align: middle;white-space: nowrap;}
+.etb-drdn.sec .icon {background-color: transparent;background-position: 50% 50%;background-repeat: no-repeat;background-size: 85% auto;
+    border: medium none;display: inline-block;min-height: 1em;min-width: 1em;position: relative;top: -1px;vertical-align: middle;}
+.etb-drdn.sec.is-open .drdn-list {opacity: 1;transform: scaleY(1);transition: transform 0.25s ease-out 0s, opacity 0s ease-out 0s, visibility 0s ease-out 0s;visibility: visible;}
+.etb-drdn.sec .drdn-list {left: 0;opacity: 0;overflow-x: hidden;overflow-y: auto;position: absolute;top: 100%;transform: scaleY(0);
+    transform-origin: center top 0;transition: transform 0.25s ease-out 0s, opacity 1s ease-out 0s, visibility 1s ease-out 0s;
+    visibility: hidden;z-index: 10;}
+.etb-drdn.sec .drdn-list ul {list-style: outside none none;}
+.etb-drdn.sec.is-open .drdn-list {visibility: visible;}
+.etb-drdn.sec .drdn-list li {cursor: pointer;display: inline-block;list-style: outside none none;white-space: nowrap;}
+.etb-drdn.sec .drdn.disabled{cursor:not-allowed;} 
+
+/* Dropdown teritiary css */
+.etb-drdn.ter {display: inline-block;position: relative;}
+.etb-drdn.ter .drdn {-moz-user-select: none;cursor: pointer;display: inline-block;touch-action: manipulation;vertical-align: middle;white-space: nowrap;}
+.etb-drdn.ter .icon {background-color: transparent;background-position: 50% 50%;background-repeat: no-repeat;background-size: 85% auto;
+    border: medium none;display: inline-block;min-height: 1em;min-width: 1em;position: relative;top: -1px;vertical-align: middle;}
+.etb-drdn.ter.is-open .drdn-list {opacity: 1;transform: scaleY(1);transition: transform 0.25s ease-out 0s, opacity 0s ease-out 0s, visibility 0s ease-out 0s;visibility: visible;}
+.etb-drdn.ter .drdn-list {left: 0;opacity: 0;overflow-x: hidden;overflow-y: auto;position: absolute;top: 100%;transform: scaleY(0);
+    transform-origin: center top 0;transition: transform 0.25s ease-out 0s, opacity 1s ease-out 0s, visibility 1s ease-out 0s;
+    visibility: hidden;z-index: 10;}
+.etb-drdn.ter .drdn-list ul {list-style: outside none none;}
+.etb-drdn.ter.is-open .drdn-list {visibility: visible;}
+.etb-drdn.ter .drdn-list li {cursor: pointer;display: inline-block;list-style: outside none none;white-space: nowrap;}
+.etb-drdn.ter .drdn.disabled{cursor:not-allowed;} 
+/* Dropdown end */
+
+
+/* Stepper */
+
+/* primary css */
+.etb-stpr.pri li:first-child button{display: block;position: relative; margin: 0; border-radius: 0; }
+.etb-stpr.pri li:last-child button {display: block;position: relative; margin: 0; border-radius: 0; }
+
+/* seconadry css */
+.etb-stpr.sec li:first-child button{display: block;position: relative; margin: 0; }
+.etb-stpr.sec li:last-child button {display: block;position: relative; margin: 0; }
+
+/* teritiary css */
+.etb-stpr.ter li:first-child button{display: block;position: relative; margin: 0; box-shadow: none; }
+.etb-stpr.ter li:last-child button {display: block;position: relative; margin: 0; box-shadow: none; }
+
+/*Toggle With Label*/
+
+.ett-swch.pri {position: relative; display: block; }
+.ett-swch.pri *{-webkit-box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -o-box-sizing: border-box; box-sizing: border-box}
+.ett-swch.pri input {position: absolute; opacity: 0}
+.ett-swch.pri label {position: relative; z-index: 2; float: left; vertical-align: middle}
+.ett-swch.pri input:last-of-type:checked ~ .tslide {left: calc(50% - 1px) }
+.ett-swch.pri .tslide {	position: absolute; top: 1px; left: 1px; z-index: 1;display: block; -webkit-transition: all 0.1s ease-out; 	-moz-transition: all 0.1s ease-out; -ms-transition: all 0.1s ease-out; 	-o-transition: all 0.1s ease-out; transition: all 0.1s ease-out;}
+.ett-swch.pri {-webkit-animation: bugfix infinite .1s;}
+
+
+.ett-swch.sec {position: relative; display: block; }
+.ett-swch.sec *{-webkit-box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -o-box-sizing: border-box; box-sizing: border-box}
+.ett-swch.sec input {position: absolute; opacity: 0}
+.ett-swch.sec label {position: relative; z-index: 2; float: left; vertical-align: middle}
+.ett-swch.sec input:last-of-type:checked ~ .tslide {left: calc(50% - 1px) }
+.ett-swch.sec .tslide {	position: absolute; top: 1px; left: 1px; z-index: 1;display: block; -webkit-transition: all 0.1s ease-out; 	-moz-transition: all 0.1s ease-out; -ms-transition: all 0.1s ease-out; 	-o-transition: all 0.1s ease-out; transition: all 0.1s ease-out;}
+.ett-swch.sec {-webkit-animation: bugfix infinite .1s;}
+
+
+.ett-swch.ter {position: relative; display: block; }
+.ett-swch.ter *{-webkit-box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -o-box-sizing: border-box; box-sizing: border-box}
+.ett-swch.ter input {position: absolute; opacity: 0}
+.ett-swch.ter label {position: relative; z-index: 2; float: left; vertical-align: middle}
+.ett-swch.ter input:last-of-type:checked ~ .tslide {left: calc(50% - 1px) }
+.ett-swch.ter .tslide {	position: absolute; top: 1px; left: 1px; z-index: 1;display: block; -webkit-transition: all 0.1s ease-out; 	-moz-transition: all 0.1s ease-out; -ms-transition: all 0.1s ease-out; 	-o-transition: all 0.1s ease-out; transition: all 0.1s ease-out;}
+.ett-swch.ter {-webkit-animation: bugfix infinite .1s;}
+
+/* toggle css end */
+ 
+/* flaoting label start */ 
+
+.flbl {position: relative;clear:both;} 
+.flbl input {outline: none;/*position: absolute;*/top: 0;left: 0;display: block;} 
+.flbl textarea {outline: none;/*position: absolute;*/top: 0;left: 0;display: block;z-index: 2;} 
+.flbl label {display: block;position: absolute;left: 2px;z-index: 1;}
+.flbl li {clear: both;}
+.flbl > li{clear: both}
+
+/* flaoting label end*/
+
+/* datepicker start */
+    
+.ui-datepicker {overflow: hidden;display: none;}
+.ui-datepicker-prev {float: left;}
+.ui-datepicker-next {float: right;}
+.ui-datepicker-calendar a{display: block;}
+span.ui-state-default {display: block;}
+span.ui-state-default {cursor: not-allowed;}
+.ui-datepicker-header a {right: 0;top: 0;cursor: pointer;}
+.ui-datepicker-header a span {display: none;}
+.ui-datepicker-title select {-webkit-appearance: none;-moz-appearance: none;appearance: none;cursor: pointer;text-overflow: '';
+    position: relative;cursor: pointer;}
+.ui-datepicker-multi .ui-datepicker-group {float: left;} 
+/* datrepicker end */
+
+/* Contextmenu css start */ 
+
+/* primary */
+.etb-ctmu.pri > .cmnu {cursor:default}
+.etb-ctmu.pri > .cmnu-ctr {display: none;position: absolute;background-clip: padding-box;overflow: hidden;z-index: 9}
+.etb-ctmu.pri > .cmnu-ctr {list-style: none}
+.etb-ctmu.pri > .cmnu-ctr li { cursor: pointer;list-style: none} 
+
+/* secondary css */
+.etb-ctmu.sec > .cmnu {cursor:default}
+.etb-ctmu.sec > .cmnu-ctr {display: none;position: absolute;background-clip: padding-box;overflow: hidden;z-index: 9}
+.etb-ctmu.sec > .cmnu-ctr {list-style: none}
+.etb-ctmu.sec > .cmnu-ctr li { cursor: pointer;list-style: none} 
+
+/*Teritiary css */
+.etb-ctmu.ter > .cmnu {cursor:default}
+.etb-ctmu.ter > .cmnu-ctr {display: none;position: absolute;background-clip: padding-box;overflow: hidden;z-index: 9}
+.etb-ctmu.ter > .cmnu-ctr {list-style: none}
+.etb-ctmu.ter > .cmnu-ctr li { cursor: pointer;list-style: none} 
+
+/* contextmenu css end*/
+/* B5 elements base end */

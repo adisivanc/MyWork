@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8" />
+		<title>Tooltip</title>
+		<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+		<script>
+			function swapStyleSheet(sheet) {
+				document.getElementById('pagestyle').setAttribute('href', sheet);
+			}
+		</script>
+		<link href="styles/themes/appzillon/css/local-base.css" rel="stylesheet" media="screen" />
+		<link id="pagestyle" href="styles/themes/appzillon/css/local-apz.css" rel="stylesheet" media="screen" />
+
+	</head>
+	<body>
+        <span id="SpriteSVG"></span>
+        <button class="ett-bttn pri med" id="myButton" onclick="swapStyleSheet('styles/themes/appzillon/css/local-apz.css')">Appzillon</button>
+    	<button class="ett-bttn pri med" id="myButtonBCL" onclick="swapStyleSheet('styles/themes/appzillon/css/local-bcl.css')">Barclays</button>
+     	<button class="ett-bttn pri med" id="myButtonRolb" onclick="swapStyleSheet('styles/themes/appzillon/css/local-rolb.css')">Rolb</button>
+      	<button class="ett-bttn pri med" id="myButtonMobile" onclick="swapStyleSheet('styles/themes/appzillon/css/local-mobile.css')">Mobile</button>
+        <br>
+        <br>    		 
+        <div class="btn ">
+            <input id="txte1" class="top"   placeholder="some value" title="this is for testing for top tooltip">
+        </div>  
+        <br>
+        <a href="#appzillon" class="top" title="Top for testing in tooltips" ><svg class="icon icon-print px24"><use xlink:href="#icon-print"></use></svg>Primary Link</a>
+        <br>
+        <a href="#appzillon" class="autoleft" title="left for testing in tooltips" ><svg class="icon icon-print px24"><use xlink:href="#icon-print"></use></svg>secondary Link</a>
+        <br>
+        <a href="#appzillon" class="autobuttom" title="bottom for testing in tooltips" ><svg class="icon icon-print px24"><use xlink:href="#icon-print"></use></svg>Link</a>
+        <br>
+        <a href="#appzillon" class="right" title="right for testing in tooltips" ><svg class="icon icon-print px24"><use xlink:href="#icon-print"></use></svg>teritiary</a>
+        <br>  
+		<script type="text/javascript" charset="utf-8" src="scripts/jquery-3.1.1.min.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/jquery-ui.min.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/select2.min.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/appzillon.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/uiutils.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/swiper.min.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/tableHeadFixer.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/karthik-plugins.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/karthik-scripts.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/ripple.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/svgxuse.js"></script>
+         <script type="text/javascript" charset="utf-8" src="scripts/jquery.tooltip.js"></script>
+        <script>
+            /* directions */
+            $('.top').tooltip({
+                align: 'top'
+            });
+            $('.right').tooltip({
+                align: 'right'
+            });
+            $('.bottom').tooltip({
+                align: 'bottom'
+            });
+            $('.left').tooltip({
+                align: 'left'
+            });
+            $('.autotop').tooltip({
+                align: 'autoTop'
+            });
+            $('.autoleft').tooltip({
+                align: 'autoLeft'
+            }); 
+            $('.autobuttom').tooltip({
+                align: 'autoBottom'
+            }); 
+        </script>
+        <script>
+            $( 'input,select' ).focus(function() {
+              $( '.ett-tltp' ).fadeOut( 3000 );
+            });
+        </script>
+		<script>
+		
+			$(document).ready(function() {
+				$('#SpriteSVG').load('svg-apz.svg');
+				$('#myButton').click(function(event) {
+		
+					// prevent page submit
+					event.preventDefault();
+					$("#SpriteSVG").text(" ");
+					// load the page into #SpriteSVG
+					$('#SpriteSVG').load('svg-apz.svg');
+		
+				});
+				$('#myButtonBCL').click(function(event) {
+		
+					// prevent page submit
+					event.preventDefault();
+					$("#SpriteSVG").text(" ");
+					// load the page into #SpriteSVG
+					$('#SpriteSVG').load('svg-bcl.svg');
+		
+				});
+				// load ripple effect for elements with class .rpl
+				//$('.rpl, .ripples').on('click', ripplesEffect);
+		
+			});
+		</script>  
+	</body>
+
+</html>

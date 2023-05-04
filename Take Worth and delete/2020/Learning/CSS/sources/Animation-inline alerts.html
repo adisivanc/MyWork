@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Portion-Inline alert</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <script>
+        function swapStyleSheet(sheet) {
+            document.getElementById('pagestyle').setAttribute('href', sheet);
+        }
+    </script>
+    <link href="styles/themes/appzillon/css/local-base.css" rel="stylesheet" media="screen" />
+    <link id="pagestyle" href="styles/themes/appzillon/css/local-apz.css" rel="stylesheet" media="screen" />
+</head>
+<body class="fulsv" >
+    <span id="SpriteSVG"></span>
+    <br> 
+        <select class="ett-slcn etb-slcn pri" style="width:20%;">
+            <option id="myButton" onclick="swapStyleSheet('styles/themes/appzillon/css/local-apz.css')">Appzillon</option>
+            <option id="myButtonBCL" onclick="swapStyleSheet('styles/themes/appzillon/css/local-bcl.css')">Barclays </option>
+            <option id="myButtonRolb" onclick="swapStyleSheet('styles/themes/appzillon/css/local-rolb.css')">Rolb</option>
+            <option id="myButtonMobile" onclick="swapStyleSheet('styles/themes/appzillon/css/local-mobile.css')">Mobile</option>
+            <option id="myButtonCiti" onclick="swapStyleSheet('styles/themes/appzillon/css/local-citi.css')">Citi</option>
+        </select> 
+    <br>
+    <br>
+    <div class="message pnt-ialt inf animated" role="status" aria-live="polite">
+        <ul>
+            <li>
+                <svg role="presentation" aria-hidden="true" class="ett-icon icon-info-alt px24">
+                    <use xlink:href="#icon-info-alt"></use>
+                </svg>
+            </li>
+            <li>
+                <p class="ett-para pri">Info</p><p class="ett-para pri inf ">item</p><p class="ett-para pri">Message</p>
+                <p class="ett-para sec">This is an Info notification!</p> 
+            </li>
+        </ul>
+    </div>
+    <div class="message pnt-ialt war animated" role="status" aria-live="polite">
+        <ul>
+            <li>
+                <svg role="presentation" aria-hidden="true" class="ett-icon icon-warning-alt px24">
+                    <use xlink:href="#icon-warning-alt"></use>
+                </svg>
+            </li>
+            <li>
+                <p class="ett-para pri">Warning</p><p class="ett-para war pri">item</p><p class="ett-para pri">Message</p>
+                <p class="ett-para sec">This is an warning notification!</p> 
+            </li>
+        </ul>
+    </div>
+    <div class="message pnt-ialt err animated" role="status" aria-live="assertive">
+        <ul>
+            <li>
+                <svg role="presentation" aria-hidden="true" class="ett-icon icon-error-alt px24">
+                    <use xlink:href="#icon-error-alt"></use>
+                </svg>
+            </li>
+            <li>
+                <p class="ett-para pri">Error</p><p class="ett-para err pri">item</p><p class="ett-para pri">Message</p>
+                <p class="ett-para sec">This is an error notification!</p> 
+            </li>
+        </ul>
+    </div>
+    <div class="message pnt-ialt suc animated" role="status" aria-live="polite">
+        <ul>
+            <li>
+                <svg  role="presentation" aria-hidden="true" class="ett-icon icon-success-alt px24">
+                    <use xlink:href="#icon-success-alt"></use>
+                </svg>
+            </li>
+            <li>
+                <p class="ett-para pri">Succes</p><p class="ett-para suc pri">item</p><p class="ett-para pri">Message</p>
+                <p class="ett-para sec">This is an Success notification!</p> 
+            </li>
+        </ul>
+    </div>
+    <button class="ett-bttn pri med" id="fadeIn" onclick="anim1()">FadeIn</button>
+        <button class="ett-bttn pri med" id="fadeInUp" onclick="anim2()">FadeInUP</button>
+        <button class="ett-bttn pri med" id="fadeInDown" onclick="anim3()">FadeInDown</button>
+        <button class="ett-bttn pri med" id="ZoomIn" onclick="anim4()">ZoomIn</button> 
+        
+    <script type="text/javascript" charset="utf-8" src="scripts/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="scripts/jquery-ui.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="scripts/select2.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="scripts/appzillon.js"></script>
+    <script type="text/javascript" charset="utf-8" src="scripts/uiutils.js"></script>
+    <script type="text/javascript" charset="utf-8" src="scripts/swiper.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="scripts/tableHeadFixer.js"></script>
+    <script type="text/javascript" charset="utf-8" src="scripts/karthik-plugins.js"></script>
+    <script type="text/javascript" charset="utf-8" src="scripts/karthik-scripts.js"></script>
+    <script type="text/javascript" charset="utf-8" src="scripts/jquery.slide-transition.js"></script>
+    <script type="text/javascript" charset="utf-8" src="scripts/ripple.js"></script> 
+    <script type="text/javascript">
+        $(document).ready(function () {
+            apz = new Apz();
+            apz.appId = "testing";
+            apz.deviceOs = "APPZILLONSIMULATOR";
+            //apz.loadProject();
+        });
+    </script> 
+		<script>
+			$(document).ready(function() {
+				$('#SpriteSVG').load('svg-apz.svg');
+				$('#myButton').click(function(event) { 
+					// prevent page submit
+					event.preventDefault();
+					$("#SpriteSVG").text(" ");
+					// load the page into #SpriteSVG
+					$('#SpriteSVG').load('svg-apz.svg'); 
+				});
+				$('#myButtonBCL').click(function(event) { 
+					// prevent page submit
+					event.preventDefault();
+					$("#SpriteSVG").text(" ");
+					// load the page into #SpriteSVG
+					$('#SpriteSVG').load('svg-bcl.svg');
+		
+				});
+				// load ripple effect for elements with class .rpl
+				//$('.rpl, .ripples').on('click', ripplesEffect);
+		
+			});
+		</script> 
+
+<script>
+$('#fadeIn').on('click', function(){
+  $('.message').removeClass('fadeIn zoomIn fadeInDown fadeInUp').addClass('fadeIn')
+})
+
+$('#ZoomIn').on('click', function(){
+  $('.message').removeClass('fadeIn zoomIn fadeInDown fadeInUp').addClass('zoomIn')
+})
+
+$('#fadeInDown').on('click', function(){
+  $('.message').removeClass('fadeIn zoomIn fadeInDown fadeInUp').addClass('fadeInDown')
+})
+
+$('#fadeInUp').on('click', function(){
+  $('.message').removeClass('fadeIn zoomIn fadeInDown fadeInUp').addClass('fadeInUp')
+})</script>
+</body>
+
+</html>

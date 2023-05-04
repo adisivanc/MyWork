@@ -1,0 +1,1605 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Input</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <script>
+        function swapStyleSheet(sheet) {
+            document.getElementById('pagestyle').setAttribute('href', sheet);
+        }
+    </script>
+    <link href="styles/themes/appzillon/css/local-base.css" rel="stylesheet" media="screen" />
+    <link id="pagestyle" href="styles/themes/appzillon/css/local-apz.css" rel="stylesheet" media="screen" />
+    <style>
+    
+        .test span{ display:  table-cell}    
+        .test > .ele{float: left;display: block}
+        .amt{display: table;width: 100%}
+        .amt >.ele{float: left;width: 30%;display: table-cell}
+    </style>
+</head>
+
+<body class="pri">
+    <span id="SpriteSVG"></span>
+    <button class="ett-bttn pri med" id="myButton" onclick="swapStyleSheet('styles/themes/appzillon/css/local-apz.css')">Appzillon</button>
+    <button class="ett-bttn pri med inf" id="myButtonBCL" onclick="swapStyleSheet('styles/themes/appzillon/css/local-bcl.css')">Barclays</button>
+    
+    <h2>Allin straight line</h2>
+    <div class="test" style="width:6000px;">
+     
+    <span class="ecn" >
+        <input class="ett-inpt etw-100 pri " data-title="Title" data-content="Contents..." data-placement="left" placeholder="Normal">
+        </span>
+      <span class="ecn" >
+        <input class="ett-inpt etw-100 sec " data-title="Title" data-content="Contents..." data-placement="left" placeholder="Normal">
+        </span>  
+        <span class="etb-chek ett-chek hor pri"> 
+            <span>
+                <input type="checkbox" id="check1"  />
+                <label class="flb" for="check1"> Option1</label>
+            </span>
+            <span>
+                <input type="checkbox" id="check2" />
+                <label class="flb" for="check2" >Option2</label>
+            </span>	
+            <span>
+                <input type="checkbox" disabled="disabled" id="check3" />
+                <label class="flb" for="check3" title="Option3">Disabled</label>
+            </span>	
+        </span> 
+         <span class="etb-rdio ett-rdio hor pri ">
+                    <span >
+                        <input type="radio" name="rgroup3k" id="radio7"  />
+                        <label class="flb" for="radio7" title="Option1"> Option1</label>
+                    </span>
+                    <span >
+                        <input type="radio" name="rgroup3k" id="radio8" />
+                        <label class="flb" for="radio8" title="Option2">Option2</label>
+                    </span>	
+                    <span >
+                        <input type="radio" name="rgroup3k" disabled="disabled" id="radio9" />
+                        <label class="flb" for="radio9" title="Option3">Disabled</label>
+                    </span>											
+               </span>
+    <span class="ecn" >
+        <input class="ett-inpt etw-100 ter " data-title="Title" data-content="Contents..." data-placement="left" placeholder="Normal">
+        </span>
+      <span >
+        <ul class="nrb ett-slin pri">
+            	
+                <li class=" "><!--set the width of the select (non-responsive)-->
+                    <div class="slin-dropdown " tabindex="0">
+                        <input type="text" id="ddnval" class="dropdown-text scb-col100" value="Primary" readonly title="Dropdown">
+                        <span class="dropdown-button"> <svg class="icon icon-down px34"><use xlink:href="#icon-down"></use></svg></span>
+                        <div class="dropdown-list">
+                            <ul class="client-select1" role="menu ">
+                                <li class="is-disabled">Primary</li>
+                                <li>Option 2</li>
+                                <li>Option 3</li>
+                                <li>Option 4</li>
+                                <li>Option 5</li>
+                            </ul>
+                        </div>
+                    </div> 
+                </li>
+                <li>
+                    <input type="text" id="input123" class="scb-col100  apz-element clientuserid" placeholder="Value3" readonly/>
+                </li> 
+            </ul>
+            </span>  
+        <span>
+        <ul class="nrb ett-slin sec">
+            	
+                <li class=" "><!--set the width of the select (non-responsive)-->
+                    <div class="slin-dropdown " tabindex="0">
+                        <input type="text" id="ddnval" class="dropdown-text scb-col100" value="Primary" readonly title="Dropdown">
+                        <span class="dropdown-button"> <svg class="icon icon-down px34"><use xlink:href="#icon-down"></use></svg></span>
+                        <div class="dropdown-list">
+                            <ul class="client-select1" role="menu ">
+                                <li class="is-disabled">Primary</li>
+                                <li>Option 2</li>
+                                <li>Option 3</li>
+                                <li>Option 4</li>
+                                <li>Option 5</li>
+                            </ul>
+                        </div>
+                    </div> 
+                </li>
+                <li>
+                    <input type="text" id="input123" class="scb-col100  apz-element clientuserid" placeholder="Value3" readonly/>
+                </li> 
+            </ul>
+        </span>
+        <span>
+        <ul class="nrb ett-slin ter"> 
+                <li class=" "><!--set the width of the select (non-responsive)-->
+                    <div class="slin-dropdown " tabindex="0">
+                        <input type="text" id="ddnval" class="dropdown-text scb-col100" value="Primary" readonly title="Dropdown">
+                        <span class="dropdown-button"> <svg class="icon icon-down px34"><use xlink:href="#icon-down"></use></svg></span>
+                        <div class="dropdown-list">
+                            <ul class="client-select1" role="menu ">
+                                <li class="is-disabled">Primary</li>
+                                <li>Option 2</li>
+                                <li>Option 3</li>
+                                <li>Option 4</li>
+                                <li>Option 5</li>
+                            </ul>
+                        </div>
+                    </div> 
+                </li>
+                <li>
+                    <input type="text" id="input123" class="scb-col100  apz-element clientuserid" placeholder="Value3" readonly/>
+                </li> 
+            </ul>
+    </span>
+        <span class="ele">
+            <div class="etb-slct ett-slct pri scb-col100" tabindex="0">
+                <input type="text" class="sub-elt " value="Simple - Primary" readonly title="Select Box">
+                <span class="sub-elt1 etw-5"> <svg class="ett-icon icon-down px34"><use xlink:href="#icon-down"></use></svg></span>
+                <div class="sub-ctr">
+                    <ul role="menu">
+                        <li class="is-disabled">Option1</li>
+                        <li>Option 2</li>
+                        <li>Option 3</li>
+                        <li>Option 4</li>
+                        <li>Option 5</li>
+                    </ul>
+                </div>
+            </div> 
+        </span>
+        <span class="ett-rdgp  etb-rdgp pri">
+            <div class="button-group-buttons" data-toggle="buttons">
+                <div class="rdio-btn-grp">
+                    <input type="radio" name="rdio-btn-grp" id="button-group11" autocomplete="off" checked title="Radio 1">
+                    <label for="button-group11" class="rdio-btn" title="Radio 1 (preselected)">Radio 1 (preselected)</label>
+                </div>
+                <div class="rdio-btn-grp">
+                    <input type="radio" name="rdio-btn-grp" id="button-group21" autocomplete="off" title="Radio 2">
+                    <label for="button-group21" class="rdio-btn" title="Radio 2">Radio 2</label>
+                </div>
+                <div class="rdio-btn-grp">
+                    <input type="radio" name="rdio-btn-grp" id="button-group31" autocomplete="off" title="Radio 3">
+                    <label for="button-group31" class="rdio-btn" title="Radio 3">Radio 3</label>
+                </div>
+            </div>										
+            <span class="htx">Hint for Radio Group Buttons </span>
+            </span> 
+       
+    </div>
+    
+    
+    
+    
+    
+    
+    <h1 class="ett-hed1 pri">Input</h1>
+    <h2> Primary </h2>
+
+    <div class="test" style="width:6000px;">
+         
+        
+
+       <span class="ecn " >
+        <input class="ett-inpt etw-100 pri err" data-title="Title" data-content="Contents..." data-placement="left" placeholder="Error">
+        </span> 
+        
+        <span class="ecn ">
+            <span class="etw-100 icl pri">
+                <svg class="ett-icon icon-search px24"><use xlink:href="#icon-home"></use></svg>
+                <input class="ett-inpt etw-100 pri" id="input1" placeholder="With left icon" type="text">
+            </span>
+        </span> 
+        
+        <span>
+            <span class="ecn ">
+	        <span class="etw-100 icr pri">
+	        <input class="ett-inpt etw-100 pri" id="input1" placeholder="With right icon" type="text">
+	        <svg class="ett-icon icon-search px24"><use xlink:href="#icon-home"></use></svg> 
+	        </span>
+    </span> 
+        
+        </span>
+        
+        <span class="ecn ">
+        <span class="etw-100 syl pri">
+        <span >$</span>
+    <input class="ett-inpt etw-100 pri" type="text" id="input1" placeholder="With left symbol" />
+    </span>
+    </span> 
+
+    <span class="ecn ">
+        <span class="etw-100 syr pri">
+        <input class="ett-inpt etw-100 pri" type="text" id="input1" placeholder="With right symbol" />
+        <span >$</span>
+    </span>
+    </span> 
+
+    <span class="ecn ">
+        <span class="etw-100 cil pri">
+        	<button class="ett-bttn tsp sml"><svg class="ett-icon icon-search px24"><use xlink:href="#icon-home"></use></svg></button>        	
+        	<input class="ett-inpt etw-100 pri" type="text" id="input1" placeholder="With left clickable icon" />
+        </span>
+    </span> 
+
+
+    <span class="ecn ">
+        <span class="etw-100 cir pri">     	
+        	<input class="ett-inpt etw-100 pri" type="text" id="input1" placeholder="With Right clickable icon" />
+            <button class="ett-bttn tsp sml"><svg class="ett-icon icon-search px24"><use xlink:href="#icon-home"></use></svg></button>  
+        </span>
+    </span>
+        
+    <span class="ecn  ">
+            <span class="etw-100 btl pri" >
+                <span class="etw-5">
+                    <button class="ett-bttn pri med">button</button> 
+                </span>
+    <span>
+                    <input class="ett-inpt etw-100 pri"  type="text" id="input1" placeholder="With left button" />
+                </span>
+    </span>
+    </span> 
+    <span class="ecn  ">
+            <span class="etw-100 btr pri" >
+                <span>
+                    <input class="ett-inpt etw-100 pri"  type="text" id="input1" placeholder="With right button" />
+                </span>
+    <span class="etw-5">
+                    <button class="ett-bttn pri med">button</button>
+                </span>
+    </span>
+    </span>  
+   <span class="ecn ">
+        <span class="ett-date etw-100 icl pri">
+        	<svg class="ett-icon icon-calendar px24"><use xlink:href="#icon-calendar"></use></svg> 
+            <input type="text" class="ett-inpt etw-100 pri" id="datepicker-demo" placeholder="DD / MM / YYYY" title="Date Input"> 
+        </span>
+    </span> 
+    <span class="ecn ">
+	        <span class="ett-date etw-100 icr pri">
+              <input type="text" class="ett-inpt etw-100 pri" id="datepicker-demo2" placeholder="DD / MM / YYYY" title="Date Input">     
+	           <svg class="ett-icon icon-calendar px24"><use xlink:href="#icon-calendar"></use></svg> 
+	        </span>
+    </span> 
+    <span class="ecn ">
+        <span class="ett-date etw-100 cil pri">
+        	<button class="ett-bttn tsp sml"><svg class="ett-icon icon-calendar px24"><use xlink:href="#icon-calendar"></use></svg></button> <input type="text" class="ett-inpt etw-100 pri" id="datepicker-demo3" placeholder="DD / MM / YYYY" title="Date Input"> 
+        </span>
+    </span> 
+    <span class="ecn ">
+        <span class="ett-date etw-100 cir pri">     	
+        	<input type="text" class="ett-inpt etw-100 pri" id="datepicker-demo4" placeholder="DD / MM / YYYY" title="Date Input"> 
+            <button class="ett-bttn tsp sml"><svg class="ett-icon icon-calendar px24"><use xlink:href="#icon-calendar"></use></svg></button> 
+        </span>
+    </span> 
+         
+   
+    <span class="ecn  ">
+        <span class="ett-lofv etw-100 btl pri" >
+        	<span class="etw-5">
+            <button class="ett-bttn pri med"><svg class="ett-icon icon-grid px24"><use xlink:href="#icon-grid"></use></svg> </button>       
+            </span>
+    <span>
+                <input class="ett-inpt etw-100 pri"  type="text" id="input1" placeholder="With left button" />
+            </span>
+    </span>
+    </span> 
+    <span class="ecn ">
+        <span class="ett-lofv etw-100 btr pri">
+            <span>
+                <input class="ett-inpt etw-100 pri " type="text" id="input1" placeholder="With right button" />
+            </span>
+    <span class="etw-5">
+                <button class="ett-bttn pri med"><svg class="ett-icon icon-grid px24"><use xlink:href="#icon-grid"></use></svg></button>    
+            </span>
+    </span>
+    </span>        
+        
+    </div>
+
+
+    <h2> secondary </h2>
+
+    <div class="test" style="width:6000px;">
+         
+        
+
+       <span class="ecn " >
+        <input class="ett-inpt etw-100 sec err" data-title="Title" data-content="Contents..." data-placement="left" placeholder="Error">
+        </span> 
+        
+        <span class="ecn ">
+            <span class="etw-100 icl sec">
+                <svg class="ett-icon icon-search px24"><use xlink:href="#icon-home"></use></svg>
+                <input class="ett-inpt etw-100 sec" id="input1" placeholder="With left icon" type="text">
+            </span>
+        </span> 
+        
+        <span>
+            <span class="ecn ">
+	        <span class="etw-100 icr sec">
+	        <input class="ett-inpt etw-100 sec" id="input1" placeholder="With right icon" type="text">
+	        <svg class="ett-icon icon-search px24"><use xlink:href="#icon-home"></use></svg> 
+	        </span>
+    </span> 
+        
+        </span>
+        
+        <span class="ecn ">
+        <span class="etw-100 syl sec">
+        <span >$</span>
+    <input class="ett-inpt etw-100 sec" type="text" id="input1" placeholder="With left symbol" />
+    </span>
+    </span> 
+
+    <span class="ecn ">
+        <span class="etw-100 syr sec">
+        <input class="ett-inpt etw-100 sec" type="text" id="input1" placeholder="With right symbol" />
+        <span >$</span>
+    </span>
+    </span> 
+
+    <span class="ecn ">
+        <span class="etw-100 cil sec">
+        	<button class="ett-bttn tsp sml"><svg class="ett-icon icon-search px24"><use xlink:href="#icon-home"></use></svg></button>        	
+        	<input class="ett-inpt etw-100 sec" type="text" id="input1" placeholder="With left clickable icon" />
+        </span>
+    </span> 
+
+
+    <span class="ecn ">
+        <span class="etw-100 cir sec">     	
+        	<input class="ett-inpt etw-100 sec" type="text" id="input1" placeholder="With Right clickable icon" />
+            <button class="ett-bttn tsp sml"><svg class="ett-icon icon-search px24"><use xlink:href="#icon-home"></use></svg></button>  
+        </span>
+    </span>
+        
+    <span class="ecn  ">
+            <span class="etw-100 btl sec" >
+                <span class="etw-5">
+                    <button class="ett-bttn sec med">button</button> 
+                </span>
+    <span>
+                    <input class="ett-inpt etw-100 sec"  type="text" id="input1" placeholder="With left button" />
+                </span>
+    </span>
+    </span> 
+    <span class="ecn  ">
+            <span class="etw-100 btr sec" >
+                <span>
+                    <input class="ett-inpt etw-100 sec"  type="text" id="input1" placeholder="With right button" />
+                </span>
+    <span class="etw-5">
+                    <button class="ett-bttn sec med">button</button>
+                </span>
+    </span>
+    </span>  
+   <span class="ecn ">
+        <span class="ett-date etw-100 icl sec">
+        	<svg class="ett-icon icon-calendar px24"><use xlink:href="#icon-calendar"></use></svg> 
+            <input type="text" class="ett-inpt etw-100 sec" id="datepicker-demo" placeholder="DD / MM / YYYY" title="Date Input"> 
+        </span>
+    </span> 
+    <span class="ecn ">
+	        <span class="ett-date etw-100 icr sec">
+              <input type="text" class="ett-inpt etw-100 sec" id="datepicker-demo2" placeholder="DD / MM / YYYY" title="Date Input">     
+	           <svg class="ett-icon icon-calendar px24"><use xlink:href="#icon-calendar"></use></svg> 
+	        </span>
+    </span> 
+    <span class="ecn ">
+        <span class="ett-date etw-100 cil sec">
+        	<button class="ett-bttn tsp sml"><svg class="ett-icon icon-calendar px24"><use xlink:href="#icon-calendar"></use></svg></button> <input type="text" class="ett-inpt etw-100 sec" id="datepicker-demo3" placeholder="DD / MM / YYYY" title="Date Input"> 
+        </span>
+    </span> 
+    <span class="ecn ">
+        <span class="ett-date etw-100 cir sec">     	
+        	<input type="text" class="ett-inpt etw-100 sec" id="datepicker-demo4" placeholder="DD / MM / YYYY" title="Date Input"> 
+            <button class="ett-bttn tsp sml"><svg class="ett-icon icon-calendar px24"><use xlink:href="#icon-calendar"></use></svg></button> 
+        </span>
+    </span> 
+         
+   
+    <span class="ecn  ">
+        <span class="ett-lofv etw-100 btl sec" >
+        	<span class="etw-5">
+            <button class="ett-bttn sec med"><svg class="ett-icon icon-grid px24"><use xlink:href="#icon-grid"></use></svg> </button>       
+            </span>
+    <span>
+                <input class="ett-inpt etw-100 sec"  type="text" id="input1" placeholder="With left button" />
+            </span>
+    </span>
+    </span> 
+    <span class="ecn ">
+        <span class="ett-lofv etw-100 btr sec">
+            <span>
+                <input class="ett-inpt etw-100 sec " type="text" id="input1" placeholder="With right button" />
+            </span>
+    <span class="etw-5">
+                <button class="ett-bttn sec med"><svg class="ett-icon icon-grid px24"><use xlink:href="#icon-grid"></use></svg></button>    
+            </span>
+    </span>
+    </span>        
+        
+    </div>
+    <h2> teritiary </h2>
+
+     <div class="test" style="width:6000px;">
+         
+        
+
+       <span class="ecn " >
+        <input class="ett-inpt etw-100 ter err" data-title="Title" data-content="Contents..." data-placement="left" placeholder="Error">
+        </span> 
+        
+        <span class="ecn ">
+            <span class="etw-100 icl ter">
+                <svg class="ett-icon icon-search px24"><use xlink:href="#icon-home"></use></svg>
+                <input class="ett-inpt etw-100 ter" id="input1" placeholder="With left icon" type="text">
+            </span>
+        </span> 
+        
+        <span>
+            <span class="ecn ">
+	        <span class="etw-100 icr ter">
+	        <input class="ett-inpt etw-100 ter" id="input1" placeholder="With right icon" type="text">
+	        <svg class="ett-icon icon-search px24"><use xlink:href="#icon-home"></use></svg> 
+	        </span>
+    </span> 
+        
+        </span>
+        
+        <span class="ecn ">
+        <span class="etw-100 syl ter">
+        <span >$</span>
+    <input class="ett-inpt etw-100 ter" type="text" id="input1" placeholder="With left symbol" />
+    </span>
+    </span> 
+
+    <span class="ecn ">
+        <span class="etw-100 syr ter">
+        <input class="ett-inpt etw-100 ter" type="text" id="input1" placeholder="With right symbol" />
+        <span >$</span>
+    </span>
+    </span> 
+
+    <span class="ecn ">
+        <span class="etw-100 cil ter">
+        	<button class="ett-bttn tsp sml"><svg class="ett-icon icon-search px24"><use xlink:href="#icon-home"></use></svg></button>        	
+        	<input class="ett-inpt etw-100 ter" type="text" id="input1" placeholder="With left clickable icon" />
+        </span>
+    </span> 
+
+
+    <span class="ecn ">
+        <span class="etw-100 cir ter">     	
+        	<input class="ett-inpt etw-100 ter" type="text" id="input1" placeholder="With Right clickable icon" />
+            <button class="ett-bttn tsp sml"><svg class="ett-icon icon-search px24"><use xlink:href="#icon-home"></use></svg></button>  
+        </span>
+    </span>
+        
+    <span class="ecn  ">
+            <span class="etw-100 btl ter" >
+                <span class="etw-5">
+                    <button class="ett-bttn ter med">button</button> 
+                </span>
+    <span>
+                    <input class="ett-inpt etw-100 ter"  type="text" id="input1" placeholder="With left button" />
+                </span>
+    </span>
+    </span> 
+    <span class="ecn  ">
+            <span class="etw-100 btr ter" >
+                <span>
+                    <input class="ett-inpt etw-100 ter"  type="text" id="input1" placeholder="With right button" />
+                </span>
+    <span class="etw-5">
+                    <button class="ett-bttn ter med">button</button>
+                </span>
+    </span>
+    </span>  
+   <span class="ecn ">
+        <span class="ett-date etw-100 icl ter">
+        	<svg class="ett-icon icon-calendar px24"><use xlink:href="#icon-calendar"></use></svg> 
+            <input type="text" class="ett-inpt etw-100 ter" id="datepicker-demo" placeholder="DD / MM / YYYY" title="Date Input"> 
+        </span>
+    </span> 
+    <span class="ecn ">
+	        <span class="ett-date etw-100 icr ter">
+              <input type="text" class="ett-inpt etw-100 ter" id="datepicker-demo2" placeholder="DD / MM / YYYY" title="Date Input">     
+	           <svg class="ett-icon icon-calendar px24"><use xlink:href="#icon-calendar"></use></svg> 
+	        </span>
+    </span> 
+    <span class="ecn ">
+        <span class="ett-date etw-100 cil ter">
+        	<button class="ett-bttn tsp sml"><svg class="ett-icon icon-calendar px24"><use xlink:href="#icon-calendar"></use></svg></button> <input type="text" class="ett-inpt etw-100 ter" id="datepicker-demo3" placeholder="DD / MM / YYYY" title="Date Input"> 
+        </span>
+    </span> 
+    <span class="ecn ">
+        <span class="ett-date etw-100 cir ter">     	
+        	<input type="text" class="ett-inpt etw-100 ter" id="datepicker-demo4" placeholder="DD / MM / YYYY" title="Date Input"> 
+            <button class="ett-bttn tsp sml"><svg class="ett-icon icon-calendar px24"><use xlink:href="#icon-calendar"></use></svg></button> 
+        </span>
+    </span> 
+         
+   
+    <span class="ecn  ">
+        <span class="ett-lofv etw-100 btl ter" >
+        	<span class="etw-5">
+            <button class="ett-bttn ter med"><svg class="ett-icon icon-grid px24"><use xlink:href="#icon-grid"></use></svg> </button>       
+            </span>
+    <span>
+                <input class="ett-inpt etw-100 ter"  type="text" id="input1" placeholder="With left button" />
+            </span>
+    </span>
+    </span> 
+    <span class="ecn ">
+        <span class="ett-lofv etw-100 btr ter">
+            <span>
+                <input class="ett-inpt etw-100 ter " type="text" id="input1" placeholder="With right button" />
+            </span>
+    <span class="etw-5">
+                <button class="ett-bttn ter med"><svg class="ett-icon icon-grid px24"><use xlink:href="#icon-grid"></use></svg></button>    
+            </span>
+    </span>
+    </span>        
+        
+    </div> 
+    
+    <h1 class="ett-hed1 pri">Select with Input </h1>
+    <h2> Primary  secondary  and teritiary  </h2> 
+    <div class="test" style="width:6000px;">
+        <span >
+        <ul class="nrb ett-slin pri">
+            	
+                <li class=" "><!--set the width of the select (non-responsive)-->
+                    <div class="slin-dropdown " tabindex="0">
+                        <input type="text" id="ddnval" class="dropdown-text scb-col100" value="Primary" readonly title="Dropdown">
+                        <span class="dropdown-button"> <svg class="icon icon-down px34"><use xlink:href="#icon-down"></use></svg></span>
+                        <div class="dropdown-list">
+                            <ul class="client-select1" role="menu ">
+                                <li class="is-disabled">Primary</li>
+                                <li>Option 2</li>
+                                <li>Option 3</li>
+                                <li>Option 4</li>
+                                <li>Option 5</li>
+                            </ul>
+                        </div>
+                    </div> 
+                </li>
+                <li>
+                    <input type="text" id="input123" class="scb-col100  apz-element clientuserid" placeholder="Value3" readonly/>
+                </li> 
+            </ul>
+            </span>
+        <span>
+        <ul class="nrb ett-slin sec">
+            	
+                <li class=" "><!--set the width of the select (non-responsive)-->
+                    <div class="slin-dropdown " tabindex="0">
+                        <input type="text" id="ddnval" class="dropdown-text scb-col100" value="Primary" readonly title="Dropdown">
+                        <span class="dropdown-button"> <svg class="icon icon-down px34"><use xlink:href="#icon-down"></use></svg></span>
+                        <div class="dropdown-list">
+                            <ul class="client-select1" role="menu ">
+                                <li class="is-disabled">Primary</li>
+                                <li>Option 2</li>
+                                <li>Option 3</li>
+                                <li>Option 4</li>
+                                <li>Option 5</li>
+                            </ul>
+                        </div>
+                    </div> 
+                </li>
+                <li>
+                    <input type="text" id="input123" class="scb-col100  apz-element clientuserid" placeholder="Value3" readonly/>
+                </li> 
+            </ul>
+        </span>
+        <span>
+        <ul class="nrb ett-slin ter"> 
+                <li class=" "><!--set the width of the select (non-responsive)-->
+                    <div class="slin-dropdown " tabindex="0">
+                        <input type="text" id="ddnval" class="dropdown-text scb-col100" value="Primary" readonly title="Dropdown">
+                        <span class="dropdown-button"> <svg class="icon icon-down px34"><use xlink:href="#icon-down"></use></svg></span>
+                        <div class="dropdown-list">
+                            <ul class="client-select1" role="menu ">
+                                <li class="is-disabled">Primary</li>
+                                <li>Option 2</li>
+                                <li>Option 3</li>
+                                <li>Option 4</li>
+                                <li>Option 5</li>
+                            </ul>
+                        </div>
+                    </div> 
+                </li>
+                <li>
+                    <input type="text" id="input123" class="scb-col100  apz-element clientuserid" placeholder="Value3" readonly/>
+                </li> 
+            </ul>
+    </span>
+    </div>
+    
+    <h1 class="ett-hed1 pri">Select</h1>
+    <h2> Primary  secondary  and teritiary  </h2>
+
+    <div class="test" style="width:9000px; ">
+        <span class="ele">
+            <div class="etb-slct ett-slct pri scb-col100" tabindex="0">
+                <input type="text" class="sub-elt " value="Simple - Primary" readonly title="Select Box">
+                <span class="sub-elt1 etw-5"> <svg class="ett-icon icon-down px34"><use xlink:href="#icon-down"></use></svg></span>
+                <div class="sub-ctr">
+                    <ul role="menu">
+                        <li class="is-disabled">Option1</li>
+                        <li>Option 2</li>
+                        <li>Option 3</li>
+                        <li>Option 4</li>
+                        <li>Option 5</li>
+                    </ul>
+                </div>
+            </div> 
+        </span>
+        <span class="ele"> 	
+        <div class="etb-slct ett-slct sec scb-col100" tabindex="0">
+            <input type="text" class="sub-elt " value="Simple - Secondary" readonly title="Select Box">
+            <span class="sub-elt1 etw-5"> <svg class="ett-icon icon-down px34"><use xlink:href="#icon-down"></use></svg></span>
+            <div class="sub-ctr">
+                <ul role="menu">
+                    <li class="is-disabled">Option 1</li>
+                    <li>Option 2</li>
+                    <li>Option 3</li>
+                    <li>Option 4</li>
+                    <li>Option 5</li>
+                </ul>
+            </div>
+        </div>
+            </span>
+        <span class="ele">
+    <div class="etb-slct ett-slct ter scb-col100" tabindex="0">
+        <input type="text" class="sub-elt " value="Simple - Tertiary" readonly title="Select Box">
+        <span class="sub-elt1 etw-5"> <svg class="ett-icon icon-down px34"><use xlink:href="#icon-down"></use></svg></span>
+        <div class="sub-ctr">
+            <ul role="menu">
+                <li class="is-disabled">Option 1</li>
+                <li>Option 2</li>
+                <li>Option 3</li>
+                <li>Option 4</li>
+                <li>Option 5</li>
+            </ul>
+        </div>
+    </div>        
+
+        </span> 
+        <span class="ele">
+    <div class="etb-slct ett-slct subo pri is-tiered scb-col100" tabindex="0">
+                    <input type="text" class="sub-elt " value="With sub options - Primary" readonly title="With sub options - Primary">
+                    <span class="sub-elt1 etw-5"><svg class="ett-icon icon-down px34"><use xlink:href="#icon-down"></use></svg></span>
+                    <div class="sub-ctr">
+                        <ul role="menu">
+                            <li>Option 1</li>
+                            <li><span class="menu-expand"></span>Option 2</li>
+                            <ul>
+                                <li>Sub-option 1</li>
+                                <li><span class="menu-expand"></span>Sub-option 2</li>
+                                <ul>
+                                    <li>Sub-sub-option 1</li>
+                                    <li><span class="menu-expand"></span>Sub-sub-option 2</li>
+                                    <ul>
+                                        <li>Sub-sub-sub-option 1</li>
+                                        <li>Sub-sub-sub-option 2</li>
+                                        <li>Sub-sub-sub-option 3</li>
+                                        <li>Sub-sub-sub-option 4</li>
+                                        <li>Sub-sub-sub-option 5</li>
+                                    </ul>
+                                    <li>Sub-sub-option 3</li>
+                                    <li>Sub-sub-option 4</li>
+                                    <li>Sub-sub-option 5</li>
+                                </ul>
+                                <li>Sub-option 3</li>
+                                <li>Sub-option 4</li>
+                                <li>Sub-option 5</li>
+                            </ul>
+                            <li>Option 3</li>
+                            <li>Option 4</li>
+                            <li>Option 5</li>
+                        </ul>
+                    </div>
+                </div> 
+    </span>
+        <span class="ele"> 
+    <div class="etb-slct ett-slct subo sec is-tiered scb-col100" tabindex="0">
+                    <input type="text" class="sub-elt " value="With sub options - Secondary" readonly title="With sub options - Secondary">
+                    <span class="sub-elt1 etw-5"><svg class="ett-icon icon-down px34"><use xlink:href="#icon-down"></use></svg></span>
+                    <div class="sub-ctr">
+                        <ul role="menu">
+                            <li>Option 1</li>
+                            <li><span class="menu-expand"></span>Option 2</li>
+                            <ul>
+                                <li>Sub-option 1</li>
+                                <li><span class="menu-expand"></span>Sub-option 2</li>
+                                <ul>
+                                    <li>Sub-sub-option 1</li>
+                                    <li><span class="menu-expand"></span>Sub-sub-option 2</li>
+                                    <ul>
+                                        <li>Sub-sub-sub-option 1</li>
+                                        <li>Sub-sub-sub-option 2</li>
+                                        <li>Sub-sub-sub-option 3</li>
+                                        <li>Sub-sub-sub-option 4</li>
+                                        <li>Sub-sub-sub-option 5</li>
+                                    </ul>
+                                    <li>Sub-sub-option 3</li>
+                                    <li>Sub-sub-option 4</li>
+                                    <li>Sub-sub-option 5</li>
+                                </ul>
+                                <li>Sub-option 3</li>
+                                <li>Sub-option 4</li>
+                                <li>Sub-option 5</li>
+                            </ul>
+                            <li>Option 3</li>
+                            <li>Option 4</li>
+                            <li>Option 5</li>
+                        </ul>
+                    </div>
+                </div> 
+
+    </span> 
+        <span class="ele">
+    <div class="etb-slct ett-slct subo ter is-tiered scb-col100" tabindex="0">
+                    <input type="text" class="sub-elt " value="With sub options - Tertiary" readonly title="With sub options - Tertiary">
+                    <span class="sub-elt1 etw-5"><svg class="ett-icon icon-down px34"><use xlink:href="#icon-down"></use></svg></span>
+                    <div class="sub-ctr">
+                        <ul role="menu">
+                            <li>Option 1</li>
+                            <li><span class="menu-expand"></span>Option 2</li>
+                            <ul>
+                                <li>Sub-option 1</li>
+                                <li><span class="menu-expand"></span>Sub-option 2</li>
+                                <ul>
+                                    <li>Sub-sub-option 1</li>
+                                    <li><span class="menu-expand"></span>Sub-sub-option 2</li>
+                                    <ul>
+                                        <li>Sub-sub-sub-option 1</li>
+                                        <li>Sub-sub-sub-option 2</li>
+                                        <li>Sub-sub-sub-option 3</li>
+                                        <li>Sub-sub-sub-option 4</li>
+                                        <li>Sub-sub-sub-option 5</li>
+                                    </ul>
+                                    <li>Sub-sub-option 3</li>
+                                    <li>Sub-sub-option 4</li>
+                                    <li>Sub-sub-option 5</li>
+                                </ul>
+                                <li>Sub-option 3</li>
+                                <li>Sub-option 4</li>
+                                <li>Sub-option 5</li>
+                            </ul>
+                            <li>Option 3</li>
+                            <li>Option 4</li>
+                            <li>Option 5</li>
+                        </ul>
+                    </div>
+                </div>
+
+       </span>
+        <span class="ele">    	
+    <div class="etb-slct ett-slct mltc pri is-multi-tiered scb-col100" tabindex="0">
+                    <input type="text" class="sub-elt " placeholder="Multi Select- Checkbox - Primary" readonly title="Multi Select- Checkbox">
+                    <span class="sub-elt1 etw-5"><svg class="ett-icon icon-down px34"><use xlink:href="#icon-down"></use></svg></span>
+                    <div class="sub-ctr">
+                        <ul>
+                            <li class="form-group--checkbox">
+                                <input type="checkbox" name="Select Boxcheck" id="Select Boxcheck1" value="1">
+                                <label for="Select Boxcheck1" aria-label="Option 1">Option 1</label>
+                            </li>
+                            <ul>
+                                <li class="form-group--checkbox">
+                                    <input type="checkbox" name="Select Boxcheck" id="Select Boxcheck1a" value="1">
+                                    <label for="Select Boxcheck1a" aria-label="Option 1">Option 1a</label>
+                                </li>
+                                <li class="form-group--checkbox">
+                                    <input type="checkbox" name="Select Boxcheck" id="Select Boxcheck1b" value="1">
+                                    <label for="Select Boxcheck1b" aria-label="Option 1">Option 1b</label>
+                                </li>
+                                <li class="form-group--checkbox">
+                                    <input type="checkbox" name="Select Boxcheck" id="Select Boxcheck1c" value="1">
+                                    <label for="Select Boxcheck1c" aria-label="Option 1">Option 1c</label>
+                                </li>
+                                <li class="form-group--checkbox">
+                                    <input type="checkbox" name="Select Boxcheck" id="Select Boxcheck1e" value="1">
+                                    <label for="Select Boxcheck1e" aria-label="Option 1">Option 1e</label>
+                                </li>
+                            </ul>
+                            <li class="form-group--checkbox">
+                                <input type="checkbox" name="Select Boxcheck" id="Select Boxcheck2" value="1">
+                                <label for="Select Boxcheck2" aria-label="Option 1">Option 2</label>
+                            </li>
+                            <li class="form-group--checkbox">
+                                <input type="checkbox" name="Select Boxcheck" id="Select Boxcheck3" value="1">
+                                <label for="Select Boxcheck3" aria-label="Option 1">Option 3</label>
+                            </li>
+                            <li class="form-group--checkbox">
+                                <input type="checkbox" name="Select Boxcheck" id="Select Boxcheck4" value="1">
+                                <label for="Select Boxcheck4" aria-label="Option 1">Option 4</label>
+                            </li>
+                            <li class="form-group--checkbox">
+                                <input type="checkbox" name="Select Boxcheck" id="Select Boxcheck5" value="1">
+                                <label for="Select Boxcheck5" aria-label="Option 1">Option 5</label>
+                            </li>
+                            <li class="form-group--checkbox">
+                                <input type="checkbox" name="Select Boxcheck" id="Select Boxcheck6" value="1">
+                                <label for="Select Boxcheck6" aria-label="Option 1">Option 6</label>
+                            </li>
+                            <li class="form-group--checkbox">
+                                <input type="checkbox" name="Select Boxcheck" id="Select Boxcheck7" value="1">
+                                <label for="Select Boxcheck7" aria-label="Option 1">Option 7</label>
+                            </li>
+                        </ul>
+                    </div>
+                </div> 
+    </span> 
+        <span class="ele">
+    <div class="etb-slct ett-slct mltc sec is-multi-tiered scb-col100" tabindex="0">
+                    <input type="text" class="sub-elt " placeholder="Multi Select- Checkbox - Primary" readonly title="Multi Select- Checkbox - Primary">
+                    <span class="sub-elt1 etw-5"><svg class="ett-icon icon-down px34"><use xlink:href="#icon-down"></use></svg></span>
+                    <div class="sub-ctr">
+                        <ul>
+                            <li class="form-group--checkbox">
+                                <input type="checkbox" name="Select Boxcheck" id="Select Boxcheck11" value="1">
+                                <label for="Select Boxcheck11" aria-label="Option 1">Option 1</label>
+                            </li>
+                            <ul>
+                                <li class="form-group--checkbox">
+                                    <input type="checkbox" name="Select Boxcheck" id="Select Boxcheck11a" value="1">
+                                    <label for="Select Boxcheck11a" aria-label="Option 1">Option 1a</label>
+                                </li>
+                                <li class="form-group--checkbox">
+                                    <input type="checkbox" name="Select Boxcheck" id="Select Boxcheck11b" value="1">
+                                    <label for="Select Boxcheck11b" aria-label="Option 1">Option 1b</label>
+                                </li>
+                                <li class="form-group--checkbox">
+                                    <input type="checkbox" name="Select Boxcheck" id="Select Boxcheck11c" value="1">
+                                    <label for="Select Boxcheck11c" aria-label="Option 1">Option 1c</label>
+                                </li>
+                                <li class="form-group--checkbox">
+                                    <input type="checkbox" name="Select Boxcheck" id="Select Boxcheck11e" value="1">
+                                    <label for="Select Boxcheck11e" aria-label="Option 1">Option 1e</label>
+                                </li>
+                            </ul>
+                            <li class="form-group--checkbox">
+                                <input type="checkbox" name="Select Boxcheck" id="Select Boxcheck12" value="1">
+                                <label for="Select Boxcheck12" aria-label="Option 1">Option 2</label>
+                            </li>
+                            <li class="form-group--checkbox">
+                                <input type="checkbox" name="Select Boxcheck" id="Select Boxcheck13" value="1">
+                                <label for="Select Boxcheck13" aria-label="Option 1">Option 3</label>
+                            </li>
+                            <li class="form-group--checkbox">
+                                <input type="checkbox" name="Select Boxcheck" id="Select Boxcheck14" value="1">
+                                <label for="Select Boxcheck14" aria-label="Option 1">Option 4</label>
+                            </li>
+                            <li class="form-group--checkbox">
+                                <input type="checkbox" name="Select Boxcheck" id="Select Boxcheck15" value="1">
+                                <label for="Select Boxcheck15" aria-label="Option 1">Option 5</label>
+                            </li>
+                            <li class="form-group--checkbox">
+                                <input type="checkbox" name="Select Boxcheck" id="Select Boxcheck16" value="1">
+                                <label for="Select Boxcheck16" aria-label="Option 1">Option 6</label>
+                            </li>
+                            <li class="form-group--checkbox">
+                                <input type="checkbox" name="Select Boxcheck" id="Select Boxcheck17" value="1">
+                                <label for="Select Boxcheck17" aria-label="Option 1">Option 7</label>
+                            </li>
+                        </ul>
+                    </div>
+                </div> 
+        </span> 
+        <span class="ele">
+    <div class="etb-slct ett-slct mltc ter is-multi-tiered scb-col100" tabindex="0">
+                <input type="text" class="sub-elt " placeholder="Please select" readonly title="Select Boxwith checkbox options">
+                <span class="sub-elt1 etw-5"><svg class="ett-icon icon-down px34"><use xlink:href="#icon-down"></use></svg></span>
+                <div class="sub-ctr">
+                    <ul>
+                        <li class="form-group--checkbox">
+                            <input type="checkbox" name="Select Boxcheck" id="Select Boxcheck211" value="1">
+                            <label for="Select Boxcheck211" aria-label="Option 1">Option 1</label>
+                        </li>
+                        <ul>
+                            <li class="form-group--checkbox">
+                                <input type="checkbox" name="Select Boxcheck" id="Select Boxcheck111a" value="1">
+                                <label for="Select Boxcheck111a" aria-label="Option 1">Option 1a</label>
+                            </li>
+                            <li class="form-group--checkbox">
+                                <input type="checkbox" name="Select Boxcheck" id="Select Boxcheck111b" value="1">
+                                <label for="Select Boxcheck111b" aria-label="Option 1">Option 1b</label>
+                            </li>
+                            <li class="form-group--checkbox">
+                                <input type="checkbox" name="Select Boxcheck" id="Select Boxcheck111c" value="1">
+                                <label for="Select Boxcheck111c" aria-label="Option 1">Option 1c</label>
+                            </li>
+                            <li class="form-group--checkbox">
+                                <input type="checkbox" name="Select Boxcheck" id="Select Boxcheck111e" value="1">
+                                <label for="Select Boxcheck111e" aria-label="Option 1">Option 1e</label>
+                            </li>
+                        </ul>
+                        <li class="form-group--checkbox">
+                            <input type="checkbox" name="Select Boxcheck" id="Select Boxcheck211" value="1">
+                            <label for="Select Boxcheck211" aria-label="Option 1">Option 2</label>
+                        </li>
+                        <li class="form-group--checkbox">
+                            <input type="checkbox" name="Select Boxcheck" id="Select Boxcheck311" value="1">
+                            <label for="Select Boxcheck311" aria-label="Option 1">Option 3</label>
+                        </li>
+                        <li class="form-group--checkbox">
+                            <input type="checkbox" name="Select Boxcheck" id="Select Boxcheck411" value="1">
+                            <label for="Select Boxcheck411" aria-label="Option 1">Option 4</label>
+                        </li>
+                        <li class="form-group--checkbox">
+                            <input type="checkbox" name="Select Boxcheck" id="Select Boxcheck511" value="1">
+                            <label for="Select Boxcheck511" aria-label="Option 1">Option 5</label>
+                        </li>
+                        <li class="form-group--checkbox">
+                            <input type="checkbox" name="Select Boxcheck" id="Select Boxcheck161" value="1">
+                            <label for="Select Boxcheck161" aria-label="Option 1">Option 6</label>
+                        </li>
+                        <li class="form-group--checkbox">
+                            <input type="checkbox" name="Select Boxcheck" id="Select Boxcheck171" value="1">
+                            <label for="Select Boxcheck171" aria-label="Option 1">Option 7</label>
+                        </li>
+                    </ul>
+                </div>
+            </div>  
+
+    </span> 
+        
+    </div>
+    <h2>Auto complete and Multi select tags</h2>
+    <div class="amt">
+        <span class="ele">  
+    <div class="etb-slct ett-slct acpt pri scb-col100">
+                <select class="   " placeholder="Please Select">
+                    <option value="AK">Alaska</option>
+                    <option value="HI">Hawaii</option>
+                    <option value="CA">California</option>
+                    <option value="NV">Nevada</option>
+                    <option value="OR">Oregon</option>
+                    <option value="WA">Washington</option>
+                    <option value="AZ">Arizona</option>
+                    <option value="CO">Colorado</option>
+                    <option value="ID">Idaho</option>
+                    <option value="MT">Montana</option>
+                    <option value="NE">Nebraska</option>
+                    <option value="NM">New Mexico</option>
+                    <option value="ND">North Dakota</option>
+                    <option value="UT">Utah</option>
+                    <option value="WY">Wyoming</option>
+                    <option value="AL">Alabama</option>
+                    <option value="AR">Arkansas</option>
+                    <option value="IL">Illinois</option>
+                    <option value="IA">Iowa</option>
+                    <option value="KS">Kansas</option>
+                    <option value="KY">Kentucky</option>
+                    <option value="LA">Louisiana</option>
+                    <option value="MN">Minnesota</option>
+                    <option value="MS">Mississippi</option>
+                    <option value="MO">Missouri</option>
+                    <option value="OK">Oklahoma</option>
+                    <option value="SD">South Dakota</option>
+                    <option value="TX">Texas</option>
+                    <option value="TN">Tennessee</option>
+                    <option value="WI">Wisconsin</option>
+                    <option value="CT">Connecticut</option>
+                    <option value="DE">Delaware</option>
+                    <option value="FL">Florida</option>
+                    <option value="GA">Georgia</option>
+                    <option value="IN">Indiana</option>
+                    <option value="ME">Maine</option>
+                    <option value="MD">Maryland</option>
+                    <option value="MA">Massachusetts</option>
+                    <option value="MI">Michigan</option>
+                    <option value="NH">New Hampshire</option>
+                    <option value="NJ">New Jersey</option>
+                    <option value="NY">New York</option>
+                    <option value="NC">North Carolina</option>
+                    <option value="OH">Ohio</option>
+                    <option value="PA">Pennsylvania</option>
+                    <option value="RI">Rhode Island</option>
+                    <option value="SC">South Carolina</option>
+                    <option value="VT">Vermont</option>
+                    <option value="VA">Virginia</option>
+                    <option value="WV">West Virginia</option>
+                </select>
+            </div> 
+        </span> 
+        <span class="ele">
+    <div class="etb-slct ett-slct acpt sec scb-col100">
+                <select class="   " placeholder="Please Select">
+                    <option value="AK">Alaska</option>
+                    <option value="HI">Hawaii</option>
+                    <option value="CA">California</option>
+                    <option value="NV">Nevada</option>
+                    <option value="OR">Oregon</option>
+                    <option value="WA">Washington</option>
+                    <option value="AZ">Arizona</option>
+                    <option value="CO">Colorado</option>
+                    <option value="ID">Idaho</option>
+                    <option value="MT">Montana</option>
+                    <option value="NE">Nebraska</option>
+                    <option value="NM">New Mexico</option>
+                    <option value="ND">North Dakota</option>
+                    <option value="UT">Utah</option>
+                    <option value="WY">Wyoming</option>
+                    <option value="AL">Alabama</option>
+                    <option value="AR">Arkansas</option>
+                    <option value="IL">Illinois</option>
+                    <option value="IA">Iowa</option>
+                    <option value="KS">Kansas</option>
+                    <option value="KY">Kentucky</option>
+                    <option value="LA">Louisiana</option>
+                    <option value="MN">Minnesota</option>
+                    <option value="MS">Mississippi</option>
+                    <option value="MO">Missouri</option>
+                    <option value="OK">Oklahoma</option>
+                    <option value="SD">South Dakota</option>
+                    <option value="TX">Texas</option>
+                    <option value="TN">Tennessee</option>
+                    <option value="WI">Wisconsin</option>
+                    <option value="CT">Connecticut</option>
+                    <option value="DE">Delaware</option>
+                    <option value="FL">Florida</option>
+                    <option value="GA">Georgia</option>
+                    <option value="IN">Indiana</option>
+                    <option value="ME">Maine</option>
+                    <option value="MD">Maryland</option>
+                    <option value="MA">Massachusetts</option>
+                    <option value="MI">Michigan</option>
+                    <option value="NH">New Hampshire</option>
+                    <option value="NJ">New Jersey</option>
+                    <option value="NY">New York</option>
+                    <option value="NC">North Carolina</option>
+                    <option value="OH">Ohio</option>
+                    <option value="PA">Pennsylvania</option>
+                    <option value="RI">Rhode Island</option>
+                    <option value="SC">South Carolina</option>
+                    <option value="VT">Vermont</option>
+                    <option value="VA">Virginia</option>
+                    <option value="WV">West Virginia</option>
+                </select>
+            </div> 
+            </span> 
+        <span class="ele">
+    <div class="etb-slct ett-slct acpt ter scb-col100">
+                <select class="   " placeholder="Please Select">
+                    <option value="AK">Alaska</option>
+                    <option value="HI">Hawaii</option>
+                    <option value="CA">California</option>
+                    <option value="NV">Nevada</option>
+                    <option value="OR">Oregon</option>
+                    <option value="WA">Washington</option>
+                    <option value="AZ">Arizona</option>
+                    <option value="CO">Colorado</option>
+                    <option value="ID">Idaho</option>
+                    <option value="MT">Montana</option>
+                    <option value="NE">Nebraska</option>
+                    <option value="NM">New Mexico</option>
+                    <option value="ND">North Dakota</option>
+                    <option value="UT">Utah</option>
+                    <option value="WY">Wyoming</option>
+                    <option value="AL">Alabama</option>
+                    <option value="AR">Arkansas</option>
+                    <option value="IL">Illinois</option>
+                    <option value="IA">Iowa</option>
+                    <option value="KS">Kansas</option>
+                    <option value="KY">Kentucky</option>
+                    <option value="LA">Louisiana</option>
+                    <option value="MN">Minnesota</option>
+                    <option value="MS">Mississippi</option>
+                    <option value="MO">Missouri</option>
+                    <option value="OK">Oklahoma</option>
+                    <option value="SD">South Dakota</option>
+                    <option value="TX">Texas</option>
+                    <option value="TN">Tennessee</option>
+                    <option value="WI">Wisconsin</option>
+                    <option value="CT">Connecticut</option>
+                    <option value="DE">Delaware</option>
+                    <option value="FL">Florida</option>
+                    <option value="GA">Georgia</option>
+                    <option value="IN">Indiana</option>
+                    <option value="ME">Maine</option>
+                    <option value="MD">Maryland</option>
+                    <option value="MA">Massachusetts</option>
+                    <option value="MI">Michigan</option>
+                    <option value="NH">New Hampshire</option>
+                    <option value="NJ">New Jersey</option>
+                    <option value="NY">New York</option>
+                    <option value="NC">North Carolina</option>
+                    <option value="OH">Ohio</option>
+                    <option value="PA">Pennsylvania</option>
+                    <option value="RI">Rhode Island</option>
+                    <option value="SC">South Carolina</option>
+                    <option value="VT">Vermont</option>
+                    <option value="VA">Virginia</option>
+                    <option value="WV">West Virginia</option>
+                </select>
+            </div>
+    </span> 
+    </div>
+    <br>
+    <div class="amt">
+        <span class="ele">
+    <div class="etb-slct ett-slct mltt pri  scb-col100">
+                <select class="  " multiple="multiple" placeholder="Please Select" title=" city name">
+                    <option value="AK">Alaska</option>
+                    <option value="HI">Hawaii</option>
+                    <option value="CA">California</option>
+                    <option value="NV">Nevada</option>
+                    <option value="OR">Oregon</option>
+                    <option value="WA">Washington</option>
+                    <option value="AZ">Arizona</option>
+                    <option value="CO">Colorado</option>
+                    <option value="ID">Idaho</option>
+                    <option value="MT">Montana</option>
+                    <option value="NE">Nebraska</option>
+                    <option value="NM">New Mexico</option>
+                    <option value="ND">North Dakota</option>
+                    <option value="UT">Utah</option>
+                    <option value="WY">Wyoming</option>
+                    <option value="AL">Alabama</option>
+                    <option value="AR">Arkansas</option>
+                    <option value="IL">Illinois</option>
+                    <option value="IA">Iowa</option>
+                    <option value="KS">Kansas</option>
+                    <option value="KY">Kentucky</option>
+                    <option value="LA">Louisiana</option>
+                    <option value="MN">Minnesota</option>
+                    <option value="MS">Mississippi</option>
+                    <option value="MO">Missouri</option>
+                    <option value="OK">Oklahoma</option>
+                    <option value="SD">South Dakota</option>
+                    <option value="TX">Texas</option>
+                    <option value="TN">Tennessee</option>
+                    <option value="WI">Wisconsin</option>
+                    <option value="CT">Connecticut</option>
+                    <option value="DE">Delaware</option>
+                    <option value="FL">Florida</option>
+                    <option value="GA">Georgia</option>
+                    <option value="IN">Indiana</option>
+                    <option value="ME">Maine</option>
+                    <option value="MD">Maryland</option>
+                    <option value="MA">Massachusetts</option>
+                    <option value="MI">Michigan</option>
+                    <option value="NH">New Hampshire</option>
+                    <option value="NJ">New Jersey</option>
+                    <option value="NY">New York</option>
+                    <option value="NC">North Carolina</option>
+                    <option value="OH">Ohio</option>
+                    <option value="PA">Pennsylvania</option>
+                    <option value="RI">Rhode Island</option>
+                    <option value="SC">South Carolina</option>
+                    <option value="VT">Vermont</option>
+                    <option value="VA">Virginia</option>
+                    <option value="WV">West Virginia</option>
+                </select>
+            </div> 
+        </span> 
+        <span class="ele">
+    <div class="etb-slct ett-slct mltt sec scb-col100">
+                <select class="  " multiple="multiple" placeholder="Please Select" title=" city name">
+                    <option value="AK">Alaska</option>
+                    <option value="HI">Hawaii</option>
+                    <option value="CA">California</option>
+                    <option value="NV">Nevada</option>
+                    <option value="OR">Oregon</option>
+                    <option value="WA">Washington</option>
+                    <option value="AZ">Arizona</option>
+                    <option value="CO">Colorado</option>
+                    <option value="ID">Idaho</option>
+                    <option value="MT">Montana</option>
+                    <option value="NE">Nebraska</option>
+                    <option value="NM">New Mexico</option>
+                    <option value="ND">North Dakota</option>
+                    <option value="UT">Utah</option>
+                    <option value="WY">Wyoming</option>
+                    <option value="AL">Alabama</option>
+                    <option value="AR">Arkansas</option>
+                    <option value="IL">Illinois</option>
+                    <option value="IA">Iowa</option>
+                    <option value="KS">Kansas</option>
+                    <option value="KY">Kentucky</option>
+                    <option value="LA">Louisiana</option>
+                    <option value="MN">Minnesota</option>
+                    <option value="MS">Mississippi</option>
+                    <option value="MO">Missouri</option>
+                    <option value="OK">Oklahoma</option>
+                    <option value="SD">South Dakota</option>
+                    <option value="TX">Texas</option>
+                    <option value="TN">Tennessee</option>
+                    <option value="WI">Wisconsin</option>
+                    <option value="CT">Connecticut</option>
+                    <option value="DE">Delaware</option>
+                    <option value="FL">Florida</option>
+                    <option value="GA">Georgia</option>
+                    <option value="IN">Indiana</option>
+                    <option value="ME">Maine</option>
+                    <option value="MD">Maryland</option>
+                    <option value="MA">Massachusetts</option>
+                    <option value="MI">Michigan</option>
+                    <option value="NH">New Hampshire</option>
+                    <option value="NJ">New Jersey</option>
+                    <option value="NY">New York</option>
+                    <option value="NC">North Carolina</option>
+                    <option value="OH">Ohio</option>
+                    <option value="PA">Pennsylvania</option>
+                    <option value="RI">Rhode Island</option>
+                    <option value="SC">South Carolina</option>
+                    <option value="VT">Vermont</option>
+                    <option value="VA">Virginia</option>
+                    <option value="WV">West Virginia</option>
+                </select>
+            </div> 
+        </span>
+        <span class="ele">
+        <div class="etb-slct ett-slct mltt ter scb-col100">
+                    <select class="  " multiple="multiple" placeholder="Please Select" title=" city name">
+                        <option value="AK">Alaska</option>
+                        <option value="HI">Hawaii</option>
+                        <option value="CA">California</option>
+                        <option value="NV">Nevada</option>
+                        <option value="OR">Oregon</option>
+                        <option value="WA">Washington</option>
+                        <option value="AZ">Arizona</option>
+                        <option value="CO">Colorado</option>
+                        <option value="ID">Idaho</option>
+                        <option value="MT">Montana</option>
+                        <option value="NE">Nebraska</option>
+                        <option value="NM">New Mexico</option>
+                        <option value="ND">North Dakota</option>
+                        <option value="UT">Utah</option>
+                        <option value="WY">Wyoming</option>
+                        <option value="AL">Alabama</option>
+                        <option value="AR">Arkansas</option>
+                        <option value="IL">Illinois</option>
+                        <option value="IA">Iowa</option>
+                        <option value="KS">Kansas</option>
+                        <option value="KY">Kentucky</option>
+                        <option value="LA">Louisiana</option>
+                        <option value="MN">Minnesota</option>
+                        <option value="MS">Mississippi</option>
+                        <option value="MO">Missouri</option>
+                        <option value="OK">Oklahoma</option>
+                        <option value="SD">South Dakota</option>
+                        <option value="TX">Texas</option>
+                        <option value="TN">Tennessee</option>
+                        <option value="WI">Wisconsin</option>
+                        <option value="CT">Connecticut</option>
+                        <option value="DE">Delaware</option>
+                        <option value="FL">Florida</option>
+                        <option value="GA">Georgia</option>
+                        <option value="IN">Indiana</option>
+                        <option value="ME">Maine</option>
+                        <option value="MD">Maryland</option>
+                        <option value="MA">Massachusetts</option>
+                        <option value="MI">Michigan</option>
+                        <option value="NH">New Hampshire</option>
+                        <option value="NJ">New Jersey</option>
+                        <option value="NY">New York</option>
+                        <option value="NC">North Carolina</option>
+                        <option value="OH">Ohio</option>
+                        <option value="PA">Pennsylvania</option>
+                        <option value="RI">Rhode Island</option>
+                        <option value="SC">South Carolina</option>
+                        <option value="VT">Vermont</option>
+                        <option value="VA">Virginia</option>
+                        <option value="WV">West Virginia</option>
+                    </select>
+                </div>  
+                </span>
+    </div>
+    <h2> checkbox</h2>
+    
+    <div class="test">
+        <span class="etb-chek ett-chek hor"> 
+            <span>
+                <input type="checkbox" id="check1"  />
+                <label class="flb" for="check1"> Option1</label>
+            </span>
+            <span>
+                <input type="checkbox" id="check2" />
+                <label class="flb" for="check2" >Option2</label>
+            </span>	
+            <span>
+                <input type="checkbox" disabled="disabled" id="check3" />
+                <label class="flb" for="check3" title="Option3">Disabled</label>
+            </span>	
+        </span>
+        <span class="etb-chek ett-chek pri hor">
+	                    <span>
+	                        <input type="checkbox" id="check01"  />
+	                        <label class="flb" for="check01"> Option1 </label>
+	                    </span>
+	                    <span>
+	                        <input type="checkbox" id="check02" />
+	                        <label class="flb" for="check02" >Option2</label>
+	                    </span>	
+	                    <span>
+	                        <input type="checkbox" disabled="disabled" id="check03" />
+	                        <label class="flb" for="check03" title="Option3">Disabled</label>
+	                    </span>		
+                    </span>
+        <span class="etb-chek ett-chek hor sec">
+                    <span>
+                        <input type="checkbox" id="check19"  />
+                        <label class="flb" for="check19"> Option1</label>
+                    </span>
+                    <span>
+                        <input type="checkbox" id="check29" />
+                        <label class="flb" for="check29" >Option2</label>
+                    </span>	
+                    <span>
+                        <input type="checkbox" disabled="disabled" id="check39" />
+                        <label class="flb" for="check39" title="Option3">Disabled</label>
+                    </span>
+                </span>
+        <span class="etb-chek ett-chek hor ter">
+                    <span>
+                        <input type="checkbox" id="check73"  />
+                        <label class="flb" for="check73"> Option1</label>
+                    </span>
+                    <span>
+                        <input type="checkbox" id="check83" />
+                        <label class="flb" for="check83" >Option2</label>
+                    </span>	
+                    <span>
+                        <input type="checkbox" disabled="disabled" id="check93" />
+                        <label class="flb" for="check93" title="Option3">Disabled</label>
+                    </span>	
+                </span>
+            <br>
+        <span class="etb-chek ett-chek ver">
+                    <span>
+                        <input type="checkbox" id="check4"  />
+                        <label class="flb" for="check4"> Option1</label>
+                    </span>
+                    <span>
+                        <input type="checkbox" id="check5" />
+                        <label class="flb" for="check5" >Option2</label>
+                    </span>	
+                    <span>
+                        <input type="checkbox" disabled="disabled" id="check6" />
+                        <label class="flb" for="check6" title="Option3">Disabled</label>
+                    </span>	
+                </span> 
+        <span class="etb-chek ett-chek pri ver">
+            <span>
+                <input type="checkbox" id="check04"  />
+                <label class="flb" for="check04"> Option1 </label>
+            </span>
+            <span>
+                <input type="checkbox" id="check05" />
+                <label class="flb" for="check05" >Option2</label>
+            </span>	
+            <span>
+                <input type="checkbox" disabled="disabled" id="check06" />
+                <label class="flb" for="check06" title="Option3">Disabled</label>
+            </span>	
+        </span>   
+        <span class="etb-chek ett-chek ver sec ">
+        <span>
+            <input type="checkbox" id="check48"  />
+            <label class="flb" for="check48"> Option1</label>
+        </span>
+        <span>
+            <input type="checkbox" id="check58" />
+            <label class="flb" for="check58" >Option2</label>
+        </span>	
+        <span>
+            <input type="checkbox" disabled="disabled" id="check68" />
+            <label class="flb" for="check68" title="Option3">Disabled</label>
+        </span>	
+            </span>  
+        <span class="etb-chek ett-chek ver ter">
+        <span>
+            <input type="checkbox" id="check7b1"  />
+            <label class="flb" for="check7b1"> Option1</label>
+        </span>
+        <span>
+            <input type="checkbox" id="check8b1" />
+            <label class="flb" for="check8b1" >Option2</label>
+        </span>	
+        <span>
+            <input type="checkbox" disabled="disabled" id="check9b1" />
+            <label class="flb" for="check9b1" title="Option3">Disabled</label>
+        </span>											
+    </span> 
+        
+    </div>
+    <div class="test">
+       
+        <span class="ett-rdgp  etb-rdgp sec">
+            <div class="button-group-buttons" data-toggle="buttons">
+                <div class="rdio-btn-grp">
+                    <input type="radio" name="rdio-btn-grp2" id="button-group12" autocomplete="off" checked title="Radio 1">
+                    <label for="button-group12" class="rdio-btn" title="Radio 1 (preselected)">Radio 1 (preselected)</label>
+                </div>
+                <div class="rdio-btn-grp">
+                    <input type="radio" name="rdio-btn-grp2" id="button-group22" autocomplete="off" title="Radio 2">
+                    <label for="button-group22" class="rdio-btn" title="Radio 2">Radio 2</label>
+                </div>
+                <div class="rdio-btn-grp">
+                    <input type="radio" name="rdio-btn-grp2" id="button-group32" autocomplete="off" title="Radio 3">
+                    <label for="button-group32" class="rdio-btn" title="Radio 3">Radio 3</label>
+                </div>
+            </div>										
+            <span class="htx">Hint for Radio Group Buttons</span>
+                </span> 
+        <span class="ett-rdgp  etb-rdgp ter">
+            <div class="button-group-buttons" data-toggle="buttons">
+                <div class="rdio-btn-grp">
+                    <input type="radio" name="rdio-btn-grp3" id="button-group13" autocomplete="off" checked title="Radio 1">
+                    <label for="button-group13" class="rdio-btn" title="Radio 1 (preselected)">Radio 1 (preselected)</label>
+                </div>
+                <div class="rdio-btn-grp">
+                    <input type="radio" name="rdio-btn-grp3" id="button-group23" autocomplete="off" title="Radio 2">
+                    <label for="button-group23" class="rdio-btn" title="Radio 2">Radio 2</label>
+                </div>
+                <div class="rdio-btn-grp">
+                    <input type="radio" name="rdio-btn-grp3" id="button-group33" autocomplete="off" title="Radio 3">
+                    <label for="button-group33" class="rdio-btn" title="Radio 3">Radio 3</label>
+                </div>
+            </div>										
+            <span class="htx">Hint for Radio Group Buttons</span>
+        </span>	
+        
+    </div>
+    <div class=" ">
+        <span class="etb-rdio ett-rdio hor">
+            <span >
+                <input type="radio" name="rgroup1" id="radio1"  />
+                <label class="flb" for="radio1" title="Option1"> Option1</label>
+            </span>
+            <span >
+                <input type="radio" name="rgroup1" id="radio2" />
+                <label class="flb" for="radio2" title="Option2">Option2</label>
+            </span>	
+            <span >
+                <input type="radio" name="rgroup1" disabled="disabled" id="radio3" />
+                <label class="flb" for="radio3" title="Option3">Disabled</label>
+            </span>	
+        </span> 
+         
+        <span class="etb-rdio ett-rdio ver ">
+                    <span >
+                        <input type="radio" name="rgroup2" id="radio4"  />
+                        <label class="flb" for="radio4" title="Option1"> Option1</label>
+                    </span>
+                    <span >
+                        <input type="radio" name="rgroup2" id="radio5" />
+                        <label class="flb" for="radio5" title="Option2">Option2</label>
+                    </span>	
+                    <span >
+                        <input type="radio" name="rgroup2" disabled="disabled" id="radio6" />
+                        <label class="flb" for="radio6" title="Option3">Disabled</label>
+                    </span>	
+                        </span>
+        
+       
+        <span class="etb-rdio ett-rdio ver sec"> 
+                    <span >
+                        <input type="radio" name="rgroup3bp" id="radio7b4"  />
+                        <label class="flb" for="radio7b4" title="Option1"> Option1</label>
+                    </span>
+                    <span >
+                        <input type="radio" name="rgroup3bp" id="radio8b4" />
+                        <label class="flb" for="radio8b4" title="Option2">Option2</label>
+                    </span>	
+                    <span >
+                        <input type="radio" name="rgroup3bp" disabled="disabled" id="radio9b4" />
+                        <label class="flb" for="radio9b4" title="Option3">Disabled</label>
+                    </span>	
+                </span>
+         
+        <span class="etb-rdio ett-rdio hor ter"> 
+                    <span >
+                        <input type="radio" name="rgroup3r" id="radio78"  />
+                        <label class="flb" for="radio78" title="Option1"> Option1</label>
+                    </span>
+                    <span >
+                        <input type="radio" name="rgroup3r" id="radio88" />
+                        <label class="flb" for="radio88" title="Option2">Option2</label>
+                    </span>	
+                    <span >
+                        <input type="radio" name="rgroup3r" disabled="disabled" id="radio98" />
+                        <label class="flb" for="radio98" title="Option3">Disabled</label>
+                    </span>	
+                </span>
+        
+        <span class="etb-rdio ett-rdio ver pri">
+                    <span >
+                        <input type="radio" name="rgroup3bu" id="radio7b"  />
+                        <label class="flb" for="radio7b" title="Option1"> Option1</label>
+                    </span>
+                    <span >
+                        <input type="radio" name="rgroup3bu" id="radio8b" />
+                        <label class="flb" for="radio8b" title="Option2">Option2</label>
+                    </span>	
+                    <span >
+                        <input type="radio" name="rgroup3bu" disabled="disabled" id="radio9b" />
+                        <label class="flb" for="radio9b" title="Option3">Disabled</label>
+                    </span>											
+                 </span>
+         
+        <span class="etb-rdio ett-rdio hor sec">  
+                    <span >
+                        <input type="radio" name="rgroup3i" id="radio73"  />
+                        <label class="flb" for="radio73" title="Option1"> Option1</label>
+                    </span>
+                    <span >
+                        <input type="radio" name="rgroup3i" id="radio83" />
+                        <label class="flb" for="radio83" title="Option2">Option2</label>
+                    </span>	
+                    <span >
+                        <input type="radio" name="rgroup3i" disabled="disabled" id="radio93" />
+                        <label class="flb" for="radio93" title="Option3">Disabled</label>
+                    </span>											
+                </span> 
+       
+            		 
+         
+        <span class="etb-rdio ett-rdio ver ter">
+                    <span >
+                        <input type="radio" name="rgroup3bw" id="radio7b9"  />
+                        <label class="flb" for="radio7b9" title="Option1"> Option1</label>
+                    </span>
+                    <span >
+                        <input type="radio" name="rgroup3bw" id="radio8b9" />
+                        <label class="flb" for="radio8b9" title="Option2">Option2</label>
+                    </span>	
+                    <span >
+                        <input type="radio" name="rgroup3bw" disabled="disabled" id="radio9b9" />
+                        <label class="flb" for="radio9b9" title="Option3">Disabled</label>
+                    </span>											
+                    </span>
+    
+    
+    </div>
+    
+    
+    <script type="text/javascript" charset="utf-8" src="scripts/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="scripts/jquery-ui.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="scripts/select2.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="scripts/appzillon.js"></script>
+    <script type="text/javascript" charset="utf-8" src="scripts/uiutils.js"></script>
+    <script type="text/javascript" charset="utf-8" src="scripts/swiper.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="scripts/tableHeadFixer.js"></script>
+    <script type="text/javascript" charset="utf-8" src="scripts/karthik-plugins.js"></script>
+    <script type="text/javascript" charset="utf-8" src="scripts/karthik-scripts.js"></script>
+    <script type="text/javascript" charset="utf-8" src="scripts/ripple.js"></script>
+    <script type="text/javascript" charset="utf-8" src="scripts/svgxuse.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('#SpriteSVG').load('svg-apz.svg');
+            $('#myButton').click(function(event) {
+
+                // prevent page submit
+                event.preventDefault();
+                $("#SpriteSVG").text(" ");
+                // load the page into #SpriteSVG
+                $('#SpriteSVG').load('svg-apz.svg');
+
+            });
+            $('#myButtonBCL').click(function(event) {
+
+                // prevent page submit
+                event.preventDefault();
+                $("#SpriteSVG").text(" ");
+                // load the page into #SpriteSVG
+                $('#SpriteSVG').load('svg-bcl.svg');
+
+            });
+            // load ripple effect for elements with class .rpl
+            //$('.rpl, .ripples').on('click', ripplesEffect);
+
+        });
+    </script>
+</body>
+
+</html>

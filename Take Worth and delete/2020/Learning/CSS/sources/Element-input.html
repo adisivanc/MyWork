@@ -1,0 +1,1150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8" />
+		<title>Input</title>
+		<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+		<script>
+			function swapStyleSheet(sheet) {
+				document.getElementById('pagestyle').setAttribute('href', sheet);
+			}
+		</script>
+		<link href="styles/themes/appzillon/css/local-base.css" rel="stylesheet" media="screen" />
+		<link id="pagestyle" href="styles/themes/appzillon/css/local-apz.css" rel="stylesheet" media="screen" />
+
+	</head>
+	<body class="fulsv">
+        <span id="SpriteSVG"></span>
+        <br> 
+        <select class="ett-slcn etb-slcn pri" style="width:20%;">
+            <option id="myButton" onclick="swapStyleSheet('styles/themes/appzillon/css/local-apz.css')">Appzillon</option>
+            <option id="myButtonBCL" onclick="swapStyleSheet('styles/themes/appzillon/css/local-bcl.css')">Barclays </option>
+            <option id="myButtonRolb" onclick="swapStyleSheet('styles/themes/appzillon/css/local-rolb.css')">Rolb</option>
+            <option id="myButtonMobile" onclick="swapStyleSheet('styles/themes/appzillon/css/local-mobile.css')">Mobile</option>
+            <option id="myButtonCiti" onclick="swapStyleSheet('styles/themes/appzillon/css/local-citi.css')">Citi</option>
+        </select> 
+        <br>
+        <h2> Native</h2>
+        <span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50" >
+		<input class="ett-inpn scb-col100" data-title="Title" data-content="Contents..." data-placement="left" placeholder="Native">
+		</span>
+        <br> <br>   
+
+           <h2> Label With button</h2>   
+        <ul>
+            <li>
+                <label class="flb">Label with Button </label>
+                <button class="ett-bttn tsp sml lbtn px20" aria-label="bell"><svg class="ett-icon icon-bell px20"  aria-hidden="true"><use xlink:href="#icon-bell"></use></svg><div></div></button> 
+            </li>
+            <li> 
+                <span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50" >
+                <input class="ett-inpt etw-100 pri " data-title="Title" data-content="Contents..." data-placement="left" placeholder="Normal">
+            </span>
+            </li> 
+        </ul>        
+        <br> <br>   
+
+           <h2> Card Number</h2>   
+        <ul>
+            <li>
+                <label class="flb">Card Number </label>
+                
+            </li>
+            <li> 
+                <span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50" >
+                <input class="ett-inpt etw-100 pri " placeholder="Normal" type="tel" name="card-security" aria-describedby="htx-04">
+                <span id="htx-04" class="htx" >Optional description text </span>
+            </span>
+            </li> 
+        </ul> 
+        <br>    	 
+		<h2>Primary</h2> 
+		<span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50" >
+		<input class="ett-inpt etw-100 pri " data-title="Title" data-content="Contents..." data-placement="left" placeholder="Normal">
+		</span>
+		
+		<br><br>
+		
+		<span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50" >
+		<input class="ett-inpt etw-100 pri err" data-title="Title" data-content="Contents..." data-placement="left" placeholder="Error">
+		</span>
+		
+		<br><br>		
+		
+		<span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50" >
+		<input class="ett-inpt etw-100 pri readonly" readonly="readonly" data-title="Title" data-content="Contents..." data-placement="left" placeholder="Readonly">
+		</span>
+		
+		<br><br>
+		
+		<span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50"  >
+		<input class="ett-inpt etw-100 pri disabled" disabled="disabled" data-title="Title" data-content="Contents..." data-placement="left" placeholder="Disabled">
+		</span> 
+        <br><br> 
+        <span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50" >
+        <span class="etw-100 icl pri">
+        	<svg class="ett-icon icon-search px24"><use xlink:href="#icon-home"></use></svg>
+        	<input class="ett-inpt etw-100 pri"  type="text" id="input1" placeholder="With left icon"/>
+        </span>  
+        </span>
+                
+        <br><br>
+                
+        <span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50">
+	        <span class="etw-100 icr pri">
+	        <input class="ett-inpt etw-100 pri"  type="text" id="input1" placeholder="With right icon" />
+	        <svg class="ett-icon icon-search px24"><use xlink:href="#icon-home"></use></svg> 
+	        </span> 
+        </span>   
+                      
+		<br><br>   
+		  
+        <span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50" >
+        <span class="etw-100 syl pri">
+        <span >$</span>         	
+        <input class="ett-inpt etw-100 pri" type="text" id="input1" placeholder="With left symbol" />
+        </span> 
+        </span>
+        
+        <br><br>
+        		 
+        <span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50"  >
+        <span class="etw-100 syr pri">
+        <input class="ett-inpt etw-100 pri" type="text" id="input1" placeholder="With right symbol" />
+        <span >$</span> 
+        </span>  
+        </span>
+               
+        <br><br>
+        
+        <span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50">
+        <span class="etw-100 cil pri">
+        	<button class="ett-bttn tsp sml"><svg class="ett-icon icon-search px24" aria-hidden="true" role="presentation"><use xlink:href="#icon-home"></use></svg></button>        	
+        	<input class="ett-inpt etw-100 pri" type="text" id="input1" placeholder="With left clickable icon" />
+        </span> 
+        </span>
+        
+        <br><br>	
+        	
+        
+        <span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50">
+        <span class="etw-100 cir pri">     	
+        	<input class="ett-inpt etw-100 pri" type="text" id="input1" placeholder="With Right clickable icon" />
+            <button class="ett-bttn tsp sml"><svg class="ett-icon icon-search px24" aria-hidden="true" role="presentation"><use xlink:href="#icon-home"></use></svg></button>  
+        </span> 
+        </span>
+        
+        <br><br>  
+        
+        <!--span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50 ">
+        <span class="etw-100 btl pri" >
+        	<button class="ett-bttn pri sml">button</button>         	
+        	<input class="ett-inpt etw-100 pri"  type="text" id="input1" placeholder="With left button" />
+        </span> 
+        </span-->
+
+        <span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50 ">
+            <span class="etw-100 btl pri" >
+                <span >
+                    <button class="ett-bttn pri med">button</button> 
+                </span >
+                <span class="etw-100">
+                    <input class="ett-inpt etw-100 pri"  type="text" id="input1" placeholder="With left button" />
+                </span>      	
+            </span> 
+        </span> 
+        <br><br>
+        <span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50 ">
+            <span class="etw-100 btr pri" >
+                <span class="etw-100">
+                    <input class="ett-inpt etw-100 pri"  type="text" id="input1" placeholder="With right button" />
+                </span>
+                <span>
+                    <button class="ett-bttn pri med">button</button>
+                </span>        	      	
+            </span> 
+        </span>               
+        
+        <br><br> 
+        <!--span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50">
+        <span class="etw-100 btr pri">
+        <input class="ett-inpt etw-100 pri" type="text" id="input1" placeholder="With right button" />
+        <button class="ett-bttn pri sml">button</button>
+        </span> 
+        </span-->          
+        <br><br>                          
+        <h3> date with icon primary</h3>
+        <br>
+        <span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50">
+        <span class="ett-date etw-100 icl pri">
+        	<svg class="ett-icon icon-calendar px24"><use xlink:href="#icon-calendar"></use></svg> 
+            <input type="text" class="ett-inpt etw-100 pri" id="datepicker-demo" placeholder="DD / MM / YYYY" title="Date Input"> 
+        </span>  
+        </span>     
+        <br>
+        <br>  
+        <span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50">
+	        <span class="ett-date etw-100 icr pri">
+              <input type="text" class="ett-inpt etw-100 pri" id="datepicker-demo2" placeholder="DD / MM / YYYY" title="Date Input">     
+	           <svg class="ett-icon icon-calendar px24"><use xlink:href="#icon-calendar"></use></svg> 
+	        </span> 
+        </span>
+        <br>
+        <br>
+        <h3> date with button primary</h3>
+        <br>
+        <span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50">
+        <span class="ett-date etw-100 cil pri">
+        	<button class="ett-bttn tsp sml"><svg class="ett-icon icon-calendar px24"><use xlink:href="#icon-calendar"></use></svg></button> <input type="text" class="ett-inpt etw-100 pri" id="datepicker-demo3" placeholder="DD / MM / YYYY" title="Date Input"> 
+        </span> 
+        </span>
+        
+        <br>
+        <br>	 
+        <span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50">
+        <span class="ett-date etw-100 cir pri">     	
+        	<input type="text" class="ett-inpt etw-100 pri" id="datepicker-demo4" placeholder="DD / MM / YYYY" title="Date Input"> 
+            <button class="ett-bttn tsp sml"><svg class="ett-icon icon-calendar px24"><use xlink:href="#icon-calendar"></use></svg></button> 
+        </span> 
+        </span>
+        <br>
+        <br>
+        <br>
+        <h3> LOV primary</h3>
+        <br>
+        <span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50 ">
+        <span class="ett-lofv etw-100 btl pri" >
+        	<span class="etw-5">
+            <button class="ett-bttn pri med inf"><svg class="ett-icon icon-grid px24"><use xlink:href="#icon-grid"></use></svg> </button>       
+            </span>
+            <span>
+                <input class="ett-inpt etw-100 pri"  type="text" id="input1" placeholder="With left button" />
+            </span>
+        </span> 
+        </span> 
+        <br><br>
+        <span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50 ">
+        <span class="ett-lofv etw-100 btl pri" >
+        	<span class="etw-5">
+            <button class="ett-bttn pri med war"><svg class="ett-icon icon-grid px24"><use xlink:href="#icon-grid"></use></svg> </button>       
+            </span>
+            <span>
+                <input class="ett-inpt etw-100 pri"  type="text" id="input1" placeholder="With left button" />
+            </span>
+        </span> 
+        </span>
+        <br>
+        <br> 
+        <span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50 ">
+        <span class="ett-lofv etw-100 btl pri" >
+        	<span class="etw-5">
+            <button class="ett-bttn pri med suc"><svg class="ett-icon icon-grid px24"><use xlink:href="#icon-grid"></use></svg> </button>       
+            </span>
+            <span>
+                <input class="ett-inpt etw-100 pri"  type="text" id="input1" placeholder="With left button" />
+            </span>
+        </span> 
+        </span>
+        <br>
+        <br>
+        <span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50 ">
+        <span class="ett-lofv etw-100 btl pri" >
+        	<span class="etw-5">
+            <button class="ett-bttn pri med err"><svg class="ett-icon icon-grid px24"><use xlink:href="#icon-grid"></use></svg> </button>       
+            </span>
+            <span>
+                <input class="ett-inpt etw-100 pri"  type="text" id="input1" placeholder="With left button" />
+            </span>
+        </span> 
+        </span>
+        <br> 
+        <br>
+        
+        <span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50">
+        <span class="ett-lofv etw-100 btr pri">
+            <span>
+                <input class="ett-inpt etw-100 pri " type="text" id="input1" placeholder="With right button" />
+            </span>
+            <span class="etw-5">
+                <button class="ett-bttn pri med inf"><svg class="ett-icon icon-grid px24"><use xlink:href="#icon-grid"></use></svg></button> 
+            </span>
+        </span> 
+        </span>
+        <br> <br>
+        <span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50 ">
+        <span class="ett-lofv etw-100 btr pri" > 
+            <span>
+                <input class="ett-inpt etw-100 pri"  type="text" id="input1" placeholder="With right button" />
+            </span>
+            <span class="etw-5">
+            <button class="ett-bttn pri med war"><svg class="ett-icon icon-grid px24"><use xlink:href="#icon-grid"></use></svg> </button>   
+            </span>
+        </span> 
+        </span> 
+        <br>
+        <br>
+        <span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50 ">
+        <span class="ett-lofv etw-100 btr pri" > 
+            <span>
+                <input class="ett-inpt etw-100 pri"  type="text" id="input1" placeholder="With right button" />
+            </span>
+            <span class="etw-5">
+            <button class="ett-bttn pri med suc"><svg class="ett-icon icon-grid px24"><use xlink:href="#icon-grid"></use></svg> </button>   
+            </span>
+        </span> 
+        </span>
+        <br>
+        <br>
+        <span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50 ">
+        <span class="ett-lofv etw-100 btr pri" >
+            <span>
+                <input class="ett-inpt etw-100 pri"  type="text" id="input1" placeholder="With right button" />
+            </span> 
+        	<span class="etw-5">
+            <button class="ett-bttn pri med err"><svg class="ett-icon icon-grid px24"><use xlink:href="#icon-grid"></use></svg> </button>   
+            </span>
+        </span> 
+        </span>
+        <br> 
+        <br>
+        <h3>LOV Textarea </h3>
+        <h3> LOV Semantics </h3>
+        <span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50 ">
+        <span class="ett-lofv etw-100 btl pri txar" >
+        	<span class="etw-5">
+            <button class="ett-bttn pri med inf"><svg class="ett-icon icon-grid px24"><use xlink:href="#icon-grid"></use></svg> </button>       
+            </span>
+            <span>
+                <textarea class="ett-texa pri etw-100 " id="input1" > LOV textarea with left button</textarea>
+            </span> 
+        </span> 
+        </span> 
+        <br>
+        <br>
+        <span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50 ">
+        <span class="ett-lofv etw-100 btl pri txar" >
+        	<span class="etw-5">
+            <button class="ett-bttn pri med war "><svg class="ett-icon icon-grid px24"><use xlink:href="#icon-grid"></use></svg> </button>   
+            </span>
+            <span>
+                <textarea class="ett-texa pri etw-100 " id="input1" > LOV textarea with left button</textarea>
+            </span>
+        </span> 
+        </span>
+        <br> 
+        <br>
+        <span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50 ">
+        <span class="ett-lofv etw-100 btl pri txar" >
+        	<span class="etw-5">
+            <button class="ett-bttn pri med suc"><svg class="ett-icon icon-grid px24"><use xlink:href="#icon-grid"></use></svg> </button>       
+            </span>
+            <span>
+                <textarea class="ett-texa pri etw-100 " id="input1" > LOV textarea with left button</textarea>
+            </span>
+        </span> 
+        </span>
+        <br>
+        
+        <br>
+        <span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50 ">
+        <span class="ett-lofv etw-100 btl pri txar" >
+        	<span class="etw-5">
+            <button class="ett-bttn pri med err"><svg class="ett-icon icon-grid px24"><use xlink:href="#icon-grid"></use></svg> </button>       
+            </span>
+            <span>
+                <textarea class="ett-texa pri etw-100 " id="input1" > LOV textarea with left button</textarea>
+            </span>
+        </span> 
+        </span> 
+        <br>
+        <br> 
+        <br>
+        <h3>LOV Textarea button right</h3>
+        <br>
+        <span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50 ">
+        <span class="ett-lofv etw-100 btr pri txar" >
+        	<span>
+                <textarea class="ett-texa pri etw-100 " id="input1" > LOV textarea with right button</textarea>
+            </span>
+            <span class="etw-5">
+            <button class="ett-bttn pri med inf"><svg class="ett-icon icon-grid px24"><use xlink:href="#icon-grid"></use></svg> </button>       
+            </span>
+            
+        </span> 
+        </span>
+        <br>
+        <br>
+        <span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50 ">
+        <span class="ett-lofv etw-100 btr pri txar" >
+        	<span>
+                <textarea class="ett-texa pri etw-100 " id="input1" > LOV textarea with right button</textarea>
+            </span>
+            <span class="etw-5">
+            <button class="ett-bttn pri med err"><svg class="ett-icon icon-grid px24"><use xlink:href="#icon-grid"></use></svg> </button>       
+            </span>
+            
+        </span> 
+        </span> 
+        <br>
+        <br> 
+        <span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50 ">
+        <span class="ett-lofv etw-100 btr pri txar" >
+        	<span>
+                <textarea class="ett-texa pri etw-100 " id="input1" > LOV textarea with right button</textarea>
+            </span>
+            <span class="etw-5">
+            <button class="ett-bttn pri med war"><svg class="ett-icon icon-grid px24"><use xlink:href="#icon-grid"></use></svg> </button>       
+            </span>
+            
+        </span> 
+        </span>
+        <br>
+        <br> 
+        <span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50 ">
+        <span class="ett-lofv etw-100 btr pri txar" >
+        	<span>
+                <textarea class="ett-texa pri etw-100 " id="input1" > LOV textarea with right button</textarea>
+            </span>
+            <span class="etw-5">
+            <button class="ett-bttn pri med suc"><svg class="ett-icon icon-grid px24"><use xlink:href="#icon-grid"></use></svg> </button>   
+            </span> 
+        </span> 
+        </span> 
+        <br>
+        <br>
+ 		<h2>Secondary</h2> 
+		<span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50" >
+		<input class="ett-inpt etw-100 sec" data-title="Title" data-content="Contents..." data-placement="left" placeholder="Normal">
+		</span> 
+		<br><br> 
+		<span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50" >
+		      <input class="ett-inpt etw-100 sec err" data-title="Title" data-content="Contents..." data-placement="left" placeholder="Error">
+		</span>
+		
+		<br><br>		
+		
+		<span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50" >
+		      <input class="ett-inpt etw-100 sec readonly" readonly="readonly" data-title="Title" data-content="Contents..." data-placement="left" placeholder="Readonly">
+		</span>
+		
+		<br><br>
+		
+		<span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50"  >
+		      <input class="ett-inpt etw-100 sec disabled" disabled="disabled" data-title="Title" data-content="Contents..." data-placement="left" placeholder="Disabled">
+		</span>
+		
+        <br><br>
+        
+        <span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50">
+        <span class="etw-100 icl sec">
+        	<svg class="ett-icon icon-search px24"><use xlink:href="#icon-home"></use></svg>  
+        	<input class="ett-inpt etw-100 sec"  type="text" id="input1" placeholder="With left icon"/>
+        </span>  
+        </span>
+                
+        <br><br>
+                
+        <span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50">
+	        <span class="etw-100 icr sec">
+	        <input class="ett-inpt etw-100 sec"  type="text" id="input1" placeholder="With right icon" />
+	        <svg class="ett-icon icon-search px24"><use xlink:href="#icon-home"></use></svg> 
+	        </span> 
+        </span>   
+                      
+		<br><br>   
+		  
+        <span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50" >
+        <span class="etw-100 syl sec">
+            <span >$</span>         	
+            <input class="ett-inpt etw-100 sec" type="text" id="input1" placeholder="With left symbol" />
+        </span> 
+        </span>
+        
+        <br><br>
+        		 
+        <span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50"  >
+        <span class="etw-100 syr sec">
+            <input class="ett-inpt etw-100 sec" type="text" id="input1" placeholder="With right symbol" />
+            <span >$</span> 
+        </span>  
+        </span>
+               
+        <br><br>
+        
+        <span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50">
+        <span class="etw-100 cil sec">
+        	<button class="ett-bttn tsp sml"><svg class="ett-icon icon-search px24"><use xlink:href="#icon-home"></use></svg></button>     	
+        	<input class="ett-inpt etw-100 sec" type="text" id="input1" placeholder="With left clickable icon" />
+        </span> 
+        </span>
+        
+        <br><br>	
+        	
+        
+        <span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50">
+        <span class="etw-100 cir sec">     	
+        	<input class="ett-inpt etw-100 sec" type="text" id="input1" placeholder="With Right clickable icon" />
+            <button class="ett-bttn tsp sml"><svg class="ett-icon icon-search px24"><use xlink:href="#icon-home"></use></svg></button>  
+        </span> 
+        </span>
+        
+        <br><br>  
+        
+        <span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50 ">
+        <span class="etw-100 btl sec" >
+        	<span>
+                <button class="ett-bttn sec med">button</button>         	
+            </span>
+            <span class="etw-100">    
+                <input class="ett-inpt etw-100 sec"  type="text" id="input1" placeholder="With left button" />
+            </span>
+        </span> 
+        </span>
+        
+        <br><br>
+        		 
+        <span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50">
+        <span class="etw-100 btr sec">
+            <span class="etw-100">
+                <input class="ett-inpt etw-100 sec" type="text" id="input1" placeholder="With right button" />
+            </span>
+            <span>
+                <button class="ett-bttn sec med">button</button>
+            </span>
+        </span> 
+        </span> 
+                
+        <br><br>                          
+ 
+        <br><br>                          
+        <h3> date with icon secondary</h3>
+        <br>
+        <span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50">
+        <span class="etw-100 icl sec">
+        	<svg class="ett-icon icon-calendar px24"><use xlink:href="#icon-calendar"></use></svg> 
+            <input type="text" class="ett-inpt etw-100 sec" id="datepicker-demo5" placeholder="DD / MM / YYYY" title="Date Input"> 
+        </span>  
+        </span>     
+        <br>
+        <br>  
+        <span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50">
+	        <span class="etw-100 icr sec">
+              <input type="text" class="ett-inpt etw-100 sec" id="datepicker-demo6" placeholder="DD / MM / YYYY" title="Date Input">     
+	           <svg class="ett-icon icon-calendar px24"><use xlink:href="#icon-calendar"></use></svg> 
+	        </span> 
+        </span>
+        <br>
+        <br>
+        <h3> date with button secondary</h3>
+        <br>
+        <span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50">
+        <span class="etw-100 cil sec">
+        	<button class="ett-bttn tsp sml"><svg class="ett-icon icon-calendar px24"><use xlink:href="#icon-calendar"></use></svg></button> <input type="text" class="ett-inpt etw-100 sec" id="datepicker-demo7" placeholder="DD / MM / YYYY" title="Date Input"> 
+        </span> 
+        </span>
+        
+        <br>
+        <br>	 
+        <span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50">
+        <span class="etw-100 cir sec">     	
+        	<input type="text" class="ett-inpt etw-100 sec" id="datepicker-demo8" placeholder="DD / MM / YYYY" title="Date Input"> 
+            <button class="ett-bttn tsp sml"><svg class="ett-icon icon-calendar px24"><use xlink:href="#icon-calendar"></use></svg></button> 
+        </span> 
+        </span>
+        <br> 
+        <br>
+        <h3> LOV secondary</h3>
+        <br>
+        <span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50 ">
+        <span class="ett-lofv etw-100 btl sec" >
+        	<span class="etw-5">
+            <button class="ett-bttn sec med inf"><svg class="ett-icon icon-grid px24"><use xlink:href="#icon-grid"></use></svg> </button>       
+            </span>
+            <span>
+                <input class="ett-inpt etw-100 sec"  type="text" id="input1" placeholder="With left button" />
+            </span>
+        </span> 
+        </span>  
+        <br> <br>
+        <span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50 ">
+        <span class="ett-lofv etw-100 btl sec" >
+        	<span class="etw-5">
+            <button class="ett-bttn sec med war"><svg class="ett-icon icon-grid px24"><use xlink:href="#icon-grid"></use></svg> </button>       
+            </span>
+            <span>
+                <input class="ett-inpt etw-100 sec"  type="text" id="input1" placeholder="With left button" />
+            </span>
+        </span> 
+        </span>
+        <br> 
+        <br>
+        <span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50 ">
+        <span class="ett-lofv etw-100 btl sec" >
+        	<span class="etw-5">
+            <button class="ett-bttn sec med suc"><svg class="ett-icon icon-grid px24"><use xlink:href="#icon-grid"></use></svg> </button>       
+            </span>
+            <span>
+                <input class="ett-inpt etw-100 sec"  type="text" id="input1" placeholder="With left button" />
+            </span>
+        </span> 
+        </span>
+        <br>
+        <br>
+        <span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50 ">
+        <span class="ett-lofv etw-100 btl sec" >
+        	<span class="etw-5">
+            <button class="ett-bttn sec med err"><svg class="ett-icon icon-grid px24"><use xlink:href="#icon-grid"></use></svg> </button>       
+            </span>
+            <span>
+                <input class="ett-inpt etw-100 sec"  type="text" id="input1" placeholder="With left button" />
+            </span>
+        </span> 
+        </span>
+        <br> 
+        <br>  
+        <span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50 ">
+        <span class="ett-lofv etw-100 btr sec" > 
+            <span>
+                <input class="ett-inpt etw-100 sec"  type="text" id="input1" placeholder="With right button" />
+            </span>
+            <span class="etw-5">
+            <button class="ett-bttn sec med inf"><svg class="ett-icon icon-grid px24"><use xlink:href="#icon-grid"></use></svg> </button>   
+            </span>
+        </span> 
+        </span>
+        <br>
+        <br>
+        <span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50 ">
+        <span class="ett-lofv etw-100 btr sec" > 
+            <span>
+                <input class="ett-inpt etw-100 sec"  type="text" id="input1" placeholder="With right button" />
+            </span>
+            <span class="etw-5">
+            <button class="ett-bttn sec med war"><svg class="ett-icon icon-grid px24"><use xlink:href="#icon-grid"></use></svg> </button>   
+            </span>
+        </span> 
+        </span>
+        <br>
+        <br>
+        <span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50 ">
+        <span class="ett-lofv etw-100 btr sec" > 
+            <span>
+                <input class="ett-inpt etw-100 sec"  type="text" id="input1" placeholder="With right button" />
+            </span>
+            <span class="etw-5">
+            <button class="ett-bttn sec med suc"><svg class="ett-icon icon-grid px24"><use xlink:href="#icon-grid"></use></svg> </button>   
+            </span>
+        </span> 
+        </span>
+        <br>
+        <br>
+        <span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50 ">
+        <span class="ett-lofv etw-100 btr sec" >
+            <span>
+                <input class="ett-inpt etw-100 sec"  type="text" id="input1" placeholder="With right button" />
+            </span> 
+        	<span class="etw-5">
+            <button class="ett-bttn sec med err"><svg class="ett-icon icon-grid px24"><use xlink:href="#icon-grid"></use></svg> </button>   
+            </span>
+        </span> 
+        </span>
+        <br> 
+        <br>
+        <h3>LOV Textarea </h3>
+        <br>
+        <h3> LOV Semantics </h3> 
+        <br>
+        <br>
+         <span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50 ">
+        <span class="ett-lofv etw-100 btl sec txar" >
+        	<span class="etw-5">
+            <button class="ett-bttn sec med inf"><svg class="ett-icon icon-grid px24"><use xlink:href="#icon-grid"></use></svg> </button>       
+            </span>
+            <span>
+                <textarea class="ett-texa sec etw-100 " id="input1" > LOV textarea with left button</textarea>
+            </span>
+        </span> 
+        </span>
+        <br>
+        <br>
+        <span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50 ">
+        <span class="ett-lofv etw-100 btl sec txar" >
+        	<span class="etw-5">
+            <button class="ett-bttn sec med war "><svg class="ett-icon icon-grid px24"><use xlink:href="#icon-grid"></use></svg> </button>   
+            </span>
+            <span>
+                <textarea class="ett-texa sec etw-100 " id="input1" > LOV textarea with left button</textarea>
+            </span>
+        </span> 
+        </span> 
+        <br>
+        <br>
+        <span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50 ">
+        <span class="ett-lofv etw-100 btl sec txar" >
+        	<span class="etw-5">
+            <button class="ett-bttn sec med suc"><svg class="ett-icon icon-grid px24"><use xlink:href="#icon-grid"></use></svg> </button>       
+            </span>
+            <span>
+                <textarea class="ett-texa sec etw-100 " id="input1" > LOV textarea with left button</textarea>
+            </span>
+        </span> 
+        </span>
+        <br>
+        
+        <br>
+        <span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50 ">
+        <span class="ett-lofv etw-100 btl sec txar" >
+        	<span class="etw-5">
+            <button class="ett-bttn sec med err"><svg class="ett-icon icon-grid px24"><use xlink:href="#icon-grid"></use></svg> </button>       
+            </span>
+            <span>
+                <textarea class="ett-texa sec etw-100 " id="input1" > LOV textarea with left button</textarea>
+            </span>
+        </span> 
+        </span> 
+        <br>
+        <br> 
+        <br>
+        <h3>LOV Textarea button right</h3>
+        <br>
+        <span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50 ">
+        <span class="ett-lofv etw-100 btr sec txar" >
+        	<span>
+                <textarea class="ett-texa sec etw-100 " id="input1" > LOV textarea with right button</textarea>
+            </span>
+            <span class="etw-5">
+            <button class="ett-bttn sec med inf"><svg class="ett-icon icon-grid px24"><use xlink:href="#icon-grid"></use></svg> </button>       
+            </span>
+            
+        </span> 
+        </span>
+        <br>
+        <br>
+        <span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50 ">
+        <span class="ett-lofv etw-100 btr sec txar" >
+        	<span>
+                <textarea class="ett-texa sec etw-100 " id="input1" > LOV textarea with right button</textarea>
+            </span>
+            <span class="etw-5">
+            <button class="ett-bttn sec med err"><svg class="ett-icon icon-grid px24"><use xlink:href="#icon-grid"></use></svg> </button>       
+            </span>
+            
+        </span> 
+        </span> 
+        <br>
+        <br> 
+        <span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50 ">
+        <span class="ett-lofv etw-100 btr sec txar" >
+        	<span>
+                <textarea class="ett-texa sec etw-100 " id="input1" > LOV textarea with right button</textarea>
+            </span>
+            <span class="etw-5">
+            <button class="ett-bttn sec med war"><svg class="ett-icon icon-grid px24"><use xlink:href="#icon-grid"></use></svg> </button>       
+            </span>
+            
+        </span> 
+        </span>
+        <br>
+        <br> 
+        <span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50 ">
+        <span class="ett-lofv etw-100 btr sec txar" >
+        	<span>
+                <textarea class="ett-texa sec etw-100 " id="input1" > LOV textarea with right button</textarea>
+            </span>
+            <span class="etw-5">
+            <button class="ett-bttn sec med suc"><svg class="ett-icon icon-grid px24"><use xlink:href="#icon-grid"></use></svg> </button>   
+            </span> 
+        </span> 
+        </span>
+        <br>
+         
+ 		<h2>Tertiary</h2>
+		
+		<span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50" >
+		      <input class="ett-inpt etw-100 ter" data-title="Title" data-content="Contents..." data-placement="left" placeholder="Normal">
+		</span>
+		
+		<br><br>
+		
+		<span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50" >
+		      <input class="ett-inpt etw-100 ter err" data-title="Title" data-content="Contents..." data-placement="left" placeholder="Error">
+		</span>
+		
+		<br><br>		
+		
+		<span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50" >
+		      <input class="ett-inpt etw-100 ter readonly" readonly="readonly" data-title="Title" data-content="Contents..." data-placement="left" placeholder="Readonly">
+		</span>
+		
+		<br><br>
+		
+		<span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50"  >
+		      <input class="ett-inpt etw-100 ter disabled" disabled="disabled" data-title="Title" data-content="Contents..." data-placement="left" placeholder="Disabled">
+		</span>
+		
+        <br><br>
+        
+        <span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50">
+        <span class="etw-100 icl ter">
+        	<svg class="ett-icon icon-search px24"><use xlink:href="#icon-home"></use></svg>  
+        	<input class="ett-inpt etw-100 ter"  type="text" id="input1" placeholder="With left icon"/>
+        </span>  
+        </span>
+                
+        <br><br>
+                
+        <span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50">
+	        <span class="etw-100 icr ter">
+	           <input class="ett-inpt etw-100 ter"  type="text" id="input1" placeholder="With right icon" />
+	           <svg class="ett-icon icon-search px24"><use xlink:href="#icon-home"></use></svg>
+	        </span> 
+        </span>   
+                      
+		<br><br>   
+		  
+        <span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50" >
+            <span class="etw-100 syl ter">
+                <span >$</span>         	
+                <input class="ett-inpt etw-100 ter" type="text" id="input1" placeholder="With left symbol" />
+            </span> 
+        </span>
+        
+        <br><br>
+        		 
+        <span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50"  >
+            <span class="etw-100 syr ter">
+                <input class="ett-inpt etw-100 ter" type="text" id="input1" placeholder="With right symbol" />
+                <span >$</span> 
+            </span>  
+        </span>
+               
+        <br><br>
+        
+        <span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50">
+            <span class="etw-100 cil ter">
+        	   <button class="ett-bttn tsp sml"><svg class="ett-icon icon-search px24"><use xlink:href="#icon-home"></use></svg></button> 
+        	   <input class="ett-inpt etw-100 ter" type="text" id="input1" placeholder="With left clickable icon" />
+            </span> 
+        </span>
+        
+        <br><br>	
+        	
+        
+        <span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50">
+        <span class="etw-100 cir ter">     	
+        	<input class="ett-inpt etw-100 ter" type="text" id="input1" placeholder="With Right clickable icon" />
+            <button class="ett-bttn tsp sml"><svg class="ett-icon icon-search px24"><use xlink:href="#icon-home"></use></svg></button>  
+        </span> 
+        </span>
+        
+        <br><br>  
+        
+        <span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50 ">
+        <span class="etw-100 btl ter" >
+        	<span>
+                <button class="ett-bttn ter med">button</button>         	
+            </span>
+            <span class="etw-100">
+        	   <input class="ett-inpt etw-100 ter"  type="text" id="input1" placeholder="With left button" />
+            </span>
+        </span> 
+        </span>
+        
+        <br><br>
+        		 
+        <span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50">
+        <span class="etw-100 btr ter">
+            <span class="etw-100">
+                <input class="ett-inpt etw-100 ter " type="text" id="input1" placeholder="With right button" />
+            </span>
+            <span >
+                <button class="ett-bttn ter med">button</button>
+            </span>
+        </span> 
+        </span> 
+                
+        <br><br>                          
+        <h3> date with icon teritiary</h3>
+        <br>
+        <span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50">
+        <span class="ett-date etw-100 icl ter">
+        	<svg class="ett-icon icon-calendar px24"><use xlink:href="#icon-calendar"></use></svg> 
+            <input type="text" class="ett-inpt ter etw-100" id="datepicker-demo9" placeholder="DD / MM / YYYY" title="Date Input"> 
+        </span>  
+        </span>     
+        <br>
+        <br>  
+        <span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50">
+	        <span class="ett-date etw-100 icr ter">
+              <input type="text" class="ett-inpt ter etw-100" id="datepicker-demo10" placeholder="DD / MM / YYYY" title="Date Input">     
+	           <svg class="ett-icon icon-calendar px24"><use xlink:href="#icon-calendar"></use></svg> 
+	        </span> 
+        </span>
+        <br>
+        <br>
+        <h3> date with button teritiary</h3>
+        <br>
+        <span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50">
+        <span class="ett-date etw-100  cil ter">
+        	<button class="ett-bttn tsp sml "><svg class="ett-icon icon-calendar px24"><use xlink:href="#icon-calendar"></use></svg></button> <input type="text" class="ett-inpt ter etw-100" id="datepicker-demo11" placeholder="DD / MM / YYYY" title="Date Input"> 
+        </span> 
+        </span> 
+        <br>
+        <br>	 
+        <span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50 ">
+        <span class="ett-date etw-100 cir ter">     	
+        	<input type="text" class="ett-inpt ter etw-100" id="datepicker-demo12" placeholder="DD / MM / YYYY" title="Date Input"> 
+            <button class="ett-bttn tsp sml"><svg class="ett-icon icon-calendar px24"><use xlink:href="#icon-calendar"></use></svg></button>  
+        </span> 
+        </span>
+        <br>
+        <br>
+        <br>
+        <h3> LOV teritiary with left button</h3> 
+        <br>
+        <span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50 ">
+        <span class="ett-lofv etw-100 btl ter" >
+        	<span class="etw-5">
+            <button class="ett-bttn ter med inf"><svg class="ett-icon icon-grid px24"><use xlink:href="#icon-grid"></use></svg> </button>       
+            </span>
+            <span>
+                <input class="ett-inpt etw-100 ter"  type="text" id="input1" placeholder="With left button" />
+            </span>
+        </span> 
+        </span>  
+        <br> <br>
+        <span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50 ">
+        <span class="ett-lofv etw-100 btl ter" >
+        	<span class="etw-5">
+            <button class="ett-bttn ter med war"><svg class="ett-icon icon-grid px24"><use xlink:href="#icon-grid"></use></svg> </button>       
+            </span>
+            <span>
+                <input class="ett-inpt etw-100 ter"  type="text" id="input1" placeholder="With left button" />
+            </span>
+        </span> 
+        </span>
+        <br> 
+        <br>
+        <span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50 ">
+        <span class="ett-lofv etw-100 btl ter" >
+        	<span class="etw-5">
+            <button class="ett-bttn ter med suc"><svg class="ett-icon icon-grid px24"><use xlink:href="#icon-grid"></use></svg> </button>       
+            </span>
+            <span>
+                <input class="ett-inpt etw-100 ter"  type="text" id="input1" placeholder="With left button" />
+            </span>
+        </span> 
+        </span>
+        <br>
+        <br>
+        <span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50 ">
+        <span class="ett-lofv etw-100 btl ter" >
+        	<span class="etw-5">
+            <button class="ett-bttn ter med err"><svg class="ett-icon icon-grid px24"><use xlink:href="#icon-grid"></use></svg> </button>       
+            </span>
+            <span>
+                <input class="ett-inpt etw-100 ter"  type="text" id="input1" placeholder="With left button" />
+            </span>
+        </span> 
+        </span>
+        <br> 
+        <br>
+        <h3> LOv tertiary with right button</h3>
+        <br>
+        <br>
+        <span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50 ">
+        <span class="ett-lofv etw-100 btr ter" > 
+            <span>
+                <input class="ett-inpt etw-100 ter"  type="text" id="input1" placeholder="With right button" />
+            </span>
+            <span class="etw-5">
+            <button class="ett-bttn ter med inf"><svg class="ett-icon icon-grid px24"><use xlink:href="#icon-grid"></use></svg> </button>   
+            </span>
+        </span> 
+        </span>
+        <br>
+        <br>
+        <span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50 ">
+        <span class="ett-lofv etw-100 btr ter" > 
+            <span>
+                <input class="ett-inpt etw-100 ter"  type="text" id="input1" placeholder="With right button" />
+            </span>
+            <span class="etw-5">
+            <button class="ett-bttn ter med war"><svg class="ett-icon icon-grid px24"><use xlink:href="#icon-grid"></use></svg> </button>   
+            </span>
+        </span> 
+        </span>
+        <br>
+        <br>
+        <span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50 ">
+        <span class="ett-lofv etw-100 btr ter" > 
+            <span>
+                <input class="ett-inpt etw-100 ter"  type="text" id="input1" placeholder="With right button" />
+            </span>
+            <span class="etw-5">
+            <button class="ett-bttn ter med suc"><svg class="ett-icon icon-grid px24"><use xlink:href="#icon-grid"></use></svg> </button>   
+            </span>
+        </span> 
+        </span>
+        <br>
+        <br>
+        <span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50 ">
+        <span class="ett-lofv etw-100 btr ter" >
+            <span>
+                <input class="ett-inpt etw-100 ter"  type="text" id="input1" placeholder="With right button" />
+            </span> 
+        	<span class="etw-5">
+            <button class="ett-bttn ter med err"><svg class="ett-icon icon-grid px24"><use xlink:href="#icon-grid"></use></svg> </button>   
+            </span>
+        </span> 
+        </span>
+        <br> 
+        <br>
+        <h3>LOV Textarea </h3>
+        <h3> LOV Semantics with button left</h3>
+        <span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50 ">
+        <span class="ett-lofv etw-100 btl ter txar" >
+        	<span class="etw-5">
+            <button class="ett-bttn ter med inf"><svg class="ett-icon icon-grid px24"><use xlink:href="#icon-grid"></use></svg> </button>       
+            </span>
+            <span>
+                <textarea class="ett-texa ter etw-100 " id="input1" > LOV textarea with left button</textarea>
+            </span> 
+        </span> 
+        </span> 
+        <br>
+        <br>
+        <span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50 ">
+        <span class="ett-lofv etw-100 btl ter txar" >
+        	<span class="etw-5">
+            <button class="ett-bttn ter med war "><svg class="ett-icon icon-grid px24"><use xlink:href="#icon-grid"></use></svg> </button>   
+            </span>
+            <span>
+                <textarea class="ett-texa ter etw-100 " id="input1" > LOV textarea with left button</textarea>
+            </span>
+        </span> 
+        </span>
+        <br>
+        <br> 
+        <span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50 ">
+        <span class="ett-lofv etw-100 btl ter txar" >
+        	<span class="etw-5">
+            <button class="ett-bttn ter med suc"><svg class="ett-icon icon-grid px24"><use xlink:href="#icon-grid"></use></svg> </button>       
+            </span>
+            <span>
+                <textarea class="ett-texa ter etw-100 " id="input1" > LOV textarea with left button</textarea>
+            </span>
+        </span> 
+        </span>
+        <br>
+        
+        <br>
+        <span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50 ">
+        <span class="ett-lofv etw-100 btl ter txar" >
+        	<span class="etw-5">
+            <button class="ett-bttn ter med err"><svg class="ett-icon icon-grid px24"><use xlink:href="#icon-grid"></use></svg> </button>       
+            </span>
+            <span>
+                <textarea class="ett-texa ter etw-100 " id="input1" > LOV textarea with left button</textarea>
+            </span>
+        </span> 
+        </span> 
+        <br>
+        <br> 
+        <br>
+        <h3>LOV semantics with button right</h3>
+        <br>
+        <span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50 ">
+        <span class="ett-lofv etw-100 btr ter txar" >
+        	<span>
+                <textarea class="ett-texa ter etw-100 " id="input1" >LOV Textarea  with right button</textarea>
+            </span>
+            <span class="etw-5">
+            <button class="ett-bttn ter med inf"><svg class="ett-icon icon-grid px24"><use xlink:href="#icon-grid"></use></svg> </button>       
+            </span>
+            
+        </span> 
+        </span>
+        <br>
+        <br>
+        <span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50 ">
+        <span class="ett-lofv etw-100 btr ter txar" >
+        	<span>
+                <textarea class="ett-texa ter etw-100 " id="input1" > LOV textarea with right button</textarea>
+            </span>
+            <span class="etw-5">
+            <button class="ett-bttn ter med err"><svg class="ett-icon icon-grid px24"><use xlink:href="#icon-grid"></use></svg> </button>       
+            </span>
+            
+        </span> 
+        </span> 
+        <br>
+        <br> 
+        <span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50 ">
+        <span class="ett-lofv etw-100 btr ter txar" >
+        	<span>
+                <textarea class="ett-texa ter etw-100 " id="input1" > LOV textarea with right button</textarea>
+            </span>
+            <span class="etw-5">
+            <button class="ett-bttn ter med war"><svg class="ett-icon icon-grid px24"><use xlink:href="#icon-grid"></use></svg> </button>       
+            </span>
+            
+        </span> 
+        </span>
+        <br>
+        <br> 
+        <span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50 ">
+        <span class="ett-lofv etw-100 btr ter txar" >
+        	<span>
+                <textarea class="ett-texa ter etw-100 " id="input1" > LOV textarea with right button</textarea>
+            </span>
+            <span class="etw-5">
+            <button class="ett-bttn ter med suc"><svg class="ett-icon icon-grid px24"><use xlink:href="#icon-grid"></use></svg> </button>   
+            </span> 
+        </span> 
+        </span> 
+        <br>
+        <br>
+		<script type="text/javascript" charset="utf-8" src="scripts/jquery-3.1.1.min.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/jquery-ui.min.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/select2.min.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/appzillon.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/uiutils.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/swiper.min.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/tableHeadFixer.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/karthik-plugins.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/karthik-scripts.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/ripple.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/svgxuse.js"></script>
+
+		<script>
+		
+			$(document).ready(function() {
+				$('#SpriteSVG').load('svg-apz.svg');
+				$('#myButton').click(function(event) {
+		
+					// prevent page submit
+					event.preventDefault();
+					$("#SpriteSVG").text(" ");
+					// load the page into #SpriteSVG
+					$('#SpriteSVG').load('svg-apz.svg');
+		
+				});
+				$('#myButtonBCL').click(function(event) {
+		
+					// prevent page submit
+					event.preventDefault();
+					$("#SpriteSVG").text(" ");
+					// load the page into #SpriteSVG
+					$('#SpriteSVG').load('svg-bcl.svg');
+		
+				});
+				// load ripple effect for elements with class .rpl
+				//$('.rpl, .ripples').on('click', ripplesEffect);
+		
+			});
+		</script>  
+	</body>
+
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Test</title>
+        <style>
+            .tableClass { border: 1px solid #999; width: 100%; }
+            .tableClass tr td { border-bottom: 1px solid #999; border-right: 1px solid #999; width: 25%; padding: 8px 15px; }
+        </style>
+    </head>
+    <body>
+        <div>
+            <h4>Page Title</h4>
+            <img src="" alt="" id="img" height="50"/>
+            <img src="" alt="" id="img02" height="100"/>
+        </div>
+
+        <div>
+            <div id="demo01"></div>
+            <div id="demo02"></div>
+        </div>
+
+
+        
+
+        <script type="text/javascript">
+            
+            fetch(`http://localhost/345/DELETE/in.txt`).then(response01 => {
+                console.log(response01);
+                return response01.text();
+            }).then(resp01 =>{
+                console.log(resp01);
+            });
+
+            async function response02(){
+                var aa01 = await fetch(`http://localhost/345/DELETE/in.txt`);
+                var bb01 = await aa01.text();
+                console.log(bb01);
+            }
+            response02();
+
+
+            fetch(`http://localhost/345/DELETE/colorWheel.png`).then(response02 => {
+                console.log(response02);
+                return response02.blob();
+            }).then(resp02 =>{
+                console.log(resp02);
+                document.getElementById("img").src=URL.createObjectURL(resp02);
+            });
+
+            async function response002(){
+                var aa02 = await fetch(`http://localhost/345/DELETE/colorWheel.png`);
+                var bb02 = await aa02.blob();
+                console.log(bb02);
+                document.getElementById("img02").src=URL.createObjectURL(bb02);
+            }
+            response002();
+
+
+
+            fetch(`http://localhost/345/DELETE/sss.json`).then(response03 => {
+                console.log(response03);
+                return response03.json();
+            }).then(resp03 =>{
+                console.log(resp03);
+                
+
+                var html = "<table class='tableClass' cellspacing='0' cellpadding='0'>";
+                for (var i = 0; i < resp03.length; i++) {
+                    html+="<tr>";
+                    html+="<td>"+resp03[i].appId+"</td>";
+                    html+="<td>"+resp03[i].icon+"</td>";
+                    html+="<td>"+resp03[i].menuItem+"</td>";
+                    html+="<td>"+resp03[i].screenName+"</td>";                    
+                    html+="</tr>";
+                }
+                html+="</table>";
+                document.getElementById("demo01").innerHTML = html;
+
+            });
+
+            async function response003(){
+                var aa03 = await fetch(`http://localhost/345/DELETE/sss.json`);
+                var bb03 = await aa03.json();
+                console.log(bb03);
+
+                var html02 = "<ul class='listClass'>";
+                for (var k = 0; k < bb03.length; k++) {
+                    html02+="<li>";
+                    html02+="<p>"+bb03[k].appId+"</p>";
+                    html02+="<p>"+bb03[k].icon+"</p>";
+                    html02+="<p>"+bb03[k].menuItem+"</p>";
+                    html02+="<p>"+bb03[k].screenName+"</p>";                    
+                    html02+="</li>";
+                }
+                html02+="</ul>";
+                document.getElementById("demo02").innerHTML = html02;
+            }
+            response003();
+
+        </script>
+    </body>
+</html>

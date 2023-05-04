@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8" />
+		<title>Grid-Section</title>
+		<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+		<script>
+			function swapStyleSheet(sheet) {
+				document.getElementById('pagestyle').setAttribute('href', sheet);
+			}
+		</script>
+		<link href="styles/themes/appzillon/css/local-base.css" rel="stylesheet" media="screen" />
+		<link id="pagestyle" href="styles/themes/appzillon/css/local-apz.css" rel="stylesheet" media="screen" />
+		<style>
+			/* This style is for demo only */
+			.srb > span {
+				outline: 1px solid #ccc;
+				text-align: center
+			} 
+			.force-wrap {
+				/* These are technically the same, but use both */
+				overflow-wrap: break-word;
+				word-wrap: break-word;
+				-ms-word-break: break-all;
+				/* This is the dangerous one in WebKit, as it breaks things wherever */
+				word-break: break-all;
+				/* Instead use this non-standard one: */
+				word-break: break-word;
+				/* Adds a hyphen where the word breaks, if supported (No Blink) */
+				-ms-hyphens: auto;
+				-moz-hyphens: auto;
+				-webkit-hyphens: auto;
+				hyphens: auto;
+			} 
+		</style>
+	</head>
+	<body>
+		<span id="SpriteSVG"></span>
+		<br> 
+        <select class="ett-slcn etb-slcn pri" style="width:20%;">
+            <option id="myButton" onclick="swapStyleSheet('styles/themes/appzillon/css/local-apz.css')">Appzillon</option>
+            <option id="myButtonBCL" onclick="swapStyleSheet('styles/themes/appzillon/css/local-bcl.css')">Barclays </option>
+            <option id="myButtonRolb" onclick="swapStyleSheet('styles/themes/appzillon/css/local-rolb.css')">Rolb</option>
+            <option id="myButtonMobile" onclick="swapStyleSheet('styles/themes/appzillon/css/local-mobile.css')">Mobile</option>
+            <option id="myButtonCiti" onclick="swapStyleSheet('styles/themes/appzillon/css/local-citi.css')">Citi</option>
+        </select> 
+		<br>
+		<br>
+
+        <div class="grb">
+            <div class="gcb">
+                <div class="plt-simp ma0">
+                    <div class="pst-simp">
+                        <div class="crt-form"> 
+                             <span class="srb sec">
+                                <span class="scb-col25">
+                                    <p>Non Responsive Section Column1</p>
+                                </span>
+                                <span class="scb-col25">
+                                    <p>Non Responsive Section Column2</p>
+                                </span><span class="scb-col25">
+                                    <p>Non Responsive Section Column3</p>
+                                </span><span class="scb-col25">
+                                    <p>Non Responsive Section Column4</p>
+                                </span>
+                            </span>
+                        </div> 
+                    </div> 
+                </div>
+            </div>
+        </div>
+        
+        
+        <div class="grb">
+            <div class="gcb">
+                <div class="plt-simp ma0">
+                    <div class="pst-simp">
+                        <div class="crt-form"> 
+                            <span class="srb wrapped sec">
+                                <span class="scb-sml100 scb-med50 scb-lar25">
+                                    <p>Responsive Section Column1</p>
+                                </span>
+                                <span class="scb-sml100 scb-med50 scb-lar25">
+                                    <p>Responsive Section Column2</p>
+                                </span>
+                                <span class="scb-sml100 scb-med50 scb-lar25">
+                                    <p>Responsive Section Column3</p>
+                                </span>
+                                <span class="scb-sml100 scb-med50 scb-lar25">
+                                    <p>Responsive Section Column4</p>
+                                </span>
+                            </span> 
+                        </div> 
+                    </div> 
+                </div>
+            </div>
+        </div> 
+		<br>
+		<br>
+		<h4>Primary Row - all columns get no padding</h4>
+        <div class="grb pri">
+            <div class="gcb pri">
+                <div class="plt-simp ma0">
+                    <div class="pst-simp">
+                        <div class="crt-form"> 
+                             <span class="srb wrapped pri">
+					<span class="scb-sml100 scb-med50 scb-lar20 pri"><p>col.pri</p><svg class="ett-icon icon-home pri px48"><use xlink:href="#icon-home"></use></svg><svg class="ett-icon icon-home sec px48"><use xlink:href="#icon-home"></use></svg><svg class="ett-icon icon-home ter px48"><use xlink:href="#icon-home"></use></svg></span>
+					<span class="scb-sml100 scb-med50 scb-lar20 pri inf">
+						<p>col.pri.inf</p>
+						<svg class="ett-icon icon-home pri px48"><use xlink:href="#icon-home"></use></svg><svg class="ett-icon icon-home sec px48"><use xlink:href="#icon-home"></use></svg><svg class="ett-icon icon-home ter px48"><use xlink:href="#icon-home"></use></svg>
+						<span class="srb wrapped sec">
+							<span class="pri scb-sml30 scb-med30 scb-lar30">
+							<svg class="ett-icon icon-home pri px48"><use xlink:href="#icon-home"></use></svg>
+							</span>
+							<span class="sec suc scb-sml30 scb-med30 scb-lar30">
+							<svg class="ett-icon icon-home sec px48"><use xlink:href="#icon-home"></use></svg>
+							</span>
+							<span class="sec war scb-sml40 scb-med40 scb-lar40">
+							<svg class="ett-icon icon-home ter px48"><use xlink:href="#icon-home"></use></svg>
+							</span>
+						</span>
+					</span>
+					<span class="scb-sml100 scb-med50 scb-lar20 pri war"><p>col.pri.war</p><svg class="ett-icon icon-home pri px48"><use xlink:href="#icon-home"></use></svg><svg class="ett-icon icon-home sec px48"><use xlink:href="#icon-home"></use></svg><svg class="ett-icon icon-home ter px48"><use xlink:href="#icon-home"></use></svg></span>
+					<span class="scb-sml100 scb-med50 scb-lar20 pri suc"><p>col.pri.suc</p><svg class="ett-icon icon-home pri px48"><use xlink:href="#icon-home"></use></svg><svg class="ett-icon icon-home sec px48"><use xlink:href="#icon-home"></use></svg><svg class="ett-icon icon-home ter px48"><use xlink:href="#icon-home"></use></svg></span>
+					<span class="scb-sml100 scb-med50 scb-lar20 pri err"><p>col.pri.err</p><svg class="ett-icon icon-home pri px48"><use xlink:href="#icon-home"></use></svg><svg class="ett-icon icon-home sec px48"><use xlink:href="#icon-home"></use></svg><svg class="ett-icon icon-home ter px48"><use xlink:href="#icon-home"></use></svg></span>
+				</span>
+                        </div> 
+                    </div> 
+                </div>
+            </div>
+        </div>
+        
+		<div class="grb sec">
+            <div class="gcb sec">
+                <div class="plt-simp ma0">
+                    <div class="pst-simp">
+                        <div class="crt-form"> 
+                             <span class="srb wrapped pri">
+					<span class="scb-sml100 scb-med50 scb-lar20 sec"><p>col.sec</p><svg class="ett-icon icon-home pri px48"><use xlink:href="#icon-home"></use></svg><svg class="ett-icon icon-home sec px48"><use xlink:href="#icon-home"></use></svg><svg class="ett-icon icon-home ter px48"><use xlink:href="#icon-home"></use></svg></span>
+					<span class="scb-sml100 scb-med50 scb-lar20 sec inf"><p>col.sec.inf</p><svg class="ett-icon icon-home pri px48"><use xlink:href="#icon-home"></use></svg><svg class="ett-icon icon-home sec px48"><use xlink:href="#icon-home"></use></svg><svg class="ett-icon icon-home ter px48"><use xlink:href="#icon-home"></use></svg></span>
+					<span class="scb-sml100 scb-med50 scb-lar20 sec war"><p>col.sec.war</p><svg class="ett-icon icon-home pri px48"><use xlink:href="#icon-home"></use></svg><svg class="ett-icon icon-home sec px48"><use xlink:href="#icon-home"></use></svg><svg class="ett-icon icon-home ter px48"><use xlink:href="#icon-home"></use></svg></span>
+					<span class="scb-sml100 scb-med50 scb-lar20 sec suc"><p>col.sec.suc</p><svg class="ett-icon icon-home pri px48"><use xlink:href="#icon-home"></use></svg><svg class="ett-icon icon-home sec px48"><use xlink:href="#icon-home"></use></svg><svg class="ett-icon icon-home ter px48"><use xlink:href="#icon-home"></use></svg></span>
+					<span class="scb-sml100 scb-med50 scb-lar20 sec err"><p>col.sec.err</p><svg class="ett-icon icon-home pri px48"><use xlink:href="#icon-home"></use></svg><svg class="ett-icon icon-home sec px48"><use xlink:href="#icon-home"></use></svg><svg class="ett-icon icon-home ter px48"><use xlink:href="#icon-home"></use></svg></span>
+				</span>
+                        </div> 
+                    </div> 
+                </div>
+            </div>
+        </div> 		
+        
+        
+        <div class="grb ter">
+            <div class="gcb ter">
+                <div class="plt-simp ma0">
+                    <div class="pst-simp">
+                        <div class="crt-form"> 
+                             <span class="srb wrapped pri">
+					<span class="scb-sml100 scb-med50 scb-lar20 ter"><p>col.ter</p><svg class="ett-icon icon-home pri px48"><use xlink:href="#icon-home"></use></svg><svg class="ett-icon icon-home sec px48"><use xlink:href="#icon-home"></use></svg><svg class="ett-icon icon-home ter px48"><use xlink:href="#icon-home"></use></svg></span>
+					<span class="scb-sml100 scb-med50 scb-lar20 ter inf"><p>col.ter.inf</p><svg class="ett-icon icon-home pri px48"><use xlink:href="#icon-home"></use></svg><svg class="ett-icon icon-home sec px48"><use xlink:href="#icon-home"></use></svg><svg class="ett-icon icon-home ter px48"><use xlink:href="#icon-home"></use></svg></span>
+					<span class="scb-sml100 scb-med50 scb-lar20 ter war"><p>col.ter.war</p><svg class="ett-icon icon-home pri px48"><use xlink:href="#icon-home"></use></svg><svg class="ett-icon icon-home sec px48"><use xlink:href="#icon-home"></use></svg><svg class="ett-icon icon-home ter px48"><use xlink:href="#icon-home"></use></svg></span>
+					<span class="scb-sml100 scb-med50 scb-lar20 ter suc"><p>col.ter.suc</p><svg class="ett-icon icon-home pri px48"><use xlink:href="#icon-home"></use></svg><svg class="ett-icon icon-home sec px48"><use xlink:href="#icon-home"></use></svg><svg class="ett-icon icon-home ter px48"><use xlink:href="#icon-home"></use></svg></span>
+					<span class="scb-sml100 scb-med50 scb-lar20 ter err"><p>col.ter.err</p><svg class="ett-icon icon-home pri px48"><use xlink:href="#icon-home"></use></svg><svg class="ett-icon icon-home sec px48"><use xlink:href="#icon-home"></use></svg><svg class="ett-icon icon-home ter px48"><use xlink:href="#icon-home"></use></svg></span>
+				</span>
+                        </div> 
+                    </div> 
+                </div>
+            </div>
+        </div>
+				
+        
+        
+        
+				
+		<br>
+		<br>
+		
+		<h4>Secondary Row - all columns get 1em padding</h4>
+        
+        
+        <div class="grb">
+            <div class="gcb">
+                <div class="plt-simp ma0">
+                    <div class="pst-simp">
+                        <div class="crt-form"> 
+                             <span class="srb wrapped sec">
+					<span class="scb-sml100 scb-med50 scb-lar20 pri">
+						<p>col.pri</p><svg class="ett-icon icon-home pri px48"><use xlink:href="#icon-home"></use></svg><svg class="ett-icon icon-home sec px48"><use xlink:href="#icon-home"></use></svg><svg class="ett-icon icon-home ter px48"><use xlink:href="#icon-home"></use></svg>
+					</span>
+					<span class="scb-sml100 scb-med50 scb-lar20 pri inf">
+						<p>col.pri.inf</p>
+						<svg class="ett-icon icon-home pri px48"><use xlink:href="#icon-home"></use></svg><svg class="ett-icon icon-home sec px48"><use xlink:href="#icon-home"></use></svg><svg class="ett-icon icon-home ter px48"><use xlink:href="#icon-home"></use></svg>
+						<span class="srb wrapped sec">
+							<span class="pri scb-sml30 scb-med30 scb-lar30">
+							<svg class="ett-icon icon-home pri px48"><use xlink:href="#icon-home"></use></svg>
+							</span>
+							<span class="sec suc scb-sml30 scb-med30 scb-lar30">
+							<svg class="ett-icon icon-home sec px48"><use xlink:href="#icon-home"></use></svg>
+							</span>
+							<span class="sec war scb-sml40 scb-med40 scb-lar40">
+							<svg class="ett-icon icon-home ter px48"><use xlink:href="#icon-home"></use></svg>
+							</span>
+						</span>
+					</span>
+					<span class="scb-sml100 scb-med50 scb-lar20 pri war"><p>col.pri.war</p><svg class="ett-icon icon-home pri px48"><use xlink:href="#icon-home"></use></svg><svg class="ett-icon icon-home sec px48"><use xlink:href="#icon-home"></use></svg><svg class="ett-icon icon-home ter px48"><use xlink:href="#icon-home"></use></svg></span>
+					<span class="scb-sml100 scb-med50 scb-lar20 pri suc"><p>col.pri.suc</p><svg class="ett-icon icon-home pri px48"><use xlink:href="#icon-home"></use></svg><svg class="ett-icon icon-home sec px48"><use xlink:href="#icon-home"></use></svg><svg class="ett-icon icon-home ter px48"><use xlink:href="#icon-home"></use></svg></span>
+					<span class="scb-sml100 scb-med50 scb-lar20 pri err"><p>col.pri.err</p><svg class="ett-icon icon-home pri px48"><use xlink:href="#icon-home"></use></svg><svg class="ett-icon icon-home sec px48"><use xlink:href="#icon-home"></use></svg><svg class="ett-icon icon-home ter px48"><use xlink:href="#icon-home"></use></svg></span>
+				</span>
+                        </div> 
+                    </div> 
+                </div>
+            </div>
+        </div>
+				
+        
+        <div class="grb">
+            <div class="gcb">
+                <div class="plt-simp ma0">
+                    <div class="pst-simp">
+                        <div class="crt-form"> 
+                             <span class="srb wrapped sec">
+					<span class="scb-sml100 scb-med50 scb-lar20 sec"><p>col.sec</p><svg class="ett-icon icon-home pri px48"><use xlink:href="#icon-home"></use></svg><svg class="ett-icon icon-home sec px48"><use xlink:href="#icon-home"></use></svg><svg class="ett-icon icon-home ter px48"><use xlink:href="#icon-home"></use></svg></span>
+					<span class="scb-sml100 scb-med50 scb-lar20 sec inf"><p>col.sec.inf</p><svg class="ett-icon icon-home pri px48"><use xlink:href="#icon-home"></use></svg><svg class="ett-icon icon-home sec px48"><use xlink:href="#icon-home"></use></svg><svg class="ett-icon icon-home ter px48"><use xlink:href="#icon-home"></use></svg></span>
+					<span class="scb-sml100 scb-med50 scb-lar20 sec war"><p>col.sec.war</p><svg class="ett-icon icon-home pri px48"><use xlink:href="#icon-home"></use></svg><svg class="ett-icon icon-home sec px48"><use xlink:href="#icon-home"></use></svg><svg class="ett-icon icon-home ter px48"><use xlink:href="#icon-home"></use></svg></span>
+					<span class="scb-sml100 scb-med50 scb-lar20 sec suc"><p>col.sec.suc</p><svg class="ett-icon icon-home pri px48"><use xlink:href="#icon-home"></use></svg><svg class="ett-icon icon-home sec px48"><use xlink:href="#icon-home"></use></svg><svg class="ett-icon icon-home ter px48"><use xlink:href="#icon-home"></use></svg></span>
+					<span class="scb-sml100 scb-med50 scb-lar20 sec err"><p>col.sec.err</p><svg class="ett-icon icon-home pri px48"><use xlink:href="#icon-home"></use></svg><svg class="ett-icon icon-home sec px48"><use xlink:href="#icon-home"></use></svg><svg class="ett-icon icon-home ter px48"><use xlink:href="#icon-home"></use></svg></span>
+				</span>
+                        </div> 
+                    </div> 
+                </div>
+            </div>
+        </div>
+				
+        <div class="grb">
+            <div class="gcb">
+                <div class="plt-simp ma0">
+                    <div class="pst-simp">
+                        <div class="crt-form"> 
+                             <span class="srb wrapped sec">
+					<span class="scb-sml100 scb-med50 scb-lar20 ter"><p>col.ter</p><svg class="ett-icon icon-home pri px48"><use xlink:href="#icon-home"></use></svg><svg class="ett-icon icon-home sec px48"><use xlink:href="#icon-home"></use></svg><svg class="ett-icon icon-home ter px48"><use xlink:href="#icon-home"></use></svg></span>
+					<span class="scb-sml100 scb-med50 scb-lar20 ter inf"><p>col.ter.inf</p><svg class="ett-icon icon-home pri px48"><use xlink:href="#icon-home"></use></svg><svg class="ett-icon icon-home sec px48"><use xlink:href="#icon-home"></use></svg><svg class="ett-icon icon-home ter px48"><use xlink:href="#icon-home"></use></svg></span>
+					<span class="scb-sml100 scb-med50 scb-lar20 ter war"><p>col.ter.war</p><svg class="ett-icon icon-home pri px48"><use xlink:href="#icon-home"></use></svg><svg class="ett-icon icon-home sec px48"><use xlink:href="#icon-home"></use></svg><svg class="ett-icon icon-home ter px48"><use xlink:href="#icon-home"></use></svg></span>
+					<span class="scb-sml100 scb-med50 scb-lar20 ter suc"><p>col.ter.suc</p><svg class="ett-icon icon-home pri px48"><use xlink:href="#icon-home"></use></svg><svg class="ett-icon icon-home sec px48"><use xlink:href="#icon-home"></use></svg><svg class="ett-icon icon-home ter px48"><use xlink:href="#icon-home"></use></svg></span>
+					<span class="scb-sml100 scb-med50 scb-lar20 ter err"><p>col.ter.err</p><svg class="ett-icon icon-home pri px48"><use xlink:href="#icon-home"></use></svg><svg class="ett-icon icon-home sec px48"><use xlink:href="#icon-home"></use></svg><svg class="ett-icon icon-home ter px48"><use xlink:href="#icon-home"></use></svg></span>
+				</span>
+                        </div> 
+                    </div> 
+                </div>
+            </div>
+        </div>
+        
+				
+		<br>
+		<br>	
+		
+		<h4>Tertiary Row - all columns get 2em padding</h4>
+        
+        <div class="grb">
+            <div class="gcb">
+                <div class="plt-simp ma0">
+                    <div class="pst-simp">
+                        <div class="crt-form"> 
+                             <span class="srb wrapped ter">
+					<span class="scb-sml100 scb-med50 scb-lar20 pri"><p>col.pri</p><svg class="ett-icon icon-home pri px48"><use xlink:href="#icon-home"></use></svg><svg class="ett-icon icon-home sec px48"><use xlink:href="#icon-home"></use></svg><svg class="ett-icon icon-home ter px48"><use xlink:href="#icon-home"></use></svg></span>
+					<span class="scb-sml100 scb-med50 scb-lar20 pri inf"><p>col.pri.inf</p><svg class="ett-icon icon-home pri px48"><use xlink:href="#icon-home"></use></svg><svg class="ett-icon icon-home sec px48"><use xlink:href="#icon-home"></use></svg><svg class="ett-icon icon-home ter px48"><use xlink:href="#icon-home"></use></svg></span>
+					<span class="scb-sml100 scb-med50 scb-lar20 pri war"><p>col.pri.war</p><svg class="ett-icon icon-home pri px48"><use xlink:href="#icon-home"></use></svg><svg class="ett-icon icon-home sec px48"><use xlink:href="#icon-home"></use></svg><svg class="ett-icon icon-home ter px48"><use xlink:href="#icon-home"></use></svg></span>
+					<span class="scb-sml100 scb-med50 scb-lar20 pri suc"><p>col.pri.suc</p><svg class="ett-icon icon-home pri px48"><use xlink:href="#icon-home"></use></svg><svg class="ett-icon icon-home sec px48"><use xlink:href="#icon-home"></use></svg><svg class="ett-icon icon-home ter px48"><use xlink:href="#icon-home"></use></svg></span>
+					<span class="scb-sml100 scb-med50 scb-lar20 pri err"><p>col.pri.err</p><svg class="ett-icon icon-home pri px48"><use xlink:href="#icon-home"></use></svg><svg class="ett-icon icon-home sec px48"><use xlink:href="#icon-home"></use></svg><svg class="ett-icon icon-home ter px48"><use xlink:href="#icon-home"></use></svg></span>
+				</span>
+                        </div> 
+                    </div> 
+                </div>
+            </div>
+        </div>
+				
+        
+        <div class="grb">
+            <div class="gcb">
+                <div class="plt-simp ma0">
+                    <div class="pst-simp">
+                        <div class="crt-form"> 
+                             <span class="srb wrapped ter">
+					<span class="scb-sml100 scb-med50 scb-lar20 sec"><p>col.sec</p><svg class="ett-icon icon-home pri px48"><use xlink:href="#icon-home"></use></svg><svg class="ett-icon icon-home sec px48"><use xlink:href="#icon-home"></use></svg><svg class="ett-icon icon-home ter px48"><use xlink:href="#icon-home"></use></svg></span>
+					<span class="scb-sml100 scb-med50 scb-lar20 sec inf"><p>col.sec.inf</p><svg class="ett-icon icon-home pri px48"><use xlink:href="#icon-home"></use></svg><svg class="ett-icon icon-home sec px48"><use xlink:href="#icon-home"></use></svg><svg class="ett-icon icon-home ter px48"><use xlink:href="#icon-home"></use></svg></span>
+					<span class="scb-sml100 scb-med50 scb-lar20 sec war"><p>col.sec.war</p><svg class="ett-icon icon-home pri px48"><use xlink:href="#icon-home"></use></svg><svg class="ett-icon icon-home sec px48"><use xlink:href="#icon-home"></use></svg><svg class="ett-icon icon-home ter px48"><use xlink:href="#icon-home"></use></svg></span>
+					<span class="scb-sml100 scb-med50 scb-lar20 sec suc"><p>col.sec.suc</p><svg class="ett-icon icon-home pri px48"><use xlink:href="#icon-home"></use></svg><svg class="ett-icon icon-home sec px48"><use xlink:href="#icon-home"></use></svg><svg class="ett-icon icon-home ter px48"><use xlink:href="#icon-home"></use></svg></span>
+					<span class="scb-sml100 scb-med50 scb-lar20 sec err"><p>col.sec.err</p><svg class="ett-icon icon-home pri px48"><use xlink:href="#icon-home"></use></svg><svg class="ett-icon icon-home sec px48"><use xlink:href="#icon-home"></use></svg><svg class="ett-icon icon-home ter px48"><use xlink:href="#icon-home"></use></svg></span>
+				</span>
+                        </div> 
+                    </div> 
+                </div>
+            </div>
+        </div>
+				
+        
+        <div class="grb">
+            <div class="gcb">
+                <div class="plt-simp ma0">
+                    <div class="pst-simp">
+                        <div class="crt-form"> 
+                             <span class="srb wrapped ter">
+					<span class="scb-sml100 scb-med50 scb-lar20 ter"><p>col.ter</p><svg class="ett-icon icon-home pri px48"><use xlink:href="#icon-home"></use></svg><svg class="ett-icon icon-home sec px48"><use xlink:href="#icon-home"></use></svg><svg class="ett-icon icon-home ter px48"><use xlink:href="#icon-home"></use></svg></span>
+					<span class="scb-sml100 scb-med50 scb-lar20 ter inf"><p>col.ter.inf</p><svg class="ett-icon icon-home pri px48"><use xlink:href="#icon-home"></use></svg><svg class="ett-icon icon-home sec px48"><use xlink:href="#icon-home"></use></svg><svg class="ett-icon icon-home ter px48"><use xlink:href="#icon-home"></use></svg></span>
+					<span class="scb-sml100 scb-med50 scb-lar20 ter war"><p>col.ter.war</p><svg class="ett-icon icon-home pri px48"><use xlink:href="#icon-home"></use></svg><svg class="ett-icon icon-home sec px48"><use xlink:href="#icon-home"></use></svg><svg class="ett-icon icon-home ter px48"><use xlink:href="#icon-home"></use></svg></span>
+					<span class="scb-sml100 scb-med50 scb-lar20 ter suc"><p>col.ter.suc</p><svg class="ett-icon icon-home pri px48"><use xlink:href="#icon-home"></use></svg><svg class="ett-icon icon-home sec px48"><use xlink:href="#icon-home"></use></svg><svg class="ett-icon icon-home ter px48"><use xlink:href="#icon-home"></use></svg></span>
+					<span class="scb-sml100 scb-med50 scb-lar20 ter err"><p>col.ter.err</p><svg class="ett-icon icon-home pri px48"><use xlink:href="#icon-home"></use></svg><svg class="ett-icon icon-home sec px48"><use xlink:href="#icon-home"></use></svg><svg class="ett-icon icon-home ter px48"><use xlink:href="#icon-home"></use></svg></span>
+				</span>
+                        </div> 
+                    </div> 
+                </div>
+            </div>
+        </div>
+				
+		<br>
+		<br>			
+		
+		
+
+
+		<script type="text/javascript" charset="utf-8" src="scripts/jquery-3.1.1.min.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/jquery-ui.min.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/select2.min.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/appzillon.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/uiutils.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/swiper.min.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/tableHeadFixer.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/karthik-plugins.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/karthik-scripts.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/ripple.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/svgxuse.js"></script>
+
+		<script>
+			$(document).ready(function() {
+				$('#SpriteSVG').load('svg-apz.svg');
+				$('#myButton').click(function(event) {
+
+					// prevent page submit
+					event.preventDefault();
+					$("#SpriteSVG").text(" ");
+					// load the page into #SpriteSVG
+					$('#SpriteSVG').load('svg-apz.svg');
+
+				});
+				$('#myButtonBCL').click(function(event) {
+
+					// prevent page submit
+					event.preventDefault();
+					$("#SpriteSVG").text(" ");
+					// load the page into #SpriteSVG
+					$('#SpriteSVG').load('svg-bcl.svg');
+
+				});
+				// load ripple effect for elements with class .rpl
+				//$('.rpl, .ripples').on('click', ripplesEffect);
+
+			});
+		</script>
+	</body>
+
+</html>

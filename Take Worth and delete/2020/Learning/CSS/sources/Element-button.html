@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8" />
+		<title>10:1 Element - Button</title>
+		<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+		<script>
+			function swapStyleSheet(sheet) {
+				document.getElementById('pagestyle').setAttribute('href', sheet);
+			}
+		</script>
+		<link href="styles/themes/appzillon/css/local-base.css" rel="stylesheet" media="screen" />
+		<link id="pagestyle" href="styles/themes/appzillon/css/local-apz.css" rel="stylesheet" media="screen" />
+
+	</head>
+
+	<body  class="fulsv" >
+		<span id="SpriteSVG"></span>
+        <br> 
+        <select class="ett-slcn etb-slcn pri" style="width:20%;">
+            <option id="myButton" onclick="swapStyleSheet('styles/themes/appzillon/css/local-apz.css')">Appzillon</option>
+            <option id="myButtonBCL" onclick="swapStyleSheet('styles/themes/appzillon/css/local-bcl.css')">Barclays </option>
+            <option id="myButtonRolb" onclick="swapStyleSheet('styles/themes/appzillon/css/local-rolb.css')">Rolb</option>
+            <option id="myButtonMobile" onclick="swapStyleSheet('styles/themes/appzillon/css/local-mobile.css')">Mobile</option>
+            <option id="myButtonCiti" onclick="swapStyleSheet('styles/themes/appzillon/css/local-citi.css')">Citi</option>
+        </select> 
+        <br><br>
+        <h1> Buttons</h1>		
+		
+		<button class="ett-bttn med pri">Primary Medium</button
+		><button class="ett-bttn pri lar">Primary Large</button		
+		><button class="ett-bttn pri sml">Primary Small</button		
+		><button class="ett-bttn pri min">Primary Mini</button					
+		><button class="ett-bttn pri med disabled" disabled="disabled" aria-disabled="true">Primary Disabled</button
+		><button class="ett-bttn pri med inf">Primary Info</button		
+		><button class="ett-bttn pri med suc">Primary Success</button	
+		><button class="ett-bttn pri med war">Primary Warning</button	
+		><button class="ett-bttn pri med err">Primary Error</button	
+		><button class="ett-bttn pri med icl"><svg class="ett-icon icon-search px24" aria-hidden="true" role="presentation"><use xlink:href="#icon-home"></use></svg><span>Primary Icon Left</span></button		
+		><button class="ett-bttn pri med icr"><span>Primary Icon Right</span><svg class="ett-icon icon-home px24" aria-hidden="true" role="presentation"><use xlink:href="#icon-home"></use></button
+		><button class="ett-bttn pri med ict"><svg class="ett-icon icon-home px24 aria-hidden="true" role="presentation""><use xlink:href="#icon-home"></use></svg><div>Primary Icon Top</div></button
+		><button class="ett-bttn pri med icb"> <div> Primary Icon Bottom </div><svg class="ett-icon icon-home px24 aria-hidden="true" role="presentation""><use xlink:href="#icon-home"></use></svg></button
+		><hr>		
+		<button class="ett-bttn med sec">Secondary Medium</button
+		><button class="ett-bttn sec lar">Secondary Large</button		
+		><button class="ett-bttn sec sml">Secondary Small</button		
+		><button class="ett-bttn sec min">Secondary Mini</button				
+		><button class="ett-bttn sec med disabled" disabled="disabled" aria-disabled="true">Secondary Disabled</button
+		><button class="ett-bttn sec med inf">Secondary Info</button		
+		><button class="ett-bttn sec med med suc">Secondary Success</button	
+		><button class="ett-bttn sec med war">Secondary Warning</button	
+		><button class="ett-bttn sec med err">Secondary Error</button	
+		><button class="ett-bttn sec med icl"><svg class="ett-icon icon-search px24" aria-hidden="true" role="presentation"><use xlink:href="#icon-home"></use></svg><span>Secondary Icon Left</span></button		
+		><button class="ett-bttn sec med icr"><span>Secondary Icon Right</span><svg class="ett-icon icon-home px24" aria-hidden="true" role="presentation"><use xlink:href="#icon-home"></use></button
+		><button class="ett-bttn sec med ict"><svg class="ett-icon icon-home px24" aria-hidden="true" role="presentation"><use xlink:href="#icon-home"></use></svg><div>Secondary Icon Top</div></button
+		><button class="ett-bttn sec med icb"> <div> Secondary Icon Bottom </div><svg class="ett-icon icon-home px24" aria-hidden="true" role="presentation"><use xlink:href="#icon-home"></use></svg></button
+		><hr>			
+		<button class="ett-bttn med ter">Tertiary Medium</button
+		><button class="ett-bttn ter lar">Tertiary Large</button		
+		><button class="ett-bttn ter sml">Tertiary Small</button	
+		><button class="ett-bttn ter min">Tertiary Mini</button					
+		><button class="ett-bttn ter med disabled" disabled="disabled" aria-disabled="true">Tertiary Disabled</button
+		><button class="ett-bttn ter med inf">Tertiary Info</button		
+		><button class="ett-bttn ter med suc">Tertiary Success</button	
+		><button class="ett-bttn ter med war"><svg class="ett-icon icon-grid px24" aria-hidden="true" role="presentation"><use xlink:href="#icon-grid"></use></svg> Tertiary Warning</button	
+		><button class="ett-bttn ter med err">Tertiary Error</button
+		><button class="ett-bttn ter med icl"><svg class="ett-icon icon-search px24" aria-hidden="true" role="presentation"><use xlink:href="#icon-home"></use></svg><span>Tertiary Icon Left</span></button		
+		><button class="ett-bttn ter med icr"><span>Tertiary Icon Right</span><svg class="ett-icon icon-home px24" aria-hidden="true" role="presentation"><use xlink:href="#icon-home"></use></button
+		><button class="ett-bttn ter med ict"><svg class="ett-icon icon-home px24" aria-hidden="true" role="presentation"><use xlink:href="#icon-home"></use></svg><div>Tertiary Icon Top</div></button
+		><button class="ett-bttn ter med icb"> <div> Tertiary Icon Bottom </div><svg class="ett-icon icon-home px24" aria-hidden="true" role="presentation"><use xlink:href="#icon-home"></use></svg></button
+		><hr>			
+		<button class="ett-bttn tsp med">Transparent Medium</button
+		><button class="ett-bttn tsp lar">Transparent Large</button		
+		><button class="ett-bttn tsp sml">Transparent Small</button		
+		><button class="ett-bttn tsp min">Transparent Mini</button					
+		><button class="ett-bttn tsp med disabled" disabled="disabled" aria-disabled="true">Transparent Disabled</button
+		><button class="ett-bttn tsp med inf">Transparent Info</button		
+		><button class="ett-bttn tsp med suc">Transparent Success</button	
+		><button class="ett-bttn tsp med war">Transparent Warning</button	
+		><button class="ett-bttn tsp med err">Transparent Error</button
+		><button class="ett-bttn tsp med icl"><svg class="ett-icon icon-search px24" aria-hidden="true" role="presentation"><use xlink:href="#icon-home"></use></svg><span>Transparent Icon Left</span></button		
+		><button class="ett-bttn tsp med icr"><span>Transparent Icon Right</span><svg class="ett-icon icon-home px24" aria-hidden="true" role="presentation"><use xlink:href="#icon-home"></use></button
+		><button class="ett-bttn tsp med ict"><svg class="ett-icon icon-home px24" aria-hidden="true" role="presentation"><use xlink:href="#icon-home"></use></svg><div>Transparent Icon Top</div></button
+		><button class="ett-bttn tsp med icb"> <div> Transparent Icon Bottom </div><svg class="ett-icon icon-home px24" aria-hidden="true" role="presentation"><use xlink:href="#icon-home"></use></svg></button
+		><p>This is the alternative for button as icon and as well as text </p
+		><button class="ett-bttn pri med btn-icn"><svg class="ett-icon icon-search px24" aria-hidden="true" role="presentation"><use xlink:href="#icon-home"></use></svg></button>
+        <button class="ett-bttn pri med btn-icn"><span>testing without icon</span></button><hr>	
+        <button class="ett-bttn sec med btn-icn"><svg class="ett-icon icon-search px24" aria-hidden="true" role="presentation"><use xlink:href="#icon-home"></use></svg></button>
+        <button class="ett-bttn sec med btn-icn"><span>testing without icon</span></button><hr>	
+        <button class="ett-bttn ter med btn-icn"><svg class="ett-icon icon-search px24" aria-hidden="true" role="presentation"><use xlink:href="#icon-home"></use></svg></button>
+        <button class="ett-bttn ter med btn-icn"><span>testing without icon</span></button><hr>	
+        <button class="ett-bttn tsp med btn-icn"><svg class="ett-icon icon-search px24" aria-hidden="true" role="presentation"><use xlink:href="#icon-home"></use></svg></button>
+        <button class="ett-bttn tsp med btn-icn"><span>testing without icon</span></button><hr>	
+	
+		
+										
+				
+
+
+		<script type="text/javascript" charset="utf-8" src="scripts/jquery-3.1.1.min.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/jquery-ui.min.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/select2.min.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/appzillon.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/uiutils.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/swiper.min.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/tableHeadFixer.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/karthik-plugins.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/karthik-scripts.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/ripple.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/svgxuse.js"></script>
+
+
+		<script>
+		
+			$(document).ready(function() {
+				$('#SpriteSVG').load('svg-apz.svg');
+				$('#myButton').click(function(event) {
+		
+					// prevent page submit
+					event.preventDefault();
+					$("#SpriteSVG").text(" ");
+					// load the page into #SpriteSVG
+					$('#SpriteSVG').load('svg-apz.svg');
+		
+				});
+				$('#myButtonBCL').click(function(event) {
+		
+					// prevent page submit
+					event.preventDefault();
+					$("#SpriteSVG").text(" ");
+					// load the page into #SpriteSVG
+					$('#SpriteSVG').load('svg-bcl.svg');
+		
+				});
+				// load ripple effect for elements with class .rpl
+				//$('.rpl, .ripples').on('click', ripplesEffect);
+		
+			});
+		</script>  
+	</body>
+
+</html>

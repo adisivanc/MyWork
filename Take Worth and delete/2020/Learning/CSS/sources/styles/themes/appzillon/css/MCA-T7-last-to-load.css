@@ -1,0 +1,249 @@
+
+/*------- utility classes -------------------------------*/
+*.lft, .lft {text-align:left}
+*.cen, .cen {text-align:center}
+*.rht, .rht {text-align:right}
+.sno, *.sno {display:none!important}/* instead of dispnone */
+.sec > .tabl-ctr > table > tbody > tr.sno {display:inherit!important; visibility:hidden} /* behaviour is reversed only for secondary */
+.ssp, *.ssp {visibility:hidden!important}/* instead of viewhidden */
+.ssp td, .ssp td:first-child, .ssp td:last-child {border:none}
+.top, *.top {vertical-align: top!important}
+.mid, *.mid {vertical-align: middle!important}
+.btm, *.btm {vertical-align: bottom!important}
+/* Set Margin classes */
+.ma0 {margin:0}
+.ma1 {margin:1em}
+.ml1{margin-left:1em}
+.mr1{margin-right:1em}
+.mt1{margin-top:1em}
+.mb1{margin-bottom:1em}
+.ma2 {margin:2em}
+.ml2{margin-left:2em}
+.mr2{margin-right:2em}
+.mt2{margin-top:2em}
+.mb2{margin-bottom:2em}
+.ma3 {margin:3em}
+.ml3{margin-left:3em}
+.mr3{margin-right:3em}
+.mt3{margin-top:3em}
+.mb3{margin-bottom:3em}
+
+/* Set Padding classes */
+.pa0 {padding:0}
+.pst-acco.pa0 {/*padding:inherit*/} 
+.pst-acco.pa0 > .ctr > div {padding:0} 
+.pst-coll.pa0 {/*padding:inherit*/}
+.pst-coll.pa0 > .ctr > div {padding:0}
+.pst-tabs.pa0 {/*padding:inherit*/}
+.pst-tabs > .tabcontent.pa0 { padding:0}
+.pst-simp.pa0 {/*padding:inherit*/} 
+.pst-simp.pa0 > div {padding:0} 
+
+.pst-simp.pl0 > div{padding-left:0}
+.pst-simp.pt0 > div{padding-top:0}
+.pst-simp.pb0 > div{padding-bottom:0}
+.pst-simp.pr0 > div{padding-right:0} 
+
+.pa1 {padding:1em}
+.pst-acco.pa1 {/*padding:inherit*/} 
+.pst-acco.pa1 > .ctr > div {padding:1em} 
+.pst-coll.pa1{/*padding:inherit*/}
+.pst-coll.pa1 > .ctr > div {padding:1em}
+.pst-tabs.pa1 {/*padding:inherit*/}
+.pst-tabs > .tabcontent.pa1 { padding:1em}
+.pst-simp.pa1 {/*padding:inherit*/} 
+.pst-simp.pa1 > div {padding:1em} 
+.pl0{padding-left: 0px !important;}
+.pl1{padding-left:1em}
+.pst-acco.pl1 {/*padding-left:inherit*/} 
+.pst-acco.pl1 > .ctr > div {padding-left:1em} 
+.pst-coll.pl1 {/*padding-left:inherit*/}
+.pst-coll.pl1 > .ctr > div {padding-left:1em}
+.pst-tabs.pl1 {/*padding-left:inherit*/}
+.pst-tabs > .tabcontent.pl1 { padding-left:1em}
+.pst-simp.pl1 {/*padding-left:inherit*/} 
+.pst-simp.pl1 > div {padding-left:1em} 
+.pr0{padding-right: 0px !important;}
+.pr1{padding-right:1em}
+.pst-acco.pr1{/*padding-right:inherit*/} 
+.pst-acco.pr1 > .ctr > div {padding-right:1em} 
+.pst-coll.pr1{/*padding-right:inherit*/}
+.pst-coll.pr1 > .ctr > div {padding-right:1em}
+.pst-tabs.pr1 {/*padding-right:inherit*/}
+.pst-tabs > .tabcontent.pr1 { padding-right:1em}
+.pst-simp.pr1 {/*padding-right:inherit*/} 
+.pst-simp.pr1 > div {padding-right:1em} 
+.pt1{padding-top:1em}
+.pst-acco.pt1{/*padding-top:inherit*/} 
+.pst-acco.pt1 > .ctr > div {padding-top:1em} 
+.pst-coll.pt1 {/*padding-top:inherit*/}
+.pst-coll.pt1 > .ctr > div {padding-top:1em}
+.pst-tabs.pt1 {/*padding-top:inherit*/}
+.pst-tabs > .tabcontent.pt1 { padding-top:1em}
+.pst-simp.pt1 {/*padding-top:inherit*/} 
+.pst-simp.pt1 > div {padding-top:1em}
+.pb0{padding-bottom: 0px !important;}
+.pb1{padding-bottom:1em}
+.pst-acco.pb1{/*padding-bottom:inherit*/} 
+.pst-acco.pb1 > .ctr > div {padding-bottom:1em} 
+.pst-coll.pb1{/*padding-bottom:inherit*/}
+.pst-coll.pb1 > .ctr > div {padding-bottom:1em}
+.pst-tabs.pb1 {/*padding-bottom:inherit*/}
+.pst-tabs > .tabcontent.pb1 { padding-bottom:1em}
+.pst-simp.pb1 {/*padding-bottom:inherit*/} 
+.pst-simp.pb1 > div {padding-bottom:1em} 
+.pa2 {padding:2em}
+.pst-acco.pa2{/*padding:inherit*/} 
+.pst-acco.pa2 > .ctr > div {padding:2em} 
+.pst-coll.pa2 {/*padding:inherit*/}
+.pst-coll.pa2 > .ctr > div {padding:2em}
+.pst-tabs.pa2 {/*padding:inherit*/}
+.pst-tabs > .tabcontent.pa2 { padding:2em}
+.pst-simp.pa2 {/*padding:inherit*/} 
+.pst-simp.pa2 > div {padding:2em} 
+.pl0{padding-left: 0px !important;}
+.pl2{padding-left:2em}
+.pst-acco.pl2{/*padding-left:inherit*/} 
+.pst-acco.pl2 > .ctr > div {padding-left:2em} 
+.pst-coll.pl2{/*padding-left:inherit*/}
+.pst-coll.pl2 > .ctr > div {padding-left:2em}
+.pst-tabs.pl2 {/*padding-left:inherit*/}
+.pst-tabs > .tabcontent.pl2 { padding-left:2em}
+.pst-simp.pl2 {/*padding:inherit*/} 
+.pst-simp.pl2 > div {padding-left:2em} 
+.pr2{padding-right:2em}
+.pst-acco.pr2{/*padding-right:inherit*/} 
+.pst-acco.pr2 > .ctr > div {padding-right:2em} 
+.pst-coll.pr2{/*padding-right:inherit*/}
+.pst-coll.pr2 > .ctr > div {padding-right:2em}
+.pst-tabs.pr2 {/*padding-right:inherit*/}
+.pst-tabs > .tabcontent.pr2 { padding-right:2em}
+.pst-simp.pr2 {/*padding-right:inherit*/} 
+.pst-simp.pr2 > div {padding-right:2em} 
+.pt0{padding-top: 0px !important;}
+.pt2{padding-top:2em}
+.pst-acco.pt2 {/*padding-top:inherit*/} 
+.pst-acco.pt2 > .ctr > div {padding-top:2em} 
+.pst-coll.pt2 {/*padding-top:inherit*/}
+.pst-coll.pt2 > .ctr > div {padding-top:2em}
+.pst-tabs.pt2 {/*padding-top:inherit*/}
+.pst-tabs > .tabcontent.pt2 { padding-top:2em}
+.pst-simp.pt2 {/*padding-top:inherit*/} 
+.pst-simp.pt2 > div {padding-top:2em} 
+.pb2{padding-bottom:2em}
+.pst-acco.pb2 {/*padding-bottom:inherit*/} 
+.pst-acco.pb2 .ctr > div {padding-bottom:2em} 
+.pst-coll.pb2 {/*padding-bottom:inherit*/}
+.pst-coll.pb2 > .ctr > div {padding-bottom:2em}
+.pst-tabs.pb2 {/*padding-bottom:inherit*/}
+.pst-tabs > .tabcontent.pb2 { padding-bottom:2em}
+.pst-simp.pb2 {/*padding-bottom:inherit*/} 
+.pst-simp.pb2 > div {padding-bottom:2em} 
+.pa3 {padding:3em}
+.pst-acco.pa3 {/*padding:inherit*/} 
+.pst-acco.pa3 > .ctr > div {padding:3em} 
+.pst-coll.pa3 {/*padding:inherit*/}
+.pst-coll.pa3 > .ctr > div {padding:3em}
+.pst-tabs.pa3 {/*padding:inherit*/}
+.pst-tabs > .tabcontent.pa3 { padding:3em}
+.pst-simp.pa3 {/*padding:inherit*/} 
+.pst-simp.pa3 > div {padding:3em} 
+.pl3{padding-left:3em}
+.pst-acco.pl3 {/*padding-left:inherit*/} 
+.pst-acco.pl3 > .ctr > div {padding-left:3em} 
+.pst-coll.pl3 {/*padding-left:inherit*/}
+.pst-coll.pl3 > .ctr > div {padding-left:3em}
+.pst-tabs.pl3 {/*padding-left:inherit*/}
+.pst-tabs > .tabcontent.pl3 { padding-left:3em}
+.pst-simp.pl3 {/*padding-left:inherit*/} 
+.pst-simp.pl3 > div {padding-left:0} 
+.pr3{padding-right:3em}
+.pst-acco.pr3 {/*padding-right:inherit*/} 
+.pst-acco.pr3 > .ctr > div {padding-right:3em} 
+.pst-coll.pr3 {/*padding-right:inherit*/}
+.pst-coll.pr3 > .ctr > div {padding-right:3em}
+.pst-tabs.pr3 {/*padding-right:inherit*/}
+.pst-tabs > .tabcontent.pr3 { padding-right:3em}
+.pst-simp.pr3 {/*padding-right:inherit*/} 
+.pst-simp.pr3 > div {padding-right:3em} 
+.pt3{padding-top:3em}
+.pst-acco.pt3 {/*padding-top:inherit*/} 
+.pst-acco.pt3 > .ctr > div {padding-top:3em} 
+.pst-coll.pt3 {/*padding-top:inherit*/}
+.pst-coll.pt3 .ctr > div {padding-top:3em}
+.pst-tabs.pt3 {/*padding-top:inherit*/}
+.pst-tabs > .tabcontent.pt3 { padding-top:3em}
+.pst-simp.pt3 {/*padding-top:inherit*/} 
+.pst-simp.pt3 > div {padding-top:3em} 
+.pb3{padding-bottom:3em}
+.pst-acco.pb3 {/*padding-bottom:inherit*/} 
+.pst-acco.pb3 > .ctr > div {padding-bottom:3em} 
+.pst-coll.pb3 {/*padding-bottom:inherit*/}
+.pst-coll.pb3 > .ctr > div {padding-bottom:3em}
+.pst-tabs.pb3 {/*padding-bottom:inherit*/}
+.pst-tabs > .tabcontent.pb3 { padding-bottom:3em}
+.pst-simp.pb3 {/*padding-bottom:inherit*/} 
+.pst-simp.pb3 > div {padding-bottom:3em} 
+
+/* Readonly table css*/
+
+.crt-tabl.readonly table thead tr th {padding:2px 0.57143em } 
+.crt-tabl.readonly table tbody tr > td { padding:2px 0.57143em;}
+.crt-tabl.readonly table tfoot tr > td{padding:2px 0.57143em; }
+.crt-tabl.readonly table tr td:first-child.cen span.ett-chek{pointer-events: unset;opacity:unset;cursor: unset }
+.crt-tabl.readonly table tr > td a.ett-hypl{border:none;cursor:not-allowed;pointer-events: none; opacity:0.3 }
+.crt-tabl.readonly table tr > td select.ett-slcn.select-disabled{border:none;border:none; background-color:transparent; background-image: none; padding: 0;opacity:unset;cursor:default; }
+.crt-tabl.readonly table tr > td span > input.ett-inpt{ border:none;padding: 0; background-color:transparent; color:#000}
+.crt-tabl.readonly table tr > td span.syr > span{cursor:not-allowed;pointer-events:none;top:unset; }
+.crt-tabl.readonly table tr > td span.syl > span{cursor:not-allowed;pointer-events:none;top:unset;}
+.crt-tabl.readonly table tr > td span > .ett-lofv .ett-bttn{border: none;background:#ccc;opacity: 0.3;cursor: not-allowed; pointer-events: none;}
+.crt-tabl.readonly table tr > td span > .ett-lofv .etw-5{background:transparent;display: none; }
+.crt-tabl.readonly table tr > td span > .ett-lofv .etw-5 .ett-bttn{ border:transparent;}
+.crt-tabl.readonly table tr > td span > .ett-lofv >span{display: inline}
+.crt-tabl.readonly table tr > td span > .ett-lofv .ett-bttn > svg{cursor: not-allowed}
+.crt-tabl.readonly table > tbody tr td span.ett-rdio{pointer-events: none; cursor: not-allowed}
+.crt-tabl.readonly table > tbody tr td span.ett-rdio input[type="radio"] + label::before{opacity: 0.3}
+.crt-tabl.readonly table > tbody tr td span.ett-rdio input[type="radio"]:checked + label::before{ background:#ccc;opacity:0.3}
+
+.crt-tabl.readonly table > tbody tr td span.ett-chek{pointer-events: none; cursor: not-allowed} 
+.crt-tabl.readonly table > tbody tr td span.ett-chek input[type="checkbox"] + label::before{ opacity: 0.3;border: 2px solid #ccc;}
+.crt-tabl.readonly table > tbody tr td:first-child span.ett-chek input[type="checkbox"] + label::before{opacity:unset;border:unset;}
+.crt-tabl.readonly table > tbody tr td span.ett-chek input[type="checkbox"]:checked + label::before{
+    background-image:url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8' standalone='no'%3F%3E%3Csvg xmlns:dc='http://purl.org/dc/elements/1.1/' xmlns:cc='http://creativecommons.org/ns%23' xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns%23' xmlns:svg='http://www.w3.org/2000/svg' xmlns='http://www.w3.org/2000/svg' xml:space='preserve' style='enable-background:new 0 0 18 18;' viewBox='0 0 18 18' y='0px' x='0px' id='Layer_1' version='1.1'%3E%3Cmetadata id='metadata11'%3E%3Crdf:RDF%3E%3Ccc:Work rdf:about=''%3E%3Cdc:format%3Eimage/svg+xml%3C/dc:format%3E%3Cdc:type rdf:resource='http://purl.org/dc/dcmitype/StillImage' /%3E%3Cdc:title%3E%3C/dc:title%3E%3C/cc:Work%3E%3C/rdf:RDF%3E%3C/metadata%3E%3Cdefs id='defs9' /%3E%3Cg style='fill:%23cccccc' transform='translate%280.24576271,0.15254237%29' id='g3'%3E%3Cpolygon style='fill:%23cccccc' id='polygon5' points='6.3,12 2.5,8.2 1,9.7 6.2,15 6.2,15 6.2,15 17,4.4 15.5,3 ' /%3E%3C/g%3E%3C/svg%3E") }
+.crt-tabl.readonly table > tbody tr td .ett-tags input{border: none;background: transparent }
+/*.crt-tabl.readonly table > tbody tr td .btr span .ett-inpt{color:#000; }
+.crt-tabl.readonly table > tbody tr td .btl span .ett-inpt{color:#000; }*/
+.crt-tabl.readonly table > tbody tr td .btr span .ett-bttn{display:none;}
+.crt-tabl.readonly table > tbody tr td .btl span .ett-bttn{display:none;}
+.crt-tabl.readonly table tr td .ett-rnge{pointer-events: none;opacity:0.3;cursor: not-allowed }
+.crt-tabl.readonly table tr td .ett-bttn{pointer-events: none;opacity:0.3;cursor: not-allowed }
+.crt-tabl.readonly table tr td .ett-togl{pointer-events: none;opacity:0.3;cursor: not-allowed }
+.crt-tabl.readonly table tr td .ett-swch{pointer-events: none;opacity:0.3;cursor: not-allowed }
+.crt-tabl.readonly table tr td .ett-badg{pointer-events: none;opacity:0.3;cursor: not-allowed }
+.crt-tabl.readonly table tr td .ett-imge{pointer-events: none;opacity:0.3;cursor: not-allowed }
+.crt-tabl.readonly table tr td .ett-icon{pointer-events: none;opacity:0.3;cursor: not-allowed }
+.crt-tabl.readonly table tr td .ett-texa{height: 2.7em;width: 100%;border:none;background: transparent}
+.crt-tabl.readonly table tr td .etb-stpr li .ett-inpt{border: none;background: transparent;padding-left:0;}
+.crt-tabl.readonly table tr td .etb-stpr li:first-child{display: none  }
+.crt-tabl.readonly table tr td .etb-stpr li:last-child{ display: none }
+/* table readonly elements end  */
+
+/*------- utility classes end-------------------------------*/
+
+/* Variations CSS selector examples ( Tiji 13-7-17) 
+Level of attachment     Variation Name  Variation Class     Example Appearance  Example CSS Selector
+-------------------     ------------    --------------      -----------         ------------
+Page                    Variation1      var1                Primary             body.pri.var1   
+Portion(header)         Variation1      var1                Primary             pnt-head.pri.var1
+Grid Row                Variation1      var1                Not Applicable      grb.var1
+Grid Column             Variation1      var1                Not Applicable      gcb-col12.var1
+Panel                   Variation1      var1                Not Applicable      plt-simp.var1
+Panel Section           Variation1      var1                Primary             pst-simp.pri.var1
+Container               Variation1      var1                Primary             crt-navb.pri
+Section Row             Variation1      var1                Primary             srb.pri.var1
+Section Column          Variation1      var1                Primary             scb-100.pri.var1
+Element                 Variation1      var1                Primary             ett-bttn.pri.med.var
+                                
+------------------------------------------------------------------------------------------------------------------------------                              
+Variations selectors need to be used for creating more visual options for the html widgets.
+*/                              

@@ -1,0 +1,266 @@
+
+/*------- utility classes -------------------------------*/
+*.lft, .lft {text-align:left}
+*.cen, .cen {text-align:center}
+*.rht, .rht {text-align:right}
+.sno, *.sno {display:none!important}/* instead of dispnone */
+.sec > .tabl-ctr > table > tbody > tr.sno {display:inherit!important; visibility:hidden} /* behaviour is reversed only for secondary */
+.ssp, *.ssp {visibility:hidden!important}/* instead of viewhidden */
+.ssp td, .ssp td:first-child, .ssp td:last-child {border:none}
+.top, *.top {vertical-align: top!important}
+.mid, *.mid {vertical-align: middle!important}
+.btm, *.btm {vertical-align: bottom!important}
+/* Set Margin classes */
+.ma0 {margin:0}
+.ma1 {margin:1em}
+.ml1{margin-left:1em}
+.mr1{margin-right:1em}
+.mt1{margin-top:1em}
+.mb1{margin-bottom:1em}
+.ma2 {margin:2em}
+.ml2{margin-left:2em}
+.mr2{margin-right:2em}
+.mt2{margin-top:2em}
+.mb2{margin-bottom:2em}
+.ma3 {margin:3em}
+.ml3{margin-left:3em}
+.mr3{margin-right:3em}
+.mt3{margin-top:3em}
+.mb3{margin-bottom:3em}
+
+/* Set Padding classes */
+.pa0 {padding:0}
+.pst-acco.pa0 {/*padding:inherit*/} 
+.pst-acco.pa0 > .ctr > div {padding:0} 
+.pst-coll.pa0 {/*padding:inherit*/}
+.pst-coll.pa0 > .ctr > div {padding:0}
+.pst-tabs.pa0 {/*padding:inherit*/}
+.pst-tabs > .tabcontent.pa0 { padding:0}
+.pst-simp.pa0 {/*padding:inherit*/} 
+.pst-simp.pa0 > div {padding:0}
+
+.pst-simp.pl0 > div{padding-left:0}
+.pst-simp.pt0 > div{padding-top:0}
+.pst-simp.pb0 > div{padding-bottom:0}
+.pst-simp.pr0 > div{padding-right:0} 
+
+.pa1 {padding:1em}
+.pst-acco.pa1 {/*padding:inherit*/} 
+.pst-acco.pa1 > .ctr > div {padding:1em} 
+.pst-coll.pa1{/*padding:inherit*/}
+.pst-coll.pa1 > .ctr > div {padding:1em}
+.pst-tabs.pa1 {/*padding:inherit*/}
+.pst-tabs > .tabcontent.pa1 { padding:1em}
+.pst-simp.pa1 {/*padding:inherit*/} 
+.pst-simp.pa1 > div {padding:1em} 
+.pl0{padding-left: 0px !important;}
+.pl1{padding-left:1em}
+.pst-acco.pl1 {/*padding-left:inherit*/} 
+.pst-acco.pl1 > .ctr > div {padding-left:1em} 
+.pst-coll.pl1 {/*padding-left:inherit*/}
+.pst-coll.pl1 > .ctr > div {padding-left:1em}
+.pst-tabs.pl1 {/*padding-left:inherit*/}
+.pst-tabs > .tabcontent.pl1 { padding-left:1em}
+.pst-simp.pl1 {/*padding-left:inherit*/} 
+.pst-simp.pl1 > div {padding-left:1em} 
+.pr0{padding-right: 0px !important;}
+.pr1{padding-right:1em}
+.pst-acco.pr1{/*padding-right:inherit*/} 
+.pst-acco.pr1 > .ctr > div {padding-right:1em} 
+.pst-coll.pr1{/*padding-right:inherit*/}
+.pst-coll.pr1 > .ctr > div {padding-right:1em}
+.pst-tabs.pr1 {/*padding-right:inherit*/}
+.pst-tabs > .tabcontent.pr1 { padding-right:1em}
+.pst-simp.pr1 {/*padding-right:inherit*/} 
+.pst-simp.pr1 > div {padding-right:1em} 
+.pt0{padding-top: 0px !important;}
+.pt1{padding-top:1em}
+.pst-acco.pt1{/*padding-top:inherit*/} 
+.pst-acco.pt1 > .ctr > div {padding-top:1em} 
+.pst-coll.pt1 {/*padding-top:inherit*/}
+.pst-coll.pt1 > .ctr > div {padding-top:1em}
+.pst-tabs.pt1 {/*padding-top:inherit*/}
+.pst-tabs > .tabcontent.pt1 { padding-top:1em}
+.pst-simp.pt1 {/*padding-top:inherit*/} 
+.pst-simp.pt1 > div {padding-top:1em} 
+.pb1{padding-bottom:1em}
+.pst-acco.pb1{/*padding-bottom:inherit*/} 
+.pst-acco.pb1 > .ctr > div {padding-bottom:1em} 
+.pst-coll.pb1{/*padding-bottom:inherit*/}
+.pst-coll.pb1 > .ctr > div {padding-bottom:1em}
+.pst-tabs.pb1 {/*padding-bottom:inherit*/}
+.pst-tabs > .tabcontent.pb1 { padding-bottom:1em}
+.pst-simp.pb1 {/*padding-bottom:inherit*/} 
+.pst-simp.pb1 > div {padding-bottom:1em} 
+.pa2 {padding:2em}
+.pst-acco.pa2{/*padding:inherit*/} 
+.pst-acco.pa2 > .ctr > div {padding:2em} 
+.pst-coll.pa2 {/*padding:inherit*/}
+.pst-coll.pa2 > .ctr > div {padding:2em}
+.pst-tabs.pa2 {/*padding:inherit*/}
+.pst-tabs > .tabcontent.pa2 { padding:2em}
+.pst-simp.pa2 {/*padding:inherit*/} 
+.pst-simp.pa2 > div {padding:2em} 
+.pl2{padding-left:2em}
+.pst-acco.pl2{/*padding-left:inherit*/} 
+.pst-acco.pl2 > .ctr > div {padding-left:2em} 
+.pst-coll.pl2{/*padding-left:inherit*/}
+.pst-coll.pl2 > .ctr > div {padding-left:2em}
+.pst-tabs.pl2 {/*padding-left:inherit*/}
+.pst-tabs > .tabcontent.pl2 { padding-left:2em}
+.pst-simp.pl2 {/*padding:inherit*/} 
+.pst-simp.pl2 > div {padding-left:2em} 
+.pr2{padding-right:2em}
+.pst-acco.pr2{/*padding-right:inherit*/} 
+.pst-acco.pr2 > .ctr > div {padding-right:2em} 
+.pst-coll.pr2{/*padding-right:inherit*/}
+.pst-coll.pr2 > .ctr > div {padding-right:2em}
+.pst-tabs.pr2 {/*padding-right:inherit*/}
+.pst-tabs > .tabcontent.pr2 { padding-right:2em}
+.pst-simp.pr2 {/*padding-right:inherit*/} 
+.pst-simp.pr2 > div {padding-right:2em} 
+.pt2{padding-top:2em}
+.pst-acco.pt2 {/*padding-top:inherit*/} 
+.pst-acco.pt2 > .ctr > div {padding-top:2em} 
+.pst-coll.pt2 {/*padding-top:inherit*/}
+.pst-coll.pt2 > .ctr > div {padding-top:2em}
+.pst-tabs.pt2 {/*padding-top:inherit*/}
+.pst-tabs > .tabcontent.pt2 { padding-top:2em}
+.pst-simp.pt2 {/*padding-top:inherit*/} 
+.pst-simp.pt2 > div {padding-top:2em} 
+.pb2{padding-bottom:2em}
+.pst-acco.pb2 {/*padding-bottom:inherit*/} 
+.pst-acco.pb2 .ctr > div {padding-bottom:2em} 
+.pst-coll.pb2 {/*padding-bottom:inherit*/}
+.pst-coll.pb2 > .ctr > div {padding-bottom:2em}
+.pst-tabs.pb2 {/*padding-bottom:inherit*/}
+.pst-tabs > .tabcontent.pb2 { padding-bottom:2em}
+.pst-simp.pb2 {/*padding-bottom:inherit*/} 
+.pst-simp.pb2 > div {padding-bottom:2em} 
+.pa3 {padding:3em}
+.pst-acco.pa3 {/*padding:inherit*/} 
+.pst-acco.pa3 > .ctr > div {padding:3em} 
+.pst-coll.pa3 {/*padding:inherit*/}
+.pst-coll.pa3 > .ctr > div {padding:3em}
+.pst-tabs.pa3 {/*padding:inherit*/}
+.pst-tabs > .tabcontent.pa3 { padding:3em}
+.pst-simp.pa3 {/*padding:inherit*/} 
+.pst-simp.pa3 > div {padding:3em} 
+.pl3{padding-left:3em}
+.pst-acco.pl3 {/*padding-left:inherit*/} 
+.pst-acco.pl3 > .ctr > div {padding-left:3em} 
+.pst-coll.pl3 {/*padding-left:inherit*/}
+.pst-coll.pl3 > .ctr > div {padding-left:3em}
+.pst-tabs.pl3 {/*padding-left:inherit*/}
+.pst-tabs > .tabcontent.pl3 { padding-left:3em}
+.pst-simp.pl3 {/*padding-left:inherit*/} 
+.pst-simp.pl3 > div {padding-left:0} 
+.pr3{padding-right:3em}
+.pst-acco.pr3 {/*padding-right:inherit*/} 
+.pst-acco.pr3 > .ctr > div {padding-right:3em} 
+.pst-coll.pr3 {/*padding-right:inherit*/}
+.pst-coll.pr3 > .ctr > div {padding-right:3em}
+.pst-tabs.pr3 {/*padding-right:inherit*/}
+.pst-tabs > .tabcontent.pr3 { padding-right:3em}
+.pst-simp.pr3 {/*padding-right:inherit*/} 
+.pst-simp.pr3 > div {padding-right:3em} 
+.pt3{padding-top:3em}
+.pst-acco.pt3 {/*padding-top:inherit*/} 
+.pst-acco.pt3 > .ctr > div {padding-top:3em} 
+.pst-coll.pt3 {/*padding-top:inherit*/}
+.pst-coll.pt3 .ctr > div {padding-top:3em}
+.pst-tabs.pt3 {/*padding-top:inherit*/}
+.pst-tabs > .tabcontent.pt3 { padding-top:3em}
+.pst-simp.pt3 {/*padding-top:inherit*/} 
+.pst-simp.pt3 > div {padding-top:3em} 
+.pb3{padding-bottom:3em}
+.pst-acco.pb3 {/*padding-bottom:inherit*/} 
+.pst-acco.pb3 > .ctr > div {padding-bottom:3em} 
+.pst-coll.pb3 {/*padding-bottom:inherit*/}
+.pst-coll.pb3 > .ctr > div {padding-bottom:3em}
+.pst-tabs.pb3 {/*padding-bottom:inherit*/}
+.pst-tabs > .tabcontent.pb3 { padding-bottom:3em}
+.pst-simp.pb3 {/*padding-bottom:inherit*/} 
+.pst-simp.pb3 > div {padding-bottom:3em} 
+
+
+/*------- utility classes end-------------------------------*/
+
+/* Variations CSS selector examples ( Tiji 13-7-17) 
+Level of attachment 	Variation Name	Variation Class		Example Appearance	Example CSS Selector
+-------------------		------------	--------------		-----------			------------
+Page					Variation1		var1				Primary				body.pri.var1	
+Portion(header)			Variation1		var1				Primary				pnt-head.pri.var1
+Grid Row				Variation1		var1				Not Applicable		grb.var1
+Grid Column				Variation1		var1	 			Not Applicable		gcb-col12.var1
+Panel					Variation1		var1				Not Applicable		plt-simp.var1
+Panel Section			Variation1		var1				Primary				pst-simp.pri.var1
+Container				Variation1		var1				Primary				crt-navb.pri
+Section Row				Variation1		var1 				Primary				srb.pri.var1
+Section Column			Variation1		var1 				Primary 	 		scb-100.pri.var1
+Element					Variation1		var1	 			Primary				ett-bttn.pri.med.var
+								
+------------------------------------------------------------------------------------------------------------------------------								
+Variations selectors need to be used for creating more visual options for the html widgets.
+*/ 
+
+/*Animation*/
+ .animated { 
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both; 
+}
+
+.fadeIn { -webkit-animation-name: fadeIn; animation-name: fadeIn; }
+@keyframes fadeIn { 
+  from { opacity: 0; }
+  to { opacity: 1; } }
+
+
+.fadeInDown { -webkit-animation-name: fadeInDown; animation-name: fadeInDown; }
+@-webkit-keyframes fadeInDown {
+ from { opacity: 0; -webkit-transform: translate3d(0, -2em, 0); transform: translate3d(0, -2em, 0); }
+  50% { -webkit-transform: translate3d(0, 0.3em, 0); transform: translate3d(0, 0.3em, 0); }
+  to { opacity: 1; -webkit-transform: none; transform: none; } }
+@keyframes fadeInDown { 
+  from { opacity: 0; -webkit-transform: translate3d(0, -2em, 0); transform: translate3d(0, -2em, 0); }
+  50% { -webkit-transform: translate3d(0, 0.3em, 0); transform: translate3d(0, 0.3em, 0); }
+  to { opacity: 1; -webkit-transform: none; transform: none; } }
+
+
+.fadeInUp { -webkit-animation-name: fadeInUp; animation-name: fadeInUp; }
+@-webkit-keyframes fadeInUp {
+  from { opacity: 0; -webkit-transform: translate3d(0, 2em, 0); transform: translate3d(0, 2em, 0); }
+  50% { -webkit-transform: translate3d(0, -0.3em, 0); transform: translate3d(0, -0.3em, 0); }
+  to { opacity: 1; -webkit-transform: none; transform: none; } }
+@keyframes fadeInUp {
+  from { opacity: 0; -webkit-transform: translate3d(0, 2em, 0); transform: translate3d(0, 2em, 0); }
+  50% { -webkit-transform: translate3d(0, -0.3em, 0); transform: translate3d(0, -0.3em, 0); }
+  to { opacity: 1; -webkit-transform: none; transform: none; } }
+
+ .zoomIn { -webkit-animation-name: zoomIn; animation-name: zoomIn; }
+@-webkit-keyframes zoomIn { 
+  from { opacity: 0; -webkit-transform: scale3d(0.95, 0.95, 0.95); transform: scale3d(0.95, 0.95, 0.95); }
+  60% { opacity: 1; -webkit-transform: scale3d(1.01, 1.01, 1.01); transform: scale3d(1.01, 1.01, 1.01); } }
+@keyframes zoomIn { 
+  from { opacity: 0; -webkit-transform: scale3d(0.95, 0.95, 0.95); transform: scale3d(0.95, 0.95, 0.95); }
+  60% { opacity: 1; -webkit-transform: scale3d(1.015, 1.01, 1.01); transform: scale3d(1.01, 1.01, 1.01); } }
+  /*Animation End*/
+
+ 
+/*Added by karthik on 22 Mar*/
+/* extra new features for keyboard start*/
+
+/* sidebar */
+.posab{ position: absolute}
+/* header */
+.posst{ position:static}
+/*apz-stay-left*/
+.ml0{margin-left: 0px}
+/*apz-stay-right*/
+.mr0{margin-right: 0px}
+/* padding 0 for the pagebody calc only for ios specific*/
+.pad0{padding: 0px !important;}
+
+/* extra new features for keyboard end*/

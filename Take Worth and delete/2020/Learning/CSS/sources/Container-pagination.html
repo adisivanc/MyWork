@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Pagination</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <script>
+        function swapStyleSheet(sheet) {
+            document.getElementById('pagestyle').setAttribute('href', sheet);
+        }
+    </script>
+    <link href="styles/themes/appzillon/css/local-base.css" rel="stylesheet" media="screen" />
+    <link id="pagestyle" href="styles/themes/appzillon/css/local-apz.css" rel="stylesheet" media="screen" />
+
+</head>
+
+<body class="fulsv apz-nav-push" style="padding:8px;">
+    
+    <span id="SpriteSVG"></span>
+    <br> 
+        <select class="ett-slcn etb-slcn pri" style="width:20%;">
+            <option id="myButton" onclick="swapStyleSheet('styles/themes/appzillon/css/local-apz.css')">Appzillon</option>
+            <option id="myButtonBCL" onclick="swapStyleSheet('styles/themes/appzillon/css/local-bcl.css')">Barclays </option>
+            <option id="myButtonRolb" onclick="swapStyleSheet('styles/themes/appzillon/css/local-rolb.css')">Rolb</option>
+            <option id="myButtonMobile" onclick="swapStyleSheet('styles/themes/appzillon/css/local-mobile.css')">Mobile</option>
+            <option id="myButtonCiti" onclick="swapStyleSheet('styles/themes/appzillon/css/local-citi.css')">Citi</option>
+        </select> 
+
+    <br>
+    <br>
+    <br> 
+    <div class="pri"> 
+        <ul class="ttl wrapped">
+           <li class="ttl-ctr">
+                <ul class="ttv">
+                    <li class="icn">
+                        <svg class="icon icon-list-alt px24">
+                            <use xlink:href="#icon-list-alt"></use>
+                        </svg>
+                    </li>
+                    <li class="lbl">
+                        <h4>primary appearance - title, icon, search,page size, add remove and pagination </h4>
+                    </li>
+                   <li class="btn-ctr">
+                    <button class="ett-bttn med sec inf">Action</button>
+                    </li>
+                </ul>
+              
+            </li>
+            
+            <li class="srh-ctr">
+                <span class="srh"> 
+                    <span><input type="search" placeholder="Search......" name="search" class="srh-inp" required> </span>
+                    <span class="srh-icn">
+                        <svg class="icon icon-search px16"><use xlink:href="#icon-search"></use></svg>
+                    </span> 
+                </span>
+                <span class="ddn-ctr"> 
+                        <select class="ett-slcn pri">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                        </select>
+                </span>
+            </li> 
+            <li class="pgn-ctr"> 
+                <ul class="pgs-ctr">
+                    <li><p>Items Per Page</p></li>
+                    <li>
+                    <select  id="select2" class="ett-slcn pri scb-col100" placeholder="select" title="Select Box">
+                        <option>5</option>
+                        <option>10</option>
+                        <option>15</option>
+                        <option>20</option> 
+                    </select> 
+                    </li> 
+                </ul> 
+                <ul class="pgn">
+                    <li class="pnx"> 
+                        <button class="ett-bttn tsp med"  aria-label="Previous page"><svg class="ett-icon icon-chevron-left px16"><use xlink:href="#icon-chevron-left"></use></svg></button> 
+                    </li>
+                    <li class="pcl">
+                      <input type="text" class="pageno" value="1">
+                    </li>	
+                    <li class="ptx" > 
+                        <span>/&nbsp;</span><span>3</span> 
+                    </li>	 
+                    <li class="pnx"> 
+                        <button class="ett-bttn tsp med"  aria-label="Next page"><svg class="ett-icon icon-chevron-right px16"><use xlink:href="#icon-chevron-right"></use></svg></button>
+                    </li> 
+                </ul> 
+                
+                <ul class="adr-ctr">
+                   <li class="add">
+                        <span>
+                        <button class="ett-bttn tsp med"  aria-label="Add Record">
+                            <svg class="icon icon-plus px16"><use xlink:href="#icon-plus"></use></svg>
+                            </button>
+                        </span> 
+                   </li> 
+                   <li class="rmv">
+                       <span>
+                            <button class="ett-bttn tsp med"  aria-label="Remove Record"><svg class="icon icon-minus px16"><use xlink:href="#icon-minus"></use></svg></button>
+                        </span>
+                   
+                   </li>
+                </ul>
+            </li>
+            </ul>   
+    </div>
+    <br> 
+    <br> 
+    <div class="sec"> 
+        <ul class="ttl wrapped">
+            <li class="ttl-ctr">
+                <ul class="ttv">
+                    <li class="icn">
+                        <svg class="icon icon-list-alt px24">
+                            <use xlink:href="#icon-list-alt"></use>
+                        </svg>
+                    </li>
+                    <li class="lbl">
+                        <h4>secondary appearance - title, icon, search,page size, add remove and pagination </h4>
+                    </li>
+                    <li class="btn-ctr">
+                    <button class="ett-bttn med sec inf">Action</button>
+                    </li>
+                </ul>
+            </li>
+            <li class="srh-ctr">
+                <span class="srh"> 
+                        <span><input type="search" placeholder="Search......" name="search" class="srh-inp" required> </span>
+                        <span class="srh-icn">
+                            <svg class="icon icon-search px16"><use xlink:href="#icon-search"></use></svg>
+                        </span>
+                    <span class="ddn-ctr"> 
+                        <select class="ett-slcn pri">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                        </select>
+                </span>
+                </span> 
+            </li> 
+            <li class="pgn-ctr">
+                <ul class="pgs-ctr">
+                    <li><p>Items Per Page</p></li>
+                    <li>
+                    <select  id="select2" class="ett-slcn sec scb-col100" placeholder="select" title="Select Box">
+                        <option>5</option>
+                        <option>10</option>
+                        <option>15</option>
+                        <option>20</option> 
+                    </select> 
+                    </li> 
+                </ul>
+               <ul class="pgn">
+                    <li class="pnx"> 
+                        <button class="ett-bttn tsp med"  aria-label="Previous page"><svg class="ett-icon icon-chevron-left px16"><use xlink:href="#icon-chevron-left"></use></svg></button> 
+                    </li>
+                    <li class="pcl">
+                      <input type="text" class="pageno" value="1">
+                    </li>	
+                    <li class="ptx" > 
+                        <span>/&nbsp;</span><span>3</span> 
+                    </li>	 
+                    <li class="pnx"> 
+                        <button class="ett-bttn tsp med"  aria-label="Next page"><svg class="ett-icon icon-chevron-right px16"><use xlink:href="#icon-chevron-right"></use></svg></button>
+                    </li>  
+                </ul> 
+                <ul class="adr-ctr">
+                   <li class="add">
+                        <span>
+                        <button class="ett-bttn tsp med"  aria-label="Add Record">
+                            <svg class="icon icon-plus px16"><use xlink:href="#icon-plus"></use></svg>
+                            </button>
+                        </span> 
+                   </li> 
+                   <li class="rmv">
+                       <span>
+                            <button class="ett-bttn tsp med"  aria-label="Remove Record"><svg class="icon icon-minus px16"><use xlink:href="#icon-minus"></use></svg></button>
+                        </span>
+                   
+                   </li>
+                </ul>
+            </li>
+            </ul>  
+    </div>
+    <br>
+    <br> 
+    <div class="ter"> 
+        <ul class="ttl">
+            <li class="ttl-ctr">
+                <ul class="ttv">
+                    <li class="icn">
+                        <svg class="icon icon-list-alt px24">
+                            <use xlink:href="#icon-list-alt"></use>
+                        </svg>
+                    </li>
+                    <li class="lbl">
+                        <h4>tertiay appearance - title, icon, search,page size, add remove and pagination </h4>
+                    </li>
+                    <li class="btn-ctr">
+                    <button class="ett-bttn med sec inf">Action</button>
+                    </li>
+                </ul>
+            </li>
+            
+            <li class="srh-ctr">
+                <span class="srh"> 
+                        <span><input type="search" placeholder="Search......" name="search" class="srh-inp" required> </span>
+                        <span class="srh-icn">
+                            <svg class="icon icon-search px16"><use xlink:href="#icon-search"></use></svg>
+                        </span>
+                    <span class="ddn-ctr"> 
+                        <select class="ett-slcn pri">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                        </select>
+                </span>
+                </span>
+            </li>
+             
+            <li class="pgn-ctr">
+                <ul class="pgs-ctr">
+                    <li><p>Items Per Page</p></li>
+                    <li>
+                    <select  id="select2" class="ett-slcn ter scb-col100" placeholder="select" title="Select Box">
+                        <option>5</option>
+                        <option>10</option>
+                        <option>15</option>
+                        <option>20</option> 
+                    </select> 
+                    </li> 
+                </ul>
+               <ul class="pgn">
+                    <li class="pnx"> 
+                        <button class="ett-bttn tsp med"  aria-label="Previous page"><svg class="ett-icon icon-chevron-left px16"><use xlink:href="#icon-chevron-left"></use></svg></button> 
+                    </li>
+                    <li class="pcl">
+                      <input type="text" class="pageno" value="1">
+                    </li>	
+                    <li class="ptx" > 
+                        <span>/&nbsp;</span><span>3</span> 
+                    </li>	 
+                    <li class="pnx"> 
+                        <button class="ett-bttn tsp med"  aria-label="Next page"><svg class="ett-icon icon-chevron-right px16"><use xlink:href="#icon-chevron-right"></use></svg></button>
+                    </li> 
+                </ul> 
+                <ul class="adr-ctr">
+                   <li class="add">
+                        <span>
+                        <button class="ett-bttn tsp med"  aria-label="Add Record">
+                            <svg class="icon icon-plus px16"><use xlink:href="#icon-plus"></use></svg>
+                            </button>
+                        </span> 
+                   </li> 
+                   <li class="rmv">
+                       <span>
+                            <button class="ett-bttn tsp med"  aria-label="Remove Record"><svg class="icon icon-minus px16"><use xlink:href="#icon-minus"></use></svg></button>
+                        </span>
+                   
+                   </li>
+                </ul>
+            </li>
+           
+            </ul>   
+    </div>
+    <br> 
+    <br> 
+    <div class="tsp"> 
+        <ul class="ttl wrapped">
+           <li class="ttl-ctr">
+                <ul class="ttv">
+                    <li class="icn">
+                        <svg class="icon icon-list-alt px24">
+                            <use xlink:href="#icon-list-alt"></use>
+                        </svg>
+                    </li>
+                    <li class="lbl">
+                        <h4>transparent appearance - title, icon, search,page size, add remove and pagination </h4>
+                    </li>
+                    <li class="btn-ctr">
+                        <button class="ett-bttn med sec inf">Action</button>
+                    </li>
+                </ul>
+            </li>
+            <li class="srh-ctr">
+                <span class="srh"> 
+                        <span><input type="search" placeholder="Search......" name="search" class="srh-inp" required> </span>
+                        <span class="srh-icn">
+                            <svg class="icon icon-search px16"><use xlink:href="#icon-search"></use></svg>
+                        </span>
+                    <span class="ddn-ctr"> 
+                        <select class="ett-slcn pri">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                        </select>
+                </span>
+                </span> 
+            </li> 
+            <li class="pgn-ctr">
+               <ul class="pgs-ctr">
+                    <li><p>Items Per Page</p></li>
+                    <li>
+                    <select  id="select2" class="ett-slcn ter scb-col100" placeholder="select" title="Select Box">
+                        <option>5</option>
+                        <option>10</option>
+                        <option>15</option>
+                        <option>20</option> 
+                    </select> 
+                    </li> 
+                </ul>
+                <ul class="pgn">
+                    <li class="pnx"> 
+                        <button class="ett-bttn tsp med"  aria-label="Previous page"><svg class="ett-icon icon-chevron-left px16"><use xlink:href="#icon-chevron-left"></use></svg></button> 
+                    </li>
+                    <li class="pcl">
+                      <input type="text" class="pageno" value="1">
+                    </li>	
+                    <li class="ptx" > 
+                        <span>/&nbsp;</span><span>3</span> 
+                    </li>	 
+                    <li class="pnx"> 
+                        <button class="ett-bttn tsp med"  aria-label="Next page"><svg class="ett-icon icon-chevron-right px16"><use xlink:href="#icon-chevron-right"></use></svg></button>
+                    </li> 
+                </ul> 
+                <ul class="adr-ctr">
+                   <li class="add">
+                        <span>
+                        <button class="ett-bttn tsp med"  aria-label="Add Record">
+                            <svg class="icon icon-plus px16"><use xlink:href="#icon-plus"></use></svg>
+                            </button>
+                        </span> 
+                   </li> 
+                   <li class="rmv">
+                       <span>
+                            <button class="ett-bttn tsp med"  aria-label="Remove Record"><svg class="icon icon-minus px16"><use xlink:href="#icon-minus"></use></svg></button>
+                        </span>
+                   
+                   </li>
+                </ul>
+            </li>
+            </ul>  
+    </div>
+    <br> 
+    <h3>primary variation with loadmore and loadless</h3>
+    <br> 
+    <div class="pri"> 
+            <ul id=" " class="plml">
+                <li> 
+                    <a  class="loadmore"   href="#">Load More</a>
+                    <a  class="loadless"   href="#">Load Less</a>
+                    </li>
+                <li>
+                    <ul class="pgsize"> 
+                        <li><p>Items Per Page</p></li>
+                        <li>
+                        <select  id="select2" class="ett-slcn pri scb-col100" placeholder="select" title="Select Box">
+                            <option>5</option>
+                            <option>10</option>
+                            <option>15</option>
+                            <option>20</option> 
+                        </select> 
+                        </li> 
+                    </ul>   
+                </li>  
+            </ul>
+    </div> 
+    <br>
+    <h3>secondary variation with loadmore and loadless</h3>
+    <br> 
+    <div class="sec"> 
+        <ul id=" " class="plml">
+            <li> <a id=" " class="loadmore"   href="#">Load More</a>
+                <a id=" " class="loadless"   href="#">Load Less</a>
+            </li>
+            <li>
+                    <ul class="pgsize"> 
+                        <li><p>Items Per Page</p></li>
+                        <li>
+                        <select  id="select2" class="ett-slcn sec scb-col100" placeholder="select" title="Select Box">
+                            <option>5</option>
+                            <option>10</option>
+                            <option>15</option>
+                            <option>20</option> 
+                        </select> 
+                        </li> 
+                    </ul>
+                </li> 
+        </ul>
+    </div> 
+    <br>
+    <h3>teritiary variation with loadmore and loadless</h3>
+    <br> 
+    <div class="ter">
+        <ul class="plml">
+            <li> <a id=" " class="loadmore"   href="#">Load More</a>
+                <a id=" " class="loadless"   href="#">Load Less</a>
+            </li>
+            <li>
+                <ul class="pgsize"> 
+                        <li><p>Items Per Page</p></li>
+                        <li>
+                        <select  id="select2" class="ett-slcn ter scb-col100" placeholder="select" title="Select Box">
+                            <option>5</option>
+                            <option>10</option>
+                            <option>15</option>
+                            <option>20</option> 
+                        </select> 
+                        </li> 
+                    </ul>
+            </li>
+        </ul>
+    </div> 
+    <br>
+    <h3>primary variation with pagination type1</h3>
+    <br> 
+    <div class="pri"> 
+        <ul id="" class="pbtn">
+                <li id="" class=" ">
+                    <a id="" class="ett-bttn tsp sml" href="#appzillon" >
+                        <svg class="ett-icon icon-arrow-prev px18"><use xlink:href="#icon-arrow-prev"></use></svg> 
+                    </a>
+                    <a id="" class="ett-bttn tsp sml" href="#appzillon" >
+                        <svg class="ett-icon icon-arrow-left px18"><use xlink:href="#icon-arrow-left"></use></svg> 
+                    </a>
+                    <a id="" class="ett-bttn tsp sml  active " href="#appzillon" >1</a>
+                    <a id="" class="ett-bttn tsp sml" href="#appzillon" >2</a>
+                    <a id="" class="ett-bttn tsp sml" href="#appzillon" >3</a>
+                    <a id="" class="ett-bttn tsp sml" href="#appzillon" >4</a>
+                    <a id="" class="ett-bttn tsp sml" href="#appzillon" >5</a>
+                    <a id="" class="ett-bttn tsp sml" href="#appzillon" title="Next" >
+                        <svg class="ett-icon icon-arrow-right px18"><use xlink:href="#icon-arrow-right"></use></svg>
+                    </a>
+                    <a id="" class="ett-bttn tsp sml" href="#appzillon" >
+                        <svg class="ett-icon icon-arrow-next px18"><use xlink:href="#icon-arrow-next"></use></svg>
+                    </a>
+              </li>
+              <li>
+                    <ul class="pgsize"> 
+                        <li><p>Items Per Page</p></li>
+                        <li>
+                        <select  id="select2" class="ett-slcn pri scb-col100" placeholder="select" title="Select Box">
+                            <option>5</option>
+                            <option>10</option>
+                            <option>15</option>
+                            <option>20</option> 
+                        </select> 
+                        </li> 
+                    </ul>
+                </li>
+            </ul> 
+    </div>
+    <br>
+    <h3>secondary variation with pagination type1</h3>
+    <br> 
+     <div class="sec"> 
+        <ul id="" class=" pbtn">
+                <li id="" class=" ">
+                    <a id="" class="ett-bttn tsp sml" href="#appzillon" >
+                        <svg class="ett-icon icon-arrow-prev px18"><use xlink:href="#icon-arrow-prev"></use></svg> 
+                    </a>
+                    <a id="" class="ett-bttn tsp sml" href="#appzillon" >
+                        <svg class="ett-icon icon-arrow-left px18"><use xlink:href="#icon-arrow-left"></use></svg> 
+                    </a>
+                    <a id="" class="ett-bttn tsp sml  active " href="#appzillon" >1</a>
+                    <a id="" class="ett-bttn tsp sml" href="#appzillon" >2</a>
+                    <a id="" class="ett-bttn tsp sml" href="#appzillon" >3</a>
+                    <a id="" class="ett-bttn tsp sml" href="#appzillon" >4</a>
+                    <a id="" class="ett-bttn tsp sml" href="#appzillon" >5</a>
+                    <a id="" class="ett-bttn tsp sml" href="#appzillon" title="Next" >
+                        <svg class="ett-icon icon-arrow-right px18"><use xlink:href="#icon-arrow-right"></use></svg>
+                    </a>
+                    <a id="" class="ett-bttn tsp sml" href="#appzillon" >
+                        <svg class="ett-icon icon-arrow-next px18"><use xlink:href="#icon-arrow-next"></use></svg>
+                    </a>
+              </li>
+              <li>
+                    <ul class="pgsize"> 
+                        <li><p>Items Per Page</p></li>
+                        <li>
+                        <select  id="select2" class="ett-slcn sec scb-col100" placeholder="select" title="Select Box">
+                            <option>5</option>
+                            <option>10</option>
+                            <option>15</option>
+                            <option>20</option> 
+                        </select> 
+                        </li> 
+                    </ul>
+                </li>
+            </ul> 
+    </div>
+    <br>
+    <h3>teritiary variation with pagination type1</h3>
+    <br> 
+     <div class="ter"> 
+        <ul id="" class=" pbtn">
+                <li id="" class=" ">
+                    <a id="" class="ett-bttn tsp sml" href="#appzillon" >
+                        <svg class="ett-icon icon-arrow-prev px18"><use xlink:href="#icon-arrow-prev"></use></svg> 
+                    </a>
+                    <a id="" class="ett-bttn tsp sml" href="#appzillon" >
+                        <svg class="ett-icon icon-arrow-left px18"><use xlink:href="#icon-arrow-left"></use></svg> 
+                    </a>
+                    <a id="" class="ett-bttn tsp sml  active " href="#appzillon" >1</a>
+                    <a id="" class="ett-bttn tsp sml" href="#appzillon" >2</a>
+                    <a id="" class="ett-bttn tsp sml" href="#appzillon" >3</a>
+                    <a id="" class="ett-bttn tsp sml" href="#appzillon" >4</a>
+                    <a id="" class="ett-bttn tsp sml" href="#appzillon" >5</a>
+                    <a id="" class="ett-bttn tsp sml" href="#appzillon" title="Next" >
+                        <svg class="ett-icon icon-arrow-right px18"><use xlink:href="#icon-arrow-right"></use></svg>
+                    </a>
+                    <a id="" class="ett-bttn tsp sml" href="#appzillon" >
+                        <svg class="ett-icon icon-arrow-next px18"><use xlink:href="#icon-arrow-next"></use></svg>
+                    </a>
+              </li>
+            <li>
+                    <ul class="pgsize"> 
+                        <li><p>Items Per Page</p></li>
+                        <li>
+                        <select  id="select2" class="ett-slcn ter scb-col100" placeholder="select" title="Select Box">
+                            <option>5</option>
+                            <option>10</option>
+                            <option>15</option>
+                            <option>20</option> 
+                        </select> 
+                        </li> 
+                    </ul>
+                </li>
+            </ul> 
+    </div>
+    <br>
+    <h3>primary variation with pagination type2</h3>
+    <br> 
+    <div class="pri">  
+        <ul id="" class="plbl">
+            <li id="" class=" ">   
+                    <ul class="pgsize"> 
+                        <li><p>Items Per Page</p></li>
+                        <li>
+                        <select  id="select2" class="ett-slcn pri scb-col100" placeholder="select" title="Select Box">
+                            <option>5</option>
+                            <option>10</option>
+                            <option>15</option>
+                            <option>20</option> 
+                        </select>  
+                </li> 
+                <span>Showing 1 to 10 of 12 entries</span>
+            </ul> 
+            </li>
+            <li class=" "> 
+                <a id="" class="ett-bttn sml tsp " href="#appzillon" ><svg class="ett-icon icon-arrow-prev px18"><use xlink:href="#icon-arrow-prev"></use></svg></a>
+            <a id="" class="ett-bttn sml tsp active" href="#appzillon" >1</a>
+            <a id="" class="ett-bttn sml tsp " href="#appzillon" >2</a>
+            <a id="" class="ett-bttn sml tsp " href="#appzillon" >3</a>
+            <a id="" class="ett-bttn sml tsp " href="#appzillon" >4</a>
+            <a id="" class="ett-bttn sml tsp " href="#appzillon" >5</a>
+            <a id="" class="ett-bttn sml tsp " href="#appzillon" >6</a>
+            <a id="" class="ett-bttn sml tsp " href="#appzillon" >7</a>
+            <a id="" class="ett-bttn sml tsp " href="#appzillon" ><svg class="ett-icon icon-arrow-next px18"><use xlink:href="#icon-arrow-next"></use></svg></a>
+          </li>
+        </ul>
+    </div> 
+    <br>
+    <h3>seconadry variation with pagination type2</h3>
+    <div class="sec">  
+        <ul id="" class="plbl">
+            <li id="" class="rht"> 
+                <ul class="pgsize">
+                <li><p>Items Per Page</p></li>
+                <li>
+                <select  id="select2" class="ett-slcn sec scb-col100" placeholder="select" title="Select Box">
+                            <option>5</option>
+                            <option>10</option>
+                            <option>15</option>
+                            <option>20</option> 
+                        </select> 
+                </li> 
+                <span>Showing 1 to 10 of 12 entries</span> 
+                </ul> 
+            </li>
+            <li class=" ">
+            <a id="" class="ett-bttn sml tsp active" href="#appzillon" >1</a>
+            <a id="" class="ett-bttn sml tsp " href="#appzillon" >2</a>
+            <a id="" class="ett-bttn sml tsp " href="#appzillon" >3</a>
+            <a id="" class="ett-bttn sml tsp " href="#appzillon" >4</a>
+            <a id="" class="ett-bttn sml tsp " href="#appzillon" >5</a>
+            <a id="" class="ett-bttn sml tsp " href="#appzillon" >6</a>
+            <a id="" class="ett-bttn sml tsp " href="#appzillon" >7</a>  
+            </li>
+        </ul>
+    </div> 
+    <br>
+    <h3>teritiary variation with pagination type2</h3> 
+    <br> 
+    <div class="ter">  
+        <ul id="" class="plbl">
+          <li id="" class=" ">
+              <ul class="pgsize">
+                <li><p>Items Per Page</p></li>
+                <li>
+                <select  id="select2" class="ett-slcn ter scb-col100" placeholder="select" title="Select Box">
+                            <option>5</option>
+                            <option>10</option>
+                            <option>15</option>
+                            <option>20</option> 
+                        </select> 
+                </li> 
+                  <span>Showing 1 to 10 of 12 entries</span>
+              </ul>
+         </li>
+        <li class=" "> 
+            <a id="" class="ett-bttn sml tsp active" href="#appzillon" >1</a>
+            <a id="" class="ett-bttn sml tsp " href="#appzillon" >2</a>
+            <a id="" class="ett-bttn sml tsp " href="#appzillon" >3</a>
+            <a id="" class="ett-bttn sml tsp " href="#appzillon" >4</a>
+            <a id="" class="ett-bttn sml tsp " href="#appzillon" >5</a>
+            <a id="" class="ett-bttn sml tsp " href="#appzillon" >6</a>
+            <a id="" class="ett-bttn sml tsp " href="#appzillon" >7</a>
+        </li>
+        </ul>
+    </div> 
+    <br> 
+    <script type="text/javascript" charset="utf-8" src="scripts/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="scripts/jquery-ui.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="scripts/jquery.dataTables.js"></script>
+    <script type="text/javascript" charset="utf-8" src="scripts/dataTables.responsive.js"></script>
+    <script type="text/javascript" charset="utf-8" src="scripts/select2.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="scripts/appzillon.js"></script>
+    <script type="text/javascript" charset="utf-8" src="scripts/uiutils.js"></script>
+    <script type="text/javascript" charset="utf-8" src="scripts/swiper.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="scripts/tableHeadFixer.js"></script>
+    <script type="text/javascript" charset="utf-8" src="scripts/karthik-plugins.js"></script>
+    <script type="text/javascript" charset="utf-8" src="scripts/karthik-scripts.js"></script>
+    <script type="text/javascript" charset="utf-8" src="scripts/jquery.slide-transition.js"></script>
+    <script type="text/javascript" charset="utf-8" src="scripts/ripple.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            apz = new Apz();
+            apz.appId = "testing";
+            apz.deviceOs = "APPZILLONSIMULATOR";
+            //apz.loadProject();
+        });
+    </script>  
+ <script>
+		$('.tabl .rowhandle').on( 'click', function(e) {
+		  e.preventDefault();
+		  $(this).toggleClass('showinfo hideinfo').closest('tr').toggleClass('prow').next('.inforow').toggleClass('hiderow');
+		});
+    </script>
+    <script>
+        $(document).ready(function () {
+           $('#SpriteSVG').load('svg-apz.svg'); 
+            $('#myButton').click(function (event) {
+
+                // prevent page submit
+                event.preventDefault();
+                $("#SpriteSVG").text(" ")
+                    // load the page into #SpriteSVG
+                $('#SpriteSVG').load('svg-apz.svg'); 
+            });
+        });
+    </script>
+ <script> 
+    $(document).ready(function() {
+	var table = $('.example1').DataTable( {
+		/*scrollY:         false ,
+		scrollX:        false, 
+        sScrollBody:false
+        fixedColumns:   false,
+		scrollCollapse: false, */
+		paging :   false,
+        ordering : true,
+        info :   false,
+        searching: false,
+        searchable : false
+        
+	} );
+} );
+    
+    </script>
+    <script> 
+    $(document).ready(function() {
+	var table = $('.example2').DataTable( {
+		/*scrollY:         false ,
+		scrollX:        false, 
+        sScrollBody:false
+        fixedColumns:   false,
+		scrollCollapse: false, */
+		paging :   false,
+        ordering : true,
+        info :   false,
+        searching: false,
+        searchable : false
+        
+	} );
+} );
+    
+    </script>
+    <script> 
+    $(document).ready(function() {
+	var table = $('.example').DataTable( {
+		/*scrollY:         false ,
+		scrollX:        false, 
+        sScrollBody:false
+        fixedColumns:   false,
+		scrollCollapse: false, */
+		paging :   false,
+        ordering : true,
+        info :   false,
+        searching: false,
+        searchable : false
+        
+	} );
+} );
+    
+    </script>
+     <script>
+        $(document).ready(function(){
+            var submitIcon = $('.srh-icn');
+            var inputBox = $('.srh-inp');
+            var srh = $('.srh');
+            var isOpen = false;
+            submitIcon.click(function(){
+                if(isOpen == false){
+                    srh.addClass('srh-open');
+                    inputBox.focus();
+                    isOpen = true;
+                } else {
+                    srh.removeClass('srh-open');
+                    inputBox.focusout();
+                    isOpen = false;
+                }
+            });
+            inputBox.keydown(function(e){
+                e.stopPropagation();
+                if (e.keyCode=="13" ||  e.keyCode=="9" ) {
+                    srh.removeClass('srh-open');
+                    inputBox.focusout();
+                    isOpen = false;
+                } 
+            });
+             submitIcon.mouseup(function(){
+                    return false;
+                });
+            srh.mouseup(function(){
+                    return false;
+                });
+            $(document).mouseup(function(){
+                    if(isOpen == true){
+                        $('.srh-icn').css('display','block');
+                        submitIcon.click();
+                    }
+                });
+        });
+            
+        </script>
+    <script>
+        $(document).ready(function () {
+            $('#myButtonBCL').click(function (event) { 
+                // prevent page submit
+                event.preventDefault();
+                $("#SpriteSVG").text(" ")
+                    // load the page into #SpriteSVG
+                $('#SpriteSVG').load('svg-bcl.svg');
+
+            });
+        });
+    </script> 
+</body> 
+</html>

@@ -1,0 +1,29 @@
+<html class=" js no-touch cssanimations csstransitions">
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<style type="text/css" id="alertifyCSS">
+button { margin:10px; background-color:#333; color:#FFF; padding:15px}
+button.current { margin:10px; background-color:#c00; color:#FFF; padding:15px}
+</style>
+<title>AppzillonBranch</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+	<div id="dcasacsaas">
+		<ul>
+			<li><button class="current">button01</button></li>
+			<li><button class="">button02</button></li>
+			<li><button class="">button03</button></li>
+			<li><button class="">button04</button></li>
+		</ul>
+	<div>
+	<script type="text/javascript">
+		$("#dcasacsaas > ul > li > button").click(function() {
+		alert("");
+			$("#dcasacsaas > ul > li > button" ).removeClass("current");
+			$(this).addClass("current");
+		});
+	</script>
+</body>
+</html>

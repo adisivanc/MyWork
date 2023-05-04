@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8" />
+		<title>10:4 Element - Bullet</title>
+		<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+		<script>
+			function swapStyleSheet(sheet) {
+				document.getElementById('pagestyle').setAttribute('href', sheet);
+			}
+		</script>
+		<link href="styles/themes/appzillon/css/local-base.css" rel="stylesheet" media="screen" />
+		<link id="pagestyle" href="styles/themes/appzillon/css/local-apz.css" rel="stylesheet" media="screen" />
+
+	</head>
+
+	<body class="fulsv" >
+		<span id="SpriteSVG"></span>
+        <br> 
+        <select class="ett-slcn etb-slcn pri" style="width:20%;">
+            <option id="myButton" onclick="swapStyleSheet('styles/themes/appzillon/css/local-apz.css')">Appzillon</option>
+            <option id="myButtonBCL" onclick="swapStyleSheet('styles/themes/appzillon/css/local-bcl.css')">Barclays </option>
+            <option id="myButtonRolb" onclick="swapStyleSheet('styles/themes/appzillon/css/local-rolb.css')">Rolb</option>
+            <option id="myButtonMobile" onclick="swapStyleSheet('styles/themes/appzillon/css/local-mobile.css')">Mobile</option>
+            <option id="myButtonCiti" onclick="swapStyleSheet('styles/themes/appzillon/css/local-citi.css')">Citi</option>
+        </select> 
+        <br><br>
+        
+        <h4>Unordered List</h4>
+        <br>
+        <ul class="ett-blt pri">
+            <li class="scb-col40">Bullet Unordered list Label Primary</li>
+            <li class="eic scb-col60">
+                <span class="ecn"> 
+                    <ul class="unol">
+                        <li><p>Bullet points</p></li>
+                        <li><p>Good for lists & stuff</p></li>
+                        <li><p>Useful for separating information</p></li>
+                        <li><p>Separating information</p></li> 
+                    </ul> 
+                </span> 
+            </li>
+        </ul>	
+        <br>
+        <ul class="ett-blt sec">
+            <li class="scb-col40">Bullet Unordered list Label secondary</li>
+            <li class="eic scb-col60">
+                <span class="ecn"> 
+                    <ul class="unol">
+                        <li><p>Bullet points</p></li>
+                        <li><p>Good for lists & stuff</p></li>
+                        <li><p>Useful for separating information</p></li>
+                        <li><p>Separating information </p></li> 
+                    </ul> 
+                </span> 
+            </li>
+        </ul>
+        <br>
+        <ul class="ett-blt ter">
+            <li class="scb-col40">Bullet Unordered list Label Tertiary</li>
+            <li class="eic scb-col60">
+                <span class="ecn"> 
+                    <ul class="unol">
+                        <li><p>Bullet points</p></li>
+                        <li><p>Good for lists & stuff</p></li>
+                        <li><p>Useful for separating information</p></li>
+                        <li><p>Separating information </p></li> 
+                    </ul> 
+                </span> 
+            </li>
+        </ul>	
+        <br>
+		<h4>Ordered List</h4>
+        <br>
+        <ul class="ett-blt pri">
+            <li class="scb-col40">Bullet Ordered list Label Primary</li>
+            <li class="eic scb-col60">
+                <span class="ecn"> 
+                    <ol class="ordl">
+                        <li><p>Ordered lists</p></li>
+                        <li><p>Have numbers on each element</p></li>
+                        <li><p>Used for lists of tasks</p></li>
+                        <li><p>Useful for separating information</p></li> 
+                    </ol> 
+                </span> 
+            </li>
+        </ul> 
+        <br>
+        <ul class="ett-blt sec">
+            <li class="scb-col40">Bullet Ordered list Label secondary</li>
+            <li class="eic scb-col60">
+                <span class="ecn"> 
+                    <ol class="ordl">
+                        <li><p>Ordered lists</p></li>
+                        <li><p>Have numbers on each element</p></li>
+                        <li><p>Used for lists of tasks</p></li>
+                        <li><p>Useful for separating information</p></li> 
+                    </ol> 
+                </span> 
+            </li>
+        </ul> 
+        <br>
+        <ul class="ett-blt ter">
+            <li class="scb-col40">Bullet Ordered list Label Tertiary</li>
+            <li class="eic scb-col60">
+                <span class="ecn"> 
+                    <ol class="ordl">
+                        <li><p>Ordered lists</p></li>
+                        <li><p>Have numbers on each element</p></li>
+                        <li><p>Used for lists of tasks</p></li>
+                        <li><p>Useful for separating information</p></li> 
+                    </ol> 
+                </span> 
+            </li>
+        </ul> 
+        <br>
+		<script type="text/javascript" charset="utf-8" src="scripts/jquery-3.1.1.min.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/jquery-ui.min.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/select2.min.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/appzillon.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/uiutils.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/swiper.min.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/tableHeadFixer.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/karthik-plugins.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/karthik-scripts.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/ripple.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/svgxuse.js"></script>
+
+		<script>
+		
+			$(document).ready(function() {
+				$('#SpriteSVG').load('svg-apz.svg');
+				$('#myButton').click(function(event) {
+		
+					// prevent page submit
+					event.preventDefault();
+					$("#SpriteSVG").text(" ")
+					// load the page into #SpriteSVG
+					$('#SpriteSVG').load('svg-apz.svg');
+		
+				});
+				$('#myButtonBCL').click(function(event) {
+		
+					// prevent page submit
+					event.preventDefault();
+					$("#SpriteSVG").text(" ")
+					// load the page into #SpriteSVG
+					$('#SpriteSVG').load('svg-bcl.svg');
+		
+				});
+				// load ripple effect for elements with class .rpl
+				$('.rpl, .ripples').on('click', ripplesEffect);
+		
+			});
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8" />
+		<title>Grid-Layout</title>
+		<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+		<script>
+			function swapStyleSheet(sheet) {
+				document.getElementById('pagestyle').setAttribute('href', sheet);
+			}
+		</script>
+		<link href="styles/themes/appzillon/css/local-base.css" rel="stylesheet" media="screen" />
+		<link id="pagestyle" href="styles/themes/appzillon/css/local-apz.css" rel="stylesheet" media="screen" />
+		<style>
+			.grb > div {outline:1px solid #ccc; background-color: #eee; text-align:center; }
+		</style>
+
+	</head>
+
+	<body class="fulsv" >
+	
+	<div class="pagebody">
+		<br> 
+        <select class="ett-slcn etb-slcn pri" style="width:20%;">
+            <option id="myButton" onclick="swapStyleSheet('styles/themes/appzillon/css/local-apz.css')">Appzillon</option>
+            <option id="myButtonBCL" onclick="swapStyleSheet('styles/themes/appzillon/css/local-bcl.css')">Barclays </option>
+            <option id="myButtonRolb" onclick="swapStyleSheet('styles/themes/appzillon/css/local-rolb.css')">Rolb</option>
+            <option id="myButtonMobile" onclick="swapStyleSheet('styles/themes/appzillon/css/local-mobile.css')">Mobile</option>
+            <option id="myButtonCiti" onclick="swapStyleSheet('styles/themes/appzillon/css/local-citi.css')">Citi</option>
+        </select> 
+		<div class="grb">
+			<div class="gcb-col1">Size1</div>
+			<div class="gcb-col1">Size1</div>
+			<div class="gcb-col1">Size1</div>
+			<div class="gcb-col1">Size1</div>
+			<div class="gcb-col1">Size1</div>
+			<div class="gcb-col1">Size1</div>	
+			<div class="gcb-col1">Size1</div>
+			<div class="gcb-col1">Size1</div>
+			<div class="gcb-col1">Size1</div>
+			<div class="gcb-col1">Size1</div>
+			<div class="gcb-col1">Size1</div>
+			<div class="gcb-col1">Size1</div>																		
+		</div>
+		<div class="grb">
+			<div class="gcb-col2">Size2</div>
+			<div class="gcb-col2">Size2</div>
+			<div class="gcb-col2">Size2</div>
+			<div class="gcb-col2">Size2</div>
+			<div class="gcb-col2">Size2</div>
+			<div class="gcb-col2">Size2</div>			
+		</div>
+		<div class="grb">
+			<div class="gcb-col3">Size3</div>
+			<div class="gcb-col3">Size3</div>
+			<div class="gcb-col3">Size3</div>
+			<div class="gcb-col3">Size3</div>
+		</div>	
+		<div class="grb">
+			<div class="gcb-col4">Size4</div>
+			<div class="gcb-col4">Size4</div>
+			<div class="gcb-col4">Size4</div>
+		</div>	
+		<div class="grb">
+			<div class="gcb-col5">Size5</div>
+			<div class="gcb-col5">Size5</div>
+			<div class="gcb-col2">Size2</div>
+		</div>	
+		<div class="grb">
+			<div class="gcb-col6">Size6</div>
+			<div class="gcb-col6">Size6</div>
+		</div>
+		<div class="grb">
+			<div class="gcb-col7">Size7</div>
+			<div class="gcb-col5">Size5</div>
+		</div>
+		<div class="grb">
+			<div class="gcb-col8">Size8</div>
+			<div class="gcb-col4">Size4</div>
+		</div>	
+		<div class="grb">
+			<div class="gcb-col9">Size9</div>
+			<div class="gcb-col3">Size3</div>
+		</div>	
+		<div class="grb">
+			<div class="gcb-col10">Size10</div>
+			<div class="gcb-col2">Size2</div>
+		</div>	
+		<div class="grb">
+			<div class="gcb-col11">Size11</div>
+			<div class="gcb-col1">Size1</div>
+		</div>	
+		<div class="grb">
+			<div class="gcb-col12">Size12</div>
+		</div>
+		<h3>Nested Columns</h3>
+		<div class="grb">
+			<div class="gcb-col6"
+				><div class="grb"
+					><div class="gcb-col9">Size9</div
+					><div class="gcb-col3">Size3</div
+				></div			
+			></div
+			><div class="gcb-col6">
+				<div class="grb">
+					<div class="gcb-col9">Size9</div>
+					<div class="gcb-col3">Size3</div>
+				</div>					
+			
+			</div>
+		</div>	
+		
+		<h3>Responsive Columns</h3>
+		<div class="grb">
+			<div class="gcb-sml12 gcb-med12 gcb-lar4 gcb-xxl8">
+				Responsive		
+			</div>
+			<div class="gcb-sml12 gcb-med12 gcb-lar8 gcb-xxl4">
+				Responsive		
+			</div>	
+		</div>		
+		
+
+		</div>																									
+
+										
+				
+
+
+		<script type="text/javascript" charset="utf-8" src="scripts/jquery-3.1.1.min.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/jquery-ui.min.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/select2.min.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/appzillon.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/uiutils.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/swiper.min.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/tableHeadFixer.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/karthik-plugins.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/karthik-scripts.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/ripple.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/svgxuse.js"></script>
+
+		<script>
+		
+			$(document).ready(function() {
+				$('#SpriteSVG').load('svg-apz.svg');
+				$('#myButton').click(function(event) {
+		
+					// prevent page submit
+					event.preventDefault();
+					$("#SpriteSVG").text(" ");
+					// load the page into #SpriteSVG
+					$('#SpriteSVG').load('svg-apz.svg');
+		
+				});
+				$('#myButtonBCL').click(function(event) {
+		
+					// prevent page submit
+					event.preventDefault();
+					$("#SpriteSVG").text(" ");
+					// load the page into #SpriteSVG
+					$('#SpriteSVG').load('svg-bcl.svg');
+		
+				});
+				// load ripple effect for elements with class .rpl
+				//$('.rpl, .ripples').on('click', ripplesEffect);
+		
+			});
+		</script>  
+	</body>
+
+</html>

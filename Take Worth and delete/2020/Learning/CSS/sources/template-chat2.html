@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Chat Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <script>
+        function swapStyleSheet(sheet) {
+            document.getElementById('pagestyle').setAttribute('href', sheet);
+        }
+    </script>
+    <link href="styles/themes/appzillon/css/local-base.css" rel="stylesheet" media="screen" />
+    <link id="pagestyle" href="styles/themes/appzillon/css/local-apz.css" rel="stylesheet" media="screen" />
+	<!--<style>
+	.plt-chat {}
+	.plt-chat.pst-chat.pri {}
+	.plt-chat.pst-chat.pri > .msg-scroll{display:block;width:100%;clear:both;padding: 15px;background:#f9f9f9}
+	.plt-chat.pst-chat.pri > .msg-scroll:after {display:table}
+	
+	.plt-chat.pst-chat.pri > .msg-scroll > .msg {display:block; width:100%; clear:both; border-radius:6px; background:#fff; box-shadow: 0 2px 3px rgba(0,0,0,.05); margin-bottom:15px}
+	.plt-chat.pst-chat.pri > .msg-scroll > .msg:after {display:table}	
+	.plt-chat.pst-chat.pri > .msg-scroll > .msg > .msg-data {padding:3px; font-size:80% }
+	.plt-chat.pst-chat.pri > .msg-scroll > .msg > .msg-data > .msg-time {color: #a8aab1; padding-left: 6px; padding-right:6px}
+	.plt-chat.pst-chat.pri > .msg-scroll > .msg > .msg-data > .msg-name {}	
+	.plt-chat.pst-chat.pri > .msg-scroll > .msg > .msg-data > .msg-dot {}	
+	.plt-chat.pst-chat.pri > .msg-scroll > .msg > .msg-content {padding:10px} 
+
+	.chat-msg {display:block; width:100%; clear:both;}
+	
+	</style>--> 
+</head> 
+<body> 
+    <span id="SpriteSVG"></span>
+        <button  class="ett-bttn ter med" id="myButton" onclick="swapStyleSheet('styles/themes/appzillon/css/local-apz.css')">Appzillon</button>
+        <button  class="ett-bttn ter med" id="myButtonBCL" onclick="swapStyleSheet('styles/themes/appzillon/css/local-bcl.css')">Barclays</button>
+    
+    <br>
+    <br>
+    <br>
+	<div class="plt-chat pst-chat pri">
+		<div class="msg-scroll">
+			<div class="msg">
+				<div class="msg-data">
+				  <span class="msg-time">10:10 AM, Today</span> 
+				  <span class="msg-name">Sathish</span> <i class="msg-dot inf"></i>
+				</div>
+				<div class="msg-content">
+				<p> Lorem lpsum </p>
+				</div>
+			</div>
+			<div class="msg">
+				<div class="msg-data">
+				  <span class="msg-time">10:11 AM, Today</span> 
+				  <span class="msg-name">Alexa</span> <i class="msg-dot inf"></i>
+				</div>
+				<div class="msg-content">
+				<p> Lorem lpsum </p>
+				</div>
+			</div>
+			<div class="msg">
+				<div class="msg-data">
+				  <span class="msg-time">10:11 AM, Today</span> 
+				  <span class="msg-name">Alexa</span> <i class="msg-dot inf"></i>
+				</div>
+				<div class="msg-content">
+				<p> Lorem lpsum </p>
+				</div>
+			</div>			
+		</div>
+		<div class="chat-msg">
+		<span class="srb">
+		<span>
+				<textarea name="chat-msg" id="chat-msg" placeholder="Type your message" rows="3" style="width:100%"></textarea>
+		</span>
+		<span style="width:100px" class="cen">
+				<button class="ett-bttn  tsp lar">Go</button>
+		</span>
+		</span>
+		</div>		
+		
+	</div>
+	
+    <br>
+    <br>
+    <br>	
+	
+	
+	
+
+    <script type="text/javascript" charset="utf-8" src="scripts/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="scripts/jquery-ui.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="scripts/select2.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="scripts/appzillon.js"></script>
+    <script type="text/javascript" charset="utf-8" src="scripts/uiutils.js"></script>
+    <script type="text/javascript" charset="utf-8" src="scripts/swiper.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="scripts/tableHeadFixer.js"></script>
+    <script type="text/javascript" charset="utf-8" src="scripts/karthik-plugins.js"></script>
+    <script type="text/javascript" charset="utf-8" src="scripts/karthik-scripts.js"></script>
+    <script type="text/javascript" charset="utf-8" src="scripts/jquery.slide-transition.js"></script>
+    <script type="text/javascript" charset="utf-8" src="scripts/ripple.js"></script>
+
+    <script type="text/javascript" charset="utf-8" src="scripts/alertify.js"></script>
+
+</body>
+
+</html>

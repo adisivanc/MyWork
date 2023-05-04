@@ -1,0 +1,6 @@
+Nagaraj Doubt
+
+1. 20j (number Validation)
+2. defaultValue vs value in the input
+3. Function Comp State implement possible?
+4. initial stage TOTAL by default

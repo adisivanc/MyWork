@@ -1,0 +1,17 @@
+h1{
+   color: #AF80ED;
+}
+
+h3{
+   color: #DE5E85;
+}
+
+.style { font-family: cursive; }
+
+h2.important {
+   @extend .style !optional;
+}
+
+
+.asss h3 {
+  color: #DE5E85; }

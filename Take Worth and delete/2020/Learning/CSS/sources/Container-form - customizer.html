@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8" />
+		<title>Customizer</title>
+		<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+		<script>
+			function swapStyleSheet(sheet) {
+				document.getElementById('pagestyle').setAttribute('href', sheet);
+			}
+		</script>
+		<link href="styles/themes/appzillon/css/local-base.css" rel="stylesheet" media="screen" />
+		<link id="pagestyle" href="styles/themes/appzillon/css/local-apz.css" rel="stylesheet" media="screen" />
+
+	</head>
+
+	<body class="fulsv pri">
+		<span id="SpriteSVG"></span>
+		 <br> 
+        <select class="ett-slcn etb-slcn pri" style="width:20%;">
+            <option id="myButton" onclick="swapStyleSheet('styles/themes/appzillon/css/local-apz.css')">Appzillon</option>
+            <option id="myButtonBCL" onclick="swapStyleSheet('styles/themes/appzillon/css/local-bcl.css')">Barclays </option>
+            <option id="myButtonRolb" onclick="swapStyleSheet('styles/themes/appzillon/css/local-rolb.css')">Rolb</option>
+            <option id="myButtonMobile" onclick="swapStyleSheet('styles/themes/appzillon/css/local-mobile.css')">Mobile</option>
+            <option id="myButtonCiti" onclick="swapStyleSheet('styles/themes/appzillon/css/local-citi.css')">Citi</option>
+        </select> 
+
+		<br>
+		<br>
+		<h1>Vertical Layouts</h1>
+
+
+   <section class="pagebody">  
+    <div class="plt-simp">
+        <div class="pst-simp pri"> 
+		<div id="ct1" class="crt-form ver pri ctz"><!--custominzer main class-->
+            <ul class="ttl">
+            	<li class="ttl-ctr">
+            		<ul class="ttv">
+		                <li class="icn">
+		                    <svg class="ett-icon icon-list-alt px34">
+		                        <use xlink:href="#icon-list-alt"></use>
+		                    </svg>
+		                </li>
+		                <li class="lbl">
+		                    <h4>Form - Vertical Primary</h4>
+		                </li>
+                	</ul>
+                </li>
+                <li class="pgn-ctr">
+	               <ul class="pgn">
+	                    <li class="pnx"> 
+	                        <button class="ett-bttn tsp sml"  aria-label="Previous page"><svg class="icon icon-chevron-left px16"><use xlink:href="#icon-chevron-left"></use></svg></button> 
+	                    </li>
+	                    <li class="pcl">
+	                      <input type="text" class="pageno" value="1">
+	                    </li>	
+	                    <li class="ptx" > 
+	                        <span>/&nbsp;</span><span>3</span> 
+	                    </li>	 
+	                    <li class="pnx"> 
+	                        <button class="ett-bttn tsp sml"  aria-label="Next page"><svg class="icon icon-chevron-right px16"><use xlink:href="#icon-chevron-right"></use></svg></button>
+	                    </li> 
+	                </ul>                 	
+                </li>
+            </ul>
+			<span class="srb wrapped pri"><!-- wrapped class is required for responsive columns -->
+				<span class="scb-sml100 scb-lar50 pri">
+					<ul class="eoc wrapped srb pri"><!-- wrapped class is required for vertical orientation --> 
+						<li class="scb-col40">
+							<label class="flb req icl">
+								<svg class="ett-icon icon-list-alt px20"> <!-- icon selection, size, appearance, position(left and right) & semantics selection are required-->
+		                        <use xlink:href="#icon-list-alt"/>
+		                    	</svg>
+		                    Icon left of Label</label>
+						</li>
+						<li class="eic scb-col60">
+							<span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50">
+								<input id="input4gx" name="test1" class="ett-inpt pri sml etw-100" title="Editable input" value="Primary Input" placeholder=" Value" type="text">
+								<span class="htx">Hint for the input</span>
+								<span class="vtx">Validation text</span>
+							</span>
+						</li>
+					</ul>
+					<ul class="eoc wrapped srb pri"><!-- wrapped class is required for vertical orientation -->
+						<li class="scb-col40">
+							<label class="flb icr">Icon right of Label
+								<svg class="ett-icon icon-list-alt px20"> <!-- icon selection, size, appearance, position(left and right) & semantics selection are required-->
+		                        <use xlink:href="#icon-list-alt"/>
+		                    	</svg>								
+								</label>
+						</li>
+						<li class="eic scb-col60">
+							<span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50">
+							<input id="input4fx" name="test1" class="ett-inpt sec etw-100" title="Editable input" value="Secondary Input" placeholder=" Value" type="text">
+							</span>
+						</li>
+					</ul>					
+				</span>
+				<span class="scb-sml100 scb-lar50">
+					<ul class="eoc wrapped srb pri"><!-- wrapped class is required for vertical orientation -->
+						<li class="scb-col40">
+							<label class="flb">Element3 Label</label>
+						</li>
+						<li class="eic scb-col60">
+							<span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50">
+							<input id="input4x" name="test1" class="ett-inpt ter etw-100" title="Editable input" value="Tertiary Input" placeholder=" Value" type="text">
+							</span>
+						</li>
+					</ul>
+				</span>
+			</span>
+            <span id="ct1r" class="ctzr"> 
+                <button class="ett-bttn tsp sml">
+                    <svg class="ett-icon icon-close px12"><use xlink:href="#icon-close"></use></svg>
+                </button>
+            </span>
+		</div> 
+		<br><br> 
+		 </div>
+    </div>
+       
+       <div class="plt-simp">
+        <div class="pst-simp ter">
+		<h1>Horizontal Layouts</h1> 
+		<div class="crt-form hor pri">
+            <ul class="ttl">
+                <li class="ttl-ctr">
+            		<ul class="ttv">
+		                <li class="icn">
+		                    <svg class="ett-icon icon-list-alt px34">
+                                <use xlink:href="#icon-list-alt"></use>
+                            </svg> 
+		                </li>
+		                <li class="lbl">
+		                    <h4>Form - Horizontal Primary</h4>
+		                </li>
+                	</ul>
+                </li>
+                
+                <li class="pgn-ctr">
+	               <ul class="pgn">
+	                    <li class="pnx"> 
+	                        <button class="ett-bttn tsp sml"  aria-label="Previous page"><svg class="icon icon-chevron-left px16"><use xlink:href="#icon-chevron-left"></use></svg></button> 
+	                    </li>
+	                    <li class="pcl">
+	                      <input type="text" class="pageno" value="1">
+	                    </li>	
+	                    <li class="ptx" > 
+	                        <span>/&nbsp;</span><span>3</span> 
+	                    </li>	 
+	                    <li class="pnx"> 
+	                        <button class="ett-bttn tsp sml"  aria-label="Next page"><svg class="icon icon-chevron-right px16"><use xlink:href="#icon-chevron-right"></use></svg></button>
+	                    </li> 
+	                </ul>                 	
+                </li>
+            </ul>
+			<span class="srb wrapped"><!-- wrapped class is required for responsive columns -->
+				<span id="ct2" class="scb-sml100 scb-lar50 ctz">
+					<ul class="eoc wrapped srb pri"><!-- wrapped class is required for vertical orientation -->
+						<li class="scb-col40">
+							<label class="flb req">Element1 Label(mandatory)</label>
+						</li>
+						<li class="eic scb-col60">
+							<span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50">
+								<input id="input4gx" name="test1" class="ett-inpt pri sml etw-100" title="Editable input" value="Primary Input" placeholder=" Value" type="text">
+								<span class="htx">Hint for the input</span>
+								<span class="vtx">Validation text</span>
+							</span>
+						</li>
+					</ul>
+					<ul class="eoc wrapped srb pri"><!-- wrapped class is required for vertical orientation -->
+						<li class="scb-sml100 scb-med40">
+							<label class="flb">Element2 Label</label>
+						</li>
+						<li class="eic scb-sml100 scb-med60">
+							<span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50">
+							<input id="input4fx" name="test1" class="ett-inpt sec etw-100" title="Editable input" value="Secondary Input" placeholder=" Value" type="text">
+							</span>
+						</li>
+					</ul>
+                    <span id="ct2r" class="ctzr"> 
+                        <button class="ett-bttn tsp sml">
+                            <svg class="ett-icon icon-close px12"><use xlink:href="#icon-close"></use></svg>
+                        </button>
+                    </span>
+				</span>
+				 
+			</span>	
+            <span class="srb wrapped"><!-- wrapped class is required for responsive columns --> 
+				<span id="ct3" class="scb-sml100 scb-lar50 ctz"><!--custominzer main class-->
+					<ul class="eoc wrapped srb pri"><!-- wrapped class is required for vertical orientation -->
+						<li class="sscb-sml100 scb-med40">
+							<label class="flb">Element3 Label</label>
+						</li>
+						<li class="eic scb-sml100 scb-med60">
+							<span class="ecn etw-sml100 etw-med60 etw-lar50 etw-xxl50">
+							<input id="input4x" name="test1" class="ett-inpt ter etw-100" title="Editable input" value="Tertiary Input" placeholder=" Value" type="text">
+							</span>
+						</li>
+					</ul>
+                    <span id="ct3r" class="ctzr"> 
+                        <button class="ett-bttn tsp sml">
+                            <svg class="ett-icon icon-close px12"><use xlink:href="#icon-close"></use></svg>
+                        </button>
+                    </span>
+				</span>
+			</span>	
+			
+		</div> 
+           </div>
+       </div>
+           		 
+
+		</section> 
+		<script type="text/javascript" charset="utf-8" src="scripts/jquery-3.1.1.min.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/jquery-ui.min.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/select2.min.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/appzillon.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/uiutils.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/swiper.min.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/tableHeadFixer.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/karthik-plugins.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/karthik-scripts.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/jquery.slide-transition.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/ripple.js"></script>
+
+		<script type="text/javascript">
+			$(document).ready(function() {
+				apz = new Apz();
+				apz.appId = "testing";
+				apz.deviceOs = "APPZILLONSIMULATOR";
+				//apz.loadProject();
+			});
+		</script>
+         <script>
+        $(document).ready(function () {
+            function updateText(event) {
+                var input = $(this);
+                setTimeout(function () {
+                    var val = input.val();
+                    if (val != "")
+                        input.parent().parent().addClass("flbl-float");
+                    else
+                        input.parent().parent().removeClass("flbl-float");
+                }, 1)
+            }
+            $(".flbl input").keydown(updateText);
+            $(".flbl input").change(updateText);
+            
+            function updateTextArea(event) {
+                var textarea = $(this);
+                setTimeout(function () {
+                    var val = textarea.val();
+                    if (val != "")
+                        textarea.parent().parent().addClass("flbl-float");
+                    else
+                        textarea.parent().parent().removeClass("flbl-float");
+                }, 1)
+            }
+            $(".flbl textarea").keydown(updateTextArea);
+            $(".flbl textarea").change(updateTextArea);
+            var input = $(".flbl input, .flbl textarea");
+                            input.each(function( index ) {
+                                $(this).trigger("change");
+                            });
+        }); 
+    </script>
+        <script>
+            $(document).ready(function(){
+                $("#ct1r").click(function(){ 
+                          $("#ct1").fadeOut();
+                        });
+                });
+        </script>
+        <script>
+            $(document).ready(function(){
+                $("#ct2r").click(function(){ 
+                          $("#ct2").fadeOut();
+                        });
+                });
+        </script>
+        <script>
+            $(document).ready(function(){
+                $("#ct3r").click(function(){ 
+                          $("#ct3").fadeOut();
+                        });
+                });
+        </script>
+		<script>
+			$(document).ready(function() {
+				$('#SpriteSVG').load('svg-apz.svg');
+				$('#myButton').click(function(event) {
+
+					// prevent page submit
+					event.preventDefault();
+					$("#SpriteSVG").text(" ");
+					// load the page into #SpriteSVG
+					$('#SpriteSVG').load('svg-apz.svg');
+
+				});
+				$('#myButtonBCL').click(function(event) {
+
+					// prevent page submit
+					event.preventDefault();
+					$("#SpriteSVG").text(" ");
+					// load the page into #SpriteSVG
+					$('#SpriteSVG').load('svg-bcl.svg');
+
+				});
+				// load ripple effect for elements with class .rpl
+				//$('.rpl, .ripples').on('click', ripplesEffect);
+
+			});
+		</script>
+
+	</body>
+
+</html>

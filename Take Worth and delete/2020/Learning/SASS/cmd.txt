@@ -1,0 +1,1 @@
+sass --watch C:\Users\adisivan.channasamy\Desktop\SASS\style.scss:C:\Users\adisivan.channasamy\Desktop\SASS\style.css

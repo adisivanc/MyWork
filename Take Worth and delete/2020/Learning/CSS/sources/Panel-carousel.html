@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Carousel</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <script>
+        function swapStyleSheet(sheet) {
+            document.getElementById('pagestyle').setAttribute('href', sheet);
+        }
+    </script>
+    <link href="styles/themes/appzillon/css/local-base.css" rel="stylesheet" media="screen" />
+    <link id="pagestyle" href="styles/themes/appzillon/css/local-apz.css" rel="stylesheet" media="screen" />
+
+</head>
+
+<body class="fulsv pri">
+    <span id="SpriteSVG"></span>
+         <br> 
+        <select class="ett-slcn etb-slcn pri" style="width:20%;">
+            <option id="myButton" onclick="swapStyleSheet('styles/themes/appzillon/css/local-apz.css')">Appzillon</option>
+            <option id="myButtonBCL" onclick="swapStyleSheet('styles/themes/appzillon/css/local-bcl.css')">Barclays </option>
+            <option id="myButtonRolb" onclick="swapStyleSheet('styles/themes/appzillon/css/local-rolb.css')">Rolb</option>
+            <option id="myButtonMobile" onclick="swapStyleSheet('styles/themes/appzillon/css/local-mobile.css')">Mobile</option>
+            <option id="myButtonCiti" onclick="swapStyleSheet('styles/themes/appzillon/css/local-citi.css')">Citi</option>
+        </select> 
+    <br>
+    <br>
+    <section class="pagebody">  
+        <div class="plt-caro pri"> 
+            <ul class="ttl">
+                    <li class="icn">
+                        <svg class="ett-icon icon-list px24">
+                            <use xlink:href="#icon-list"></use>
+                        </svg>
+                    </li>
+                    <li class="lbl">
+                        <h4>Carousel Title </h4>
+                    </li>
+                </ul>
+            <div class="swiper-container">
+                <ul class="swiper-wrapper">
+                    <li class="pst-caro swiper-slide">
+                        <br>
+                        <br>Slide1
+                        <br>
+                        <br>
+                    </li>
+                    <li class="pst-caro swiper-slide">Slide2</li>
+                    <li class="pst-caro swiper-slide">Slide3</li>
+                </ul>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next">
+                    <button class="ett-bttn tsp med"><svg class="ett-icon icon-arrow-right px24"><use xlink:href="#icon-arrow-right"></use></svg></button>
+                </div>
+                <div class="swiper-button-prev">
+                    <button class="ett-bttn tsp med"><svg class="ett-icon icon-arrow-left px24"><use xlink:href="#icon-arrow-left"></use></svg></button>
+                </div>
+            </div>
+        </div> 
+        <br>
+        <div class="plt-caro sec">
+            <ul class=" ttl">
+                    <li class="icn">
+                        <svg class="ett-icon icon-list px24">
+                            <use xlink:href="#icon-list"></use>
+                        </svg>
+                    </li>
+                    <li class="lbl">
+                        <h4>Carousel Title </h4>
+                    </li>
+                </ul>
+            <div class="swiper-container"> 
+                <ul class="swiper-wrapper">
+                    <li class="pst-caro swiper-slide"> <img src="styles/themes/appzillon/img/cf.svg">
+                         
+                    </li>
+                    <li class="pst-caro swiper-slide">
+                        <img style="height:250px " src="styles/themes/appzillon/img/bg1.png">
+                    
+                    </li>
+                    <li class="pst-caro swiper-slide"><img src="styles/themes/appzillon/img/Business.jpg"></li>
+                </ul>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next">
+                    <button class="ett-bttn tsp med"><svg class="ett-icon icon-arrow-right px24"><use xlink:href="#icon-arrow-right"></use></svg></button>
+                </div>
+                <div class="swiper-button-prev">
+                    <button class="ett-bttn tsp med"><svg class="ett-icon icon-arrow-left px24"><use xlink:href="#icon-arrow-left"></use></svg></button>
+                </div>
+            </div>
+        </div> 
+        <br>
+        <div class="plt-caro ter">
+            <ul class="ttl">
+                    <li class="icn">
+                        <svg class="ett-icon icon-list px24">
+                            <use xlink:href="#icon-list"></use>
+                        </svg>
+                    </li>
+                    <li class="lbl">
+                        <h4>Carousel Title </h4>
+                    </li>
+                </ul>
+            <div class="swiper-container"> 
+                <ul class="swiper-wrapper">
+                    <li class="pst-caro swiper-slide">
+                        <br>
+                        <br>Slide1
+                        <br>
+                        <br>
+                    </li>
+                    <li class="pst-caro swiper-slide">Slide2</li>
+                    <li class="pst-caro swiper-slide">Slide3</li>
+                </ul>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next">
+                    <button class="ett-bttn tsp med"><svg class="ett-icon icon-arrow-right px24"><use xlink:href="#icon-arrow-right"></use></svg></button>
+                </div>
+                <div class="swiper-button-prev">
+                    <button class="ett-bttn tsp med"><svg class="ett-icon icon-arrow-left px24"><use xlink:href="#icon-arrow-left"></use></svg></button>
+                </div>
+            </div>
+        </div> 
+    </section>
+    <script type="text/javascript" charset="utf-8" src="scripts/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="scripts/jquery-ui.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="scripts/select2.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="scripts/appzillon.js"></script>
+    <script type="text/javascript" charset="utf-8" src="scripts/uiutils.js"></script>
+    <script type="text/javascript" charset="utf-8" src="scripts/swiper.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="scripts/tableHeadFixer.js"></script>
+    <script type="text/javascript" charset="utf-8" src="scripts/karthik-plugins.js"></script>
+    <script type="text/javascript" charset="utf-8" src="scripts/karthik-scripts.js"></script>
+    <script type="text/javascript" charset="utf-8" src="scripts/jquery.slide-transition.js"></script>
+    <script type="text/javascript" charset="utf-8" src="scripts/ripple.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            apz = new Apz();
+            apz.appId = "testing";
+            apz.deviceOs = "APPZILLONSIMULATOR";
+            //apz.loadProject();
+        });
+    </script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            pagination: '.swiper-pagination',
+            nextButton: '.swiper-button-next',
+            prevButton: '.swiper-button-prev',
+            slidesPerView: 1,
+            paginationClickable: true,
+            spaceBetween: 30,
+            loop: true,
+            autoplay: false,
+            autoHeight: false,
+        });
+    </script> 
+		<script>
+		
+			$(document).ready(function() {
+				$('#SpriteSVG').load('svg-apz.svg');
+				$('#myButton').click(function(event) {
+		
+					// prevent page submit
+					event.preventDefault();
+					$("#SpriteSVG").text(" ");
+					// load the page into #SpriteSVG
+					$('#SpriteSVG').load('svg-apz.svg');
+		
+				});
+				$('#myButtonBCL').click(function(event) {
+		
+					// prevent page submit
+					event.preventDefault();
+					$("#SpriteSVG").text(" ");
+					// load the page into #SpriteSVG
+					$('#SpriteSVG').load('svg-bcl.svg');
+		
+				});
+				// load ripple effect for elements with class .rpl
+				//$('.rpl, .ripples').on('click', ripplesEffect);
+		
+			});
+		</script> 
+
+
+</body>
+
+</html>

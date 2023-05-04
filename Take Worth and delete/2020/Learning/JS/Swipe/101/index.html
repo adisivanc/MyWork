@@ -1,0 +1,217 @@
+<html>
+<head>
+<title></title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="CSS/style.css" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
+
+</head>
+<body class="" >
+<h1>Interactive Panel Elements</h1>
+
+<div class="panel">
+	<div class="panel-element">
+		<div class="element-actions">
+			<button class="btn btn-action btn-hide"><i class="fa fa-ban"></i></button>
+			<button class="btn btn-action btn-heart"><i class="fa fa-heart-o"></i></button>
+		</div>
+		
+		<div class="element-content">
+			<button class="btn btn-more">
+				<i class="fa fa-ellipsis-h icon-closed"></i>
+				<i class="fa fa-times icon-open"></i>
+				<i class="fa fa-heart-o icon-hearted"></i>
+			</button>
+			
+			<div class="content-post">
+				<div class="post-avatar"></div>
+
+				<div class="post-content">
+					<span class="post-title">Lorem Ipsum Dolor Sit</span>
+					<p class="post-body">Amet consectetur adipiscing elit vestibulum lacinia nibh id sem.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="panel-element">
+		<div class="element-actions">
+			<button class="btn btn-action btn-hide"><i class="fa fa-ban"></i></button>
+			<button class="btn btn-action btn-heart"><i class="fa fa-heart-o"></i></button>
+		</div>
+		
+		<div class="element-content">
+			<button class="btn btn-more">
+				<i class="fa fa-ellipsis-h icon-closed"></i>
+				<i class="fa fa-times icon-open"></i>
+				<i class="fa fa-heart-o icon-hearted"></i>
+			</button>
+			
+			<div class="content-post">
+				<div class="post-avatar"></div>
+
+				<div class="post-content">
+					<span class="post-title">Nullam egestas neque et</span>
+					<p class="post-body">orci lacinia finibus. Nunc rutrum urna at libero pretium, vel gravid.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="panel-element">
+		<div class="element-actions">
+			<button class="btn btn-action btn-hide"><i class="fa fa-ban"></i></button>
+			<button class="btn btn-action btn-heart"><i class="fa fa-heart-o"></i></button>
+		</div>
+		
+		<div class="element-content">
+			<button class="btn btn-more">
+				<i class="fa fa-ellipsis-h icon-closed"></i>
+				<i class="fa fa-times icon-open"></i>
+				<i class="fa fa-heart-o icon-hearted"></i>
+			</button>
+			
+			<div class="content-post">
+				<div class="post-avatar"></div>
+
+				<div class="post-content">
+					<span class="post-title">Lorem Ipsum Dolor Sit</span>
+					<p class="post-body">Amet consectetur adipiscing elit vestibulum lacinia nibh id sem.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="panel-element">
+		<div class="element-actions">
+			<button class="btn btn-action btn-hide"><i class="fa fa-ban"></i></button>
+			<button class="btn btn-action btn-heart"><i class="fa fa-heart-o"></i></button>
+		</div>
+		
+		<div class="element-content">
+			<button class="btn btn-more">
+				<i class="fa fa-ellipsis-h icon-closed"></i>
+				<i class="fa fa-times icon-open"></i>
+				<i class="fa fa-heart-o icon-hearted"></i>
+			</button>
+			
+			<div class="content-post">
+				<div class="post-avatar"></div>
+
+				<div class="post-content">
+					<span class="post-title">Nullam egestas neque et</span>
+					<p class="post-body">orci lacinia finibus. Nunc rutrum urna at libero pretium, vel gravid.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="panel-element">
+		<div class="element-actions">
+			<button class="btn btn-action btn-hide"><i class="fa fa-ban"></i></button>
+			<button class="btn btn-action btn-heart"><i class="fa fa-heart-o"></i></button>
+		</div>
+		
+		<div class="element-content">
+			<button class="btn btn-more">
+				<i class="fa fa-ellipsis-h icon-closed"></i>
+				<i class="fa fa-times icon-open"></i>
+				<i class="fa fa-heart-o icon-hearted"></i>
+			</button>
+			
+			<div class="content-post">
+				<div class="post-avatar"></div>
+
+				<div class="post-content">
+					<span class="post-title">Lorem Ipsum Dolor Sit</span>
+					<p class="post-body">Amet consectetur adipiscing elit vestibulum lacinia nibh id sem.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript" charset="utf-8"  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script type="text/javascript" charset="utf-8"  src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.4/hammer.min.js"></script>
+<script type="text/javascript" charset="utf-8"  src="https://cdn.rawgit.com/hammerjs/jquery.hammer.js/master/jquery.hammer.js"></script>
+
+<script type="text/javascript">
+
+toggleElement = ($el, type) ->
+
+	if type?
+
+		if type is  'open'
+			$el.addClass 'panel-element-open'
+			$el.siblings('.panel-element').removeClass 'panel-element-open'
+
+		else if type is 'close'
+			$el.removeClass 'panel-element-open'
+
+	else
+
+		if $el.hasClass 'panel-element-open'
+			toggleElement $el, 'close'
+		else
+			toggleElement $el, 'open'
+
+	return null
+
+$(document).ready ->
+
+	$('.btn').click ->
+
+		$parent = $(@).parents '.panel-element'
+
+		if $(@).hasClass 'btn-heart'
+			
+			if $parent.hasClass 'panel-element-hearted'
+					$parent.removeClass 'panel-element-hearted'
+				else
+					$parent.addClass 'panel-element-hearted'
+					toggleElement $parent, 'close'
+
+		else if $(@).hasClass 'btn-hide'
+			toggleElement $parent, 'close'
+			$parent.delay(200).fadeOut(300)
+
+		else if $(@).hasClass 'btn-more'
+			if not hammertime
+				toggleElement $parent
+
+	if $(window).width() < 800
+
+		# Mobile swiping with Hammer.js
+		# https://hammerjs.github.io
+		hammertime = $('.panel-element .element-content').hammer()
+
+		hammertime.on 'swipeleft swiperight tap', (e) ->
+
+			$parent = $(e.currentTarget).parent()
+
+			if e.type is 'tap'
+				toggleElement $parent
+
+			else if e.type is 'swipeleft'
+
+				if not $parent.hasClass 'panel-element-open'
+					toggleElement $parent, 'open'
+			else
+
+				if $parent.hasClass 'panel-element-open'
+					toggleElement $parent, 'close'
+					
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8" />
+		<title>Portion-Modal</title>
+		<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+		<script>
+			function swapStyleSheet(sheet) {
+				document.getElementById('pagestyle').setAttribute('href', sheet);
+			}
+		</script>
+		<link href="styles/themes/appzillon/css/local-base.css" rel="stylesheet" media="screen" />
+		<link id="pagestyle" href="styles/themes/appzillon/css/local-apz.css" rel="stylesheet" media="screen" />
+        <style>
+            /*******************************
+* MODAL AS LEFT/RIGHT SIDEBAR
+* Add "left" or "right" in modal parent div, after class="modal".
+* Get free snippets on bootpen.com
+*******************************/
+	.modal.left .modal-dialog,
+	.modal.right .modal-dialog {
+		position: fixed;
+		margin: auto;
+		width: 320px;
+		height: 100%;
+		-webkit-transform: translate3d(0%, 0, 0);
+		    -ms-transform: translate3d(0%, 0, 0);
+		     -o-transform: translate3d(0%, 0, 0);
+		        transform: translate3d(0%, 0, 0);
+	}
+
+	.modal.left .modal-content,
+	.modal.right .modal-content {
+		height: 100%;
+		overflow-y: auto;
+	}
+	
+	.modal.left .modal-body,
+	.modal.right .modal-body {
+		padding: 15px 15px 80px;
+	}
+
+/*Left*/
+	.modal.left.fade .modal-dialog{
+		left: -320px;
+		-webkit-transition: opacity 0.3s linear, left 0.3s ease-out;
+		   -moz-transition: opacity 0.3s linear, left 0.3s ease-out;
+		     -o-transition: opacity 0.3s linear, left 0.3s ease-out;
+		        transition: opacity 0.3s linear, left 0.3s ease-out;
+	}
+	
+	.modal.left.fade.in .modal-dialog{
+		left: 0;
+	}
+        
+/*Right*/
+	.modal.right.fade .modal-dialog {
+		right: -320px;
+		-webkit-transition: opacity 0.3s linear, right 0.3s ease-out;
+		   -moz-transition: opacity 0.3s linear, right 0.3s ease-out;
+		     -o-transition: opacity 0.3s linear, right 0.3s ease-out;
+		        transition: opacity 0.3s linear, right 0.3s ease-out;
+	}
+	
+	.modal.right.fade.in .modal-dialog {
+		right: 0;
+	}
+
+/* ----- MODAL STYLE ----- */
+	.modal-content {
+		border-radius: 0;
+		border: none;
+	}
+
+	.modal-header {
+		border-bottom-color: #EEEEEE;
+		background-color: #FAFAFA;
+	}
+
+ 
+
+ 
+        </style>
+	</head>
+
+	<body class="sec" > 
+		<span id="SpriteSVG"></span>
+		<button class="ett-bttn ter med" id="myButton" onclick="swapStyleSheet('styles/themes/appzillon/css/local-apz.css')">Appzillon</button>
+		<button class="ett-bttn ter med" id="myButtonBCL" onclick="swapStyleSheet('styles/themes/appzillon/css/local-bcl.css')">	Barclays</button>
+
+		<br>
+		<br>
+		<br>
+		<button data-toggle="modal" class="ett-bttn ter med" data-target="#myModal">Open Modal Left</button> 
+		<div class="modal fade left srb" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-window left scb-sml100 scb-med90 scb-lar70 scb-xxl50">
+				<ul class="modal-header">
+					<li>
+						<h1>Modal title</h1>
+					</li>
+					<li>
+						<button data-dismiss="modal" aria-label="Close" class="close ett-bttn tsp med">
+							<svg class="ett-icon icon-remove px24">
+								<use xlink:href="#icon-remove"></use>
+							</svg>
+						</button>
+					</li>
+				</ul>
+				<div class="modal-cnt">
+					content
+				</div>
+				<ul class="modal-footer">
+					<li>
+						<button data-dismiss="modal" class="ett-bttn pri inf med ">
+							Close
+						</button>
+						<button class="ett-bttn pri med ">
+							Save changes
+						</button>
+					</li>
+				</ul>
+			</div>
+		</div>
+        
+        <button data-toggle="modal" class="ett-bttn ter med" data-target="#myModal1">Open Modal Right</button> 
+		<div class="modal fade right srb" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-window right scb-sml100 scb-med90 scb-lar70 scb-xxl50">
+				<ul class="modal-header">
+					<li>
+						<h1>Modal title</h1>
+					</li>
+					<li>
+						<button data-dismiss="modal" aria-label="Close" class="close ett-bttn tsp med">
+							<svg class="ett-icon icon-remove px24">
+								<use xlink:href="#icon-remove"></use>
+							</svg>
+						</button>
+					</li>
+				</ul>
+				<div class="modal-cnt">
+					content
+				</div>
+				<ul class="modal-footer">
+					<li>
+						<button data-dismiss="modal" class="ett-bttn pri inf med ">
+							Close
+						</button>
+						<button class="ett-bttn pri med ">
+							Save changes
+						</button>
+					</li>
+				</ul>
+			</div>
+		</div>
+        
+        
+        
+        
+
+		<script type="text/javascript" charset="utf-8" src="scripts/jquery-3.1.1.min.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/jquery-ui.min.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/select2.min.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/appzillon.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/uiutils.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/swiper.min.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/tableHeadFixer.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/karthik-plugins.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/karthik-scripts.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/jquery.slide-transition.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/ripple.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				apz = new Apz();
+				apz.appId = "testing";
+				apz.deviceOs = "APPZILLONSIMULATOR";
+				//apz.loadProject();
+			});
+		</script>
+
+		<script>
+			makeDraggable = function(element) {
+				// Move the element by the amount of change in the mouse position
+				var parentElement = element.parent();
+				var move = function(event) {
+					console.log("IN" + element.data('mouseMove'))
+					if (element.data('mouseMove')) {
+						var changeX = event.clientX - parentElement.data('mouseX');
+						var changeY = event.clientY - parentElement.data('mouseY');
+
+						var newX = parseInt(parentElement.css('left')) + changeX;
+						var newY = parseInt(parentElement.css('top')) + changeY;
+						parentElement.css('left', newX);
+						parentElement.css('top', newY);
+
+						parentElement.data('mouseX', event.clientX);
+						parentElement.data('mouseY', event.clientY);
+					}
+				}
+
+				element.mousedown(function(event) {
+					element.data('mouseMove', true);
+					parentElement.data('mouseX', event.clientX);
+					parentElement.data('mouseY', event.clientY);
+				});
+
+				element.parents(':last').mouseup(function() {
+					element.data('mouseMove', false);
+				});
+
+				element.mouseout(move);
+				element.mousemove(move);
+			}
+		</script>
+		<script type="text/javascript">
+			makeDraggable($('.modal-header'));
+		</script>
+
+		<script>
+		
+			$(document).ready(function() {
+				$('#SpriteSVG').load('svg-apz.svg');
+				$('#myButton').click(function(event) {
+		
+					// prevent page submit
+					event.preventDefault();
+					$("#SpriteSVG").text(" ");
+					// load the page into #SpriteSVG
+					$('#SpriteSVG').load('svg-apz.svg');
+		
+				});
+				$('#myButtonBCL').click(function(event) {
+		
+					// prevent page submit
+					event.preventDefault();
+					$("#SpriteSVG").text(" ");
+					// load the page into #SpriteSVG
+					$('#SpriteSVG').load('svg-bcl.svg');
+		
+				});
+				// load ripple effect for elements with class .rpl
+				//$('.rpl, .ripples').on('click', ripplesEffect);
+		
+			});
+		</script> 
+	</body>
+</html>

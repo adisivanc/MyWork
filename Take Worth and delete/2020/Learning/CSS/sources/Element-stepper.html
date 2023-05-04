@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8" />
+		<title>Stepper</title>
+		<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+		<script>
+			function swapStyleSheet(sheet) {
+				document.getElementById('pagestyle').setAttribute('href', sheet);
+			}
+		</script>
+		<link href="styles/themes/appzillon/css/local-base.css" rel="stylesheet" media="screen" />
+		<link id="pagestyle" href="styles/themes/appzillon/css/local-apz.css" rel="stylesheet" media="screen" />
+
+	</head>
+	<body>
+        <span id="SpriteSVG"></span>
+       <br> 
+        <select class="ett-slcn etb-slcn pri" style="width:20%;">
+            <option id="myButton" onclick="swapStyleSheet('styles/themes/appzillon/css/local-apz.css')">Appzillon</option>
+            <option id="myButtonBCL" onclick="swapStyleSheet('styles/themes/appzillon/css/local-bcl.css')">Barclays </option>
+            <option id="myButtonRolb" onclick="swapStyleSheet('styles/themes/appzillon/css/local-rolb.css')">Rolb</option>
+            <option id="myButtonMobile" onclick="swapStyleSheet('styles/themes/appzillon/css/local-mobile.css')">Mobile</option>
+            <option id="myButtonCiti" onclick="swapStyleSheet('styles/themes/appzillon/css/local-citi.css')">Citi</option>
+        </select> 
+        <br>
+        <br>
+        <h3>Primary stepper</h3> 
+        <ul class="ett-stpr etb-stpr pri">
+            <li >
+                <button  class="ett-bttn med pri" onclick="apz.handleStepperclick(this);" aria-label="Minus"><svg class="ett-icon icon-minus px24"><use xlink:href="#icon-minus"></use></svg></button>
+            </li>
+            <li>
+                <input type="text" id="input3" class="scb-col100 ett-inpt pri" placeholder="Value3" />
+            </li>
+            <li>
+                <button class="ett-bttn med pri stpr-add " onclick="apz.handleStepperclick(this);" aria-label="Plus"><svg class="ett-icon icon-plus px24"><use xlink:href="#icon-plus"></use></svg></button>
+            </li> 
+        </ul>  
+        <span class="htx">Hint for Stepper</span>    
+        <br>
+        <br>
+        <h3>secondary stepper</h3> 
+        <ul class=" ett-stpr etb-stpr sec ">
+            <li>
+                <button   class="ett-bttn med sec " onclick="apz.handleStepperclick(this);" aria-label="Minus"><svg class="ett-icon icon-minus px24"><use xlink:href="#icon-minus"></use></svg></button>
+            </li>
+            <li>
+                <input type="text" id="input3" class="ett-inpt sec scb-col100" placeholder="Value3" />
+            </li>
+            <li>
+                <button class="ett-bttn med sec stpr-add " onclick="apz.handleStepperclick(this);" aria-label="Plus"><svg class="ett-icon icon-plus px24"><use xlink:href="#icon-plus"></use></svg></button>
+            </li> 
+        </ul>
+        <span class="htx">Hint for Stepper</span>  
+        <br>
+        <br>
+        <h3>teritiary stepper</h3> 
+        <ul class="ett-stpr etb-stpr ter ">
+            <li>
+                <button   class="ett-bttn ter med" onclick="apz.handleStepperclick(this);" aria-label="Minus"><svg class="ett-icon icon-minus px24"><use xlink:href="#icon-minus"></use></svg></button>
+            </li>
+            <li>
+                <input type="text" id="input3" class="ett-inpt ter scb-col100" placeholder="Value3" />
+            </li>
+            <li>
+                <button class="ett-bttn med ter stpr-add " onclick="apz.handleStepperclick(this);" aria-label="Plus"><svg class="ett-icon icon-plus px24"><use xlink:href="#icon-plus"></use></svg></button>
+            </li> 
+        </ul>
+        <span class="htx">Hint for Stepper</span>
+        <br>
+        <br>
+        <h3>Stepper Disabled</h3> 
+        <ul class="ett-stpr etb-stpr pri">
+            <li>
+                <button disabled="disabled" class="ett-bttn med tsp disabled " onclick="apz.handleStepperclick(this);" aria-label="Minus"><svg class="ett-icon icon-minus px24"><use xlink:href="#icon-minus"></use></svg> </button>
+            </li>
+            <li>
+                <input type="text" id="input3" class="ett-inpt pri disabled scb-col100" disabled="disabled" placeholder="Value3" />
+            </li>
+            <li>
+                <button class="ett-bttn med tsp  stpr-add disabled" disabled="disabled" onclick="apz.handleStepperclick(this);" aria-label="Plus"><svg class="ett-icon icon-plus px24"><use xlink:href="#icon-plus"></use></svg></button>
+            </li> 
+        </ul>
+        <span class="htx">Hint for Stepper</span>
+        <br>  
+        
+		<script type="text/javascript" charset="utf-8" src="scripts/jquery-3.1.1.min.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/jquery-ui.min.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/select2.min.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/appzillon.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/uiutils.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/swiper.min.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/tableHeadFixer.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/karthik-plugins.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/karthik-scripts.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/ripple.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/svgxuse.js"></script>
+<script type="text/javascript">
+        $(document).ready(function () {
+            apz = new Apz();
+            apz.appId = "testing";
+            apz.deviceOs = "APPZILLONSIMULATOR";
+            //apz.loadProject();
+        });
+    </script>
+        
+        
+		<script>
+            
+		
+			$(document).ready(function() {
+				$('#SpriteSVG').load('svg-apz.svg');
+				$('#myButton').click(function(event) { 
+					// prevent page submit
+					event.preventDefault();
+					$("#SpriteSVG").text(" ");
+					// load the page into #SpriteSVG
+					$('#SpriteSVG').load('svg-apz.svg'); 
+				});
+				$('#myButtonBCL').click(function(event) { 
+					// prevent page submit
+					event.preventDefault();
+					$("#SpriteSVG").text(" ");
+					// load the page into #SpriteSVG
+					$('#SpriteSVG').load('svg-bcl.svg'); 
+				});
+				// load ripple effect for elements with class .rpl
+				//$('.rpl, .ripples').on('click', ripplesEffect);
+		
+			});
+		</script>  
+	</body>
+
+</html>
