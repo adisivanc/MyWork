@@ -1,0 +1,30 @@
+
+<!--
+<app-login></app-login>
+<app-dashboard></app-dashboard>
+<app-others></app-others>
+-->
+
+<div class="container">
+	<h3 class="h3 text-center">Angular 7 Routing Demo</h3>
+	<nav class="mb-4">
+		 <a class="btn btn-primary " routerLink="/login">Login</a>
+		 <a class="btn btn-success ml-3 mr-3" routerLink="/dashboard">Dashboard</a>
+		 <a class="btn btn-danger" routerLink="/others">Others</a>
+	</nav>
+	
+	<div>
+		<h4>HTTP Client - Connect Internet for fetching from server json</h4>
+		<ul>
+		 <li *ngFor="let item of persondata; let i = index">
+		 {{item.name}}
+		 </li>
+		</ul>
+	</div>
+	
+	<router-outlet></router-outlet>
+</div>
+
+
+
+

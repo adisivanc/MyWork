@@ -1,0 +1,49 @@
+<!-- Normal -->
+<div class="container">
+	<h5 class="head5">Login Components Sub Page</h5>
+	<p class="paraSel">{{author}}</p>
+</div>
+
+<!-- For -->
+<div class="listMonth"> 
+	<span>Months :</span>
+	<select (change)="selFun($event)">
+		
+		<option *ngFor="let i of months" value="{{i}}">{{i}}</option>
+	</select>
+</div>
+
+<!-- If -->
+<div class="layoutIf">
+	IF
+	<div *ngIf="webLayout">Web Layout</div>
+	<div *ngIf="mobileLayout">Mobile Layout</div>	
+</div>
+
+<!-- If Else -->
+<div class="layoutIf">
+	IF ELSE
+	<div *ngIf="mobileLayout; else webLayout;">Mobile Layout</div>
+	<ng-template #webLayout>Web Layout</ng-template>
+</div>
+
+<!-- Conditional -->
+<div class="layoutIf">
+	IF THEN ELSE - Conditional
+	<div *ngIf="mobileLayout; then tabletLayout else webLayout;">Mobile Layout</div>
+	<ng-template #webLayout>Web Layout</ng-template>
+	<ng-template #tabletLayout>Tablet Layout</ng-template>
+</div>
+
+
+<br/>
+<button (click)="myFunc($event)">Click here</button>
+
+<br/><br/>
+
+<div class="app-prelogin">
+
+</div>
+
+
+

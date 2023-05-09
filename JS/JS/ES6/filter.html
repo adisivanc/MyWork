@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Class</title>
+<style>
+body { font-family:arial; font-size:15px; }
+form div { padding:10px}
+form div input[type="text"], form div input[type="email"] { font-size:14px;padding:3px 5px; }
+select { font-size:14px;padding:3px 5px; }
+form div input[type="radio"] { padding:3px 5px; }
+form div input[type="text"]::placeholder, form div input[type="email"]::placeholder { color:#ccc; font-size:13px }
+</style>
+</head>
+<body>
+
+<form name="FFFF">
+<div>
+	<label for="fname">First name</label>
+	<input type="text" name="fname" placeholder="First Name" id="fname" />
+</div>
+<div>
+	<label for="email">Email</label>
+	<input type="email" name="email" placeholder="Email" id="email" />
+</div>
+<div>
+	<label for="date">DOB</label>
+	<input type="date" name="date" placeholder="date" id="date" />
+</div>
+<div>
+	<label for="course">Courses</label>
+	<select onchange="selCourse(this.value);">
+		<option value="javascript">Javascript</option>
+		<option value="vue">Vue</option>
+		<option value="react">react</option>
+		<option value="angular">Angular</option>
+		<option value="css">CSS</option>
+	</select>
+</div>
+<div id="rrr">Output here&nbsp;</div>
+<div>
+	<label>Do you like it</label>
+	<input type="radio" name="like">Like</input>
+	<input type="radio" name="like">Dislike</input>
+</div>
+<div>
+<button onclick="validateForm();">Submit</button>
+</div>
+</form>
+
+
+<script type="text/javascript">
+
+const materials = [
+  'Hydrogen',
+  'Helium',
+  'Lithium',
+  'Beryllium'
+];
+
+console.log(materials.filter(material => {if(material.length>7){return material}}));
+// expected output: Array [8, 6, 7, 9]
+
+
+</script>
+
+</body>
+</html>

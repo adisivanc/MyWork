@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Class</title>
+<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+
+<form name="FFFF">
+<div>
+	<input type="text" name="fname" placeholder="First Name" id="fname" required minlength="3" maxlength="5" />
+</div>
+<div>
+	<input type="email" name="email" placeholder="Email" id="email" required/>
+</div>
+<div>
+	<input type="date" name="date" placeholder="date" id="date" required/>
+</div>
+<div>
+	<select onchange="dwqwwdwq(this.value);">
+		<option value="javascript">Javascript</option>
+		<option value="vue">VUE</option>
+		<option value="react">react</option>
+	</select>
+</div>
+<div id="rrr"></div>
+<div class="reme" style="background-color:#eee">
+	<label>Do you like it</label>
+	<input type="radio" name="like">Like</input>
+	<input type="radio" name="like">Dislike</input>
+</div>
+<div>
+<button onclick="cssForm();">Submit</button>
+</div>
+</form>
+
+
+<script type="text/javascript">
+
+function cssForm(){
+	var sheet = window.document.styleSheets[0];
+	console.log(sheet);
+	console.log(sheet.cssRules[1]);
+	sheet.insertRule('.reme { color: red; }', sheet.cssRules.length);
+	console.log(sheet.cssRules.length);
+}
+
+</script>
+
+</body>
+</html>

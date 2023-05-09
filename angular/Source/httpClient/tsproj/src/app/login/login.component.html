@@ -1,0 +1,45 @@
+<div class="row bg-info text-white m-1">
+	<div class="col-12 py-2 px-4">
+		<span *ngIf="webLayout; then condition01 else condition02"> Web Layout </span>
+		<ng-template #condition01> Web Layout part </ng-template>
+		<ng-template #condition02> Mobile Layout part </ng-template>
+	</div>
+</div>
+
+<div class="mt-4 mb-4">
+*************************************************************************************************
+</div>
+
+<div>
+	<input type="hidden" #chooseTheme />
+
+	<ul class="nav btn-group">
+		<li (click)="chooseTheme.value='black'" class="nav-item"><a href="javascript:void(0)" class="btn btn-sm btn-primary mr-4">Black</a></li>
+		<li (click)="chooseTheme.value='purple'" class="nav-item"><a href="javascript:void(0)" class="btn btn-sm btn-success mr-4">Purple</a></li>
+		<li (click)="chooseTheme.value='blue'" class="nav-item"><a href="javascript:void(0)" class="btn btn-sm btn-danger mr-4">Blue</a></li>
+		<li (click)="chooseTheme.value='brown'" class="nav-item"><a href="javascript:void(0)" class="btn btn-sm btn-info mr-4">Brown</a></li>
+	</ul>
+
+	<div [ngSwitch]="chooseTheme.value" class="mt-4">
+		<div *ngSwitchDefault="'black'" class="alert alert-success">Black</div>
+		<div *ngSwitchCase="'purple'" class="alert alert-info alert-dismissible">Purple</div>
+		<div *ngSwitchCase="'blue'" class="alert alert-primary">Blue</div>
+		<div *ngSwitchCase="'brown'" class="alert alert-danger">Brown</div>
+	</div>
+</div>
+
+<div class="mt-4 mb-4">
+*************************************************************************************************
+</div>
+
+<div class="mt-4 mb-4">
+	<input type="text" name="value" [(ngModel)]="twoValue">
+	<p> You entered <strong class="text-warning">{{twoValue}}</strong></p>
+	<div>
+		<select class="dropdown">
+			<option *ngFor="let j of animals" value={{j}}>{{j}}</option>
+		</select>
+	</div>
+	<button class="mt-3 btn btn-primary" (click)="clearValue()">Clear</button>
+	
+</div>

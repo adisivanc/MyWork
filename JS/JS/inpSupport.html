@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Class</title>
+<style>
+* { box-sizing:border-box; }
+input { width:240px; margin:10px; padding:4px 15px; }
+</style>
+</head>
+<body>
+
+
+<div id="output"></div>
+
+<input type="button" name="submit" value="Show Value" onclick="showVal()"/>
+
+<script type="text/javascript">
+
+showVal = () => {
+	let inpArr = ["text","number","email","range","date","datetime-local","button","color","week","search","tel","url","time","month"];
+	let i=0;
+	var inpEle = document.createElement("input");
+
+	while(i<=(inpArr.length-1)){
+		console.log(i);
+		inpEle.setAttribute("type",inpArr[i]);
+		console.log(inpArr[i]);
+		document.getElementById("output").innerHTML += "&lt;input type='"+inpArr[i]+"' /&gt; &lt;br/&gt;";
+		console.log("Type="+inpEle.type);
+		i++;
+	}
+	var myHTML = document.getElementById("output").textContent;
+	console.log(myHTML);
+	document.getElementById("output").innerHTML = myHTML;
+}
+
+</script>
+
+</body>
+</html>

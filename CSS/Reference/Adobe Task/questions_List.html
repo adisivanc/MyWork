@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+	body { padding:0; margin:0; font-family:Arial; line-height:26px; font-size:17px; color:#333; }
+	* { box-sizing:border-box; margin:0; padding:0 }
+	div { margin-bottom:30px; padding:20px; }
+	ul > li { margin-bottom:20px; }
+	ol { margin-left:25px; display:block; }
+	ol > li { }
+</style>
+</head>
+<body>
+
+<div>
+/****************** HTML *********************/
+
+<ul>
+<li>
+	<h4>What is Meta tag?</h4>
+	<p>
+	The <meta> tag defines metadata about an HTML document. Metadata is data (information) about data.
+	<meta> tags always go inside the <head> element, and are typically used to specify character set, page description, keywords, author of the document, and viewport settings.
+	Metadata will not be displayed on the page, but is machine parsable.
+	Metadata is used by browsers (how to display content or reload page), search engines (keywords), and other web services.
+	There is a method to let web designers take control over the viewport (the user's visible area of a web page), through the <meta> tag (See "Setting The Viewport" example below).
+	</p>
+</li>
+<li>
+<h4>What are the tags available in HTML5?</h4>
+<pre>
+&lt;header&gt;&lt;aside&gt;&lt;section&gt;&lt;nav&gt;
+&lt;footer&gt;&lt;article&gt;&lt;figure&gt;
+</pre>
+</li>
+<li>
+<h4>What are the best practices do you follow while creating website (in HTML side)?</h4>
+<p>
+	<ol>
+		<li>Select a typography that's easy to read and skim.</li>
+		<li>Choose a color scheme that suits your brand.</li>
+		<li>Use white space to break up text and other elements.</li>
+		<li>Use texture to add personality and depth.</li>
+		<li>Add images to engage and inform readers.</li>
+		<li>Simplify your navigation.</li>
+		<li>Make your CTAs stand out.</li>
+	</ol>
+</p>
+</li>
+<li>
+<h4>What are the new tags are available in HTML?</h4>
+<pre>
+&lt;time&gt; &lt;audio&gt; &lt;video&gt; &lt;canvas&gt;
+&lt;details&gt; &lt;output&gt; &lt;wbr&gt; &lt;progress&gt;
+&lt;meter&gt;&lt;mark&gt;
+</pre>
+</li>
+<li>
+<h4>What is media tag in HTML?</h4>
+<pre>
+&lt;audio&gt; &lt;video&gt;
+</pre>
+</li>
+<li>
+<h4>What is @media in HTML and what are the different types available in the HTML.</h4>
+
+<h5>Syntax</h5>
+@media not|only mediatype and (mediafeature and|or|not mediafeature) {
+  CSS-Code;
+}
+
+<h6>EG</h6>
+@media only screen and (max-width: 600px) { }
+
+<h6>BRIEF about Syntax</h6>
+Media Types 
+all, print, screen, speech
+<br/>
+Media Feature 
+aspect-ratio,color,width, height,min-height, max-height, width, min-width, max-width, orientation, resolution
+</li>
+<li>
+<h4>What is Responsive website?</h4>
+<p>Browser and device friendly. It is a web development approach that creates dynamic changes to the appearance of a website, depending on the screen size and orientation of the device being used to view it. ... 
+In responsive design, page elements reshuffle as the viewport grows or shrinks.</p>
+</li>
+</ul>
+</div>
+
+
+<div>
+/*************** CSS/LESS/SCSS *************************/
+
+<ul>
+<li>
+<h4>What are CSS and LESS/SCSS and difference between them?</h4>
+</li>
+<li>
+<h4>What are the features available in the LESS? </h4>
+<pre>
+mixIn
+extend
+nested rules
+</pre>
+</li>
+<li>
+<h4>What is Mixin and why we use it?</h4>
+<pre>
+@mixin style {
+.cont{
+color: #77C1EF;
+ }
+}
+@include style;
+
+
+@mixin bordered($color, $width: 2px) {
+ color: #77C1EF;
+ border: $width solid black;
+ width: 450px;
+}
+.style {
+ @include bordered($color:#77C1EF, $width: 2px);
+}
+</pre>
+</li>
+<li>
+<h4>What is nth-child and nth-of-type with example?</h4>
+<dl>
+<dt>nth-child</dt>
+<dd>Count from start, doesn't consider the type of element</dt>
+<dt>nth-of-type</dt>
+<dd>Consider the type of element, count particular element</dt>
+</dl>
+</li>
+<li>
+<h4>Have you used flex and grid? If yes, then what are they and why we used them?</h4>
+<pre>
+Flex - One dimensonal controls either row / coulmn
+Grid - Two dimensonal controls both row & coulmn at same time
+</pre>
+</li>
+<li>
+<h4>What are the best practices do you follow, while writing CSS?</h4>
+<pre>
+Use a Preprocessor. ...
+Separate global vs local style. ...
+Modularize your style. ...
+Lazy load stylesheets correctly. ...
+Be specific & not too specific. ...
+Read CSS as the Browser does. ...
+Style with HTML in mind for better performance. ...
+Avoid inline styles.
+</pre>
+</li>
+<li>
+<h4>What are Pseudo elements and Pseudo class available in CSS?</h4>
+<pre>
+:hover, :focus, :active, :empty, :visited, :root, nth-child   -> Pseudo Class
+::after, ::before , ::selection, ::first-line, ::first-letter   -> Pseduo Element
+</pre>
+</li>
+<li>
+<h4>Animations?</h4>
+<pre>
+animation-name
+animation-duration
+animation-timing-function
+animation-delay
+animation-iteration-counter
+animation-direction
+</pre>
+</li>
+<li>
+<h4>Examples of animations?</h4>
+<pre>
+@keyframes animName {
+  0% { }
+  50% { }
+  100% { }
+}
+</pre>
+</li>
+</ul>
+</div>
+
+
+<div>
+
+/**************** JAVASCRIPT *******************/
+
+<ul>
+<li>
+<h4>What are the methods used in Array/Object?</h4>
+<pre>
+Array [Array value,element and index as parameter]
+
+slice,splice,filter,reduce,map,push,pop,join,toString
+concat, shift, unshift
+
+
+Object [Object as a parameter]
+
+Object.create(), Object.keys(), Object.values(), Object.entries(), 
+Object.seal(), Object.freeze(), Object.is()
+</pre>
+</li>
+<li>
+<h4>What are new features in ES6 with some examples?</h4>
+</li>
+<li>
+<h4>What is var, let & const with example?</h4>
+</li>
+<li>
+<h4>What is map, filter and reduce?</h4>
+</li>
+<li>
+<h4>What are Arrow functions in ES6?</h4>
+</li>
+<li>
+<h4>What is spread operator?</h4>
+<pre>
+function sum(...theArgs) { //REST Operator
+  return theArgs.reduce((previous, current) => {
+    return previous + current;
+  });
+}
+
+let arr01 = [3,4,5,9]
+console.log(sum(...arr01)); //SPREAD Operator
+// expected output: 6
+
+console.log(sum(1, 2, 3, 4));
+// expected output: 10
+
+</pre>
+</li>
+<li>
+<h4>What is the Design patterns used in your code?</h4>
+<a href="https://gist.github.com/antonrogov/1216380/21800f463af3d3a98e98083c4bc109e44f981ef4" target="_blank">JS Standrad</a>
+</li>
+<li>
+<h4>What is parent node, child node and text node?</h4>
+</li>
+<li>
+<h4>What is DOM and how it works?</h4>
+</li>
+<li>
+<h4>Inheritance </h4>
+<pre>
+class Car {
+  constructor(brand) {
+    this.carname = brand;
+  }
+  present() {
+    return 'I have a ' + this.carname;
+  }
+}
+
+class Model extends Car {
+  constructor(brand, mod) {
+    super(brand);
+    this.model = mod;
+  }
+  show() {
+    return this.present() + ', it is a ' + this.model;
+  }
+}
+
+let myCar = new Model("Ford", "Mustang");
+document.getElementById("demo").innerHTML = myCar.show();
+</pre>
+</li>
+<li>
+<h4>Closures</h4>
+<pre>
+In JavaScript, closures are the primary mechanism used to enable data privacy. 
+When you use closures for data privacy, the enclosed variables are only in scope within the containing (outer) function.
+You can't get at the data from an outside scope except through the object's privileged methods.
+
+var makeCounter = function() {
+  alert("A2");
+  var privateCounter = 0;
+  
+  function changeBy(val) {
+    privateCounter += val;
+  }
+  return {
+    increment: function() {
+      changeBy(1);
+    },
+
+    decrement: function() {
+      changeBy(-1);
+    },
+
+    value: function() {
+      return privateCounter;
+    }
+  }
+};
+
+alert("A1");
+var counter1 = makeCounter();
+var counter2 = makeCounter();
+
+alert("B");
+alert(counter1.value());  // 0.
+
+counter1.increment();
+counter1.increment();
+alert(counter1.value()); // 2.
+alert("E4");
+alert(counter2.value());
+
+counter1.decrement();
+alert(counter1.value()); // 1.
+counter2.decrement();
+alert(counter2.value()); // -1.
+ </pre>
+</li>
+<li>
+<h4>THIS</h4>
+<pre>
+ES5 and before ->
+
+const parent = {
+    mom_name: "Vijaya",
+    mother: function () {
+        return `${this.mom_name} is my mother`; // Vijaya is my mother
+    },
+};
+console.log(parent.mother());
+
+
+ES6 ->
+
+const parent = { 
+	mom_name="Vijaya",
+	mother: () => {
+		return `${this.mom_name} is my mother`; // give undefined
+	}
+}
+console.log(parent.mother());
+ </pre>
+</li>
+<li>
+<h4>Concat Two Arrays</h4>
+<pre>
+let arr1 = [1,2,3];
+let arr2 = [3,4,5];
+let arr3 = [...arr1, ...arr2]; // [1,2,3,3,4,5] 
+// Spread Operator
+
+For N Array
+let arrs = [[1, 2], [3, 4], [5, 6]];
+arrs.reduce((a, b) => [...a, ...b], []);
+
+OR
+
+let arrs = [[1, 2], [3, 4], [5, 6]];
+let dc = [].concat(...arrs);
+console.log(dc);
+ </pre>
+</li>
+<li>
+<h4>What are Cookies, Session Storage and Local Storage?</h4>
+<pre>
+Cookies - 4KB
+Session Storage - Based on browser
+Local Storage - 4MB (Persist even browser closed)
+</pre>
+</li>
+<li>
+<h4>Currying</h4>
+<pre>
+function add (a) {
+  return function (b) {
+    return a + b;
+  }
+}
+add(3)(4);
+</pre>
+</li>
+<li>
+<h4>FETCH</h4>
+<pre>
+function componentDidMount() {
+    fetch('https://jsonplaceholder.typicode.com/users')
+    .then(res => res.json())
+    .then(output => {
+        console.log('Output: ', output);
+	}).catch(err => console.error(err));
+}
+</pre>
+</li>
+<li>
+<h4>ACCORDION</h4>
+<pre>
+button class="accordion"      Section 1
+div class="panel"
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+div
+
+script
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+  });
+}
+script
+</pre>
+</li>
+</ul>
+</div>
+
+
+
+<div>
+/************ Angular *************/
+
+<ul>
+<li>
+Architecture of Angular?
+</li>
+<li>
+What is RxJS with some examples and use cases?
+</li>
+<li>
+How we will call API in angular?
+</li>
+<li>
+Lifecycle hooks in Angular?
+</li>
+<li>
+How we will handle error in angular?
+</li>
+<li>
+Difference between Promises and Observables?
+</li>
+<li>
+Angular Forms
+<pre>
+ngOnChanges: Called every time a data-bound input property changes. It’s called a first time before the ngOnInit hook.
+ The hook receives a SimpleChanges object that contains the previous and current values for the data-bound inputs properties. 
+ This hook gets called often, so it’s a good idea to limit the amount of processing it does.
+ngOnInit: Called once upon initialization of the component.
+ngDoCheck: Use this hook instead of ngOnChanges for changes that Angular doesn’t detect. 
+It gets called at every change detection cycle, so keeping what it does to a minimum is important for performance.
+ngAfterContentInit: Called after content is projected in the component.
+ngAfterContentChecked: Called after the projected content is checked.
+ngAfterViewInit: Called after a component’s view or child view is initialized.
+ngAfterViewChecked: Called after a component’s view or child view is checked.
+ngOnDestroy: Called once when the component is destroyed and a good hook to use to cleanup and unsubscribe from observables.
+</pre>
+</li>
+<li>
+What are HttpModule and Axios?
+</li>
+</ul>
+</div>
+
+
+<div>
+/************ React (if worked)  *************/
+
+<ul>
+What is react hooks?
+</ul>
+</div>
+
+
+<div>
+/**************** AEM *****************/
+
+<ul>
+<li>
+Have you worked on AEM?
+</li>
+<li>
+Have you worked on any CMS tool?
+</li>
+</ul>
+</div>
+
+
+<div>
+/*********** GENERAL QUESTION **************/
+
+<ul>
+<li>
+How you compile your code and which tool, you used?
+</li>
+<li>
+What are the role and responsibility in current organization?
+</li>
+<li>
+What are your skills set?
+</li>
+</ul>
+</div>
+
+
+<div>
+/*************** CODING *************************/
+
+<ul>
+Designing the following using HTML,CSS, JavaScript/Angular :
+<li>
+1. Creating Accordion component
+</li>
+<li>
+2. Fetching data from JSON file via HTTP requests and display them.
+</li>
+</ul>
+</div>
+
+
+</body>
+</html>
+
+
+
+
+

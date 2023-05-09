@@ -1,0 +1,20 @@
+body { color:#c00; font-family: 'Roboto', sans-serif; font-weight:400; font-size:1.2em; }
+header { font-size:1rem;}
+
+$icon:"iconKell";
+.abc { background-image:url(../img/#{$icon}.jpg); }
+
+$appColor:#927400;
+
+.nav {
+    background-color:#bbb;
+    color:$appColor;
+    text-decoration: none;
+    & > ul {
+        list-style-type:none
+    }
+}
+
+.header { display:flex; justify-content: space-between; }
+
+.jk { font-size:12px; }

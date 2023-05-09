@@ -1,0 +1,15 @@
+@import "common";
+
+
+@mixin goThere($fSize) { 
+	font-size:$fSize;
+	color:#cc0000; 
+	font-weight:600; 
+	text-transform:uppercase;
+	text-shadow:0 0 2px #999;
+}
+
+.paraSel { @include goThere(20px);  }
+
+.head5 { @include goThere(20px); color:#28b31f; }
+

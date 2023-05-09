@@ -1,0 +1,22 @@
+HTML
+why we use meta tag
+mobile first approach
+
+CSS
+flex and flexbox.
+responsive css
+
+Javascript
+closure function.
+concat two array using ecma 6 
+remove duplicate from array using ecma 6
+this operator in ecma 6
+inheritance in javascript
+
+Question
+how to centeralized content in html without using center tag or text align css?
+what kind of problems does function currying solves ?
+how to increase performance of website?
+worked with cms or not?
+
+

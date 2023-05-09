@@ -1,0 +1,6 @@
+body { font-family:arial; font-size:15px; }
+form div { padding:10px}
+form div input[type="text"], form div input[type="email"] { font-size:14px;padding:3px 5px; }
+select { font-size:14px;padding:3px 5px; }
+form div input[type="radio"] { padding:3px 5px; }
+form div input[type="text"]::placeholder, form div input[type="email"]::placeholder { color:#ccc; font-size:13px }

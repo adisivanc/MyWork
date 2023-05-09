@@ -1,0 +1,36 @@
+<div>
+
+<input type="hidden" #pageColl />
+
+<div>
+	<a href="javascript:void(0)" (click)="pageColl.value='home'">Home</a>
+	<a href="javascript:void(0)" (click)="pageColl.value='about'">About Us</a>
+	<a href="javascript:void(0)" (click)="pageColl.value='career'">Join Us</a>
+	<a href="javascript:void(0)" (click)="pageColl.value='portfolio'">Portfolio</a>
+	<a href="javascript:void(0)" (click)="pageColl.value='contact'">Contact Us</a>
+</div>
+
+
+<div [ngSwitch]="pageColl.value">
+	<div *ngSwitchDefault="'home'">Home Page</div>
+	<div *ngSwitchCase="'about'">About Page</div>
+	<div *ngSwitchCase="'career'">Join Us Page</div>
+	<div *ngSwitchCase="'portfolio'">Portfolio Page</div>
+	<div *ngSwitchCase="'contact'">Contact Us Page</div>
+</div>
+
+
+
+<div>
+<div *ngIf="(screenWidthh > 1366);">Show Desktop Layout</div>
+<div *ngIf="(screenWidthh <= 1366 && screenWidthh > 768);">Show Web Layout</div>
+<div *ngIf="(screenWidthh <= 768 && screenWidthh > 375);">Show Tablet Layout</div>
+<div *ngIf="(screenWidthh <= 375);">Show Mobile Layout</div>
+</div>
+
+
+
+
+
+
+</div>
