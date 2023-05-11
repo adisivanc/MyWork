@@ -15,8 +15,7 @@
         function duplicates(arrr) {
             let dupl = [];
                 
-            arrr.reduce((dup,val,ind)=>{ 
-                debugger;
+            arrr.reduce((acc,val,ind)=>{ 
                 if(acc.indexOf(val)===-1){
                     acc.push(val);
                 }else{
@@ -24,7 +23,6 @@
                         dupl.push(val);
                     }
                 }
-                debugger;
                 return [...acc];
             },[])
             return [...dupl];
