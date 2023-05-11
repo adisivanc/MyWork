@@ -12,37 +12,32 @@
 </head>
 <body>
     
-    <table class="table table-inverse caption-top">
-        <caption>List of users</caption>
-        <thead>
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">First</th>
-            <th scope="col">Last</th>
-            <th scope="col">Handle</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td>Larry</td>
-            <td>the Bird</td>
-            <td>@twitter</td>
-          </tr>
-        </tbody>
-      </table>
+    
+
+      <script>
+        function subarraySum(arr, n, s){
+            let left = 0, right = 0;
+            let sum = 0;
+            debugger;
+            while (right < n) {
+                sum += arr[right];
+                debugger;
+                while (sum > s) {
+                    sum -= arr[left];
+                    left++;
+                }
+                if (sum === s) {
+                    debugger;
+                    return [left + 1, right + 1];
+                }
+                right++;
+            }
+            return [-1];
+        }
+
+        let ad = subarraySum([1,2,3,7],4,12);
+        console.log(ad);
+      </script>
 
 </body>
 </html>
