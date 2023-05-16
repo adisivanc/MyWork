@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card</title>
+</head>
+
+<body>
+    <style>
+        body{display:flex;flex-direction:row;justify-content:center;align-items:center;overflow:hidden;height:100vh;font-family:'Roboto',sans-serif;transition:.25s}
+        body .credit{position:absolute;bottom:20px;left:20px;color:inherit}
+        body .options{display:flex;flex-direction:row;align-items:stretch;overflow:hidden;min-width:600px;max-width:900px;width:calc(100% - 100px);height:400px}
+
+        @media screen and (max-width: 718px) {
+        body .options{min-width:520px}
+        body .options .option:nth-child(5){display:none}
+        }
+        @media screen and (max-width: 638px) {
+        body .options{min-width:440px}
+        body .options .option:nth-child(4){display:none}
+        }
+        @media screen and (max-width: 558px) {
+        body .options{min-width:360px}
+        body .options .option:nth-child(3){display:none}
+        }
+        @media screen and (max-width: 478px) {
+        body .options{min-width:280px}
+        body .options .option:nth-child(2){display:none}
+        }
+
+        body .options .option{position:relative;overflow:hidden;min-width:60px;margin:10px;background:var(--optionBackground,var(--defaultBackground,#e6e9ed));background-size:auto 120%;background-position:center;cursor:pointer;transition:.5s cubic-bezier(0.05,0.61,0.41,0.95)}
+        body .options .option:nth-child(1){--defaultbackground:#ed5565}
+        body .options .option:nth-child(2){--defaultbackground:#fc6e51}
+        body .options .option:nth-child(3){--defaultbackground:#ffce54}
+        body .options .option:nth-child(4){--defaultbackground:#2ecc71}
+        body .options .option:nth-child(5){--defaultbackground:#5d9cec}
+        body .options .option:nth-child(6){--defaultbackground:#ac92ec}
+        body .options .option.active{flex-grow:10000;transform:scale(1);max-width:600px;margin:0;border-radius:40px;background-size:auto 100%}
+        body .options .option.active .shadow{box-shadow:inset 0 -120px 120px -120px black,inset 0 -120px 120px -100px #000}
+        body .options .option.active .label{bottom:20px;left:20px}
+        body .options .option.active .label .info>div{left:0;opacity:1}
+        body .options .option:not(.active){flex-grow:1;border-radius:30px}
+        body .options .option:not(.active) .shadow{bottom:-40px;box-shadow:inset 0 -120px 0 -120px black,inset 0 -120px 0 -100px #000}
+        body .options .option:not(.active) .label{bottom:10px;left:10px}
+        body .options .option:not(.active) .label .info>div{left:20px;opacity:0}
+        body .options .option .shadow{position:absolute;bottom:0;left:0;right:0;height:120px;transition:.5s cubic-bezier(0.05,0.61,0.41,0.95)}
+        body .options .option .label{display:flex;position:absolute;right:0;height:40px;transition:.5s cubic-bezier(0.05,0.61,0.41,0.95)}
+        body .options .option .label .icon{display:flex;flex-direction:row;justify-content:center;align-items:center;min-width:40px;max-width:40px;height:40px;border-radius:100%;background-color:#fff;color:var(--defaultBackground)}
+        body .options .option .label .info{display:flex;flex-direction:column;justify-content:center;margin-left:10px;color:#fff;white-space:pre}
+        body .options .option .label .info>div{position:relative;transition:.5s cubic-bezier(0.05,0.61,0.41,0.95),opacity .5s ease-out}
+        body .options .option .label .info .main{font-weight:700;font-size:1.2rem}
+        body .options .option .label .info .sub{transition-delay:.1s}
+    </style>
+
+    <div class="options">
+        <div class="option active"
+            style="--optionBackground:url(https://66.media.tumblr.com/6fb397d822f4f9f4596dff2085b18f2e/tumblr_nzsvb4p6xS1qho82wo1_1280.jpg);">
+            <div class="shadow"></div>
+            <div class="label">
+                <div class="icon">
+                    <i class="fas fa-walking"></i>
+                </div>
+                <div class="info">
+                    <div class="main">Blonkisoaz</div>
+                    <div class="sub">Omuke trughte a otufta</div>
+                </div>
+            </div>
+        </div>
+        <div class="option"
+            style="--optionBackground:url(https://66.media.tumblr.com/8b69cdde47aa952e4176b4200052abf4/tumblr_o51p7mFFF21qho82wo1_1280.jpg);">
+            <div class="shadow"></div>
+            <div class="label">
+                <div class="icon">
+                    <i class="fas fa-snowflake"></i>
+                </div>
+                <div class="info">
+                    <div class="main">Oretemauw</div>
+                    <div class="sub">Omuke trughte a otufta</div>
+                </div>
+            </div>
+        </div>
+        <div class="option"
+            style="--optionBackground:url(https://66.media.tumblr.com/5af3f8303456e376ceda1517553ba786/tumblr_o4986gakjh1qho82wo1_1280.jpg);">
+            <div class="shadow"></div>
+            <div class="label">
+                <div class="icon">
+                    <i class="fas fa-tree"></i>
+                </div>
+                <div class="info">
+                    <div class="main">Iteresuselle</div>
+                    <div class="sub">Omuke trughte a otufta</div>
+                </div>
+            </div>
+        </div>
+        <div class="option"
+            style="--optionBackground:url(https://66.media.tumblr.com/5516a22e0cdacaa85311ec3f8fd1e9ef/tumblr_o45jwvdsL11qho82wo1_1280.jpg);">
+            <div class="shadow"></div>
+            <div class="label">
+                <div class="icon">
+                    <i class="fas fa-tint"></i>
+                </div>
+                <div class="info">
+                    <div class="main">Idiefe</div>
+                    <div class="sub">Omuke trughte a otufta</div>
+                </div>
+            </div>
+        </div>
+        <div class="option"
+            style="--optionBackground:url(https://66.media.tumblr.com/f19901f50b79604839ca761cd6d74748/tumblr_o65rohhkQL1qho82wo1_1280.jpg);">
+            <div class="shadow"></div>
+            <div class="label">
+                <div class="icon">
+                    <i class="fas fa-sun"></i>
+                </div>
+                <div class="info">
+                    <div class="main">Inatethi</div>
+                    <div class="sub">Omuke trughte a otufta</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let options = document.querySelectorAll('.options .option');
+
+        options.forEach(option=>{
+            option.addEventListener('click',function(ev){
+                document.querySelector('.options .option.active').classList.remove('active');
+                ev.target.classList.add('active');
+            })
+        })
+    </script>
+</body>
+</html>

@@ -14,8 +14,17 @@
     <script type="text/javascript">
         class FindDuplicate{
 
-            duplicates(arrr) {
-                
+            duplicates(arrVal) {
+    
+                let setVal = new Set();
+                let withDupl = new Set();
+
+                arrVal.forEach(element => {
+                    (!withDupl.has(element))?(withDupl.add(element)):(setVal.add(element));
+                });
+
+                const array = [...setVal].sort((a,b)=>a-b);
+                return array;
             }
 
         }
