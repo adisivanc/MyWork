@@ -8,17 +8,21 @@
     <style>
         * { box-sizing: border-box; padding: 0; margin: 0; }
         body { font:15px/18px arial; }
-        .container { display:flex; list-style-type:none; flex-flow:row nowrap; gap:20px; }
-        .container .item { background-color:#ccc; padding:30px; border-radius:4px; flex: 1 0 0;}
+        .container { display:flex; list-style-type:none; flex-flow:row nowrap; gap:5px; height: 400px; }
+        .container .flex-item { background-color:#ccc; padding:30px; border-radius:4px; flex: 1 0 0;}
+
+        /*
+        .container .flex-item.box-1 { height:120px; }
+        .container .flex-item.box-2 { height:140px; }
+        .container .flex-item.box-3 { height:180px; }
+        .container .flex-item.box-4 { height:100px; }
+        .container .flex-item.box-5 { height:220px; }
+        .container .flex-item.box-6 { height:150px; }
+        .container .flex-item.box-7 { height:90px; }
+        */
     </style>
 </head>
 <body>
-    <ul class="container">
-        <li class="item">Item 01</li>
-        <li class="item">Item 02</li>
-        <li class="item">Item 03</li>
-    </ul>
-
     <div class="container">
         <div class="flex-item box-1">Box-1</div>
         <div class="flex-item box-2">Box-2</div>

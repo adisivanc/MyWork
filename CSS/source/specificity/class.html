@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Specificity</title>
+    <link rel="stylesheet" href="./../../../../../support/css/bootstrap.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        div { font-weight:600; font-size:2rem; }
+        .red { color:#d00; }
+        .green { color:rgb(11, 120, 42); }
+        .blue { color:rgb(29, 12, 141); }
+    </style>
+</head>
+<body>
+    <div class="red green blue">
+        Which color am i?
+    </div>
+
+    <div class="red blue green">
+        Which color am i?
+    </div>
+
+    <div class="blue green red">
+        Which color am i?
+    </div>
+</body>
+</html>
