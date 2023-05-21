@@ -16,7 +16,7 @@
         .grid-item:nth-child(5n+5) { background-color:rgb(80, 6, 70); }
 
 
-        .container { display:grid; }
+        .container { display:inline-grid; grid-auto-flow:rows; /*grid-auto-rows NO Effects*/ grid-auto-rows:120px; grid-auto-columns:250px; grid-template-columns:auto 200px; }
         .grid-item { padding:20px; color:#FFF; background-color:#333; }
         
     </style>
