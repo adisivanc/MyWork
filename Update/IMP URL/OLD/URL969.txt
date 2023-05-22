@@ -1,0 +1,5 @@
+http://localhost/phpmyadmin/index.php?token=396cf1cc0ae52947a856caa5d1be972c
+
+http://192.168.1.130/Aadhi-RD/php/j-query(test)/test9.php
+
+https://www.w3schools.com/js/js_arrays.asp

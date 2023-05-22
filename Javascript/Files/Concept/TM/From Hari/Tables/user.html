@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Task</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./CSS/stylesheet.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<header>
+    <div class="showMob">
+
+    </div>
+    
+        <ul>
+          <li><a href="index.html" target="_self">Home</a></li>
+          <li><a href="about.html" target="_self">About Us</a></li>
+          <li><a href="user.html" target="_self">Users</a></li>
+        </ul>
+    
+</header>
+<section>
+    <div class="addBtn">
+      <span> <input type="search" name="srchLogin" value="" placeholder="Login ID" /> </span>
+      <span> <input type="button" value="Add" onclick="showAddRecord()" /> </span>
+    </div>
+    <div class="popup hideEle">
+      <div>
+        <nav class="popupHeader">
+          <h4>Add Details </h4>  
+          <button class="closeBtn" onclick="hideAddRecord()"><i class="fa fa-close "></i></button>
+        </nav>
+        <form name="addForm">
+            <div class="fieldCont">
+              <input type="text" name="username" value="" placeholder="Username" />
+            </div>
+            <div class="fieldCont">
+              <input type="email" name="loginid" value="" placeholder="Login ID" />
+            </div>
+            <div class="fieldCont">
+              <input type="date" name="dob" value="" placeholder="Date of Birth" />
+            </div>
+            <div class="fieldCont">
+              <input type="text" name="mobNum" value="" placeholder="Mobile Number"  />
+            </div>
+            <div class="fieldCont">
+              <select name="actState">
+                <option value="default">Please Select</option>
+                <option value="active">Active</option>
+                <option value="inactive">InActive</option>
+              </select>
+            </div>
+            <div class="fieldCont">
+              <input type="button" name="saveAddForm" value="Save" onclick="fnSaveData()" />
+            </div>
+        </form>
+      </div>
+    </div>
+    <div class="tableCont">
+      <p id="noRes"></p>
+      <table class="table" id="userTable">
+          <thead>
+            <tr>
+              <th>S.No</th>
+              <th>Username</th>
+              <th>Login ID</th>
+              <th>Date of Birth</th>
+              <th>Mobile Number</th>
+              <th>Status</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
+    </div>
+</section>
+<footer>
+
+</footer>
+<script type="text/javascript" src="./JS/script.js"></script>
+</body>
+</html>

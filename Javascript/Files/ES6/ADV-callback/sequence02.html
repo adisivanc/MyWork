@@ -1,0 +1,51 @@
+<html>
+<head>
+<title></title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    body { background-color:#eee;font-family: Arial, Helvetica, sans-serif; font-size:15px; }
+    input[type=text] { font-size:15px;padding:5px 12px; }
+    button { font-size:15px; padding:8px 15px; background-color:#c00; color:#FFF; border:2px solid #890000; }
+</style>
+</head>
+<body class="" >
+
+<h4>Can you check Console ?</h4>
+    
+<form name="objForm" method="GET">
+    <input type="text" name="ObjTxt" value=""/>
+    <p class="para" id="level01"></p>
+</form>
+
+<h1 id="demo"></h1>
+
+<button id="butEle" class="butEle" onclick="getEmpDt()">Button</button>
+    
+<script type="text/javascript">
+        
+function myDisplayer(some) {
+    document.getElementById("demo").innerHTML = some;
+}
+
+function myCalculator(num1, num2) {
+    let sum = num1 + num2;
+    myDisplayer(sum);
+}
+
+let result = myCalculator(5,5);
+
+</script>
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

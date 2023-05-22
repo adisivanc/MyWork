@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Class</title>
+
+</head>
+<body>
+
+<div class="dispArray"></div>
+
+
+<script type="text/javascript">
+
+const ArrObj = [
+{name:"Donald",age:30,doy:1990},
+{name:"Bill gates",age:62,doy:2050},
+{name:"Sundar",age:40,doy:1090}
+]
+
+console.log(ArrObj);
+
+var filterName = Array.from(ArrObj,({name,age})=>{return name+" "+age});
+console.log(filterName);
+
+
+
+const Arr = [30,12,78,34,9,56]
+var filt = Array.from(Arr,(x)=>{return x>34});
+console.log(filt);
+
+
+</script>
+
+</body>
+</html>

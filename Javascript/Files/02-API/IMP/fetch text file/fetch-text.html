@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        let apiURL="./txt/text.txt";
+
+        //Type 01
+        fetch(apiURL,{method:"GET"})
+        .then(resp=>resp.text())
+        .then(resTxt=>console.log(resTxt))
+
+        //Type 02
+        async function getTxtContent(){
+            let res = await fetch(apiURL,{method:"GET"});
+            let secRes = await res.text();
+            console.log(secRes);
+        }
+        getTxtContent();
+    </script>
+</body>
+</html>

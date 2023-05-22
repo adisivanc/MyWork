@@ -1,0 +1,41 @@
+<html>
+<head>
+<title>User-defined objects</title>
+    <script type="text/javascript">
+        function book(title,author,price){
+            this.title=title;
+            this.author=author;
+            this.price=price;
+        }
+    </script>
+</head>
+<body>
+    <script type="text/javascript">
+        var bookArr1 = new book("JSTutorial","Aadhi",250);
+        var bookArr2 = new book("VSD","Siva",150);
+        
+        document.write("Book Name :"+bookArr1.title+"<br/>");
+        document.write("Book Author :"+bookArr1.author+"<br/>");
+        document.write("Book Name :"+bookArr1.price+"<br/>");
+        
+        document.write("<br/><br/>");
+
+        document.write("Book Name :"+bookArr2["title"]+"<br/>");
+        document.write("Book Author :"+bookArr2["author"]+"<br/>");
+        document.write("Book Name :"+bookArr2["price"]+"<br/><br/><br/>");
+        
+        
+            
+        for(var i=1;i<=3;i++){
+            //console.log("dvd");
+            debugger;
+            var obj = window["bookArr"+i];
+            document.write("Book Name :"+obj.title+"<br/>");
+            debugger;
+            document.write("Book Author :"+obj.author+"<br/>");
+            document.write("Book Name :"+obj.price+"<br/><br/>");
+        }
+        
+    </script>
+</body>
+</html>

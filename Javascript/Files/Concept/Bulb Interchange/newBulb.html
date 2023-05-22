@@ -1,0 +1,57 @@
+<html>
+<head>
+<title></title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    img { width:150px;}
+</style>
+</head>
+<body class="" >
+
+    
+<div class="container">
+    <img src="./img/offlight.png" name="OnBulb" alt="OnBulb" />
+    <img src="./img/onlight.png" name="OffBulb" alt="OffBulb" />
+</div>
+    
+<script type="text/javascript">
+
+var bulbid = document.getElementsByTagName("img");
+//console.log(bulbid);
+
+function interCh(para){
+  let temp;
+  //console.log(bulbid[0].src);
+
+  if(para===0){
+    temp=bulbid[1].src;
+    bulbid[1].src = bulbid[0].src;
+    bulbid[0].src = temp;
+    //temp=null;
+  }else{
+    temp=bulbid[1].src;
+    bulbid[1].src = bulbid[0].src;
+    bulbid[0].src = temp;
+    //temp=null;
+  }
+} 
+
+bulbid[0].addEventListener('click',interCh);
+bulbid[1].addEventListener('click',interCh);
+  
+
+</script>
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

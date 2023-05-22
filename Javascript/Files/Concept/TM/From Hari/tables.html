@@ -1,0 +1,74 @@
+<html>
+<head>
+	<style>
+		div{
+			text-align: center;
+			margin-top: 40px;
+		}
+		button{
+			margin: auto;
+		}
+		.email{
+			margin-left: 33px;
+		}
+		table, th, td {
+  		border: 1px solid black; }
+  	</style>
+  </head>
+  <body>
+	<div>
+		<form id="myForm">
+			<label>First Name:</label>
+			<input type="text" id="fname" name="fname"><br><br>
+			<label>Email:</label>
+			<input class="email" type="text" id="email" name="email"><br><br>
+			<label>User Name:</label>
+			<input type="text" id="uname" name="uname"><br><br>
+			<input type="button"value="submit" onclick="displayValue()">
+		</form>
+			<div>
+			<table id="userTable"> 
+				<tr>
+					<th>First Name</th>
+					<th>Email</th>
+					<th>User Name</th>
+				</tr>
+			</table>
+			<input type="button" value="-" onclick="deleteRow(this)">
+		</div>
+
+	<script>
+// let request = new XMLHttpRequest();
+// request.open("GET","https://randomuser.me/api/");
+// request.send();
+// request.onload = () => {
+// console.log(request);
+// if(request.status ==200){
+// 	// console.log(JSON.parse(request.response));
+// }
+// else{
+// 		// console.log(``);
+// 	}
+// }
+
+		var arrayValue = [];
+		function displayValue() {
+			debugger;
+			 var tableform = document.getElementById("userTable");
+			 var data = {};
+			 data['fname'] = document.getElementById('fname').value;
+			 data['email'] = document.getElementById('email').value;
+			 data['uname'] = document.getElementById('uname').value;
+			 arrayValue.push(data);
+		     //var row = tableform.insertRow(-1);
+			 for (var i in data) {
+		             var dataCell = document.createElement("TD");
+		             dataCell.innerHTML = data[i];
+		             row.appendChild(dataCell);
+					tableform.appendChild(row); 	
+		     }
+			document.getElementById("myForm").reset();
+		}
+	</script>
+ </body>
+</html>

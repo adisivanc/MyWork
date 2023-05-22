@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body class="">
+
+    <h2>My First Web Page</h2>
+    <p>My first paragraph.</p>
+
+    <p id="show"></p>
+
+    <script type="text/javascript">
+        const emply = {
+        name: "Sudarsan",
+        age: 31,
+        location: "Chennai"
+        };
+
+        // Object iteration using for...in loop
+        console.log("Object iteration using for...in loop:");
+        for (let arrKey in emply) {
+        if (emply.hasOwnProperty(arrKey)) {
+            console.log(`${arrKey} => ${emply[arrKey]}`);
+        }
+        }
+
+        console.log("Another Way:");
+
+        // Object iteration using Object.entries()
+        console.log("Object iteration using Object.entries():");
+        for (let [key, value] of Object.entries(emply)) {
+        console.log(`${key} => ${value}`);
+        }
+
+        console.log("String FOR...OF:");
+
+        const string = 'code';
+
+        // String iteration using for...of loop
+        console.log("String iteration using for...of loop:");
+        for (let char of string) {
+        console.log(char);
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<html>
+<head>
+<title></title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    body { background-color:#eee;font-family: Arial, Helvetica, sans-serif; }
+    input[type=text] { font-size:15px;padding:5px 12px; }
+    button { font-size:15px; padding:8px 15px; background-color:#c00; color:#FFF; border:2px solid #890000; }
+</style>
+</head>
+<body class="" >
+
+<script type="text/javascript">
+    class animals {
+        constructor(type){
+            console.log("Just Invoked",type);
+            this.animType=type;
+        }
+        get animName(){
+            return this.animType;
+        }
+        set animName(anim){
+            this.animType=anim;
+        }
+    }
+
+    class dog extends animals {
+        constructor(type){
+            super(type);
+            console.log("Just Invoked if object created...");
+        }
+        get dogDetails(){
+            return this.animName;
+        }
+    }
+
+    let aniObj = new animals("Ominovrous");
+    console.log(aniObj.animName);
+    aniObj.animName="Carniovrorus"
+    console.log(aniObj.animName);
+
+    let jimmy = new dog("Jimmy dear");
+    console.log(jimmy.dogDetails);
+</script>         
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

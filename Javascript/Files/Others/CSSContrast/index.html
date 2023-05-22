@@ -1,0 +1,69 @@
+<html>
+<head>
+<title></title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    .buttonLg { width: 108px; height: 64px; padding: 0; margin: 15px 0; overflow: hidden; background-color: transparent;  border: none; }
+    .txtColor { padding:7px 10px; }
+</style>
+</head>
+<body class="" >  
+   
+    <input type="color" class="buttonLg" id="showImg" value=""/>
+    <br/>
+    <input type="button" name="txtColor" class="txtColor" id="txtColor" value="Text colour"/>
+    
+<script type="text/javascript">
+    
+    var eveBut = document.getElementById("showImg");
+
+    eveBut.addEventListener("change",function(){
+
+        var getColour = document.getElementById("showImg").value;
+        console.log(getColour);
+        var r = parseInt(getColour.substr(1,2));
+        console.log(r);
+        var g = parseInt(getColour.substr(3,2));
+        console.log(g);
+        var b = parseInt(getColour.substr(5,2));
+        console.log(b);
+        var yiq = ((r*299)+(g*587)+(b*114))/1000;
+        debugger;
+        console.log(yiq);
+        if(yiq <= 128){
+            document.getElementById("txtColor").style.backgroundColor=getColour;
+            document.getElementById("txtColor").style.color="white";
+        }else{
+            document.getElementById("txtColor").style.backgroundColor=getColour;
+            document.getElementById("txtColor").style.color="black";
+        }
+        //return (yiq >= 128) ? 'black' : 'white';
+    });
+
+
+
+/*
+    function getContrastYIQ(hexcolor){
+	var r = parseInt(hexcolor.substr(0,2),16);
+	var g = parseInt(hexcolor.substr(2,2),16);
+	var b = parseInt(hexcolor.substr(4,2),16);
+	var yiq = ((r*299)+(g*587)+(b*114))/1000;
+	return (yiq >= 128) ? 'black' : 'white';
+}
+*/
+
+</script>
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

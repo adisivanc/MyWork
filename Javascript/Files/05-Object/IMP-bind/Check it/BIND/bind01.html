@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body id="bdy">
+
+  <p id="underScoreDoller"></p>
+
+  <div id="menu">
+    <button data-action="save">Save</button>
+    <button data-action="load">Load</button>
+    <button data-action="search">Search</button>
+  </div>
+  
+  <script type="text/javascript">
+  
+    class Menu {
+      constructor(elem) {
+        this.elem = elem;
+        elem.onclick = this.onClick.bind(this);
+      }
+  
+      save() { alert('saving'); }
+      load() { alert('loading'); }
+      search() { alert('searching'); }
+  
+      onClick(event) {
+        let action = event.target.dataset.action;
+        if (action) {
+          let method = this[action];
+          if (method && typeof method === 'function') {
+            method();
+          } else {
+            console.error(`Method "${action}" not found in Menu class.`);
+          }
+        }
+      };
+    }
+  
+    const menu = document.getElementById('menu'); // Get the menu element by its ID
+    new Menu(menu); // Create a new Menu object with the menu element
+  </script>
+  
+</body>
+</html>

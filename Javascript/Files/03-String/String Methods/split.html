@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>String Methods</title>
+    <style>
+        body { background-color:#222;}
+    </style>
+</head>
+
+<body class="">
+    
+    <p id="demo"></p>
+
+    <script type="text/javascript">
+        
+        // Type 01
+        let alpha01 = "Welcome to the Fake World";
+        let someVar01 = alpha01.split("");
+        console.log(someVar01);
+
+        // Type 03
+        let alpha03 = "Welcome to the Fake World";
+        let someVar03 = alpha03.split(" ");
+        console.log(someVar03);
+
+        // Type 02 by using map and call
+        let alpha02 = "Welcome to the Fake World";
+        let someVar02 = Array.prototype.map.call(alpha02, x => x);
+        console.log(someVar02);
+
+    </script>
+
+</body>
+
+</html>

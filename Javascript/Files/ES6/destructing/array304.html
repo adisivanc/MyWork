@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructing</title>
+</head>
+<body>
+
+    <button class="btn btn-error" onclick="getData()">Fetch Data</button>
+    <button class="btn btn-error" onclick="newData()">New Data</button>
+
+    <script type="text/javascript">
+        let apiURL="https://jsonplaceholder.typicode.com/posts";
+
+        let arrayEle=[];
+
+
+        function getData(){
+            fetch(apiURL,{method:"GET"})
+            .then(resp => resp.json())
+            .then(respo2 => {
+                respo2.forEach(item =>{
+                    if(item.id>90){
+                        arrayEle.push(item);
+                    }
+                })
+            })
+        }
+
+        function newData(){
+            console.log(arrayEle);
+        }
+
+
+    </script>
+</body>
+</html>

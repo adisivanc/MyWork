@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Task</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <link rel="stylesheet" href="./CSS/stylesheet.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<header>
+        <ul>
+            <li><a href="" target="_self">Home</a></li>
+            <li><a href="" target="_self">About Us</a></li>
+            <li><a href="" target="_self">Users</a></li>
+        </ul>
+    
+</header>
+<section>
+    <div class="addBtn"> <input type="button" value="Add" onclick="showAddRecord()" /> </div>
+    <div class="popup hideEle">
+      <div>
+        <nav class="popupHeader">
+          <h4>Add Details </h4>  
+          <button class="closeBtn" onclick="hideAddRecord()"><i class="fa fa-close "></i></button>
+        </nav>
+        <form name="addForm">
+            <div class="fieldCont">
+              <input type="text" name="username" value="" placeholder="Username" required />
+            </div>
+            <div class="fieldCont">
+              <input type="email" name="loginid" value="" placeholder="Login ID" required />
+            </div>
+            <div class="fieldCont">
+              <input type="date" name="dob" value="" placeholder="Date of Birth" required />
+            </div>
+            <div class="fieldCont">
+              <input type="text" name="mobNum" value="" placeholder="Mobile Number" required />
+            </div>
+            <div class="fieldCont">
+              <select name="actState">
+                <option value="default">Please Select</option>
+                <option value="active">Active</option>
+                <option value="inactive">InActive</option>
+              </select>
+            </div>
+            <div class="fieldCont">
+              <input type="button" name="saveAddForm" value="Save" onclick="addRecord()" />
+            </div>
+        </form>
+      </div>
+    </div>
+    <div class="tableCont">
+    <table class="table">
+        <thead>
+          <tr>
+            <th>S.No</th>
+            <th>Username</th>
+            <th>Login ID</th>
+            <th>Date of Birth</th>
+            <th>Mobile Number</th>
+            <th>Status</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>John</td>
+            <td>John</td>
+            <td>John</td>
+            <td>John</td>
+            <td>John</td>
+            <td>John</td>
+            <td>John</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+</section>
+<footer>
+
+</footer>
+<script type="text/javascript" src="./JS/script.js"></script>
+</body>
+</html>

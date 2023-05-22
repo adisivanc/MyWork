@@ -1,0 +1,56 @@
+<html>
+<head>
+<title></title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    button { width: 200px; height:48px; background-color:#cc0000; border:1px solid #990000; color:#FFF; border-radius:4px; cursor: pointer; }
+    .fullScreen { width: 250px; height: 250px; overflow: hidden; }
+    .fullScreen img { width:100%; opacity:0 }
+</style>
+</head>
+<body class="" >
+
+<button id="butEle" class="butEle">View Full Screen</button>    
+    
+<div id="fullScreen" class="fullScreen">
+    <img src="img/logBan.png" alt="SomeImg" title="Learning" id="Fullimg"  />
+</div>
+    
+<script type="text/javascript">
+        
+        /*Not Working*/
+		document.body.addEventListener('keypress',function(e){
+            alert();
+            if(e.key=="Escape"){
+               document.getElementById("Fullimg").style.opacity="0"; 
+            }
+        });
+        /*Not Working*/
+    
+        const btclick = document.getElementById("butEle");
+        const fullMode = document.getElementById("Fullimg");
+        btclick.addEventListener("click",() => {
+            Fullimg.style.opacity="1";
+            Fullimg.requestFullscreen();
+            
+            /*
+            if(x===1){
+                document.getElementById("Fullimg").style.opacity="0"; 
+            }
+            */
+        });
+</script>
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

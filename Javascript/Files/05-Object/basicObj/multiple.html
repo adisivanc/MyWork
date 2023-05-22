@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./../../../../../support/css/bootstrap.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    
+    <p class="lead"></p>
+
+    <script type="text/javascript">
+        //alert("1");
+        function member(name, age, sex, workdt) {
+            this.name = name;
+            this.age = age;
+            this.sex = sex;
+            this.workdetail = workdt;
+        }
+
+        function work(position, salary, experience, location) {
+            this.position = position;
+            this.salary = salary;
+            this.experience = experience;
+            this.location = location;
+        }
+
+        //alert("2");
+        var workobj = new work('UI', '3,00,000', '7+ years', 'Noida')
+        var personDt = new member('Ahmad Khan', '24', 'male', workobj.position);
+        var personDt02 = new member('Richa Kumari', '26', 'female', workobj.position);
+
+        document.write(personDt.name+" with age of "+personDt.age+" work position as "+personDt.workdetail);
+        document.writeln("<br/>");
+        document.write(personDt02.name+" with age of "+personDt02.age+" work position as "+personDt02.workdetail);
+
+     </script>
+</body>
+</html>

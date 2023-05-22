@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            ADISIVAN JS 
+        </title>
+        
+    </head>
+    <body>
+        <div id="container">
+            <h4>Check Console Log</h4>
+        </div>
+        <script type="text/javascript">
+        
+            const apiURL = 'https://jsonplaceholder.typicode.com/users';
+
+            const xhr=new XMLHttpRequest();
+            xhr.onreadystatechange = function(){
+                try{
+                    if(this.readyState==4 && this.status==200){
+                        let data = JSON.parse(xhr.response);
+                        console.log(data);
+                    }else{
+                        throw new Error("Something wrong with you");
+                    }
+                }
+                catch(err){
+                    console.log(err);
+                }
+            }
+
+            xhr.open("GET",apiURL,true);
+            xhr.send();
+        </script>
+    </body>
+</html>

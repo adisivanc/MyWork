@@ -1,0 +1,39 @@
+<html>
+<head>
+<title></title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    #nameString {  }
+    .btnVal { }
+</style>
+</head>
+<body class="" >  
+
+    <input type="text" name="nameString" id="nameString" value="" />
+
+    <button class="btnVal" name="check" onclick="checkString()"> Check</button>
+    
+<script type="text/javascript">
+    function checkString(){
+        var red = document.getElementById("nameString").value;
+        alert(red);
+        var finRead = red.split(/(?=[0-9])/);
+        //var finRead = red.split(/(?=[0-9]*[a-z]+)/);
+        //var finRead = red.split(/(?=[^a-zA-Z]/);
+        alert(finRead);
+    }
+</script>
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

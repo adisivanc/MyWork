@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            ADISIVAN JS 
+        </title>
+        <link href="../../Style/style.css" type="text/css" rel="stylesheet" />
+    </head>
+    <body>
+        <div id="container">
+            <h4>Check Console Log</h4>
+            <p id="para01"></p>
+            <br/><hr/><br/>
+            <input type="button" name="" id="" value="CONFIRM" onclick="callConfirm()" />
+        </div>
+        <script type="text/javascript">
+            let naMe = prompt("Idiot please enter your name","defaultNameAdiSivaN"); 
+            document.getElementById("para01").innerHTML=naMe;
+
+            callConfirm = () => {
+                let conf = confirm('Are you sure want to exit');
+                (conf == true)?console.log("true"):console.log("false");
+            }
+            
+        </script>
+    </body>
+</html>

@@ -1,0 +1,46 @@
+<html>
+<head>
+<title></title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    
+</style>
+</head>
+<body class="" >
+
+<div onclick="callClosure()">Click here</div>
+    
+    
+<script type="text/javascript">
+        var linkArr=["https://google.co.in/","https://www.w3schools.com/","http://www.tutorialspoint.com"];
+        console.log(linkArr);
+        var txtStr="";
+        console.log(txtStr);
+
+        const callClosure = (function(){
+                
+                let i=0;
+                
+                return function(){
+                        txtStr.link(linkArr[i]);
+                        alert(txtStr.link(linkArr[i]));
+                        debugger;
+                        if(i<(linkArr.length-1)){  i++; }else{ i=0; }                               
+                }
+                
+        })();
+</script>
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
