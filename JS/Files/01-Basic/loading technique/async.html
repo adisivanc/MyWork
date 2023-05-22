@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading</title>
+
+    <link rel="stylesheet" href="./../../../../support/css/bootstrap.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        code pre{ background-color:#333;color:#FFF; font-size:18px; padding-top:20px; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+    <h4>Shallow Copy</h4>
+    <p>A shallow copy is a copy that only goes one level deep. In other words, it copies the object and all its properties, but any nested objects or arrays will still reference the same memory location as the original object. It means that if you make changes to the nested object, it will also affect the original object, as well as the copied object.
+        
+        Here is an example of shallow copying an object using the spread operator:
+    </p>
+        
+    <code>
+    <pre>
+        const originalObject = { a: 1, b: { c: 2 } };  
+        const shallowCopy = { ...originalObject };  
+    </pre>
+    </code>
+    <p>
+        In this example, originalObject has a nested object b that has a property c. The spread operator ... is used to create a new object shallowCopy that is a shallow copy of originalObject. This means that if we make changes to shallowCopy, it will not affect originalObject:
+    </p>
+
+
+    <script async src="./jsForLoad/script.js" type="text/javascript"></script>
+
+
+    <code>
+    <pre>
+        shallowCopy.a = 3; // Changes shallowCopy, but not originalObject  
+        shallowCopy.b.c = 4; // Changes both shallowCopy and originalObject 
+    </pre> 
+    </code>
+    <p>
+        As you can see, changing the value of the property a on shallowCopy does not affect originalObject. However, changing the value of the property c on the nested object b affects both shallowCopy and originalObject.
+        
+        It is because shallowCopy and originalObject both have a reference to the same nested object b. When we modify b on shallowCopy, it modifies the same object on originalObject.
+    </p>
+    </div>
+
+
+
+</body>
+</html>

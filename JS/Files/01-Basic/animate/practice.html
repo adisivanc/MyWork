@@ -1,34 +1,36 @@
+<!DOCTYPE html>
 <html>
-<head>
-<title>JavaScript Animation</title>
-<script type="text/javascript">
-    
-</script>
-</head>
-<body>
-    <h4 id="sampleTxt"></h4>
-    <form>
-        <img id="myImage" src="img/logBan.png" />
-        <p>Click the buttons below to handle animation</p>
-        <input type="button" value="Start" onclick="moveRight();" />
-        <input type="button" value="Stop" onclick="stop();" />
-    </form>
+    <head>
+        <title>
+            ADISIVAN JS 
+        </title>
+        <link rel="stylesheet" href="./../../../../../support/css/bootstrap.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    </head>
+    <body>
+        <div id="container">
+            <h4>Check Console Log</h4>
+            <br/>
+            <img src="../../../images/logBan.png" alt="Banner" id="image" height="120"/>
+            <br/><br/>
+            <input type="button" value="Move" onclick="moveImage()" />
+            <input type="button" value="Stop" onclick="stopImage()" />
+        </div>
 
-    <script type="text/javascript">
-        let imgID = document.getElementById("myImage");
-        imgID.style.position="relative";
-        imgID.style.top="0px";
-        imgID.style.left="0px";
-        imgID.style.height="200px";
+        <script type="text/javascript">
+            const imgrc = document.getElementById("image");
+            imgrc.style.position = "relative";
+            imgrc.style.top = "0px";
+            imgrc.style.left = "0px";
+            let animater;
 
-        moveRight = () =>{
-            imgID.style.left=parseInt(imgID.style.left)+1+"px";
-            animateR = setTimeout(moveRight,3000);
-        }
-        stop = () => {
-            clearTimeout(animateR);
-        }
-    
-    </script>
-</body>
+            moveImage = () => {
+                imgrc.style.left = parseInt(imgrc.style.left) + 1 + 'px';
+                animater = setTimeout(moveImage,100);
+            } 
+            stopImage = () => {
+                clearTimeout(animater);
+            }     
+        </script>
+    </body>
 </html>

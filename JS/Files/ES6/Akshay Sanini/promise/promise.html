@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise</title>
+</head>
+<body>
+    
+    <div>
+        <h4>Cart Trail</h4>
+        <span></span>
+        <button onclick="createOrder()">Confirm Order</button>
+    </div>
+
+    <script type="text/javascript">
+        const cart = ["Shoes","Table","Fridge"];
+
+        function createOrder(cartList){
+            //Way 01
+            let prom = new Promise(function(resolve,reject){
+                if(!validateCart(cartList)){
+                    const err = new Error("Cart is not valid please check");
+                    reject(err);
+                }
+
+                const orderId="Flipkart2023052217530900"; //orderId from DB 
+                
+                resolve(orderId);
+            })
+            return prom;
+        }
+
+        function validateCart(cartList){
+            //validating here
+            return true;
+        }
+
+        function validateOrderId(idOrder){
+            //Validate orderId
+            return (idOrder.length == 24)&&(idOrder.substring(0,9))?true:false;
+        }
+
+        function paymentReq(idOrder){
+            //Payment Gateway
+            return "Success";          
+        }
+
+
+        function orderPayment(orderId){
+            // Way 02
+            return new Promise(function(resolve,reject){
+                if(!validateOrderId(orderId)){
+                    let ordIdErr = new Error("Order Id Not valid")
+                    reject(ordIdErr);
+                }
+                setTimeout(function(){
+                    resolve(paymentReq(orderId));
+                },2000)  
+            })
+        }
+
+        createOrder(cart)
+        .then(orderId => orderPayment(orderId))
+        .then(payStatus => console.log(payStatus))
+        .catch(err => console.log(err.message))
+
+
+
+    </script>
+
+    <script src="./demo.js" type="text/javascript"></script>
+</body>
+</html>
