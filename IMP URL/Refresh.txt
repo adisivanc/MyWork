@@ -1,8 +1,0 @@
-https://css-tricks.com/many-tools-shape-morphing/
-
-https://developer.mozilla.org/en-US/docs/Web/CSS
-
-http://localhost:4200/
-
-https://www.tutorialspoint.com/angular7/angular7_project_setup.htm
-

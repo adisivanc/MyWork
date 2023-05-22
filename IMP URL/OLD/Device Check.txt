@@ -1,3 +1,0 @@
-http://mobiletest.me/nokia_lumia_920_emulator/?u=http://192.168.5.58:7071/Suryoday/
-
-https://www.browserstack.com/responsive
