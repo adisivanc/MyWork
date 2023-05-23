@@ -4,8 +4,7 @@ body { font:16px/18px Arial,Helvetica,sans-serif;}
 .container { max-width:1024px; margin:0 auto; background-color:#eee; }
 .title { display:flex; justify-content: space-between; background-color:#ccc; padding:15px 20px; }
 
-.container .content { height:295px; transition:all 0.5s linear 0.1s; overflow: hidden; }
-.container .content.collView { height:0; }
+.container .content { color:#333; }
 .mainContent { display:flex; align-items:flex-start; }
 .mainContent img { max-width:240px; }
 .mainContent p { padding:15px 20px;}
