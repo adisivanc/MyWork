@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery</title>
+    <link href="./css/style.css" rel="stylesheet"/>
+</head>
+<body>
+    <div class="container">
+        <div class="title">
+            <div class="page-title">Buying an iPad Mini?</div>
+            <div class="collapseIcon">Icon</div>
+        </div>
+        <div class="content">
+            <div class="mainContent">
+                <div><img src="./img/ipad-mini.jpg" alt="IPAD"></div>
+                <p>
+                    Content
+                </p>
+            </div>
+            <div class="navigation">
+                <div class="prev">Prev</div>
+                <div class="next">Next</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="images"></div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script type="text/javascript">
+        let counter = 0;
+
+        (function() {
+            var apiURL = "http://127.0.0.1:55163/Inspiration/iosys_frontend_developer_test-mine/doing/data/content.json";
+
+            $.getJSON( apiURL, { format: "json"})
+            .done((data) => {
+
+                let dataLength = data.content.length;
+
+                $(".mainContent p").html(data.content[0].description);
+                $(".navigation .next").text(data.content[1].title);
+                $(".navigation .prev").text(data.content[dataLength-1].title);
+
+
+                $(document).on('click', '.prev', function() {
+                    if(counter==0){
+                        counter=dataLength
+                    }
+                    --counter;
+                    $(".mainContent p").html(data.content[counter].description);
+                });
+
+                $(document).on('click', '.next', function() {
+                    ++counter;
+                    if((counter>0)&&(counter<=dataLength)){
+                        if(counter==dataLength){ counter=0; }
+                        $(".mainContent p").html(data.content[counter].description);
+                    } 
+                })
+            });
+        })();
+
+        $(".collapseIcon").click(function(){
+            $(".content").toggleClass("collView");
+        })        
+    </script>
+</body>
+</html>
