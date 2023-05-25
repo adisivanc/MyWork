@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+    <script src="./../support/jQuery.js" type="text/javascript"></script>
+</head>
+<body>
+    <script type="text/javascript">
+        $(function(){
+            console.log("Document is ready now...")
+        })
+
+
+        // Selectors
+        *, id, class, tag, nested tag, attribute
+
+        //Event
+        click,mouseover,keyup
+
+        //Hide
+        $(selector).hide(speed,callback);
+        $(selector).show(speed,callback);
+        $(selector).toggle(speed,callback);
+
+        //Fade
+        $(selector).fadeIn(speed,callback);
+        $(selector).fadeOut(speed,callback);
+        $(selector).fadeToggle(speed,callback);
+        $(selector).fadeTo(speed,opacity,callback);
+
+        //Slide
+        $(selector).slideUp(speed,callback);
+        $(selector).slideDown(speed,callback);
+        $(selector).slideToggle(speed,callback);
+        
+        // Animate {params}-list of CSS need to animate
+        // Relative Values - Every click it will animate
+        // Pre-defined Values - toggle
+        // Queue Functionality - one by one animation
+        $(selector).animate({params},speed,callback);
+
+        // stop animation or other effects
+        $(selector).stop(stopAll,goToEnd);
+
+        // callback
+        $(selector).xyz(firstEvent,callback)
+
+        // chaining
+        $(selector).xyz
+        .slideUp(.......) // First Chain for selector
+        .slideDown(.......) // Second Chain for selector excute after first
+
+
+    </script>
+</body>
+</html>

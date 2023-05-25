@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+    <script src="./js/jquery.js"></script>
+</head>
+<body>
+    
+    <img src="./img/pexels-photo-10546234.jpeg" alt="Poverty" class="changeImg" width="400px" />
+
+    <script>
+        $(document).ready(function(){
+            $('.changeImg').on('click',function(){
+                let attrStr = $(this).attr("src").toString();
+                let stringIndex = attrStr.lastIndexOf("/");
+                let imgName = attrStr.slice(stringIndex+1);
+                let newImgSrc = attrStr.slice(0,stringIndex+1).toString()+"pexels-photo-12322444.jpeg";
+                $(this).attr("src",newImgSrc);
+            })
+        })
+    </script>
+</body>
+</html>
