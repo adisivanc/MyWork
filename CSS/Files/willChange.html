@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .circle {
+          width:36px;
+          height: 36px;
+          transform: translate(36px, 0px);
+          border-radius:50%;
+        }
+        .circle.blue {
+          background: #06456d;
+          will-change:contents;  
+        }
+        .circle.green {
+          background: #035d1e;
+        }
+      </style>
+</head>
+<body>
+    
+    <h2>Will-change property example</h2>
+
+    <div style="transform:rotate(90deg) translate(-145px,-230px); transform-origin:left; ">
+        <div class="circle green"></div>
+        <div class="circle blue"></div>
+        <div class="circle green"></div>
+        <div class="circle blue"></div>
+        <div class="circle green"></div>
+        <div class="circle green"></div>
+        <div class="circle blue"></div>
+        <div class="circle green"></div>
+        <div class="circle green"></div>
+        <div class="circle blue"></div>
+        <div class="circle green"></div>
+    </div>
+
+    <script>
+        var circles = document.getElementsByClassName("circle");
+        
+        function animateIt(t) {
+          for (var i = 0; i < circles.length; i++) {
+            var xpos = Math.sin(t / 1000 + 1000 * i) * 54 + 72;
+            circles[i].style.transform = "translate(" + xpos + "px, 0px)";
+          }
+          window.requestAnimationFrame(animateIt);
+        }
+        animateIt();
+    </script>
+</body>
+</html>
