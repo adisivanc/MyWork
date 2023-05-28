@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    // Create a project folder
+
+    // In VS Code Terminal {Enter all to default}
+    npm init
+
+    // VS Terminal Next { Node Module }
+    npm install -D tailwindcss
+
+    // VS Terminal Initialize Tailwind {-p is for?}
+    npx tailwindcss init -p
+
+    // In tailwind config file
+    content: ["./src/**/*.{html,js}"]
+
+    // Include Style
+    <link href="./style.css" rel="stylesheet"/>
+
+    // Create two style
+    one inside source and another outside
+
+    // outside css
+    @tailwind base;
+    @tailwind components;
+    @tailwind utilities;
+
+    // package.json {in scripts} {input file and output file configuartion}
+    // {outside is input and src style is output}
+    "tailwind:build:dev":"npx tailwindcss -i ./style.css -o ./src/style.css --watch"
+
+    // VS Terminal
+    npm i -D servor npm-run-all
+
+    // Package json file
+    "tailwind:build:dev": "npx tailwindcss -i ./style.css -o ./src/style.css --watch",
+    "server":"servor src index.html 8080 --browse --reload",
+    "dev":"run-p \"tailwind:build:dev\" \"server\""
+
+    // VS Terminal
+    npm run dev
+
+    
+</body>
+</html>
