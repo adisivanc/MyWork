@@ -1,62 +1,44 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title></title>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-    body { background-color:#eee;font-family: Arial, Helvetica, sans-serif; }
-    input[type=text] { font-size:15px;padding:5px 12px; }
-    button { font-size:15px; padding:8px 15px; background-color:#c00; color:#FFF; border:2px solid #890000; }
-</style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
-<body class="" >
+<body>
+     
+    <form name="objForm" method="GET">
+        <input type="text" name="ObjTxt" value=""/>
+        <p class="para" id="level01"></p>
+    </form>
 
+    <button id="butEle" class="btn btn-lg btn-primary" onclick="getEmpDt()">Button</button>
     
-<form name="objForm" method="GET">
-    <input type="text" name="ObjTxt" value=""/>
-    <p class="para" id="level01"></p>
-</form>
+    <script type="text/javascript">
+        class Person {
+            constructor(){
+                this.firstName="Katrina";
+                this.lastName="Kaif";
+            }
+            fullName(){
+                return this.firstName+" "+this.lastName;
+            }
+        }
 
-<button id="butEle" class="butEle" onclick="getEmpDt()">Button</button>
-    
-<script type="text/javascript">
+        class Professinal extends Person {
+            constructor(){
+                super();
+                this.professinal = "Actress";
+                this.location = "Mumbai";
+            }
+            fullDetails(){
+                return this.fullName()+" was the "+this.professinal+" from "+this.location
+            }
+        }
 
-class Person {
-    constructor(){
-        this.firstName="Katrina";
-        this.lastName="Kaif";
-    }
-    fullName(){
-        return this.firstName+" "+this.lastName;
-    }
-}
-
-class Professinal extends Person {
-    constructor(){
-        super();
-        this.professinal = "Actress";
-        this.location = "Mumbai";
-    }
-    fullDetails(){
-        return this.fullName()+" was the "+this.professinal+" from "+this.location
-    }
-}
-
-
-const empObj = new Professinal();
-console.log(empObj.fullDetails());
-
-</script>
-    
+        const empObj = new Professinal();
+        console.log(empObj.fullDetails());
+    </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-

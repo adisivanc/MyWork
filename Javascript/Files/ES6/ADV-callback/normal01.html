@@ -1,43 +1,35 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title></title>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-    body { background-color:#eee;font-family: Arial, Helvetica, sans-serif; }
-    input[type=text] { font-size:15px;padding:5px 12px; }
-    button { font-size:15px; padding:8px 15px; background-color:#c00; color:#FFF; border:2px solid #890000; }
-</style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="./../../../../support/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="./../../../../support/js/tailwind-3.3.1.js" type="text/javascript"></script>
+
 </head>
-<body class="" >
-
+<body>
     
-<form name="objForm" method="GET">
-    <input type="text" name="ObjTxt" value=""/>
-    <p class="para" id="level01"></p>
-</form>
-
-<button id="butEle" class="butEle" onclick="getEmpDt()">Button</button>
-    
-<script type="text/javascript">
+    <script type="text/javascript">
         
-function myFirst() { myDisplayer("Hello"); }
-function mySecond() { myDisplayer("Goodbye"); }
-function myDisplayer(para){ console.log(para); }
-myFirst();
-mySecond();
+        function myFirst() { 
+            myDisplayer("Hello");
+        }
+        function mySecond() { 
+            myDisplayer("Goodbye");
+        }
 
-</script>
-    
+        function myDisplayer(para){ 
+            document.write(para); 
+            document.write("<br/>"); 
+        }
+
+        myFirst();
+        mySecond();
+        
+    </script>
+
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
