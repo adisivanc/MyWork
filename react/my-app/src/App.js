@@ -1,5 +1,6 @@
 import Header from "./Header";
 import Content from "./Content";
+import Menu from "./Menu";
 import Footer from "./Footer";
 
 function App() {
@@ -7,7 +8,10 @@ function App() {
   return (
     <div>
       <Header/>
-      <Content/>
+      <section className="flex">
+        <div><Content/></div>
+        <div className="ml-auto"><Menu/></div>
+      </section>
       <Footer/>
     </div>
   );
