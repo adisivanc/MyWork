@@ -1,8 +1,6 @@
 function App() {
   return (
-    <div className='bg-red-900 w-screen h-screen'>
-
-    </div>
+      <div>Hello World</div>
   );
 }
 

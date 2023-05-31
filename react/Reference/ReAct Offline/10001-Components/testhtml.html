@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+
+    <title>react function comp</title>
+
+    <script src="./../reactjs/react.production.min.js"></script>
+    <script src="./../reactjs/react-dom.production.min.js"></script>
+    <script src="./../reactjs/babel.js"></script>
+
+    <link href="./../css/style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div id="root">
+        <div id="contr"></div>
+        <div id="others"></div>
+    </div>
+    
+
+    <script type="text/babel">
+        const WireComp = (wObj) =>{
+            return <table className="wire01">
+                    <thead>
+                        <tr>
+                            <th>Wire Type</th>
+                            <th>Wire Size</th>
+                            <th>Wire Cost</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>{wObj.name}</td>
+                            <td>{wObj.size}</td>
+                            <td>{wObj.cost}</td>
+                        </tr>
+                        <WireProp colour={wObj.colour} offer={wObj.offer} warranty={wObj.warranty}></WireProp>
+                    </tbody>
+                </table>
+        }
+
+        const WireProp = (prop) => {
+            return <tr>
+                            <td>{prop.colour}</td>
+                            <td>{prop.offer}</td>
+                            <td>{prop.warranty}</td>
+                        </tr>
+        }
+
+        const wObj = <WireComp name="finolex" size="200m" cost="3200" colour="black" offer="10%" warranty="5 year"></WireComp>
+        ReactDOM.render(wObj,document.getElementById("root"));
+    </script>
+  </body>
+</html>

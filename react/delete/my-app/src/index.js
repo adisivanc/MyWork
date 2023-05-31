@@ -4,6 +4,11 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+/*Tailwind Elements*/
+import { Carousel, initTE } from "tw-elements";
+initTE({ Carousel });
+/*Tailwind Elements*/
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
