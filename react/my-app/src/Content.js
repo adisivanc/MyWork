@@ -1,17 +1,12 @@
 import React from "react"
+import List from "./List"
 
 const Content = () => {
-
-    let styleObj = {
-        backgroundColor:"#990000",
-        color:"#FFFFFF",
-        padding:"10px 20px",
-        borderRadius:"4px"
-    }
-
     return (
-        <section className="p-5">
-            <span style={styleObj}>Without Tailwind</span>
+        <section className="p-5 w-full">
+            <div className="w-3/12">
+                <List/>
+            </div>
         </section>
     )
 }

@@ -9,8 +9,8 @@ function App() {
     <div>
       <Header/>
       <section className="flex">
-        <div><Content/></div>
-        <div className="ml-auto"><Menu/></div>
+        <div className="w-full"><Content/></div>
+        <div className="ml-auto w-auto"><Menu/></div>
       </section>
       <Footer/>
     </div>
