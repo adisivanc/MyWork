@@ -1,9 +1,13 @@
+import Header from "./Header"
+import Main from "./Main"
+import Footer from "./Footer"
 
 function App() {
   return (
     <>
-      <p className="bg-yellow-900 p-10">App Component</p>
-      <button className="btn btn-primary">Bootstrap</button>
+      <Header/>
+      <Main/>
+      <Footer/>
     </>
   );
 }
