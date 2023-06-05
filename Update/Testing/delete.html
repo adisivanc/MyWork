@@ -4,39 +4,48 @@
     <title></title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
 </head>
 <body>
-    
-    <select>
-        <option value="one">one</option>
-        <option value="two">two</option>
-        <option value="three">three</option>
-    </select>
 
-    <br/>
-
-    <select style="appearance:none;">
-        <option value="one">one</option>
-        <option value="two">two</option>
-        <option value="three">three</option>
-    </select>
-
-    <div>
-        <input type="checkbox" value="one" name="chooseNumber" /> One
-        <input type="checkbox" value="two" name="chooseNumber" /> Two
-        <input type="checkbox" value="three" name="chooseNumber" /> Three
-    </div>
-
-    <div>
-        <input type="radio" value="one" name="one" /> One
-        <input type="radio" value="two" name="two" /> Two
-        <input type="radio" value="three" name="three" /> Three
-    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>User ID</th>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Body</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!--Data will append here-->
+        </tbody>
+    </table>
 
 
-    <script type="text/javascript">
-        
+    <script>
+
+const apiURL = "https://jsonplaceholder.typicode.com/posts";
+
+fetch(apiURL,{method:"GET"})
+.then(jsonData=> jsonData.json())
+.then(data=>{
+    localStorage.setItem("jsonData",JSON.stringify(data));
+})
+
+
+        const listObj = JSON.parse(localStorage.getItem("jsonData"));
+        let tableRows = "";
+
+        listObj.map((item)=>{
+            tableRows+=`<tr>
+                <th>${item.userId}</th>
+                <th>${item.id}</th>
+                <th>${item.title}</th>
+                <th>${item.body}</th>
+            </tr>`
+        })
+
+        document.querySelector("tbody").innerHTML = tableRows;
     </script>
 </body>
 </html>
