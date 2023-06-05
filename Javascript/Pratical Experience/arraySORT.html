@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Using Closest</title>
+    <title>Array Games</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/css/bootstrap.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/js/bootstrap.bundle.min.js" type="text/javascript"></script>
@@ -17,6 +17,15 @@
                 <button class="btn btn-warning" onclick="fetchData()">Fetch Data</button>
             </div>
             <div class="ms-auto">
+                <span>
+                    Sort by
+                    <select class="sortData" onchange="sortBy(event)">
+                        <option value="id" selected>ID</option>
+                        <option value="userId">User ID</option>
+                        <option value="title">Title</option>
+                        <option value="body">Content</option>
+                    </select>
+                </span>
                 <span>
                     <input type="search" class="searchText" placeholder="Search" onkeyup="searchData(event)" />
                 </span>
@@ -41,7 +50,7 @@
                     <th class="text-center">User ID</th>
                     <th class="text-center">ID</th>
                     <th>Title</th>
-                    <th>Body</th>
+                    <th>Content</th>
                 </tr>
             </thead>
             <tbody id="appendDataHere">
@@ -60,64 +69,78 @@
         .then(jsonData => jsonData.json())
         .then(data => {
             console.log(data);
-            localStorage.setItem("apiData",JSON.stringify(data));
+            localStorage.setItem("apiData03",JSON.stringify(data));
         })
 
-        const listOfData = JSON.parse(localStorage.getItem("apiData"));
+        const listOfData = JSON.parse(localStorage.getItem("apiData03"));
         let text="";
 
 
+        // SORT
+        function sortBy(e){
+            let sortType = e.target.value;
+
+            let sortedArr = listOfData.sort((a,b)=>{
+                return b[sortType] - a[sortType];
+            });
+
+            console.log(sortedArr);
+            filterData(sortedArr,0,10);
+        }
+
+        //FOR PAGINATION PURPOSE
         function numRec(e){
-            filterData(0,e.target.value)
+            filterData(listOfData,0,e.target.value)
         }
 
-        filterData(0,10)
-
-        function fetchData(startInd,numOfRecords){
-            filterData(startInd,numOfRecords)
+        //
+        function fetchData(listOfData,startInd,numOfRecords){
+            filterData(listOfData,startInd,numOfRecords)
         }
-        //1788 10
+        //Think 1788 records in json data how?
 
-        function filterData(startIndex,lengthOfFetch){
+        //Real Fetching Data
+        function filterData(paraArr=listOfData,startIndex,lengthOfFetch){
             let noOfData = startIndex + lengthOfFetch;
             for(startIndex;startIndex<noOfData;startIndex++){
                 text+=`<tr>
-                    <td class="text-center">${listOfData[startIndex].id}</td>
-                    <td class="text-center">${listOfData[startIndex].userId}</td>
-                    <td>${listOfData[startIndex].title}</td>
-                    <td>${listOfData[startIndex].body}</td>
+                    <td class="text-center">${paraArr[startIndex].id}</td>
+                    <td class="text-center">${paraArr[startIndex].userId}</td>
+                    <td>${paraArr[startIndex].title}</td>
+                    <td>${paraArr[startIndex].body}</td>
                 </tr>`
             }
             document.querySelector("#appendDataHere").innerHTML=text;
             text="";
         }
+
+        //Initial Load
+        filterData(listOfData,0,10)
         
+        //Search {hotcode as title now}
         function searchData(e){
             if(e.target.value){
-            let searchTxt = e.target.value.toLowerCase();
-            let searchTitle;
+                let searchTxt = e.target.value.toLowerCase();
+                let searchTitle;
 
-            let filteredArr = listOfData.filter((item)=>{
-                searchTitle = item.title.toLowerCase();
-                return searchTitle.includes(searchTxt)
-            })
+                let filteredArr = listOfData.filter((item)=>{
+                    searchTitle = item.title.toLowerCase();
+                    return searchTitle.includes(searchTxt)
+                })
 
-            console.log(filteredArr);
+                document.querySelector("#appendDataHere").innerHTML="";
+                let text="";
 
-            document.querySelector("#appendDataHere").innerHTML="";
+                filteredArr.map((item)=>{
+                    text+=`<tr>
+                        <td class="text-center">${item.id}</td>
+                        <td class="text-center">${item.userId}</td>
+                        <td>${item.title}</td>
+                        <td>${item.body}</td>
+                    </tr>`
+                })
 
-            let text="";
-
-            filteredArr.map((item)=>{
-                text+=`<tr>
-                    <td class="text-center">${item.id}</td>
-                    <td class="text-center">${item.userId}</td>
-                    <td>${item.title}</td>
-                    <td>${item.body}</td>
-                </tr>`
-            })
-
-            document.querySelector("#appendDataHere").innerHTML=text;
+                document.querySelector("#appendDataHere").innerHTML=text; 
             }else{
                 filterData(0,10)
             }
