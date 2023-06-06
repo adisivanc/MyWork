@@ -1,11 +1,11 @@
 import React from "react";
 
-const Main = () => {
+const Landing = () => {
     return (
         <>
-           Main 
+            Landing
         </>
     )
 }
 
-export default Main;
+export default Landing;
