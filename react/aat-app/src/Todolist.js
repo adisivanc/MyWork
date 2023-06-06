@@ -1,11 +1,11 @@
 import React from "react";
 
-const Main = () => {
+const Todolist = () => {
     return (
         <>
-           Main
+            To do List
         </>
     )
 }
 
-export default Main;
+export default Todolist;
