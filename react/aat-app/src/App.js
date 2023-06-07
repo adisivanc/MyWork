@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import BeforeLoginLayout from './BeforeLoginLayout';
-import AfterLoginLayout from './AfterLoginLayout';
+import BeforeLoginLayout from './components/BeforeLoginLayout';
+import AfterLoginLayout from './components/AfterLoginLayout';
 
 const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
