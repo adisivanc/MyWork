@@ -6,8 +6,7 @@ let duplicate =[];
 let withoutDup = myArr.reduce((acc,val,index)=>{
 	if(acc.indexOf(val) === -1){
 		acc.push(val);
-	}
-	else{
+	}else{
 		if(duplicate.indexOf(val) === -1){
 			duplicate.push(val);
 		}
