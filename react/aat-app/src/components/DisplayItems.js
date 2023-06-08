@@ -6,6 +6,7 @@ const DisplayItems = ({itemsList,setItemsList}) => {
 
     const [searchItem,setSearchItem] = useState("");
     const [showPopup,setShowPopup] = useState(false);
+    const [editItem,setEditItem] = useState(null);
 
     const handleCheck = (paramID) => {
         const newCheckArr = itemsList.map((item)=>{
@@ -14,12 +15,18 @@ const DisplayItems = ({itemsList,setItemsList}) => {
         return setItemsList(newCheckArr);
     }
 
-    const handleEdit = (editID) => {
-        console.log(editID);
+    const handleEdit = (editId) => {
+        const editItem = itemsList.find((item)=>(item.id===editId));
+        setEditItem(editItem);
+        setShowPopup(!showPopup);
     }
 
     const handleDelete = (deleteID) => {
-        console.log(deleteID);
+        const newListArr = itemsList.filter((item)=>{
+            return (item.id!==deleteID)
+        })
+
+        setItemsList(newListArr);
     }
 
     const handleAdd = (e) => {
@@ -62,8 +69,8 @@ const DisplayItems = ({itemsList,setItemsList}) => {
             </ul>
         </form>
         {
-                <Popup showPopup={showPopup} setShowPopup={(show)=>setShowPopup(show)} />
-            }
+            <Popup editItem={editItem} setEditItem={(val)=>setEditItem(val)} showPopup={showPopup} itemsList={itemsList} setItemsList={(newItem)=>setItemsList(newItem)} setShowPopup={(show)=>setShowPopup(show)}/>
+        }
         </div>
     )
 }
