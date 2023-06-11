@@ -12,20 +12,36 @@
     </style>
 </head>
 <body>
+
+    // For proper responsive behaviour
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <div class="row changesINboot5">
+    // Bootstrap 5 default
+    
+    <xmp>
+    box-sizing: border-box;
+    font-size:1rem 
+    line-height:1.5
+    p - margin-top: 0 and margin-bottom: 1rem
+    </xmp>
+    </div>
     
     <div class="row breakpoint">
         //Breakpoint
-        <h4>0-576</h4>
-        <h4>576-768</h4>
-        <h4>768-992</h4>
-        <h4>992-1200</h4>
-        <h4>1200-1400</h4>
-        <h4>1400-Infinty</h4>
+
+        <h4>0-575</h4> xs
+        <h4>576-768</h4> sm
+        <h4>768-992</h4> md
+        <h4>992-1200</h4> lg
+        <h4>1200-1400</h4> xl
+        <h4>1400-Infinty</h4> xxl
     </div>
 
 
     <div class="row container">
-        //Container
+        // Container {Left and right for padding 0.75rem by default }
+
         <h4>container-fluid</h4>
         <h4>container</h4>
         <h4>container-sm {100% for and smaller width} md/lg/xl/xxl</h4>
@@ -33,7 +49,7 @@
 
 
     <div class="row">
-        //Take equal width for all size {0-Infinity}
+        // Take equal width for all size {0-Infinity}
         <xmp>
         <div class="col"></div>
         <div class="col"></div>
@@ -43,7 +59,7 @@
 
 
     <div class="row">
-        // col 8 and 4 until sm { For extra small full width}
+        // col 8 and 4 until small { For extra small full width}
         // Automatic responsive
         <xmp>
         <div class="col-sm-8"></div>
@@ -54,69 +70,82 @@
     
     <div class="row text">
         //Text
+
+        <h4>.h1 - .h6</h4>
         <h4>display-1/6  {Make heading come out size}</h4>
 
         //Text Special
         <xmp>
-        <small></small>
-        <mark></mark>
-        <abbr></abbr>
-        <strong></strong>
-        <em></em>
-        <blockquote></blockquote>
-        <blockquote-footer></blockquote-footer>
-        <dl>
-            <dt></dt>
-            <dd></dd>
-        </dl>
-        <code></code>
-        <kbd></kbd>
-        <pre></pre>
+            <small></small>
+            <mark></mark>
+            <abbr></abbr>
+            <strong></strong>
+            <em></em>
+
+            <blockquote class="blockquote"></blockquote>
+            <blockquote-footer></blockquote-footer>
+
+            <dl>
+                <dt></dt>
+                <dd></dd>
+            </dl>
+            <code></code>
+            <kbd></kbd>
+            <pre></pre>
         </xmp>
 
         {Text} {P tag by default margin bottom 1rem}
 
         <xmp>
-            <p class="lead"></p>
-            <p class="text-start"></p>
-            <p class="text-center"></p>
-            <p class="text-end"></p>
-            <p class="text-break"></p>
-            <p class="text-nowrap"></p>
+            lead
+            text-start
+            text-center
+            text-end
+            text-break
+            text-nowrap
+            text-decoration-none
+        </xmp>
+
+        <xmp>
+            .text-muted
+            .text-psiwds ld
+            .text-body (default body color/often black) 
+
+            // With Opacity only for black and white
+            .text-black-50 or .text-white-50
+        </xmp>
+
+        <xmp>
+            // Background-color
+
+            bg-psiwds ld
+        </xmp>
+
+        <xmp>
+            //Automatically handle text color 
+
+            .text-bg-*
         </xmp>
     </div>
    
-
-    <div class="row list">
-        //List
-        <h4>list-unstyled</h4>
-        <h4>list-inline</h4>
-    </div>
-
-    <div class="row list-group">
-        //LIST
-        {List Group ul li}
-        <h4>list-group</h4>
-        <h4>list-group-item {active, disabled} </h4>
-        <h4>list-group-item-action {Give hover effect use in li}</h4>
-        <h4>list-group-flush {Remove outer border use in ul}</h4>
-        <h4>list-group-numbered {Numbered list}</h4>
-        <h4>list-group-horizontal {ul}</h4>
-        <h4>list-group-item-primary/success/etc {li}</h4>
-    </div>
-    
-
     <div class="row table">
         //Table
-        <h4>table-primary/.table-secondary</h4>
-        <h4>table-success/.table-danger/.table-info/.table-warning</h4>
-        <h4>table-active</h4>
-        <h4>table-light/.table-dark</h4>
+        <xmp>
+        table
+
+        <h4>table-psiwds ld</h4>
+
         <h4>table-sm</h4>
+        <h4>table-bordered/borderless</h4>
+        <h4>table-striped</h4>
+        <h4>table-hover</h4>
+
+        
+        // For div {inside that div table will be there}
+
         <h4>table-responsive</h4>
         <h4>table-responsive-sm/md/lg/xl/xxl</h4>
-        <h4>table-bordered/borderless</h4>
-        <h4>table-striped/.table-hover</h4>
+        </xmp>
     </div>
 
     <div class="row image">
@@ -128,6 +157,111 @@
         <h4>img-fluid {Full Width}</h4>
     </div>
 
+    <div class="row alert">
+        {Alert fade and show for Animation / dismissible for close icon}
+        <xmp>
+        div > button
+
+        alert alert-danger alert-dismissible fade show {For div}
+        btn-close {For close icon} & data-bs-dismiss="alert" {For close action}
+
+        alert-psiwds ld
+        </xmp>
+    </div>
+
+    <div class="row btn">
+        <xmp>
+        btn >
+
+        btn-psiwds ld
+
+        btn-link
+
+        btn-outline-psiwds ld
+
+        btn-sm/lg
+
+        d-grid > btn-block
+
+
+        // Use spinner inside button
+
+        spinner-border  spinner-border-sm
+        spinner-grow  spinner-grow-sm
+        </xmp>
+
+        <xmp>
+            btn-group
+            btn-group-sm/lg
+            btn-group-vertical
+            btn-close {for close icon}
+        </xmp>
+    </div>
+
+
+    <div class="row badge">
+        // Can be used inside any element {Notification number}
+
+        badge rounded-pill bg-psiwds ld
+    </div>
+
+
+    <div class="row progress">
+        progress >
+        progress-bar progress-bar-striped progress-bar-animated
+    </div>
+
+    <div class="row pagination">
+        {ul li a}
+        <xmp>
+            pagination/pagination-sm/lg  {ul} >
+
+            page-item {li} {.disabled}
+            page-link {a} {.active}
+
+            justify-content-center
+            justify-content-end
+        </xmp>
+    </div>
+
+
+    <div class="row breadcrumb">
+        {Breadcrumb ul li a}
+        <xmp>
+        breadcrumb {ul}
+        breadcrumb-item {li} {active}
+        Here anchor tag empty no class needed
+        </xmp>
+    </div>
+
+
+    <div class="row list">
+        //List
+        <h4>list-unstyled</h4>
+
+        <h4>
+            list-inline {ul} <br/>
+            list-inline-item 
+        </h4>
+    </div>
+
+
+
+    <div class="row list-group">
+        //LIST
+        {List Group ul li}
+        <xmp>
+        <h4>list-group</h4>
+        <h4>list-group-item {active, disabled} </h4>
+        <h4>list-group-item-action {Give hover effect use in li}</h4>
+        <h4>list-group-flush {Remove outer border use in ul}</h4>
+        <h4>list-group-numbered {Numbered list}</h4>
+        <h4>list-group-horizontal {ul}</h4>
+        <h4>list-group-item-primary/success/etc {li}</h4>
+        </xmp>
+    </div>
+    
+
     <div class="row float">
         //FLOAT
         <h4>float-start/.float-end {float left right}</h4>
@@ -135,25 +269,17 @@
         <h4>clearfix {clear both}</h4>
     </div>
 
-    <div class="row alert">
-        {Alert fade and show for Animation / dismissible for close icon}
-        alert alert-danger alert-dismissible fade show
+    
+    <div class="row card">
+        //CARD
+        <h4>card-header</h4>
+        <h4>card-title</h4>
+        <h4>card-body</h4>
+        <h4>card-footer</h4>
+        <h4>card-img-top/bottom {img tag}</h4>
+        <h4>card-img-overlay {image will overlay}</h4>
     </div>
-
-    <div class="row button">
-        //Button
-        <h4>btn</h4>
-        <h4>btn-primary/dark/light/warning/danger/info/success/secondary</h4>
-        <h4>btn-sm/lg</h4>
-        <h4>btn-outline-primary/etc</h4>
-        <h4>btn-block</h4>
-        <h4>disabled/.active</h4>
-        <h4>spinner-border /.spinner-border-sm / spinner-grow Inside button</h4>
-        <h4>btn-group</h4>
-        <h4>btn-group-sm/lg</h4>
-        <h4>btn-group-vertical</h4>
-        <h4>btn-close</h4>
-    </div>
+    
 
     <div class="row dropdown">
         //DROPDOWN
@@ -168,42 +294,12 @@
     </div>
 
 
-    <div class="row progress">
-        <h4>progress</h4>
-        <h4>progress-bar</h4>
-        <h4>progress-bar-striped</h4>
-        <h4>progress-bar-animated</h4>
-    </div>
-
-    <div class="row pagination">
-        {Pagination ul li a}
-        <h4>justify-content-center/justify-content-end</h4>
-        <h4>pagination/pagination-sm/lg</h4>
-        <h4>page-item {.disabled}</h4>
-        <h4>page-link {.active}</h4>
-    </div>
-
-    <div class="row breadcrumb">
-        //BREADCRUMB
-        {Breadcrumb ul li a}
-        <h4>breadcrumb</h4>
-        <h4>breadcrumb-item {active}</h4>
-        here a tag empty no class needed
-    </div>
-    
+    <div class="row accordion">
+        Accordion
+    </div>   
 
 
-    <div class="row card">
-        //CARD
-        <h4>card-header</h4>
-        <h4>card-title</h4>
-        <h4>card-body</h4>
-        <h4>card-footer</h4>
-        <h4>card-img-top/bottom {img tag}</h4>
-        <h4>card-img-overlay {image will overlay}</h4>
-    </div>
-
-
+    <xmp>
     <div class="row nav">
         //NAV
         {Nav ul li a}
@@ -233,6 +329,28 @@
         <h4>nav-item {li}</h4>
         <h4>nav-link {a}</h4>
     </div>
+    </xmp>
+
+
+    <div class="row carousel">
+        Carousels
+    </div> 
+
+    <div class="row modal">
+        Modal
+    </div> 
+
+    <div class="row tooltip">
+        Tooltip
+    </div> 
+
+    <div class="row popover">
+        Popover
+    </div> 
+
+
+
+
 
 
     <div class="row sidebar">
@@ -363,31 +481,9 @@
     <xmp>
     visible/invisible
 
-    shadow
-
-
-    popover {+script}
-
-    toast {+script}
-
-    tooltip {+script}
-
-    ScrollSpy {position Sticky concept}
-
-    .collapse
-    .show
-
-    
-    {Use Separately or inside button}
-    .badge
-    .rounded-pill
-
+    shadow    
 
     // Grid
-
-    {Not Supported}
-    Jumbotron 
-
     </xmp>
 
 </body>

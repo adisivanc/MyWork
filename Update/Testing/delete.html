@@ -1,51 +1,37 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title></title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #dropArea { width:400px; height:400px; border:1px solid #900; }
+        img { max-width:300px; }
+    </style>
 </head>
 <body>
+    
+    <div id="dropArea" ondragover="allowDrop(event)" ondrop="dropHere(event)">
 
-    <table>
-        <thead>
-            <tr>
-                <th>User ID</th>
-                <th>ID</th>
-                <th>Title</th>
-                <th>Body</th>
-            </tr>
-        </thead>
-        <tbody>
-            <!--Data will append here-->
-        </tbody>
-    </table>
+    </div>
 
+    <img draggable="true" src="https://images.pexels.com/photos/17137556/pexels-photo-17137556/free-photo-of-wood-animal-tree-lizard.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Drag and Drop" id="dragMee" ondragstart="dragFunc(event)" />
 
-    <script>
+    <script type="text/javascript">
+        function dragFunc(ev){
+            //ev.preventDefault();
+            ev.dataTransfer.setData("drag",ev.target.id);
+        }
 
-const apiURL = "https://jsonplaceholder.typicode.com/posts";
+        function allowDrop(ev){
+            ev.preventDefault();
+        }
 
-fetch(apiURL,{method:"GET"})
-.then(jsonData=> jsonData.json())
-.then(data=>{
-    localStorage.setItem("jsonData",JSON.stringify(data));
-})
-
-
-        const listObj = JSON.parse(localStorage.getItem("jsonData"));
-        let tableRows = "";
-
-        listObj.map((item)=>{
-            tableRows+=`<tr>
-                <th>${item.userId}</th>
-                <th>${item.id}</th>
-                <th>${item.title}</th>
-                <th>${item.body}</th>
-            </tr>`
-        })
-
-        document.querySelector("tbody").innerHTML = tableRows;
+        function dropHere(ev){
+            ev.preventDefault();
+            var abc = ev.dataTransfer.getData("drag");
+            ev.target.appendChild(document.getElementById(abc));
+        }
     </script>
 </body>
 </html>
