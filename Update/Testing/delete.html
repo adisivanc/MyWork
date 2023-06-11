@@ -11,27 +11,49 @@
 </head>
 <body>
     
-    <div id="dropArea" ondragover="allowDrop(event)" ondrop="dropHere(event)">
 
-    </div>
+    <button type="button" onclick="multiply()">Trigger</button>
 
-    <img draggable="true" src="https://images.pexels.com/photos/17137556/pexels-photo-17137556/free-photo-of-wood-animal-tree-lizard.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Drag and Drop" id="dragMee" ondragstart="dragFunc(event)" />
 
     <script type="text/javascript">
-        function dragFunc(ev){
-            //ev.preventDefault();
-            ev.dataTransfer.setData("drag",ev.target.id);
+        
+        const fetchData = () => {
+            return new Promise((resolve,reject)=>{
+
+                setTimeout(function(){
+                    const success = Math.random() < 0.5;
+
+                    if(success){
+                        const dummyData = {
+                            firstName:"Adisivan",
+                            lastName:"Chinnasamy",
+                            city:"NNP"
+                        }
+                        resolve(dummyData);
+                    }else{
+                        reject("Fetch data Failed")
+                    }
+                },2000)
+
+            })
         }
 
-        function allowDrop(ev){
-            ev.preventDefault();
+        const userDetails = async () => {
+
+            try{
+                const userData = await fetchData();
+                console.log("Userdata",userData);
+                console.log("Userdata",userData.firstName);
+                console.log("Userdata",userData.lastName);
+                console.log("Userdata",userData.city);
+            }catch(err){
+                console.log(err.message)
+            }finally{
+                console.log("Finally")
+            }
         }
 
-        function dropHere(ev){
-            ev.preventDefault();
-            var abc = ev.dataTransfer.getData("drag");
-            ev.target.appendChild(document.getElementById(abc));
-        }
+        userDetails();
     </script>
 </body>
 </html>

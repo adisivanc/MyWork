@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="./../../../../support/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="./../../../../support/js/tailwind-3.3.1.js" type="text/javascript"></script>
+</head>
+<body>
+    
+    <div class="bg-red-200">
+        <div class="container mx-auto bg-purple-400">
+            <h4 id="demo" class="p-5 text-xl font-bold"></h4>
+        </div>
+    </div>
+        
+    <script type="text/javascript">
+        const fetchUserData = () => {
+            return new Promise((resolve, reject) => {
+                // Simulating an asynchronous API call to fetch user data
+                setTimeout(() => {
+                    const success = Math.random() < 0.5; // Simulate success or failure randomly
+
+                    if (success) {
+                        const userData = {
+                        name: "John Doe",
+                        age: 30,
+                        email: "johndoe@example.com"
+                        };
+                        // Resolve the Promise with the fetched user data
+                        resolve(userData);
+                    } else {
+                        // Reject the Promise with an error message
+                        reject("Failed to fetch user data");
+                    }
+                }, 2000);
+            });
+        };
+
+        const displayUserData = async () => {
+        try {
+            // Fetch user data using the fetchUserData function
+            const userData = await fetchUserData();
+            // Display the user data
+            console.log("User data:", userData);
+            console.log("Name:", userData.name);
+            console.log("Age:", userData.age);
+            console.log("Email:", userData.email);
+        } catch (error) {
+            // Handle any errors that occurred during fetching or processing the data
+            console.error("Error:", error);
+        }
+        };
+
+        // Call the displayUserData function
+        displayUserData();
+
+    </script>
+</body>
+</html>
+
