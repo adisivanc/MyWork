@@ -5,55 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        #dropArea { width:400px; height:400px; border:1px solid #900; }
-        img { max-width:300px; }
+        .dynText { position: relative; height: 24px; background-color: #333; width: 100px; display: inline-block; color: #FFF; border-radius: 4px; padding: 5px 10px; }
+        #dynText span { position:absolute; left:30px; top:-10px; display: inline-block; line-height: 42px; transition:all 1s linear 0s; }
+        #dynText span { transform:translateY(0px); }
+        #dynText #current { transform:translateY(0px); }
+        #dynText #current.notActive { transform:translateY(-30px); }
+        #dynText #next { transform:translateY(30px); }
+        #dynText #next.active { transform:translateY(0px); }
     </style>
 </head>
 <body>
     
 
-    <button type="button" onclick="multiply()">Trigger</button>
+    <div>
+        <span class="dynText" id="dynText">
+            <span id="current">AAAA</span>
+            <span id="next">BBBB</span>
+        </span>
+    </div>
 
 
     <script type="text/javascript">
+
+        let dynText = document.getElementById("dynText");
         
-        const fetchData = () => {
-            return new Promise((resolve,reject)=>{
+    
+        (function() {
+                let dynArr = ["Ocean", "River", "Sea", "Pond"];
+                
+                setInterval(function(){
 
-                setTimeout(function(){
-                    const success = Math.random() < 0.5;
+                    let dynText1 = document.getElementById("current");
+                    let dynText2 = document.getElementById("next");
 
-                    if(success){
-                        const dummyData = {
-                            firstName:"Adisivan",
-                            lastName:"Chinnasamy",
-                            city:"NNP"
-                        }
-                        resolve(dummyData);
-                    }else{
-                        reject("Fetch data Failed")
-                    }
-                },2000)
+                    setTimeout(function() {
+                        dynText1.classList.add("notActive");
+                        dynText2.classList.add("active");
+                        setTimeout(function() {
+                            dynText1.remove();
+                            dynText2.classList.remove("active");
+                            dynText2.setAttribute("id", "current");
 
-            })
-        }
-
-        const userDetails = async () => {
-
-            try{
-                const userData = await fetchData();
-                console.log("Userdata",userData);
-                console.log("Userdata",userData.firstName);
-                console.log("Userdata",userData.lastName);
-                console.log("Userdata",userData.city);
-            }catch(err){
-                console.log(err.message)
-            }finally{
-                console.log("Finally")
-            }
-        }
-
-        userDetails();
+                            let abc = document.createElement("span");
+                            abc.innerHTML = dynArr[1];
+                            abc.setAttribute("id", "next");
+                            dynText.appendChild(abc);
+                            let rmvElem = dynArr.shift();
+                            dynArr.push(rmvElem);
+                        }, 500);
+                    },1000);
+                },4000)
+        })();
+            
     </script>
 </body>
 </html>
