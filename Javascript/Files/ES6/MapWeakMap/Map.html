@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./../../../../support/css/bootstrap.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <script src="./../../../../support/js/bootstrap.bundle.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/js/bootstrap.bundle.min.js" type="text/javascript"></script>
+</head>
+<body>
+    
+    
+    <xmp>
+        Map - Kind of Object
+
+        Data storage {Key/Value}
+        Counting {No.of Occurance}
+        Caching {Retrieve from cache}
+        Maintaining order {Insertion Order}
+    </xmp>
+
+    <script type="text/javascript"> 
+
+        //Example for Key/Value
+        const objMap = new Map();
+
+        // Key is any type Number, String and object
+        objMap.set("keyVal",{name:"Siva",age:32});
+
+        console.log(objMap);
+        console.log(objMap.has("keyVal")?objMap.get("keyVal"):"Not Found");
+
+
+        //Example for Counting { Duplicate we can find easily}
+
+        const countVal = new Map();
+        const fruits = ["apple","orange","graps","apple","banana","apple","orange"];
+
+        fruits.forEach((fruit)=>{
+            debugger;
+            const count = countVal.get(fruit) || 0; // In Map getting value
+            countVal.set(fruit,count+1);
+        })
+
+        console.log(countVal);
+
+    </script>
+</body>
+</html>
