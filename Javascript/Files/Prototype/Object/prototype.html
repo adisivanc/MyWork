@@ -10,6 +10,13 @@
 </head>
 <body>
 
+    <xmp>
+        Syntax
+        
+        objectConstructorName.prototype.key = 'value';
+    </xmp>
+
+
     <script type="text/javascript">
 
         // constructor function
@@ -22,11 +29,16 @@
         const person1 = new Person();
         const person2 = new Person();
 
+
+
         // adding property to constructor function
         Person.prototype.gender = 'male';
+
         Person.prototype.detailsFunc = function(){
             return this.name+" "+this.age;
         }
+
+
 
         // prototype value of Person
         console.log(Person.prototype);
