@@ -12,29 +12,11 @@
 
     <script type="text/javascript">
 
-        // constructor function
-        function Person () {
-            this.name = 'John',
-            this.age = 23
+        const obj = { name: "John", age: 27, location: "Nepal" };
+
+        for(let [k,v] of Object.entries(obj)){
+            console.log(k,v);
         }
-
-        // creating objects
-        const person1 = new Person();
-        const person2 = new Person();
-
-        // adding property to constructor function
-        Person.prototype.gender = 'male';
-        Person.prototype.detailsFunc = function(){
-            return this.name+" "+this.age;
-        }
-
-        // prototype value of Person
-        console.log(Person.prototype);
-
-        // inheriting the property from prototype
-        console.log(person1.gender);
-        console.log(person2.gender);
-        console.log(person2.detailsFunc());
 
     </script>
 </body>
