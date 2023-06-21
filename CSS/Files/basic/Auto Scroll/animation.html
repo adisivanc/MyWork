@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{margin:0;font-size:42px;font-family:sans-serif;color:#333;overflow:hidden}
+        .orb{width:50px;height:50px;background:#999;border-radius:50px;display:inline-block;margin:0 24.7px;float:left;transition:all .2s ease-out}
+        .orb:hover{transform:scale(1.2);opacity:.5;cursor:pointer}
+
+        .red{background:red}
+        .yellow{background:#ff0}
+        .blue{background:blue}
+        .orange{background:orange}
+        .purple{background:purple}
+        .green{background:green}
+        
+        .marquee{height:200px;width:800px;border:2px solid #eee;overflow:hidden;box-sizing:border-box;position:relative;margin:200px auto}
+        .marquee--inner{display:block;width:200%;margin:70px 0;position:absolute;animation:marquee 20s linear infinite}
+        .marquee--inner:hover{animation-play-state:paused}
+        span{float:left;width:50%}
+
+        @keyframes marquee {
+            0%{left:0}
+            100%{left:-100%}
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="marquee">
+        <div class="marquee--inner">
+            <span>
+                <div class="orb"></div>
+                <div class="orb red"></div>
+                <div class="orb yellow"></div>
+                <div class="orb blue"></div>
+                <div class="orb orange"></div>
+                <div class="orb purple"></div>
+                <div class="orb green"></div>
+                <div class="orb"></div>
+            </span>
+            <span>
+                <div class="orb"></div>
+                <div class="orb red"></div>
+                <div class="orb yellow"></div>
+                <div class="orb blue"></div>
+                <div class="orb orange"></div>
+                <div class="orb purple"></div>
+                <div class="orb green"></div>
+                <div class="orb"></div>
+            </span>
+        </div>
+    </div>
+
+</body>
+</html>
