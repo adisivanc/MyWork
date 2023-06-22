@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="./assets/css/style.css" rel="stylesheet"/>
+</head>
+<body id="body">
+    <div>
+        <header>
+            <div class="container">
+            <div id="logo">
+                <img src="./assets/img/logo.png" alt="CARGOES" title="logo" onclick="scrollToElement('section01')"/>
+            </div>
+            <div id="menu" class="menuTemp">
+                <ul class="navContainer">
+                    <li class="active">
+                        <a href="" title="Features" onclick="scrollToElement('section02')">Features</a> 
+                    </li>
+                    <li>
+                        <a href="" title="Testimonials" onclick="scrollToElement('section03')">Testimonials</a>
+                    </li>
+                    <li>
+                        <a href="" title="Product" onclick="scrollToElement('section04')">Explore The Product</a>
+                    </li>
+                    <li>
+                        <a href="" title="Process" onclick="scrollToElement('section05')">Process</a>
+                    </li>
+                    <li>
+                        <a href="" title="Support" onclick="scrollToElement('section06')">Support</a> 
+                    </li>
+                </ul>
+            </div>
+            </div>
+        </header>
+
+
+        <section class="section01" id="section01">
+            Home
+        </section>
+        
+        <section class="section02" id="section02">
+            Features
+        </section>
+
+        <section class="section03" id="section03">
+            Testimonials
+        </section>
+
+        <section class="section04" id="section04">
+            Explore The Product
+        </section>
+
+        <section class="section05" id="section05">
+            Process
+        </section>
+
+        <section class="section06" id="section06">
+            Support
+        </section>
+        
+    </div>
+
+
+    
+    <script type="text/javascript">
+
+        setInterval(function(){
+            toggleMenu();
+        },20)
+
+        
+        function toggleMenu(){
+            window.addEventListener('scroll', function() {
+                if (window.innerWidth < 992) {
+                    if (window.pageYOffset > 10) {
+                    document.getElementById('logo').classList.add('logoTemp');
+                    document.getElementById('menu').classList.remove('menuTemp');
+                    } else {
+                    document.getElementById('logo').classList.remove('logoTemp');
+                    document.getElementById('menu').classList.add('menuTemp');
+                    }
+                }
+            });
+        } 
+        
+
+        let navItems = document.querySelectorAll('.navContainer li');
+
+        navItems.forEach(navItem => {
+            navItem.addEventListener('click', e => {
+                e.preventDefault();
+                document.querySelector('.navContainer li.active').classList.remove('active');
+                e.target.closest("li").classList.add('active');
+
+                let srcStr= e.target.getAttribute('onclick');
+                let firstInd = srcStr.indexOf("'");
+                let lastInd = srcStr.lastIndexOf("'");
+                let linkStr = srcStr.slice(firstInd+1,lastInd);
+                scrollToElement(linkStr);
+            });
+        });
+
+        var offsetBeh = 64;
+
+        function scrollToElement(elementId) {
+            const element = document.getElementById(elementId);
+            const elementPosition = element.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - offsetBeh;
+
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: "smooth"
+            });
+        }  
+  
+    </script>
+</body>
+</html>
+
+
+
+
+
