@@ -1,8 +1,8 @@
 import React from "react";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
-const ViewTodoList = ({itemsList,setItemsList}) => {
-    
+const ViewTodoList = ({itemsList,setItemsList,showPopup,setShowPopup,editIdDesp,setEditIdDesp}) => {
+
     useEffect(()=>{
         let apiURL="http://localhost:3500/items";
 
@@ -33,7 +33,9 @@ const ViewTodoList = ({itemsList,setItemsList}) => {
     }
 
     const handleEdit = (editId) => {
-        console.log("Edit",editId);
+        let editItemObj = itemsList.find((item)=>(item.id===editId));
+        setEditIdDesp(editItemObj);
+        setShowPopup(!showPopup);
     }
 
     const handleDelete = (deleteId) => {

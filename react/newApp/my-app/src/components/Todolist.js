@@ -1,29 +1,25 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useState } from "react";
 import AddTodolist from "./AddTodoList";
 import ViewTodoList from "./ViewTodoList";
-
-//import closeIcon from "./../assets/close.svg";
-//import delIcon from "./../assets/delete.svg";
-//import editIcon from "./../assets/edit.svg";
+import UserContext from "./UserContext";
 
 const Todolist = () => {
 
     const [searchText,setSearchText] = useState("");
     const [itemsList,setItemsList] = useState([]);
-
-    /*
-    useEffect(()=>{
-        console.log(itemsList);
-    },[itemsList])
-    */
+    const [showPopup, setShowPopup] = useState(false);
+    const [editIdDesp,setEditIdDesp] = useState(null);
 
     return (
         <>
             <form className="todolist">
                 <h3>To do List</h3>
-                <AddTodolist searchText={searchText} setSearchText={(val)=>setSearchText(val)}/>
-                <ViewTodoList itemsList={itemsList} setItemsList={(val)=>setItemsList(val)}/>
+                <UserContext.Provider value={showPopup}>
+                    <AddTodolist searchText={searchText} setSearchText={(val)=>setSearchText(val)} showPopup={showPopup} setShowPopup={(popVal)=>setShowPopup(popVal)} 
+                    itemsList={itemsList} setItemsList={(item)=>setItemsList(item)} editIdDesp={editIdDesp} setEditIdDesp={(editVl)=>setEditIdDesp(editVl)}/>
+                </UserContext.Provider>
+                <ViewTodoList itemsList={itemsList} setItemsList={(val)=>setItemsList(val)} showPopup={showPopup} setShowPopup={(popVal)=>setShowPopup(popVal)} editIdDesp={editIdDesp} setEditIdDesp={(editVl)=>setEditIdDesp(editVl)}/>
             </form>
         </>
     )

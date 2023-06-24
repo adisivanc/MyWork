@@ -1,0 +1,101 @@
+.loginForm { display:flex; justify-content:center; align-items: center; min-height:100vh; }
+.loginForm > form { background-color:#FFFFFF; border:1px solid #cccccc; padding:2rem 3rem; width: 92%; max-width: 354px; border-radius:8px; @include boxShadow; }
+
+ul.todo {
+    margin-top:2rem;
+    & li {
+        margin-bottom:10px;
+        
+        & > div {
+            display:flex; gap: 15px;
+
+            & > div:nth-child(2){
+                flex-grow:1;
+            }
+            input[type="checkbox"]{
+                width:18px; height:18px;
+            }
+            svg{
+                width:32px; height:32px;
+
+                &.editIcon{
+                    fill:#3d0cc2;
+                }
+                &.delIcon{
+                    fill:#990000;
+                    .st0{ fill:none; }
+                }
+            }
+        }
+    } 
+}
+
+.todolist {
+    background-color:#f2fdd6;
+    padding:2rem;
+    border-radius:10px;
+    max-width:450px;
+
+    .addSection { 
+        display:flex; 
+        gap: 20px;
+        margin-top: 1.5rem;
+
+        & > div:first-of-type {
+            flex-grow:1;
+        }
+        span { 
+            background-color: #165609; width:36px; height:36px; text-align: center; border-radius: 4px; display:block;
+            svg {
+                fill:#eeeeee; width:36px; height:36px; padding-top: 7px;
+            }
+        }
+    }
+}
+
+.todoPop {
+    position:fixed;
+    width:100%;
+    height:100%;
+    background-color:rgba(0,0,0,0.5);
+    left:0;
+    top:0;
+    right:0;
+    bottom:0;
+    justify-content: center;
+    align-items: center;
+    
+    & .todoPop-Cont {
+        background-color:#FFFFFF;
+        width:400px; 
+        display:flex;
+        flex-wrap: wrap;
+        border-radius:8px;
+        overflow:hidden;
+
+        & > * { flex-basis:100%; align-self: stretch; }
+        & > div:first-child { align-self:flex-start;}
+        & > div:last-child { align-self:flex-end;}
+    }
+    & .pop-Header {
+        display:flex;
+        background-color:#eeeeee;
+        padding:15px 20px;
+        svg {
+            width:32px; height:32px;
+        }
+    }
+
+    & .pop-Main {
+        padding:20px;
+    }
+
+    & .pop-Footer {
+        padding:10px 20px 20px;
+        text-align:right;
+    }
+
+    .btn {
+        transform:scale(0.9);
+    }
+}

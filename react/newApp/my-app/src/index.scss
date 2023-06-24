@@ -1,42 +1,4 @@
 @import "./scss/reset.scss"; 
 @import "./scss/variables.scss"; 
-@import "./scss/decoration.scss";
-
-* {
-  box-sizing: border-box;
-}
-body {
-  margin: 0;
-  font-family:$fontFamily;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color:$fontColorGray;
-  font-size:$globalFontSize;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
-[onclick] { cursor: pointer; }
-
-.form { 
-  font-size:1.2rem; 
-  & label { font-size:0.85em; }
-  & input { padding:0.4em 0.8em; width:100%; }
-}
-
-.formVer {
-  & label { display:block; }
-  & > span { display:block; margin-bottom:1rem; width:100%; }
-}
-
-.btn { padding:0.6em 1.2em; font-size:0.8em; outline:none; border-radius:4px; border:1px solid currentColor; cursor:pointer; }
-.btn-primary { @extend .btn; background-color:$primaryColor; color:$textWhite; border-color:$primaryDark; &:hover { background-color:$primaryLight;} &:active { background-color:$primaryDark; } }
-
-.loginForm { display:flex; justify-content:center; align-items: center; min-height:100vh; }
-.loginForm > form { background-color:#FFFFFF; border:1px solid #cccccc; padding:2rem 3rem; width: 92%; max-width: 354px; border-radius:8px; @include boxShadow; }
-
-
-
+@import "./scss/common.scss"; 
+@import "./scss/style.scss";
