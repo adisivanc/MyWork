@@ -1,0 +1,19 @@
+{
+    "items": [
+        {
+            "id": 1,
+            "checked": false,
+            "task": "Java Tutorials"
+        },
+        {
+            "id": 2,
+            "checked": true,
+            "task": "SASS Tutorials"
+        },
+        {
+            "id": 3,
+            "checked": false,
+            "task": "RestFul API"
+        }
+    ]
+}
