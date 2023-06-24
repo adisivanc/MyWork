@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bind Function</title>
+</head>
+<body>
+    
+
+    <script type="text/javascript">
+        const obj = {
+            name:"AshSow",
+            func:function(){
+                return this.name;
+            }
+        };
+
+        (function(){
+            let abc = arguments[0]; //2 Function will attach to abc
+            let xyz = abc.bind(obj)();
+            console.log(xyz);
+        })(obj.func); // 1
+    </script>
+</body>
+</html>

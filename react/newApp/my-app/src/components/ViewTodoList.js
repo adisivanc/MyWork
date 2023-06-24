@@ -37,7 +37,10 @@ const ViewTodoList = ({itemsList,setItemsList}) => {
     }
 
     const handleDelete = (deleteId) => {
-        console.log("Delete",deleteId);
+        let afterRmvList = itemsList.filter((item)=>(
+            (item.id!==deleteId)
+        ))
+        setItemsList(afterRmvList);
     }
 
     return (
