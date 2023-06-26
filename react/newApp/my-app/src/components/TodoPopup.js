@@ -1,6 +1,7 @@
 import React, { useContext,useState,useEffect } from "react";
 import UserContext from "./UserContext";
 
+
 const TodoPopup = ({showPopupp,setShowPopup,itemsList,setItemsList,editIdDesp,setEditIdDesp}) => {
 
   const showPopupCont = useContext(UserContext);
@@ -14,10 +15,9 @@ const TodoPopup = ({showPopupp,setShowPopup,itemsList,setItemsList,editIdDesp,se
     setTextDesp("");
     setShowPopup(!showPopupCont);
   }
-
   
   useEffect(()=>{
-    console.log(editIdDesp.task);
+    //console.log(editIdDesp.task);
     let rrr = editIdDesp?setTextDesp(editIdDesp.task):"";
   },[showPopupCont])
   
