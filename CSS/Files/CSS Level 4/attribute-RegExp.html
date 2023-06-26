@@ -11,8 +11,17 @@
     <style>
         body { font-size:2em; }
 
-        p[class="jio"] {
-            font-size:2rem;
+        p[class*="jio"] {
+            font-size:2rem; /*Normal*/
+        }
+
+        p[class="jio" i] {
+            text-decoration:underline; /* i */
+        }
+
+        p[class="jio" s] {
+            color:rgb(92, 39, 25); /* s Not working now {excat match Case Sensitive} */
+            font-weight:bold;
         }
 
     </style>
@@ -20,8 +29,9 @@
 <body>
     
     <p class="jio">JIO</p>
-    <p class="jio">JIO</p>
-
+    <p class="JIO">JIO</p>
+    <p class="jio-mart">JIO</p>
+    <p class="ajio">JIO</p>
 
 </body>
 </html>
