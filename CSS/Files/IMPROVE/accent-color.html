@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :is(input,progress) {
+            accent-color:rgb(252, 7, 215);
+            zoom:2;
+        }
+    </style>
+</head>
+<body>
+    
+    <div>
+        <label for="true">
+            <input type="checkbox" checked="true" id="true" name="true"/> True
+        </label>
+        <label for="false">
+            <input type="radio" id="false" name="false" checked="true" /> True
+        </label>
+    </div>
+
+    <div>
+        <input type="range" id="range" min="0" max="100" />
+    </div>
+
+    <div>
+        <progress min="0" max="100" value="72"></progress>
+    </div>
+
+</body>
+</html>

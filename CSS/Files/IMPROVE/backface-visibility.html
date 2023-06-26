@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card {
+            position: relative;
+            width:400px;
+            aspect-ratio:1/1;
+            perspective: 800px;
+        }
+        .card-front,.card-back {
+            position:absolute;
+            width:100%;
+            height:100%;
+            top:0;
+            left:0;
+            background-color:#eee;
+            backface-visibility: hidden;
+            transition:transform 0.5s;
+        }
+        .card-front {
+            background-color: beige;
+            transform: rotateY(0deg);
+        }
+        .card-back {
+            background-color: aqua;
+            transform: rotateY(180deg);
+        }
+        .card:hover .card-front {
+            transform: rotateY(-180deg);
+        }
+        .card:hover .card-back {
+            transform: rotateY(0deg);
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="card">
+        <div class="card-front">
+          <h2>Front Face</h2>
+          <p>This is the front face of the card.</p>
+        </div>
+        <div class="card-back">
+          <h2>Back Face</h2>
+          <p>This is the back face of the card.</p>
+        </div>
+    </div>      
+
+</body>
+</html>

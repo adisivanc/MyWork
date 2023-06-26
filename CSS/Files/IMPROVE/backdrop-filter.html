@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .outer > div { display:flex;}
+        div.backdrop {
+            background-image: url(./../../../support/img/workplace.jpg);
+            background-repeat:no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width:400px;
+            aspect-ratio:4/3;
+        }
+        .applyBackdropHere {
+            width:300px;
+            aspect-ratio:4/3;
+            background-color:rgba(0,0,0,0.5);
+            border:3px solid #900;
+        }
+
+        div:nth-child(4n+1) .applyBackdropHere {
+            backdrop-filter: blur(2px);
+        }
+        div:nth-child(4n+2) .applyBackdropHere {
+            backdrop-filter: saturate(7);
+        }
+        div:nth-child(4n+3) .applyBackdropHere {
+            backdrop-filter: grayscale(100%);
+        }
+        div:nth-child(4n+4) .applyBackdropHere {
+            backdrop-filter: opacity(50%);
+            backdrop-filter: contrast(180%);
+            backdrop-filter: hue-rotate(180deg);
+            backdrop-filter: invert(80%);
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="outer">
+        <div>
+            <div class="backdrop">
+                <div class="applyBackdropHere">
+                </div>
+            </div>
+
+            <div class="backdrop">
+                <div class="applyBackdropHere">
+                </div>
+            </div>
+
+            <div class="backdrop">
+                <div class="applyBackdropHere">
+                </div>
+            </div>
+
+            <div class="backdrop">
+                <div class="applyBackdropHere">
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
