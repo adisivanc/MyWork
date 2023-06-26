@@ -1,29 +1,19 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route } from "react-router-dom";
+import AfterLogin from "./components/AfterLogin";
+import BeforeLogin from "./components/BeforeLogin";
+import Todolist from "./components/Todolist";
 
 function App() {
 
-  let abc:string ="KO";
-  console.log(abc);
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <>
+      <Routes>
+        <Route path="/" element={<BeforeLogin/>}></Route>
+        <Route path="/landing" element={<AfterLogin/>}></Route>
+        <Route path="/todolist" element={<Todolist/>}></Route>
+      </Routes>
+      </>
   );
 }
 
