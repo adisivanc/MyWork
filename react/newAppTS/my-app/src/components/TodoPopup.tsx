@@ -1,8 +1,18 @@
 import React, { useContext,useState,useEffect } from "react";
 import UserContext from "./UserContext";
 
+interface TodoPopupProps {
+  searchText: string;
+  setSearchText: React.Dispatch<React.SetStateAction<string>>;
+  showPopupp: boolean;
+  setShowPopup: React.Dispatch<React.SetStateAction<boolean>>;
+  itemsList: any; 
+  setItemsList: React.Dispatch<React.SetStateAction<any>>; 
+  editIdDesp: any; 
+  setEditIdDesp: React.Dispatch<React.SetStateAction<any>>; 
+}
 
-const TodoPopup = ({showPopupp,setShowPopup,itemsList,setItemsList,editIdDesp,setEditIdDesp}) => {
+const TodoPopup:React.FC<TodoPopupProps> = ({showPopupp,setShowPopup,itemsList,setItemsList,editIdDesp,setEditIdDesp}) => {
 
   const showPopupCont = useContext(UserContext);
   const [textDesp,setTextDesp] = useState("");
@@ -35,7 +45,7 @@ const TodoPopup = ({showPopupp,setShowPopup,itemsList,setItemsList,editIdDesp,se
                     <h5>Add Task</h5>
                 </div>
                 <div className="pop-Main">
-                    <textarea rows="6" placeholder="Enter Task..." value={textDesp} onChange={(e)=>setTextDesp(e.target.value)}></textarea>
+                    <textarea rows={6} placeholder="Enter Task..." value={textDesp} onChange={(e)=>setTextDesp(e.target.value)}></textarea>
                 </div>
                 <div className="pop-Footer">
                     <button type="button" className="btn btn-primary-outline pointer" onClick={handlePopCancel}>CANCEL</button>

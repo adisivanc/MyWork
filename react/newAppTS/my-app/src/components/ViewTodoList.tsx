@@ -1,7 +1,18 @@
 import React from "react";
 import { useEffect, useState } from "react";
 
-const ViewTodoList = ({itemsList,setItemsList,showPopup,setShowPopup,editIdDesp,setEditIdDesp}) => {
+interface ViewTodoProps {
+    searchText: string;
+    setSearchText: React.Dispatch<React.SetStateAction<string>>;
+    showPopup: boolean;
+    setShowPopup: React.Dispatch<React.SetStateAction<boolean>>;
+    itemsList: any; 
+    setItemsList: React.Dispatch<React.SetStateAction<any>>; 
+    editIdDesp: any; 
+    setEditIdDesp: React.Dispatch<React.SetStateAction<any>>; 
+}
+
+const ViewTodoList:React.FC<ViewTodoProps> = ({itemsList,setItemsList,showPopup,setShowPopup,editIdDesp,setEditIdDesp}) => {
 
     useEffect(()=>{
         let apiURL="http://localhost:3500/items";
@@ -13,7 +24,7 @@ const ViewTodoList = ({itemsList,setItemsList,showPopup,setShowPopup,editIdDesp,
                 let itemsList = await responseData.json();
                 console.log(itemsList);
                 setItemsList(itemsList);
-            }catch(err){
+            }catch(err:any){
                 console.log(err.message)
             }finally{
                 console.log("Finally")
@@ -25,21 +36,21 @@ const ViewTodoList = ({itemsList,setItemsList,showPopup,setShowPopup,editIdDesp,
         },300)
     },[])
 
-    const handleCheck = (checkId) => {
-        let updateCheck = itemsList.map((item)=>{
+    const handleCheck = (checkId:number) => {
+        let updateCheck = itemsList.map((item:any)=>{
             return (item.id===checkId)?{...item,checked:!item.checked}:item;
         })
         setItemsList(updateCheck);
     }
 
-    const handleEdit = (editId) => {
-        let editItemObj = itemsList.find((item)=>(item.id===editId));
+    const handleEdit = (editId:number) => {
+        let editItemObj = itemsList.find((item:any)=>(item.id===editId));
         setEditIdDesp(editItemObj);
         setShowPopup(!showPopup);
     }
 
-    const handleDelete = (deleteId) => {
-        let afterRmvList = itemsList.filter((item)=>(
+    const handleDelete = (deleteId:number) => {
+        let afterRmvList = itemsList.filter((item:any)=>(
             (item.id!==deleteId)
         ))
         setItemsList(afterRmvList);
@@ -48,7 +59,7 @@ const ViewTodoList = ({itemsList,setItemsList,showPopup,setShowPopup,editIdDesp,
     return (
         <>
             <ul className="todo">
-                {itemsList.map((item)=> ( 
+                {itemsList.map((item:any)=> ( 
                     <li className="item" key={item.id}>
                         <div>
                             <div><input type="checkbox" onChange={()=>handleCheck(item.id)} checked={item.checked} /></div>

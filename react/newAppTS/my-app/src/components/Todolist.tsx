@@ -20,7 +20,7 @@ const Todolist = () => {
                     <AddTodolist searchText={searchText} setSearchText={(val)=>setSearchText(val)} showPopup={showPopup} setShowPopup={(popVal)=>setShowPopup(popVal)} 
                     itemsList={itemsList} setItemsList={(item)=>setItemsList(item)} editIdDesp={editIdDesp} setEditIdDesp={(editVl)=>setEditIdDesp(editVl)}/>
                 </UserContext.Provider>
-                <ViewTodoList itemsList={itemsList} setItemsList={(val)=>setItemsList(val)} showPopup={showPopup} setShowPopup={(popVal)=>setShowPopup(popVal)} editIdDesp={editIdDesp} setEditIdDesp={(editVl)=>setEditIdDesp(editVl)}/>
+                <ViewTodoList searchText={searchText} setSearchText={setSearchText} itemsList={itemsList} setItemsList={(val:any)=>setItemsList(val)} showPopup={showPopup} setShowPopup={(popVal:any)=>setShowPopup(popVal)} editIdDesp={editIdDesp} setEditIdDesp={(editVl:any)=>setEditIdDesp(editVl)}/>
             </form>
         </>
     )

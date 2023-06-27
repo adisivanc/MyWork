@@ -20,11 +20,11 @@ const BeforeLogin = () => {
                     <h4>LOGO</h4>
                 </span>
                 <span>
-                    <label for="userName">Username</label>
+                    <label htmlFor="userName">Username</label>
                     <input type="text" id="userName" className="form-input" value={userName} onChange={(e)=>setUserName(e.target.value)} />
                 </span>
                 <span>
-                    <label for="userName">Password</label>
+                    <label htmlFor="userName">Password</label>
                     <input type="password" id="password" className="form-input" value={password} onChange={(e)=>setPassword(e.target.value)} />
                 </span>
                 <span>
