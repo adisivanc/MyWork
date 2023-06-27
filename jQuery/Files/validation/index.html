@@ -9,14 +9,52 @@
     <script src="./../../support/bootstrap/bootstrap.bundle.min.js"></script>
 
     <link href="./choosenJs/chosen.css" rel="stylesheet">
+    <style>
+      .clock { margin-block:10px; }
+    </style>
 </head>
 <body>
     
-      <div>
-        <form id="userId">
-            <label for="fullName">Name</label>
-            <input type="text" name="fullName" id="fullName" placeholder="Enter your name..." />
-        </form>
+      <div class="container">
+        <div class="row vh-100 justify-content-center align-items-center">
+          <div class="col-5">
+            <form id="userId" class="form-control px-5 py-3">
+                <div class="clock text-center text-primary">
+                  <h3 class="lead"><strong>User Registeration Form</strong></h3>
+                </div>
+                <div class="clock">
+                  <label for="fullName">Name</label>
+                  <input type="text" name="fullName" id="fullName" placeholder="Enter your name..." class="form-control" required />
+                </div>
+                <div class="clock">
+                  <label for="dob">DOB</label>
+                  <input type="date" name="dob" id="dob" placeholder="Enter your DOB..." class="form-control" required />
+                </div>
+                <div class="clock">
+                  <label for="eMail">E Mail</label>
+                  <input type="email" name="eMail" id="eMail" placeholder="Enter your email..." class="form-control" required />
+                </div>
+                <div class="clock">
+                  <label for="password">Password</label>
+                  <input type="password" name="password" id="password" placeholder="Password..." class="form-control" required />
+                </div>
+                <div class="clock">
+                  <label for="cPassword">Confirm password</label>
+                  <input type="password" name="cPassword" id="cPassword" placeholder="Confirm Password..." class="form-control" required />
+                </div>
+                <div class="clock">
+                  <label for="mNumber">Confirm password</label>
+                  <input type="text" name="mNumber" id="mNumber" placeholder="Mobile Number..." class="form-control" required />
+                </div>
+                <div class="row mt-4">
+                  <div class="col-12 d-flex gap-4 justify-content-end">
+                    <button type="reset" class="btn btn-outline-primary text-uppercase">Reset</button>
+                    <button type="submit" class="btn btn-primary text-uppercase">Register</button>
+                  </div>
+                </div>
+            </form>
+          </div>
+        </div>
       </div>
 
       <script src="./../../support/js/jquery.js"></script>
