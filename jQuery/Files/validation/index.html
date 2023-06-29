@@ -7,10 +7,12 @@
     <title>Document</title>
     <link href="./../../support/bootstrap/bootstrap.min.css" rel="stylesheet">
     <script src="./../../support/bootstrap/bootstrap.bundle.min.js"></script>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
 
-    <link href="./choosenJs/chosen.css" rel="stylesheet">
     <style>
       .clock { margin-block:10px; }
+      .form-control.error { border:1px solid #900; box-shadow:0 0 0.25rem rgba(253, 13, 25, 0.25) }
+      .form-control.error + label.error { color:#900; }
     </style>
 </head>
 <body>
@@ -18,7 +20,7 @@
       <div class="container">
         <div class="row vh-100 justify-content-center align-items-center">
           <div class="col-5">
-            <form id="userId" class="form-control px-5 py-3">
+            <form id="userRegForm" class="form-control px-5 py-3">
                 <div class="clock text-center text-primary">
                   <h3 class="lead"><strong>User Registeration Form</strong></h3>
                 </div>
@@ -61,7 +63,68 @@
       <script src="./validateJS/jquery.validate.js"></script>
       <script>
         $(document).ready( function () {
-            
+
+          $.validator.setDefaults({
+              submitHandler:function(){
+                alert("Submitted");
+              }
+          });
+
+          $("#userRegForm").validate({
+            rules:{
+              fullName:"required",
+              dob:{
+                required:true,
+                date:true
+              },
+              eMail:{
+                required:true,
+                email:true
+              },
+              password:{
+                required:true,
+                minlength:5
+              },
+              cPassword:{
+                required:true,
+                minlength:5,
+                equalTo:"#password"
+              },
+              mNumber:{
+                required:true,
+                digits:true,
+                maxlength:10,
+                minlength:10
+              }
+            },
+            messages:{
+              fullName:"Name fields can't be empty",
+              dob:{
+                required:"Date fields can't be empty",
+                date:"Please enter correct date Format"
+              },
+              eMail:{
+                required:"Please enter mail id",
+                email:"Correct mail pls"
+              },
+              password:{
+                required:"Please enter password",
+                minlength:"Minimum length 5 needed"
+              },
+              cPassword:{
+                required:"Please confirm password",
+                minlength:"Minimum length 5 needed",
+                equalTo:"Confirm password shouldn't match with password"
+              },
+              mNumber:{
+                required:"Mobile number missing",
+                digits:"Enter number only",
+                maxlength:"Max length exceeds",
+                minlength:"Please correct"
+              }
+            }
+          });
+
         });
       </script>
 </body>
