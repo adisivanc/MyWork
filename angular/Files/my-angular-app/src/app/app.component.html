@@ -1,0 +1,23 @@
+<div>
+  {{title}}
+</div>
+
+<input type="hidden" #selection/>
+
+<div>
+  <button type="button" (click)="selection.value='abc'" tabindex="0">ABC</button>
+  <button type="button" (click)="selection.value='def'" tabindex="0">DEF</button>
+  <button type="button" (click)="selection.value='xyz'" tabindex="0">XYZ</button>
+</div>
+
+<div [ngSwitch]='selection.value'>
+  <div *ngSwitchDefault>ABC</div>
+  <div *ngSwitchCase="'def'">DEF</div>
+  <div *ngSwitchCase="'xyz'">XYZ</div>
+</div>
+
+<div>
+
+</div>
+
+<router-outlet></router-outlet>
