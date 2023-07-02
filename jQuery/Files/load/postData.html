@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery POST with JSON</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h2>Submit JSON Data</h2>
+    <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" />
+        <br />
+        <label for="age">Age:</label>
+        <input type="text" id="age" name="age" />
+        <br />
+        <button id="submitBtn">Submit</button>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $("#submitBtn").on("click", function () {
+                // Get data from input fields
+                var name = $("#name").val();
+                var age = $("#age").val();
+                var jsonData = {
+                    name: name,
+                    age: age
+                };
+
+                // Send the JSON data using POST request
+                $.post({
+                    url: "your-api-endpoint", // Replace with your API endpoint URL
+                    data: JSON.stringify(jsonData),
+                    contentType: "application/json",
+                    success: function (response) {
+                        console.log("POST success:", response);
+                        // Handle the response from the server
+                    },
+                    error: function (error) {
+                        console.error("POST error:", error);
+                        // Handle errors if any
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

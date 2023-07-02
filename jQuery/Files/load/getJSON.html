@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+    <script src="./../../support/js/jquery.js"></script>
+</head>
+<body>
+    
+    <div id="text">Data will load here</div>
+    <button type="button" class="btn text">Load Text</button>
+
+    <div id="json">JSON will load in console</div>
+    <button type="button" class="btn json">Load JSON</button>
+
+
+    <script>
+        $(".btn.text").on('click',function(){
+            $("#text").load("./../../support/data/demo.txt");
+        })
+
+        $(".btn.json").on('click',function(){
+            $.getJSON("./../../support/data/demo.json",function(data){
+                console.log(data);
+            });
+        })
+    </script>
+</body>
+</html>

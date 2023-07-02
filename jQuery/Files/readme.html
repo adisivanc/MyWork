@@ -1,3 +1,8 @@
 $(selector).load(url,callback);
 
-$.getJSON(url,callback);
+$(selector).each(function(index,element)) // Similar to FOREACH
+
+$.get(URL,callback);
+$.post(URL,data,callback);
+
+$(selector).getJSON(url,data,success(data,status,xhr))

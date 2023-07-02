@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Table Iteration with Pagination</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .pagination {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .pagination button {
+            background-color: #f2f2f2;
+            border: 1px solid #ddd;
+            color: black;
+            padding: 8px 16px;
+            margin: 0 4px;
+            cursor: pointer;
+        }
+
+        .pagination button.active {
+            background-color: #4CAF50;
+            color: white;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    
+    <table id="data-table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <div class="pagination"></div>
+
+    <script>
+        // Sample array of objects
+        var arrayOfObjects = [
+            { name: 'John', age: 25 },
+            { name: 'Jane', age: 30 },
+            { name: 'Mark', age: 28 },
+            { name: 'Emily', age: 32 },
+            { name: 'David', age: 27 },
+            { name: 'Sarah', age: 29 }
+        ];
+
+        var itemsPerPage = 2; // Number of items to display per page
+        var currentPage = 1; // Current page number
+
+        // Function to display data in the table for the given page number
+        function displayTableData(pageNumber) {
+            var startIndex = (pageNumber - 1) * itemsPerPage;
+            var endIndex = startIndex + itemsPerPage;
+            var tableBody = $('#data-table tbody');
+            tableBody.empty(); // Clear previous table data
+
+            for (var i = startIndex; i < endIndex && i < arrayOfObjects.length; i++) {
+                var obj = arrayOfObjects[i];
+                var row = '<tr><td>' + obj.name + '</td><td>' + obj.age + '</td></tr>';
+                tableBody.append(row);
+            }
+        }
+
+        // Function to generate pagination buttons
+        function generatePaginationButtons() {
+            var totalPages = Math.ceil(arrayOfObjects.length / itemsPerPage);
+            var pagination = $('.pagination');
+            pagination.empty(); // Clear previous pagination buttons
+
+            for (var i = 1; i <= totalPages; i++) {
+                var button = $('<button>').text(i);
+                if (i === currentPage) {
+                    button.addClass('active');
+                }
+                pagination.append(button);
+            }
+
+            // Add click event handler to pagination buttons
+            pagination.on('click', 'button', function() {
+                currentPage = parseInt($(this).text());
+                displayTableData(currentPage);
+                $('.pagination button').removeClass('active');
+                $(this).addClass('active');
+            });
+        }
+
+        // Initial display of table and pagination
+        displayTableData(currentPage);
+    </script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Array of Objects Iteration</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>&nbsp;</th>
+                <th>forEach()</th>
+                <th>map()&nbsp;</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>1</th>
+                <td>The forEach() method does not returns a &nbsp;new array based on the given array.
+    
+                </td>
+                <td>The map() method returns an entirely new array.</td>
+            </tr>
+            <tr>
+                <th>2</th>
+                <td>The forEach() method returns “<i>undefined</i>“.</td>
+                <td>The map() method returns the newly created array according to the provided callback function.</td>
+            </tr>
+            <tr>
+                <th>3</th>
+                <td>The forEach() method doesn’t return anything hence the method chaining technique cannot be applied
+                    here.&nbsp;</td>
+                <td>With the map() method, we can chain other methods like, reduce(),sort() etc.</td>
+            </tr>
+            <tr>
+                <th><strong>4.</strong></th>
+                <td>It is not executed for empty elements.</td>
+                <td>It does not change the original array.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div id="output"></div>
+
+    <script>
+        // Sample array of objects
+        var arrayOfObjects = [
+            { name: 'John', age: 25 },
+            { name: 'Jane', age: 30 },
+            { name: 'Mark', age: 28 }
+        ];
+
+        // Using $.each() function
+        $.each(arrayOfObjects, function(index, obj) {
+            var message = "Name: " + obj.name + ", Age: " + obj.age;
+            $('#output').append('<p>' + message + '</p>');
+        });
+
+        // Using $.map() function
+        var mappedArray = $.map(arrayOfObjects, function(obj, index) {
+            return "Name: " + obj.name + ", Age: " + obj.age;
+        });
+
+        // Displaying the mapped array
+        $('#output').append('<p>Mapped Array:</p>');
+        $.each(mappedArray, function(index, message) {
+            $('#output').append('<p>' + message + '</p>');
+        });
+    </script>
+</body>
+</html>
