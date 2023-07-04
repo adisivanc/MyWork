@@ -18,13 +18,15 @@
     </div>
 
     <script type="text/javascript">
-        const SimpleNumber = function (value) {
-        return value;
+        function sumGiven(a){
+            return function(b){
+                return function(c){
+                    return a+b+c;
+                }
+            }
         }
-        const number = new SimpleNumber(2009);
-        console.log(number);
-        const result = number == 2009;
-        console.log(result)
+
+        console.log(sumGiven(10)(20)(40));
     </script>
 </body>
 </html>
