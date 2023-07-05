@@ -1,8 +1,32 @@
-$(selector).load(url,callback);
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    
 
 $(selector).each(function(index,element)) // Similar to FOREACH
 
 $.get(URL,callback);
 $.post(URL,data,callback);
 
+
+
+
+//AJAX Methods
+
+$(selector).load(url,data,callback);
+data -> responseTxt,statusTxt,xhr
+
+
 $(selector).getJSON(url,data,success(data,status,xhr))
+here success act as callback
+
+
+
+</body>
+</html>

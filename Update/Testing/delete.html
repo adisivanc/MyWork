@@ -6,6 +6,7 @@
     <title>Document</title>
 
     <link rel="stylesheet" href="./../../support/css/bootstrap.css" />
+    <script src="./../../support/jQuery/jQuery.js"></script>
     <style>
         .listAnim { max-width:92%; overflow: hidden; margin:0 auto; position: relative; }
         .listAnim > li > a { white-space: nowrap; background-color: #900; color: #FFF; padding: 10px; border-radius: 8px; }
@@ -18,15 +19,27 @@
     </div>
 
     <script type="text/javascript">
-        function sumGiven(a){
-            return function(b){
-                return function(c){
-                    return a+b+c;
-                }
-            }
-        }
+        const apiURL = "https://jsonplaceholder.typicode.com/posts";
+        let jsonData;
 
-        console.log(sumGiven(10)(20)(40));
+        let myPromise = new Promise((resolve,reject)=>{
+            try{
+                fetch(apiURL,{method:"GET"})
+                .then(response=>response.json())
+                .then(data=>{
+                    resolve(data);
+                })
+            }catch(err){
+                console.log(err.message);
+            }
+        })
+        
+
+        myPromise
+        .then(data=>{
+            console.log(data);
+        })
+    
     </script>
 </body>
 </html>

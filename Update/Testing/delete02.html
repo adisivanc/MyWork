@@ -32,17 +32,31 @@
       </ul>
 
       <script type="text/javascript">
-          let navItems = document.querySelectorAll(".navConatiner li");
-          let navLinks = document.querySelectorAll(".navConatiner li a");
-
+          
+          const arrayList = [1, 2, 3, [4, 5, [6, 7]]];
           
 
-          navLinks.forEach((navLink)=>{
-            navLink.addEventListener('click',function(ev){
-              ev.preventDefault();
-              navItems.classList.remove("active");
-            });
-          });
+          function deepCopy(arrayParam) {
+            if (!Array.isArray(arrayParam)) {
+              return [];
+            }
+
+            const copyArray = [];
+
+            for (let i = 0; i < arrayParam.length; i++) {
+              if (Array.isArray(arrayParam[i])) {
+                copyArray[i] = deepCopy(arrayParam[i]);
+              } else {
+                copyArray[i] = arrayParam[i];
+              }
+            }
+
+            return copyArray;
+          }
+
+          let result = deepCopy(arrayList);
+          console.log(result);
+
       </script>
 
 </body>
