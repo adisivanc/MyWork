@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * { box-sizing: border-box; font-family: Arial, Helvetica, sans-serif; }
+        body { margin:0; padding:0; font-size:20px; }
+
+        .imgContainer {max-width:800px; overflow:hidden; position: relative; height:240px; }
+        .imgList { list-style-type:none; display:flex; gap:20px; animation: imgScroll 10s linear 0s infinite; position:absolute; left:0; top: 0; }
+        .imgList li { }
+        .imgList li img { max-height:90px; min-width:180px; object-fit: fill; }
+
+        @keyframes imgScroll {
+            0% { left:0; }
+            100% { left:-100%; }
+        }
+    </style>
+</head>
+<body>
+    
+   <div class="imgContainer">
+        <ul class="imgList">
+            <li>
+                <img src="./../../support/img/pexels-david-kooijman-3591318.jpg" alt="Image 01" title="Image 01" />
+            </li>
+            <li>
+                <img src="./../../support/img/pexels-deborah-seychell-13350100.jpg" alt="Image 01" title="Image 01" />
+            </li>
+            <li>
+                <img src="./../../support/img/pexels-dianne-226424.jpg" alt="Image 01" title="Image 01" />
+            </li>
+            <li>
+                <img src="./../../support/img/pexels-emre-can-acer-2110935.jpg" alt="Image 01" title="Image 01" />
+            </li>
+            <li>
+                <img src="./../../support/img/pexels-jeshootscom-442597.jpg" alt="Image 01" title="Image 01" />
+            </li>
+            <li>
+                <img src="./../../support/img/pexels-karolina-grabowska-5840929.jpg" alt="Image 01" title="Image 01" />
+            </li>
+            <li>
+                <img src="./../../support/img/pexels-pixabay-160934.jpg" alt="Image 01" title="Image 01" />
+            </li>
+            <li>
+                <img src="./../../support/img/pexels-pixabay-414144.jpg" alt="Image 01" title="Image 01" />
+            </li>
+        </ul>
+   </div>
+
+</body>
+</html>

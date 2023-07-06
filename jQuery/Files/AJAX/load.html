@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Array of Objects Iteration</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./../../../support/jQuery/jQuery.js" type="text/javascript"></script>
+</head>
+<body>
+    
+    <button type="button" class="loadBtn">Load Data</button>
+    <div class="loadHere">
+        Load here
+    </div>
+
+    <script type="text/javascript">
+
+        const apiURL = "https://jsonplaceholder.typicode.com/photos";
+
+        $(document).ready(function(){
+            $(".loadBtn").on('click',function(){
+                $(".loadHere").load(apiURL);
+            })
+        });
+    </script>
+</body>
+</html>
