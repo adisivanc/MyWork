@@ -19,27 +19,10 @@
     </div>
 
     <script type="text/javascript">
-        const apiURL = "https://jsonplaceholder.typicode.com/posts";
-        let jsonData;
 
-        let myPromise = new Promise((resolve,reject)=>{
-            try{
-                fetch(apiURL,{method:"GET"})
-                .then(response=>response.json())
-                .then(data=>{
-                    resolve(data);
-                })
-            }catch(err){
-                console.log(err.message);
-            }
-        })
-        
+        const url07 = "https://jsonplaceholder.typicode.com/posts";
+        const url03 = "https://jsonplaceholder.typicode.com/photos";
 
-        myPromise
-        .then(data=>{
-            console.log(data);
-        })
-    
     </script>
 </body>
 </html>
