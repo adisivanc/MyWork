@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-    <link rel="stylesheet" href="./../../support/css/bootstrap.css" />
-    <script src="./../../support/jQuery/jQuery.js"></script>
+    <link rel="stylesheet" href="./../../../../support/css/bootstrap.css" />
+    <script src="./../../../../support/jQuery/jQuery.js"></script>
     <style>
         .listAnim { max-width:92%; overflow: hidden; margin:0 auto; position: relative; }
         .listAnim > li > a { white-space: nowrap; background-color: #900; color: #FFF; padding: 10px; border-radius: 8px; }
@@ -20,13 +20,14 @@
 
     <script type="text/javascript">
 
-        const apiUrls = ["https://jsonplaceholder.typicode.com/posts", "https://jsonplaceholder.typicode.com/photos"]; 
+        const url07 = "https://jsonplaceholder.typicode.com/posts";
+        const url03 = "https://jsonplaceholder.typicode.com/photos";
 
-        const fetchUsingAsync = async() =>{
 
+        const fetchUsingAsyncp = async() =>{
             try{
-                const response01 = await fetch(apiUrls[0]);
-                const response02 = await fetch(apiUrls[1]);
+                const response01 = await fetch(url03);
+                const response02 = await fetch(url07);
 
                 if(response01.ok && response02.ok){
                     const data01 = await response01.json();
@@ -35,19 +36,21 @@
                 }else{
                     throw new Error("Server Error");
                 }
+                throw new Error("Data not received");
             }catch(err){
-                console.log("Data not received",err.message);
+                console.log(err.message);
                 throw err;
             }
         }
 
         (async()=>{
             try{
-                const data = await fetchUsingAsync();
+                let data = await fetchUsingAsyncp();
                 console.log(data);
             }catch(err){
                 console.log(err.message);
             }
+            
         })()
     </script>
 </body>
