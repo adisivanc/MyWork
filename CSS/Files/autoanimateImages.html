@@ -14,15 +14,17 @@
         .imgList li { }
         .imgList li img { max-height:90px; min-width:180px; object-fit: fill; }
 
+        /*
         @keyframes imgScroll {
             0% { left:0; }
             100% { left:-100%; }
         }
+        */
     </style>
 </head>
 <body>
     
-   <div class="imgContainer">
+   <div class="imgContainer" >
         <ul class="imgList">
             <li>
                 <img src="./../../support/img/pexels-david-kooijman-3591318.jpg" alt="Image 01" title="Image 01" />
@@ -50,6 +52,23 @@
             </li>
         </ul>
    </div>
+   <script type="text/javascript">
 
+        var element = document.querySelector(".imgList");
+        var animationName = "moveOn";
+        var keyframes = "@keyframes moveOn { from { left: 0; } to { left: 100%; } }";
+        element.animate(animationName, 200);
+
+        var interval = setInterval(function() {
+        let abc = document.getElementsByClassName("imgList")[0];
+
+        if (abc.firstElementChild.style.left < 0) {
+            let def = abc.firstElementChild;
+            abc.removeChild(abc.firstElementChild);
+            abc.appendChild(def);
+        }
+        }, 200);
+
+   </script>
 </body>
 </html>

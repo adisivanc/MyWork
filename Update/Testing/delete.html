@@ -20,35 +20,20 @@
 
     <script type="text/javascript">
 
-        const apiUrls = ["https://jsonplaceholder.typicode.com/posts", "https://jsonplaceholder.typicode.com/photos"]; 
+        const arr = [3,45,2,4,33,232];
 
-        const fetchUsingAsync = async() =>{
+        const sumOfGiven = (...param) => {
+            console.log(param[0]);
 
-            try{
-                const response01 = await fetch(apiUrls[0]);
-                const response02 = await fetch(apiUrls[1]);
+            let sum = param.reduce((acc,val)=>{
+                return acc+val;
+            },0)
 
-                if(response01.ok && response02.ok){
-                    const data01 = await response01.json();
-                    const data02 = await response02.json();
-                    return [data01,data02];
-                }else{
-                    throw new Error("Server Error");
-                }
-            }catch(err){
-                console.log("Data not received",err.message);
-                throw err;
-            }
+            return sum;
         }
 
-        (async()=>{
-            try{
-                const data = await fetchUsingAsync();
-                console.log(data);
-            }catch(err){
-                console.log(err.message);
-            }
-        })()
+        let total = sumOfGiven(3,45,2,4,33,232);
+        console.log(total);
     </script>
 </body>
 </html>
