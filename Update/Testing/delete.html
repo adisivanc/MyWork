@@ -3,21 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Practice</title>
 
     <link rel="stylesheet" href="./../../support/css/bootstrap.css" />
     <script src="./../../support/jQuery/jQuery.js"></script>
-    <style>
-        .listAnim { max-width:92%; overflow: hidden; margin:0 auto; position: relative; }
-        .listAnim > li > a { white-space: nowrap; background-color: #900; color: #FFF; padding: 10px; border-radius: 8px; }
-    </style>
 </head>
 <body>
+    
     <script type="text/javascript">
+        class Animals{
+            constructor(name,type,origin){
+                this.name=name;
+                this.type=type;
+                this.origin=origin;
+            }
 
-        const people = [
+            get fullDetails() {
+                return this.name+" of the type "+this.type+" has origin of "+this.origin;
+            }
+
+            set fullDetails(arrPAss){
+                this.name=arrPAss[0];
+                this.type=arrPAss[1];
+                this.origin=arrPAss[2];
+            }
+        }
+
+        class human extends Animals {
             
-        ]
+        }
+
+        const dog = new Animals("dog","Omnivourous","INDIA");
+        console.log(dog.fullDetails);
+
+        dog.fullDetails = ["germanShepard","Carnioverous","France"];
+        console.log(dog.fullDetails);
 
     </script>
 </body>

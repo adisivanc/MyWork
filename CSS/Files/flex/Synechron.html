@@ -3,51 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Synechron Failed</title>
-    <style> 
-      * { box-sizing: border-box; }
-      body { padding:0; margin:0; font-family:Arial, Helvetica, sans-serif; }
-      .container {
-        display: flex;
-        flex-direction: column;
-        height: 100vh; /* Example: Set container height to full viewport height */
-      }
+    <title>Document</title>
 
-      .header, .footer {
-        flex: 0 0 auto; /* Fixed height */
-        background-color: #ccc;
-        padding: 10px;
-      }
+    <link rel="stylesheet" href="./../../support/css/bootstrap.css" />
+    <script src="./../../support/jQuery/jQuery.js"></script>
+    <style>
+        body { display:flex; height:100vh; flex-direction: column;  }
+        header { background-color:#223377; padding:1em; color:#FFFFFF; }
+        section { display:flex; flex-grow:1; }
+        nav { background-color:#eeeeee; flex-basis:240px; }
+        main { }
+        footer { background-color:#333333; color:#FFFFFF; padding:0.5em 1em; }
 
-      .main-container {
-        flex: 1 1 auto; /* Occupies remaining space */
-        display: flex;
-      }
+        .webNav ul { list-style-type:none; display:flex; flex-wrap: wrap; gap:10px; }
+        .webNav ul li { flex:0 1 100%; }
+        .mobNavIco { display:none; }
 
-      .sidebar, .main-content {
-         /* Equal width distribution */
-        padding: 10px;
-      }
-
-      .sidebar {
-        background-color: #999;
-        flex-basis:200px;
-      }
-
-      .main-content {
-        background-color: #e1e1e1;
-        flex-grow:1;
-      }
+        @media screen and (max-width:767px){
+            .webNav { display:none; }
+            .mobNavIco svg { width:24px; height:24px; fill:#FFFFFF; }
+        }
     </style>
 </head>
 <body>
-    <div class="container">
-        <header class="header">Header</header>
-        <div class="main-container">
-          <aside class="sidebar">Sidebar</aside>
-          <main class="main-content">Main Content</main>
-        </div>
-        <footer class="footer">Footer</footer>
-    </div>      
+    <header>
+        <span class="mobNavIco">
+            <svg xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="svg2" x="0px" y="0px" viewBox="0 0 36 36" style="enable-background:new 0 0 36 36;" xml:space="preserve">
+                <path d="M176-276.2c-0.1,8.5-6.8,15.1-15.4,14.9c-8.2-0.1-14.8-6.8-14.9-15c-0.1-8.4,6.8-15.2,15.2-15.2  C169.4-291.4,176.1-284.7,176-276.2z"/>
+                <path d="M224.8-276.5c0.1,8.5-6.5,15.3-15,15.3c-8.5,0-15.2-6.6-15.2-15.2c0-8.3,6.5-14.9,14.8-15  C217.9-291.6,224.7-285,224.8-276.5z"/>
+                <path d="M258.4-261.2c-8.5,0-15.1-6.7-15.1-15.3c0.1-8.3,6.6-14.9,14.9-15c8.5-0.1,15.3,6.6,15.4,15  C273.7-268,266.9-261.2,258.4-261.2z"/>
+                <g>
+                    <path d="M35,6H1C0.4,6,0,6.3,0,6.8v1.5C0,8.7,0.4,9,1,9h34c0.6,0,1-0.3,1-0.8V6.8C36,6.3,35.6,6,35,6z"/>
+                    <path d="M35,16.5H1c-0.6,0-1,0.3-1,0.8v1.5c0,0.4,0.4,0.8,1,0.8h34c0.6,0,1-0.3,1-0.8v-1.5C36,16.8,35.6,16.5,35,16.5z"/>
+                    <path d="M35,26.9H1c-0.6,0-1,0.3-1,0.8v1.5c0,0.4,0.4,0.8,1,0.8h34c0.6,0,1-0.3,1-0.8v-1.5C36,27.3,35.6,26.9,35,26.9z"/>
+                </g>
+            </svg>
+        </span>
+        Header
+    </header>
+    <section>
+        <nav class="webNav">
+            <ul>
+                <li><a href="#home" target="_self" class="link">Home</a></li>
+                <li><a href="#home" target="_self" class="link">Home</a></li>
+                <li><a href="#home" target="_self" class="link">Home</a></li>
+                <li><a href="#home" target="_self" class="link">Home</a></li>
+            </ul>
+        </nav>
+        <main>Content</main>
+    </section>
+    <footer>Footer</footer>
 </body>
 </html>

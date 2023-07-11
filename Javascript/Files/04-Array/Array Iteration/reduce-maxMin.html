@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reduce</title>
+</head>
+<body>
+    
+    
+
+    <script type="text/javascript">
+
+        const arrEle =[12,3,8,34,9,0,-3,23,-99,128];
+        
+        //Maximum
+        let maximum = arrEle.reduce((accumulator,currentElement,index,array)=>{
+            return (accumulator>currentElement)?accumulator:currentElement;
+        })
+
+        console.log(maximum);
+
+
+        //Maximum
+        let maximum2 = arrEle.reduce((accumulator,currentElement,index,array)=>{
+            return Math.max(accumulator,currentElement);
+        })
+
+        console.log(maximum2);
+
+
+        //Maximum Added arguments
+        let maximum3 = arrEle.reduce((accumulator,currentElement,index,array)=>{
+            return Math.max(accumulator,currentElement);
+        },999)
+
+        console.log(maximum3);
+
+
+
+    </script>
+</body>
+</html>
