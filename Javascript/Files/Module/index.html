@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modules</title>
+    <script src="./script.js" type="module"></script>
+<link rel="shortcut icon" href="https://static-assets-web.flixcart.com/www/promos/new/20150528-140547-favicon-retina.ico">
+    <link rel="icon" type="image/x-icon" href="./../support/img/mywork.ico">
+</head>
+<body>
+    
+    <h5>Script type as module</h5>
+
+    
+    <script type="module">
+        import { welcome } from "./script.js";
+
+        let print = welcome("Girish");
+        console.log("I am from the main page"+print);
+    </script>
+</body>
+</html>

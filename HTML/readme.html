@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML</title>
+
+    <link href="./../support/css/bootstrap.css" rel="stylesheet"/>
+    <link rel="shortcut icon" href="https://static-assets-web.flixcart.com/www/promos/new/20150528-140547-favicon-retina.ico">
+    <link rel="icon" type="image/x-icon" href="./../support/img/mywork.ico">
+</head>
+<body>
+
+    Self closing Tag
+    <br><hr><img><input><link><meta><param>
+    
+    <div class="row">
+    <div class="conatiner text-dark">
+        The <xmp>`<embed>`, `<object>`, and `<iframe>`</xmp> tags are used in HTML to embed external content or media into a web page. While they serve similar purposes, there are differences in how they are used and what they are best suited for:
+
+        1. <xmp>`<embed>`</xmp> tag: The <xmp>`<embed>`</xmp> tag is used to embed external content, typically multimedia files, such as audio or video, into an HTML document. It is a self-closing tag and does not require a closing tag.
+        The content is specified using the `src` attribute, which points to the URL of the file to be embedded. This tag is generally supported by most modern browsers.
+        
+        <xmp>
+        Example:
+        ```html
+        <embed src="video.mp4" type="video/mp4">
+        ```
+        </xmp>
+
+        2. <xmp>`<object>`</xmp> tag: The <xmp>`<object>`</xmp> tag is a versatile tag used to embed various types of external content, including multimedia files and other types of content, such as images, Flash animations, or Java applets. 
+        It provides more flexibility and allows alternative content to be displayed if the embedded content is not supported. The content is specified using the `data` attribute, which points to the URL of the file to be embedded.
+
+        <xmp>
+        Example:
+        ```html
+        <object data="flash.swf" type="application/x-shockwave-flash">
+            <img src="fallback-image.jpg" alt="Fallback image">
+        </object>
+        ```
+        </xmp>
+
+        3. <xmp>`<iframe>`</xmp> tag: This tag is used to embed a separate HTML document within the current document. It allows you to display content from another website or a different part of the same website. 
+        The content is specified using the `src` attribute, which points to the URL of the external document. <xmp>`<iframe>`</xmp> tags are commonly used for embedding maps, videos, or social media content. 
+        It provides a way to isolate the embedded content from the main document, as it acts as a separate browsing context.
+
+        <xmp>
+        Example:
+        ```html
+        <iframe src="https://www.example.com"></iframe>
+        ```
+        </xmp>
+
+        In summary, the <xmp>`<embed>`</xmp> tag is primarily used for embedding multimedia files, the <xmp>`<object>`</xmp> tag offers versatility for embedding various types of content, and the <xmp>`<iframe>`</xmp> tag is used to embed an external HTML document or isolate content from the main document. 
+        The choice of which tag to use depends on the specific requirements and the type of content you want to embed.
+    </div>
+    </div>
+
+
+</body>
+</html>

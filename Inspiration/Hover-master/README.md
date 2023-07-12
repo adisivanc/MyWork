@@ -93,6 +93,8 @@ If you plan on using many Hover.css effects, you may like to reference the entir
 ```html
 <head>
 	<link href="css/hover-min.css" rel="stylesheet">
+<link rel="shortcut icon" href="https://static-assets-web.flixcart.com/www/promos/new/20150528-140547-favicon-retina.ico">
+    <link rel="icon" type="image/x-icon" href="./../support/img/mywork.ico">
 </head>
 ```
 Alternatively you can add a reference into an existing stylesheet like so (this may be useful to WordPress users who are unable to edit HTML):
@@ -137,7 +139,9 @@ To add a Hover.css icon, place the icon HTML inside the element that a Hover.css
 </a>
 ```
 
-In the above code, we have given a link element a class of `hvr-icon-forward` which will make an icon move forward when the link is hovered over. The icon itself is given a class of `hvr-icon` to let Hover.css know that this is the icon we want to animate. In this example, our icon is from FontAwesome, which we've loaded into the `<head></head>` of our web page as per FontAwesome's instructions, like so:
+In the above code, we have given a link element a class of `hvr-icon-forward` which will make an icon move forward when the link is hovered over. The icon itself is given a class of `hvr-icon` to let Hover.css know that this is the icon we want to animate. In this example, our icon is from FontAwesome, which we've loaded into the `<head><link rel="shortcut icon" href="https://static-assets-web.flixcart.com/www/promos/new/20150528-140547-favicon-retina.ico">
+    <link rel="icon" type="image/x-icon" href="./../support/img/mywork.ico">
+</head>` of our web page as per FontAwesome's instructions, like so:
 
 ```html
 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" media="all">

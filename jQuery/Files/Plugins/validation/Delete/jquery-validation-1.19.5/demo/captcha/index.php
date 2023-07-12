@@ -61,6 +61,8 @@ $_SESSION['captcha_id'] = $str;
 		background: #ffbcbc;
 	}
 	</style>
+<link rel="shortcut icon" href="https://static-assets-web.flixcart.com/www/promos/new/20150528-140547-favicon-retina.ico">
+    <link rel="icon" type="image/x-icon" href="./../support/img/mywork.ico">
 </head>
 <body>
 <h1><acronym title="Asynchronous JavaScript And XML">AJAX</acronym> <acronym title="Completely Automated Public Turing test to tell Computers and Humans Apart">CAPTCHA</acronym></h1>
