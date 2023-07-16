@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        ul { list-style-type:none; display:flex; flex-wrap:wrap; gap:20px }
+        ul li { background-color:#dddddd; flex-basis:200px; }
+    </style>
+</head>
+<body>
+    
+    <ul id="work-items"></ul>
+
+    <script>
+        let apiURL = "https://jsonplaceholder.typicode.com/todos";
+
+        fetch(apiURL)
+        .then(response=>response.json())
+        .then(data=>{
+            let filterArray = data.filter(e=>e.completed==true)
+            //console.log(filterArray);
+
+            var newWorkArray = filterArray.map(function(work){
+                let liElement = document.createElement("li");
+                liElement.innerHTML = `
+                    <h4>${work.id}</h4>
+                    <h4>${work.title}</h4>
+                    <h4>${work.userId}</h4>
+                `;
+                document.querySelector("#work-items").appendChild(liElement);
+            });
+            
+        });
+    </script>
+</body>
+</html>

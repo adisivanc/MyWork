@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwinsd.min.css" rel="stylesheet" />
+    <style>
+        
+        .slider{height:60px;position:relative;width:100%;display:grid;place-items:center;overflow:hidden}
+        .slider::before,.slider::after{position:absolute;content:'';height:100%;width:25%;z-index:2;pointer-events:none}
+        .slider::before{left:0;top:0}
+        .slider::after{right:0;top:0;transform:rotateZ(180deg)}
+        .slide-track{width:calc(150px * 20);display:flex;animation:scroll 20s linear infinite;justify-content:space-between}
+        .slide{width:150px;height:60px;display:grid;place-items:center;transition:.5s;cursor:pointer}
+        .slide:hover{transform:scale(0.8)}
+
+        @keyframes scroll {
+            0%{transform:translateX(0px)}
+            100%{transform:translateX(calc(-150px * 10))}
+        }
+        /*
+        @media screen and (max-width: 768px) {
+            .slide-track{width:calc(80px * 20)}
+            .slide-track2{width:calc(80px * 15)}
+            .slide{width:80px}
+            @keyframes scroll {
+            0%{transform:translateX(0px)}
+            100%{transform:translateX(calc(-80px * 10))}
+            }
+        }
+        */
+        
+    </style>
+</head>
+<body class="container mx-auto px-4 sm:px-12 py-8">
+  
+  <div class="slider">
+    <div class="slide-track">
+      <div class="slide bg-red-500">
+        <img src="./../../support/img/company-logo1.svg" alt="" title="">
+      </div>
+      <div class="slide bg-purple-500">
+        <img src="./../../support/img/company-logo2.svg" alt="" title="">
+      </div>
+      <div class="slide bg-blue-500">
+        <img src="./../../support/img/company-logo3.svg" alt="" title="">
+      </div>
+      <div class="slide bg-indigo-500">
+        <img src="./../../support/img/company-logo4.svg" alt="" title="">
+      </div>
+      <div class="slide bg-pink-500">
+        <img src="./../../support/img/company-logo5.svg" alt="" title="">
+      </div>
+      <div class="slide bg-green-500">
+        <img src="./../../support/img/company-logo1.svg" alt="" title="">
+      </div>
+      <div class="slide bg-yellow-500">
+        <img src="./../../support/img/company-logo2.svg" alt="" title="">
+      </div>
+      <div class="slide bg-red-500">
+        <img src="./../../support/img/company-logo3.svg" alt="" title="">
+      </div>
+      <div class="slide bg-gray-500 text-white">
+        <img src="./../../support/img/company-logo4.svg" alt="" title="">
+      </div>
+      <div class="slide bg-blue-800">
+        <img src="./../../support/img/company-logo5.svg" alt="" title="">
+      </div>
+      
+    </div>
+  </div>
+
+</body>
+</html>
