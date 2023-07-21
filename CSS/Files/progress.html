@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.progress-step { position: relative; width: 150px; height: 150px; border-radius:50%;
+    background-color:#ccc; display:inline-block; overflow:hidden; }
+.progress-step span:first-child::before { content:""; position:absolute; border-radius:50%; width: 100px; height: 100px; background-color:#FFF; top:calc(50% - 50px); left:calc(50% - 50px); z-index:3; }
+/*.progress-step span::after { content:""; width:220px; height:170px; background-color:#FF0000; position:absolute; top:-10px; left:calc(50% - 0px); z-index:2; }*/
+
+.progress-step span:first-child::after { content:""; width:220px; height:170px; background-color:#FF0000; position:absolute; top:-10px; left:calc(50% - 0px); z-index:2; }
+.progress-step span:last-child::after { content:""; width:20px; height:40px; background-color:#FF0000; position:absolute; bottom:0px; right:calc(50% - 0px); z-index:2; }
+</style>
+</head>
+<body>
+
+<span class="progress-step">
+	<span></span>
+    <span></span>
+<span>
+
+</body>
+</html>

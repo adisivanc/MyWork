@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+body { font-family: arial; }
+.btnpack { position:relative; width:400px; height:300px }
+.btnpack a:focus { border:none; outline:none; }
+.btnR1 a { position:absolute; bottom:18px; left:calc(200px - 20px); width:50px; height:50px; background-color:#FF0000; color:#FFF; border-radius:25px; text-decoration: none;
+font-size: 2.2rem; text-align: center; line-height: 50px; font-weight: 600; z-index:2; transition: all 0.5s linear 0.25s; }
+.btnR2 a { position:absolute; width:40px; height:40px; background-color:#FF0000; color:#FFF; border-radius:20px; text-decoration: none;
+font-size: 1.25rem; text-align: center; line-height: 40px; font-weight: 600;  }
+.btnR2 a:nth-child(1) { bottom:20px; left:calc(50px - 20px); transition: all 0.25s linear 0.05s; }
+.btnR2 a:nth-child(2) { bottom:160px; left:calc(200px - 15px); transition: all 0.25s linear 0.55s;  }
+.btnR2 a:nth-child(3) { bottom:20px; left:calc(350px - 20px); transition: all 0.25s linear 0.75s; }
+
+
+.btnpack.reunit .btnR2 a:nth-child(1) { transform: translateX(150px); transition: all 0.35s linear 0.35s; }
+.btnpack.reunit .btnR2 a:nth-child(2) { transform: translateY(140px); transition: all 0.35s linear 0.35s; }
+.btnpack.reunit .btnR2 a:nth-child(3) { transform: translateX(-150px); transition: all 0.35s linear 0.35s; }
+
+.btnR1 a:hover, .btnR1 a:focus { transform: scale(1.2); transition: all 0.5s linear 0.25s; }
+
+</style>
+</head>
+<body>
+
+<div class="btnpack">
+	<div class="btnR1">
+		<a href="#" class="" alt="Button"> + </a>
+	</div>
+	<div class="btnR2">
+		<a href="#" class="" alt="Button"> fb </a>
+		<a href="#" class="" alt="Button"> tw </a>
+		<a href="#" class="" alt="Button"> in </a>
+	</div>
+</div>
+
+<script>
+$(document).ready(function(){
+    $(".btnpack").click(function(){
+        if($(this).hasClass("reunit")){
+			$(this).removeClass("reunit");
+		}else { 
+			$(this).addClass("reunit");
+		}
+    });
+});
+</script>
+</body>
+</html>
