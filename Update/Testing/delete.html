@@ -7,40 +7,27 @@
 
     <link rel="stylesheet" href="./../../support/css/bootstrap.css" />
     <script src="./../../support/jQuery/jQuery.js"></script>
-<link rel="shortcut icon" href="https://static-assets-web.flixcart.com/www/promos/new/20150528-140547-favicon-retina.ico">
+    <link rel="shortcut icon" href="https://static-assets-web.flixcart.com/www/promos/new/20150528-140547-favicon-retina.ico">
     <link rel="icon" type="image/x-icon" href="./../support/img/mywork.ico">
+    <style>
+        body { display:grid; min-height:100vh; grid-template-areas:'header header header''menu content aside''footer footer footer'; grid-template-rows:60px auto 40px; }
+        header { grid-area:header; }
+        nav { grid-area:menu; }
+        main { grid-area:content; }
+        aside { grid-area:aside; }
+        footer { grid-area:footer; }
+    </style>
 </head>
 <body>
     
+    <header>Header</header>
+    <nav>Menu</nav>
+    <main> Main Content</main>
+    <aside>For Ads</aside>
+    <footer>Footer</footer>
+
     <script type="text/javascript">
-        class Animals{
-            constructor(name,type,origin){
-                this.name=name;
-                this.type=type;
-                this.origin=origin;
-            }
-
-            get fullDetails() {
-                return this.name+" of the type "+this.type+" has origin of "+this.origin;
-            }
-
-            set fullDetails(arrPAss){
-                this.name=arrPAss[0];
-                this.type=arrPAss[1];
-                this.origin=arrPAss[2];
-            }
-        }
-
-        class human extends Animals {
-            
-        }
-
-        const dog = new Animals("dog","Omnivourous","INDIA");
-        console.log(dog.fullDetails);
-
-        dog.fullDetails = ["germanShepard","Carnioverous","France"];
-        console.log(dog.fullDetails);
-
+        
     </script>
 </body>
 </html>
