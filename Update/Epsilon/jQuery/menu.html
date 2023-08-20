@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Epsilon</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+    <style>
+        @import "https://fonts.googleapis.com/css?family=Ubuntu:400,400i,700,700i";
+        *,:before,:after{box-sizing:border-box;margin:0;padding:0;word-break:break-all}
+        html{font-size:10px}
+        body{color:#6e6e6e;font-family:'Ubuntu',sans-serif;font-size:1.6rem}
+        ul{list-style:none}
+        a,a:link,a:visited{color:#4d4d4d;text-decoration:none}
+        nav{align-items:center;display:flex;justify-content:space-between;padding:1rem 2rem}
+        .main-nav-holder{transition:.2s}
+        .main-nav{display:flex}
+        .main-nav > li{border:.1rem solid #e6e6e6;margin:0 .4rem 0 0;position:relative}
+        .main-nav > li > a,.main-nav > li > a:link,.main-nav > li > a:visited{display:block;padding:.8rem 1.5rem}
+        .main-nav > li > a:hover,.main-nav > li > a:link:hover,.main-nav > li > a:visited:hover{background:#e6e6e6}
+        .main-nav > li.has-submenu > label{color:#4d4d4d;cursor:pointer;display:block;padding:.8rem 2.8rem .8rem 1.5rem;position:relative}
+        .main-nav > li.has-submenu > label:hover{background:#e6e6e6}
+        .main-nav > li.close-nav{display:none}
+        .main-nav > li.active > a,.main-nav > li.active > a:link,.main-nav > li.active > a:visited,.main-nav > li.active > label{background:#e6e6e6}
+        .menu-caret{border-bottom:.6rem solid transparent;border-top:.6rem solid transparent;border-left:.6rem solid grey;display:inline-block;line-height:0;margin:0 -.3rem 0 1.2rem;position:absolute;right:1.4rem;top:1rem;transform-origin:.3rem 50%;transition:.2s}
+        .submenu{display:flex;padding:1rem 0 0;opacity:0;position:absolute;transition:.2s;visibility:hidden;transform:translateY(-5rem);white-space:nowrap}
+        .submenu > li{position:relative}
+        .submenu > li > a,.submenu > li > a:link,.submenu > li > a:visited{color:grey;display:block;padding:.7rem 1.6rem}
+        .submenu > li > a:hover{color:#000}
+        .submenu > li::after{content:"|";position:absolute;top:.7rem;right:-.3rem}
+        .submenu > li:last-of-type::after{display:none}
+        .check-toggle{display:none}
+        .check-toggle:checked ~ label{background:#e6e6e6}
+        .check-toggle:checked ~ .menu-caret{transform:rotate(90deg)}
+        .check-toggle:checked ~ .submenu{opacity:1;transform:translateY(0);visibility:visible}
+        .hamburger-menu,.menu-overlay{display:none}
+        .right-nav{display:flex}
+        .right-nav > li{align-items:center;display:flex;margin:0 .4rem 0 0;position:relative}
+        .avatar{border:.1rem solid rgba(0,0,0,0.1);border-radius:50%;box-shadow:0 0 .3rem 0 rgba(0,0,0,0.4);cursor:pointer;display:inline-block;height:3.6rem;margin:0 0 0 1rem;overflow:hidden;width:3.6rem}
+        .avatar img{width:100%}
+        .account-menu{border-top:.3rem solid #ccc;opacity:0;position:absolute;right:0;top:5rem;transition:.2s;transform:translateY(-4rem);visibility:hidden;z-index:1}
+        .account-menu li{margin:0 0 .1rem}
+        .account-menu li a,.account-menu li a:link,.account-menu li a:visited{background:#f5f5f5;display:block;padding:.5rem 1.5rem}
+        .account-menu li a:hover{background:#e6e6e6}
+        .account-menu::before{border-bottom:.8rem solid #ccc;border-left:.6rem solid transparent;border-right:.6rem solid transparent;content:"";position:absolute;top:-1rem;right:1rem}
+        .check-toggle:checked ~ .account-menu{opacity:1;transform:translateY(0);visibility:visible}
+
+        @media (max-width: 767px) {
+        .hamburger-menu,.menu-overlay{display:block}
+        .menu-overlay{bottom:0;left:0;opacity:0;position:fixed;right:0;transition:.2s;transform:translateX(30%);visibility:hidden;top:0;z-index:2}
+        .hamburger-menu{background:repeating-linear-gradient(0deg,transparent 0,transparent 0.4rem,#666 0.4rem,#666 0.7rem);cursor:pointer;display:inline-block;height:2.2rem;width:2.6rem}
+        .main-nav-holder{background:#fff;bottom:0;left:0;overflow:hidden;position:fixed;top:0;transform:translateX(-100%);width:25rem;z-index:3}
+        .main-nav{bottom:0;display:block;left:0;overflow-y:scroll;position:absolute;right:-1.5rem;top:0}
+        .main-nav > li{border:none;border-bottom:.1rem solid #f2f2f2;margin:0}
+        .main-nav > li.close-nav{display:block;text-align:right}
+        .main-nav > li.close-nav > label{cursor:pointer;display:block;height:4rem;position:relative}
+        .main-nav > li.close-nav > label::before,.main-nav > li.close-nav > label::after{background:grey;content:"";height:1.8rem;left:50%;position:absolute;top:1rem;transform:translateX(-50%);width:.2rem}
+        .main-nav > li.close-nav > label::before{transform:rotate(-45deg)}
+        .main-nav > li.close-nav > label::after{transform:rotate(45deg)}
+        .main-nav > li.close-nav > label:hover::before,.main-nav > li.close-nav > label:hover::after{background:#333}
+        .submenu li::after{display:none}
+        .check-toggle:checked ~ .main-nav-holder{opacity:1;transform:translateX(0);visibility:visible}
+        .check-toggle:checked ~ .menu-overlay{background:rgba(0,0,0,0.3);opacity:1;transform:translateX(0);visibility:visible}
+        .check-toggle:checked ~ .submenu{height:auto}
+        .submenu{display:block;height:0;padding:0 0 0 1rem;position:static}
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <label for="toggleMainNav" class="hamburger-menu"></label>
+        <input type="checkbox" id="toggleMainNav" class="check-toggle" />
+        <label for="toggleMainNav" class="menu-overlay"></label>
+        <div class="main-nav-holder">
+          <ul class="main-nav">
+            <li class="close-nav">
+              <label for="toggleMainNav"></label>
+            </li>
+            <li>
+              <a href="#">Home</a>
+            </li>
+            <li>
+              <a href="#">About Us</a>
+            </li>
+            <li class="has-submenu">
+              <input type="checkbox" id="labelMen" class="check-toggle" />
+              <label for="labelMen">Men</label>
+      
+              <i class="menu-caret"></i>
+              <ul class="submenu">
+                <li>
+                  <a href="#">T-shirt</a>
+                </li>
+                <li>
+                  <a href="#">Polo</a>
+                </li>
+                <li>
+                  <a href="#">Jeans</a>
+                </li>
+                <li>
+                  <a href="#">Shirt</a>
+                </li>
+              </ul>
+            </li>
+            <li class="has-submenu">
+              <input type="checkbox" id="labelWomen" class="check-toggle" />
+              <label for="labelWomen">Women</label>
+      
+              <i class="menu-caret"></i>
+              <ul class="submenu">
+                <li>
+                  <a href="#">Tops</a>
+                </li>
+                <li>
+                  <a href="#">Leggins</a>
+                </li>
+                <li>
+                  <a href="#">Ornaments</a>
+                </li>
+                <li>
+                  <a href="#">Makeups</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+        
+        <ul class="right-nav">
+          <li>
+            Welcome, &nbsp;
+            <a href="#"><strong>Mamun</strong></a>
+            <label class="avatar" for="accountMenu">
+              <img src="https://lh3.googleusercontent.com/-iJhKZHM5Kqs/Vgg2r91epsI/AAAAAAAAAgo/uGT4-sqPJzg/w863-h863/IMG_1339.jpg" />
+            </label>
+            
+            <input id="accountMenu" type="checkbox" class="check-toggle" />
+            
+            <ul class="account-menu">
+              <li>
+                <a href="#">My Dashboard</a>
+              </li>
+              
+              <li>
+                <a href="#">My Profile</a>
+              </li>
+              
+              <li>
+                <a href="#">Account Settings</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+
+    <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", function () {
+            var mainNavCheckboxes = document.querySelectorAll('.main-nav input[type="checkbox"]');
+            var rightNavCheckboxes = document.querySelectorAll('.right-nav input[type="checkbox"]');
+
+            mainNavCheckboxes.forEach(function (checkbox) {
+                checkbox.addEventListener("change", function () {
+                    mainNavCheckboxes.forEach(function (otherCheckbox) {
+                        if (otherCheckbox !== checkbox) {
+                            otherCheckbox.checked = false;
+                        }
+                    });
+                });
+            });
+
+            rightNavCheckboxes.forEach(function (checkbox) {
+                checkbox.addEventListener("change", function () {
+                    rightNavCheckboxes.forEach(function (otherCheckbox) {
+                        if (otherCheckbox !== checkbox) {
+                            otherCheckbox.checked = false;
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
