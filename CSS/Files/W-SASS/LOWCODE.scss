@@ -1,0 +1,85 @@
+@use 'sass:map';
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:16px;
+}
+/* & */
+.improve01{
+    &-title{
+        color: cadetblue;
+    }
+}
+.btnPrimary {
+    display:inline-block;
+    padding:10px 12px;
+    background-color:#990000;
+    color:#FFFFFF;
+    border-radius:4px;
+    border:2px solid #660000;
+    & + & {
+        margin-left:20px;
+    }
+}
+/* & */
+
+/* @use vs @forward vs @import */
+
+/* @use vs @forward vs @import */
+
+/* @mixins and @include*/
+
+/*Basic*/
+
+@mixin mediaQueryFunc(){
+    @media screen and (min-width:768px){
+        color:#FF0000;
+    }
+}
+
+.improve02{
+    @include mediaQueryFunc();
+}
+
+/*Intermediate*/
+
+@mixin mediaQuery($size){
+    @media screen and (min-width:$size){
+        @content;
+    }
+}
+
+.improve03{
+    @include mediaQuery(992px){
+        border:2px solid #39eea1;
+    }
+}
+
+/*Advanced*/
+
+//@use 'sass:map';
+
+$breakpoint:(
+    extraSmall:576px,
+    small:768px,
+    medium:992px,
+    large:1200px,
+    extraLarge:1400px
+);
+
+@mixin mediaQuery($key){
+    $size:map.get($breakpoint,$key);
+
+    @media screen and (min-width:$size){
+        @content;
+    }
+}
+
+.improve04{
+    @include mediaQuery(medium){
+        box-shadow:0 0 3px #990000;
+    }
+}
+
+/* @mixins and @include*/
+

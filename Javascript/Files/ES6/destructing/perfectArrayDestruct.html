@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const testData = {
+        "id": "0001",
+        "Type": "donut",
+        "name": "Cake",
+        "ppu": 0.55,
+        "batters": {
+            "batter": [
+            { "id": "1001", "type": "Regular" },
+            { "id": "1002", "type": "Chocolate" },
+            { "id": "1003", "type": "Blueberry" },
+            { "id": "1004", "type": "Devil's Food" }
+            ]
+        },
+        "topping": [
+            { "id": "5001", "type": "None" },
+            { "id": "5002", "type": "Glazed" },
+            { "id": "5005", "type": "Sugar" },
+            { "id": "5007", "type": "Powdered Sugar" },
+            { "id": "5006", "type": "Chocolate with Sprinkles" },
+            { "id": "5003", "type": "Chocolate" },
+            { "id": "5004", "type": "Maple" }
+        ]
+        };
+
+        // Combine types of chocolate from batters and toppings
+        const chocolateTypesCombined = [
+        ...testData.batters.batter
+            .filter(item => item.type === "Chocolate")
+            .map(chocolate => chocolate.type),
+        ...testData.topping
+            .filter(item => item.type === "Chocolate")
+            .map(chocolate => chocolate.type)
+        ];
+
+        console.log("Combined Chocolate types:", chocolateTypesCombined);
+    </script>
+</body>
+</html>

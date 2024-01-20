@@ -12,8 +12,74 @@
     <link rel="icon" type="image/x-icon" href="./../support/img/mywork.ico">
 </head>
 <body>
-    
+
+In JavaScript, the call method is one of the methods available for functions. It is used to invoke a function with a specified this value and individual arguments. Here are some common use cases for the call method:
+
+Setting the Context (this value):
+The primary purpose of call is to explicitly set the this value when invoking a function. This is particularly useful when dealing with methods in object-oriented programming or when borrowing methods from one object to use in another.
+
+Passing Arguments:
+The call method allows you to pass arguments individually, as opposed to passing an array of arguments with apply. This can be useful when you know the number of arguments the function expects.
+
+Function Borrowing:
+You can use call to borrow a method from one object and apply it to another object.
+
+Calling Functions with Different Contexts:
+Sometimes you might want to call a function with a specific context temporarily, without permanently changing the function's this value.
+
+In summary, the call method is versatile and is often used when you need to control the value of this and pass arguments individually when invoking a function.
+
     <script type="text/javascript">
+
+        //Setting the Context (this value):
+        const person1 = { name: 'John' };
+        const person2 = { name: 'Jane' };
+
+        function sayHello() {
+        console.log(`Hello, ${this.name}!`);
+        }
+
+        sayHello.call(person1);  // Outputs: Hello, John!
+        sayHello.call(person2);  // Outputs: Hello, Jane!
+
+
+        //Passing Arguments:
+        function multiply(a, b) {
+        return a * b;
+        }
+
+        const result = multiply.call(null, 2, 3);
+        console.log(result);  // Outputs: 6
+
+
+        //Function Borrowing:
+        const car = {
+            brand: 'Toyota',
+            start: function() {
+                console.log(`${this.brand} is starting...`);
+            }
+        };
+
+        const bike = {
+            brand: 'Honda'
+        };
+
+        car.start.call(bike);  // Outputs: Honda is starting...
+
+
+        //Calling Functions with Different Contexts:
+        function logName() {
+            console.log(this.name);
+        }
+
+        const person = { name: 'Alice' };
+        logName.call(person);  // Outputs: Alice
+
+        const animal = { name: 'Tiger' };
+        logName.call(animal);  // Outputs: Tiger
+
+        //------------------------------------------------------------------------
+
         const basicDetails = {
             firstName:"London",
             lastName:"UK",
