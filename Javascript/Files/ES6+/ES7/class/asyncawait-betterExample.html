@@ -43,18 +43,18 @@
         };
 
         const displayUserData = async () => {
-        try {
-            // Fetch user data using the fetchUserData function
-            const userData = await fetchUserData();
-            // Display the user data
-            console.log("User data:", userData);
-            console.log("Name:", userData.name);
-            console.log("Age:", userData.age);
-            console.log("Email:", userData.email);
-        } catch (error) {
-            // Handle any errors that occurred during fetching or processing the data
-            console.error("Error:", error);
-        }
+            try {
+                // Fetch user data using the fetchUserData function
+                const userData = await fetchUserData();
+                // Display the user data
+                console.log("User data:", userData);
+                console.log("Name:", userData.name);
+                console.log("Age:", userData.age);
+                console.log("Email:", userData.email);
+            } catch (error) {
+                // Handle any errors that occurred during fetching or processing the data
+                console.error("Error:", error);
+            }
         };
 
         // Call the displayUserData function

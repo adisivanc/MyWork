@@ -34,23 +34,6 @@
     <footer>Footer</footer>
 
     <script>
-
-        Array.prototype.myCustom = function(callback){
-            const result = [];
-            console.log(callback);
-            debugger;
-            for(let i=0;i<this.length;i++){
-                result.push(callback(this[i]));
-            }
-            return result;
-        }
-
-
-        let arr=[1,2,3,4];
-
-        let arr02 = arr.myCustom((item)=>item*2);
-        console.log(arr02);
-
         
     </script>
 </body>
