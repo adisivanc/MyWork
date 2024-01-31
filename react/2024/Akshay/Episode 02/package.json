@@ -2,7 +2,6 @@
   "name": "namaste-ep02",
   "version": "1.0.0",
   "description": "ep02",
-  "main": "App.js",
   "scripts": {
     "test": "jest",
     "start": "parcel index.html",

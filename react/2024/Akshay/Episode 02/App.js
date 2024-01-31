@@ -1,11 +1,20 @@
 import React from "react";
-import ReactDOM from 'react-dom/client';
+import ReactDOM from "react-dom/client";
 
-const newElement = React.createElement(
-    "p",
-    {"className":"para primary","id":"welcomeTxt"},
-    "Hello ",
-    React.createElement("span",{},"Adisivan")
+const reactElement = <span>Adisivan</span>;
+
+const headingText = (
+    <div>
+        <h2>Hello {reactElement}</h2>
+    </div>
 );
-const rootElement = ReactDOM.createRoot(document.querySelector("#root"));
-rootElement.render(newElement);
+
+const HeadingComponent = () => (
+    <>
+        {headingText}
+        <p>Welcome to React learning</p>
+    </>
+);
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<HeadingComponent/>);
