@@ -9,27 +9,52 @@
 
     <script src="./../../support/js/bootstrap.bundle.js" type="text/javascript"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/js/bootstrap.bundle.min.js" type="text/javascript"></script>
-
-<link rel="shortcut icon" href="https://static-assets-web.flixcart.com/www/promos/new/20150528-140547-favicon-retina.ico">
+    <style>
+        .nothing {
+            font-size: 2rem;
+            color: #cc0000;
+        }
+    </style>
+    <link rel="shortcut icon" href="https://static-assets-web.flixcart.com/www/promos/new/20150528-140547-favicon-retina.ico">
     <link rel="icon" type="image/x-icon" href="./../support/img/mywork.ico">
 </head>
 <body>
     <div class="nothing">Nothing just Testing</div>
 
     <script type="text/javascript">
-        
+        //Type01
         console.log("I ");
         setTimeout(function(){
             console.log("Love ")
         },0);
         console.log("javaScript");
-
-        document.write("Nothing");
-        document.writeln("Nothing");
-        document.write("Nothing");
-        document.write("Nothing");
-        document.write("Nothing");
                
+        // Type 02
+        let modal = document.querySelector(".nothing");
+        setTimeout(function() {
+            modal.classList.remove("nothing");
+            console.log("Removed");
+        }, 2000);
+        console.log("Last Line");
+
+        //Type 03
+        for (i = 0; i < 9; i++) {
+            (function(j) {
+                setTimeout(function() {
+                    console.log(j);
+                }, i * 600);
+            })(i); // Reference will store
+        }
+
+        var k = 0;
+        while (k < 9) {
+            (function(m) {
+                setTimeout(function() {
+                    console.log(m);
+                }, k * 600)
+            })(k);
+            k++;
+        }
     </script>
 </body>
 </html>
