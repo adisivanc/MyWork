@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructing</title>
+<link rel="shortcut icon" href="https://static-assets-web.flixcart.com/www/promos/new/20150528-140547-favicon-retina.ico">
+    <link rel="icon" type="image/x-icon" href="./../support/img/mywork.ico">
+</head>
+<body>
+    <script type="text/javascript">
+        let [a,b,[c,d]]=[12,13,[14,15]];
+        console.log(a,c);
+
+        let obj = {
+            name:"Arjun",
+            film:"Karnan",
+            othercast:{
+                comedy:"Goundamani",
+                music:"SARajukumar"
+            }
+        }
+        let {film,othercast:{comedy,music}} = obj;
+        console.log(film,music);
+
+        console.log("--------------------");
+        let {name,...others}=obj;
+        console.log(others);
+    </script>
+</body>
+</html>

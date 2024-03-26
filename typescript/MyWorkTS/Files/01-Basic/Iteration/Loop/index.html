@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="shortcut icon" href="https://static-assets-web.flixcart.com/www/promos/new/20150528-140547-favicon-retina.ico">
+    <link rel="icon" type="image/x-icon" href="./../support/img/mywork.ico">
+</head>
+
+<body class="">
+
+    <h2>My First Web Page</h2>
+    <p>My first paragraph.</p>
+
+    <p id="show"></p>
+
+    <script type="text/javascript">
+        var output = '';
+        for (var i = 1; i < 10; i++) {
+            for (var j = 1; j <= i; j++) {
+                output += (i === j) ? ' * ' : '   -   ';
+            }
+            output += "<br/> ";
+        }
+
+        for (var i = 10; i >= 1; i--) {
+            for (var j = 1; j <= i; j++) {
+                output += (i === j) ? ' * ' : '   -   ';
+            }
+            output += "<br/> ";
+        }
+
+        document.getElementById('show').innerHTML = output;
+
+    </script>
+
+</body>
+
+</html>

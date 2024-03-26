@@ -1,0 +1,32 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.rest-details {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.rest-menu {
+  flex-wrap: wrap;
+  display: flex;
+}
+
+.rest-menu li {
+  border-bottom: 2px solid #ddd;
+  justify-content: space-between;
+  gap: 40px;
+  width: 100%;
+  padding: 10px 0;
+  display: flex;
+}
+
+.rest-menu li img {
+  object-fit: cover;
+  object-position: center;
+  border: 1px solid #c8c8c880;
+  width: 120px;
+  height: 120px;
+}
+
+/*# sourceMappingURL=index.9e4c6fd2.css.map */

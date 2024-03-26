@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="./../../../../support/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="./../../../../support/js/tailwind-3.3.1.js" type="text/javascript"></script>
+<link rel="shortcut icon" href="https://static-assets-web.flixcart.com/www/promos/new/20150528-140547-favicon-retina.ico">
+    <link rel="icon" type="image/x-icon" href="./../support/img/mywork.ico">
+</head>
+<body>
+    
+    <script type="text/javascript">
+        class Human {
+            constructor() {
+                this.gender="male"
+            }
+            
+            printGender(){
+                console.log(this.gender);
+            }
+        }
+
+        class Person extends Human {
+            constructor(){
+                //super();
+                this.name="Prabha"
+            }
+            
+            printName(){
+                console.log(this.name);
+            }
+        }
+
+
+        let personDs = new Person();
+        personDs.printName();
+    </script>
+</body>
+</html>

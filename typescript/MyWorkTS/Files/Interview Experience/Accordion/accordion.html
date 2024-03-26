@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Epsilon</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{min-height:100vh;display:flex;background:#dbeefa;font-family:'Poppins',sans-serif}
+        .accordion{width:100%;background:#FFF;padding:1rem;border-radius:.5rem;box-shadow:0 0 5px rgba(0,0,0,0.2)}
+        .accordion .accordion-content{margin:10px 0;border-radius:5px;background-color:#e8ffdc;border-color:#bfa;overflow:hidden}
+        .accordion-content.is-open{padding-bottom:10px}
+        .accordion-content header{display:flex;min-height:50px;padding:0 15px;cursor:pointer;align-items:center;justify-content:space-between;transition:all .2s linear}
+        .accordion-content.is-open header{min-height:35px}
+        .accordion-content-title{font-size:1rem;font-weight:600;color:#000}
+        .accordion-content-description{height:0;font-size:13px;color:#000;font-weight:400;padding:0 15px}
+    </style>
+</head>
+<body>
+
+    <div class="accordion">
+        <h2>Accordion Using JavaScript</h2>
+        <div class="accordion-content">
+            <header>
+                <span class="accordion-content-title">
+                    What is GeeksforGeeks?
+                </span>
+                <i class="fa-solid fa-plus"></i>
+            </header>
+            <p class="accordion-content-description">
+                GeeksforGeeks is a one stop solution
+                for all computer science students.
+            </p>
+        </div>
+        <div class="accordion-content">
+            <header>
+                <span class="accordion-content-title">
+                    Which is the best portal to study Computer Science?
+                </span>
+                <i class="fa-solid fa-plus"></i>
+            </header>
+            <p class="accordion-content-description">
+                GeeksforGeeks is the best Computer Science portal
+                for geeks. It contains well written, well thought
+                and well explained computer science and programming articles.
+            </p>
+        </div>
+        <div class="accordion-content">
+            <header>
+                <span class="accordion-content-title">
+                    What GeeksforGeeks offer us?
+                </span>
+                <i class="fa-solid fa-plus"></i>
+            </header>
+            <p class="accordion-content-description">
+                GeeksforGeeks offers Free Tutorials,
+                Millions of Articles, Live, Online and
+                Classroom Courses,Frequent Coding Competitions,
+                Webinars by Industry Experts, Internship opportunities
+                and Job Opportunities.
+            </p>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        const accordionContent = document.querySelectorAll(".accordion-content");
+        
+        accordionContent.forEach((item,index)=>{
+        let header = item.querySelector("header");
+        header.addEventListener("click", ()=>{
+            item.classList.toggle("is-open");
+        
+            let description = item.querySelector(".accordion-content-description");
+            if(item.classList.contains("is-open")){
+            	// Scrollheight property return the height of
+                // an element including padding
+                description.style.height=`${description.scrollHeight}px`; 
+                item.querySelector("i").classList.replace("fa-plus","fa-minus");
+            }else{
+                description.style.height = "0px";
+                item.querySelector("i").classList.replace("fa-minus","fa-plus");
+            }
+            // function to pass the index number of clicked header
+            removeOpenedContent(index); 
+        })
+        })
+        
+        function removeOpenedContent(index){
+        accordionContent.forEach((item2,index2)=>{
+            if(index != index2){
+                item2.classList.remove("is-open");
+                let descrip = item2.querySelector(".accordion-content-description");
+                descrip.style.height="0px";
+                item2.querySelector("i").classList.replace("fa-minus","fa-plus");
+            }
+        })
+        }
+    </script>
+</body>
+</html>

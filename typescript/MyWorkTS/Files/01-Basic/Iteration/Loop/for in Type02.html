@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop</title>
+
+    <link rel="stylesheet" href="./../../../support/css/bootstrap.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <script src="./../../../support/js/bootstrap.bundle.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/js/bootstrap.bundle.min.js" type="text/javascript"></script>
+<link rel="shortcut icon" href="https://static-assets-web.flixcart.com/www/promos/new/20150528-140547-favicon-retina.ico">
+    <link rel="icon" type="image/x-icon" href="./../support/img/mywork.ico">
+</head>
+<body>
+    
+    <script type="text/javascript">
+        const empolyee = {
+            name: "Suderasan",
+            age: 35,
+            location: "Chennai"
+        };
+
+        const addDetails = Object.create(empolyee); // Child Object
+
+        addDetails.hNative = "Rasipuram";
+        addDetails.martial = "Married";
+
+        //hasOwnProperty will not consider child object
+
+        for (let property in empolyee) {
+            if (empolyee.hasOwnProperty(property)) { 
+                console.log(`${property} => ${empolyee[property]}`);
+            }
+        }
+
+        console.log("Parent Object",empolyee);
+        console.log("Child Object",addDetails);
+
+        //Without hasOwnProperty
+        console.log("Without hasOwnProperty")
+
+        for (let property in empolyee) {
+            console.log(property);
+            console.log(`${property} => ${empolyee[property]}`);
+        }
+    </script>
+</body>
+</html>

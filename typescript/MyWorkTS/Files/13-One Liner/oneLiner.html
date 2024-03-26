@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>API</title>
+  </head>
+  <body>
+        
+
+        <script type="text/javascript">
+
+            //Group by property
+            console.log("ZA");
+            const groupByProperty = (arr,prop) => arr.reduce((result,obj)=>(result[obj[prop]] = [...result[obj[prop]] || [] , obj], result),{})
+
+            const obj = [{id:1,name:"Adisivan",grade:7.57},{id:2,name:"Ashwini",grade:8.9},{id:1,name:"Prema",grade:9.2}]
+            console.log(groupByProperty(obj,"name"));
+
+
+            //Check whether object is empty [Useful in fetching json data]
+            console.log("AZ");
+            const validateObject = obj => Object.keys(obj).length===0
+
+            const fetchData = {};
+            console.log(validateObject(fetchData));
+
+
+            // Compare two string and matches it is equal or not [ANAGRAM]
+            console.log("A");
+            const twoStringMatches = (string1,string2) => [...string1.toLowerCase()].sort().join('') === [...string2.toLowerCase()].sort().join('')
+
+            console.log(twoStringMatches("form","from"));
+            console.log(twoStringMatches("silent","listen"));
+            console.log(twoStringMatches("ear","are"));
+            console.log(twoStringMatches("ears","are"));
+
+
+            //Generate N number of Array from 1 to N
+            console.log("B");
+            const generateNarray = (numN) => [...Array(numN).keys()].map(num => num+1)
+
+            console.log(generateNarray(6));
+
+
+            //Remove Duplicate from two array and make single
+            console.log("C");
+            const removeDuplicate = (array1,array2) => [...new Set([...array1,...array2])];
+
+            console.log(removeDuplicate([4,3,2,1],[3,4,5,7,6]));
+
+
+            //Shuffle an array (Here there is chance of returning same array)
+            console.log("D");
+            const shuffleAnArray = (arr) => arr.sort(()=> Math.random() - 0.5);
+
+            console.log(shuffleAnArray([1,2,3,4,5,6]));
+
+
+            //Maximum value in the array
+            console.log("E");
+            const greatestNumber = (arr) => Math.max(...arr);
+
+            console.log(greatestNumber([1,45,-4,-234,456,23,34]));
+
+
+            //Date 
+            console.log("F");
+            const currentDate = () => new Date().toISOString().split("T")[0].replace("-","/")
+
+            console.log(currentDate());
+
+
+            //Time 
+            console.log("G");
+            const currentTime = () => new Date().toISOString().split("T")[1].split(".")[0]
+
+            console.log(currentTime());
+
+
+            //Every condition
+            console.log("H");
+            const satifyAllCondition = (arr,condition) => arr.every(condition);
+
+            console.log(satifyAllCondition([2,4,6,8,22],num => num%2===0));
+            console.log(satifyAllCondition([2,4,6,8,77],num => num%2===0));
+
+
+            //Average of N number
+            console.log("I");
+            const averageOfNnum = (arr) => arr.reduce((result,element) => result+=element,0)/arr.length
+
+            console.log(averageOfNnum([56,78,45,36,99]))
+
+
+
+            //Group by property
+            console.log("12");
+            const groupByProp = (arrData,sortPropName) => {
+                return arrData.reduce((result,data) => {
+                    console.log(result);
+                    console.log("A"+data[sortPropName]);
+                    //debugger;
+                    return result[data[sortPropName].main] = [...result[data[sortPropName].main] || [], data], result
+                },{})
+            } 
+
+            const fetchData09 = [{id:1,name:"chicken boneless biryani",catagory:{main:"biryani",type:"non-veg"}},
+                                {id:1,name:"mushroom biryani",catagory:{main:"biryani",type:"veg"}},
+                                {id:1,name:"mutton biryani",catagory:{main:"biryani",type:"non-veg"}},
+                                {id:1,name:"chicken 65",catagory:{main:"starters",type:"non-veg"}},
+                                {id:1,name:"prawn 65",catagory:{main:"starters",type:"non-veg"}}];
+            
+            console.log(groupByProp(fetchData09,"catagory"));
+        </script>
+  </body>
+</html>

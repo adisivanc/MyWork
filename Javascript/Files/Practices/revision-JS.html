@@ -17,121 +17,29 @@
     <link rel="icon" type="image/x-icon" href="./../support/img/mywork.ico">
 </head>
 <body>
-<!--
-    <form id="myForm">
-        <h3>Registration Form</h3>
 
-        <label for="username" class="form-label">Username</label>
-        <input type="text" id="username" class="form-control" value=""/>
-        <br/>
-        <label for="password" class="form-label">Password</label>
-        <input type="password" id="password" class="form-control" value=""/>
-        <br/>
-        <label for="cpassword" class="form-label">Confirm Password</label>
-        <input type="password" id="cpassword" class="form-control" value=""/>
-        <br/>
-        <label for="gender" class="form-label">Gender</label>
-        <select id="gender" class="form-select">
-            <option value="male" selected>Male</option>
-            <option value="female">Female</option>
-        </select>
-        <br/>
-        <div class="form-check">
-            <input type="checkbox" id="remember" class="form-check-input" value="" checked/>
-            <label for="remember" class="form-check-label">Remember me</label>
-        </div>
-        
-        <br/>
-        <input type="submit" value="Submit" id="submit" class="btn btn-primary"/>
-        <input type="reset" value="Reset" id="reset" class="btn btn-danger"/>
-    </form>
--->
-    <style>
-        .logo{
-            display:flex;
-            justify-content: space-between;
-            & > img{
-                max-height:65px;
-            }
-            & > div > img {
-                filter: grayscale(70%);
-                transform: rotate(90deg);
-                max-height:54px;
-            }
-        }
-        .navigation{
-            .list{
-                list-style-type: none;
-                display:inline-flex;
-                margin:0;
-                padding:0;
-                .list-item{
-                    padding:10px 20px;
-                    
-                    &.hover{
-                        background-color:#eeeeee;
-                    }
-                    &.active{
-                        background-color: rgb(7, 7, 107);
-                        color:#FFFFFF;
-                    }
-                    &:hover{
-                        cursor: pointer;
-                    }
+    <button id="triggerAPI" class="btn btn-primary">API</button>
+
+
+    <script type="text/javascript">
+        const originalArray = ["Hello", "World", ["Adisivan", ["Sanjeev", "Chinnasamy"]]];
+
+        const makeDuplicateDeepArray = (arr) => {
+            const duplicateArray = []; // Create a new array for each recursion
+            for (let i = 0; i < arr.length; i++) {
+                if (Array.isArray(arr[i])) {
+                    duplicateArray.push(makeDuplicateDeepArray(arr[i])); // Recursively create duplicate arrays for nested arrays
+                } else {
+                    duplicateArray.push(arr[i]);
                 }
             }
+            return duplicateArray;
         }
-    </style>
-    <header>
-        <div class="logo">
-            <img src="https://uilogos.co/img/logotype/hexa.png" alt="Logo">
-            <div>
-                <img src="https://uilogos.co/img/logomark/towers.png" alt="MENU" title="MENU"/>
-            </div>
-        </div>
-        <div class="navigation">
-            <ul class="list">
-                <li class="list-item active">Home</li>
-                <li class="list-item">Bussiness</li>
-                <li class="list-item">Marketing</li>
-                <li class="list-item">Career</li>
-                <li class="list-item">About Us</li>
-            </ul>
-        </div>
-    </header>
-    
 
-<!-- ... Your existing HTML code ... -->
-
-<script type="text/javascript">
-    let navigationLink = document.querySelector(".navigation > .list");
-    const childNodeList = navigationLink.childNodes;
-    console.log(childNodeList);
-
-    let eventListNav = ["click","mouseover","mouseout"];
-    for(let key of eventListNav){
-        navigationLink.addEventListener(key,function(event){
-            switch(key){
-                case "click":
-                    document.querySelector(".navigation > .list > li.active").classList.remove('active');
-                    event.target.classList.add('active');
-                    break;
-                case "mouseover":
-                    //document.querySelector(".navigation > .list > li").classList.add('hover');
-                    event.target.classList.add('hover');
-                    break;
-                case "mouseout":
-                    //document.querySelector(".navigation > .list > li").classList.remove('hover');
-                    event.target.classList.remove('hover');
-                    break;
-                default:
-                    console.log("Def");
-                    break;
-            }
-        })
-    }
-    
-</script>
+        const result = makeDuplicateDeepArray(originalArray);
+        console.log(result);
+        
+    </script>
 </body>
 </html>
 

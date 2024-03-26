@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+<link rel="shortcut icon" href="https://static-assets-web.flixcart.com/www/promos/new/20150528-140547-favicon-retina.ico">
+    <link rel="icon" type="image/x-icon" href="./../support/img/mywork.ico">
+</head>
+<body>
+    <h4>Object.defineProperty</h4>
+    <p>As per hari - Prototype difference from normal object trigger</p>
+
+    <script type="text/javascript">
+        let objVal = { count:0 }
+
+        Object.defineProperty(objVal,"reset",{
+            get:function(){ this.count=0; },
+            configurable:false // by default configurable:true
+        })
+        Object.defineProperty(objVal,"increment",{
+            get:function(){ this.count+=1; }
+        })
+        Object.defineProperty(objVal,"decrement",{
+            get:function(){ this.count-=1; }
+        })
+        Object.defineProperty(objVal,"add",{
+            set:function(value){ this.count+=value; }
+        })
+        Object.defineProperty(objVal,"subtract",{
+            set:function(value){ this.count-=value; },
+            configurable:true
+        })
+
+        objVal.reset;
+        objVal.increment;
+        objVal.decrement;
+        objVal.add=4;
+        objVal.subtract=99;
+
+        document.write(objVal.count);
+        document.write("<hr/>");
+
+        delete objVal.reset; // No effect bcoz {modifed set as false}
+        objVal.reset;
+        objVal.add=344;
+        document.write(objVal.count); // 344
+        document.write("<hr/>");
+
+        delete objVal.reset; // Change congif and check
+        objVal.reset;
+        objVal.subtract=344;
+        document.write(objVal.count); // -344 {0 if configurable is true }
+    </script>
+</body>
+</html>

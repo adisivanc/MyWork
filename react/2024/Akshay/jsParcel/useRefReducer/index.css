@@ -1,0 +1,10 @@
+.flexContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.useReducer {
+    background-color:#eeeeee;
+    display: flex;
+    flex-flow:row wrap;
+}

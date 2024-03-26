@@ -1,0 +1,251 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #333333;
+  font-size: 1.25em;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+[onclick] {
+  cursor: pointer;
+}
+
+.dFlex {
+  display: flex;
+}
+
+.dBlock {
+  display: block;
+}
+
+.dHide {
+  display: none;
+}
+
+.form {
+  font-size: 1.2rem;
+}
+.form label {
+  font-size: 0.85em;
+}
+
+.formVer label {
+  display: block;
+}
+.formVer > span {
+  display: block;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.btn, .btn-primary {
+  padding: 0.6em 1.2em;
+  font-size: 0.8em;
+  outline: none;
+  border-radius: 4px;
+  border: 1px solid currentColor;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: #880372;
+  color: #FFFFFF;
+  border-color: #880372;
+}
+.btn-primary:hover {
+  background-color: #880372;
+}
+.btn-primary:active {
+  background-color: #880372;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 0.5em 0.875em;
+  font-size: 1rem;
+  border: 1px solid #999999;
+  border-radius: 4px;
+}
+input:focus {
+  outline: none;
+  border-color: #880372;
+}
+
+textarea {
+  width: 100%;
+  padding: 0.5em 0.875em;
+  font-size: 1rem;
+  border: 1px solid #999999;
+  border-radius: 4px;
+}
+textarea:focus {
+  outline: none;
+  border-color: #880372;
+}
+
+.loginForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.loginForm > form {
+  background-color: #FFFFFF;
+  border: 1px solid #cccccc;
+  padding: 2rem 3rem;
+  width: 92%;
+  max-width: 354px;
+  border-radius: 8px;
+  box-shadow: 0 0 5px #999999;
+}
+
+ul.todo {
+  margin-top: 2rem;
+}
+ul.todo li {
+  margin-bottom: 10px;
+}
+ul.todo li > div {
+  display: flex;
+  gap: 15px;
+}
+ul.todo li > div > div:nth-child(2) {
+  flex-grow: 1;
+}
+ul.todo li > div input[type=checkbox] {
+  width: 18px;
+  height: 18px;
+}
+ul.todo li > div svg {
+  width: 32px;
+  height: 32px;
+}
+ul.todo li > div svg.editIcon {
+  fill: #3d0cc2;
+}
+ul.todo li > div svg.delIcon {
+  fill: #990000;
+}
+ul.todo li > div svg.delIcon .st0 {
+  fill: none;
+}
+
+.todolist {
+  background-color: #f2fdd6;
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 450px;
+}
+.todolist .addSection {
+  display: flex;
+  gap: 20px;
+  margin-top: 1.5rem;
+}
+.todolist .addSection > div:first-of-type {
+  flex-grow: 1;
+}
+.todolist .addSection span {
+  background-color: #165609;
+  width: 36px;
+  height: 36px;
+  text-align: center;
+  border-radius: 4px;
+  display: block;
+}
+.todolist .addSection span svg {
+  fill: #eeeeee;
+  width: 36px;
+  height: 36px;
+  padding-top: 7px;
+}
+
+.todoPop {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  justify-content: center;
+  align-items: center;
+}
+.todoPop .todoPop-Cont {
+  background-color: #FFFFFF;
+  width: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.todoPop .todoPop-Cont > * {
+  flex-basis: 100%;
+  align-self: stretch;
+}
+.todoPop .todoPop-Cont > div:first-child {
+  align-self: flex-start;
+}
+.todoPop .todoPop-Cont > div:last-child {
+  align-self: flex-end;
+}
+.todoPop .pop-Header {
+  display: flex;
+  background-color: #eeeeee;
+  padding: 15px 20px;
+}
+.todoPop .pop-Header svg {
+  width: 32px;
+  height: 32px;
+}
+.todoPop .pop-Main {
+  padding: 20px;
+}
+.todoPop .pop-Footer {
+  padding: 10px 20px 20px;
+  text-align: right;
+}
+.todoPop .btn, .todoPop .btn-primary {
+  transform: scale(0.9);
+}/*# sourceMappingURL=index.css.map */

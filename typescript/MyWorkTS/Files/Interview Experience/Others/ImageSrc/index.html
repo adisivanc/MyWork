@@ -1,0 +1,43 @@
+<html>
+<head>
+<title></title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    .disNone { display:none }
+</style>
+<link rel="shortcut icon" href="https://static-assets-web.flixcart.com/www/promos/new/20150528-140547-favicon-retina.ico">
+    <link rel="icon" type="image/x-icon" href="./../support/img/mywork.ico">
+</head>
+<body class="" >  
+    <img src="" alt="Banner" title="Bannerbg" id="imgBan" class="disNone"/>
+    <br/><br/>
+    <input type="button" class="buttonLg" id="showImg" value="Show Image"/>
+    
+<script type="text/javascript">
+    
+    var eveBut = document.getElementById("showImg");
+
+    eveBut.addEventListener("click",function(){
+        var imgTy = document.getElementById("imgBan");
+        imgTy.src="img/logBan.png";
+        imgTy.style="width:300px";
+        imgTy.classList.remove("disNone");
+        imgTy.classList.add("disNone02");
+    });
+
+
+</script>
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

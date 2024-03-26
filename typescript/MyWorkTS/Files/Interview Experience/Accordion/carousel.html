@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Epsilon</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+    <style>
+        .review{ list-style-type:none; background:#91e2bc;height:auto;width:270px;border-radius:15px;margin:auto;padding:10px;margin-top:30px;box-shadow:5px 5px 5px #32917d;align-items:center}
+        .review__items{align-items:center;justify-content:space-evenly;width:250px;padding:10px;align-items:center}
+        .review__items img{height:250px;width:250px;border-radius:5px;box-shadow:rgba(0,0,0,0.35) 0 4px 15px}
+        .review__items h1{font-family:Verdana,Geneva,Tahoma,sans-serif;font-size:20px}
+        .review__items p{font-family:Verdana,Geneva,Tahoma,sans-serif;font-size:14px}
+        .review__button{text-align:center;padding:10px}
+        .review__button button{color:#c0e5c0;background:green;font-weight:700}
+        .review__items{display:none}
+    </style>
+</head>
+<body>
+
+    <ul class="review">
+        <li class="review__items">
+            <img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20190710102234/download3.png" />
+            <h1>GeeksforGeeks</h1>
+            <p>
+                Let's learn to create a review
+                carousel using JavaScript.
+            </p>
+        </li>
+        <li class="review__items">
+            <img src="https://media.geeksforgeeks.org/wp-content/uploads/20210101144014/gfglogo.png" />
+            <h1>Geek Here</h1>
+            <p>
+                Very useful site to learn cool
+                stuff. Improve your skills.
+            </p>
+        </li>
+        <li class="review__items">
+            <img src="https://media.geeksforgeeks.org/img-practice/courses/GfG_Logo.png" />
+            <h1>Hello there!</h1>
+            <p>
+                Have a nice day, Please visit
+                us again. Nice to meet you
+            <p>
+        </li>
+        <li class="review__button">
+            <button id="prev" onclick="previousReview()">
+                PREV
+            </button>
+
+            <button id="next" onclick="nextReview()">
+                NEXT
+            </button>
+        </li>
+    </ul>
+
+    <script type="text/javascript">
+        let rev = 0;
+        carousel(rev);
+        
+        function previousReview() {
+            rev = rev - 1;
+            carousel(rev);
+        }
+        
+        function nextReview() {
+            rev = rev + 1;
+            carousel(rev);
+        }
+        
+        function carousel(review) {
+            let reviews = document
+                .getElementsByClassName("review__items");
+        
+            if (review >= reviews.length) {
+                review = 0;
+                rev = 0;
+            }
+            if (review < 0) {
+                review = reviews.length - 1;
+                rev = reviews.length - 1;
+            }
+            for (let i = 0; i < reviews.length; i++) {
+                reviews[i].style.display = "none";
+            }
+            reviews[review].style.display = "block";
+        }
+    </script>
+</body>
+</html>

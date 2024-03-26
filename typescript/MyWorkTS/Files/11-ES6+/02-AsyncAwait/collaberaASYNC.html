@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./../../support/css/bootstrap.css" />
+    <script src="./../../support/jQuery/jQuery.js"></script>
+    <style>
+        .listAnim { max-width:92%; overflow: hidden; margin:0 auto; position: relative; }
+        .listAnim > li > a { white-space: nowrap; background-color: #900; color: #FFF; padding: 10px; border-radius: 8px; }
+    </style>
+<link rel="shortcut icon" href="https://static-assets-web.flixcart.com/www/promos/new/20150528-140547-favicon-retina.ico">
+    <link rel="icon" type="image/x-icon" href="./../support/img/mywork.ico">
+</head>
+<body>
+
+    <div class="row">
+        
+    </div>
+
+    <script type="text/javascript">
+
+        const url07 = "https://jsonplaceholder.typicode.com/posts";
+        const url03 = "https://jsonplaceholder.typicode.com/photos";
+
+        const fetchData = () => {
+            const apiUrls = [url03,url07];
+
+            const promises = apiUrls.map(url=>{
+                return fetch(url)
+                .then(response=>{
+                    if(response.ok) {
+                        return response.json();
+                    }
+                    throw new Error("Server Error");
+                })
+                .catch(err =>{
+                    console.error("Data not received",err);
+                })
+            })
+
+            return Promise.all(promises)
+            .then(data=>{
+                return data;
+            })
+        }
+        
+
+        fetchData()
+        .then(data=>console.log(data))
+        .catch(err=>console.error("Data not Received",err) )
+    
+
+
+        const fetchDataUsingAsync = async () => {
+            const apiUrls = [url03,url07];
+
+            try{
+                const responses = await Promise.all(apiUrls.map(url=>fetch(url)));
+                const dataArray = await Promise.all(responses.map(response=>{
+                    if(response.ok){
+                        return response.json()
+                    }
+                    throw new Error("Server not connected")
+                }))
+
+                return dataArray;
+            }catch(err){
+                console.log(err.message);
+                throw err;
+            }
+
+        }
+
+
+
+        (async() => {
+            try{
+                let data = await fetchDataUsingAsync();
+                console.log(data);
+            }catch(err){
+                console.log(err.message);
+            }
+        })();
+    </script>
+</body>
+</html>

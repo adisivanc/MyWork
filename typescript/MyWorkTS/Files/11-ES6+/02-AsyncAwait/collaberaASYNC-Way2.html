@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./../../../../support/css/bootstrap.css" />
+    <script src="./../../../../support/jQuery/jQuery.js"></script>
+    <style>
+        .listAnim { max-width:92%; overflow: hidden; margin:0 auto; position: relative; }
+        .listAnim > li > a { white-space: nowrap; background-color: #900; color: #FFF; padding: 10px; border-radius: 8px; }
+    </style>
+<link rel="shortcut icon" href="https://static-assets-web.flixcart.com/www/promos/new/20150528-140547-favicon-retina.ico">
+    <link rel="icon" type="image/x-icon" href="./../support/img/mywork.ico">
+</head>
+<body>
+
+    <div class="row">
+        
+    </div>
+
+    <script type="text/javascript">
+
+        const url07 = "https://jsonplaceholder.typicode.com/posts";
+        const url03 = "https://jsonplaceholder.typicode.com/photos";
+
+
+        const fetchUsingAsyncp = async() =>{
+            try{
+                const response01 = await fetch(url03);
+                const response02 = await fetch(url07);
+
+                if(response01.ok && response02.ok){
+                    const data01 = await response01.json();
+                    const data02 = await response02.json();
+                    return [data01,data02];
+                }else{
+                    throw new Error("Server Error");
+                }
+                throw new Error("Data not received");
+            }catch(err){
+                console.log(err.message);
+                throw err;
+            }
+        }
+
+        (async()=>{
+            try{
+                let data = await fetchUsingAsyncp();
+                console.log(data);
+            }catch(err){
+                console.log(err.message);
+            }
+            
+        })()
+    </script>
+</body>
+</html>

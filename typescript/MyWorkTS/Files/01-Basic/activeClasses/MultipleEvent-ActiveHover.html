@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Active</title>
+    
+    <link rel="stylesheet" href="./../../../../../support/css/bootstrap.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="shortcut icon" href="https://static-assets-web.flixcart.com/www/promos/new/20150528-140547-favicon-retina.ico">
+    <link rel="icon" type="image/x-icon" href="./../support/img/mywork.ico">
+</head>
+<body>
+
+    <style>
+        .logo{
+            display:flex;
+            justify-content: space-between;
+            & > img{
+                max-height:65px;
+            }
+            & > div > img {
+                filter: grayscale(70%);
+                transform: rotate(90deg);
+                max-height:54px;
+            }
+        }
+        .navigation{
+            .list{
+                list-style-type: none;
+                display:inline-flex;
+                margin:0;
+                padding:0;
+                .list-item{
+                    padding:10px 20px;
+                    
+                    &.hover{
+                        background-color:#eeeeee;
+                    }
+                    &.active{
+                        background-color: rgb(7, 7, 107);
+                        color:#FFFFFF;
+                    }
+                    &:hover{
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    </style>
+    <header>
+        <div class="logo">
+            <img src="https://uilogos.co/img/logotype/hexa.png" alt="Logo">
+            <div>
+                <img src="https://uilogos.co/img/logomark/towers.png" alt="MENU" title="MENU"/>
+            </div>
+        </div>
+        <div class="navigation">
+            <ul class="list">
+                <li class="list-item active">Home</li>
+                <li class="list-item">Bussiness</li>
+                <li class="list-item">Marketing</li>
+                <li class="list-item">Career</li>
+                <li class="list-item">About Us</li>
+            </ul>
+        </div>
+    </header>
+    
+
+<!-- ... Your existing HTML code ... -->
+
+<script type="text/javascript">
+    let navigationLink = document.querySelector(".navigation > .list");
+    const childNodeList = navigationLink.childNodes;
+    console.log(childNodeList);
+
+    let eventListNav = ["click","mouseover","mouseout"];
+    for(let key of eventListNav){
+        navigationLink.addEventListener(key,function(event){
+            switch(key){
+                case "click":
+                    document.querySelector(".navigation > .list > li.active").classList.remove('active');
+                    event.target.classList.add('active');
+                    break;
+                case "mouseover":
+                    //document.querySelector(".navigation > .list > li").classList.add('hover');
+                    event.target.classList.add('hover');
+                    break;
+                case "mouseout":
+                    //document.querySelector(".navigation > .list > li").classList.remove('hover');
+                    event.target.classList.remove('hover');
+                    break;
+                default:
+                    console.log("Def");
+                    break;
+            }
+        })
+    }
+    
+</script>
+</body>
+</html>
+

@@ -1,0 +1,55 @@
+<html>
+<head>
+<title></title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    img { width:150px;}
+</style>
+<link rel="shortcut icon" href="https://static-assets-web.flixcart.com/www/promos/new/20150528-140547-favicon-retina.ico">
+    <link rel="icon" type="image/x-icon" href="./../support/img/mywork.ico">
+</head>
+<body class="" >
+
+    
+<div class="container">
+    <img src="img/offlight.png" name="OnBulb" alt="OnBulb" />
+    <img src="img/onlight.png" name="OffBulb" alt="OffBulb" />
+</div>
+    
+<script type="text/javascript">
+
+var onVar = document.getElementsByName("OnBulb")[0];
+var offVar = document.getElementsByName("OffBulb")[0];
+
+onVar.addEventListener("click",onBulb);
+offVar.addEventListener("click",offBulb);
+        
+function onBulb(){
+    var var01 = onVar.src;
+    var var02 = offVar.src;
+    onVar.src=var02;
+    offVar.src=var01;
+}
+
+function offBulb(){
+    var var01 = onVar.src;
+    var var02 = offVar.src;
+    onVar.src=var02;
+    offVar.src=var01;
+}
+
+</script>
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

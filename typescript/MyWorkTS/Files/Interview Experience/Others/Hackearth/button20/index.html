@@ -1,0 +1,72 @@
+<html>
+<head>
+<title></title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    .buttonCon > input { margin-right:15px; padding:5px 16px; }
+</style>
+<link rel="shortcut icon" href="https://static-assets-web.flixcart.com/www/promos/new/20150528-140547-favicon-retina.ico">
+    <link rel="icon" type="image/x-icon" href="./../support/img/mywork.ico">
+</head>
+<body class="" >  
+
+    <div id="buttonCon" class="buttonCon">
+        <h1 id="p1"></h1>
+    </div>
+    
+<script type="text/javascript">
+    
+    
+
+    for(var i=0;i<=20;i++){
+        var para = document.createElement("input");
+        var node = document.createTextNode(i);
+        para.appendChild(node);
+
+        var btnCon = document.getElementById("buttonCon");
+        var newEle = document.getElementById("p1");
+        btnCon.insertBefore(para,newEle);
+
+        var idVal = document.getElementsByTagName("input")[i];
+        
+        var att = document.createAttribute("id");
+        att.value = "butn"+i;
+        idVal.setAttributeNode(att);
+        
+        var valAtt = document.createAttribute("value");
+        valAtt.value = i;
+        idVal.setAttributeNode(valAtt);
+
+        var typeBt = document.createAttribute("type");
+        typeBt.value = "button";
+        idVal.setAttributeNode(typeBt);
+
+        var classBt = document.createAttribute("class");
+        classBt.value = "butClass";
+        idVal.setAttributeNode(classBt);
+
+        var functionEve = document.createAttribute("onclick");
+        functionEve.value = "eveCall("+i+")";
+        idVal.setAttributeNode(functionEve);
+    }
+    
+    function eveCall(parm){
+        alert(parm);
+    }
+
+
+</script>
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

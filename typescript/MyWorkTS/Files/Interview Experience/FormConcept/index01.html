@@ -1,0 +1,119 @@
+<html>
+<head>
+<title></title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    body { font-family: Arial, Helvetica, sans-serif; font-size:16px; }
+    .formCont { display: flex; flex-wrap: wrap; height:100vh; width: 100%; align-items: center; justify-content: center; }
+    .formClass { width: 360px; background-color: #cc0000; color: #FFF; padding: 40px 35px; border-radius: 12px; }
+    .formClass > div { display:flex; margin-bottom: 1rem; flex-wrap: wrap; width: 100%; }
+    .formClass > div label { width:100%; font-size:14px; }
+    .formClass input { font-size:15px; padding:6px 8px; width: 100%; border:1px solid #880000 }
+    .formClass input:focus { outline:none;}
+    .formClass input[type="button"] { width: 108px; background-color: #222; color: #FFF; border-color: #000; padding: 8px 20px; line-height: 22px; margin-top: 1rem;    border-radius: 2px; }
+    .formClass select { font-size:15px; padding: 4px 8px; width: 100%; }
+    .formClass input[type="radio"] { width: 16px; height: 16px; padding: 8px; }
+    .formClass > div:last-child { justify-content: flex-end; }
+</style>
+<link rel="shortcut icon" href="https://static-assets-web.flixcart.com/www/promos/new/20150528-140547-favicon-retina.ico">
+    <link rel="icon" type="image/x-icon" href="./../support/img/mywork.ico">
+</head>
+<body class="" >
+
+<div class="formCont">
+    <form name="custEntry" class="formClass">
+        <div>
+            <label>First Name</label>
+            <input type="text" name="fname" value="" placeholder="First Name"/>
+        </div>
+        <div>
+            <label>Last Name</label>
+            <input type="text" name="lname" value="" placeholder="Last Name"/>
+        </div>
+        <div>
+            <label>Age</label>
+            <input type="number" name="age" value="" placeholder="Age"/>
+        </div>
+        <div>
+            <label>Residency</label>
+            <input type="radio" name="residency" value="indian">Indian</input>
+            <input type="radio" name="residency" value="nri">NRI</input>
+        </div>
+        <div>
+            <label>Gender</label>
+            <select name="genderSel">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="others">Others</option>
+            </select>
+        </div>
+        <div>
+            <label>Date of Birth</label>
+            <input type="date" name="dob" value="" placeholder="DOB"/>
+        </div>
+        <div>
+            <input type="button" name="SUBMIT" id="submitBtn" value="SUBMIT"/>
+        </div>
+        
+    </form>
+    <input type="button" class="" name="" value="Show List" onclick="updatedList()" />
+    <div class="listVal">
+
+    </div>
+</div>
+
+    
+<script type="text/javascript">
+
+    var empDtl = [
+        {
+            "firstName": "Aadhi",
+            "lastName" : "sivan",
+            "age" : "31"
+        },
+        {
+            "firstName": "Sanjeev",
+            "lastName" : "SVK",
+            "age" : "21"
+        }]
+    
+    var ddd = document.querySelector("#submitBtn");
+    var hhh = ddd.addEventListener("click",someFun);
+
+    function someFun(){
+        var firstName = document.forms["custEntry"]["fname"].value;
+        var lastName = document.forms["custEntry"]["lname"].value;
+        var ageval = document.forms["custEntry"]["age"].value;
+        var resdVal = document.forms["custEntry"]["residency"].value;
+        var genderSel = document.forms["custEntry"]["genderSel"].value;
+        var dobVal = document.forms["custEntry"]["dob"].value;
+
+        JSON.stringify(empDtl.push("firstName:"+firstName+","+"lastName:"+lastName+","+"age:"+ageval));
+        console.log(empDtl);   
+    }
+
+/*
+    function updatedList(){
+        for(i=0;i<fname.length;i++){
+            var functionCall = userDetail(fname[i],lname[i],age[i],resd[i],gender[i],dob[i]);
+            console.log("Object "+"i"+"  "+functionCall);
+        }
+    }
+*/   
+    
+
+</script>
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

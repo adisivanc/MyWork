@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<link rel="shortcut icon" href="https://static-assets-web.flixcart.com/www/promos/new/20150528-140547-favicon-retina.ico">
+    <link rel="icon" type="image/x-icon" href="./../support/img/mywork.ico">
+</head>
+<body>
+    <script type="text/javascript">
+        let apiURL01="./json/first.json";
+        let apiURL02="./json/second.json";
+
+        async function fetchData() {
+            const [txtResp, imgResp] = await Promise.all([
+                fetch(apiURL01),
+                fetch(apiURL02)
+            ]);
+            const txtR = await txtResp.json();
+            const imgR = await imgResp.json();
+            return [txtR, imgR];
+        }
+
+        fetchData().then(([txt, img]) => {
+            console.log(txt);     
+            console.log(img); 
+        }).catch(error => {
+            console.log(error.message);
+        });
+    </script>
+</body>
+</html>

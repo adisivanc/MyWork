@@ -1,0 +1,11 @@
+.flexContainer {
+  justify-content: space-between;
+  display: flex;
+}
+
+.useReducer {
+  background-color: #eee;
+  flex-flow: wrap;
+  display: flex;
+}
+/*# sourceMappingURL=index.c41b5a0e.css.map */

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		* { box-sizing:border-box; }
+		input { width:240px; margin:10px; padding:4px 15px; }
+	</style>
+<link rel="shortcut icon" href="https://static-assets-web.flixcart.com/www/promos/new/20150528-140547-favicon-retina.ico">
+    <link rel="icon" type="image/x-icon" href="./../support/img/mywork.ico">
+</head>
+<body>
+
+<button onclick="showVal()">Show input</button>
+
+<div id="output"></div>
+
+	<script type="text/javascript">
+	let showVal = () => {
+		let inpArr = ["text","number","email","range","date","datetime-local","button","color","week","search","tel","url","time","month"];
+		var inpEle = document.createElement("input");
+
+		inpArr.forEach((elem) => {
+			inpEle.setAttribute("type",elem);
+			document.getElementById("output").innerHTML += "&lt;input type='"+elem+"' \/ &gt; &lt;br/&gt;";
+		})
+		var myHTML = document.getElementById("output").textContent;
+		document.getElementById("output").innerHTML = myHTML;
+	}
+	</script>
+</body>
+</html>

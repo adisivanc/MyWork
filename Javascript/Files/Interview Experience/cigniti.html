@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    state mangement
+    AXIOS - fetch / hope it also have global exp handling not sure
+    INTERCEPTOR - Exception handling in global level
+    Context API
+
+    Online React
+    https://stackblitz.com/edit/react-project-7vi7e1?file=App.js
+
+    architecture of react app
+
+    debugging
+
+
+    <script>
+
+        /*Cigniti - Janani Chandrasekar*/
+
+        //Level 01
+        var city = ["Singapore", "Delhi", "London"];
+
+        function cities(citiesArray) {
+            var result = {}; // Initialize an empty object to store the result
+
+            for (var i = 0; i < citiesArray.length; i++) {
+                result[citiesArray[i]] = citiesArray[i]; // Assign both key and value to the city in the result object
+            }
+
+            return result; // Return the result object
+        }
+
+        var output = cities(city);
+        console.log(output);
+
+
+        //Level 02
+        var city02 = ["Singapore", "Delhi", "London"]; 
+        var res02 = {};
+
+        function cities02(cityArray) { 
+            for (var i = 0; i < cityArray.length; i++) {
+                res02[i] = cityArray[i];
+            }
+            
+            // Adding a new city
+            res02[cityArray.length] = "Bangalore";
+            console.log(res02);
+            
+            // Deleting a city by index
+            delete res02[1];
+            console.log(res02);
+        }
+
+        cities02(city02);
+
+    </script>
+</body>
+</html>

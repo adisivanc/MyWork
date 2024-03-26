@@ -1,0 +1,116 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: #333;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+.main-container {
+  flex-direction: column;
+  min-height: 100vh;
+  display: flex;
+}
+
+header {
+  border-bottom: 1px solid #ddd;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  display: flex;
+}
+
+header > img {
+  max-height: 42px;
+}
+
+header ul {
+  align-items: center;
+  gap: 30px;
+  list-style-type: none;
+  display: flex;
+}
+
+header ul li a {
+  text-decoration: none;
+}
+
+header ul li input[type="button"] {
+  color: #fff;
+  cursor: pointer;
+  background-color: #492218;
+  border: 1px solid #000;
+  border-radius: 4px;
+  padding: 7px 15px;
+}
+
+footer {
+  text-align: center;
+  background-color: #eee;
+  padding: 10px 0;
+}
+
+main {
+  flex-grow: 1;
+}
+
+.filter-container {
+  background-color: #eee;
+  gap: 30px;
+  padding: 20px;
+  display: flex;
+}
+
+.filter-container input[type="text"] {
+  padding: 5px 10px;
+}
+
+.filter-container button {
+  color: #eee;
+  background-color: #53074c;
+  border: 1px solid #380433;
+  border-radius: 4px;
+  padding: 7px 10px;
+}
+
+.resturant-cards {
+  max-width: 1200px;
+  margin: 30px auto;
+}
+
+.resturant-cards ul {
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  list-style-type: none;
+  display: grid;
+}
+
+.resturant-cards ul li img {
+  object-fit: cover;
+  object-position: center;
+  border-radius: 10px;
+  width: 100%;
+  max-height: 170px;
+}
+
+.resturant-cards-details {
+  flex-direction: column;
+  gap: 5px;
+  font-size: 14px;
+  display: flex;
+}
+
+.resturant-cards-details h5 {
+  font-size: 16px;
+}
+
+.resMenu {
+  grid-template-columns: repeat(4, 1fr);
+  display: grid;
+}
+
+/*# sourceMappingURL=index.9e4c6fd2.css.map */

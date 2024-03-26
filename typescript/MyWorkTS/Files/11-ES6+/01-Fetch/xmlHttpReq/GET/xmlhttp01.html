@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            ADISIVAN JS 
+        </title>
+        
+    <link rel="shortcut icon" href="https://static-assets-web.flixcart.com/www/promos/new/20150528-140547-favicon-retina.ico">
+    <link rel="icon" type="image/x-icon" href="./../support/img/mywork.ico">
+</head>
+    <body>
+        <div id="container">
+            <h4>Check Console Log</h4>
+        </div>
+        <script type="text/javascript">
+            const apiURL = "https://jsonplaceholder.typicode.com/users";
+
+            const xhr = new XMLHttpRequest();
+
+            xhr.onreadystatechange = function(){
+                try{
+                    if(this.readyState==4 && this.status==200){
+                        const data=JSON.parse(xhr.response);
+                        console.log(data);
+                    }else{
+                        throw new Error("Wrong");
+                    }
+                }
+                catch(err){
+                    console.log(err.message);
+                }
+            }
+
+            xhr.open("GET",apiURL,true);
+            xhr.send();
+        </script>
+    </body>
+</html>

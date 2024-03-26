@@ -1,0 +1,43 @@
+<html>
+<head>
+    <title>Form Validation</title>
+<link rel="shortcut icon" href="https://static-assets-web.flixcart.com/www/promos/new/20150528-140547-favicon-retina.ico">
+    <link rel="icon" type="image/x-icon" href="./../support/img/mywork.ico">
+</head>
+<body>
+
+    <div class="nothing">Nothing just Testing</div>
+
+    <script type="text/javascript">
+        
+
+        for(i=0;i<=4;i++){
+            setTimeout(function(){
+                g = 150;
+                var t = 12;
+                console.log(i)
+            },i*1000);
+        }
+
+        console.log("Difference");
+
+        // j is Function Scope
+
+        setTimeout(function(){
+            for(k=0;k<=4;k++){(
+                function(j){
+                    setTimeout(function(){
+                        console.log(j)
+                    },j*1000);
+                })(k); //Invoke self function again
+            }
+
+            // g Not declared as var / Let / Const so Global Variable
+            console.log(g);
+            // t declared as var / Let / Const so Local Variable scope inside Function only -  Uncaught ReferenceError: t is not defined
+            console.log(t);
+        },5000);
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .App{font-family:sans-serif;text-align:center;display:flex;justify-content:space-between;flex-direction:column}
+        .boxGroup{display:flex}
+        .box{width:100px;height:100px;background-color:#fff;color:#000;border:1px solid #ccc}
+        .box.redd{background-color:red}
+        .box.greenn{background-color:green}
+        .box.bluee{background-color:blue}
+        .buttonGroup{display:block}
+    </style>
+</head>
+<body>
+    
+    <div id="app"></div>
+
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script crossorigin src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script> <!-- Include Babel standalone -->
+
+    <script type="text/babel">
+        import { useState } from "react";
+    
+        function App() {
+            const [red, setRed] = useState(true);
+            const [green, setGreen] = useState(true);
+            const [blue, setBlue] = useState(true);
+    
+            const handleRed = () => {
+                setRed(!red);
+            };
+    
+            const handleGreen = () => {
+                setGreen(!green);
+            };
+    
+            const handleBlue = () => {
+                setBlue(!blue);
+            };
+    
+            return (
+                <div className="App">
+                <div className="boxGroup">
+                    <div className={`box ${red ? "redd" : "white"}`}>Box 1</div>
+                    <div className={`box ${green ? "greenn" : "white"}`}>Box 2</div>
+                    <div className={`box ${blue ? "bluee" : "white"}`}>Box 3</div>
+                </div>
+                <div className="buttonGroup">
+                    <button type="button" onClick={handleRed}>
+                    Change Red to White
+                    </button>
+                    <button type="button" onClick={handleGreen}>
+                    Change Green to White
+                    </button>
+                    <button type="button" onClick={handleBlue}>
+                    Change Blue to White
+                    </button>
+                </div>
+                </div>
+            );
+        }
+    
+        const root = ReactDOM.createRoot(document.getElementById("app"));
+        root.render(<App/>)
+    </script>
+
+<!--
+<script type="text/javascript">
+    // Transpiled JavaScript code from JSX
+    function App() {
+        var _useState = React.useState(true),
+            red = _useState[0],
+            setRed = _useState[1];
+
+        var _useState2 = React.useState(true),
+            green = _useState2[0],
+            setGreen = _useState2[1];
+
+        var _useState3 = React.useState(true),
+            blue = _useState3[0],
+            setBlue = _useState3[1];
+
+        var handleRed = function handleRed() {
+            setRed(!red);
+        };
+
+        var handleGreen = function handleGreen() {
+            setGreen(!green);
+        };
+
+        var handleBlue = function handleBlue() {
+            setBlue(!blue);
+        };
+
+        return /*#__PURE__*/React.createElement("div", {
+            className: "App"
+        }, /*#__PURE__*/React.createElement("div", {
+            className: "boxGroup"
+        }, /*#__PURE__*/React.createElement("div", {
+            className: "box ".concat(red ? "redd" : "white")
+        }, "Box 1"), /*#__PURE__*/React.createElement("div", {
+            className: "box ".concat(green ? "greenn" : "white")
+        }, "Box 2"), /*#__PURE__*/React.createElement("div", {
+            className: "box ".concat(blue ? "bluee" : "white")
+        }, "Box 3")), /*#__PURE__*/React.createElement("div", {
+            className: "buttonGroup"
+        }, /*#__PURE__*/React.createElement("button", {
+            type: "button",
+            onClick: handleRed
+        }, "Change Red to White"), /*#__PURE__*/React.createElement("button", {
+            type: "button",
+            onClick: handleGreen
+        }, "Change Green to White"), /*#__PURE__*/React.createElement("button", {
+            type: "button",
+            onClick: handleBlue
+        }, "Change Blue to White")));
+    }
+
+    var root = ReactDOM.createRoot(document.getElementById("app"));
+    root.render( /*#__PURE__*/React.createElement(App, null));
+</script>
+-->
+    
+</body>
+</html>

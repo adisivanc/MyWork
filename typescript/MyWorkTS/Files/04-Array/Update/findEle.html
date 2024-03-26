@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Class</title>
+
+<link rel="shortcut icon" href="https://static-assets-web.flixcart.com/www/promos/new/20150528-140547-favicon-retina.ico">
+    <link rel="icon" type="image/x-icon" href="./../support/img/mywork.ico">
+</head>
+<body>
+
+<p>Before submitting data to the server, it is important to ensure all required form controls are filled out, in the correct format. This is called client-side form validation, and helps ensure data submitted matches the requirements set forth in the various form controls. This article leads you through basic concepts and examples of client-side form validation.</p>
+
+<p>Prerequisites:	Computer literacy, a reasonable understanding of HTML, CSS, and JavaScript.
+Objective:	To understand what client-side form validation is, why it's important, and how to apply various techniques to implement it.
+Client-side validation is an initial check and an important feature of good user experience; by catching invalid data on the client-side, the user can fix it straight away. If it gets to the server and is then rejected, a noticeable delay is caused by a round trip to the server and then back to the client-side to tell the user to fix their data.</p>
+
+<p>However, client-side validation should not be considered an exhaustive security measure! Your apps should always perform security checks on any form-submitted data on the server-side as well as the client-side, because client-side validation is too easy to bypass, so malicious users can still easily send bad data through to your server. Read Website security for an idea of what could happen; implementing server-side validation is somewhat beyond the scope of this module, but you should bear it in mind.</p>
+
+<p>What is form validation?
+Go to any popular site with a registration form, and you will notice that they provide feedback when you don't enter your data in the format they are expecting. You'll get messages such as:</p>
+
+<p>"This field is required" (You can't leave this field blank).
+"Please enter your phone number in the format xxx-xxxx" (A specific data format is required for it to be considered valid).
+"Please enter a valid email address" (the data you entered is not in the right format).
+"Your password needs to be between 8 and 30 characters long and contain one uppercase letter, one symbol, and a number." (A very specific data format is required for your data).
+This is called form validation. When you enter data, the browser and/or the web server will check to see that the data is in the correct format and within the constraints set by the application. Validation done in the browser is called client-side validation, while validation done on the server is called server-side validation. In this chapter we are focusing on client-side validation.
+
+<p>If the information is correctly formatted, the application allows the data to be submitted to the server and (usually) saved in a database; if the information isn't correctly formatted, it gives the user an error message explaining what needs to be corrected, and lets them try again.</p>
+
+<p>We want to make filling out web forms as easy as possible. So why do we insist on validating our forms? There are three main reasons:</p>
+
+<p>We want to get the right data, in the right format. Our applications won't work properly if our users' data is stored in the wrong format, is incorrect, or is omitted altogether.
+We want to protect our users' data. Forcing our users to enter secure passwords makes it easier to protect their account information.
+We want to protect ourselves. There are many ways that malicious users can misuse unprotected forms to damage the application (see Website security).
+Warning:: Never trust data passed to your server from the client. Even if your form is validating correctly and preventing malformed input on the client-side, a malicious user can still alter the network request.</p>
+
+
+<script type="text/javascript">
+
+
+	var word = "data", queue = [document.body], curr;
+	
+	console.log(queue);
+	
+	while (curr = queue.pop()) {
+		if (!curr.textContent.match(word)) continue;
+		for (var i = 0; i < curr.childNodes.length; ++i) {
+			switch (curr.childNodes[i].nodeType) {
+				case Node.TEXT_NODE : // 3
+					if (curr.childNodes[i].textContent.match(word)) {
+						console.log("Found!");
+						console.log(curr);
+						// you might want to end your search here.
+					}
+					break;
+				case Node.ELEMENT_NODE : // 1
+					queue.push(curr.childNodes[i]);
+					break;
+			}
+		}
+	}
+
+
+</script>
+
+</body>
+</html>

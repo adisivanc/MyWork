@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+</head>
+<body>
+
+    <h1>Login</h1>
+
+    <form id="loginForm">
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" required>
+
+        <button type="button" onclick="login()">Login</button>
+    </form>
+
+    <script>
+        async function login() {
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            // You should replace 'your-api-endpoint' with the actual endpoint to which you send the login request
+            const apiEndpoint = 'your-api-endpoint';
+
+            try {
+                // Send a POST request to the server with user credentials
+                const response = await fetch(apiEndpoint, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ email, password }),
+                });
+
+                // Assuming the server responds with a JSON containing a token and username
+                const data = await response.json();
+
+                // If login is successful, store the username in sessionStorage and redirect to the dashboard page
+                if (response.ok) {
+                    sessionStorage.setItem('username', data.username);
+                    // You should replace 'dashboard.html' with the actual path to your dashboard page
+                    window.location.href = 'dashboard.html';
+                } else {
+                    // Handle login failure (e.g., display an error message)
+                    console.error(data.error);
+                }
+            } catch (error) {
+                console.error('Error during login:', error);
+            }
+        }
+    </script>
+
+</body>
+</html>

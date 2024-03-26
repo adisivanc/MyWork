@@ -1,0 +1,48 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+/* & */
+.improve01-title {
+  color: cadetblue;
+}
+
+.btnPrimary {
+  display: inline-block;
+  padding: 10px 12px;
+  background-color: #990000;
+  color: #FFFFFF;
+  border-radius: 4px;
+  border: 2px solid #660000;
+}
+.btnPrimary + .btnPrimary {
+  margin-left: 20px;
+}
+
+/* & */
+/* @use vs @forward vs @import */
+/* @use vs @forward vs @import */
+/* @mixins and @include*/
+/*Basic*/
+@media screen and (min-width: 768px) {
+  .improve02 {
+    color: #FF0000;
+  }
+}
+
+/*Intermediate*/
+@media screen and (min-width: 992px) {
+  .improve03 {
+    border: 2px solid #39eea1;
+  }
+}
+
+/*Advanced*/
+@media screen and (min-width: 992px) {
+  .improve04 {
+    box-shadow: 0 0 3px #990000;
+  }
+}
+
+/* @mixins and @include*//*# sourceMappingURL=LOWCODE.css.map */

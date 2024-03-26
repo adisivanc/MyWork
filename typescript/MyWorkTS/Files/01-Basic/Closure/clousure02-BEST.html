@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+<link rel="shortcut icon" href="https://static-assets-web.flixcart.com/www/promos/new/20150528-140547-favicon-retina.ico">
+    <link rel="icon" type="image/x-icon" href="./../support/img/mywork.ico">
+</head>
+<body>
+
+    <div>
+        <h4>Closure conept with increment and decrement</h4>
+        <p>Accessing outer function value from inner function by using closure</p>
+    </div>
+    <script type="text/javascript">
+            function outerFunction() {
+                var outerVariable = "Im from the outer function";
+
+                function innerFunction() {
+                    console.log(outerVariable);
+                }
+
+                return innerFunction;
+            }
+
+            var closure = outerFunction();
+            closure();
+
+
+
+
+            function createCounter() {
+                let count = 0;
+
+                function increment() {
+                    count++;
+                    console.log(count);
+                }
+
+                return increment;
+            }
+
+            const counter = createCounter();
+            counter(); // Output: 1
+            counter(); // Output: 2
+            counter(); // Output: 3
+
+    </script>
+</body>
+</html>

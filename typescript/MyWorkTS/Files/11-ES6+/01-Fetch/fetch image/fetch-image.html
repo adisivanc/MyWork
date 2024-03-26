@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img { max-width:200px; }
+    </style>
+<link rel="shortcut icon" href="https://static-assets-web.flixcart.com/www/promos/new/20150528-140547-favicon-retina.ico">
+    <link rel="icon" type="image/x-icon" href="./../support/img/mywork.ico">
+</head>
+<body>
+
+    <img src="" id="imgID" alt="Loading...">
+    <img src="" id="imgID02" alt="Loading...">
+
+    <script type="text/javascript">
+        let apiURL="./img/test.jpg";
+
+        fetch(apiURL,{method:"GET"})
+        .then(resp => resp.blob())
+        .then(secResp => {
+            document.getElementById("imgID").src=(URL.createObjectURL(secResp))
+        })
+
+        async function getImg(){
+            let firstResp = await fetch(apiURL,{method:"GET"})
+            let secResp = await firstResp.blob();
+            document.getElementById("imgID02").src=URL.createObjectURL(secResp);
+        }
+        getImg();
+
+
+    </script>
+</body>
+</html>

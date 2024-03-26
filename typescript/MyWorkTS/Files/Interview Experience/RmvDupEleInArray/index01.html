@@ -1,0 +1,60 @@
+<html>
+<head>
+<title></title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    body { font-family: Arial, Helvetica, sans-serif; font-size:16px; }
+</style>
+<link rel="shortcut icon" href="https://static-assets-web.flixcart.com/www/promos/new/20150528-140547-favicon-retina.ico">
+    <link rel="icon" type="image/x-icon" href="./../support/img/mywork.ico">
+</head>
+<body class="" >
+
+<div class="orGinal">
+    <div class="fruits"></div>
+    <div class="colour"></div>
+</div>
+
+<br/><br/>
+
+<div class="duplicateRmv">
+    <div class="fruits"></div>
+    <div class="colour"></div>
+</div>
+    
+<script type="text/javascript">
+
+var fruitsArr = ["apple","mango","orange","grapes"];
+var colourArr = ["red","blue","green","orange","black"];
+
+document.getElementsByClassName("fruits")[0].innerHTML=fruitsArr;
+document.getElementsByClassName("colour")[0].innerHTML=colourArr;
+
+for (var i = 0; i<colourArr.length; i++) {
+    var arrlen = fruitsArr.length;
+    for (var j = 0; j<arrlen; j++) {
+        if (colourArr[i] == fruitsArr[j]) {
+            debugger;
+            fruitsArr = fruitsArr.slice(0, j).concat(fruitsArr.slice(j+1, arrlen));
+        }
+    }
+}
+
+document.getElementsByClassName("fruits")[1].innerHTML=fruitsArr;
+document.getElementsByClassName("colour")[1].innerHTML=colourArr;
+
+</script>
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

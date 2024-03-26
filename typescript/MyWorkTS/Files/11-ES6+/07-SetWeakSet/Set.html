@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./../../../../support/css/bootstrap.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <script src="./../../../../support/js/bootstrap.bundle.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/js/bootstrap.bundle.min.js" type="text/javascript"></script>
+<link rel="shortcut icon" href="https://static-assets-web.flixcart.com/www/promos/new/20150528-140547-favicon-retina.ico">
+    <link rel="icon" type="image/x-icon" href="./../support/img/mywork.ico">
+</head>
+<body>
+    
+    
+    <xmp>
+        Set - Kind of Array
+
+        Hold all data type
+        Duplicate not allowed
+
+
+        Possible operation {Think Two Array and compare it}
+        union, intersection, difference, subset
+    </xmp>
+
+    <script type="text/javascript"> 
+        const newSet = new Set();
+
+        newSet.add("Tree");
+        newSet.add(true);
+        newSet.add(3);
+        newSet.add({color:"lightGreen",size:"Mixed"});
+
+        console.log(newSet);
+        console.log(newSet.values());
+
+        const numSet = new Set([1,2,3,1,2,1,2,6,7,8,12]);
+        console.log(numSet.values());
+        console.log(numSet.has(6));
+        console.log(numSet.has(9));
+        console.log(numSet.delete(6));
+        console.log(numSet.clear());
+    </script>
+</body>
+</html>

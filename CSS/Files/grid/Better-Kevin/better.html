@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .grid-container{
+            display: grid;
+            gap:1.25rem;
+            grid-auto-columns: 1fr; /*Add it*/
+            grid-template-areas:
+            'one'
+            'two'
+            'three'
+            'four'
+            'five';
+        }
+        .grid-items{
+            font-size:1rem;
+            line-height:1.25rem;
+            font-family:Arial, Helvetica, sans-serif;
+            background-color:#eee;
+            padding:15px 20px;
+            border-radius:8px;
+            
+            &.one{
+                background-color: aquamarine;
+                grid-area: one;
+            }
+            &.two{
+                background-color:beige;
+                grid-area: two;
+            }
+            &.three{
+                background-color: hotpink;
+                grid-area: three;
+            }
+            &.four{
+                background-color: lightsteelblue;
+                grid-area: four;
+            }
+            &.five{
+                background-color:wheat;
+                grid-area: five;
+            }
+        }
+
+        @media (min-width:992px){
+            .grid-container{
+                grid-template-areas:
+                'one one two five'
+                'three four four five';
+            }
+
+            .grid-items{
+                
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="grid-container">
+        <div class="grid-items one">
+            1-Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi nostrum, sequi, voluptatibus asperiores excepturi consequatur cum eos doloribus aliquam ab dolorum sunt sint quas labore sapiente quis rerum optio nemo!
+        </div>
+        <div class="grid-items two">
+            2-Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi nostrum, sequi, voluptatibus asperiores excepturi consequatur cum eos doloribus aliquam ab dolorum sunt sint quas labore sapiente quis rerum optio nemo!
+        </div>
+        <div class="grid-items three">
+            3-Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi nostrum, sequi, voluptatibus asperiores excepturi consequatur cum eos doloribus aliquam ab dolorum sunt sint quas labore sapiente quis rerum optio nemo!
+        </div>
+        <div class="grid-items four">
+            4-Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi nostrum, sequi, voluptatibus asperiores excepturi consequatur cum eos doloribus aliquam ab dolorum sunt sint quas labore sapiente quis rerum optio nemo!
+        </div>
+        <div class="grid-items five">
+            5-Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi nostrum, sequi, voluptatibus asperiores excepturi consequatur cum eos doloribus aliquam ab dolorum sunt sint quas labore sapiente quis rerum optio nemo!
+        </div>
+    </div>
+</body>
+</html>

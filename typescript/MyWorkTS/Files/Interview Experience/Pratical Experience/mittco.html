@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{font-family:Arial,sans-serif;text-align:center;background-color:#f0f0f0;margin:0;padding:0}
+        .container{max-width:400px;margin:50px auto;background-color:#fff;padding:20px;border-radius:10px;box-shadow:0 0 10px rgba(0,0,0,0.1)}
+        h1{margin-bottom:20px}
+        .timer{position:relative;border:2px solid #ccc;border-radius:50%;padding:10px;margin:0 auto;width:200px;height:200px}
+        .progress-bar{position:absolute;top:0;left:0;border-radius:50%;width:100%;height:100%;background-color:#34a853;clip-path:circle(50% at 100% 100%)}
+        .time-display{font-size:24px;font-weight:700;line-height:200px;color:#555}
+        .controls{margin-top:20px}
+        button{margin:5px;padding:10px 20px;font-size:16px;background-color:#34a853;color:#fff;border:none;border-radius:5px;cursor:pointer}
+        .pomodoro-counter{margin-top:20px;font-size:18px}
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Pomodoro Timer</h1>
+        <div class="timer">
+        <div class="progress-bar"></div>
+        <div class="time-display">25:00</div>
+        </div>
+
+        <div class="controls">
+        <button class="start">Start</button>
+        <button class="pause">Pause</button>
+        <button class="reset">Reset</button>
+        </div>
+        
+        <div class="pomodoro-counter">Pomodoros Completed: 0</div>
+    </div>
+    
+    <script>
+        // JavaScript code
+        document.addEventListener("DOMContentLoaded", function () {
+        let timerInterval;
+        let currentTime = 25 * 60;
+        let pomodorosCompleted = 0;
+
+        const timerDisplay = document.querySelector(".time-display");
+        const progressBar = document.querySelector(".progress-bar");
+        const startButton = document.querySelector(".start");
+        const pauseButton = document.querySelector(".pause");
+        const resetButton = document.querySelector(".reset");
+        const pomodoroCounter = document.querySelector(".pomodoro-counter");
+
+        function updateTimer() {
+            const minutes = Math.floor(currentTime / 60);
+            const seconds = currentTime % 60;
+            timerDisplay.textContent = `${minutes.toString().padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`;
+
+            const progress = ((25 * 60 - currentTime) / (25 * 60)) * 100;
+            progressBar.style.clipPath = `circle(50% at 100% ${100 - progress}%)`;
+        }
+
+        function startTimer() {
+            timerInterval = setInterval(() => {
+            currentTime--;
+            if (currentTime <= 0) {
+                clearInterval(timerInterval);
+                pomodorosCompleted++;
+                pomodoroCounter.textContent = `Pomodoros Completed: ${pomodorosCompleted}`;
+                currentTime = pomodorosCompleted % 4 === 0 ? 15 * 60 : 5 * 60;
+                startButton.disabled = false;
+                pauseButton.disabled = true;
+            }
+            updateTimer();
+            }, 1000);
+
+            startButton.disabled = true;
+            pauseButton.disabled = false;
+        }
+
+        function pauseTimer() {
+            clearInterval(timerInterval);
+            startButton.disabled = false;
+            pauseButton.disabled = true;
+        }
+
+        function resetTimer() {
+            clearInterval(timerInterval);
+            currentTime = 25 * 60;
+            updateTimer();
+            startButton.disabled = false;
+            pauseButton.disabled = true;
+        }
+
+        startButton.addEventListener("click", startTimer);
+        pauseButton.addEventListener("click", pauseTimer);
+        resetButton.addEventListener("click", resetTimer);
+        });
+
+    </script>
+</body>
+</html>

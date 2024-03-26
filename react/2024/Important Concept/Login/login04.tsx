@@ -25,14 +25,16 @@ const App = () => {
     agreement: false,
   };
 
-  const [formData, setFormData] = useState<FormData>(initialFormData);
-  const [errorMsg, setErrorMsg] = useState<ErrorMsg>({
+  const initialErrorData: ErrorMsg = {
     username: '',
     password: '',
     gender: '',
     country: '',
     agreement: '',
-  });
+  };
+
+  const [formData, setFormData] = useState<FormData>(initialFormData);
+  const [errorMsg, setErrorMsg] = useState<ErrorMsg>(initialErrorData);
 
   const [formSubmitted, setFormSubmitted] = useState(false);
 

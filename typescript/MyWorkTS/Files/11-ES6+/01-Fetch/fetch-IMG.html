@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #cont img { width:30px;}
+    </style>
+<link rel="shortcut icon" href="https://static-assets-web.flixcart.com/www/promos/new/20150528-140547-favicon-retina.ico">
+    <link rel="icon" type="image/x-icon" href="./../support/img/mywork.ico">
+</head>
+<body>
+
+    <div id="cont"></div>
+
+    <script type="text/javascript">
+        const apiURL = 'https://jsonplaceholder.typicode.com/photos';
+        let initSt = "";
+        const img01 = "<img src='";
+        const img02 = "'/>";
+
+
+        fetch(apiURL)
+        .then(resp=>resp.json())
+        .then(data=>{
+            //console.log(data)
+
+            for(x of data){
+                initSt+=img01+x.url+img02;
+                
+            }
+            //console.log(initSt);
+            document.getElementById("cont").innerHTML=initSt;
+        })
+    </script>
+</body>
+</html>

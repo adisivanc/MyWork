@@ -1,0 +1,1 @@
+{"mappings":"AAAA;;;;;AAKA","sources":["index.css"],"sourcesContent":[".flexContainer {\r\n    display: flex;\r\n    justify-content: space-between;\r\n}\r\n\r\n.useReducer {\r\n    background-color:#eeeeee;\r\n    display: flex;\r\n    flex-flow:row wrap;\r\n}"],"names":[],"version":3,"file":"index.c41b5a0e.css.map","sourceRoot":"/__parcel_source_root/"}

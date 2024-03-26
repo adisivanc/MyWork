@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reduce</title>
+<link rel="shortcut icon" href="https://static-assets-web.flixcart.com/www/promos/new/20150528-140547-favicon-retina.ico">
+    <link rel="icon" type="image/x-icon" href="./../support/img/mywork.ico">
+</head>
+<body>
+    
+    
+
+    <script type="text/javascript">
+
+        const arrEle =[12,3,8,34,9,0,-3,23,-99,128];
+        
+        //Without arguments
+        let sum = arrEle.reduce((accumulator,currentElement,index,array)=>{
+            return accumulator+currentElement;
+        })
+
+        console.log(sum);
+
+
+        // Added arguments
+        let total = arrEle.reduce((accumulator,currentElement,index,array)=>{
+            return accumulator+currentElement;
+        },2)
+
+        console.log(total);
+
+
+
+    </script>
+</body>
+</html>

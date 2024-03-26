@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="myForm">
+        <label for="username">Username</label>
+        <input type="text" value="" id="username"/>
+        <br/>
+        <label for="password">Password</label>
+        <input type="password" value="" id="password"/>
+        <br/>
+        <label for="gender">Gender</label>
+        <select id="gender">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select>
+        <br/>
+        <label for="remember">Remember me</label>
+        <input type="checkbox" id="remember"/>
+        <br/>
+        <input type="button" value="Submit" id="submit"/>
+        <input type="reset" value="Reset" id="reset"/>
+    </form>
+
+    <script type="text/javascript">
+        let submit = document.querySelector("#submit");
+        let reset = document.querySelector("#reset");
+        let form = document.querySelector("#myForm");
+
+        submit.addEventListener('click', function(){
+            // Your submit logic here
+        });
+
+        reset.addEventListener('click', function(){
+            // Reset all input values to empty
+            Array.from(form.elements).forEach(element => {
+                if (element.tagName.toLowerCase() === 'input' || element.tagName.toLowerCase() === 'select') {
+                    if (element.type !== 'checkbox' && element.type !== 'button') {
+                        element.value = "";
+                    } else if (element.type === 'checkbox') {
+                        // For checkboxes, uncheck them
+                        element.checked = false;
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

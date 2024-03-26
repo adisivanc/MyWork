@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            ADISIVAN JS 
+        </title>
+    <link rel="shortcut icon" href="https://static-assets-web.flixcart.com/www/promos/new/20150528-140547-favicon-retina.ico">
+    <link rel="icon" type="image/x-icon" href="./../support/img/mywork.ico">
+</head>
+    <body>
+        <div id="container">
+            <h4>Check Console Log</h4>
+        </div>
+        <script type="text/javascript">
+            const apiURL = 'https://jsonplaceholder.typicode.com/users';
+
+            async function fetchData(){
+                try{
+                    const promis = await fetch(apiURL,{method:"GET"})
+                    if(promis.status!==200) throw new Error("Something Error")
+
+                    const data = await promis.json();
+                    console.log(data);
+                } catch(err){
+                    console.log(err.message);
+                }
+            }
+
+            fetchData();
+
+        </script>
+    </body>
+</html>

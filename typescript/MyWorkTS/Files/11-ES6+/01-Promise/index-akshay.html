@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async</title>
+</head>
+<body>
+
+    <script>
+        const apiURL = "https://jsonplaceholder.typicode.com/users";
+
+        const fetchDataUsingPromise = new Promise((resolve,reject)=>{
+            fetch(apiURL)
+            .then(response=>{
+                if(!response.ok){
+                    throw new Error("Server not responding...")
+                }
+                return response.json();
+            })
+            .then(data=>{
+                return resolve(data);
+            })
+            .catch(error=>{
+                return reject(error);
+            })
+        });
+
+        const getData = () => {
+            fetchDataUsingPromise
+            .then(data=>{
+                console.log(data);
+            })
+            .catch(error=>{
+                console.log(error);
+            })
+        }
+
+        getData();
+    </script>
+</body>
+</html>

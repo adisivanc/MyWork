@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Group - Reduce</title>
+<link rel="shortcut icon" href="https://static-assets-web.flixcart.com/www/promos/new/20150528-140547-favicon-retina.ico">
+    <link rel="icon" type="image/x-icon" href="./../support/img/mywork.ico">
+</head>
+<body>
+    
+    
+    <script type="text/javascript">
+
+        let studentDetails =[{
+            fullName:"Adisivan Chinnasamy",
+            age:32,
+            rollNo:"080606199002",
+            city:"Vellakovil",
+            group:1
+        },{
+            fullName:"Karthikeyan Sekar",
+            age:32,
+            rollNo:"080606199025",
+            city:"Dindugal",
+            group:1
+        },{
+            fullName:"VijayAnand Ravindran",
+            age:32,
+            rollNo:"080606199057",
+            city:"Coimbatore",
+            group:1
+        },{
+            fullName:"RajKumar P",
+            age:33,
+            rollNo:"080606199042",
+            city:"Walayar",
+            group:2
+        },{
+            fullName:"Nagaraj",
+            age:32,
+            rollNo:"080606193222",
+            city:"Dindugal",
+            group:2
+        }];
+
+        let groupStudent = studentDetails.reduce((accumulator,current,index,array)=>{
+            
+                const group = current.group;
+                if(!accumulator[group]){
+                    accumulator[group]=[]
+                }
+                accumulator[group].push(current);
+                return accumulator;
+            
+        },{})
+
+        console.log(groupStudent);
+    </script>
+</body>
+</html>

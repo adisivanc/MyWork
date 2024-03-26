@@ -1,0 +1,70 @@
+<html>
+<head>
+<title></title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    body { background-color:#eee;font-family: Arial, Helvetica, sans-serif; font-size:15px; }
+    input[type=text] { font-size:15px;padding:5px 12px; }
+    button { font-size:15px; padding:8px 15px; background-color:#c00; color:#FFF; border:2px solid #890000; }
+</style>
+<link rel="shortcut icon" href="https://static-assets-web.flixcart.com/www/promos/new/20150528-140547-favicon-retina.ico">
+    <link rel="icon" type="image/x-icon" href="./../support/img/mywork.ico">
+</head>
+<body class="" >
+
+    <h4>Can you please check the console</h4>
+   
+    <h1 id="resultContainer"></h1>
+
+    <button id="butEle" class="butEle" onclick="">Button</button>
+
+        
+    <script type="text/javascript">
+            
+            function fetchData() {
+                const urls = ["https://jsonplaceholder.typicode.com/posts", "https://jsonplaceholder.typicode.com/photos"]; // Replace "url1" and "url2" with the actual URLs you want to fetch
+
+                const promises = urls.map(url => {
+                    return fetch(url)
+                    .then(response => {
+                        if (response.ok) {
+                            return response.json(); // Parse the response as JSON
+                        }
+                        throw new Error('Network response was not ok.');
+                    })
+                    .catch(error => {
+                        console.error('There was a problem with the fetch operation:', error);
+                    });
+                });
+
+                return Promise.all(promises)
+                .then(data => {
+                    //const resultContainer = document.getElementById('resultContainer'); // Replace 'resultContainer' with the ID of the HTML element where you want to display the data
+                    //resultContainer.innerHTML = JSON.stringify(data);
+                    return data;
+                });
+            }
+
+            fetchData()
+            .then(data => {
+                console.log('Data:', data);
+            })
+            .catch(error => {
+                console.error('There was a problem fetching the data:', error);
+            });
+
+    </script>
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

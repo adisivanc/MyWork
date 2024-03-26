@@ -1,0 +1,76 @@
+<html>
+<head>
+<title></title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    .searchby select { padding: 6px 20px 6px 10px; font-size: 15px; }
+    .searchby input { font-size: 15px; padding: 5px 15px; }
+</style>
+<link rel="shortcut icon" href="https://static-assets-web.flixcart.com/www/promos/new/20150528-140547-favicon-retina.ico">
+    <link rel="icon" type="image/x-icon" href="./../support/img/mywork.ico">
+</head>
+<body class="" >  
+    
+<div id="listEle" class="listEle">
+    <div class="searchby" id="searchby">
+        <select id="selOpt">
+            <option value="lessValue" name="selOptt"> <= </option>
+            <option value="moreValue" name="selOptt"> >= </option>
+        </select>
+        <input type="text" name="valSearch" id="valSearch" />
+    </div>
+</div>
+
+<p id="filteredArr"></p>
+    
+<script type="text/javascript">
+        var selecOpt = document.getElementsByName("selOptt");
+        var SelValuOpt = document.getElementById("selOpt").value;
+        debugger;
+        
+        if(SelValuOpt=="moreValue"){
+            checkVal("01");
+        }else{
+            debugger;
+            checkVal("02");
+        }
+        
+
+        function callArr01(element,index,array){
+                debugger;
+                return(index>=2);
+        }
+
+        function callArr02(element,index,array){
+                debugger;
+                return(index<=2);
+        }
+
+        function checkVal(opara){
+            debugger;
+            var arrName = ["Siva","Saravanan","Sanjeev","SevalKumaran","AadhiSivan"];
+            var str1 = "callArr";
+            var str2 = opara;
+            var parDef = str1.concat( str2 );
+            var filteredArr = arrName.filter(parDef);
+            document.getElementById("filteredArr").innerHTML=filteredArr;
+        }
+        //const gt="greatest";
+           
+
+        
+</script>
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

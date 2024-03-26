@@ -1,0 +1,72 @@
+<html>
+<head>
+<title></title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    body { font-family: Arial, Helvetica, sans-serif; font-size:16px; }
+</style>
+<link rel="shortcut icon" href="https://static-assets-web.flixcart.com/www/promos/new/20150528-140547-favicon-retina.ico">
+    <link rel="icon" type="image/x-icon" href="./../support/img/mywork.ico">
+</head>
+<body class="" >
+
+<h4>To find all Duplicate, this will not work</h4>    
+<div class="container">
+    <p class="demo"></p>
+    <p class="demo"></p>
+    <p class="demo"></p>
+    <p class="demo"></p>
+    <p class="demo"></p>
+    <p class="demo"></p>
+</div>
+    
+<script type="text/javascript">
+
+checkDuplicate();
+
+function checkDuplicate() {
+    const clVar = document.getElementsByClassName("demo");
+    let arr = ["abc","xy","bb", "axz", "abc","xy"];
+    clVar[0].innerHTML=arr;
+    // empty object
+    let map = {};
+    let result = false;
+    debugger;
+
+    for(let i = 0; i < arr.length;i++) {
+        // check if object contains entry with this element as key
+        
+        if(map[arr[i]]) {
+            result = true;
+            // terminate the loop
+            clVar[i+1].innerHTML=arr[i];
+            break;
+        }
+        
+        // add entry in object with the element as key
+        debugger;
+        map[arr[i]] = true;
+        
+    }
+    if(result) {
+        console.log('Array contains duplicate elements');
+    } else {
+        console.log('Array does not contain duplicate elements');
+    }
+}
+
+</script>
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

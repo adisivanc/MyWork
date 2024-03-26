@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+    </style>
+<link rel="shortcut icon" href="https://static-assets-web.flixcart.com/www/promos/new/20150528-140547-favicon-retina.ico">
+    <link rel="icon" type="image/x-icon" href="./../support/img/mywork.ico">
+</head>
+<body>
+
+    <xmp>
+        Syntax
+        
+        objectConstructorName.prototype.key = 'value';
+    </xmp>
+
+
+    <script type="text/javascript">
+
+        //Prototype is only for constructor object
+        
+        // constructor function
+        function Person () {
+            this.name = 'John',
+            this.age = 23
+        }
+
+        // creating objects
+        const person1 = new Person();
+        const person2 = new Person();
+
+
+
+        // adding property to constructor function
+        Person.prototype.gender = 'male';
+
+        Person.prototype.detailsFunc = function(){
+            return this.name+" "+this.age;
+        }
+
+
+
+        // prototype value of Person
+        console.log(Person.prototype);
+
+        // inheriting the property from prototype
+        console.log(person1.gender);
+        console.log(person2.gender);
+        console.log(person2.detailsFunc());
+
+    </script>
+</body>
+</html>

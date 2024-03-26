@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            ADISIVAN JS 
+        </title>
+        <link href="../../Style/style.css" type="text/css" rel="stylesheet" />
+    <link rel="shortcut icon" href="https://static-assets-web.flixcart.com/www/promos/new/20150528-140547-favicon-retina.ico">
+    <link rel="icon" type="image/x-icon" href="./../support/img/mywork.ico">
+</head>
+    <body>
+        <div id="container">
+            <h4>Check Console Log</h4>
+        </div>
+        <script type="text/javascript">
+            const objFunc = {
+                colorPx(){
+                    let sw = "Colour is "+this.color+" and Font Size is "+this.size;
+                    return sw;
+                }
+            }
+
+            const cloneObj = Object.create(objFunc);
+            cloneObj.color="yellow";
+            cloneObj.size="20px";
+            console.log(cloneObj.colorPx());
+        </script>
+    </body>
+</html>

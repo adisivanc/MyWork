@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script type="text/javascript">
+        function Developer(name){
+            this.name = name;
+            this.type = "Developer";
+        }
+
+        function Tester(name){
+            this.name = name;
+            this.type = "Tester";
+        }
+
+        function EmployeeFactory() {
+            this.create = (name,type) => {
+                switch(type){
+                    case 1:
+                        return new Developer(name);
+                        break;
+                    case 2:
+                        return new Tester(name);
+                        break;
+                }
+            }
+        }
+
+        function details(){
+            console.log(`${this.name} is ${this.type}`)
+        }
+
+
+        const employeeFactory = new EmployeeFactory();
+        const employees = [];
+
+        employees.push(employeeFactory.create("Adisivan",1));
+        employees.push(employeeFactory.create("Harsha",2));
+
+        employees.forEach(emp=>details.call(emp));
+    </script>
+</body>
+</html>

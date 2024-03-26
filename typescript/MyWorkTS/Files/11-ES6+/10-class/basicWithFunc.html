@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<link rel="shortcut icon" href="https://static-assets-web.flixcart.com/www/promos/new/20150528-140547-favicon-retina.ico">
+    <link rel="icon" type="image/x-icon" href="./../support/img/mywork.ico">
+</head>
+<body>
+     
+    <form name="objForm" method="GET">
+        <input type="text" name="ObjTxt" value=""/>
+        <p class="para" id="level01"></p>
+    </form>
+
+    <button id="butEle" class="btn btn-lg btn-primary" onclick="getEmpDt()">Button</button>
+    
+    <script type="text/javascript">
+        class Person {
+            constructor(){
+                this.firstName="Katrina";
+                this.lastName="Kaif";
+            }
+            fullName(){
+                return this.firstName+" "+this.lastName;
+            }
+        }
+
+        class Professinal extends Person {
+            constructor(){
+                super();
+                this.professinal = "Actress";
+                this.location = "Mumbai";
+            }
+            fullDetails(){
+                return this.fullName()+" was the "+this.professinal+" from "+this.location
+            }
+        }
+
+        const empObj = new Professinal();
+        console.log(empObj.fullDetails());
+    </script>
+</body>
+</html>

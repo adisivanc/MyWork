@@ -1,0 +1,67 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:16px;
+    color:#333333;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    min-height:100vh;
+}
+
+header { display: flex; justify-content: space-between; align-items: center; padding:15px 20px; border-bottom:1px solid #dddddd; }
+header > img { max-height:42px; }
+header ul { display:flex; align-items: center; gap:30px; list-style-type: none; }
+header ul li a { text-decoration: none; }
+header ul li input[type="button"] { background-color:#492218; color:#FFFFFF; cursor: pointer; padding:7px 15px; border:1px solid #000000; border-radius:4px; }
+footer { text-align: center; padding:10px 0; background-color:#eeeeee; }
+main { flex-grow: 1; }
+
+.filter-container { padding:20px; display: flex; gap:30px; background-color:#eeeeee; }
+.filter-container input[type="text"] { padding:5px 10px; }
+.filter-container button { background-color:#53074c; border:1px solid #380433; border-radius:4px; padding:7px 10px; color:#eeeeee;}
+
+.resturant-cards{
+    max-width:1200px;
+    margin:30px auto;
+}
+.resturant-cards ul{
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+    list-style-type: none;
+    gap:20px;
+}
+
+.resturant-cards ul li {
+    
+}
+
+.resturant-cards ul li img {
+    width: 100%;
+    max-height: 170px;
+    object-fit: cover;
+    object-position: center;
+    border-radius:10px;
+}
+
+.resturant-cards-details{
+    display: flex;
+    flex-direction: column;
+    gap:5px;
+    font-size:14px;
+    h5{
+        font-size:16px;
+    }
+}
+
+.resMenu {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}

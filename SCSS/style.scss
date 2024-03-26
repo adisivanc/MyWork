@@ -1,0 +1,27 @@
+//USE - see below
+@use "variable" as v;
+
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+$sample:10px;
+/*I am interpolation #{$sample}*/
+
+section{
+    font-size: v.$fontSize;
+    
+    h1{
+        color:#333333;
+    }
+    h4{
+        color: v.$primaryColor;
+    }
+    h5{
+        color: v.$secondaryColor;
+    }
+}
+
+//USE
+@use "import" as i;

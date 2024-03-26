@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Aadhi</title>
+<style>
+*, *::before, *::after {
+	 box-sizing: border-box;
+}
+ body {
+	 font-family: Helvetica, Arial, sans-serif;
+	 padding: 50px;
+	 text-align: center;
+	 font-size: 16px;
+}
+ h1 {
+	 color: #333;
+	 font-size: 20px;
+	 font-weight: bold;
+}
+ p {
+	 margin: 10px 0;
+}
+ .Elastic {
+	 background: #5ac7ae;
+	 border: 0;
+	 color: #fff;
+	 font-size: 20px;
+	 margin: 10px;
+	 outline: none;
+	 padding: 20px 40px;
+	 position: relative;
+	 transition: transform 250ms cubic-bezier(0.25, 0.25, 0.5, 1.9);
+	 transform: translateZ(0);
+	 overflow: visible;
+}
+ .Elastic::before, .Elastic::after, .Elastic-content::before, .Elastic-content::after {
+	 background: #5ac7ae;
+	 border-radius: 50%;
+	 content: '';
+	 display: block;
+	 position: absolute;
+	 transition: transform 250ms cubic-bezier(0.25, 0.25, 0.5, 1.9);
+}
+ .Elastic::before, .Elastic::after {
+	 height: 10px;
+	 left: 0;
+	 transform: scaleY(0);
+	 width: 100%;
+}
+ .Elastic::before {
+	 top: -4px;
+}
+ .Elastic::after {
+	 bottom: -4px;
+}
+ .Elastic-content::before, .Elastic-content::after {
+	 width: 10px;
+	 height: 100%;
+	 top: 0;
+	 transform: scaleX(0);
+}
+ .Elastic-content::before {
+	 left: -4px;
+}
+ .Elastic-content::after {
+	 right: -4px;
+}
+ .Elastic:hover, .Elastic:focus {
+	 transform: scale(1.1);
+}
+ .Elastic:hover::before, .Elastic:focus::before, .Elastic:hover::after, .Elastic:focus::after, .Elastic:hover .Elastic-content::before, .Elastic:focus .Elastic-content::before, .Elastic:hover .Elastic-content::after, .Elastic:focus .Elastic-content::after {
+	 transform: none;
+}
+ .Elastic--red, .Elastic--red::before, .Elastic--red::after, .Elastic--red .Elastic-content::before, .Elastic--red .Elastic-content::after {
+	 background: #e34e47;
+}
+ .Elastic--blue, .Elastic--blue::before, .Elastic--blue::after, .Elastic--blue .Elastic-content::before, .Elastic--blue .Elastic-content::after {
+	 background: #409ad7;
+}
+ .Elastic--purple, .Elastic--purple::before, .Elastic--purple::after, .Elastic--purple .Elastic-content::before, .Elastic--purple .Elastic-content::after {
+	 background: #8c4ba9;
+}
+ .Elastic--yellow, .Elastic--yellow::before, .Elastic--yellow::after, .Elastic--yellow .Elastic-content::before, .Elastic--yellow .Elastic-content::after {
+	 background: #efc241;
+}
+ .Elastic--how, .Elastic--how::before, .Elastic--how::after, .Elastic--how .Elastic-content::before, .Elastic--how .Elastic-content::after {
+	 background: transparent;
+	 border: 1px solid #aaa;
+	 color: #aaa;
+}
+ 
+</style>
+<link rel="shortcut icon" href="https://static-assets-web.flixcart.com/www/promos/new/20150528-140547-favicon-retina.ico">
+    <link rel="icon" type="image/x-icon" href="./../support/img/mywork.ico">
+</head>
+<body>
+<h1>
+  Elastic hover effect
+</h1>
+
+<p>(CSS only)</p>
+
+<button class="Elastic">
+  <div class="Elastic-content">
+    Green
+  </div>
+</button>
+
+<button class="Elastic Elastic--blue">
+  <div class="Elastic-content">
+    Blue
+  </div>
+</button>
+
+<button class="Elastic Elastic--yellow">
+  <div class="Elastic-content">
+    Yellow
+  </div>
+</button>
+
+<button class="Elastic Elastic--red">
+  <div class="Elastic-content">
+    Red
+  </div>
+</button>
+
+<button class="Elastic Elastic--purple">
+  <div class="Elastic-content">
+    Purple
+  </div>
+</button>
+
+<div>
+  <p>Hover to see how it works:</p>
+
+  <button class="Elastic Elastic--how">
+    <div class="Elastic-content">
+      Wireframe
+    </div>
+  </button>
+</div>
+
+</body>
+</html>

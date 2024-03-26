@@ -1,0 +1,44 @@
+<html>
+<head>
+<title>JavaScript Animation</title>
+<script type="text/javascript">
+    
+    //var imgObj = null;
+    //var animateImg ;
+
+    function init(){
+        document.getElementById("sampleTxt").innerHTML="Loaded";
+        imgObj = document.getElementById('myImage'); // imgObj - consider as Global Variable
+        imgObj.style.position= 'relative';
+        imgObj.style.left = '0px';
+        imgObj.style.width = '420px';
+    }
+    window.onload =init;
+    
+</script>
+<link rel="shortcut icon" href="https://static-assets-web.flixcart.com/www/promos/new/20150528-140547-favicon-retina.ico">
+    <link rel="icon" type="image/x-icon" href="./../support/img/mywork.ico">
+</head>
+<body>
+    <h4 id="sampleTxt"></h4>
+    <form>
+        <img id="myImage" src="img/logBan.png" />
+        <p>Click the buttons below to handle animation</p>
+        <input type="button" value="Start" onclick="moveRight();" />
+        <input type="button" value="Stop" onclick="stop();" />
+    </form>
+
+    <script type="text/javascript">
+        
+        function moveRight(){
+            console.log(imgObj.style.left)
+            imgObj.style.left = parseInt(imgObj.style.left) + 1 + 'px';
+            animateImg = setTimeout(moveRight,20); // call moveRight in 50msec
+        }
+        function stop(){
+            clearTimeout(animateImg);
+            //imgObj.style.left = '0px';
+        }
+    </script>
+</body>
+</html>

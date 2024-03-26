@@ -1,0 +1,10 @@
+A milling machine is implemented as a circular buffer, containing a list of tools (duplicates allowed), and it can move forwards/backwards by one position to select the desired tool.
+
+You'll receive as input:
+
+an Array of tools, representing the circular list
+k, the index of the tool currently being in use
+q, the string of the next tool we want to use ( q ∈ tools)
+And have to determine
+
+the (absolute) minimum steps needed, either backwards or forwards), for moving from tool at index k and reach tool q

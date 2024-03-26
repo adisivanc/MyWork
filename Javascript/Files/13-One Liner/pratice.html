@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>API</title>
+  </head>
+  <body>
+        
+        <img src="https://tse4.mm.bing.net/th?id=OIP.IW8rkNPlrcjBMUYQywdt-QHaJ4&pid=Api&P=0&h=180" alt="" width="10" height="10" onclick="ZoomIn(this)"/>
+
+        
+
+        <script type="text/javascript">
+
+            const ZoomIn = zIn => {
+                console.log(zIn.width);
+            }
+
+            //Group by property
+            const groupByProperty = (arr,prop) => arr.reduce((result,obj)=>(result[obj[prop]]=[...result[obj[prop]] || [],obj],result),{})
+            const obj = [{id:1,name:"Adisivan",grade:7.57},{id:2,name:"Ashwini",grade:8.9},{id:1,name:"Prema",grade:9.2}]
+            console.log(groupByProperty(obj,"name"));
+
+
+            //Check whether object is empty [Useful in fetching json data]
+            const testObj = {};
+            const objectTestEmpty = obj => Object.keys(obj).length===0
+            console.log(objectTestEmpty(testObj));
+
+            
+            // Compare two string and matches it is equal or not [ANAGRAM]
+            const string1 = "silent";
+            const string2 = "listen";
+            const anagramString = (str1,str2) => [...str1.toLowerCase()].sort().join("")===str2.toLowerCase().split("").sort().join("");
+            console.log(anagramString(string1,string2));
+            
+            //Generate N number of Array from 1 to N
+            const generateNnumber = num => [...Array(num).keys()].map(i=>i+1)
+            console.log(generateNnumber(8));
+
+            //Remove Duplicate from two array and make single
+            const removeDuplicate = (arr1,arr2) => [...new Set([...arr1,...arr2])]
+            console.log(removeDuplicate([1,2,3,4,5],[1,3,5,7,9]));
+
+            //Shuffle an array (Here there is chance of returning same array)
+            const shuffleAnArray = arr => arr.sort(()=> Math.random() - 0.5)
+            console.log("P",shuffleAnArray([1,2,3,4,5,6,7]))
+            
+            //Maximum value in the array
+            const maxInArray = arr => Math.max(...arr)
+            console.log(maxInArray([22,-44,2,100,-5,45]))
+            
+            //Date 
+            const getDDMMYYYY = () => new Date().toISOString().split("T")[0]
+            console.log(getDDMMYYYY())
+
+
+            //Time 
+            const getTimee = () => new Date().toISOString().split("T")[1].split("Z")[0]
+            console.log(getTimee())
+
+            //Every condition
+            const everyCondition = arr => arr.every(item=>item>34)
+            console.log(everyCondition([120,33,45,67,34,56]))
+
+            //Average of N number
+            const averageNnum = arr => arr.reduce((item,result)=>result+item,0)/arr.length
+            console.log(averageNnum([120,33,45,67,34,56]))
+        </script>
+  </body>
+</html>
